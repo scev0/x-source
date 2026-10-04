@@ -1,0 +1,2105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<effects>
+  <!--lod classes which can be used in effects lod attribute__________________________________________________________________-->
+  <lodclasses default="smalleffect">
+    <!-- default lod class will be used on all effects when no lod="" class is explicity defined -->
+    <lodclass name="tinyeffect" distance="1000" />
+    <lodclass name="smalleffect" distance="3000" />
+    <lodclass name="mediumeffect" distance="10000" />
+    <lodclass name="largeeffect" distance="20000" />
+    <lodclass name="megaeffect" distance="2000000" />
+    <lodclass name="ubereffect" distance="60000000" />
+    <lodclass name="scfx" distance="50000" />
+    <lodclass name="none" distance="3000"/>
+  </lodclasses>
+  <!--test emitters________________________________________________________________________________________________________-->
+  <!--exhaust emitters________________________________________________________________________________________________________-->
+  <!--weapon emitters________________________________________________________________________________________________________-->
+
+  <!-- P1 Start-->
+
+  <!--Test effect for Martin -->
+
+  <effect name="test_particle" emitterfilename="particles\test_particle">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+
+
+  <effect name="crystal_shards_blue" emitterfilename="particles\crystal_shards_blue">
+    <parameters>
+      <material name="particles.ast_crystal_shards"></material>
+    </parameters>
+  </effect>
+
+  <effect name="station_warpin_part1" emitterfilename="particles\warpeffect\station_warpin_part1"> 
+    <parameters>
+      <material name="particles.warpstreaks"></material>
+    </parameters>
+  </effect>
+  
+  <effect name="station_warpin_part2" emitterfilename="particles\warpeffect\station_warpin_part2"> 
+    <parameters>
+      <material name="particles.explosion_master_04b"></material>
+    </parameters>
+  </effect>
+  <!--effect name="station_warpin_part1" emitterfilename="particles\signalleak_particles_scan">
+    <parameters>
+      <material name="effects.particle_lightning_scan"></material>
+    </parameters>
+  </effect-->
+
+  <effect name="prototype_layeredShader" emitterfilename="particles\prototype_layeredShader">
+    <parameters>
+      <!--<material name="particles.plasma"></material>-->
+      <material name="effects.prototype_layeredShader"></material>
+    </parameters>
+  </effect>
+  <effect name="fork_test" emitterfilename="particles\test\testfx_fork_test">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="fork_test_explosion" emitterfilename="particles\test\testfx_fork_test_explosion">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="fork_fire_test" emitterfilename="particles\test\testfx_fork_fire_test">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+
+	<!-- start new effects for new explosions (Pascal) -->
+
+	<effect name="firetrail_performance_01" emitterfilename="particles\trails\firetrail_performance_01">
+		<parameters>
+			<material name="particles.explosion_firetrail"></material>
+		</parameters>
+	</effect>
+	<effect name="firetrail_performance_with_smoke_01" emitterfilename="particles\trails\firetrail_performance_with_smoke_01">
+		<parameters>
+			<material name="particles.explosion_firetrail"></material>
+		</parameters>
+	</effect>
+	<effect name="explosion_sparkles_blue_01" emitterfilename="particles\explosions\explosion_sparkles_blue_01">
+		<parameters>
+			<material name="particles.sparks"></material>
+		</parameters>
+	</effect>
+	<effect name="explosion_small_new_01" emitterfilename="particles\explosions\explosion_small_sphere_new_01">
+		<parameters>
+			<material name="particles.explosion_small_new_01"></material>
+		</parameters>
+	</effect> 
+	<effect name="explosion_small_line_new_01" emitterfilename="particles\explosions\explosion_small_line_new_01">
+		<parameters>
+			<material name="particles.explosion_small_new_01"></material>
+		</parameters>
+	</effect>   
+	<effect name="explosion_large_line_new_01" emitterfilename="particles\explosions\explosion_large_line_new_01">
+		<parameters>
+			<material name="particles.explosion_fire_01"></material>
+		</parameters>
+	</effect>   
+	<effect name="explosion_large_line_new_02" emitterfilename="particles\explosions\explosion_large_line_new_02">
+		<parameters>
+			<material name="particles.explosion_fire_01"></material>
+		</parameters>
+	</effect>     
+	<effect name="explosion_large_new_01" emitterfilename="particles\explosions\explosion_large_new_01">
+		<parameters>
+			<material name="particles.explosion_large_new_02"></material>
+		</parameters>
+	</effect>     
+	<effect name="explosion_large_sphere_new_01" emitterfilename="particles\explosions\explosion_large_sphere_new_01">
+		<parameters>
+			<material name="particles.explosion_large_new_01"></material>
+		</parameters>
+	</effect>   
+	<effect name="explosion_large_single_new_01" emitterfilename="particles\explosions\explosion_large_single_new_01">
+		<parameters>
+			<material name="particles.explosion_large_new_01"></material>
+		</parameters>
+	</effect>   
+
+	<effect name="explosion_fireball_slow_6sec_01" emitterfilename="particles\explosions\explosion_fireball_slow_6sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 
+	<effect name="explosion_fireball_slow_5sec_01" emitterfilename="particles\explosions\explosion_fireball_slow_5sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 
+	<effect name="explosion_fireball_slow_4sec_01" emitterfilename="particles\explosions\explosion_fireball_slow_4sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 	
+	<effect name="explosion_fireball_slow_3sec_01" emitterfilename="particles\explosions\explosion_fireball_slow_3sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 
+	<effect name="explosion_fireball_medium_6sec_01" emitterfilename="particles\explosions\explosion_fireball_medium_6sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 	
+	<effect name="explosion_fireball_medium_5sec_01" emitterfilename="particles\explosions\explosion_fireball_medium_5sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 
+	<effect name="explosion_fireball_medium_4sec_01" emitterfilename="particles\explosions\explosion_fireball_medium_4sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 
+	<effect name="explosion_fireball_medium_3sec_01" emitterfilename="particles\explosions\explosion_fireball_medium_3sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 		
+	<effect name="explosion_fireball_fast_6sec_01" emitterfilename="particles\explosions\explosion_fireball_fast_6sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 
+	<effect name="explosion_fireball_fast_5sec_01" emitterfilename="particles\explosions\explosion_fireball_fast_5sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 		
+	<effect name="explosion_fireball_fast_4sec_01" emitterfilename="particles\explosions\explosion_fireball_fast_4sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 
+	<effect name="explosion_fireball_fast_3sec_01" emitterfilename="particles\explosions\explosion_fireball_fast_3sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 
+	<effect name="explosion_fireball_fast_2sec_01" emitterfilename="particles\explosions\explosion_fireball_fast_2sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect>	
+	<effect name="explosion_fireball_veryfast_4sec_01" emitterfilename="particles\explosions\explosion_fireball_veryfast_4sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 		
+	<effect name="explosion_fireball_veryfast_3sec_01" emitterfilename="particles\explosions\explosion_fireball_veryfast_3sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 	
+	<effect name="explosion_fireball_veryfast_2sec_01" emitterfilename="particles\explosions\explosion_fireball_veryfast_2sec_01">
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 	
+  <effect name="explosion_fireball_slow_01" emitterfilename="particles\explosions\explosion_fireball_slow_01"> <!-- 4.0 duration -->
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 
+  <effect name="explosion_fireball_medium_01" emitterfilename="particles\explosions\explosion_fireball_medium_01"> <!-- 3.0 duration -->
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect> 
+  <effect name="explosion_fireball_fast_01" emitterfilename="particles\explosions\explosion_fireball_fast_01"> <!-- 2.0 duration -->
+		<parameters>
+			<material name="particles.explosion_fire_02"></material>
+		</parameters>
+	</effect>
+
+	<!-- 0.4 sec duration -->
+	<effect name="explosion_flash_yellow_01" emitterfilename="particles\explosions\explosion_flash_yellow_01">
+		<parameters>
+			<material name="particles.explosion_flash_yellow_01"></material>
+		</parameters>
+	</effect> 
+	<!-- 0.5 sec duration -->
+	<effect name="explosion_flash_yellow_05sec_01" emitterfilename="particles\explosions\explosion_flash_yellow_05sec_01">
+		<parameters>
+			<material name="particles.explosion_flash_yellow_01"></material>
+		</parameters>
+	</effect>   
+	<!-- 0.4 sec duration -->
+	<effect name="explosion_flash_blue_01" emitterfilename="particles\explosions\explosion_flash_blue_01">
+		<parameters>
+			<material name="particles.explosion_flash_blue_01"></material>
+		</parameters>
+	</effect>  
+	<!-- 2.0 sec duration -->
+	<effect name="explosion_sparks_many_2sec_01" emitterfilename="particles\explosions\explosion_sparks_many_2sec_01">
+		<parameters>
+			<material name="particles.sparks_bright"></material>
+		</parameters>
+	</effect> 	
+
+	<!-- 5.0  sec duration -->
+	<effect name="explosion_sparks_many_5sec_01" emitterfilename="particles\explosions\explosion_sparks_many_5sec_01">
+		<parameters>
+			<material name="particles.sparks_bright"></material>
+		</parameters>
+	</effect> 
+	<!-- 8.0  sec duration -->
+	<effect name="explosion_sparks_many_8sec_01" emitterfilename="particles\explosions\explosion_sparks_many_8sec_01">
+		<parameters>
+			<material name="particles.sparks_bright"></material>
+		</parameters>
+	</effect>   
+	<!-- 12.0  sec duration -->
+	<effect name="explosion_sparks_many_12sec_01" emitterfilename="particles\explosions\explosion_sparks_many_12sec_01">
+		<parameters>
+			<material name="particles.sparks_bright"></material>
+		</parameters>
+	</effect> 
+    
+	<effect name="explosion_fire_01" emitterfilename="particles\explosions\explosion_fire_01">
+		<parameters>
+			<material name="particles.explosion_fire_01"></material>
+		</parameters>
+	</effect>  
+	<effect name="explosion_fire_02" emitterfilename="particles\explosions\explosion_fire_02">
+		<parameters>
+			<material name="particles.explosion_fire_01"></material>
+		</parameters>
+	</effect>   
+	<effect name="explosion_smoke_02" emitterfilename="particles\explosions\explosion_smoke_02">
+		<parameters>
+			<material name="particles.smoke_cloud_01"></material>
+		</parameters>
+	</effect>     
+	<effect name="explosion_smoke_dark_01" emitterfilename="particles\explosions\explosion_smoke_dark_01">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>   
+	<effect name="explosion_smoke_burn_03" emitterfilename="particles\explosions\explosion_smoke_burn_alpha_03">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>    	
+
+	<!-- 3 sec -->
+	<effect name="smoke_cloud_dark_3sec" emitterfilename="particles\explosions\smoke_cloud_dark_3sec">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>   
+	<!-- 5 sec -->	  
+	<effect name="smoke_cloud_dark_5sec" emitterfilename="particles\explosions\smoke_cloud_dark_5sec">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>  
+	<!-- 8 sec -->
+	<effect name="smoke_cloud_dark_8sec" emitterfilename="particles\explosions\smoke_cloud_dark_8sec">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>  
+	<!-- 10 sec -->	
+	<effect name="smoke_cloud_dark_10sec" emitterfilename="particles\explosions\smoke_cloud_dark_10sec">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>  	  
+	<!-- 3 sec -->
+	<effect name="explosion_smokeball_fast_3sec_01" emitterfilename="particles\explosions\explosion_smokeball_fast_3sec_01">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>    	
+	<!-- 5 sec -->
+	<effect name="explosion_smokeball_medium_5sec_01" emitterfilename="particles\explosions\explosion_smokeball_medium_5sec_01">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>    		  
+	<!-- 3 sec -->
+	<effect name="explosion_smokeball_medium_3sec_01" emitterfilename="particles\explosions\explosion_smokeball_medium_3sec_01">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>    	
+	<!-- 8 sec -->
+	<effect name="explosion_smokeball_medium_8sec_01" emitterfilename="particles\explosions\explosion_smokeball_medium_8sec_01">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>    	
+	<!-- 3 sec -->
+	<effect name="explosion_smokeball_slow_3sec_01" emitterfilename="particles\explosions\explosion_smokeball_slow_3sec_01">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>    		  
+	<!-- 5 sec -->
+	<effect name="explosion_smokeball_slow_5sec_01" emitterfilename="particles\explosions\explosion_smokeball_slow_5sec_01">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>    		  
+	<!-- 8 sec -->
+	<effect name="explosion_smokeball_slow_8sec_01" emitterfilename="particles\explosions\explosion_smokeball_slow_8sec_01">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>    	
+	<!-- 5 sec -->
+	<effect name="explosion_smokeball_veryslow_5sec_01" emitterfilename="particles\explosions\explosion_smokeball_veryslow_10sec_01">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>	  
+	<!-- 10 sec -->
+	<effect name="explosion_smokeball_veryslow_10sec_01" emitterfilename="particles\explosions\explosion_smokeball_veryslow_10sec_01">
+		<parameters>
+			<material name="particles.smoke_new_01"></material>
+		</parameters>
+	</effect>    	
+	<!-- 6 sec -->
+	<!-- <effect name="explosion_smokeball_large_6sec_01" emitterfilename="particles\explosions\explosion_smokeball_large_6sec_01"> -->
+	<!-- <parameters> -->
+	<!-- <material name="particles.smoke_new_01"></material> -->
+	<!-- </parameters> -->
+	<!-- </effect>    	 -->
+	<!-- <effect name="explosion_smokeball_large_6sec_02" emitterfilename="particles\explosions\explosion_smokeball_large_6sec_02"> -->
+	<!-- <parameters> -->
+	<!-- <material name="particles.smoke_new_01"></material> -->
+	<!-- </parameters> -->
+	<!-- </effect>    -->
+
+	<!-- 120 sec -->
+	<effect name="debris_200_120sec_01" emitterfilename="particles\explosions\debris_200_120sec_01">
+		<parameters>
+			<material name="particles.exp_p1_debris_01"></material>
+		</parameters>
+	</effect>  	  
+	<!-- 60 sec -->
+	<effect name="debris_100_60sec_01" emitterfilename="particles\explosions\debris_100_60sec_01">
+		<parameters>
+			<material name="particles.exp_p1_debris_01"></material>
+		</parameters>
+	</effect>  	
+	<!-- 60 sec -->
+	<effect name="debris_50_60sec_01" emitterfilename="particles\explosions\debris_50_60sec_01">
+		<parameters>
+			<material name="particles.exp_p1_debris_01"></material>
+		</parameters>
+	</effect>  
+	<!-- 30 sec -->
+	<effect name="debris_10_30sec_01" emitterfilename="particles\explosions\debris_10_30sec_01">
+		<parameters>
+			<material name="particles.exp_p1_debris_01"></material>
+		</parameters>
+	</effect>  
+	<!-- 30 sec -->
+	<effect name="debris_5_30sec_01" emitterfilename="particles\explosions\debris_5_30sec_01">
+		<parameters>
+			<material name="particles.exp_p1_debris_01"></material>
+		</parameters>
+	</effect>  
+	<!-- end effects Pascal -->
+
+	  
+  <!-- P1 new Explosions -->
+  <effect name="explosion_fiery_blue" emitterfilename="particles\explosions\explosion_fiery_01">
+    <parameters>
+      <material name="particles.explosion_01_blue"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_fierytrail_blue" emitterfilename="particles\explosions\explosion_fierytrail_01">
+    <parameters>
+      <material name="particles.explosion_01_blue"></material>
+    </parameters>
+  </effect>
+
+  <effect name="explosion_fiery" emitterfilename="particles\explosions\explosion_fiery_01">
+    <parameters>
+      <material name="particles.explosion_01"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_fiery_new" emitterfilename="particles\explosions\explosiontest2_slow">
+    <parameters>
+      <material name="particles.explosion_01new"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_smoke_new" emitterfilename="particles\explosions\smoke_cloud_v1">
+    <parameters>
+      <material name="particles.smoke_01new"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_sparks_new" emitterfilename="particles\explosions\sparks_v1">
+    <parameters>
+      <material name="particles.sparks"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_sparks_big" emitterfilename="particles\explosions\sparks_v1_big">
+    <parameters>
+      <material name="particles.sparks"></material>
+    </parameters>
+  </effect>
+  <!--effect name="explosion_firetrail_new" emitterfilename="particles\explosions\explosion_fierytrail_02"-->
+  <effect name="explosion_firetrail_new" emitterfilename="particles\explosions\explosion_fierytrail_02">
+    <parameters>
+      <!--material name="particles.explosion_01_small_new"></material-->
+      <material name="particles.explosion_01_small_new"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_01_flash" emitterfilename="particles\explosions\explosion_01_flash">
+    <parameters>
+      <material name="particles.explosion_master_01_additive_low"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_02_flash" emitterfilename="particles\explosions\explosion_02_flash">
+    <parameters>
+      <material name="particles.explosion_master_01_additive"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_nucleus_01" emitterfilename="particles\explosions\explosion_nucleus_02">
+    <parameters>
+      <material name="particles.explosion_nucleus_01"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_fierytrail" emitterfilename="particles\explosions\explosion_fierytrail_01">
+    <parameters>
+      <material name="particles.explosion_01"></material>
+    </parameters>
+  </effect>
+  <effect name="expl_gen_02" emitterfilename="particles\expl_gen_02">
+    <parameters>
+      <material name="particles.explosion_master_04"></material>
+    </parameters>
+  </effect>
+  <effect name="expl_surface_s_01" emitterfilename="particles\expl_surface_s_01">
+    <parameters>
+      <material name="particles.explosion_master_02_bright"></material>
+    </parameters>
+  </effect>
+  <effect name="black_smoke_small" emitterfilename="particles\black_smoke_small">
+    <parameters>
+      <material name="particles.explosion_master_02_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="ship_s_smoke_small" emitterfilename="particles\ship_s_engine_smoke">
+    <parameters>
+      <material name="particles.explosion_master_02_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="sparkles_small" emitterfilename="particles\sparkles_small">
+    <parameters>
+      <material name="particles.explosion_master_02_bright"></material>
+    </parameters>
+  </effect>
+  <!--P1 new Steam effects-->
+  <effect name="steam_slow_v1_gravity" emitterfilename="particles\steam\steam_slow_v1_gravity">
+    <parameters>
+      <material name="particles.steam_v1"></material>
+    </parameters>
+  </effect>
+  <effect name="steam_slow_v1_ascending" emitterfilename="particles\steam\steam_slow_v1_ascending">
+    <parameters>
+      <material name="particles.steam_v1"></material>
+    </parameters>
+  </effect>
+  <effect name="steam_fast_v1_gravity" emitterfilename="particles\steam\steam_fast_v1_gravity">
+    <parameters>
+      <material name="particles.steam_v1"></material>
+    </parameters>
+  </effect>
+   <effect name="steam_veryfast_v1" emitterfilename="particles\steam\steam_veryfast_v1">
+    <parameters>
+      <material name="particles.steam_v2"></material>
+    </parameters>
+  </effect>
+  <effect name="steam_veryfast_v1_ascending" emitterfilename="particles\steam\steam_veryfast_v1_ascending">
+    <parameters>
+      <material name="particles.steam_v2"></material>
+    </parameters>
+  </effect>
+  <effect name="steam_veryfast_v2" emitterfilename="particles\steam\steam_veryfast_v2">
+    <parameters>
+      <material name="particles.steam_v2"></material>
+    </parameters>
+  </effect>
+  <effect name="steam_veryfast_v2_ascending" emitterfilename="particles\steam\steam_veryfast_v2_ascending">
+    <parameters>
+      <material name="particles.steam_v2"></material>
+    </parameters>
+  </effect>
+<!--P1 new spark effects-->
+  <effect name="sparks_3deg_bursts_v1" emitterfilename="particles\sparks\sparks_3deg_bursts_v1">
+    <parameters>
+      <material name="particles.sparks_v1"></material>
+    </parameters>
+  </effect>
+  <effect name="sparks_3deg_constant_v1" emitterfilename="particles\sparks\sparks_3deg_constant_v1">
+    <parameters>
+      <material name="particles.sparks_v1"></material>
+    </parameters>
+  </effect>
+   <effect name="sparks_90deg_bursts_v1" emitterfilename="particles\sparks\sparks_90deg_bursts_v1">
+    <parameters>
+      <material name="particles.sparks_v1"></material>
+    </parameters>
+  </effect>
+  <effect name="sparks_90deg_constant_v1" emitterfilename="particles\sparks\sparks_90deg_constant_v1">
+    <parameters>
+      <material name="particles.sparks_v1"></material>
+    </parameters>
+  </effect>
+  <effect name="bluesparks_90deg_constant_v1" emitterfilename="particles\sparks\bluesparks_90deg_constant_v1">
+    <parameters>
+      <material name="particles.sparks_desat_v1"></material>
+    </parameters>
+  </effect>
+  <effect name="longsparks_3deg_constant_v1" emitterfilename="particles\sparks\longsparks_3deg_constant_v1">
+    <parameters>
+      <material name="particles.sparks_v3"></material>
+    </parameters>
+  </effect>
+  <effect name="longsparks_3deg_bursts_v1" emitterfilename="particles\sparks\longsparks_3deg_bursts_v1">
+    <parameters>
+      <material name="particles.sparks_v3"></material>
+    </parameters>
+  </effect>
+   <effect name="longsparks_1deg_constant_v1" emitterfilename="particles\sparks\longsparks_1deg_constant_v1">
+    <parameters>
+      <material name="particles.sparks_v3"></material>
+    </parameters>
+  </effect>
+  <effect name="platform_dust_50x50" emitterfilename="particles\dust\platform_dust_50x50">
+    <parameters>
+      <material name="particles.sparks_desat_v2"></material>
+    </parameters>
+  </effect>
+  <!--P1 missile explosion-->
+  <effect name="punch_through_effect" emitterfilename="particles\explosions\punch_through_effect">
+    <parameters>
+      <material name="particles.explosion_missile"></material>
+    </parameters>
+  </effect>
+  <effect name="missile_explo_part1" emitterfilename="particles\explosions\missile_impact_explo">
+    <parameters>
+      <material name="particles.explosion_missile"></material>
+    </parameters>
+  </effect>
+  <effect name="sparkcloud" emitterfilename="particles\explosions\sparkcloud">
+    <parameters>
+      <material name="particles.sparks_v1"></material>
+    </parameters>
+  </effect>
+  <effect name="flak_impact" emitterfilename="particles\explosions\flak_impact">
+    <parameters>
+      <material name="particles.explosion_missile"></material>
+    </parameters>
+  </effect>
+  <effect name="flak_impact_blue" emitterfilename="particles\explosions\missile_impact_explo">
+    <parameters>
+      <material name="particles.explosion_missile_blue"></material>
+    </parameters>
+  </effect>
+  
+  <!-- P1 new Spezial FX -->
+  <effect name="ship_blowout_size_s" emitterfilename="particles\ship_blowout_s_add_variation1">
+    <parameters>
+      <material name="particles.ship_blowout"></material>
+    </parameters>
+  </effect>
+
+  <effect name="ship_blowout_size_m" emitterfilename="particles\ship_blowout_m_add">
+    <parameters>
+      <material name="particles.ship_blowout"></material>
+    </parameters>
+  </effect>
+  <effect name="platform_fluff" emitterfilename="particles\platform_fluff">
+    <parameters>
+      <material name="particles.platform_dust"></material>
+    </parameters>
+  </effect>
+  <effect name="platform_smoke" emitterfilename="particles\platform_smoke">
+    <parameters>
+      <material name="particles.explosion_master_01small_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="signalleak_particles" emitterfilename="particles\signalleak_particles">
+    <!--effect name="signalleak_particles" emitterfilename="particles\signaltest_particles"-->
+    <parameters>
+      <material name="effects.particle_lightning"></material>
+    </parameters>
+  </effect>
+  <effect name="signalleak_particles_scan" emitterfilename="particles\signalleak_particles_scan">
+    <!--effect name="signalleak_particles" emitterfilename="particles\signaltest_particles"-->
+    <parameters>
+      <material name="effects.particle_lightning_scan"></material>
+    </parameters>
+  </effect>
+  <effect name="dataleak_particles" emitterfilename="particles\dataleak_particles">
+    <parameters>
+      <material name="effects.particle_circle"></material>
+    </parameters>
+  </effect>
+  <effect name="dataleak_particles_scan" emitterfilename="particles\dataleak_particles_scan">
+    <parameters>
+      <material name="effects.particle_circle_scan"></material>
+    </parameters>
+  </effect>
+  <effect name="dataleak_particles_plot" emitterfilename="particles\dataleak_particles_plot">
+    <parameters>
+      <material name="effects.particle_circle"></material>
+    </parameters>
+  </effect>
+  <effect name="dataleak_particles_plot_scan" emitterfilename="particles\dataleak_particles_plot_scan">
+    <parameters>
+      <material name="effects.particle_circle_scan"></material>
+    </parameters>
+  </effect>
+  <effect name="steam_small" emitterfilename="particles\steam_small">
+    <parameters>
+      <material name="particles.explosion_master_01small_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="steam_small_v2" emitterfilename="particles\steam_small_v2">
+    <parameters>
+      <material name="particles.explosion_master_01smallest_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="steam_big" emitterfilename="particles\steam_big">
+    <parameters>
+      <material name="particles.explosion_master_01small_alpha8"></material>
+    </parameters>
+  </effect>
+  <!-- Distant Particle FX -->
+
+  <effect name="masstraffic_engine_close01" emitterfilename="particles\masstraffic_engine_glow01">
+    <parameters>
+      <material name="particles.masstraffic_engine_close01"></material>
+    </parameters>
+  </effect>
+
+  <effect name="masstraffic_engine_far01" emitterfilename="particles\masstraffic_engine_glow01">
+    <parameters>
+      <material name="particles.masstraffic_engine_far01"></material>
+    </parameters>
+  </effect>
+
+  <effect name="test_weld_effect" emitterfilename="particles\platform_welding_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+
+  <!-- Missile Explosions -->
+
+  <effect name="missile_explosion_light_01" emitterfilename="particles\missile_explosion_light_01">
+    <parameters>
+      <material name="particles.explosion_master_02_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="missile_explosion_medium_01" emitterfilename="particles\missile_explosion_medium_01">
+    <parameters>
+      <material name="particles.explosion_master_02_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="missile_explosion_heavy_01" emitterfilename="particles\missile_explosion_heavy_01">
+    <parameters>
+      <material name="particles.explosion_master_02_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="missile_explosion_emp" emitterfilename="particles\missile_explosion_emp">
+    <parameters>
+      <material name="particles.explosion_master_02_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="bomb_explosion_emp_01" emitterfilename="particles\bomb_explosion_emp_01">
+    <parameters>
+      <material name="particles.explosion_master_02_bright"></material>
+    </parameters>
+  </effect>
+
+  <!-- Weapon FX -->
+
+  <effect name="gatling_bullet_shells" emitterfilename="particles\gatling_bullet_shells">
+    <parameters>
+      <material name="particles.bulletshells"></material>
+    </parameters>
+  </effect>
+  <effect name="gatling_muzzle_smoke_01" emitterfilename="particles\gatling_muzzle_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="gatling_impact_sparkles_01" emitterfilename="particles\gatling_impact_sparkles_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="shotgun_muzzle_smoke_01" emitterfilename="particles\shotgun_muzzle_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="shotgun_impact_smoke_01" emitterfilename="particles\shotgun_impact_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="laser_muzzle_smoke_01" emitterfilename="particles\laser_muzzle_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="laser_impact_smoke_01" emitterfilename="particles\laser_impact_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="laser_impact_fire_01" emitterfilename="particles\laser_impact_fire_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="plasma_muzzle_smoke_01" emitterfilename="particles\plasma_muzzle_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="plasma_impact_smoke_01" emitterfilename="particles\plasma_impact_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="ion_muzzle_smoke_01" emitterfilename="particles\ion_muzzle_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="ion_impact_smoke_01" emitterfilename="particles\ion_impact_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="beam_muzzle_smoke_01" emitterfilename="particles\beam_muzzle_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="beam_impact_smoke_01" emitterfilename="particles\beam_impact_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="mining_impact_smoke_01" emitterfilename="particles\mining_impact_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="mining_muzzle_smoke_01" emitterfilename="particles\mining_muzzle_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="railgun_muzzle_smoke_01" emitterfilename="particles\railgun_muzzle_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="railgun_impact_smoke_01" emitterfilename="particles\railgun_impact_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="railgun_impact_fire_01" emitterfilename="particles\railgun_impact_fire_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="laser_muzzle_smoke_02" emitterfilename="particles\laser_muzzle_smoke_02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="laser_impact_smoke_02" emitterfilename="particles\laser_impact_smoke_02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="beam_muzzle_smoke_02" emitterfilename="particles\beam_muzzle_smoke_02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="beam_impact_smoke_02" emitterfilename="particles\beam_impact_smoke_02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="laser_muzzle_smoke_03" emitterfilename="particles\laser_muzzle_smoke_03">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="laser_impact_smoke_03" emitterfilename="particles\laser_impact_smoke_03">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="laser_impact_smoke_04" emitterfilename="particles\laser_impact_smoke_04">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="laser_muzzle_smoke_04" emitterfilename="particles\laser_muzzle_smoke_04">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="mining_impact_smoke_02" emitterfilename="particles\mining_impact_smoke_02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="mining_muzzle_smoke_02" emitterfilename="particles\mining_muzzle_smoke_02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="charge_impact_smoke_01" emitterfilename="particles\charge_impact_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="charge_muzzle_smoke_01" emitterfilename="particles\charge_muzzle_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="countermeasure_smoke" emitterfilename="particles\countermeasure_smoke">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+
+
+  <!-- Engine FX FX -->
+
+  <!-- <effect name="trail_engine_s_distortion" emitterfilename="particles\trail_engine_s_distortion">
+    <parameters>
+	 <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  
+    <effect name="trail_engine_m_distortion" emitterfilename="particles\trail_engine_m_distortion">
+    <parameters>
+	 <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect> -->
+
+
+
+  <!-- P1 End -->
+
+  <effect name="plasma_impact" emitterfilename="particles\plasma_impact">
+    <parameters>
+      <!--<material name="particles.plasma"></material>-->
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="plasmaemitter_player_impact_02_sparkles01" emitterfilename="particles\plasmaemitter_player_impact_02_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="shotgun_impact_01_trash" emitterfilename="particles\shotgun_impact_01_trash">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="impact_units_s_trash_01" emitterfilename="particles\impact_units_s_trash_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="impact_units_m_trash_01" emitterfilename="particles\impact_units_m_trash_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="shotgun_impact_01_explosion" emitterfilename="particles\shotgun_impact_01_explosion">
+    <parameters>
+      <material name="particles.explosion_master_01_softp_low"></material>
+    </parameters>
+  </effect>
+  <!--impact emitters________________________________________________________________________________________________________-->
+  <effect name="beam_impact_core01" emitterfilename="particles\beam_impact_core01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="beam_v2_impact_core01" emitterfilename="particles\beam_v2_impact_core01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="beam_fight_impact_core01" emitterfilename="particles\beam_fight_impact_core01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="beam_player_muzzle_smoke01" emitterfilename="particles\beam_player_muzzle_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="beam_impact_asteroids01" emitterfilename="particles\beam_impact_asteroids01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="shotgun_impact" emitterfilename="particles\shotgun_impact">
+    <parameters>
+      <material name="particles.redglow"></material>
+    </parameters>
+  </effect>
+  <effect name="mg_impact" emitterfilename="particles\mg_impact2">
+    <parameters>
+      <material name="particles.fireball_new"></material>
+    </parameters>
+  </effect>
+  <effect name="impact_01_sparkles01" emitterfilename="particles\impact_01_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="impulseemitter_impact_sparkles01" emitterfilename="particles\impulseemitter_impact_sparkles01">
+    <parameters>
+      <material name="effects.bullets_master_01"></material>
+    </parameters>
+  </effect>
+  <effect name="impulseemitter_player_impact_sparkles01" emitterfilename="particles\impulseemitter_player_impact_sparkles01">
+    <parameters>
+      <material name="effects.bullets_master_01"></material>
+    </parameters>
+  </effect>
+  <effect name="impulseemitter_impact_inside_sparkles01" emitterfilename="particles\impulseemitter_impact_inside_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="impulseemitter_mk3_player_impact_flash01" emitterfilename="particles\impulseemitter_mk3_player_impact_flash01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="plasmaemitter_impact_explosion01" emitterfilename="particles\plasmaemitter_impact_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_softp_low"></material>
+    </parameters>
+  </effect>
+  <effect name="plasmaemitter_xenon_impact_explosion01" emitterfilename="particles\plasmaemitter_xenon_impact_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_softp_low"></material>
+    </parameters>
+  </effect>
+  <effect name="plasmaemitter_impact_02_explosion01" emitterfilename="particles\plasmaemitter_impact_02_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_softp_low"></material>
+    </parameters>
+  </effect>
+  <effect name="plasmaemitter_impact_inside_sparkles01" emitterfilename="particles\plasmaemitter_impact_inside_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="mg_player_impact_sparkles01" emitterfilename="particles\mg_player_impact_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="mg_impact_inside_sparkles01" emitterfilename="particles\mg_impact_inside_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+
+  <!--explosion emitters________________________________________________________________________________________________________-->
+  <effect name="long_sparks" emitterfilename="particles\long_sparks">
+    <parameters>
+      <material name="particles.longspark"></material>
+    </parameters>
+  </effect>
+  <effect name="moving_body_ar_1x_01" emitterfilename="particles\moving_body_ar_1x_01">
+    <parameters>
+      <material name="particles.moving_body_ar_01"></material>
+    </parameters>
+  </effect>
+  <effect name="moving_body_ar_3x_01" emitterfilename="particles\moving_body_ar_3x_01">
+    <parameters>
+      <material name="particles.moving_body_ar_01"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_generic_01_explosion01" emitterfilename="particles\explosion_generic_01_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_generic_01_distortion01" emitterfilename="particles\explosion_generic_01_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_generic_02_explosion01" emitterfilename="particles\explosion_generic_02_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_lockbox_lock_01_explosion_01" emitterfilename="particles\explosion_lockbox_lock_01_explosion_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_lockbox_explosive_explosion_01" emitterfilename="particles\explosion_lockbox_explosive_explosion_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_generic_02_human01" emitterfilename="particles\explosion_generic_02_human01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_props_wps_mine_01_explosion_01" emitterfilename="particles\explosion_props_wps_mine_01_explosion_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_props_wps_mine_01_distortion_01" emitterfilename="particles\explosion_props_wps_mine_01_distortion_01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_l_01_distortion01" emitterfilename="particles\explosion_l_01_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_l_01_explosion01_distortion01" emitterfilename="particles\explosion_l_01_explosion01_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_l_01_explosion02_distortion01" emitterfilename="particles\explosion_l_01_explosion02_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_l_01_final_flash01" emitterfilename="particles\explosion_l_01_final_flash01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_l_01_final_smoke01" emitterfilename="particles\explosion_l_01_final_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_explosion01" emitterfilename="particles\explosion_xl_01_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_explosion01_distortion01" emitterfilename="particles\explosion_xl_01_explosion01_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_explosion01_trash" emitterfilename="particles\explosion_xl_01_explosion01_trash">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_explosion02" emitterfilename="particles\explosion_xl_01_explosion02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_explosion02_distortion01" emitterfilename="particles\explosion_xl_01_explosion02_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_explosion02_trash" emitterfilename="particles\explosion_xl_01_explosion02_trash">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_explosion03" emitterfilename="particles\explosion_xl_01_explosion03">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_explosion04" emitterfilename="particles\explosion_xl_01_explosion04">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_explosion03_distortion01" emitterfilename="particles\explosion_xl_01_explosion03_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_explosion03_trash" emitterfilename="particles\explosion_xl_01_explosion03_trash">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_final_flash01" emitterfilename="particles\explosion_xl_01_final_flash01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_final_flash02" emitterfilename="particles\explosion_xl_01_final_flash02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_final_flash03" emitterfilename="particles\explosion_xl_01_final_flash03">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_final_blackhole" emitterfilename="particles\explosion_xl_01_final_blackhole">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_final_blackhole_distortion01" emitterfilename="particles\explosion_xl_01_final_blackhole_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_final_blackhole_lightning" emitterfilename="particles\explosion_xl_01_final_blackhole_lightning">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_final_trash" emitterfilename="particles\explosion_xl_01_final_trash">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_final_smoke01" emitterfilename="particles\explosion_xl_01_final_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_final_smoke02" emitterfilename="particles\explosion_xl_01_final_smoke02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_final_smoke03" emitterfilename="particles\explosion_xl_01_final_smoke03">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xl_01_final_sparkles01" emitterfilename="particles\explosion_xl_01_final_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_m_01_explosion01" emitterfilename="particles\explosion_m_01_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_m_01_distortion01" emitterfilename="particles\explosion_m_01_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_m_01_explosion02" emitterfilename="particles\explosion_m_01_explosion02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_m_01_smoke01" emitterfilename="particles\explosion_m_01_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_m_01_smoke02" emitterfilename="particles\explosion_m_01_smoke02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="rocket_impact_01_explosion01" emitterfilename="particles\rocket_impact_01_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_fadeout"></material>
+    </parameters>
+  </effect>
+  <effect name="rocket_impact_01_distortion01" emitterfilename="particles\rocket_impact_01_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="rocket_emp_impact_01_explosion01" emitterfilename="particles\rocket_emp_impact_01_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_fadeout"></material>
+    </parameters>
+  </effect>
+  <effect name="rocket_emp_impact_01_distortion01" emitterfilename="particles\rocket_emp_impact_01_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="muzzleflash_flak_smoke01" emitterfilename="particles\muzzleflash_flak_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_turret_s_floor_explosion01" emitterfilename="particles\explosion_turret_s_floor_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_turret_s_floor_distortion01" emitterfilename="particles\explosion_turret_s_floor_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_container_pickup_explosion01" emitterfilename="particles\explosion_container_pickup_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_turret_m_wall_pulse_explosion01" emitterfilename="particles\explosion_turret_m_wall_pulse_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_turret_m_wall_pulse_distortion01" emitterfilename="particles\explosion_turret_m_wall_pulse_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="rocket_trail_01" emitterfilename="particles\rocket_trail_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_m_02_explosion01" emitterfilename="particles\explosion_m_02_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_m_02_distortion01" emitterfilename="particles\explosion_m_02_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_adsigns_balloon_01_trash01" emitterfilename="particles\explosion_adsigns_balloon_01_trash01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_adsigns_balloon_02_trash01" emitterfilename="particles\explosion_adsigns_balloon_02_trash01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="welding_sparkles01" emitterfilename="particles\welding_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="platform_welding_sparkles01" emitterfilename="particles\platform_welding_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="turret_l_bullet_flash01" emitterfilename="particles\turret_l_bullet_flash01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="turret_medium_bb_xe_bullet_flash01" emitterfilename="particles\turret_medium_bb_xe_bullet_flash01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_turret_l_explosion01" emitterfilename="particles\explosion_turret_l_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_turret_l_explosion02" emitterfilename="particles\explosion_turret_l_explosion02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_turret_l_explosion03" emitterfilename="particles\explosion_turret_l_explosion03">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_turret_l_smoke01" emitterfilename="particles\explosion_turret_l_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_turret_l_trash01" emitterfilename="particles\explosion_turret_l_trash01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="turret_l_impact01_explosion01" emitterfilename="particles\turret_l_impact01_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="turret_medium_bb_xe_impact01_explosion01" emitterfilename="particles\turret_medium_bb_xe_impact01_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="turret_l_impact01_distortion01" emitterfilename="particles\turret_l_impact01_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="limpetmine_explosion01" emitterfilename="particles\limpetmine_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_asteroid_a_l_explosion01" emitterfilename="particles\explosion_asteroid_a_l_explosion01">
+    <parameters>
+      <material name="particles.asteroid_dust_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_asteroid_a_m_explosion01" emitterfilename="particles\explosion_asteroid_a_m_explosion01">
+    <parameters>
+      <material name="particles.asteroid_dust_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_asteroid_a_s_explosion01" emitterfilename="particles\explosion_asteroid_a_s_explosion01">
+    <parameters>
+      <material name="particles.asteroid_dust_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_asteroid_a_xs_explosion01" emitterfilename="particles\explosion_asteroid_a_xs_explosion01">
+    <parameters>
+      <material name="particles.asteroid_dust_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_asteroid_a_l_ice_explosion01" emitterfilename="particles\explosion_asteroid_a_l_ice_explosion01">
+    <parameters>
+      <material name="particles.asteroid_dust_ice_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_asteroid_a_m_ice_explosion01" emitterfilename="particles\explosion_asteroid_a_m_ice_explosion01">
+    <parameters>
+      <material name="particles.asteroid_dust_ice_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_asteroid_a_s_ice_explosion01" emitterfilename="particles\explosion_asteroid_a_s_ice_explosion01">
+    <parameters>
+      <material name="particles.asteroid_dust_ice_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_asteroid_a_xs_ice_explosion01" emitterfilename="particles\explosion_asteroid_a_xs_ice_explosion01">
+    <parameters>
+      <material name="particles.asteroid_dust_ice_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_storage_L_explosion_01" emitterfilename="particles\explosion_storage_L_explosion_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_storage_M_explosion_01" emitterfilename="particles\explosion_storage_M_explosion_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_storage_liquid_L_01" emitterfilename="particles\explosion_storage_liquid_L_01">
+    <parameters>
+      <material name="particles.asteroid_dust_ice_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_storage_energy_M_01" emitterfilename="particles\explosion_storage_energy_M_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_station_01_final_flash01" emitterfilename="particles\explosion_station_01_final_flash01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_station_01_final_smoke01" emitterfilename="particles\explosion_station_01_final_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="wdog_testfx_effectEmitter" emitterfilename="particles\test\wdog_testfx_effectEmitter">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="wdog_testfx_particleOrientation" emitterfilename="particles\test\wdog_testfx_particleOrientation">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="wdog_testfx_particleAxis" emitterfilename="particles\test\wdog_testfx_particleAxis">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="wdog_testfx_additiveBlending" emitterfilename="particles\test\wdog_testfx_additiveBlending">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="wdog_testfx_alphaBlending" emitterfilename="particles\test\wdog_testfx_alphaBlending">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="wdog_testfx_velocityOrientation" emitterfilename="particles\test\wdog_testfx_velocityOrientation">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="wdog_testfx_particleScale" emitterfilename="particles\test\wdog_testfx_particleScale">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="wdog_testfx_particleSorting" emitterfilename="particles\test\wdog_testfx_particleSorting">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="wdog_testfx_newShader" emitterfilename="particles\test\wdog_testfx_newShader">
+    <parameters>
+      <material name="particles.wdog_testfx_layeredShader"></material>
+    </parameters>
+  </effect>
+  <effect name="wdog_testfx_newShader_1particle" emitterfilename="particles\test\wdog_testfx_newShader_1particle">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="wdog_testfx_newShader_alpha" emitterfilename="particles\test\testfx_fork_smoke">
+    <parameters>
+      <material name="particles.wdog_testfx_layeredShader_alpha"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx" emitterfilename="particles\test\testFx">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx02" emitterfilename="particles\test\testFx02">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx03" emitterfilename="particles\test\testFx03">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx04" emitterfilename="particles\test\testFx04">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx05" emitterfilename="particles\test\testFx05">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx06" emitterfilename="particles\test\testFx06">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx07" emitterfilename="particles\test\testFx07">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx07_2" emitterfilename="particles\test\testFx07_2">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx08" emitterfilename="particles\test\testFx08">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx10" emitterfilename="particles\test\testFx10">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx11" emitterfilename="particles\test\testFx11">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx12" emitterfilename="particles\test\testFx12">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx13" emitterfilename="particles\test\testFx13">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx16" emitterfilename="particles\test\testFx16">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx17" emitterfilename="particles\test\testFx17">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx18" emitterfilename="particles\test\testFx18">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx19" emitterfilename="particles\test\testFx19">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx20" emitterfilename="particles\test\testFx20">
+    <parameters>
+      <material name="particles.testFx_master_02"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx_performance01" emitterfilename="particles\test\testFx_performance01">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx_performance02" emitterfilename="particles\test\testFx_performance02">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx_performance03" emitterfilename="particles\test\testFx_performance03">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx_performance04" emitterfilename="particles\test\testFx_performance04">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx_performance05" emitterfilename="particles\test\testFx_performance05">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx_performance08" emitterfilename="particles\test\testFx_performance08">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx_performance09" emitterfilename="particles\test\testFx_performance09">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx_performance11" emitterfilename="particles\test\testFx_performance11">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx_damagestate_none" emitterfilename="particles\test\testFx_damagestate_none">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx_damage_indicator01" emitterfilename="particles\test\testFx_damage_indicator01">
+    <parameters>
+      <material name="particles.testFx_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx_explosion" emitterfilename="particles\test\testFx_explosion">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="testFx_explosion_emissive" emitterfilename="particles\test\testFx_explosion_emissive">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_engine_xl_explosion_01" emitterfilename="particles\explosion_engine_xl_explosion_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_xenon_engine_xl_explosion_01" emitterfilename="particles\explosion_xenon_engine_xl_explosion_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_engine_xl_explosion_01_smoke_01" emitterfilename="particles\explosion_engine_xl_explosion_01_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_engine_xl_explosion_01_distortion" emitterfilename="particles\explosion_engine_xl_explosion_01_distortion">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="plasmaemitter_bullet_02_plasma01" emitterfilename="particles\plasmaemitter_bullet_02_plasma01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_adsign_sparkles01" emitterfilename="particles\explosion_adsign_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_adsign_sparkles02" emitterfilename="particles\explosion_adsign_sparkles02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_adsign_explosion01" emitterfilename="particles\explosion_adsign_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_adsigns_balloon_01_explosion01" emitterfilename="particles\explosion_adsigns_balloon_01_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_chimney_l_explosion01" emitterfilename="particles\explosion_chimney_l_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_chimney_l_explosion01_distortion" emitterfilename="particles\explosion_chimney_l_explosion01_distortion">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_chimney_l_explosion01_trash" emitterfilename="particles\explosion_chimney_l_explosion01_trash">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="explosion_chimney_l_smoke01" emitterfilename="particles\explosion_chimney_l_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_activation_jumpdrive_core01" emitterfilename="particles\jump_activation_jumpdrive_core01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+      <!--<material name="particles.testFx_master_01_alpha8"></material>-->
+    </parameters>
+  </effect>
+  <effect name="jump_activation_jumpdrive_core01_slow" emitterfilename="particles\jump_activation_jumpdrive_core01_slow">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_activation_jumpdrive_sparkles01" emitterfilename="particles\jump_activation_jumpdrive_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_deactivation_jumpdrive_glow_distortion01" emitterfilename="particles\jump_deactivation_jumpdrive_glow_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_deactivation_jumpdrive_l_glow_distortion01" emitterfilename="particles\jump_deactivation_jumpdrive_l_glow_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_deactivation_jumpdrive_smoke01" emitterfilename="particles\jump_deactivation_jumpdrive_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_explosion_jumpdrive_explosion01" emitterfilename="particles\jump_explosion_jumpdrive_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_explosion_jumpdrive_trash01" emitterfilename="particles\jump_explosion_jumpdrive_trash01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_jumpin_distortion01" emitterfilename="particles\jump_jumpin_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_jumpin_distortion01_l" emitterfilename="particles\jump_jumpin_distortion01_l">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_jumpin_core01" emitterfilename="particles\jump_jumpin_core01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_jumpin_core_distortion01" emitterfilename="particles\jump_jumpin_core_distortion01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_jumpin_core_distortion01_l" emitterfilename="particles\jump_jumpin_core_distortion01_l">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_jumpin_streak01" emitterfilename="particles\jump_jumpin_streak01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="jump_jumpin_smoke01" emitterfilename="particles\jump_jumpin_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="boostfx_engine_l_01" emitterfilename="particles\boostfx_engine_l_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_indicator01" emitterfilename="particles\dmgfx_damage_indicator01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_indicator01_shieldUp01" emitterfilename="particles\dmgfx_damage_indicator01_shieldUp01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+      <!--<material name="particles.testFx_master_01_alpha8"></material>-->
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_indicator01_distortion01" emitterfilename="particles\dmgfx_damage_indicator01_distortion01">
+    <parameters>
+      <material name="effects.distortion_master_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_indicator02" emitterfilename="particles\dmgfx_damage_indicator02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_indicator03" emitterfilename="particles\dmgfx_damage_indicator03">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_indicator04" emitterfilename="particles\dmgfx_damage_indicator04">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_state_sparkles01" emitterfilename="particles\dmgfx_damage_state_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_state_low_sparkles01" emitterfilename="particles\dmgfx_damage_state_low_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_state_medium_sparkles01" emitterfilename="particles\dmgfx_damage_state_medium_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_state_sparkles02" emitterfilename="particles\dmgfx_damage_state_sparkles02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_state_sparkles03" emitterfilename="particles\dmgfx_damage_state_sparkles03">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_state_flexible_tube_smoke01" emitterfilename="particles\dmgfx_damage_state_flexible_tube_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_state_smoke01" emitterfilename="particles\dmgfx_damage_state_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_state_medium_smoke01" emitterfilename="particles\dmgfx_damage_state_medium_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_state_smoke02" emitterfilename="particles\dmgfx_damage_state_smoke02">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_state_smoke03" emitterfilename="particles\dmgfx_damage_state_smoke03">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_damage_state_trash01" emitterfilename="particles\dmgfx_damage_state_trash01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_electrostatic_sparkles01" emitterfilename="particles\dmgfx_electrostatic_sparkles01">
+    <parameters>
+      <material name="particles.dmgfx_electrostatic_sparkles_01"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_radiation_sparkles01" emitterfilename="particles\dmgfx_radiation_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="dmgfx_impact_lightning_sparkles01" emitterfilename="particles\dmgfx_impact_lightning_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_cockpit"></material>
+    </parameters>
+  </effect>
+  <effect name="lockbox_fragile_smoke_01" emitterfilename="particles\lockbox_fragile_smoke_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="highway_gas_01" emitterfilename="particles\highway_gas_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="interior_airshaft_dust_01" emitterfilename="particles\interior_airshaft_dust_01">
+    <parameters>
+      <material name="particles.interior_airshaft_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="interior_airshaft_smoke_01" emitterfilename="particles\interior_airshaft_smoke_01">
+    <parameters>
+      <material name="particles.interior_airshaft_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="interior_dust_particle01" emitterfilename="particles\interior_dust_particle01">
+    <parameters>
+      <material name="particles.explosion_master_01_interior_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="interior_waterwall_drops_01" emitterfilename="particles\interior_waterwall_drops_01">
+    <parameters>
+      <material name="particles.explosion_master_01_interior_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="interior_engi_welder_sparkles01" emitterfilename="particles\interior_engi_welder_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_interior_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="interior_engi_welder_sparkles02" emitterfilename="particles\interior_engi_welder_sparkles02">
+    <parameters>
+      <material name="particles.explosion_master_01_interior_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="interior_flies01" emitterfilename="particles\interior_flies01">
+    <parameters>
+      <material name="particles.explosion_master_01_interior_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="interior_smoke01" emitterfilename="particles\interior_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_interior_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="interior_smoke02" emitterfilename="particles\interior_smoke02">
+    <parameters>
+      <material name="particles.explosion_master_01_interior_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="interior_architect_room_smoke01" emitterfilename="particles\interior_architect_room_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_interior_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="interior_smoke_ground01" emitterfilename="particles\interior_smoke_ground01">
+    <parameters>
+      <material name="particles.explosion_master_01_interior_alpha8_soft"></material>
+    </parameters>
+  </effect>
+  <effect name="interior_sparkles01" emitterfilename="particles\interior_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_interior_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="scfx_result_good_01" emitterfilename="particles\scfx_result_good_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="scfx_result_bad_01" emitterfilename="particles\scfx_result_bad_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="scfx_result_neutral_01" emitterfilename="particles\scfx_result_neutral_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="scfx_result_good_dist_01" emitterfilename="particles\scfx_result_good_dist_01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="scfx_result_neutral_dist_01" emitterfilename="particles\scfx_result_neutral_dist_01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="scfx_result_bad_dist_01" emitterfilename="particles\scfx_result_bad_dist_01">
+    <parameters>
+      <material name="effects.distortion_master"></material>
+    </parameters>
+  </effect>
+  <effect name="sefx_damage_m_low_smoke01" emitterfilename="particles\sefx_damage_m_low_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="sefx_damage_m_medium_smoke01" emitterfilename="particles\sefx_damage_m_medium_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="sefx_damage_m_high_smoke01" emitterfilename="particles\sefx_damage_m_high_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="sefx_disabled_s_hack_sparkles01" emitterfilename="particles\sefx_disabled_s_hack_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="unfx_damage_s_low_smoke01" emitterfilename="particles\unfx_damage_s_low_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="unfx_damage_s_medium_smoke01" emitterfilename="particles\unfx_damage_s_medium_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="unfx_damage_s_high_smoke01" emitterfilename="particles\unfx_damage_s_high_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="struct_econ_mining_ar_generic_special_b_flash01" emitterfilename="particles\struct_econ_mining_ar_generic_special_b_flash01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="struct_econ_mining_ar_generic_production_sparkles01" emitterfilename="particles\struct_econ_mining_ar_generic_production_sparkles01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="struct_econ_mining_ar_generic_laboratory_smoke01" emitterfilename="particles\struct_econ_mining_ar_generic_laboratory_smoke01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="struct_econ_ref_ar_pmc_pfr_plasma01" emitterfilename="particles\struct_econ_ref_ar_pmc_pfr_plasma01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="env_asteroids_asteroid_A_XL_03_smoke" emitterfilename="particles\env_asteroids_asteroid_A_XL_03_smoke">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="env_asteroids_asteroid_A_XL_03_sparkles" emitterfilename="particles\env_asteroids_asteroid_A_XL_03_sparkles">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="env_asteroids_asteroid_A_XL_04_sand01" emitterfilename="particles\env_asteroids_asteroid_A_XL_04_sand01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="wardrone_bomblauncher_impact_explosion01" emitterfilename="particles\wardrone_bomblauncher_impact_explosion01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="landmarks_unique_the_void_trash_01" emitterfilename="particles\landmarks_unique_the_void_trash_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8"></material>
+    </parameters>
+  </effect>
+  <effect name="landmarks_unique_split_lostcolony_fog_01" emitterfilename="particles\landmarks_unique_split_lostcolony_fog_01">
+    <parameters>
+      <material name="particles.explosion_master_01_alpha8_soft"></material>
+    </parameters>
+  </effect>
+  <effect name="sixwaysmoketest_explosion1_fast" emitterfilename="particles\test\sixwaysmoketest_explosion1">
+  	<parameters>
+  		<material name="vfx.sixwaysmoketest"></material>
+  	</parameters>
+  </effect>
+  <effect name="sixwaysmoketest_explosion2_slow" emitterfilename="particles\test\sixwaysmoketest_explosion2">
+  	<parameters>
+  		<material name="vfx.sixwaysmoketest"></material>
+  	</parameters>
+  </effect>
+</effects>

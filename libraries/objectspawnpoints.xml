@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objectspawnpoints xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="objectspawnpoints.xsd">
+  <space macro="storage_tel_s_solid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-146.993" y="130.262" z="-95.204"/>
+      <rotation yaw="41.25433" pitch="-24.94598"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="0.9239" y="63.164" z="-33.831"/>
+      <rotation yaw="1.69411" pitch="-1.21625"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_hullparts_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-5.982" y="-2.379" z="78.537"/>
+      <rotation yaw="-123.39366" pitch="77.65836" roll="50.85506"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="71.957" y="-48.72" z="-186.952"/>
+      <rotation yaw="174.55417" pitch="3.48546"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_tel_l_solid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-250.602" y="-238.785" z="-53.01"/>
+      <rotation yaw="-17.46236" pitch="0.0279333"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="3.509" y="-90.225" z="322.218"/>
+      <rotation yaw="-76.0946" pitch="81.96456" roll="154.99687"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_tel_m_liquid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-33.167" y="121.217" z="20.346"/>
+      <rotation yaw="116.43677" pitch="-1.37283"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="1.045" y="159.597" z="191.263"/>
+      <rotation yaw="-179.96289" pitch="-1.25816"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_tel_m_solid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="30.656" y="-302.713" z="-31.908"/>
+      <rotation yaw="-46.30504" pitch="-5.62045"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="31.801" y="-167.924" z="-33.846"/>
+      <rotation yaw="-47.77494" pitch="-0.778708"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_tel_s_liquid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-21.31" y="-275.176" z="3.957"/>
+      <rotation yaw="104.4585" pitch="32.92968"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-29.241" y="217.327" z="69.681"/>
+      <rotation yaw="157.72594" pitch="-2.19682"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_arg_medicalsupplies_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="23.069" y="747.69" z="-297.142"/>
+      <rotation yaw="55.97696" pitch="-87.44525" roll="-12.59623"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-59.386" y="720.089" z="-210.051"/>
+      <rotation yaw="85.06667" pitch="-0.175725"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_tel_swampplant_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="857.689" y="-158.48" z="-227.092"/>
+      <rotation yaw="-57.49749" pitch="79.25471" roll="-1.25193"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="809.5" y="-110.793" z="1.545"/>
+      <rotation yaw="-89.05583" pitch="-41.54111"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_par_m_solid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="177.868" y="-127.66" z="78.988"/>
+      <rotation yaw="-94.43401" pitch="-0.506474"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="115.051" y="-27.689" z="-212.978"/>
+      <rotation yaw="-93.68418" pitch="-35.34491"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_par_s_solid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="0.4341" y="-747.745" z="0.7134"/>
+      <rotation yaw="-66.80858" pitch="87.88363" roll="113.73354"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="1.157" y="-720.407" z="79.104"/>
+      <rotation yaw="176.31364" pitch="53.30947"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_weaponcomponents_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="175.363" y="241.228" z="402.116"/>
+      <rotation yaw="-88.41592" pitch="-2.73097"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="1.027" y="540.547" z="459.478"/>
+      <rotation yaw="-173.30281" pitch="-8.55501"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_water_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="33.933" y="247.554" z="-198.025"/>
+      <rotation yaw="-92.98904" pitch="-37.34914"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-3.395" y="300.809" z="53.364"/>
+      <rotation yaw="115.55143" pitch="-82.96218" roll="-114.28436"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-109.498" y="294.1" z="686.9"/>
+      <rotation yaw="-96.64351" pitch="-62.56958" roll="0.030743"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_arg_wheat_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="10.043" y="-65.725" z="-627.263"/>
+      <rotation yaw="-140.18494" pitch="-81.75343" roll="-40.41249"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-348.824" y="-65.531" z="-396.184"/>
+      <rotation yaw="-9.38861" pitch="-84.96911" roll="-169.56657"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-366.48" y="64.84" z="28.763"/>
+      <rotation yaw="4.40085" pitch="-0.647259"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_tel_l_liquid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="196.594" y="129.769" z="333.784"/>
+      <rotation yaw="-153.77348" pitch="-1.66838"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="15.47" y="-346.022" z="151.555"/>
+      <rotation yaw="-171.36249" pitch="0.943408"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-0.05745" y="-556.94" z="94.587"/>
+      <rotation yaw="-168.8886" pitch="-4.59008"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_tel_teladianium_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="1.467" y="245.605" z="-169.646"/>
+      <rotation yaw="179.14937" pitch="-27.77962"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-0.3005" y="256.553" z="177.773"/>
+      <rotation yaw="0.539709" pitch="-41.82391" roll="-0.150932"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-350.17" y="136.304" z="393.977"/>
+      <rotation yaw="86.5566" pitch="-18.77682"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_tel_sunriseflowers_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-225.904" y="201.03" z="523.55"/>
+      <rotation yaw="156.31961" pitch="-23.14038"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-0.202" y="189.113" z="15.419"/>
+      <rotation yaw="55.63269" pitch="-86.15539" roll="74.77352"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="506.406" y="-4.705" z="-513.848"/>
+      <rotation yaw="-166.45055" pitch="81.86996" roll="-152.90121"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_tel_spaceweed_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="71.703" y="178.129" z="-136.169"/>
+      <rotation yaw="64.72643" pitch="69.92919" roll="-1.74136"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="95.06" y="86.44" z="-214.169"/>
+      <rotation yaw="64.73326" pitch="-0.904525"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="2.557" y="77.101" z="256.794"/>
+      <rotation yaw="-3.7581" pitch="-1.79838"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_par_l_liquid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-249.957" y="-537.52" z="-6.847"/>
+      <rotation yaw="86.43681" pitch="35.90518"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-9.632" y="-702.12" z="-0.5044"/>
+      <rotation yaw="-100.57697" pitch="86.78094" roll="-155.15657"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_par_l_solid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-278.473" y="-135.259" z="-20.109"/>
+      <rotation yaw="88.52213" pitch="-2.12143"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-243.473" y="-291.927" z="-28.796"/>
+      <rotation yaw="82.65091" pitch="-31.12576"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="243.401" y="-549.554" z="0.3321"/>
+      <rotation yaw="-88.52734" pitch="23.42148"/>
+    </spawnpoint>
+    <spawnpoint id="4" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="271.326" y="-130.718" z="-68.932"/>
+      <rotation yaw="-84.50153" pitch="-3.46166"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_par_sojabeans_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-11.297" y="-550.936" z="-232.647"/>
+      <rotation yaw="-2.45646" pitch="2.31899"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-131.115" y="580.589" z="10.297"/>
+      <rotation yaw="2.51698" pitch="-28.21357"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_arg_spacefuel_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="249.642" y="123.472" z="-304.093"/>
+      <rotation yaw="98.56815" pitch="-5.82756"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="135.992" y="189.966" z="-122.842"/>
+      <rotation yaw="-157.1575" pitch="83.57285" roll="-46.91452"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-298.769" y="370.246" z="294.655"/>
+      <rotation yaw="173.22379" pitch="-59.51676" roll="0.0444254"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_par_sojahusk_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="21.454" y="320.2" z="66.833"/>
+      <rotation yaw="-161.01958" pitch="0.69731"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="577.152" y="472.581" z="-290.406"/>
+      <rotation yaw="170.76747" pitch="-4.14923"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_siliconwafers_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-79.531" y="38.796" z="1152.511"/>
+      <rotation yaw="89.58215" pitch="30.38509"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-50.081" y="-31.063" z="140.987"/>
+      <rotation yaw="0.322498" pitch="-1.62326"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-78.853" y="1.45" z="738.773"/>
+      <rotation yaw="89.39082" pitch="0.659125"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_smartchips_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-92.145" y="537.12" z="0.5799"/>
+      <rotation yaw="94.70699" pitch="-54.31778" roll="56.69714"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="152.19" y="-343.414" z="-0.4554"/>
+      <rotation yaw="115.57118" pitch="82.53354" roll="-151.98421"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_shieldcomponents_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-193.264" y="-59.476" z="31.788"/>
+      <rotation yaw="-104.51405" pitch="84.82179" roll="33.24669"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="171.951" y="113.115" z="7.44"/>
+      <rotation yaw="86.92506" pitch="-34.52908"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-196.033" y="92.752" z="-761.15"/>
+      <rotation yaw="-7.32233" pitch="-3.11076"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_quantumtubes_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-75.946" y="156.245" z="11.618"/>
+      <rotation yaw="-106.53334" pitch="-0.403627"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="101.12" y="571.945" z="1.322"/>
+      <rotation yaw="-12.14601" pitch="-86.35105" roll="137.92511"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_scanningarrays_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-19.72" y="67.573" z="-322.149"/>
+      <rotation yaw="86.33074" pitch="-7.01533"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-194.873" y="129.834" z="-137.62"/>
+      <rotation yaw="-63.87841" pitch="0.26791"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-213.94" y="66.356" z="128.769"/>
+      <rotation yaw="-5.15755" pitch="1.01388"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_missilecomponents_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-91.411" y="79.872" z="221.152"/>
+      <rotation yaw="-56.76038" pitch="87.12941" roll="-146.67303"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-148.067" y="293.052" z="142.604"/>
+      <rotation yaw="-53.51845" pitch="-83.97627" roll="-126.4334"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_plasmaconductors_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="114.468" y="-67.854" z="-212.886"/>
+      <rotation yaw="-176.97552" pitch="-1.91979"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="62.007" y="371.851" z="31.083"/>
+      <rotation yaw="-103.32453" pitch="-89.18891" roll="103.50938"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_par_medicalsupplies_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-178.442" y="128.977" z="-137.734"/>
+      <rotation yaw="55.57397" pitch="-70.95222" roll="-17.1528"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="22.583" y="750.784" z="-208.045"/>
+      <rotation yaw="-12.94324" pitch="-69.19344" roll="7.45182"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="160.757" y="60.801" z="-172.993"/>
+      <rotation yaw="12.5505" pitch="-85.90217" roll="-10.00078"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_microchips_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="182.49" y="262.338" z="338.581"/>
+      <rotation yaw="-2.65101" pitch="1.26568"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="24.13" y="324.812" z="212.653"/>
+      <rotation yaw="-92.46423" pitch="85.00824" roll="87.11369"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="150.339" y="205.494" z="-348.301"/>
+      <rotation yaw="15.88081" pitch="-84.75379" roll="112.17988"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_tel_medicalsupplies_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-59.143" y="719.886" z="-197.002"/>
+      <rotation yaw="92.29942" pitch="5.21607"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="23.061" y="746.037" z="-295.602"/>
+      <rotation yaw="-15.90224" pitch="-85.91073" roll="13.67661"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="221.659" y="-19.102" z="-246.306"/>
+      <rotation yaw="-5.26064" pitch="-3.35424"/>
+    </spawnpoint>
+    <spawnpoint id="4" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="216.492" y="-218.836" z="-45.831"/>
+      <rotation yaw="144.18924" pitch="-85.93793" roll="33.20445"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_arg_meat_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-0.772" y="183.433" z="-54.475"/>
+      <rotation yaw="-175.99371" pitch="-80.27158" roll="85.59323"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-533.346" y="20.565" z="120.728"/>
+      <rotation yaw="-2.43382" pitch="-1.09454"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_arg_m_solid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-71.916" y="-16.142" z="-193.693"/>
+      <rotation yaw="88.48177" pitch="-6.05894"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="69.253" y="57.332" z="154.41"/>
+      <rotation yaw="87.92383" pitch="-40.5899"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_par_s_container_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-152.18" y="-68.706" z="26.639"/>
+      <rotation yaw="90.6995" pitch="-1.61288"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="105.586" y="-49.813" z="-97.954"/>
+      <rotation yaw="-48.48566" pitch="-77.99524" roll="0.000586371"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_arg_l_liquid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="114.86" y="-33.468" z="-682.355"/>
+      <rotation yaw="-85.39664" pitch="21.36187"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-173.173" y="-10.874" z="-594.095"/>
+      <rotation yaw="72.90685" pitch="64.78725" roll="-48.88166"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_arg_l_solid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="87.258" y="135.804" z="3.898"/>
+      <rotation yaw="0.863406" pitch="-5.80975"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="162.388" y="9.881" z="89.896"/>
+      <rotation yaw="-7.86218" pitch="-89.27422" roll="2.19087"/>
+    </spawnpoint>
+  </space>
+  <space macro="struct_arg_vertical_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-38.833" y="161.131" z="-0.1498"/>
+      <rotation yaw="87.5435" pitch="-9.0791"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="38.301" y="166.693" z="-0.3248"/>
+      <rotation yaw="-83.42525" pitch="-1.69442"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_arg_foodrations_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-168.084" y="-345.77" z="-78.926"/>
+      <rotation yaw="166.08214" pitch="73.91674" roll="-3.55413"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-260.005" y="-294.952" z="117.323"/>
+      <rotation yaw="119.70731" pitch="-8.13865"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_tel_hullparts_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-57.225" y="-50.297" z="-184.25"/>
+      <rotation yaw="-179.29047" pitch="1.83518"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="2.452" y="-102.248" z="-339.285"/>
+      <rotation yaw="175.03264" pitch="-0.828687"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_par_majasnails_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-3.244" y="1243.237" z="-40.994"/>
+      <rotation yaw="-38.43757" pitch="-84.20157" roll="41.7085"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-0.7498" y="-342.356" z="-26.983"/>
+      <rotation yaw="-3.76214" pitch="-7.16511"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_par_majadust_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="205.75" y="-90.294" z="-142.205"/>
+      <rotation yaw="-2.35987" pitch="17.09945"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="397.653" y="-104.07" z="-0.3986"/>
+      <rotation yaw="67.17814" pitch="76.41696" roll="-16.52054"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_antimattercells_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="75.769" y="114.217" z="959.854"/>
+      <rotation yaw="34.60466" pitch="83.19576" roll="-31.49507"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="243.307" y="115.793" z="932.07"/>
+      <rotation yaw="-85.22987" pitch="4.72044"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_fieldcoils_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-229.185" y="6.303" z="349.178"/>
+      <rotation yaw="-146.20192" pitch="29.43323"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="42.513" y="-166.302" z="-246.313"/>
+      <rotation yaw="171.42195" pitch="33.2005"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_claytronics_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="69.637" y="-123.216" z="214.406"/>
+      <rotation yaw="-115.4325" pitch="89.46807" roll="-20.0899"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-104.579" y="-170.005" z="-82.157"/>
+      <rotation yaw="148.93376" pitch="75.59701" roll="-24.5256"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_antimatterconverters_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-161.952" y="-624.133" z="-233.902"/>
+      <rotation yaw="26.34088" pitch="4.80793"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="38.193" y="-143.286" z="-218.107"/>
+      <rotation yaw="87.60577" pitch="-3.46859"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_advancedelectronics_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-207.946" y="63.358" z="-760.664"/>
+      <rotation yaw="7.84571" pitch="-2.73651"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-118.497" y="134.615" z="-137.125"/>
+      <rotation yaw="0.792702" pitch="4.58571"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_energycells_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-958.165" y="-13.244" z="22.061"/>
+      <rotation yaw="-177.61908" pitch="19.33087"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="601.378" y="25.933" z="-28.126"/>
+      <rotation yaw="-5.21653" pitch="-21.03324"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_tel_engineparts_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="85.616" y="69.354" z="194.458"/>
+      <rotation yaw="-96.18562" pitch="-86.52576" roll="-172.26489"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="58.856" y="-83.778" z="-70.462"/>
+      <rotation yaw="-137.46346" pitch="-82.39989" roll="-101.30531"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_dronecomponents_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-11.445" y="-115.619" z="-27.443"/>
+      <rotation yaw="-179.07466" pitch="-0.78783"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-131.8" y="-176.03" z="-204.183"/>
+      <rotation yaw="-68.1647" pitch="87.2639" roll="-159.18634"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_engineparts_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="141.163" y="60.226" z="132.6"/>
+      <rotation yaw="-3.31141" pitch="-12.91569"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="100.387" y="-226.765" z="47.653"/>
+      <rotation yaw="-91.46191" pitch="43.56976"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_advancedcomposites_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-10.888" y="613.932" z="-45.542"/>
+      <rotation yaw="-88.15318" pitch="-34.93266"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-210.343" y="679.827" z="1.395"/>
+      <rotation yaw="73.39886" pitch="-85.14053" roll="-164.33511"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_superfluidcoolant_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-50.516" y="503.908" z="125.547"/>
+      <rotation yaw="128.65356" pitch="-5.64782"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="34.664" y="524.972" z="108.431"/>
+      <rotation yaw="97.12933" pitch="-84.01351" roll="29.73821"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_graphene_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="326.213" y="137.291" z="-501.816"/>
+      <rotation yaw="-26.79927" pitch="-39.20605"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-97.789" y="152.776" z="67.885"/>
+      <rotation yaw="-67.80469" pitch="-68.36387" roll="5.703"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_arg_m_liquid_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-146.973" y="146.283" z="-152.757"/>
+      <rotation yaw="-4.76447" pitch="-0.311512"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-330.676" y="-208.694" z="57.955"/>
+      <rotation yaw="68.85452" pitch="69.89114" roll="-0.590463"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-160.744" y="-210.181" z="62.119"/>
+      <rotation yaw="68.85355" pitch="69.89259" roll="-0.025126"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_refinedmetals_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="110.663" y="66.082" z="453.391"/>
+      <rotation yaw="55.58906" pitch="-87.66727" roll="32.86579"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="143.594" y="40.94" z="-43.858"/>
+      <rotation yaw="-82.02615" pitch="-47.21428"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_turretcomponents_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-257.212" y="240.033" z="230.666"/>
+      <rotation yaw="3.06948" pitch="1.62462"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="256.46" y="129.948" z="284.552"/>
+      <rotation yaw="-179.87914" pitch="33.23345"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-0.6139" y="112.862" z="-231.711"/>
+      <rotation yaw="178.38652" pitch="4.96982"/>
+    </spawnpoint>
+    <spawnpoint id="4" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="0.0761" y="72.168" z="0.237"/>
+      <rotation yaw="157.57988" pitch="-82.50668" roll="13.6799"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_tel_scanningarrays_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="309.773" y="141.959" z="78.209"/>
+      <rotation yaw="-164.10822" pitch="-1.53456"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="284.887" y="70.497" z="66.445"/>
+      <rotation yaw="155.91135" pitch="-0.735415"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="251.167" y="-90.005" z="-4.71"/>
+      <rotation yaw="97.02287" pitch="-1.94423"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_gen_spices_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="218.625" y="-49.584" z="-207.951"/>
+      <rotation yaw="0.950056" pitch="-2.589"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="246.055" y="15.425" z="69.455"/>
+      <rotation yaw="0.950056" pitch="-2.589"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="168.901" y="97.139" z="196.159"/>
+      <rotation yaw="-1.24633" pitch="-9.55805"/>
+    </spawnpoint>
+    <spawnpoint id="4" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="192.814" y="98.605" z="374.063"/>
+      <rotation yaw="174.41255" pitch="-3.57847"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_tel_m_container_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-69.138" y="62.321" z="-94.132"/>
+      <rotation yaw="-51.10382" pitch="-3.14483"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-0.1269" y="31.793" z="-35.139"/>
+      <rotation yaw="-3.86313" pitch="-6.71581"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-128.105" y="318.001" z="-77.271"/>
+      <rotation yaw="-163.52217" pitch="-88.97664" roll="169.16806"/>
+    </spawnpoint>
+  </space>
+  <space macro="struct_arg_base_02_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-128.519" y="2.454" z="-1.207"/>
+      <rotation yaw="88.63065" pitch="3.72853"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="103.225" y="-47.468" z="0.08339"/>
+      <rotation yaw="-81.47067" pitch="76.69094" roll="0.725846"/>
+    </spawnpoint>
+  </space>
+  <space macro="buildmodule_gen_ships_l_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-739.335" y="-224.273" z="-204.393"/>
+      <rotation yaw="88.63435" pitch="28.02473"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="466.203" y="47.497" z="-604.342"/>
+      <rotation yaw="91.89773" pitch="-9.69302"/>
+    </spawnpoint>
+  </space>
+  <space macro="struct_arg_base_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="103.484" y="-53.192" z="-67.094"/>
+      <rotation yaw="-91.81329" pitch="49.26615"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="135.621" y="0.7433" z="-4.062"/>
+      <rotation yaw="-90.65588" pitch="-6.04559"/>
+    </spawnpoint>
+  </space>
+  <space macro="buildmodule_gen_ships_m_dockarea_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-22.866" y="-206.682" z="-187.914"/>
+      <rotation yaw="141.21298" pitch="84.39317" roll="47.9014"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="192.628" y="233.683" z="-4.355"/>
+      <quaternion qx="0.521435" qy="-0.477635" qz="0.477958" qw="0.521082"/>
+    </spawnpoint>
+  </space>
+  <space macro="hab_arg_m_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="287.687" y="-309.176" z="-73.839"/>
+      <rotation yaw="-41.35518" pitch="-2.98659" roll="2.79787"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="276.035" y="80.479" z="-62.287"/>
+      <rotation yaw="-33.87377" pitch="-5.56198" roll="4.11791"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-82.121" y="341.991" z="-179.874"/>
+      <rotation yaw="64.43157" pitch="-11.71745" roll="0.910414"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_tel_s_container_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-111.021" y="48.908" z="-120.467"/>
+      <rotation yaw="12.54257" pitch="-1.96288" roll="-1.33438"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-144.312" y="-232.864" z="-67.368"/>
+      <rotation yaw="140.61406" pitch="80.40207" roll="55.79871"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="158.156" y="-230.464" z="-92.601"/>
+      <rotation yaw="-68.53848" pitch="-0.68567" roll="1.03225"/>
+    </spawnpoint>
+  </space>
+  <space macro="pier_par_harbor_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-574.571" y="0.4522" z="37.096"/>
+      <rotation yaw="173.69272" pitch="1.20143"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-36.759" y="118.287" z="400.275"/>
+      <rotation yaw="88.04674" pitch="-3.86894"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="0.3605" y="-111.996" z="-586.751"/>
+      <rotation yaw="-0.239152" pitch="47.85416"/>
+    </spawnpoint>
+  </space>
+  <space macro="hab_par_l_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="174.803" y="447.683" z="0.4997"/>
+      <rotation yaw="-92.09079" pitch="-15.47831"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="124.604" y="730.97" z="-53.558"/>
+      <rotation yaw="-94.74962" pitch="30.81641"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_par_l_container_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="8.631" y="-953.829" z="13.183"/>
+      <rotation yaw="38.20409" pitch="83.61908" roll="-164.97632"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="5.712" y="-279.461" z="236.728"/>
+      <rotation yaw="-179.65471" pitch="3.4866"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_arg_m_container_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-176.049" y="-228.058" z="167.667"/>
+      <rotation yaw="-150.26872" pitch="50.80998"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-159.618" y="-235.878" z="-68.299"/>
+      <rotation yaw="127.80453" pitch="64.28622" roll="-13.19802"/>
+    </spawnpoint>
+  </space>
+  <space macro="hab_tel_m_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="239.077" y="-244.471" z="-12.218"/>
+      <rotation yaw="-88.36356" pitch="-2.39426"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="218.248" y="-288.94" z="-19.477"/>
+      <rotation yaw="-81.23021" pitch="83.4715" roll="2.25038"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_tel_l_container_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="147.07" y="-340.916" z="-79.744"/>
+      <rotation yaw="-59.7983" pitch="-3.22216"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-0.2053" y="-601.576" z="-0.3316"/>
+      <rotation yaw="-66.49374" pitch="85.91783" roll="-37.01373"/>
+    </spawnpoint>
+  </space>
+  <space macro="pier_tel_harbor_02_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-696.828" y="-72.267" z="-0.5919"/>
+      <rotation yaw="143.57387" pitch="83.34212" roll="56.84955"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-1119.292" y="-29.868" z="44.717"/>
+      <rotation yaw="166.28664" pitch="68.1536" roll="84.49418"/>
+    </spawnpoint>
+  </space>
+  <space macro="struct_par_cross_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="331.71" y="-647.478" z="-140.984"/>
+      <rotation yaw="-61.18066" pitch="19.29641"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="212.313" y="-248.724" z="-152.688"/>
+      <rotation yaw="142.56557" pitch="-80.67411" roll="-143.60959"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-95.324" y="173.428" z="47.472"/>
+      <rotation yaw="115.67126" pitch="-2.33545"/>
+    </spawnpoint>
+    <spawnpoint id="4" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="47.155" y="170.82" z="-94.492"/>
+      <rotation yaw="-30.58482" pitch="0.614578"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_par_m_container_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-2.923" y="-770.538" z="-3.808"/>
+      <rotation yaw="-144.15613" pitch="86.0475" roll="-171.56203"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-107.711" y="6.747" z="0.02808"/>
+      <rotation yaw="89.43679" pitch="31.59709"/>
+    </spawnpoint>
+  </space>
+  <space macro="hab_arg_l_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="78.651" y="653.979" z="163.835"/>
+      <rotation yaw="-107.9408" pitch="-3.66817"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="32.373" y="351.866" z="70.333"/>
+      <rotation yaw="-25.39964" pitch="-3.83196"/>
+    </spawnpoint>
+  </space>
+  <space macro="hab_arg_s_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="56.845" y="141.115" z="-3.272"/>
+      <rotation yaw="-96.64674" pitch="-3.42003"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="78.928" y="112.985" z="-147.302"/>
+      <rotation yaw="-64.61101" pitch="-0.811634"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_arg_l_container_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="331.905" y="-32.048" z="-348.991"/>
+      <rotation yaw="108.70002" pitch="84.79462" roll="115.11815"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="131.138" y="56.82" z="-149.855"/>
+      <rotation yaw="-90.41574" pitch="-7.24846"/>
+    </spawnpoint>
+  </space>
+  <space macro="struct_arg_cross_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="27.487" y="150.189" z="87.209"/>
+      <rotation yaw="-153.28943" pitch="0.798002"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="77.053" y="59.246" z="-126.45"/>
+      <rotation yaw="-104.09219" pitch="-78.61894" roll="3.51887"/>
+    </spawnpoint>
+  </space>
+  <space macro="struct_tel_vertical_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-121.714" y="-181.273" z="49.803"/>
+      <rotation yaw="174.18892" pitch="82.96376" roll="-3.51749"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="0.4103" y="-104.495" z="66.405"/>
+      <rotation yaw="-179.67842" pitch="4.06751"/>
+    </spawnpoint>
+  </space>
+  <space macro="buildmodule_gen_equip_m_dockarea_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-330.257" y="-210.024" z="216.241"/>
+      <rotation yaw="168.56715" pitch="51.16661"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="289.025" y="79.246" z="-382.332"/>
+      <rotation yaw="81.55022" pitch="80.21242" roll="-8.92077"/>
+    </spawnpoint>
+  </space>
+  <space macro="defence_tel_claim_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="115.363" y="-276.63" z="36.772"/>
+      <rotation yaw="-107.58323" pitch="5.07454"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-77.352" y="-99.747" z="153.474"/>
+      <rotation yaw="156.58054" pitch="47.23847"/>
+    </spawnpoint>
+  </space>
+  <space macro="struct_tel_vertical_02_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="0.5702" y="-434.024" z="97.533"/>
+      <rotation yaw="-175.49139" pitch="-1.51925"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-120.575" y="-379.581" z="67.931"/>
+      <rotation yaw="153.51659" pitch="82.5467"/>
+    </spawnpoint>
+  </space>
+  <space macro="defence_tel_tube_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-1.188" y="-81.672" z="72.973"/>
+      <rotation yaw="-63.36329" pitch="83.5162" roll="174.64482"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="0.5815" y="-84.208" z="-72.411"/>
+      <rotation yaw="-62.18213" pitch="87.87578" roll="164.44684"/>
+    </spawnpoint>
+  </space>
+  <space macro="defence_par_disc_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-182.443" y="-113.225" z="-1.433"/>
+      <rotation yaw="94.86588" pitch="52.41373"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-0.02627" y="-113.451" z="-154.916"/>
+      <rotation yaw="38.18513" pitch="77.97746" roll="38.87189"/>
+    </spawnpoint>
+  </space>
+  <space macro="hab_tel_s_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="12.617" y="150.275" z="-40.031"/>
+      <rotation yaw="-29.87259" pitch="-88.85876" roll="-58.73465"/>
+    </spawnpoint>
+  </space>
+  <space macro="prod_tel_nostropoil_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="235.352" y="312.154" z="141.247"/>
+      <rotation yaw="-95.66076" pitch="-1.5419" roll="-0.556939"/>
+    </spawnpoint>
+  </space>
+  <space macro="hab_tel_l_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-50.507" y="638.959" z="-444.337"/>
+      <rotation yaw="9.7909" pitch="-51.56404" roll="-0.750246"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="182.061" y="-118.868" z="-76.894"/>
+      <rotation yaw="-59.96508" pitch="26.86145"/>
+    </spawnpoint>
+  </space>
+  <space macro="hab_par_m_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-166.07" y="45.403" z="0.8354"/>
+      <rotation yaw="92.24291" pitch="-19.46209"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="0.8934" y="354.281" z="-31.149"/>
+      <rotation yaw="40.8102" pitch="-76.27858" roll="-33.923"/>
+    </spawnpoint>
+  </space>
+  <space macro="buildmodule_gen_equip_l_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="636.097" y="-49.035" z="-67.891"/>
+      <rotation yaw="7.3117" pitch="56.75558"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="595.7" y="206.26" z="1.008"/>
+      <rotation yaw="89.83688" pitch="-61.13813" roll="165.24507"/>
+    </spawnpoint>
+    <spawnpoint id="3" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="265.357" y="556.622" z="-0.2847"/>
+      <rotation yaw="-87.55981" pitch="-51.12141"/>
+    </spawnpoint>
+  </space>
+  <space macro="storage_arg_s_container_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-66.518" y="-69.817" z="125.817"/>
+      <rotation yaw="109.68961" pitch="83.56111" roll="-68.33055"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="24.717" y="-69.207" z="-231.843"/>
+      <rotation yaw="-8.43669" pitch="80.04287" roll="170.83528"/>
+    </spawnpoint>
+  </space>
+  <space macro="struct_arg_base_03_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-112.675" y="45.8" z="-49.256"/>
+      <rotation yaw="85.70084" pitch="-62.56673" roll="0.0503007"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-32.494" y="-68.68" z="45.99"/>
+      <rotation yaw="56.98321" pitch="85.33028" roll="-30.23809"/>
+    </spawnpoint>
+  </space>
+  <space macro="pier_arg_harbor_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="-927.451" y="59.863" z="-0.4278"/>
+      <rotation yaw="-93.4367" pitch="-85.65981" roll="-87.89305"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="0.2287" y="66.955" z="1298.199"/>
+      <rotation yaw="-112.89909" pitch="-86.34135" roll="112.93491"/>
+    </spawnpoint>
+  </space>
+  <space macro="hab_par_s_01_macro">
+    <spawnpoint id="1" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="63.026" y="43.811" z="-2.352"/>
+      <rotation yaw="-95.84835" pitch="31.84886"/>
+    </spawnpoint>
+    <spawnpoint id="2" macro="sm_gen_lockbox_rare_01_macro">
+      <position x="73.073" y="-261.953" z="0.6389"/>
+      <rotation yaw="-89.48093" pitch="-11.61703"/>
+    </spawnpoint>
+  </space>
+</objectspawnpoints>

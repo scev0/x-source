@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<effects>
+  <!--trails for each ship size category -->
+  <effect name="trail_ship_s_01" duration="2.0" width="4.0" taper="1" fadestart="1.0" timestep="0.05" maxtimestep="0.8" timestepbase="1000" maxdistance="15000" colormatrixsource="enginemaker">
+    <parameters>
+      <material name="trails.trail_ship_s_01"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_m_01" duration="6.0" width="16.0" taper="1" fadestart="4.0" timestep="0.2" maxtimestep="2" timestepbase="2000" maxdistance="20000" colormatrixsource="enginemaker">
+    <parameters>
+      <material name="trails.trail_ship_m_01"/>
+    </parameters >
+  </effect>
+
+  <!--wingtip vortices -->
+  <effect name="wingtip_vortex_ship_s_01" duration="1.0" width="1.0" taper="1" fadestart="0.5" timestep="0.05" maxtimestep="0.4" timestepbase="500" maxdistance="1000" densitysource="rotationvortex" mindistance="15">
+    <parameters>
+      <material name="trails.wingtip_vortex_ship_s_01"/>
+    </parameters >
+  </effect>
+
+  <effect name="wingtip_vortex_ship_m_01" duration="2.0" width="4.0" taper="1" fadestart="1.0" timestep="0.05" maxtimestep="0.4" timestepbase="1000" maxdistance="2000" densitysource="rotationvortex" >
+    <parameters>
+      <material name="trails.wingtip_vortex_ship_m_01"/>
+    </parameters >
+  </effect>
+
+  <!--generic trails -->
+  <effect name="trail_ship_xs_blue" duration="1.0" width="1.0" taper="0.5" fadestart="0.0" densitysource="enginejet">
+    <parameters>
+      <material name="trails.trail_blue"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_s_blue" duration="2.0" width="2.0" taper="0.5" fadestart="0.0" densitysource="enginejet">
+    <parameters>
+      <material name="trails.trail_blue"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_m_blue" duration="3.0" width="4.0" taper="0.5" fadestart="0.0" densitysource="enginejet">
+    <parameters>
+      <material name="trails.trail_blue"/>
+    </parameters >
+  </effect>
+  <effect name="trail_drone_medium" duration="1.0" width="3.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone"/>
+    </parameters >
+  </effect>
+  <effect name="trail_missile_npc_dumbfire" duration="2.0" width="1.0" taper="1" fadestart="1.0" timestep="0.05" maxtimestep="0.8" timestepbase="1000" maxdistance="15000" initialvelocity="1" decay="0.1">
+    <parameters>
+      <material name="trails.dummy"/>
+    </parameters >
+  </effect>
+  <effect name="trail_missile_npc_guided" duration="4.0" width="1.0" taper="0.5" fadestart="0.0" timestep="0.1" maxtimestep="0.8" timestepbase="2000" maxdistance="15000" initialvelocity="1" decay="0.1">
+    <parameters>
+      <material name="trails.dummy"/>
+    </parameters >
+  </effect>
+  <effect name="trail_missile_npc_swarm" duration="2.0" width="2.0" taper="0.5" fadestart="0.0" timestep="0.1" maxtimestep="0.8" timestepbase="2000" maxdistance="15000" initialvelocity="1" decay="0.1">
+    <parameters>
+      <material name="trails.dummy"/>
+    </parameters >
+  </effect>
+  <effect name="trail_missile_npc_torpedo" duration="8.0" width="6.0" taper="0.5" fadestart="0.0" timestep="0.1" maxtimestep="0.8" timestepbase="2000" maxdistance="15000" initialvelocity="1" decay="0.1">
+    <parameters>
+      <material name="trails.missile_torpedo"/>
+    </parameters >
+  </effect>
+  <effect name="trail_missile_player_dumbfire" duration="1.0" width="2.0" taper="0.5" fadestart="0.0" timestep="0.1" maxtimestep="0.8" timestepbase="2000" maxdistance="15000" initialvelocity="1" decay="0.1">
+    <parameters>
+      <material name="trails.dummy"/>
+    </parameters >
+  </effect>
+  <effect name="trail_missile_player_guided" duration="1.0" width="2.0" taper="0.5" fadestart="0.0" timestep="0.1" maxtimestep="0.8" timestepbase="2000" maxdistance="15000" initialvelocity="1" decay="0.1">
+    <parameters>
+      <material name="trails.dummy"/>
+    </parameters >
+  </effect>
+  <effect name="trail_missile_player_swarm" duration="2.0" width="1.0" taper="0.5" fadestart="0.0" timestep="0.1" maxtimestep="0.8" timestepbase="2000" maxdistance="15000" initialvelocity="1" decay="0.1">
+    <parameters>
+      <material name="trails.dummy"/>
+    </parameters >
+  </effect>
+  <effect name="trail_missile_player_torpedo" duration="8.0" width="3.0" taper="0.5" fadestart="0.0" timestep="0.1" maxtimestep="0.8" timestepbase="2000" maxdistance="15000" initialvelocity="1" decay="0.1">
+    <parameters>
+      <material name="trails.missile_player_torpedo"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_s_small" duration="1.2" width="2.5" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_s_small_yellow" duration="1.2" width="2.5" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone_yellow"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_s_small_red" duration="1.2" width="2.5" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone_red"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_s_medium_blue" duration="2.0" width="2.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_s_medium" duration="1.8" width="4.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_s_medium_yellow" duration="1.8" width="4.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone_yellow"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_s_medium_red" duration="1.8" width="4.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone_red"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_s_large" duration="2.4" width="5.5" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_s_large_red" duration="2.4" width="5.5" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone_red"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_m_small" duration="2.0" width="4.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_m_small_yellow" duration="2.0" width="4.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone_yellow"/>
+    </parameters >
+  </effect>
+  <effect name="trail_ship_m_large" duration="3.0" width="8.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone"/>
+    </parameters >
+  </effect>
+  <effect name="trail_escapepod" duration="1.2" width="2.5" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone"/>
+    </parameters >
+  </effect>
+  <!--test trail start -->
+  <effect name="pdrone_trail_interceptor" duration="1.0" width="3.0" taper="0.5" fadestart="0.1">
+    <parameters>
+      <material name="trails.pdrone_interceptor">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="pdrone_boarding" duration="1.5" width="1.0" taper="0.5" fadestart="0.1">
+    <parameters>
+      <material name="trails.pdrone_interceptor">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="trail_drone_liquid_collector_mk1" duration="1.6" width="2.8" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="trail_drone_liquid_collector_mk2" duration="1.8" width="3.2" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="trail_drone_liquid_collector_mk3" duration="2.0" width="3.6" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="trail_drone_rubble_collector_mk1" duration="1.6" width="2.8" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="trail_drone_rubble_collector_mk2" duration="1.8" width="3.2" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="trail_drone_rubble_collector_mk3" duration="2.0" width="3.6" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="trail_blue_small_01" duration="2.0" width="1.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="trail_blue_small_02" duration="1.0" width="2.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="trail_orange_medium_01" duration="3.0" width="2.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.pdrone_interceptor">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="trail_orange_small_01" duration="2.0" width="1.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.pdrone_interceptor">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="trail_xenon_01" duration="2.0" width="8.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.xenon">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="trail_xenon_small_01" duration="1.5" width="5.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.xenon">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="trail_red_small_01" duration="2.0" width="4.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.pdrone_interceptor">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="testtrail" duration="5.0" width="1.0" taper="0.5" fadestart="0.1">
+    <parameters>
+      <material name="trails.dummy">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="testtrail2" duration="1.0" width="1.0" taper="0.5" fadestart="4.0">
+    <parameters>
+      <material name="trails.dummy2">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="dronetrail" duration="2.5" width="1.0" taper="0.5" fadestart="4.0">
+    <parameters>
+      <material name="trails.drone">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="turret_l_bullet_trail" duration="5.0" width="30.0" taper="0.5" fadestart="4.0">
+    <parameters>
+      <material name="trails.turret_l">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="turret_medium_bb_xe_bullet_trail" duration="5.0" width="30.0" taper="0.5" fadestart="4.0">
+    <parameters>
+      <material name="trails.turret_medium_bb_xe">
+      </material>
+    </parameters >
+  </effect>
+  <effect name="tradertrail" duration="50.0" width="4.5" taper="0.5" fadestart="4.0">
+    <parameters>
+      <material name="trails.drone">
+      </material>
+    </parameters >
+  </effect>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <!-- SPECIAL TRAILS FOR LENSFLARES -->
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <effect name="generic_s_blue_01" duration="1.2" width="3.5" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.generic_blue_01"/>
+    </parameters >
+  </effect>
+
+  <effect name="generic_s_blue_01_short" duration="0.5" width="1.5" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.generic_blue_01"/>
+    </parameters >
+  </effect>
+
+  <effect name="generic_s_blue_02" duration="1.2" width="5.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.generic_blue_02"/>
+    </parameters >
+  </effect>
+
+  <effect name="generic_s_blue_02_short" duration="0.75" width="4.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.generic_blue_02"/>
+    </parameters >
+  </effect>
+
+  <effect name="generic_s_yellow_01" duration="0.9" width="2.5" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone_yellow"/>
+    </parameters >
+  </effect>
+
+  <effect name="enginesystems_engine_s_01" duration="13.0" width="8.5" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.enginesystems_engine_s_blue_01"/>
+    </parameters >
+  </effect>
+
+  <effect name="enginesystems_engine_s_03" duration="7.0" width="3.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.enginesystems_engine_s_blue_01"/>
+    </parameters >
+  </effect>
+
+  <effect name="enginesystems_engine_s_04" duration="2.0" width="3.0" taper="0.5" fadestart="0.0">
+    <parameters>
+      <material name="trails.drone_yellow"/>
+    </parameters >
+  </effect>
+
+  <!-- ~~~~~~~~ -->
+  <!-- HIGHWAY -->
+  <!-- ~~~~~~~~ -->
+
+  <effect name="hw_local_01" duration="0.3" width="1.0" taper="0.5" fadestart="0.0" >
+    <parameters>
+      <material name="trails.hw_local_01"/>
+    </parameters >
+  </effect>
+  <effect name="hw_local_02" duration="10.0" width="50.0" taper="0.5" fadestart="5.0" timestep="0.05" maxtimestep="0.5" timestepbase="1000" maxdistance="25000">
+    <parameters>
+      <material name="trails.hw_local_01"/>
+    </parameters >
+  </effect>
+
+  <!-- ~~~~~~~~ -->
+  <!-- FALLBACK -->
+  <!-- ~~~~~~~~ -->
+
+  <effect name="fallback" duration="50.0" width="4.5" taper="0.5" fadestart="4.0">
+    <parameters>
+      <material name="trails.fallback">
+      </material>
+    </parameters >
+  </effect>
+</effects>

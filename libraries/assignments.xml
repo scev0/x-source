@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assignments>
+  <assignment id="defence" name="{20208,40301}" description="{20208,40302}">
+    <station default="true" />
+    <ship default="true"  multiple="true" />
+  </assignment>  
+  <assignment id="attack" name="{20208,40901}" description="{20208,40902}">
+    <ship multiple="true" />
+  </assignment>
+  <assignment id="interception" name="{20208,41001}" description="{20208,41002}">
+    <ship multiple="true" />
+  </assignment>
+  <assignment id="bombardment" name="{20208,41601}" description="{20208,41602}">
+    <ship multiple="true" />
+  </assignment>
+  <assignment id="positiondefence" name="{20208,41501}" description="{20208,41502}">
+    <station />
+    <ship multiple="true"/>
+  </assignment>
+  <assignment id="mining" name="{20208,40201}" description="{20208,40202}" purposes="mine">
+    <station />
+  </assignment>
+  <assignment id="trade" name="{20208,40101}" description="{20208,40102}">
+    <station />
+    <ship/>
+  </assignment>
+  <assignment id="supplyfleet" name="{20208,40701}" description="{20208,40702}" purposes="auxiliary">
+    <station />
+    <ship />
+  </assignment>
+  <assignment id="tradeforbuildstorage" name="{20208,40801}" description="{20208,40802}">
+    <station />
+  </assignment>
+  <assignment id="salvage" name="{20208,41401}" description="{20208,41402}" purposes="salvage">
+    <station/>
+    <ship/>
+  </assignment>
+  <assignment id="follow" name="{20208,41301}" description="{20208,41302}">
+    <ship />
+  </assignment>
+  <assignment id="police" name="{20208,40501}" description="{20208,40502}">
+    <station masstraffic="true"/>
+  </assignment>
+  <assignment id="watchdog" name="{20208,40601}" description="{20208,40602}">
+    <station masstraffic="true"/>
+  </assignment>
+  <assignment id="build" name="{20208,40401}" description="{20208,40402}"/>
+  <assignment id="assist" name="{20208, 41201}" description="{20208, 41202}">
+    <ship/>
+  </assignment>
+</assignments>

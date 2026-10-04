@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rooms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libraries.xsd">
+  <room id="corridor_arg" group="corridor_arg">
+    <category tags="corridor" race="argon" />
+  </room>
+  <room id="corridor_arg_generic" group="corridor_arg_generic">
+    <category tags="[corridor, genericcorridor]" race="argon" />
+  </room>
+  <room id="corridor_arg_administration" group="corridor_arg_administration">
+    <category tags="[corridor, administrationcorridor]" race="argon" />
+  </room>
+  <room id="corridor_arg_residential" group="corridor_arg_residential">
+    <category tags="[corridor, residentialcorridor]" race="argon" />
+  </room>
+  <room id="corridor_arg_entertainment" group="corridor_arg_entertainment">
+    <category tags="[corridor, entertainmentcorridor]" race="argon" />
+  </room>
+  <room id="corridor_arg_maintenance" group="corridor_arg_maintenance">
+    <category tags="[corridor, maintenancecorridor]" race="argon" />
+  </room>
+  <room id="corridor_par" group="corridor_par">
+    <category tags="corridor" race="paranid" />
+  </room>
+  <room id="corridor_tel" group="corridor_tel">
+    <category tags="corridor" race="teladi" />
+  </room>
+  <room id="office_arg" group="office_arg">
+    <category tags="[room, office]" race="argon" />
+  </room>
+  <room id="office_tel" group="office_tel">
+    <category tags="[room, office]" race="teladi" />
+  </room>
+  <room id="office_par" group="office_par">
+    <category tags="[room, office]" race="paranid" />
+  </room>
+  <room id="office_boso" group="office_boso">
+    <category tags="[room, bosotank]" race="argon" />
+  </room>
+  <room id="factionrep_office_arg" group="factionrep_office_arg">
+    <category tags="[room, factionrep]" race="argon" />
+  </room>
+  <room id="factionrep_office_tel" group="factionrep_office_tel">
+    <category tags="[room, factionrep]" race="teladi" />
+  </room>
+  <room id="factionrep_office_par" group="factionrep_office_par">
+    <category tags="[room, factionrep]" race="paranid" />
+  </room>
+  <room id="prison_gen" group="prison_gen">
+    <category tags="[room, prison]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="bar_gen" group="bar_gen">
+    <category tags="[room, bar]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="security_gen" group="security_gen">
+    <category tags="[room, security]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="infrastructure_gen" group="infrastructure_gen">
+    <category tags="[room, infrastructure]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="casino_gen" group="casino_gen">
+    <category tags="[room, casino]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="crew_quarters_gen" group="crew_quarters_gen">
+    <category tags="[room, crewquarters]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="embassy_gen" group="embassy_gen">
+    <category tags="[room, embassy]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="generatorroom_gen" group="generatorroom_gen">
+    <category tags="[room, generatorroom]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="intelligenceoffice_gen" group="intelligenceoffice_gen">
+    <category tags="[room, intelligenceoffice]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="livingroom_gen" group="livingroom_gen">
+    <category tags="[room, livingroom, generic]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="livingroom_shady_gen" group="livingroom_shady_gen">
+    <category tags="[room, livingroom, shady]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="playeroffice_gen" group="playeroffice_gen">
+    <category tags="[room, playeroffice]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="serverroom_gen" group="serverroom_gen">
+    <category tags="[room, serverroom]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="serviceroom_gen" group="serviceroom_gen">
+    <category tags="[room, serviceroom]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="trafficcontrol_gen" group="trafficcontrol_gen">
+    <category tags="[room, trafficcontrol]" race="[argon, teladi, paranid]" />
+  </room>
+  <room id="warroom_gen" group="warroom_gen">
+    <category tags="[room, warroom]" race="[argon, teladi, paranid]" />
+  </room>
+</rooms>

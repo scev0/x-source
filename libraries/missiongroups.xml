@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<missiongroups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="missiongroups.xsd">
+  <!-- ID: See X4Ep1_*.xml, the $MissionGroup is one of the below -->
+  <group id="argon_police"          name="{30206,1}" faction="argon"/>
+  <group id="argon_war_xenon"       name="{30210,1}" faction="argon" enemy="xenon"/>
+  <group id="argon_war_holyorder"   name="{30211,1}" faction="argon" enemy="holyorder"/>
+  <group id="paranid_war_holyorder" name="{30212,1}" faction="paranid" enemy="holyorder"/>
+  <group id="holyorder_war_argon"   name="{30213,1}" faction="holyorder" enemy="argon"/>
+  <group id="holyorder_war_paranid" name="{30214,1}" faction="holyorder" enemy="paranid"/>
+  <group id="antigone_trade_guild"  name="{30205,1}" faction="antigone"/>
+  <group id="teladi_trade_guild"    name="{30204,1}" faction="teladi"/>
+  <group id="scaleplate_pirates"    name="{30207,1}" faction="scaleplate"/>
+  <group id="mentor_plot"           name="{30201,1}" faction="argon"/>
+  <group id="diplomat_mentor_plot"  name="{30202,1}" faction="argon"/>
+  <group id="terraforming"          name="{30500,1}" faction="player"/>
+  <!-- stories -->
+  <group id="story_boso"                name="{30201,51}" story="true"/>
+  <group id="story_hatikvah"            name="{30202,51}" story="true"/>
+  <group id="story_paranid"             name="{30220,51}" story="true"/>
+  <group id="story_paranid_unification" name="{30220,52}" story="true"/>
+  <group id="story_paranid_escalation"  name="{30220,53}" story="true"/>
+
+  <!-- testcode -->
+  <group id="argon_secret_service"  name="Argon Secret Service" faction="argon"/>
+
+</missiongroups>

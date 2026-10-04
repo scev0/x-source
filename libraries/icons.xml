@@ -1,0 +1,1606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE icons SYSTEM "icons.dtd" >
+<icons>
+  <!-- P1 crosshair icons -->
+  <icon name="hud_flightvector" texture="assets\textures\ui\PlayerHud\hud_flightvector.tga" height="64" width="64"></icon>
+  <icon name="hud_flightvector_undershoot" texture="assets\textures\ui\PlayerHud\hud_flightvector_undershoot.tga" height="64" width="64"></icon>
+  <icon name="hud_flightvector_overshoot" texture="assets\textures\ui\PlayerHud\hud_flightvector_overshoot.tga" height="64" width="64"></icon>
+  <icon name="hud_flightvector_offscreen" texture="assets\textures\ui\PlayerHud\hud_flightvector_offscreen.tga" height="64" width="64"></icon>
+
+  <icon name="hud_ms_cluster_heavy_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_cluster_heavy_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_cluster_light_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_cluster_light_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_disruptor_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_disruptor_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_dumbfire_heavy_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_dumbfire_heavy_mk1.tga" height="32" width="64"></icon>
+  <icon name="hud_ms_dumbfire_heavy_mk2" texture="assets\textures\ui\PlayerHud\hud_ms_dumbfire_heavy_mk2.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_dumbfire_light_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_dumbfire_light_mk1.tga" height="32" width="64"></icon>
+  <icon name="hud_ms_dumbfire_light_mk2" texture="assets\textures\ui\PlayerHud\hud_ms_dumbfire_light_mk2.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_emp_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_emp_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_guided_heavy_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_guided_heavy_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_guided_light_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_guided_light_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_heatseeker_heavy_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_heatseeker_heavy_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_heatseeker_light_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_heatseeker_light_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_interceptor_light_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_interceptor_light_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_scatter_heavy_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_scatter_heavy_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_smart_heavy_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_smart_heavy_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_smart_light_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_smart_light_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_starburst_heavy_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_starburst_heavy_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_swarm_heavy_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_swarm_heavy_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_swarm_light_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_swarm_light_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_torpedo_heavy_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_torpedo_heavy_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="hud_ms_torpedo_light_mk1" texture="assets\textures\ui\PlayerHud\hud_ms_torpedo_light_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="weapon_beam_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_beam_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_beam_mk2" texture="assets\textures\ui\PlayerHud\hud_wp_beam_mk2.tga" height="32" width="64"></icon>
+
+  <icon name="weapon_charge_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_charge_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_charge_mk2" texture="assets\textures\ui\PlayerHud\hud_wp_charge_mk2.tga" height="32" width="64"></icon>
+
+  <icon name="weapon_gatling_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_gatling_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_gatling_mk2" texture="assets\textures\ui\PlayerHud\hud_wp_gatling_mk2.tga" height="32" width="64"></icon>
+
+  <icon name="weapon_ion_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_ion_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_ion_mk2" texture="assets\textures\ui\PlayerHud\hud_wp_ion_mk2.tga" height="32" width="64"></icon>
+
+  <icon name="weapon_laser_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_laser_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_laser_mk2" texture="assets\textures\ui\PlayerHud\hud_wp_laser_mk2.tga" height="32" width="64"></icon>
+
+  <icon name="weapon_mining_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_mining_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_mining_mk2" texture="assets\textures\ui\PlayerHud\hud_wp_mining_mk2.tga" height="32" width="64"></icon>
+
+  <icon name="weapon_plasma_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_plasma_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_plasma_mk2" texture="assets\textures\ui\PlayerHud\hud_wp_plasma_mk2.tga" height="32" width="64"></icon>
+
+  <icon name="weapon_railgun_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_railgun_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_railgun_mk2" texture="assets\textures\ui\PlayerHud\hud_wp_railgun_mk2.tga" height="32" width="64"></icon>
+
+  <icon name="weapon_shotgun_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_shotgun_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_shotgun_mk2" texture="assets\textures\ui\PlayerHud\hud_wp_shotgun_mk2.tga" height="32" width="64"></icon>
+
+  <icon name="weapon_cannon_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_cannon_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_cannon_mk2" texture="assets\textures\ui\PlayerHud\hud_wp_cannon_mk2.tga" height="32" width="64"></icon>
+
+  <icon name="weapon_burst_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_burst_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_burst_mk2" texture="assets\textures\ui\PlayerHud\hud_wp_burst_mk2.tga" height="32" width="64"></icon>
+
+  <icon name="weapon_tug_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_tug_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_tug_mk2" texture="assets\textures\ui\PlayerHud\hud_wp_tug_mk2.tga" height="32" width="64"></icon>
+
+  <!-- space suit tools / weapons -->
+  <icon name="weapon_handlaser_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_handlaser_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_repairlaser_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_repairlaser_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_bomb_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_bomb_mk1.tga" height="32" width="64"></icon>
+  <icon name="weapon_empbomb_mk1" texture="assets\textures\ui\PlayerHud\hud_wp_empbomb_mk1.tga" height="32" width="64"></icon>
+
+  <icon name="weaponmode_attackenemies" texture="assets\textures\ui\PlayerHud\hud_mode_attackenemies.tga" height="32" width="32"></icon>
+  <icon name="weaponmode_attackcapships" texture="assets\textures\ui\PlayerHud\hud_mode_attackcapships.tga" height="32" width="32"></icon>
+  <icon name="weaponmode_attackfighters" texture="assets\textures\ui\PlayerHud\hud_mode_attackfighters.tga" height="32" width="32"></icon>
+  <icon name="weaponmode_autoassist" texture="assets\textures\ui\PlayerHud\hud_mode_autoassist.tga" height="32" width="32"></icon>
+  <icon name="weaponmode_defend" texture="assets\textures\ui\PlayerHud\hud_mode_defend.tga" height="32" width="32"></icon>
+  <icon name="weaponmode_holdfire" texture="assets\textures\ui\PlayerHud\hud_mode_holdfire.tga" height="32" width="32"></icon>
+  <icon name="weaponmode_mining" texture="assets\textures\ui\PlayerHud\hud_mode_mining.tga" height="32" width="32"></icon>
+  <icon name="weaponmode_missiledefence" texture="assets\textures\ui\PlayerHud\hud_mode_missiledefense.tga" height="32" width="32"></icon>
+  <icon name="weaponmode_prefercapships" texture="assets\textures\ui\PlayerHud\hud_mode_prefercapships.tga" height="32" width="32"></icon>
+  <icon name="weaponmode_preferfighters" texture="assets\textures\ui\PlayerHud\hud_mode_preferfighters.tga" height="32" width="32"></icon>
+  <icon name="weaponmode_prefermissiles" texture="assets\textures\ui\PlayerHud\hud_mode_prefermissiles.tga" height="32" width="32"></icon>
+  <icon name="weaponmode_towing" texture="assets\textures\ui\PlayerHud\hud_mode_tug.tga" height="32" width="32"></icon>
+  <!-- The following icon is referenced by name in launcher.cpp -->
+  <icon name="weaponmode_empty_missile" texture="assets\textures\ui\PlayerHud\hud_mode_empty_missile.tga" height="32" width="32"></icon>
+
+  <!-- weapons fallback icon -->
+  <icon name="default_bullet_icon" texture="assets\textures\ui\PlayerHud\hud_wp_beam_mk1.tga" height="32" width="64"></icon>
+
+  <!-- P1 drone control icons -->
+  <icon name="hud_drone_attackenemies" texture="assets\textures\ui\PlayerHud\hud_drone_attackenemies.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_attackenemies_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_attackenemies_impossible.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_autoassist" texture="assets\textures\ui\PlayerHud\hud_drone_autoassist.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_autoassist_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_autoassist_impossible.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_defend" texture="assets\textures\ui\PlayerHud\hud_drone_defend.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_defend_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_defend_impossible.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_escort" texture="assets\textures\ui\PlayerHud\hud_drone_escort.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_escort_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_escort_impossible.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_missiledefense" texture="assets\textures\ui\PlayerHud\hud_drone_missiledefense.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_missiledefense_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_missiledefense_impossible.tga" height="25" width="25"></icon>
+
+  <icon name="hud_drone_collect_all" texture="assets\textures\ui\PlayerHud\hud_drone_collect_all.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_all_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_collect_all_impossible.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_ice" texture="assets\textures\ui\PlayerHud\hud_drone_collect_ice.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_ice_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_collect_ice_impossible.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_illegal" texture="assets\textures\ui\PlayerHud\hud_drone_collect_illegal.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_illegal_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_collect_illegal_impossible.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_legal" texture="assets\textures\ui\PlayerHud\hud_drone_collect_legal.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_legal_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_collect_legal_impossible.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_nividium" texture="assets\textures\ui\PlayerHud\hud_drone_collect_nividium.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_nividium_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_collect_nividium_impossible.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_ore" texture="assets\textures\ui\PlayerHud\hud_drone_collect_ore.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_ore_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_collect_ore_impossible.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_selected" texture="assets\textures\ui\PlayerHud\hud_drone_collect_selected.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_selected_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_collect_selected_impossible.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_silicon" texture="assets\textures\ui\PlayerHud\hud_drone_collect_silicon.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_collect_silicon_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_collect_silicon_impossible.tga" height="25" width="25"></icon>
+
+  <icon name="hud_drone_harvest_helium" texture="assets\textures\ui\PlayerHud\hud_drone_harvest_helium.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_harvest_helium_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_harvest_helium_impossible.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_harvest_hydrogen" texture="assets\textures\ui\PlayerHud\hud_drone_harvest_hydrogen.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_harvest_hydrogen_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_harvest_hydrogen_impossible.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_harvest_methane" texture="assets\textures\ui\PlayerHud\hud_drone_harvest_methane.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_harvest_methane_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_harvest_methane_impossible.tga" height="25" width="25"></icon>
+
+  <icon name="hud_drone_trade" texture="assets\textures\ui\PlayerHud\hud_drone_trade.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_trade_impossible" texture="assets\textures\ui\PlayerHud\hud_drone_trade_impossible.tga" height="25" width="25"></icon>
+
+  <icon name="hud_drone_error" texture="assets\textures\ui\widget\solid.tga" height="25" width="25"/>
+
+  <icon name="hud_drone_fightdrone" texture="assets\textures\ui\shipicon\ship_s_fight_01.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_minedrone" texture="assets\textures\ui\shipicon\ship_s_mine_01.tga" height="25" width="25"></icon>
+  <icon name="hud_drone_tradedrone" texture="assets\textures\ui\shipicon\ship_s_trade_01.tga" height="25" width="25"></icon>
+
+  <!-- P1 other playerhud icons -->
+  <icon name="hud_checkengine" texture="assets\textures\ui\PlayerHud\hud_checkengine.tga" height="128" width="128"></icon>
+
+  <!-- race icons -->
+  <icon name="race_argon" texture="assets\textures\ui\races\race_argon_diffhq.tga" height="512" width="512"></icon>
+  <icon name="race_boron" texture="assets\textures\ui\races\race_boron_diffhq.tga" height="512" width="512"></icon>
+  <icon name="race_khaak" texture="assets\textures\ui\races\race_khaak_diffhq.tga" height="512" width="512"></icon>
+  <icon name="race_paranid" texture="assets\textures\ui\races\race_paranid_diffhq.tga" height="512" width="512"></icon>
+  <icon name="race_split" texture="assets\textures\ui\races\race_split_diffhq.tga" height="512" width="512"></icon>
+  <icon name="race_teladi" texture="assets\textures\ui\races\race_teladi_diffhq.tga" height="512" width="512"></icon>
+  <icon name="race_terran" texture="assets\textures\ui\races\race_terran_diffhq.tga" height="512" width="512"></icon>
+  <icon name="race_xenon" texture="assets\textures\ui\races\race_xenon_diffhq.tga" height="512" width="512"></icon>
+
+  <!-- faction icons -->
+  <icon name="faction_alliance" texture="assets\textures\ui\factions\faction_alliance_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_antigone" texture="assets\textures\ui\factions\faction_antigone_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_argon" texture="assets\textures\ui\factions\faction_argon_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_buccaneers" texture="assets\textures\ui\factions\faction_buccaneers_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_civilian" texture="assets\textures\ui\factions\faction_civilian_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_criminal" texture="assets\textures\ui\factions\faction_criminal_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_hatikvah" texture="assets\textures\ui\factions\faction_hatikvah_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_holyorder" texture="assets\textures\ui\factions\faction_holyorder_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_khaak" texture="assets\textures\ui\factions\faction_khaak_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_ministry" texture="assets\textures\ui\factions\faction_ministry_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_ownerless" texture="assets\textures\ui\factions\faction_ownerless_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_paranid" texture="assets\textures\ui\factions\faction_paranid_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_player" texture="assets\textures\ui\factions\faction_player_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_scaleplate" texture="assets\textures\ui\factions\faction_scaleplate_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_smuggler" texture="assets\textures\ui\factions\faction_criminal_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_teladi" texture="assets\textures\ui\factions\faction_teladi_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_tempest" texture="assets\textures\ui\factions\faction_tempest_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_terran" texture="assets\textures\ui\factions\faction_terran_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_trinity" texture="assets\textures\ui\factions\faction_trinity_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_visitor" texture="assets\textures\ui\factions\faction_visitor_diffhq.tga" height="256" width="256"></icon>
+  <icon name="faction_xenon" texture="assets\textures\ui\factions\faction_xenon_diffhq.tga" height="256" width="256"></icon>
+
+  <!-- player icons -->
+  <icon name="playerlogo_*" texture="assets\textures\ui\player_logos\playerlogo_*.tga" tags="playerlogo" height="256" width="256"/>
+  <icon name="customlogo_*" texture="logos\*.*" personal="true" tags="customlogo" height="256" width="256"/>
+
+  <!--licence icons-->
+  <icon name="licence_hazardmats" texture="assets\textures\ui\licence\licence_hazardmats.tga" height="128" width="128"></icon>
+  <icon name="licence_intelligence" texture="assets\textures\ui\licence\licence_intelligence.tga" height="128" width="128"></icon>
+  <icon name="licence_intoxicants" texture="assets\textures\ui\licence\licence_intoxicants.tga" height="128" width="128"></icon>
+  <icon name="licence_military" texture="assets\textures\ui\licence\licence_military.tga" height="128" width="128"></icon>
+  <icon name="licence_pharma" texture="assets\textures\ui\licence\licence_pharma.tga" height="128" width="128"></icon>
+  <icon name="licence_police" texture="assets\textures\ui\licence\licence_police.tga" height="128" width="128"></icon>
+  <icon name="licence_protect" texture="assets\textures\ui\licence\licence_protect.tga" height="128" width="128"></icon>
+
+  <!-- Missions Type icons -->
+  <icon name="missiontype_board" texture="assets\textures\ui\mission_types\mtype_board.tga" height="32" width="32"></icon>
+  <icon name="missiontype_build" texture="assets\textures\ui\mission_types\mtype_build.tga" height="32" width="32"></icon>
+  <icon name="missiontype_coalition" texture="assets\textures\ui\mission_types\mtype_think.tga" height="32" width="32"></icon>
+  <icon name="missiontype_collect" texture="assets\textures\ui\mission_types\mtype_collect.tga" height="32" width="32"></icon>
+  <icon name="missiontype_chain" texture="assets\textures\ui\mission_types\mtype_chain.tga" height="32" width="32"></icon>
+  <icon name="missiontype_completed_tutorial" texture="assets\textures\ui\mission_types\mtype_completed_tutorial.tga" height="32" width="32"></icon>
+  <icon name="missiontype_crisis" texture="assets\textures\ui\mission_types\mtype_military.tga" height="32" width="32"></icon>
+  <icon name="missiontype_deliver" texture="assets\textures\ui\mission_types\mtype_transport.tga" height="32" width="32"></icon>
+  <icon name="missiontype_destroy" texture="assets\textures\ui\mission_types\mtype_fight.tga" height="32" width="32"></icon>
+  <icon name="missiontype_drop" texture="assets\textures\ui\mission_types\mtype_drop.tga" height="32" width="32"></icon>
+  <icon name="missiontype_escort" texture="assets\textures\ui\mission_types\mtype_escort.tga" height="32" width="32"></icon>
+  <icon name="missiontype_explore" texture="assets\textures\ui\mission_types\mtype_explore.tga" height="32" width="32"></icon>
+  <icon name="missiontype_extend" texture="assets\textures\ui\mission_types\mtype_extend.tga" height="32" width="32"></icon>
+  <icon name="missiontype_fight" texture="assets\textures\ui\mission_types\mtype_fight.tga" height="32" width="32"></icon>
+  <icon name="missiontype_find" texture="assets\textures\ui\mission_types\mtype_find.tga" height="32" width="32"></icon>
+  <icon name="missiontype_follow" texture="assets\textures\ui\mission_types\mtype_follow.tga" height="32" width="32"></icon>
+  <icon name="missiontype_guidance" texture="assets\textures\ui\mission_types\mtype_follow.tga" height="32" width="32"></icon>
+  <icon name="missiontype_hack" texture="assets\textures\ui\mission_types\mtype_hack.tga" height="32" width="32"></icon>
+  <icon name="missiontype_hints" texture="assets\textures\ui\mission_types\mtype_hints.tga" height="32" width="32"></icon>
+  <icon name="missiontype_intelligence" texture="assets\textures\ui\mission_types\mtype_think.tga" height="32" width="32"></icon>
+  <icon name="missiontype_kill" texture="assets\textures\ui\mission_types\mtype_fight.tga" height="32" width="32"></icon>
+  <icon name="missiontype_military" texture="assets\textures\ui\mission_types\mtype_military.tga" height="32" width="32"></icon>
+  <icon name="missiontype_other" texture="assets\textures\ui\mission_types\mtype_other.tga" height="32" width="32"></icon>
+  <icon name="missiontype_patrol" texture="assets\textures\ui\mission_types\mtype_patrol.tga" height="32" width="32"></icon>
+  <icon name="missiontype_pickup" texture="assets\textures\ui\mission_types\mtype_pickup.tga" height="32" width="32"></icon>
+  <icon name="missiontype_plot" texture="assets\textures\ui\mission_types\mtype_plot.tga" height="32" width="32"></icon>
+  <icon name="missiontype_police" texture="assets\textures\ui\mission_types\mtype_patrol.tga" height="32" width="32"></icon>
+  <icon name="missiontype_procure" texture="assets\textures\ui\mission_types\mtype_trade.tga" height="32" width="32"></icon>
+  <icon name="missiontype_protect" texture="assets\textures\ui\mission_types\mtype_protect.tga" height="32" width="32"></icon>
+  <icon name="missiontype_race" texture="assets\textures\ui\mission_types\mtype_race.tga" height="32" width="32"></icon>
+  <icon name="missiontype_raid" texture="assets\textures\ui\mission_types\mtype_board.tga" height="32" width="32"></icon>
+  <icon name="missiontype_repair" texture="assets\textures\ui\mission_types\mtype_repair.tga" height="32" width="32"></icon>
+  <icon name="missiontype_rescue" texture="assets\textures\ui\mission_types\mtype_rescue.tga" height="32" width="32"></icon>
+  <icon name="missiontype_research" texture="assets\textures\ui\mission_types\mtype_research.tga" height="32" width="32"></icon>
+  <icon name="missiontype_restock" texture="assets\textures\ui\mission_types\mtype_restock.tga" height="32" width="32"></icon>
+  <icon name="missiontype_scan" texture="assets\textures\ui\mission_types\mtype_scan.tga" height="32" width="32"></icon>
+  <icon name="missiontype_smuggle" texture="assets\textures\ui\mission_types\mtype_smuggle.tga" height="32" width="32"></icon>
+  <icon name="missiontype_station" texture="assets\textures\ui\mission_types\mtype_station.tga" height="32" width="32"></icon>
+  <icon name="missiontype_talkto" texture="assets\textures\ui\mission_types\mtype_talkto.tga" height="32" width="32"></icon>
+  <icon name="missiontype_think" texture="assets\textures\ui\mission_types\mtype_think.tga" height="32" width="32"></icon>
+  <icon name="missiontype_trade" texture="assets\textures\ui\mission_types\mtype_trade.tga" height="32" width="32"></icon>
+  <icon name="missiontype_transport" texture="assets\textures\ui\mission_types\mtype_transport.tga" height="32" width="32"></icon>
+  <icon name="missiontype_tutorial" texture="assets\textures\ui\mission_types\mtype_tutorial.tga" height="32" width="32"></icon>
+  <icon name="missiontype_upkeep_credits" texture="assets\textures\ui\mission_types\mtype_upkeep_credits.tga" height="32" width="32"></icon>
+  <icon name="missiontype_upkeep_extend" texture="assets\textures\ui\mission_types\mtype_upkeep_extend.tga" height="32" width="32"></icon>
+  <icon name="missiontype_upkeep_hirenpc" texture="assets\textures\ui\mission_types\mtype_upkeep_hirenpc.tga" height="32" width="32"></icon>
+  <icon name="missiontype_upkeep_subordinates" texture="assets\textures\ui\mission_types\mtype_upkeep_units.tga" height="32" width="32"></icon>
+  <icon name="missiontype_upkeep_units" texture="assets\textures\ui\mission_types\mtype_upkeep_units.tga" height="32" width="32"></icon>
+
+  <!-- NPC entity type icons -->
+  <!-- Icons from XR -->
+  <!-- hireable -->
+  <icon name="manager" active="manager_active" inactive="manager_inactive" selected="manager_select"></icon>
+  <icon name="manager_active" texture="assets\textures\ui\npc\npc_h_manager_act.tga" height="128" width="128"></icon>
+  <icon name="manager_inactive" texture="assets\textures\ui\npc\npc_h_manager_inact.tga" height="128" width="128"></icon>
+  <icon name="manager_select" texture="assets\textures\ui\npc\npc_h_manager_sel.tga" height="128" width="128"></icon>
+  <icon name="engineer" active="engineer_active" inactive="engineer_inactive" selected="engineer_select"></icon>
+  <icon name="engineer_active" texture="assets\textures\ui\npc\npc_h_engineer_act.tga" height="128" width="128"></icon>
+  <icon name="engineer_inactive" texture="assets\textures\ui\npc\npc_h_engineer_inact.tga" height="128" width="128"></icon>
+  <icon name="engineer_select" texture="assets\textures\ui\npc\npc_h_engineer_sel.tga" height="128" width="128"></icon>
+  <icon name="defenceofficer" active="defenseofficer_active" inactive="defenseofficer_inactive" selected="defenseofficer_select"></icon>
+  <icon name="defenseofficer_active" texture="assets\textures\ui\npc\npc_h_defenceofficer_act.tga" height="128" width="128"></icon>
+  <icon name="defenseofficer_inactive" texture="assets\textures\ui\npc\npc_h_defenceofficer_inact.tga" height="128" width="128"></icon>
+  <icon name="defenseofficer_select" texture="assets\textures\ui\npc\npc_h_defenceofficer_sel.tga" height="128" width="128"></icon>
+  <icon name="specialist" active="specialist_active" inactive="specialist_inactive" selected="specialist_select"></icon>
+  <icon name="specialist_active" texture="assets\textures\ui\npc\npc_h_specialist_act.tga" height="128" width="128"></icon>
+  <icon name="specialist_inactive" texture="assets\textures\ui\npc\npc_h_specialist_inact.tga" height="128" width="128"></icon>
+  <icon name="specialist_select" texture="assets\textures\ui\npc\npc_h_specialist_sel.tga" height="128" width="128"></icon>
+  <icon name="captain" active="captain_active" inactive="captain_inactive" selected="captain_select"></icon>
+  <icon name="captain_active" texture="assets\textures\ui\npc\npc_h_captain_act.tga" height="128" width="128"></icon>
+  <icon name="captain_inactive" texture="assets\textures\ui\npc\npc_h_captain_inact.tga" height="128" width="128"></icon>
+  <icon name="captain_select" texture="assets\textures\ui\npc\npc_h_captain_sel.tga" height="128" width="128"></icon>
+  <!-- Entitytype architect removed -->
+  <icon name="architect" active="architect_active" inactive="architect_inactive" selected="architect_select"></icon>
+  <icon name="architect_active" texture="assets\textures\ui\npc\npc_h_architect_act.tga" height="128" width="128"></icon>
+  <icon name="architect_inactive" texture="assets\textures\ui\npc\npc_h_architect_inact.tga" height="128" width="128"></icon>
+  <icon name="architect_select" texture="assets\textures\ui\npc\npc_h_architect_sel.tga" height="128" width="128"></icon>
+  <icon name="pilot" active="pilot_active" inactive="pilot_inactive" selected="pilot_select"></icon>
+  <icon name="pilot_active" texture="assets\textures\ui\npc\npc_h_pilot_act.tga" height="128" width="128"></icon>
+  <icon name="pilot_inactive" texture="assets\textures\ui\npc\npc_h_pilot_inact.tga" height="128" width="128"></icon>
+  <icon name="pilot_select" texture="assets\textures\ui\npc\npc_h_pilot_sel.tga" height="128" width="128"></icon>
+  <icon name="marineofficer" active="marineofficer_active" inactive="marineofficer_inactive" selected="marineofficer_select"></icon>
+  <icon name="marineofficer_active" texture="assets\textures\ui\npc\npc_h_marineofficer_act.tga" height="128" width="128"></icon>
+  <icon name="marineofficer_inactive" texture="assets\textures\ui\npc\npc_h_marineofficer_inact.tga" height="128" width="128"></icon>
+  <icon name="marineofficer_select" texture="assets\textures\ui\npc\npc_h_marineofficer_sel.tga" height="128" width="128"></icon>
+  <!--Icon currently wrong. Not hirable. To be fixed.-->
+  <icon name="recruitingofficer" active="recruitingofficer_active" inactive="recruitingofficer_inactive" selected="recruitingofficer_select"></icon>
+  <icon name="recruitingofficer_active" texture="assets\textures\ui\npc\npc_h_recruitingofficer_act.tga" height="128" width="128"></icon>
+  <icon name="recruitingofficer_inactive" texture="assets\textures\ui\npc\npc_h_recruitingofficer_inact.tga" height="128" width="128"></icon>
+  <icon name="recruitingofficer_select" texture="assets\textures\ui\npc\npc_h_recruitingofficer_sel.tga" height="128" width="128"></icon>
+
+  <!-- non hireable -->
+  <!-- Entitytype upgradetrader removed -->
+  <icon name="mechanic" active="mechanic_active" inactive="mechanic_inactive" selected="mechanic_select"></icon>
+  <icon name="mechanic_active" texture="assets\textures\ui\npc\npc_nh_mechanic_act.tga" height="128" width="128"></icon>
+  <icon name="mechanic_inactive" texture="assets\textures\ui\npc\npc_nh_mechanic_inact.tga" height="128" width="128"></icon>
+  <icon name="mechanic_select" texture="assets\textures\ui\npc\npc_nh_mechanic_sel.tga" height="128" width="128"></icon>
+
+  <icon name="dronedealer" active="dronedealer_active" inactive="dronedealer_inactive" selected="dronedealer_select"></icon>
+  <icon name="dronedealer_active" texture="assets\textures\ui\npc\npc_nh_dronedealer_act.tga" height="128" width="128"></icon>
+  <icon name="dronedealer_inactive" texture="assets\textures\ui\npc\npc_nh_dronedealer_inact.tga" height="128" width="128"></icon>
+  <icon name="dronedealer_select" texture="assets\textures\ui\npc\npc_nh_dronedealer_sel.tga" height="128" width="128"></icon>
+  <icon name="armsdealer" active="armsdealer_active" inactive="armsdealer_inactive" selected="armsdealer_select"></icon>
+  <icon name="armsdealer_active" texture="assets\textures\ui\npc\npc_nh_armsdealer_act.tga" height="128" width="128"></icon>
+  <icon name="armsdealer_inactive" texture="assets\textures\ui\npc\npc_nh_armsdealer_inact.tga" height="128" width="128"></icon>
+  <icon name="armsdealer_select" texture="assets\textures\ui\npc\npc_nh_armsdealer_sel.tga" height="128" width="128"></icon>
+  <icon name="shipdealer" active="shipdealer_active" inactive="shipdealer_inactive" selected="shipdealer_select"></icon>
+  <icon name="shipdealer_active" texture="assets\textures\ui\npc\npc_nh_shipdealer_act.tga" height="128" width="128"></icon>
+  <icon name="shipdealer_inactive" texture="assets\textures\ui\npc\npc_nh_shipdealer_inact.tga" height="128" width="128"></icon>
+  <icon name="shipdealer_select" texture="assets\textures\ui\npc\npc_nh_shipdealer_sel.tga" height="128" width="128"></icon>
+  <icon name="licencebroker" active="licencebroker_active" inactive="licencebroker_inactive" selected="licencebroker_select"></icon>
+  <icon name="licencebroker_active" texture="assets\textures\ui\npc\npc_nh_licensebroker_act.tga" height="128" width="128"></icon>
+  <icon name="licencebroker_inactive" texture="assets\textures\ui\npc\npc_nh_licensebroker_inact.tga" height="128" width="128"></icon>
+  <icon name="licencebroker_select" texture="assets\textures\ui\npc\npc_nh_licensebroker_sel.tga" height="128" width="128"></icon>
+  <icon name="miningsupplier" active="miningsupplier_active" inactive="miningsupplier_inactive" selected="miningsupplier_select"></icon>
+  <icon name="miningsupplier_active" texture="assets\textures\ui\npc\npc_nh_miningsupplier_act.tga" height="128" width="128"></icon>
+  <icon name="miningsupplier_inactive" texture="assets\textures\ui\npc\npc_nh_miningsupplier_inact.tga" height="128" width="128"></icon>
+  <icon name="miningsupplier_select" texture="assets\textures\ui\npc\npc_nh_miningsupplier_sel.tga" height="128" width="128"></icon>
+  <icon name="junkdealer" active="junkdealer_active" inactive="junkdealer_inactive" selected="junkdealer_select"></icon>
+  <icon name="junkdealer_active" texture="assets\textures\ui\npc\npc_nh_junkdealer_act.tga" height="128" width="128"></icon>
+  <icon name="junkdealer_inactive" texture="assets\textures\ui\npc\npc_nh_junkdealer_inact.tga" height="128" width="128"></icon>
+  <icon name="junkdealer_select" texture="assets\textures\ui\npc\npc_nh_junkdealer_sel.tga" height="128" width="128"></icon>
+  <icon name="spacefarmer" active="spacefarmer_active" inactive="spacefarmer_inactive" selected="spacefarmer_select"></icon>
+  <icon name="spacefarmer_active" texture="assets\textures\ui\npc\npc_nh_spacefarmer_act.tga" height="128" width="128"></icon>
+  <icon name="spacefarmer_inactive" texture="assets\textures\ui\npc\npc_nh_spacefarmer_inact.tga" height="128" width="128"></icon>
+  <icon name="spacefarmer_select" texture="assets\textures\ui\npc\npc_nh_spacefarmer_sel.tga" height="128" width="128"></icon>
+  <icon name="shiptechnican" active="shiptechnican_active" inactive="shiptechnican_inactive" selected="shiptechnican_select"></icon>
+  <icon name="shiptechnican_active" texture="assets\textures\ui\npc\npc_nh_shiptechnican_act.tga" height="128" width="128"></icon>
+  <icon name="shiptechnican_inactive" texture="assets\textures\ui\npc\npc_nh_shiptechnican_inact.tga" height="128" width="128"></icon>
+  <icon name="shiptechnican_select" texture="assets\textures\ui\npc\npc_nh_shiptechnican_sel.tga" height="128" width="128"></icon>
+  <icon name="equipmentvendor" active="equipmentvendor_active" inactive="equipmentvendor_inactive" selected="equipmentvendor_select"></icon>
+  <icon name="equipmentvendor_active" texture="assets\textures\ui\npc\npc_nh_equipmentvendor_act.tga" height="128" width="128"></icon>
+  <icon name="equipmentvendor_inactive" texture="assets\textures\ui\npc\npc_nh_equipmentvendor_inact.tga" height="128" width="128"></icon>
+  <icon name="equipmentvendor_select" texture="assets\textures\ui\npc\npc_nh_equipmentvendor_sel.tga" height="128" width="128"></icon>
+  <icon name="foodmerchant" active="foodmerchant_active" inactive="foodmerchant_inactive" selected="foodmerchant_select"></icon>
+  <icon name="foodmerchant_active" texture="assets\textures\ui\npc\npc_nh_foodmerchant_act.tga" height="128" width="128"></icon>
+  <icon name="foodmerchant_inactive" texture="assets\textures\ui\npc\npc_nh_foodmerchant_inact.tga" height="128" width="128"></icon>
+  <icon name="foodmerchant_select" texture="assets\textures\ui\npc\npc_nh_foodmerchant_sel.tga" height="128" width="128"></icon>
+
+  <icon name="shadyguy" active="shadyguy_active" inactive="shadyguy_inactive" selected="shadyguy_select"></icon>
+  <icon name="shadyguy_active" texture="assets\textures\ui\npc\npc_nh_shadyguy_act.tga" height="128" width="128"></icon>
+  <icon name="shadyguy_inactive" texture="assets\textures\ui\npc\npc_nh_shadyguy_inact.tga" height="128" width="128"></icon>
+  <icon name="shadyguy_select" texture="assets\textures\ui\npc\npc_nh_shadyguy_sel.tga" height="128" width="128"></icon>
+
+  <!-- old entity type icons -->
+  <icon name="factionrepresentative" active="factionrepresentative_active" inactive="factionrepresentative_inactive" selected="factionrepresentative_select"></icon>
+  <icon name="factionrepresentative_active" texture="assets\textures\ui\npc\npc_commander_act.tga" height="128" width="128"></icon>
+  <icon name="factionrepresentative_inactive" texture="assets\textures\ui\npc\npc_commander_inact.tga" height="128" width="128"></icon>
+  <icon name="factionrepresentative_select" texture="assets\textures\ui\npc\npc_commander_sel.tga" height="128" width="128"></icon>
+
+  <icon name="shiptrader" active="shiptrader_active" inactive="shiptrader_inactive" selected="shiptrader_select"></icon>
+  <icon name="shiptrader_active" texture="assets\textures\ui\npc\npc_shiptrader_act.tga" height="128" width="128"></icon>
+  <icon name="shiptrader_inactive" texture="assets\textures\ui\npc\npc_shiptrader_inact.tga" height="128" width="128"></icon>
+  <icon name="shiptrader_select" texture="assets\textures\ui\npc\npc_shiptrader_sel.tga" height="128" width="128"></icon>
+
+  <icon name="specialengineer" active="specialengineer_active" inactive="specialengineer_inactive" selected="specialengineer_select"></icon>
+  <icon name="specialengineer_active" texture="assets\textures\ui\npc\npc_specialist_act.tga" height="128" width="128"></icon>
+  <icon name="specialengineer_inactive" texture="assets\textures\ui\npc\npc_specialist_inact.tga" height="128" width="128"></icon>
+  <icon name="specialengineer_select" texture="assets\textures\ui\npc\npc_specialist_sel.tga" height="128" width="128"></icon>
+  <icon name="temporaryactor" active="temporary_active" inactive="temporary_inactive" selected="temporary_select"></icon>
+
+  <icon name="temporary_active" texture="assets\textures\ui\npc\npc_temporary_act.tga" height="128" width="128"></icon>
+  <icon name="temporary_inactive" texture="assets\textures\ui\npc\npc_temporary_inact.tga" height="128" width="128"></icon>
+  <icon name="temporary_select" texture="assets\textures\ui\npc\npc_temporary_sel.tga" height="128" width="128"></icon>
+
+  <icon name="trader" active="trader_active" inactive="trader_inactive" selected="trader_select"></icon>
+  <icon name="trader_active" texture="assets\textures\ui\npc\npc_trader_act.tga" height="128" width="128"></icon>
+  <icon name="trader_inactive" texture="assets\textures\ui\npc\npc_trader_inact.tga" height="128" width="128"></icon>
+  <icon name="trader_select" texture="assets\textures\ui\npc\npc_trader_sel.tga" height="128" width="128"></icon>
+  <icon name="unknownactor" active="unknown_active" inactive="unknown_inactive" selected="unknown_select"></icon>
+
+  <icon name="unknown_active" texture="assets\textures\ui\npc\npc_unknown_act.tga" height="128" width="128"></icon>
+  <icon name="unknown_inactive" texture="assets\textures\ui\npc\npc_unknown_inact.tga" height="128" width="128"></icon>
+  <icon name="unknown_select" texture="assets\textures\ui\npc\npc_unknown_sel.tga" height="128" width="128"></icon>
+
+  <!-- target system icons -->
+  <icon name="asteroidtarget_active" texture="assets\textures\ui\target_elements\tsys_asteroid_act.tga" height="128" width="128"></icon>
+  <icon name="asteroidtarget_inactive" texture="assets\textures\ui\target_elements\tsys_asteroid_inact.tga" height="128" width="128"></icon>
+  <icon name="asteroidtarget_select" texture="assets\textures\ui\target_elements\tsys_asteroid_sel.tga" height="128" width="128"></icon>
+  <icon name="buildtarget_active" texture="assets\textures\ui\target_elements\tsys_build_act.tga" height="128" width="128"></icon>
+  <icon name="buildtarget_inactive" texture="assets\textures\ui\target_elements\tsys_build_inact.tga" height="128" width="128"></icon>
+  <icon name="buildtarget_select" texture="assets\textures\ui\target_elements\tsys_build_sel.tga" height="128" width="128"></icon>
+  <icon name="detachbombtarget_active" texture="assets\textures\ui\target_elements\tsys_detachbomb_act.tga" height="128" width="128"></icon>
+  <icon name="detachbombtarget_inactive" texture="assets\textures\ui\target_elements\tsys_detachbomb_inact.tga" height="128" width="128"></icon>
+  <icon name="detachbombtarget_select" texture="assets\textures\ui\target_elements\tsys_detachbomb_sel.tga" height="128" width="128"></icon>
+  <icon name="hacktarget_active" texture="assets\textures\ui\target_elements\tsys_hack_act.tga" height="128" width="128"></icon>
+  <icon name="hacktarget_inactive" texture="assets\textures\ui\target_elements\tsys_hack_inact.tga" height="128" width="128"></icon>
+  <icon name="hacktarget_select" texture="assets\textures\ui\target_elements\tsys_hack_sel.tga" height="128" width="128"></icon>
+  <icon name="infotarget_active" texture="assets\textures\ui\target_elements\tsys_info_act.tga" height="128" width="128"></icon>
+  <icon name="infotarget_inactive" texture="assets\textures\ui\target_elements\tsys_info_inact.tga" height="128" width="128"></icon>
+  <icon name="infotarget_select" texture="assets\textures\ui\target_elements\tsys_info_sel.tga" height="128" width="128"></icon>
+  <icon name="normaltarget_active" texture="assets\textures\ui\target_elements\tsys_target_act.tga" height="128" width="128"></icon>
+  <icon name="normaltarget_inactive" texture="assets\textures\ui\target_elements\tsys_target_inact.tga" height="128" width="128"></icon>
+  <icon name="normaltarget_select" texture="assets\textures\ui\target_elements\tsys_target_sel.tga" height="128" width="128"></icon>
+  <icon name="opentarget_active" texture="assets\textures\ui\target_elements\tsys_target_act.tga" height="128" width="128"></icon>
+  <icon name="opentarget_inactive" texture="assets\textures\ui\target_elements\tsys_target_inact.tga" height="128" width="128"></icon>
+  <icon name="opentarget_select" texture="assets\textures\ui\target_elements\tsys_target_sel.tga" height="128" width="128"></icon>
+  <icon name="scantarget_active" texture="assets\textures\ui\target_elements\tsys_scan_act.tga" height="128" width="128"></icon>
+  <icon name="scantarget_inactive" texture="assets\textures\ui\target_elements\tsys_scan_inact.tga" height="128" width="128"></icon>
+  <icon name="scantarget_select" texture="assets\textures\ui\target_elements\tsys_scan_sel.tga" height="128" width="128"></icon>
+  <icon name="subordinatetarget_active" texture="assets\textures\ui\target_elements\tsys_subordinatetarget_act.tga" height="128" width="128"></icon>
+  <icon name="subordinatetarget_inactive" texture="assets\textures\ui\target_elements\tsys_subordinatetarget_inact.tga" height="128" width="128"></icon>
+  <icon name="subordinatetarget_select" texture="assets\textures\ui\target_elements\tsys_subordinatetarget_sel.tga" height="128" width="128"></icon>
+
+  <icon name="autopilot_on_active" texture="assets\textures\ui\target_elements\tsys_apon_act.tga" height="128" width="128"></icon>
+  <icon name="autopilot_on_inactive" texture="assets\textures\ui\target_elements\tsys_apon_inact.tga" height="128" width="128"></icon>
+  <icon name="autopilot_on_select" texture="assets\textures\ui\target_elements\tsys_apon_sel.tga" height="128" width="128"></icon>
+  <icon name="autopilot_off_active" texture="assets\textures\ui\target_elements\tsys_apoff_act.tga" height="128" width="128"></icon>
+  <icon name="autopilot_off_inactive" texture="assets\textures\ui\target_elements\tsys_apoff_inact.tga" height="128" width="128"></icon>
+  <icon name="autopilot_off_select" texture="assets\textures\ui\target_elements\tsys_apoff_sel.tga" height="128" width="128"></icon>
+
+  <!-- poi icons -->
+  <icon name="poi_gate_inactive" texture="assets\textures\ui\poi\poi_gate_inact.tga" height="128" width="128"></icon>
+  <icon name="poi_gate_active" texture="assets\textures\ui\poi\poi_gate_act.tga" height="128" width="128"></icon>
+  <icon name="poi_gate_select" texture="assets\textures\ui\poi\poi_gate_sel.tga" height="128" width="128"></icon>
+  <icon name="poi_superhighway_inactive" texture="assets\textures\ui\poi\poi_superhighway_inact.tga" height="128" width="128"></icon>
+  <icon name="poi_superhighway_active" texture="assets\textures\ui\poi\poi_superhighway_act.tga" height="128" width="128"></icon>
+  <icon name="poi_superhighway_select" texture="assets\textures\ui\poi\poi_superhighway_sel.tga" height="128" width="128"></icon>
+  <icon name="poi_zonehighway_inactive" texture="assets\textures\ui\poi\poi_zonehighway_inact.tga" height="128" width="128"></icon>
+  <icon name="poi_zonehighway_active" texture="assets\textures\ui\poi\poi_zonehighway_act.tga" height="128" width="128"></icon>
+  <icon name="poi_zonehighway_select" texture="assets\textures\ui\poi\poi_zonehighway_sel.tga" height="128" width="128"></icon>
+
+
+  <!-- ware icons -->
+  <icon name="ware_advancedcomposites" texture="assets\textures\ui\wares\ware_advancedcomposites.tga" height="128" width="128"></icon>
+  <icon name="ware_advancedelectronics" texture="assets\textures\ui\wares\ware_advancedelectronics.tga" height="128" width="128"></icon>
+  <icon name="ware_antimattercells" texture="assets\textures\ui\wares\ware_antimattercells.tga" height="128" width="128"></icon>
+  <icon name="ware_antimatterconverters" texture="assets\textures\ui\wares\ware_antimatterconverters.tga" height="128" width="128"></icon>
+  <icon name="ware_claytronics" texture="assets\textures\ui\wares\ware_claytronics.tga" height="128" width="128"></icon>
+  <icon name="ware_default" texture="assets\textures\ui\wares\ware_default.tga" height="128" width="128"></icon>
+  <icon name="ware_dronecomponents" texture="assets\textures\ui\wares\ware_dronecomponents.tga" height="128" width="128"></icon>
+  <icon name="ware_energycells" texture="assets\textures\ui\wares\ware_energycells.tga" height="128" width="128"></icon>
+  <icon name="ware_engineparts" texture="assets\textures\ui\wares\ware_engineparts.tga" height="128" width="128"></icon>
+  <icon name="ware_fieldcoils" texture="assets\textures\ui\wares\ware_fieldcoils.tga" height="128" width="128"></icon>
+  <icon name="ware_flares" texture="assets\textures\ui\wares\ware_flares.tga" height="128" width="128"></icon>
+  <icon name="ware_foodrations" texture="assets\textures\ui\wares\ware_foodrations.tga" height="128" width="128"></icon>
+  <icon name="ware_graphene" texture="assets\textures\ui\wares\ware_graphene.tga" height="128" width="128"></icon>
+  <icon name="ware_helium" texture="assets\textures\ui\wares\ware_helium.tga" height="128" width="128"></icon>
+  <icon name="ware_hullparts" texture="assets\textures\ui\wares\ware_hullparts.tga" height="128" width="128"></icon>
+  <icon name="ware_hydrogen" texture="assets\textures\ui\wares\ware_hydrogen.tga" height="128" width="128"></icon>
+  <icon name="ware_ice" texture="assets\textures\ui\wares\ware_ice.tga" height="128" width="128"></icon>
+  <icon name="ware_majadust" texture="assets\textures\ui\wares\ware_majadust.tga" height="128" width="128"></icon>
+  <icon name="ware_majasnails" texture="assets\textures\ui\wares\ware_majasnails.tga" height="128" width="128"></icon>
+  <icon name="ware_marine" texture="assets\textures\ui\wares\ware_marine.tga" height="128" width="128"></icon>
+  <icon name="ware_meat" texture="assets\textures\ui\wares\ware_meat.tga" height="128" width="128"></icon>
+  <icon name="ware_medicalsupplies" texture="assets\textures\ui\wares\ware_medicalsupplies.tga" height="128" width="128"></icon>
+  <icon name="ware_methane" texture="assets\textures\ui\wares\ware_methane.tga" height="128" width="128"></icon>
+  <icon name="ware_microchips" texture="assets\textures\ui\wares\ware_microchips.tga" height="128" width="128"></icon>
+  <icon name="ware_missilecomponents" texture="assets\textures\ui\wares\ware_missilecomponents.tga" height="128" width="128"></icon>
+  <icon name="ware_nividium" texture="assets\textures\ui\wares\ware_nividium.tga" height="128" width="128"></icon>
+  <icon name="ware_nostropoil" texture="assets\textures\ui\wares\ware_nostropoil.tga" height="128" width="128"></icon>
+  <icon name="ware_ore" texture="assets\textures\ui\wares\ware_ore.tga" height="128" width="128"></icon>
+  <icon name="ware_plasmaconductors" texture="assets\textures\ui\wares\ware_plasmaconductors.tga" height="128" width="128"></icon>
+  <icon name="ware_quantumtubes" texture="assets\textures\ui\wares\ware_quantumtubes.tga" height="128" width="128"></icon>
+  <icon name="ware_refinedmetals" texture="assets\textures\ui\wares\ware_refinedmetals.tga" height="128" width="128"></icon>
+  <icon name="ware_scanningarrays" texture="assets\textures\ui\wares\ware_scanningarrays.tga" height="128" width="128"></icon>
+  <icon name="ware_scrapmetal" texture="assets\textures\ui\wares\ware_scrapmetal.tga" height="128" width="128"></icon>
+  <icon name="ware_shieldcomponents" texture="assets\textures\ui\wares\ware_shieldcomponents.tga" height="128" width="128"></icon>
+  <icon name="ware_silicon" texture="assets\textures\ui\wares\ware_silicon.tga" height="128" width="128"></icon>
+  <icon name="ware_siliconwafers" texture="assets\textures\ui\wares\ware_siliconwafers.tga" height="128" width="128"></icon>
+  <icon name="ware_smartchips" texture="assets\textures\ui\wares\ware_smartchips.tga" height="128" width="128"></icon>
+  <icon name="ware_sojabeans" texture="assets\textures\ui\wares\ware_sojabeans.tga" height="128" width="128"></icon>
+  <icon name="ware_sojahusk" texture="assets\textures\ui\wares\ware_sojahusk.tga" height="128" width="128"></icon>
+  <icon name="ware_spacefuel" texture="assets\textures\ui\wares\ware_spacefuel.tga" height="128" width="128"></icon>
+  <icon name="ware_spaceweed" texture="assets\textures\ui\wares\ware_spaceweed.tga" height="128" width="128"></icon>
+  <icon name="ware_spices" texture="assets\textures\ui\wares\ware_spices.tga" height="128" width="128"></icon>
+  <icon name="ware_sunriseflowers" texture="assets\textures\ui\wares\ware_sunriseflowers.tga" height="128" width="128"></icon>
+  <icon name="ware_superfluidcoolant" texture="assets\textures\ui\wares\ware_superfluidcoolant.tga" height="128" width="128"></icon>
+  <icon name="ware_swampplant" texture="assets\textures\ui\wares\ware_swampplant.tga" height="128" width="128"></icon>
+  <icon name="ware_teladianium" texture="assets\textures\ui\wares\ware_teladianium.tga" height="128" width="128"></icon>
+  <icon name="ware_turretcomponents" texture="assets\textures\ui\wares\ware_turretcomponents.tga" height="128" width="128"></icon>
+  <icon name="ware_water" texture="assets\textures\ui\wares\ware_water.tga" height="128" width="128"></icon>
+  <icon name="ware_weaponcomponents" texture="assets\textures\ui\wares\ware_weaponcomponents.tga" height="128" width="128"></icon>
+  <icon name="ware_wheat" texture="assets\textures\ui\wares\ware_wheat.tga" height="128" width="128"></icon>
+
+  <!-- ware missile icons -->
+  <icon name="ware_missile_cluster_heavy" texture="assets\textures\ui\wares\ware_missile_cluster_heavy.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_cluster_light" texture="assets\textures\ui\wares\ware_missile_cluster_light.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_dumbfire_heavy_mk1" texture="assets\textures\ui\wares\ware_missile_dumbfire_heavy_mk1.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_dumbfire_heavy_mk2" texture="assets\textures\ui\wares\ware_missile_dumbfire_heavy_mk2.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_dumbfire_light_mk1" texture="assets\textures\ui\wares\ware_missile_dumbfire_light_mk1.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_dumbfire_light_mk2" texture="assets\textures\ui\wares\ware_missile_dumbfire_light_mk2.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_emp" texture="assets\textures\ui\wares\ware_missile_emp.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_guided_heavy" texture="assets\textures\ui\wares\ware_missile_guided_heavy.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_guided_light" texture="assets\textures\ui\wares\ware_missile_guided_light.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_heatseeker_heavy" texture="assets\textures\ui\wares\ware_missile_heatseeker_heavy.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_heatseeker_light" texture="assets\textures\ui\wares\ware_missile_heatseeker_light.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_smart_heavy" texture="assets\textures\ui\wares\ware_missile_smart_heavy.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_smart_light" texture="assets\textures\ui\wares\ware_missile_smart_light.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_swarm_heavy" texture="assets\textures\ui\wares\ware_missile_swarm_heavy.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_swarm_light" texture="assets\textures\ui\wares\ware_missile_swarm_light.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_torpedo_heavy" texture="assets\textures\ui\wares\ware_missile_torpedo_heavy.tga" height="128" width="128"></icon>
+  <icon name="ware_missile_torpedo_light" texture="assets\textures\ui\wares\ware_missile_torpedo_light.tga" height="128" width="128"></icon>
+
+
+  <!-- money icon as dummy ware -->
+  <icon name="ware_money" texture="assets\textures\ui\wares\wares_money.tga" height="128" width="128"></icon>
+
+  <!-- ware groups -->
+  <icon name="waregroup_agricultural" active="waregroup_agricultural_active" inactive="waregroup_agricultural_inactive" selected="waregroup_agricultural_selected"></icon>
+  <icon name="waregroup_agricultural_active" texture="assets\textures\ui\ware_groups\wgroups_agricultural_act.tga" width="128" height="128"></icon>
+  <icon name="waregroup_agricultural_inactive" texture="assets\textures\ui\ware_groups\wgroups_agricultural_inact.tga" width="128" height="128"></icon>
+  <icon name="waregroup_agricultural_selected" texture="assets\textures\ui\ware_groups\wgroups_agricultural_sel.tga" width="128" height="128"></icon>
+  <icon name="waregroup_energy" active="waregroup_energy_active" inactive="waregroup_energy_inactive" selected="waregroup_energy_selected"></icon>
+  <icon name="waregroup_energy_active" texture="assets\textures\ui\ware_groups\wgroups_energy_act.tga" width="128" height="128"></icon>
+  <icon name="waregroup_energy_inactive" texture="assets\textures\ui\ware_groups\wgroups_energy_inact.tga" width="128" height="128"></icon>
+  <icon name="waregroup_energy_selected" texture="assets\textures\ui\ware_groups\wgroups_energy_sel.tga" width="128" height="128"></icon>
+  <icon name="waregroup_food" active="waregroup_food_active" inactive="waregroup_food_inactive" selected="waregroup_food_selected"></icon>
+  <icon name="waregroup_food_active" texture="assets\textures\ui\ware_groups\wgroups_food_act.tga" width="128" height="128"></icon>
+  <icon name="waregroup_food_inactive" texture="assets\textures\ui\ware_groups\wgroups_food_inact.tga" width="128" height="128"></icon>
+  <icon name="waregroup_food_selected" texture="assets\textures\ui\ware_groups\wgroups_food_sel.tga" width="128" height="128"></icon>
+  <icon name="waregroup_gases" active="waregroup_gases_active" inactive="waregroup_gases_inactive" selected="waregroup_gases_selected"></icon>
+  <icon name="waregroup_gases_active" texture="assets\textures\ui\ware_groups\wgroups_gases_act.tga" width="128" height="128"></icon>
+  <icon name="waregroup_gases_inactive" texture="assets\textures\ui\ware_groups\wgroups_gases_inact.tga" width="128" height="128"></icon>
+  <icon name="waregroup_gases_selected" texture="assets\textures\ui\ware_groups\wgroups_gases_sel.tga" width="128" height="128"></icon>
+  <icon name="waregroup_hightech" active="waregroup_hightech_active" inactive="waregroup_hightech_inactive" selected="waregroup_hightech_selected"></icon>
+  <icon name="waregroup_hightech_active" texture="assets\textures\ui\ware_groups\wgroups_hightech_act.tga" width="128" height="128"></icon>
+  <icon name="waregroup_hightech_inactive" texture="assets\textures\ui\ware_groups\wgroups_hightech_inact.tga" width="128" height="128"></icon>
+  <icon name="waregroup_hightech_selected" texture="assets\textures\ui\ware_groups\wgroups_hightech_sel.tga" width="128" height="128"></icon>
+  <icon name="waregroup_ice" active="waregroup_ice_active" inactive="waregroup_ice_inactive" selected="waregroup_ice_selected"></icon>
+  <icon name="waregroup_ice_active" texture="assets\textures\ui\ware_groups\wgroups_ice_act.tga" width="128" height="128"></icon>
+  <icon name="waregroup_ice_inactive" texture="assets\textures\ui\ware_groups\wgroups_ice_inact.tga" width="128" height="128"></icon>
+  <icon name="waregroup_ice_selected" texture="assets\textures\ui\ware_groups\wgroups_ice_sel.tga" width="128" height="128"></icon>
+  <icon name="waregroup_minerals" active="waregroup_minerals_active" inactive="waregroup_minerals_inactive" selected="waregroup_minerals_selected"></icon>
+  <icon name="waregroup_minerals_active" texture="assets\textures\ui\ware_groups\wgroups_minerals_act.tga" width="128" height="128"></icon>
+  <icon name="waregroup_minerals_inactive" texture="assets\textures\ui\ware_groups\wgroups_minerals_inact.tga" width="128" height="128"></icon>
+  <icon name="waregroup_minerals_selected" texture="assets\textures\ui\ware_groups\wgroups_minerals_sel.tga" width="128" height="128"></icon>
+  <icon name="waregroup_pharmaceutical" active="waregroup_pharmaceutical_active" inactive="waregroup_pharmaceutical_inactive" selected="waregroup_pharmaceutical_selected"></icon>
+  <icon name="waregroup_pharmaceutical_active" texture="assets\textures\ui\ware_groups\wgroups_pharmaceutical_act.tga" width="128" height="128"></icon>
+  <icon name="waregroup_pharmaceutical_inactive" texture="assets\textures\ui\ware_groups\wgroups_pharmaceutical_inact.tga" width="128" height="128"></icon>
+  <icon name="waregroup_pharmaceutical_selected" texture="assets\textures\ui\ware_groups\wgroups_pharmaceutical_sel.tga" width="128" height="128"></icon>
+  <icon name="waregroup_refined" active="waregroup_refined_active" inactive="waregroup_refined_inactive" selected="waregroup_refined_selected"></icon>
+  <icon name="waregroup_refined_active" texture="assets\textures\ui\ware_groups\wgroups_refined_act.tga" width="128" height="128"></icon>
+  <icon name="waregroup_refined_inactive" texture="assets\textures\ui\ware_groups\wgroups_refined_inact.tga" width="128" height="128"></icon>
+  <icon name="waregroup_refined_selected" texture="assets\textures\ui\ware_groups\wgroups_refined_sel.tga" width="128" height="128"></icon>
+  <icon name="waregroup_shiptech" active="waregroup_shiptech_active" inactive="waregroup_shiptech_inactive" selected="waregroup_shiptech_selected"></icon>
+  <icon name="waregroup_shiptech_active" texture="assets\textures\ui\ware_groups\wgroups_shiptech_act.tga" width="128" height="128"></icon>
+  <icon name="waregroup_shiptech_inactive" texture="assets\textures\ui\ware_groups\wgroups_shiptech_inact.tga" width="128" height="128"></icon>
+  <icon name="waregroup_shiptech_selected" texture="assets\textures\ui\ware_groups\wgroups_shiptech_sel.tga" width="128" height="128"></icon>
+  <icon name="waregroup_upgrades" active="waregroup_upgrades_active" inactive="waregroup_upgrades_inactive" selected="waregroup_upgrades_selected"></icon>
+  <icon name="waregroup_upgrades_active" texture="assets\textures\ui\ware_groups\wgroups_surfel_act.tga" width="128" height="128"></icon>
+  <icon name="waregroup_upgrades_inactive" texture="assets\textures\ui\ware_groups\wgroups_surfel_inact.tga" width="128" height="128"></icon>
+  <icon name="waregroup_upgrades_selected" texture="assets\textures\ui\ware_groups\wgroups_surfel_sel.tga" width="128" height="128"></icon>
+  <icon name="waregroup_water" active="waregroup_water_active" inactive="waregroup_water_inactive" selected="waregroup_water_selected"></icon>
+  <icon name="waregroup_water_active" texture="assets\textures\ui\ware_groups\wgroups_water_act.tga" width="128" height="128"></icon>
+  <icon name="waregroup_water_inactive" texture="assets\textures\ui\ware_groups\wgroups_water_inact.tga" width="128" height="128"></icon>
+  <icon name="waregroup_water_selected" texture="assets\textures\ui\ware_groups\wgroups_water_sel.tga" width="128" height="128"></icon>
+  <icon name="waregroup_weapontech" active="waregroup_weapontech_active" inactive="waregroup_weapontech_inactive" selected="waregroup_weapontech_selected"></icon>
+  <icon name="waregroup_weapontech_active" texture="assets\textures\ui\ware_groups\wgroups_weapontech_act.tga" width="128" height="128"></icon>
+  <icon name="waregroup_weapontech_inactive" texture="assets\textures\ui\ware_groups\wgroups_weapontech_inact.tga" width="128" height="128"></icon>
+  <icon name="waregroup_weapontech_selected" texture="assets\textures\ui\ware_groups\wgroups_weapontech_sel.tga" width="128" height="128"></icon>
+
+  <!-- trade location icon -->
+  <icon name="tradelocation" active="tradelocation_active" inactive="tradelocation_inactive" selected="tradelocation_selected"></icon>
+  <icon name="tradelocation_active" texture="assets\textures\ui\ware_groups\wgroups_water_act.tga" width="128" height="128"></icon>
+  <icon name="tradelocation_inactive" texture="assets\textures\ui\ware_groups\wgroups_water_inact.tga" width="128" height="128"></icon>
+  <icon name="tradelocation_selected" texture="assets\textures\ui\ware_groups\wgroups_water_sel.tga" width="128" height="128"></icon>
+
+  <!-- widget button elements -->
+  <icon name="be_diagonal_01" texture="assets\textures\ui\button_elements\be_diagonal_01.tga" width="128" height="128"></icon>
+  <icon name="be_diagonal_02" texture="assets\textures\ui\button_elements\be_diagonal_02.tga" width="128" height="128"></icon>
+  <icon name="be_upgrade_installed" texture="assets\textures\ui\button_elements\be_upgrade_installed.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_uninstalled" texture="assets\textures\ui\button_elements\be_upgrade_uninstalled.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_warning" texture="assets\textures\ui\button_elements\be_upgrade_warning.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_claiming" texture="assets\textures\ui\button_elements\be_upgrade_claiming.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_tier_1" texture="assets\textures\ui\button_elements\be_upgrade_tier_1.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_tier_2" texture="assets\textures\ui\button_elements\be_upgrade_tier_2.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_tier_3" texture="assets\textures\ui\button_elements\be_upgrade_tier_3.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_tier_4" texture="assets\textures\ui\button_elements\be_upgrade_tier_4.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_size_small" texture="assets\textures\ui\button_elements\be_upgrade_size_s.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_size_medium" texture="assets\textures\ui\button_elements\be_upgrade_size_m.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_size_large" texture="assets\textures\ui\button_elements\be_upgrade_size_l.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_size_extralarge" texture="assets\textures\ui\button_elements\be_upgrade_size_xl.tga" width="512" height="512"></icon>
+  <!-- production "tier" icons for station build menu -->
+  <icon name="be_upgrade_agricultural" texture="assets\textures\ui\button_elements\be_upgrade_agricultural.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_energy" texture="assets\textures\ui\button_elements\be_upgrade_energy.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_food" texture="assets\textures\ui\button_elements\be_upgrade_food.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_hightech" texture="assets\textures\ui\button_elements\be_upgrade_hightech.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_pharmaceutical" texture="assets\textures\ui\button_elements\be_upgrade_pharmaceutical.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_refined" texture="assets\textures\ui\button_elements\be_upgrade_refined.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_shiptech" texture="assets\textures\ui\button_elements\be_upgrade_shiptech.tga" width="512" height="512"></icon>
+  <icon name="be_upgrade_water" texture="assets\textures\ui\button_elements\be_upgrade_water.tga" width="512" height="512"></icon>
+
+  <!-- icons for widget system -->
+  <icon name="solid" texture="assets\textures\ui\widget\solid.tga" height="1" width="1"></icon>
+  <icon name="table_arrow" texture="assets\textures\ui\widget\table_arrow.tga" height="40" width="16"></icon>
+  <icon name="table_arrow_inv" texture="assets\textures\ui\widget\table_arrow_inv.tga" height="40" width="16"></icon>
+  <icon name="widget_arrow_left_01" texture="assets\textures\ui\widget\widget_arrow_left_01.tga" height="128" width="128"></icon>
+  <icon name="widget_arrow_right_01" texture="assets\textures\ui\widget\widget_arrow_right_01.tga" height="128" width="128"></icon>
+  <icon name="widget_arrow_left_02" texture="assets\textures\ui\widget\widget_arrow_left_02.tga" height="128" width="32"></icon>
+  <icon name="widget_arrow_right_02" texture="assets\textures\ui\widget\widget_arrow_right_02.tga" height="128" width="32"></icon>
+  <icon name="widget_arrow_up_01" texture="assets\textures\ui\widget\widget_arrow_up_01.tga" height="128" width="128"></icon>
+  <icon name="widget_arrow_up_02" texture="assets\textures\ui\widget\widget_arrow_up_02.tga" height="128" width="128"></icon>
+  <icon name="widget_arrow_down_01" texture="assets\textures\ui\widget\widget_arrow_down_01.tga" height="128" width="128"></icon>
+  <icon name="widget_arrow_down_02" texture="assets\textures\ui\widget\widget_arrow_down_02.tga" height="128" width="128"></icon>
+  <icon name="widget_arrow_skip_left_01" texture="assets\textures\ui\widget\widget_arrow_skip_left_01.tga" height="128" width="128"></icon>
+  <icon name="widget_arrow_skip_right_01" texture="assets\textures\ui\widget\widget_arrow_skip_right_01.tga" height="128" width="128"></icon>
+  <icon name="widget_cross_01" texture="assets\textures\ui\widget\widget_cross_01.tga" height="128" width="128"></icon>
+  <icon name="widget_tick_01" texture="assets\textures\ui\widget\widget_tick_01.tga" height="128" width="128"></icon>
+  <icon name="widget_circle_01" texture="assets\textures\ui\widget\widget_circle_01.tga" height="128" width="128"></icon>
+  <icon name="bordersquare" texture="assets\textures\ui\widget\bordersquare.tga" height="64" width="64"></icon>
+
+  <!-- options menu fore- & background -->
+  <icon name="optionsmenu_bg" texture="assets\textures\ui\options_menu\menue_bg.tga" height="1024" width="1024"></icon>
+  <icon name="optionsmenu_fg" texture="assets\textures\ui\options_menu\menue_fg.tga" height="720" width="880"></icon>
+  <icon name="optionsmenu_steam" texture="assets\textures\ui\options_menu\om_steam.tga" height="64" width="64"></icon>
+  <icon name="optionsmenu_gog" texture="assets\textures\ui\options_menu\om_gog.tga" height="64" width="64"></icon>
+
+  <!-- menu background gradient -->
+  <icon name="gradient_alpha_02" texture="assets\textures\fx\gradient_alpha_02_diffhq.tga" height="512" width="8"></icon>
+  <icon name="gradient_alpha_03" texture="assets\textures\fx\gradient_alpha_03_diffhq.tga" height="512" width="8"></icon>
+  <icon name="gradient_alpha_04" texture="assets\textures\fx\gradient_alpha_04_diffhq.tga" height="512" width="8"></icon>
+
+  <!-- pda fore- & background -->
+  <icon name="pda_bg" texture="assets\textures\ui\detailmonitor_firstperson\detailmonitor_firstperson_background.tga" height="583" width="825"></icon>
+  <icon name="pda_fg" texture="assets\textures\ui\detailmonitor_firstperson\detailmonitor_firstperson_clamps.tga" height="583" width="825"></icon>
+  <!--<icon name="pda_bg2" texture="assets\textures\ui\detailmonitor_firstperson\detailmonitor_firstperson_background2.tga" height="850" width="1225"></icon>-->
+  <!--<icon name="pda_fg2" texture="assets\textures\ui\detailmonitor_firstperson\detailmonitor_firstperson_clamps2.tga" height="850" width="1225"></icon>-->
+
+  <!-- menu icons -->
+  <icon name="menu_reload" texture="assets\textures\ui\menu\menu_reload.tga" height="128" width="128"></icon>
+  <icon name="menu_repeat" texture="assets\textures\ui\menu\menu_repeat.tga" height="128" width="128"></icon>
+  <icon name="menu_edit" texture="assets\textures\ui\menu\menu_edit.tga" height="128" width="128"></icon>
+  <icon name="table_arrow_inv_left" texture="assets\textures\ui\widget\table_arrow_inv_l.tga" height="40" width="16"></icon>
+  <icon name="table_arrow_inv_right" texture="assets\textures\ui\widget\table_arrow_inv.tga" height="40" width="16"></icon>
+  <icon name="table_arrow_inv_up" texture="assets\textures\ui\widget\table_arrow_inv_u.tga" height="16" width="40"></icon>
+  <icon name="table_arrow_inv_down" texture="assets\textures\ui\widget\table_arrow_inv_d.tga" height="16" width="40"></icon>
+  <icon name="encyclopedia" texture="assets\textures\ui\widget\encyclopedia_bg.tga" height="512" width="768"></icon>
+  <icon name="warning" texture="assets\textures\ui\widget\steam_workshop.tga" height="128" width="128"></icon>
+  <icon name="workshop_error" texture="assets\textures\ui\widget\steam_workshop.tga" height="128" width="128"></icon>
+  <icon name="menu_inventory" texture="assets\textures\ui\menu\menu_inventory.tga" height="128" width="128"></icon>
+  <icon name="menu_weapons" texture="assets\textures\ui\menu\menu_weapons.tga" height="128" width="128"></icon>
+  <icon name="menu_save" texture="assets\textures\ui\menu\menu_save.tga" height="128" width="128"></icon>
+  <icon name="menu_reset_view" texture="assets\textures\ui\menu\menu_reset_view.tga" height="128" width="128"></icon>
+  <icon name="menu_undo" texture="assets\textures\ui\menu\menu_undo.tga" height="128" width="128"></icon>
+  <icon name="menu_redo" texture="assets\textures\ui\menu\menu_redo.tga" height="128" width="128"></icon>
+  <icon name="menu_shuffle" texture="assets\textures\ui\menu\menu_shuffle.tga" height="128" width="128"></icon>
+  <icon name="menu_dismiss" texture="assets\textures\ui\menu\menu_dismiss.tga" height="128" width="128"></icon>
+  <icon name="menu_reset" texture="assets\textures\ui\menu\menu_reset.tga" height="128" width="128"></icon>
+  <icon name="menu_on_off" texture="assets\textures\ui\menu\menu_on_off.tga" height="128" width="128"></icon>
+  <icon name="menu_star_01" texture="assets\textures\ui\menu\menu_star_01.tga" height="64" width="64"></icon>
+  <icon name="menu_star_02" texture="assets\textures\ui\menu\menu_star_02.tga" height="64" width="64"></icon>
+  <icon name="menu_star_03" texture="assets\textures\ui\menu\menu_star_03.tga" height="64" width="64"></icon>
+  <icon name="menu_star_04" texture="assets\textures\ui\menu\menu_star_04.tga" height="64" width="64"></icon>
+  <icon name="menu_star_01_bold" texture="assets\textures\ui\menu\menu_star_01_bold.tga" height="64" width="64"></icon>
+  <icon name="menu_star_02_bold" texture="assets\textures\ui\menu\menu_star_02_bold.tga" height="64" width="64"></icon>
+  <icon name="menu_star_03_bold" texture="assets\textures\ui\menu\menu_star_03_bold.tga" height="64" width="64"></icon>
+  <icon name="menu_star_04_bold" texture="assets\textures\ui\menu\menu_star_04_bold.tga" height="64" width="64"></icon>
+  <icon name="menu_sound_on" texture="assets\textures\ui\menu\menu_sound_on.tga" height="64" width="64"></icon>
+  <icon name="menu_sound_off" texture="assets\textures\ui\menu\menu_sound_off.tga" height="64" width="64"></icon>
+  <icon name="menu_eye" texture="assets\textures\ui\menu\menu_eye.tga" height="128" width="128"></icon>
+  <icon name="menu_import" texture="assets\textures\ui\menu\menu_import.tga" height="128" width="128"></icon>
+  <icon name="menu_export" texture="assets\textures\ui\menu\menu_export.tga" height="128" width="128"></icon>
+  <icon name="menu_center_selection" texture="assets\textures\ui\menu\menu_center_selection.tga" height="128" width="128"></icon>
+  <icon name="menu_order_limited" texture="assets\textures\ui\menu\menu_order_limited.tga" height="128" width="128"></icon>
+  <icon name="menu_order_unlimited" texture="assets\textures\ui\menu\menu_order_unlimited.tga" height="128" width="128"></icon>
+  <icon name="menu_mission" texture="assets\textures\ui\menu\menu_mission.tga" height="128" width="128"></icon>
+  <icon name="menu_mission_trade" texture="assets\textures\ui\menu\menu_mission_trade.tga" height="128" width="128"></icon>
+  <icon name="menu_mission_plot" texture="assets\textures\ui\menu\menu_mission_plot.tga" height="128" width="128"></icon>
+  <icon name="menu_weaponslot" texture="assets\textures\ui\menu\menu_weaponslot.tga" height="128" width="128"></icon>
+  <icon name="menu_weaponmount" texture="assets\textures\ui\menu\menu_weaponmount.tga" height="128" width="32"></icon>
+  <icon name="menu_hidden" texture="assets\textures\ui\menu\menu_hidden.tga" height="128" width="128"></icon>
+  <icon name="menu_locked" texture="assets\textures\ui\menu\menu_locked.tga" height="128" width="128"></icon>
+  <icon name="menu_unlocked" texture="assets\textures\ui\menu\menu_unlocked.tga" height="128" width="128"></icon>
+  <icon name="menu_maximize_video" texture="assets\textures\ui\menu\menu_maximize_video.tga" height="128" width="128"></icon>
+  <icon name="menu_minimize_video" texture="assets\textures\ui\menu\menu_minimize_video.tga" height="128" width="128"></icon>
+  <icon name="menu_hourglass" texture="assets\textures\ui\menu\menu_hourglass.tga" height="128" width="128"></icon>
+  <icon name="menu_options" texture="assets\textures\ui\menu\menu_options.tga" height="128" width="128"></icon>
+  <icon name="menu_filter" texture="assets\textures\ui\menu\menu_filter.tga" height="128" width="128"></icon>
+  <icon name="menu_shoppingcart" texture="assets\textures\ui\menu\menu_shoppingcart.tga" height="128" width="128"></icon>
+  <icon name="menu_move" texture="assets\textures\ui\menu\menu_move.tga" height="128" width="128"></icon>
+  <icon name="menu_checker" texture="assets\textures\ui\menu\menu_checker.png" height="512" width="512"></icon>
+  <icon name="menu_recommended" texture="assets\textures\ui\menu\menu_star_04_bold.tga" height="64" width="64"></icon>
+  <icon name="menu_info" texture="assets\textures\ui\menu\menu_info.tga" height="128" width="128"></icon>
+  <icon name="menu_ware_critical" texture="assets\textures\ui\menu\menu_ware_critical.tga" height="128" width="128"></icon>
+  <icon name="menu_rating_unrated" texture="assets\textures\ui\menu\menu_rating_unrated.tga" height="128" width="128"></icon>
+  <icon name="menu_rating_00" texture="assets\textures\ui\menu\menu_rating_00.tga" height="128" width="128"></icon>
+  <icon name="menu_rating_01" texture="assets\textures\ui\menu\menu_rating_01.tga" height="128" width="128"></icon>
+  <icon name="menu_rating_02" texture="assets\textures\ui\menu\menu_rating_02.tga" height="128" width="128"></icon>
+  <icon name="menu_rating_03" texture="assets\textures\ui\menu\menu_rating_03.tga" height="128" width="128"></icon>
+  <icon name="menu_rating_04" texture="assets\textures\ui\menu\menu_rating_04.tga" height="128" width="128"></icon>
+  <icon name="menu_rating_05" texture="assets\textures\ui\menu\menu_rating_05.tga" height="128" width="128"></icon>
+  <icon name="menu_hammer" texture="assets\textures\ui\menu\menu_hammer.tga" height="128" width="128"></icon>
+  <icon name="menu_fleet_replacing" texture="assets\textures\ui\menu\menu_fleet_replacing.tga" height="128" width="128"></icon>
+  <icon name="menu_fleet_replaced" texture="assets\textures\ui\menu\menu_fleet_replaced.tga" height="128" width="128"></icon>
+  <icon name="menu_behaviourinspection" texture="assets\textures\ui\menu\menu_behaviourinspection.tga" height="128" width="128"></icon>
+  <icon name="menu_behaviourinspection_exit" texture="assets\textures\ui\menu\menu_behaviourinspection_exit.tga" height="128" width="128"></icon>
+  <icon name="menu_noentry" texture="assets\textures\ui\menu\menu_noentry.tga" height="128" width="128"></icon>
+  <icon name="menu_radio_button_off" texture="assets\textures\ui\menu\menu_radio_button_off.tga" height="64" width="64"></icon>
+  <icon name="menu_radio_button_on" texture="assets\textures\ui\menu\menu_radio_button_on.tga" height="64" width="64"></icon>
+  <icon name="menu_encyclopedia" texture="assets\textures\ui\gamestarts\gamestart_custom_story.tga" height="128" width="128"></icon>
+  <icon name="menu_warning" texture="assets\textures\ui\menu\menu_warning.tga" height="64" width="64"></icon>
+  <icon name="menu_chevron_null" texture="assets\textures\ui\menu\menu_chevron_null.tga" height="64" width="64"></icon>
+  <icon name="menu_chevron_up_01" texture="assets\textures\ui\menu\menu_chevron_up_01.tga" height="64" width="64"></icon>
+  <icon name="menu_chevron_up_02" texture="assets\textures\ui\menu\menu_chevron_up_02.tga" height="64" width="64"></icon>
+  <icon name="menu_chevron_up_03" texture="assets\textures\ui\menu\menu_chevron_up_03.tga" height="64" width="64"></icon>
+  <icon name="menu_chevron_down_01" texture="assets\textures\ui\menu\menu_chevron_down_01.tga" height="64" width="64"></icon>
+  <icon name="menu_chevron_down_02" texture="assets\textures\ui\menu\menu_chevron_down_02.tga" height="64" width="64"></icon>
+  <icon name="menu_chevron_down_03" texture="assets\textures\ui\menu\menu_chevron_down_03.tga" height="64" width="64"></icon>
+  <icon name="menu_questionmark" texture="assets\textures\ui\menu\menu_questionmark.tga" height="64" width="64"></icon>
+
+  <!-- Icons for Transactions-->
+  <icon name="menu_trade_sale" texture="assets\textures\ui\menu\menu_trade_sale.tga" height="64" width="64"></icon>
+  <icon name="menu_trade_purchase" texture="assets\textures\ui\menu\menu_trade_purchase.tga" height="64" width="64"></icon>
+  <icon name="menu_trade_offer" texture="assets\textures\ui\menu\menu_trade_offer.tga" height="64" width="64"></icon>
+  <icon name="menu_trade_offer_outgoing" texture="assets\textures\ui\menu\menu_trade_offer_outgoing.tga" height="64" width="64"></icon>
+  <icon name="menu_trade_offer_incoming" texture="assets\textures\ui\menu\menu_trade_offer_incoming.tga" height="64" width="64"></icon>
+  <icon name="menu_transfer" texture="assets\textures\ui\menu\menu_transfer.tga" height="64" width="64"></icon>
+
+  <!-- button sub elements -->
+  <icon name="bse_star" texture="assets\textures\ui\button_subelements\bse_star_01.tga" height="128" width="128"></icon>
+  <icon name="bse_venture" texture="assets\textures\ui\button_subelements\bse_venture_01.tga" height="128" width="128"></icon>
+
+  <!-- encyclopedia -->
+  <icon name="ency_timeline_arrow_01" texture="assets\textures\ui\encyclopedia\ency_timeline_arrow_01.tga" height="128" width="128"></icon>
+  <icon name="ency_timeline_dot_01" texture="assets\textures\ui\encyclopedia\ency_timeline_dot_01.tga" height="128" width="128"></icon>
+  <icon name="ency_timeline_line_01" texture="assets\textures\ui\encyclopedia\ency_timeline_line_01.tga" height="1" width="128"></icon>
+  <icon name="ency_timeline_01" texture="assets\textures\ui\encyclopedia\ency_timeline_01.tga" height="128" width="128"></icon>
+  <icon name="ency_timeline_empty_01" texture="assets\textures\ui\encyclopedia\ency_timeline_empty_01.tga" height="128" width="128"></icon>
+  <icon name="ency_license_01" texture="assets\textures\ui\encyclopedia\ency_license_01.tga" height="512" width="512"></icon>
+  <icon name="ency_weapon_01" texture="assets\textures\ui\encyclopedia\ency_weapon_01.tga" height="512" width="512"></icon>
+  <icon name="ency_unknown_01" texture="assets\textures\ui\encyclopedia\ency_unknown_01.tga" height="512" width="512"></icon>
+  <icon name="ency_sun_01" texture="assets\textures\ui\encyclopedia\ency_sun_01.tga" height="128" width="128"></icon>
+  <icon name="ency_moon_01" texture="assets\textures\ui\encyclopedia\ency_moon_01.tga" height="128" width="128"></icon>
+  <icon name="ency_planet_01" texture="assets\textures\ui\encyclopedia\ency_planet_01.tga" height="128" width="128"></icon>
+  <icon name="ency_ship_comparison_01" texture="assets\textures\ui\encyclopedia\ency_ship_comparison_01.tga" height="128" width="128"></icon>
+
+  <!-- gamestarts -->
+  <icon name="gamestart_default" texture="assets\textures\ui\gamestarts\gamestart_df_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_1" texture="assets\textures\ui\gamestarts\gamestart_01_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_2" texture="assets\textures\ui\gamestarts\gamestart_02_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_3" texture="assets\textures\ui\gamestarts\gamestart_03_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_4" texture="assets\textures\ui\gamestarts\gamestart_04_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_5" texture="assets\textures\ui\gamestarts\gamestart_05_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_6" texture="assets\textures\ui\gamestarts\gamestart_06_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_intro" texture="assets\textures\ui\gamestarts\gamestart_intro_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_scientist" texture="assets\textures\ui\gamestarts\gamestart_scientist_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_trade" texture="assets\textures\ui\gamestarts\gamestart_trade_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_discover" texture="assets\textures\ui\gamestarts\gamestart_discover_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_fight" texture="assets\textures\ui\gamestarts\gamestart_fight_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_split1" texture="assets\textures\ui\gamestarts\gamestart_split1_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_split2" texture="assets\textures\ui\gamestarts\gamestart_split2_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_terran1" texture="assets\textures\ui\gamestarts\gamestart_terran1_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_terran2" texture="assets\textures\ui\gamestarts\gamestart_terran2_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_pirate1" texture="assets\textures\ui\gamestarts\gamestart_pirate1_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_pirate2" texture="assets\textures\ui\gamestarts\gamestart_pirate2_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_boron1" texture="assets\textures\ui\gamestarts\gamestart_boron1_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_boron2" texture="assets\textures\ui\gamestarts\gamestart_boron2_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_mini_01" texture="assets\textures\ui\gamestarts\gamestart_mini_01_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_mini_02" texture="assets\textures\ui\gamestarts\gamestart_mini_02_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_flightschool" texture="assets\textures\ui\gamestarts\gamestart_flightschool_gui.tga" height="270" width="480"></icon>
+  <icon name="gamestart_tutorial" texture="assets\textures\ui\gamestarts\gamestart_tutorial_gui.tga" height="256" width="512"></icon>
+  <icon name="gamestart_tutorial1" texture="assets\textures\ui\gamestarts\gamestart_tutorial1_gui.tga" height="270" width="480"></icon>
+  <icon name="gamestart_tutorial2" texture="assets\textures\ui\gamestarts\gamestart_tutorial2_gui.tga" height="270" width="480"></icon>
+  <icon name="gamestart_custom_01" texture="assets\textures\ui\gamestarts\gamestart_custom_01_gui.tga" height="270" width="480"></icon>
+  <icon name="gamestart_stationdesign_01" texture="assets\textures\ui\gamestarts\gamestart_stationdesign_01_gui.tga" height="270" width="480"></icon>
+  <icon name="gamestart_custom_credits" texture="assets\textures\ui\gamestarts\gamestart_custom_credits.tga" height="128" width="128"></icon>
+  <icon name="gamestart_custom_knowledge" texture="assets\textures\ui\gamestarts\gamestart_custom_knowledge.tga" height="128" width="128"></icon>
+  <icon name="gamestart_custom_people" texture="assets\textures\ui\gamestarts\gamestart_custom_people.tga" height="128" width="128"></icon>
+  <icon name="gamestart_custom_relations" texture="assets\textures\ui\gamestarts\gamestart_custom_relations.tga" height="128" width="128"></icon>
+  <icon name="gamestart_custom_research" texture="assets\textures\ui\gamestarts\gamestart_custom_research.tga" height="128" width="128"></icon>
+  <icon name="gamestart_custom_story" texture="assets\textures\ui\gamestarts\gamestart_custom_story.tga" height="128" width="128"></icon>
+
+  <!-- loading screens -->
+  <icon name="loading_*" texture="assets\fx\gui\textures\loadingscreen\normal\screen_*.tga" height="1080" width="1920" tags="loadingscreen"></icon>
+  <icon name="loading_vr_*" texture="assets\fx\gui\textures\loadingscreen\vr\*.tga" height="1080" width="1920"></icon>
+  <icon name="loading_demo_*" texture="assets\fx\gui\textures\loadingscreen\demo\*.tga" height="1080" width="1920" tags="demoloadingscreen"></icon>
+
+  <!-- top level tabs -->
+  <icon name="tlt_arrow" texture="assets\textures\ui\top_level_tabs\tlt_arrow.tga" height="128" width="128"></icon>
+  <icon name="tlt_arrow_inv" texture="assets\textures\ui\top_level_tabs\tlt_arrow_inv.tga" height="128" width="128"></icon>
+  <icon name="tlt_diplomacy" texture="assets\textures\ui\top_level_tabs\tlt_diplomacy.tga" height="128" width="128"></icon>
+  <icon name="tlt_docked" texture="assets\textures\ui\top_level_tabs\tlt_docked.tga" height="128" width="128"></icon>
+  <icon name="tlt_encyclopedia" texture="assets\textures\ui\top_level_tabs\tlt_encyclopedia.tga" height="128" width="128"></icon>
+  <icon name="tlt_help" texture="assets\textures\ui\top_level_tabs\tlt_help.tga" height="128" width="128"></icon>
+  <icon name="tlt_map" texture="assets\textures\ui\top_level_tabs\tlt_map.tga" height="128" width="128"></icon>
+  <icon name="tlt_optionsmenu" texture="assets\textures\ui\top_level_tabs\tlt_optionsmenu.tga" height="128" width="128"></icon>
+  <icon name="tlt_playerinfo" texture="assets\textures\ui\top_level_tabs\tlt_playerinfo.tga" height="128" width="128"></icon>
+  <icon name="tlt_research" texture="assets\textures\ui\top_level_tabs\tlt_research.tga" height="128" width="128"></icon>
+  <icon name="tlt_shipinteractions" texture="assets\textures\ui\top_level_tabs\tlt_shipinteractions.tga" height="128" width="128"></icon>
+  <icon name="tlt_terraforming" texture="assets\textures\ui\top_level_tabs\tlt_terraforming.tga" height="128" width="128"></icon>
+
+  <!-- tutorials and help -->
+  <icon name="tut_tutorial" texture="assets\textures\ui\tutorial_help\tut_tutorial.tga" height="128" width="128"></icon>
+  <icon name="tut_external" texture="assets\textures\ui\tutorial_help\tut_external.tga" height="128" width="128"></icon>
+  <icon name="tut_info" texture="assets\textures\ui\tutorial_help\tut_info.tga" height="128" width="128"></icon>
+  <icon name="tut_info_highlight" texture="assets\textures\ui\tutorial_help\tut_info_highlight.tga" height="128" width="128"></icon>
+  <icon name="tut_gradient_hint_01" texture="assets\textures\ui\tutorial_help\tut_gradient_hint_01.tga" height="8" width="512"></icon>
+
+  <!-- venture stuff -->
+  <!-- venture types (first iteration) - kept for backwards compatibility - deprecated since 4.0 -->
+  <icon name="vt_aggressive" texture="assets\textures\ui\venture\vt_aggressive.tga" height="128" width="128"></icon>
+  <icon name="vt_diplomatic" texture="assets\textures\ui\venture\vt_diplomatic.tga" height="128" width="128"></icon>
+  <icon name="vt_economic" texture="assets\textures\ui\venture\vt_economic.tga" height="128" width="128"></icon>
+  <icon name="vt_exploration" texture="assets\textures\ui\venture\vt_explore.tga" height="128" width="128"></icon>
+
+  <!-- venture tabs -->
+  <icon name="vt_mission" texture="assets\textures\ui\venture\vt_mission.tga" height="128" width="128"></icon>
+  <icon name="vt_reward" texture="assets\textures\ui\venture\vt_reward.tga" height="128" width="128"></icon>
+  <icon name="vt_logbook" texture="assets\textures\ui\venture\vt_logbook.tga" height="128" width="128"></icon>
+  <icon name="vt_team" texture="assets\textures\ui\venture\vt_team.tga" height="128" width="128"></icon>
+  <icon name="vt_inventory" texture="assets\textures\ui\venture\vt_inventory.tga" height="128" width="128"></icon>
+  <icon name="vt_inventory_team" texture="assets\textures\ui\venture\vt_inventory_team.tga" height="128" width="128"></icon>
+  <icon name="vt_inventory_player" texture="assets\textures\ui\venture\vt_inventory_player.tga" height="128" width="128"></icon>
+  <icon name="vt_season" texture="assets\textures\ui\venture\vt_season.tga" height="128" width="128"></icon>
+  <icon name="vt_season_previous" texture="assets\textures\ui\venture\vt_season_previous.tga" height="128" width="128"></icon>
+  <icon name="vt_season_current" texture="assets\textures\ui\venture\vt_season_current.tga" height="128" width="128"></icon>
+  <icon name="vt_guild" texture="assets\textures\ui\venture\vt_guild.tga" height="128" width="128"></icon>
+  <icon name="vt_reward_online_player" texture="assets\textures\ui\venture\vt_reward_online_player.tga" height="128" width="128"></icon>
+  <icon name="vt_reward_inventory_player" texture="assets\textures\ui\venture\vt_reward_inventory_player.tga" height="128" width="128"></icon>
+  <icon name="vt_reward_inventory_team" texture="assets\textures\ui\venture\vt_reward_inventory_team.tga" height="128" width="128"></icon>
+  <icon name="vt_contactlist" texture="assets\textures\ui\venture\vt_contactlist.tga" height="128" width="128"></icon>
+  <icon name="vt_friendlist" texture="assets\textures\ui\venture\vt_contactlist.tga" height="128" width="128"></icon>
+  <icon name="vt_blockedlist" texture="assets\textures\ui\venture\vt_blockedlist.tga" height="128" width="128"></icon>
+
+  <!-- venture rewards - kept in base game for backwards compatibility -->
+  <icon name="vt_reward_credits" texture="assets\textures\ui\venture\vt_reward_offlinecurrency.tga" height="128" width="128"></icon>
+  <icon name="vt_reward_egocredits" texture="assets\textures\ui\venture\vt_reward_onlinecurrency.tga" height="128" width="128"></icon>
+  <icon name="vt_reward_paintmod" texture="assets\textures\ui\venture\vt_reward_paintmod.tga" height="128" width="128"></icon>
+  <icon name="vt_reward_equipmentmod" texture="assets\textures\ui\venture\vt_reward_equipmentmod.tga" height="128" width="128"></icon>
+  <icon name="vt_reward_crewskill" texture="assets\textures\ui\venture\vt_reward_crewskill.tga" height="128" width="128"></icon>
+  <icon name="vt_reward_inventory" texture="assets\textures\ui\venture\vt_reward_inventory.tga" height="128" width="128"></icon>
+  <!-- following two entries are obsolete - kept here for backwards compatibility only, just in case mods referenced these -->
+  <icon name="vt_reward_offlinecurrency" texture="assets\textures\ui\venture\vt_reward_offlinecurrency.tga" height="128" width="128"></icon>
+  <icon name="vt_reward_onlinecurrency" texture="assets\textures\ui\venture\vt_reward_onlinecurrency.tga" height="128" width="128"></icon>
+
+  <!-- season reward icon - specified in base game, since this is also displayed on the multiverse map w/o the user being logged in (and hence not having the online extension installed) -->
+  <icon name="vt_reward_generic_01" texture="assets\textures\ui\venture\vt_reward_generic_01.tga" height="256" width="910"></icon>
+
+  <!-- venture online status -->
+  <icon name="vt_connected" texture="assets\textures\ui\venture\vt_connected.tga" height="128" width="128"></icon>
+  <icon name="vt_disconnected" texture="assets\textures\ui\venture\vt_disconnected.tga" height="128" width="128"></icon>
+
+  <!-- venture menu -->
+  <icon name="vt_convert" texture="assets\textures\ui\venture\vt_convert.tga" height="128" width="128"></icon>
+  <icon name="vt_donate" texture="assets\textures\ui\venture\vt_donate.tga" height="128" width="128"></icon>
+  <icon name="vt_download" texture="assets\textures\ui\venture\vt_download.tga" height="128" width="128"></icon>
+
+  <!-- tutorials -->
+  <!--<icon name="tut_overview" texture="assets\textures\ui\tutorials\tut_overview.tga" height="360" width="640"></icon>
+  <icon name="tut_exploration" texture="assets\textures\ui\tutorials\tut_exploration.tga" height="360" width="640"></icon>
+  <icon name="tut_fleetcontrol" texture="assets\textures\ui\tutorials\tut_fleetcontrol.tga" height="360" width="640"></icon>
+  <icon name="tut_teachnpc" texture="assets\textures\ui\tutorials\tut_teachnpc.tga" height="360" width="640"></icon>
+  <icon name="tut_stealing" texture="assets\textures\ui\tutorials\tut_stealing.tga" height="360" width="640"></icon>
+  <icon name="tut_trading" texture="assets\textures\ui\tutorials\tut_trading.tga" height="360" width="640"></icon>
+  <icon name="tut_building" texture="assets\textures\ui\tutorials\tut_building.tga" height="360" width="640"></icon>
+  <icon name="tut_boarding" texture="assets\textures\ui\tutorials\tut_boarding.tga" height="360" width="640"></icon>
+  <icon name="tut_diplomaid" texture="assets\textures\ui\tutorials\tut_diplomaid.tga" height="360" width="640"></icon>
+  <icon name="tut_offers" texture="assets\textures\ui\tutorials\tut_offers.tga" height="360" width="640"></icon>
+  <icon name="tut_upkeep" texture="assets\textures\ui\tutorials\tut_upkeep.tga" height="360" width="640"></icon>-->
+
+
+  <!-- ship icons p1 -->
+  <icon name="ship_squadleader_01" texture="assets\textures\ui\shipicon\ship_squadleader_01.tga" height="128" width="128"></icon>
+  <!-- primary purpose -->
+
+  <icon name="ship_xs_auxiliary_01" texture="assets\textures\ui\shipicon\ship_xs_auxiliary_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_auxiliary_01" texture="assets\textures\ui\shipicon\ship_s_auxiliary_01.tga" height="128" width="128"></icon>
+  <icon name="ship_m_auxiliary_01" texture="assets\textures\ui\shipicon\ship_m_auxiliary_01.tga" height="128" width="128"></icon>
+  <icon name="ship_l_auxiliary_01" texture="assets\textures\ui\shipicon\ship_l_auxiliary_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xl_auxiliary_01" texture="assets\textures\ui\shipicon\ship_xl_auxiliary_01.tga" height="128" width="128"></icon>
+
+  <icon name="ship_xs_build_01" texture="assets\textures\ui\shipicon\ship_xs_build_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xl_build_01" texture="assets\textures\ui\shipicon\ship_xl_build_01.tga" height="128" width="128"></icon>
+
+  <icon name="ship_l_dismantling_01" texture="assets\textures\ui\shipicon\ship_l_dismantling_01.tga" height="128" width="128"></icon>
+
+  <icon name="ship_xs_fight_01" texture="assets\textures\ui\shipicon\ship_xs_fight_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_fight_01" texture="assets\textures\ui\shipicon\ship_s_fight_01.tga" height="128" width="128"></icon>
+  <icon name="ship_m_fight_01" texture="assets\textures\ui\shipicon\ship_m_fight_01.tga" height="128" width="128"></icon>
+  <icon name="ship_l_fight_01" texture="assets\textures\ui\shipicon\ship_l_fight_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xl_fight_01" texture="assets\textures\ui\shipicon\ship_xl_fight_01.tga" height="128" width="128"></icon>
+
+  <icon name="ship_xs_mine_01" texture="assets\textures\ui\shipicon\ship_xs_mine_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_mine_01" texture="assets\textures\ui\shipicon\ship_s_mine_01.tga" height="128" width="128"></icon>
+  <icon name="ship_m_mine_01" texture="assets\textures\ui\shipicon\ship_m_mine_01.tga" height="128" width="128"></icon>
+  <icon name="ship_l_mine_01" texture="assets\textures\ui\shipicon\ship_l_mine_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xl_mine_01" texture="assets\textures\ui\shipicon\ship_xl_mine_01.tga" height="128" width="128"></icon>
+
+  <icon name="ship_xs_neutral_01" texture="assets\textures\ui\shipicon\ship_xs_neutral_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_neutral_01" texture="assets\textures\ui\shipicon\ship_s_neutral_01.tga" height="128" width="128"></icon>
+  <icon name="ship_m_neutral_01" texture="assets\textures\ui\shipicon\ship_m_neutral_01.tga" height="128" width="128"></icon>
+  <icon name="ship_l_neutral_01" texture="assets\textures\ui\shipicon\ship_l_neutral_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xl_neutral_01" texture="assets\textures\ui\shipicon\ship_xl_neutral_01.tga" height="128" width="128"></icon>
+
+  <icon name="ship_m_salvage_01" texture="assets\textures\ui\shipicon\ship_m_salvage_01.tga" height="128" width="128"></icon>
+
+  <icon name="ship_xs_trade_01" texture="assets\textures\ui\shipicon\ship_xs_trade_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_trade_01" texture="assets\textures\ui\shipicon\ship_s_trade_01.tga" height="128" width="128"></icon>
+  <icon name="ship_m_trade_01" texture="assets\textures\ui\shipicon\ship_m_trade_01.tga" height="128" width="128"></icon>
+  <icon name="ship_l_trade_01" texture="assets\textures\ui\shipicon\ship_l_trade_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xl_trade_01" texture="assets\textures\ui\shipicon\ship_xl_trade_01.tga" height="128" width="128"></icon>
+
+  <!-- ship type -->
+  <icon name="ship_xs_boardingpod_01" texture="assets\textures\ui\shipicon\ship_xs_boardingpod_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xs_distressdrone_01" texture="assets\textures\ui\shipicon\ship_xs_distressdrone_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xs_drone_build_01" texture="assets\textures\ui\shipicon\ship_xs_drone_build_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xs_drone_fight_01" texture="assets\textures\ui\shipicon\ship_xs_drone_fight_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xs_drone_trade_01" texture="assets\textures\ui\shipicon\ship_xs_drone_trade_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xs_escapepod_01" texture="assets\textures\ui\shipicon\ship_xs_escapepod_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xs_lasertower_01" texture="assets\textures\ui\shipicon\ship_xs_lasertower_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xs_lasertower_01_inactive" texture="assets\textures\ui\shipicon\ship_xs_lasertower_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xs_personalvehicle_01" texture="assets\textures\ui\shipicon\ship_xs_personalvehicle_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xs_policeship_01" texture="assets\textures\ui\shipicon\ship_xs_policeship_01.tga" height="128" width="128"></icon>
+
+  <icon name="ship_s_courier_01" texture="assets\textures\ui\shipicon\ship_s_courier_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_drone_fight_01" texture="assets\textures\ui\shipicon\ship_s_drone_fight_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_drone_mine_01" texture="assets\textures\ui\shipicon\ship_s_drone_mine_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_drone_trade_01" texture="assets\textures\ui\shipicon\ship_s_drone_trade_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_fighter_01" texture="assets\textures\ui\shipicon\ship_s_fighter_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_heavyfighter_01" texture="assets\textures\ui\shipicon\ship_s_heavyfighter_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_lasertower_01" texture="assets\textures\ui\shipicon\ship_s_lasertower_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_lasertower_01_inactive" texture="assets\textures\ui\shipicon\ship_s_lasertower_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_miner_01" texture="assets\textures\ui\shipicon\ship_s_miner_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_racer_01" texture="assets\textures\ui\shipicon\ship_s_racer_01.tga" height="128" width="128"></icon>
+  <icon name="ship_s_scout_01" texture="assets\textures\ui\shipicon\ship_s_scout_01.tga" height="128" width="128"></icon>
+
+  <icon name="ship_m_corvette_01" texture="assets\textures\ui\shipicon\ship_m_corvette_01.tga" height="128" width="128"></icon>
+  <icon name="ship_m_drone_trade_01" texture="assets\textures\ui\shipicon\ship_m_drone_trade_01.tga" height="128" width="128"></icon>
+  <icon name="ship_m_frigate_01" texture="assets\textures\ui\shipicon\ship_m_frigate_01.tga" height="128" width="128"></icon>
+  <icon name="ship_m_gunboat_01" texture="assets\textures\ui\shipicon\ship_m_gunboat_01.tga" height="128" width="128"></icon>
+  <icon name="ship_m_miner_01" texture="assets\textures\ui\shipicon\ship_m_miner_01.tga" height="128" width="128"></icon>
+  <icon name="ship_m_scavenger_01" texture="assets\textures\ui\shipicon\ship_m_scavenger_01.tga" height="128" width="128"></icon>
+  <icon name="ship_m_transporter_01" texture="assets\textures\ui\shipicon\ship_m_transporter_01.tga" height="128" width="128"></icon>
+  <icon name="ship_m_tug_01" texture="assets\textures\ui\shipicon\ship_m_tug_01.tga" height="128" width="128"></icon>
+  <icon name="ship_m_envoy_01" texture="assets\textures\ui\shipicon\ship_m_envoy_01.tga" height="128" width="128"></icon>
+
+  <icon name="ship_l_carrier_01" texture="assets\textures\ui\shipicon\ship_l_carrier_01.tga" height="128" width="128"></icon>
+  <icon name="ship_l_compactor_01" texture="assets\textures\ui\shipicon\ship_l_compactor_01.tga" height="128" width="128"></icon>
+  <icon name="ship_l_destroyer_01" texture="assets\textures\ui\shipicon\ship_l_destroyer_01.tga" height="128" width="128"></icon>
+  <icon name="ship_l_expeditionary_01" texture="assets\textures\ui\shipicon\ship_l_expeditionary_01.tga" height="128" width="128"></icon>
+  <icon name="ship_l_explorer_01" texture="assets\textures\ui\shipicon\ship_l_explorer_01.tga" height="128" width="128"></icon>
+  <icon name="ship_l_freighter_01" texture="assets\textures\ui\shipicon\ship_l_freighter_01.tga" height="128" width="128"></icon>
+  <icon name="ship_l_miner_01" texture="assets\textures\ui\shipicon\ship_l_miner_01.tga" height="128" width="128"></icon>
+  <icon name="ship_l_scavenger_01" texture="assets\textures\ui\shipicon\ship_l_scavenger_01.tga" height="128" width="128"></icon>
+
+  <icon name="ship_xl_battleship_01" texture="assets\textures\ui\shipicon\ship_xl_battleship_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xl_builder_01" texture="assets\textures\ui\shipicon\ship_xl_builder_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xl_carrier_01" texture="assets\textures\ui\shipicon\ship_xl_carrier_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xl_destroyer_01" texture="assets\textures\ui\shipicon\ship_xl_destroyer_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xl_freighter_01" texture="assets\textures\ui\shipicon\ship_xl_freighter_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xl_miningrig_01" texture="assets\textures\ui\shipicon\ship_xl_miningrig_01.tga" height="128" width="128"></icon>
+  <icon name="ship_xl_resupplier_01" texture="assets\textures\ui\shipicon\ship_xl_resupplier_01.tga" height="128" width="128"></icon>
+
+  <icon name="ships_away_01" texture="assets\textures\ui\menu\menu_awayfromcommander.tga" height="32" width="32"></icon>
+  <icon name="ships_idling_01" texture="assets\textures\ui\order\order_wait.tga" height="32" width="32"></icon>
+
+  <!-- main menu -->
+  <icon name="mm_externallink" texture="assets\textures\ui\mainmenu\mm_externallink.tga" height="720" width="564"></icon>
+
+  <icon name="module_*" texture="assets\textures\ui\stationmodules\*.tga" height="256" width="256"></icon>
+  <icon name="ship_*" texture="assets\textures\ui\ships\*.tga" height="256" width="256"></icon>
+  <icon name="upgrade_*" texture="assets\textures\ui\upgrades\*.tga" height="256" width="256"></icon>
+  <icon name="*" texture="assets\textures\ui\paintmods\*.tga" height="256" width="256"></icon>
+
+  <icon name="joystick_input_*" texture="assets\textures\ui\button_icons\joystick\*.tga" height="64" width="64" textheightpercent="125"></icon>
+  <icon name="keyboard_input_*" texture="assets\textures\ui\button_icons\keyboard\*.tga" height="64" width="64" textheightpercent="150"></icon>
+  <icon name="keyboard_input_*" texture="assets\textures\ui\button_icons\keyboard_wide\*.tga" height="64" width="128" textheightpercent="150" preload="true"></icon>
+  <icon name="gamepad_input_*" texture="assets\textures\ui\button_icons\xbox\*.tga" height="64" width="64" textheightpercent="125"></icon>
+  <icon name="playstation_input_*" texture="assets\textures\ui\button_icons\playstation\*.tga" height="64" width="64" textheightpercent="125"></icon>
+  <icon name="steamdeck_input_*" texture="assets\textures\ui\button_icons\steamdeck\*.tga" height="64" width="64" textheightpercent="125"></icon>
+
+  <icon name="input_device_steamdeck" texture="assets\textures\ui\button_icons\input_device\input_device_steamdeck.tga" height="64" width="64"></icon>
+  <icon name="input_device_keyboard" texture="assets\textures\ui\button_icons\input_device\input_device_keyboard.tga" height="64" width="64"></icon>
+  <icon name="input_device_controller" texture="assets\textures\ui\button_icons\input_device\input_device_controller.tga" height="64" width="64"></icon>
+  <icon name="input_device_mouse" texture="assets\textures\ui\button_icons\input_device\input_device_mouse.tga" height="64" width="64"></icon>
+  <icon name="input_device_joystick" texture="assets\textures\ui\button_icons\input_device\input_device_joystick.tga" height="64" width="64"></icon>
+  <icon name="input_device_number_1" texture="assets\textures\ui\button_icons\input_device\input_device_number_1.tga" height="64" width="64"></icon>
+  <icon name="input_device_number_2" texture="assets\textures\ui\button_icons\input_device\input_device_number_2.tga" height="64" width="64"></icon>
+  <icon name="input_device_number_3" texture="assets\textures\ui\button_icons\input_device\input_device_number_3.tga" height="64" width="64"></icon>
+  <icon name="input_device_number_4" texture="assets\textures\ui\button_icons\input_device\input_device_number_4.tga" height="64" width="64"></icon>
+  <icon name="input_device_number_5" texture="assets\textures\ui\button_icons\input_device\input_device_number_5.tga" height="64" width="64"></icon>
+  <icon name="input_device_number_6" texture="assets\textures\ui\button_icons\input_device\input_device_number_6.tga" height="64" width="64"></icon>
+  <icon name="input_device_number_7" texture="assets\textures\ui\button_icons\input_device\input_device_number_7.tga" height="64" width="64"></icon>
+  <icon name="input_device_number_8" texture="assets\textures\ui\button_icons\input_device\input_device_number_8.tga" height="64" width="64"></icon>
+  <icon name="input_device_radial_*" texture="assets\textures\ui\button_icons\input_device\radial\*.tga" height="64" width="128"></icon>
+
+  <!-- Promo feature -->
+  <icon name="promo_coh_01" texture="assets\textures\ui\promo\promo_coh_01.png" height="256" width="256"></icon>
+  <icon name="promo_coh_02" texture="assets\textures\ui\promo\promo_coh_02.png" height="256" width="256"></icon>
+  <icon name="promo_coh_03" texture="assets\textures\ui\promo\promo_coh_03.png" height="256" width="256"></icon>
+
+  <icon name="promo_ke_01" texture="assets\textures\ui\promo\promo_ke_01.png" height="256" width="256"></icon>
+  <icon name="promo_ke_02" texture="assets\textures\ui\promo\promo_ke_02.png" height="256" width="256"></icon>
+  <icon name="promo_ke_03" texture="assets\textures\ui\promo\promo_ke_03.png" height="256" width="256"></icon>
+
+  <icon name="promo_split_01" texture="assets\textures\ui\promo\promo_split_01.png" height="256" width="256"></icon>
+  <icon name="promo_split_02" texture="assets\textures\ui\promo\promo_split_02.png" height="256" width="256"></icon>
+  <icon name="promo_split_03" texture="assets\textures\ui\promo\promo_split_03.png" height="256" width="256"></icon>
+
+  <icon name="promo_toa_01" texture="assets\textures\ui\promo\promo_toa_01.png" height="256" width="256"></icon>
+  <icon name="promo_toa_02" texture="assets\textures\ui\promo\promo_toa_02.png" height="256" width="256"></icon>
+  <icon name="promo_toa_03" texture="assets\textures\ui\promo\promo_toa_03.png" height="256" width="256"></icon>
+
+  <icon name="promo_tl_01" texture="assets\textures\ui\promo\promo_tl_01.png" height="256" width="256"></icon>
+  <icon name="promo_tl_02" texture="assets\textures\ui\promo\promo_tl_02.png" height="256" width="256"></icon>
+  <icon name="promo_tl_03" texture="assets\textures\ui\promo\promo_tl_03.png" height="256" width="256"></icon>
+
+  <icon name="promo_mini_01_01" texture="assets\textures\ui\promo\promo_mini_01_01.png" height="256" width="256"></icon>
+  <icon name="promo_mini_01_02" texture="assets\textures\ui\promo\promo_mini_01_02.png" height="256" width="256"></icon>
+  <icon name="promo_mini_01_03" texture="assets\textures\ui\promo\promo_mini_01_03.png" height="256" width="256"></icon>
+
+  <icon name="promo_mini_02_01" texture="assets\textures\ui\promo\promo_mini_02_01.png" height="256" width="256"></icon>
+  <icon name="promo_mini_02_02" texture="assets\textures\ui\promo\promo_mini_02_02.png" height="256" width="256"></icon>
+  <icon name="promo_mini_02_03" texture="assets\textures\ui\promo\promo_mini_02_03.png" height="256" width="256"></icon>
+
+  <!-- map objects -->
+  <!-- stations -->
+  <icon name="mapob_buildstorage" texture="assets\textures\ui\map_objects\mapob_buildstorage.tga" height="128" width="128"></icon>
+  <icon name="mapob_factory" texture="assets\textures\ui\map_objects\mapob_factory.tga" height="128" width="128"></icon>
+  <icon name="mapob_agricultural" texture="assets\textures\ui\map_objects\mapob_agricultural.tga" height="128" width="128"></icon>
+  <icon name="mapob_energy" texture="assets\textures\ui\map_objects\mapob_energy.tga" height="128" width="128"></icon>
+  <icon name="mapob_food" texture="assets\textures\ui\map_objects\mapob_food.tga" height="128" width="128"></icon>
+  <icon name="mapob_hightech" texture="assets\textures\ui\map_objects\mapob_hightech.tga" height="128" width="128"></icon>
+  <icon name="mapob_pharmaceutical" texture="assets\textures\ui\map_objects\mapob_pharmaceutical.tga" height="128" width="128"></icon>
+  <icon name="mapob_refined" texture="assets\textures\ui\map_objects\mapob_refined.tga" height="128" width="128"></icon>
+  <icon name="mapob_shiptech" texture="assets\textures\ui\map_objects\mapob_shiptech.tga" height="128" width="128"></icon>
+  <icon name="mapob_water" texture="assets\textures\ui\map_objects\mapob_water.tga" height="128" width="128"></icon>
+  <icon name="mapob_factory_headquarter" texture="assets\textures\ui\map_objects\mapob_factory_headquarter.tga" height="128" width="128"></icon>
+  <icon name="mapob_constructionsite" texture="assets\textures\ui\map_objects\mapob_constructionsite.tga" height="128" width="128"></icon>
+  <icon name="mapob_equipmentdock" texture="assets\textures\ui\map_objects\mapob_equipmentdock.tga" height="128" width="128"></icon>
+  <icon name="mapob_equipmentdock_headquarter" texture="assets\textures\ui\map_objects\mapob_equipmentdock_headquarter.tga" height="128" width="128"></icon>
+  <icon name="mapob_tradestation" texture="assets\textures\ui\map_objects\mapob_tradestation.tga" height="128" width="128"></icon>
+  <icon name="mapob_tradestation_headquarter" texture="assets\textures\ui\map_objects\mapob_tradestation_headquarter.tga" height="128" width="128"></icon>
+  <icon name="mapob_shipyard" texture="assets\textures\ui\map_objects\mapob_shipyard.tga" height="128" width="128"></icon>
+  <icon name="mapob_shipyard_headquarter" texture="assets\textures\ui\map_objects\mapob_shipyard_headquarter.tga" height="128" width="128"></icon>
+  <icon name="mapob_wharf" texture="assets\textures\ui\map_objects\mapob_wharf.tga" height="128" width="128"></icon>
+  <icon name="mapob_wharf_headquarter" texture="assets\textures\ui\map_objects\mapob_wharf_headquarter.tga" height="128" width="128"></icon>
+  <icon name="mapob_defensestation" texture="assets\textures\ui\map_objects\mapob_defensestation.tga" height="128" width="128"></icon>
+  <icon name="mapob_defensestation_headquarter" texture="assets\textures\ui\map_objects\mapob_defensestation_headquarter.tga" height="128" width="128"></icon>
+  <icon name="mapob_playerhq" texture="assets\textures\ui\map_objects\mapob_playerhq.tga" height="128" width="128"></icon>
+  <icon name="mapob_piratestation" texture="assets\textures\ui\map_objects\mapob_piratestation.tga" height="128" width="128"></icon>
+  <icon name="mapob_piratestation_headquarter" texture="assets\textures\ui\map_objects\mapob_piratestation_headquarter.tga" height="128" width="128"></icon>
+  <icon name="mapob_hive" texture="assets\textures\ui\map_objects\mapob_hive.tga" height="128" width="128"></icon>
+  <icon name="mapob_lockbox" texture="assets\textures\ui\map_objects\mapob_lockbox.tga" height="128" width="128"></icon>
+  <icon name="mapob_drop" texture="assets\textures\ui\map_objects\mapob_drop.tga" height="128" width="128"></icon>
+  <icon name="mapob_asteroid" texture="assets\textures\ui\map_objects\mapob_asteroid.tga" height="128" width="128"></icon>
+  <icon name="mapob_loudspeaker" texture="assets\textures\ui\map_objects\mapob_loudspeaker.tga" height="128" width="128"></icon>
+  <icon name="mapob_vault_closed" texture="assets\textures\ui\map_objects\mapob_vault_closed.tga" height="128" width="128"></icon>
+  <icon name="mapob_vault_partial" texture="assets\textures\ui\map_objects\mapob_vault_partial.tga" height="128" width="128"></icon>
+  <icon name="mapob_vault_completed" texture="assets\textures\ui\map_objects\mapob_vault_completed.tga" height="128" width="128"></icon>
+  <icon name="mapob_weaponplatform" texture="assets\textures\ui\map_objects\mapob_weaponplatform.tga" height="128" width="128"></icon>
+  <icon name="mapob_recyclable" texture="assets\textures\ui\map_objects\mapob_recyclable.tga" height="128" width="128"></icon>
+  <icon name="mapob_scrap_dismantle" texture="assets\textures\ui\map_objects\mapob_scrap_dismantle.tga" height="128" width="128"></icon>
+  <icon name="mapob_scrap_tow" texture="assets\textures\ui\map_objects\mapob_scrap_tow.tga" height="128" width="128"></icon>
+  <icon name="mapob_collectableammo" texture="assets\textures\ui\map_objects\mapob_collectableammo.tga" height="128" width="128"></icon>
+  <icon name="mapob_collectableasteroid" texture="assets\textures\ui\map_objects\mapob_collectableasteroid.tga" height="128" width="128"></icon>
+  <icon name="mapob_collectablewarecontainer" texture="assets\textures\ui\map_objects\mapob_collectablewarecontainer.tga" height="128" width="128"></icon>
+
+  <!-- other map object icons -->
+  <icon name="mapob_alert" texture="assets\textures\ui\map_objects\mapob_alert.tga" height="128" width="128"></icon>
+  <icon name="mapob_anomaly" texture="assets\textures\ui\map_objects\mapob_anomaly.tga" height="128" width="128"></icon>
+  <icon name="mapob_busy" texture="assets\textures\ui\map_objects\mapob_busy.tga" height="128" width="128"></icon>
+  <icon name="mapob_jumpgate" texture="assets\textures\ui\map_objects\mapob_jumpgate.tga" height="128" width="128"></icon>
+  <icon name="mapob_lasertower_s" texture="assets\textures\ui\map_objects\mapob_lasertower_s.tga" height="128" width="128"></icon>
+  <icon name="mapob_lasertower_s_inactive" texture="assets\textures\ui\map_objects\mapob_lasertower_s_inactive.tga" height="128" width="128"></icon>
+  <icon name="mapob_lasertower_xs" texture="assets\textures\ui\map_objects\mapob_lasertower_xs.tga" height="128" width="128"></icon>
+  <icon name="mapob_lasertower_xs_inactive" texture="assets\textures\ui\map_objects\mapob_lasertower_xs_inactive.tga" height="128" width="128"></icon>
+  <icon name="mapob_mine" texture="assets\textures\ui\map_objects\mapob_mine.tga" height="128" width="128"></icon>
+  <icon name="mapob_mine_inactive" texture="assets\textures\ui\map_objects\mapob_mine_inactive.tga" height="128" width="128"></icon>
+  <icon name="mapob_missionboard" texture="assets\textures\ui\map_objects\mapob_missionboard.tga" height="128" width="128"></icon>
+  <icon name="mapob_missiontarget" texture="assets\textures\ui\map_objects\mapob_alert.tga" height="128" width="128"></icon>
+  <icon name="mapob_navbeacon" texture="assets\textures\ui\map_objects\mapob_navbeacon.tga" height="128" width="128"></icon>
+  <icon name="mapob_navbeacon_inactive" texture="assets\textures\ui\map_objects\mapob_navbeacon_inactive.tga" height="128" width="128"></icon>
+  <icon name="mapob_poi" texture="assets\textures\ui\map_objects\mapob_poi.tga" height="128" width="128"></icon>
+  <icon name="mapob_positioncursor" texture="assets\textures\ui\map_objects\mapob_positioncursor.tga" height="128" width="128"></icon>
+  <icon name="mapob_region" texture="assets\textures\ui\map_objects\mapob_region.tga" height="128" width="128"></icon>
+  <icon name="mapob_resourceprobe" texture="assets\textures\ui\map_objects\mapob_resourceprobe.tga" height="128" width="128"></icon>
+  <icon name="mapob_resourceprobe_inactive" texture="assets\textures\ui\map_objects\mapob_resourceprobe_inactive.tga" height="128" width="128"></icon>
+  <icon name="mapob_superhighway" texture="assets\textures\ui\map_objects\mapob_superhighway.tga" height="128" width="128"></icon>
+  <icon name="mapob_satellite_01" texture="assets\textures\ui\map_objects\mapob_satellite_01.tga" height="128" width="128"></icon>
+  <icon name="mapob_satellite_01_inactive" texture="assets\textures\ui\map_objects\mapob_satellite_01_inactive.tga" height="128" width="128"></icon>
+  <icon name="mapob_satellite_02" texture="assets\textures\ui\map_objects\mapob_satellite_02.tga" height="128" width="128"></icon>
+  <icon name="mapob_satellite_02_inactive" texture="assets\textures\ui\map_objects\mapob_satellite_02_inactive.tga" height="128" width="128"></icon>
+  <icon name="mapob_transorbital_accelerator" texture="assets\textures\ui\map_objects\mapob_transorbital_accelerator.tga" height="128" width="128"></icon>
+  <icon name="mapob_unknown" texture="assets\textures\ui\map_objects\mapob_unknown.tga" height="128" width="128"></icon>
+
+  <!-- map sidebar tabs -->
+  <icon name="mapst_agent" texture="assets\textures\ui\map_sidebar_tabs\mapst_agent.tga" height="128" width="128"></icon>
+  <icon name="mapst_events" texture="assets\textures\ui\map_sidebar_tabs\mapst_events.tga" height="128" width="128"></icon>
+  <icon name="mapst_cheats" texture="assets\textures\ui\map_sidebar_tabs\mapst_cheats.tga" height="128" width="128"></icon>
+  <icon name="mapst_diplomacy" texture="assets\textures\ui\map_sidebar_tabs\mapst_diplomacy.tga" height="128" width="128"></icon>
+  <icon name="mapst_embassyaction" texture="assets\textures\ui\map_sidebar_tabs\mapst_embassyaction.tga" height="128" width="128"></icon>
+  <icon name="mapst_factionrelation" texture="assets\textures\ui\map_sidebar_tabs\mapst_factionrelation.tga" height="128" width="128"></icon>
+  <icon name="mapst_filtersystem" texture="assets\textures\ui\map_sidebar_tabs\mapst_fs.tga" height="128" width="128"></icon>
+  <icon name="mapst_information" texture="assets\textures\ui\map_sidebar_tabs\mapst_info.tga" height="128" width="128"></icon>
+  <icon name="mapst_legend" texture="assets\textures\ui\map_sidebar_tabs\mapst_legend.tga" height="128" width="128"></icon>
+  <icon name="mapst_mission_accepted" texture="assets\textures\ui\map_sidebar_tabs\mapst_mission_accepted.tga" height="128" width="128"></icon>
+  <icon name="mapst_mission_offers" texture="assets\textures\ui\map_sidebar_tabs\mapst_mission_offers.tga" height="128" width="128"></icon>
+  <icon name="mapst_objectlist" texture="assets\textures\ui\map_sidebar_tabs\mapst_ol.tga" height="128" width="128"></icon>
+  <icon name="mapst_plotmanagement" texture="assets\textures\ui\map_sidebar_tabs\mapst_mp.tga" height="128" width="128"></icon>
+  <icon name="mapst_propertyowned" texture="assets\textures\ui\map_sidebar_tabs\mapst_po.tga" height="128" width="128"></icon>
+  <icon name="mapst_seperator_line" texture="assets\textures\ui\map_sidebar_tabs\mapst_seperator_line.tga" height="32" width="128"></icon>
+
+  <!-- map sidebar tabs (info meu) -->
+  <icon name="mapst_orderqueue" texture="assets\textures\ui\map_sidebar_tabs\mapst_oq.tga" height="128" width="128"></icon>
+  <icon name="mapst_orderqueue_advanced" texture="assets\textures\ui\map_sidebar_tabs\mapst_oq_advanced.tga" height="128" width="128"></icon>
+  <icon name="mapst_loadout" texture="assets\textures\ui\map_sidebar_tabs\mapst_loadout.tga" height="128" width="128"></icon>
+  <icon name="mapst_standing_orders" texture="assets\textures\ui\map_sidebar_tabs\mapst_standing_orders.tga" height="128" width="128"></icon>
+
+  <!-- map sidebar tabs (object list filters) -->
+  <icon name="mapst_ol_ship_s" texture="assets\textures\ui\map_sidebar_tabs\mapst_ship_s.tga" height="128" width="128"></icon>
+  <icon name="mapst_ol_ship_m" texture="assets\textures\ui\map_sidebar_tabs\mapst_ship_m.tga" height="128" width="128"></icon>
+  <icon name="mapst_ol_ship_l" texture="assets\textures\ui\map_sidebar_tabs\mapst_ship_l.tga" height="128" width="128"></icon>
+  <icon name="mapst_ol_ship_xl" texture="assets\textures\ui\map_sidebar_tabs\mapst_ship_xl.tga" height="128" width="128"></icon>
+
+  <icon name="mapst_ol_all" texture="assets\textures\ui\map_sidebar_tabs\mapst_all.tga" height="128" width="128"></icon>
+  <icon name="mapst_ol_stations" texture="assets\textures\ui\map_sidebar_tabs\mapst_stations.tga" height="128" width="128"></icon>
+  <icon name="mapst_ol_ships" texture="assets\textures\ui\map_sidebar_tabs\mapst_ships.tga" height="128" width="128"></icon>
+  <icon name="mapst_ol_fleets" texture="assets\textures\ui\map_sidebar_tabs\mapst_fleets.tga" height="128" width="128"></icon>
+  <icon name="mapst_ol_unassigned" texture="assets\textures\ui\map_sidebar_tabs\mapst_unassigned.tga" height="128" width="128"></icon>
+  <icon name="mapst_ol_deployables" texture="assets\textures\ui\map_sidebar_tabs\mapst_deployables.tga" height="128" width="128"></icon>
+  <icon name="mapst_ol_inventory" texture="assets\textures\ui\map_sidebar_tabs\mapst_inventory.tga" height="128" width="128"></icon>
+
+  <!-- map sidebar tabs (filter system) -->
+  <icon name="mapst_fs_trade" texture="assets\textures\ui\map_sidebar_tabs\mapst_trade.tga" height="128" width="128"></icon>
+  <icon name="mapst_fs_trade_disabled" texture="assets\textures\ui\map_sidebar_tabs\mapst_trade_disabled.tga" height="128" width="128"></icon>
+
+  <icon name="mapst_fs_fight" texture="assets\textures\ui\map_sidebar_tabs\mapst_fight.tga" height="128" width="128"></icon>
+  <icon name="mapst_fs_fight_disabled" texture="assets\textures\ui\map_sidebar_tabs\mapst_fight_disabled.tga" height="128" width="128"></icon>
+
+  <icon name="mapst_fs_think" texture="assets\textures\ui\map_sidebar_tabs\mapst_think.tga" height="128" width="128"></icon>
+  <icon name="mapst_fs_think_disabled" texture="assets\textures\ui\map_sidebar_tabs\mapst_think_disabled.tga" height="128" width="128"></icon>
+
+  <icon name="mapst_fs_build" texture="assets\textures\ui\map_sidebar_tabs\mapst_build.tga" height="128" width="128"></icon>
+  <icon name="mapst_fs_build_disabled" texture="assets\textures\ui\map_sidebar_tabs\mapst_build_disabled.tga" height="128" width="128"></icon>
+
+  <icon name="mapst_fs_diplomacy" texture="assets\textures\ui\map_sidebar_tabs\mapst_diplomacy.tga" height="128" width="128"></icon>
+  <icon name="mapst_fs_diplomacy_disabled" texture="assets\textures\ui\map_sidebar_tabs\mapst_diplomacy_disabled.tga" height="128" width="128"></icon>
+
+  <icon name="mapst_fs_mining" texture="assets\textures\ui\map_sidebar_tabs\mapst_mining.tga" height="128" width="128"></icon>
+  <icon name="mapst_fs_mining_disabled" texture="assets\textures\ui\map_sidebar_tabs\mapst_mining_disabled.tga" height="128" width="128"></icon>
+
+  <icon name="mapst_fs_other" texture="assets\textures\ui\map_sidebar_tabs\mapst_other.tga" height="128" width="128"></icon>
+  <icon name="mapst_fs_other_disabled" texture="assets\textures\ui\map_sidebar_tabs\mapst_other_disabled.tga" height="128" width="128"></icon>
+
+  <!-- map sidebar tabs (advanced orders) -->
+  <icon name="mapst_ao_default_global" texture="assets\textures\ui\map_sidebar_tabs\mapst_default_global.tga" height="128" width="128"></icon>
+  <icon name="mapst_ao_default_object" texture="assets\textures\ui\map_sidebar_tabs\mapst_default_object.tga" height="128" width="128"></icon>
+  <icon name="mapst_ao_orderqueue" texture="assets\textures\ui\map_sidebar_tabs\mapst_oq.tga" height="128" width="128"></icon>
+
+  <!-- map sidebar tabs (mission offers/accepted missions) -->
+  <icon name="mapst_mission_guild" texture="assets\textures\ui\map_sidebar_tabs\mapst_mission_guild.tga" height="128" width="128"></icon>
+  <icon name="mapst_mission_other" texture="assets\textures\ui\map_sidebar_tabs\mapst_mission_other.tga" height="128" width="128"></icon>
+  <icon name="mapst_mission_mentor" texture="assets\textures\ui\map_sidebar_tabs\mapst_mission_mentor.tga" height="128" width="128"></icon>
+  <icon name="mapst_mission_upkeep" texture="assets\textures\ui\map_sidebar_tabs\mapst_mission_upkeep.tga" height="128" width="128"></icon>
+  <icon name="mapst_mission_guidance" texture="assets\textures\ui\map_sidebar_tabs\mapst_mission_guidance.tga" height="128" width="128"></icon>
+  <icon name="mapst_mission_main" texture="assets\textures\ui\map_sidebar_tabs\mapst_mission_main.tga" height="128" width="128"></icon>
+
+  <!--  map trade icons -->
+  <icon name="maptr_buildstorage" texture="assets\textures\ui\map_trade\maptr_buildstorage.tga" height="128" width="128"></icon>
+  <icon name="maptr_hexagon" texture="assets\textures\ui\map_trade\maptr_hexagon.tga" height="128" width="128"></icon>
+  <icon name="maptr_illegal" texture="assets\textures\ui\map_trade\maptr_illegal.tga" height="128" width="128"></icon>
+  <icon name="maptr_supply" texture="assets\textures\ui\map_trade\maptr_supply.tga" height="128" width="128"></icon>
+
+  <!-- station build/upgrade sidebar tabs  -->
+  <icon name="stationbuildst_buildmodule" texture="assets\textures\ui\station_build_sidebar_tabs\stationbuildst_buildmodule.tga" height="128" width="128"></icon>
+  <icon name="stationbuildst_defense" texture="assets\textures\ui\station_build_sidebar_tabs\stationbuildst_defense.tga" height="128" width="128"></icon>
+  <icon name="stationbuildst_dock" texture="assets\textures\ui\station_build_sidebar_tabs\stationbuildst_dock.tga" height="128" width="128"></icon>
+  <icon name="stationbuildst_welfare" texture="assets\textures\ui\station_build_sidebar_tabs\stationbuildst_welfare.tga" height="128" width="128"></icon>
+  <icon name="stationbuildst_habitation" texture="assets\textures\ui\station_build_sidebar_tabs\stationbuildst_habitation.tga" height="128" width="128"></icon>
+  <icon name="stationbuildst_other" texture="assets\textures\ui\station_build_sidebar_tabs\stationbuildst_other.tga" height="128" width="128"></icon>
+  <icon name="stationbuildst_processing" texture="assets\textures\ui\station_build_sidebar_tabs\stationbuildst_processing.tga" height="128" width="128"></icon>
+  <icon name="stationbuildst_production" texture="assets\textures\ui\station_build_sidebar_tabs\stationbuildst_production.tga" height="128" width="128"></icon>
+  <icon name="stationbuildst_storage" texture="assets\textures\ui\station_build_sidebar_tabs\stationbuildst_storage.tga" height="128" width="128"></icon>
+  <icon name="stationbuildst_lsov" texture="assets\textures\ui\station_build_sidebar_tabs\stationbuildst_lsov.tga" height="128" width="128"></icon>
+  <icon name="stationbuildst_venture" texture="assets\textures\ui\station_build_sidebar_tabs\stationbuildst_venture.tga" height="128" width="128"></icon>
+
+  <!-- ship build/upgrade sidebar tabs  -->
+  <icon name="shipbuildst_chassis" texture="assets\textures\ui\ship_build_sidebar_tabs\shipbuildst_chassis.tga" height="128" width="128"></icon>
+  <icon name="shipbuildst_consumable" texture="assets\textures\ui\ship_build_sidebar_tabs\shipbuildst_consumable.tga" height="128" width="128"></icon>
+  <icon name="shipbuildst_crew" texture="assets\textures\ui\ship_build_sidebar_tabs\shipbuildst_crew.tga" height="128" width="128"></icon>
+  <icon name="shipbuildst_engine" texture="assets\textures\ui\ship_build_sidebar_tabs\shipbuildst_engine.tga" height="128" width="128"></icon>
+  <icon name="shipbuildst_enginegroups" texture="assets\textures\ui\ship_build_sidebar_tabs\shipbuildst_enginegroups.tga" height="128" width="128"></icon>
+  <icon name="shipbuildst_turretgroups" texture="assets\textures\ui\ship_build_sidebar_tabs\shipbuildst_turretgroups.tga" height="128" width="128"></icon>
+  <icon name="shipbuildst_repair" texture="assets\textures\ui\ship_build_sidebar_tabs\shipbuildst_repair.tga" height="128" width="128"></icon>
+  <icon name="shipbuildst_shield" texture="assets\textures\ui\ship_build_sidebar_tabs\shipbuildst_shield.tga" height="128" width="128"></icon>
+  <icon name="shipbuildst_software" texture="assets\textures\ui\ship_build_sidebar_tabs\shipbuildst_software.tga" height="128" width="128"></icon>
+  <icon name="shipbuildst_thruster" texture="assets\textures\ui\ship_build_sidebar_tabs\shipbuildst_thruster.tga" height="128" width="128"></icon>
+  <icon name="shipbuildst_turret" texture="assets\textures\ui\ship_build_sidebar_tabs\shipbuildst_turret.tga" height="128" width="128"></icon>
+  <icon name="shipbuildst_weapon" texture="assets\textures\ui\ship_build_sidebar_tabs\shipbuildst_weapon.tga" height="128" width="128"></icon>
+  <icon name="shipbuildst_paint" texture="assets\textures\ui\ship_build_sidebar_tabs\shipbuildst_paint.tga" height="128" width="128"></icon>
+
+  <!-- map legend icons  -->
+  <icon name="maplegend_hexagon_01" texture="assets\textures\ui\map_legend\maplegend_hexagon_01.tga" height="128" width="128"></icon>
+  <icon name="maplegend_hexagon_fog_01" texture="assets\textures\ui\map_legend\maplegend_hexagon_fog_01.tga" height="128" width="128"></icon>
+  <icon name="maplegend_hw_01" texture="assets\textures\ui\map_legend\maplegend_hw_01.tga" height="128" width="128"></icon>
+  <icon name="maplegend_hq_01" texture="assets\textures\ui\map_legend\maplegend_hq_01.tga" height="128" width="128"></icon>
+
+  <!-- NPC briefing picture -->
+  <icon name="briefing_ash_zannt_01" texture="assets\textures\ui\npc_briefing\ash_zannt_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_ash_zannt_02" texture="assets\textures\ui\npc_briefing\ash_zannt_02.tga" height="256" width="256"></icon>
+  <icon name="briefing_amanckalat_01" texture="assets\textures\ui\npc_briefing\amanckalat_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_arthur_gimmick_01" texture="assets\textures\ui\npc_briefing\arthur_gimmick_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_boso_ta_01" texture="assets\textures\ui\npc_briefing\boso_ta_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_boso_ta_02" texture="assets\textures\ui\npc_briefing\boso_ta_02.tga" height="256" width="256"></icon>
+  <icon name="briefing_corin_king_01" texture="assets\textures\ui\npc_briefing\corin_king_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_dal_busta_01" texture="assets\textures\ui\npc_briefing\dal_busta_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_dr_selaia_tarren_01" texture="assets\textures\ui\npc_briefing\dr_selaia_tarren_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_emry_sloan_01" texture="assets\textures\ui\npc_briefing\emry_sloan_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_emry_sloan_02" texture="assets\textures\ui\npc_briefing\emry_sloan_02.tga" height="256" width="256"></icon>
+  <icon name="briefing_fomo_fi_01" texture="assets\textures\ui\npc_briefing\fomo_fi_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_fomo_fi_02" texture="assets\textures\ui\npc_briefing\fomo_fi_02.tga" height="256" width="256"></icon>
+  <icon name="briefing_gride_orrian_01" texture="assets\textures\ui\npc_briefing\gride_orrian_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_harper_donel_01" texture="assets\textures\ui\npc_briefing\harper_donel_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_harper_donel_02" texture="assets\textures\ui\npc_briefing\harper_donel_02.tga" height="256" width="256"></icon>
+  <icon name="briefing_juro_topeka_01" texture="assets\textures\ui\npc_briefing\juro_topeka_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_keter_pullgard_01" texture="assets\textures\ui\npc_briefing\keter_pullgard_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_kromancketslat_01" texture="assets\textures\ui\npc_briefing\kromancketslat_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_najia_takio_01" texture="assets\textures\ui\npc_briefing\najia_takio_01.tga" height="512" width="512"></icon>
+  <icon name="briefing_nobonis_ganatos_yohiris_iv_01" texture="assets\textures\ui\npc_briefing\nobonis_ganatos_yohiris_iv_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_nobu_johansen_01" texture="assets\textures\ui\npc_briefing\nobu_johansen_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_nobu_johansen_02" texture="assets\textures\ui\npc_briefing\nobu_johansen_02.tga" height="256" width="256"></icon>
+  <icon name="briefing_nobumancketslat_01" texture="assets\textures\ui\npc_briefing\nobumancketslat_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_olmancketslat_01" texture="assets\textures\ui\npc_briefing\olmancketslat_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_rael_t_nru_01" texture="assets\textures\ui\npc_briefing\rael_t_nru_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_raibu_hariken_01" texture="assets\textures\ui\npc_briefing\raibu_hariken_01.tga" height="512" width="512"></icon>
+  <icon name="briefing_reen_omara_01" texture="assets\textures\ui\npc_briefing\reen_omara_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_selaia_tarren_01" texture="assets\textures\ui\npc_briefing\selaia_tarren_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_val_selton_01" texture="assets\textures\ui\npc_briefing\val_selton_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_yololios_sanduras_rusiris_xi_01" texture="assets\textures\ui\npc_briefing\yololios_sanduras_rusiris_xi_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_zuus_t_fnk_01" texture="assets\textures\ui\npc_briefing\zuus_t_fnk_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_ysandreis_seminoros_borealisas_ix_01" texture="assets\textures\ui\npc_briefing\ysandreis_seminoros_borealisas_ix_01.tga" height="256" width="256"></icon>
+  <icon name="briefing_ysandreis_seminoros_borealisas_ix_02" texture="assets\textures\ui\npc_briefing\ysandreis_seminoros_borealisas_ix_02.tga" height="256" width="256"></icon>
+
+  <icon name="briefing_no_video" texture="assets\textures\ui\npc_briefing\no_video.tga" height="512" width="512"></icon>
+
+  <!-- player information -->
+  <icon name="logbook_alerts" texture="assets\textures\ui\player_info\icon_logbook_alerts.tga" height="128" width="128"></icon>
+  <icon name="logbook_diplomacy" texture="assets\textures\ui\map_sidebar_tabs\mapst_diplomacy.tga" height="128" width="128"></icon>
+  <icon name="logbook_general" texture="assets\textures\ui\player_info\icon_logbook_general.tga" height="128" width="128"></icon>
+  <icon name="logbook_missions" texture="assets\textures\ui\player_info\icon_logbook_missions.tga" height="128" width="128"></icon>
+  <icon name="logbook_news" texture="assets\textures\ui\player_info\icon_logbook_news.tga" height="128" width="128"></icon>
+  <icon name="logbook_notifications" texture="assets\textures\ui\player_info\icon_logbook_notifications.tga" height="128" width="128"></icon>
+  <icon name="logbook_tips" texture="assets\textures\ui\player_info\icon_logbook_tips.tga" height="128" width="128"></icon>
+  <icon name="logbook_upkeep" texture="assets\textures\ui\player_info\icon_logbook_upkeep.tga" height="128" width="128"></icon>
+  <icon name="pi_account" texture="assets\textures\ui\player_info\pi_account.tga" height="128" width="128"></icon>
+  <icon name="pi_accountmanagement" texture="assets\textures\ui\player_info\pi_accountmanagement.tga" height="128" width="128"></icon>
+  <icon name="pi_background_01" texture="assets\textures\ui\player_info\pi_background_01.tga" height="64" width="512"></icon>
+  <icon name="pi_blacklists" texture="assets\textures\ui\player_info\pi_blacklists.tga" height="128" width="128"></icon>
+  <icon name="pi_crafting" texture="assets\textures\ui\player_info\pi_crafting.tga" height="128" width="128"></icon>
+  <icon name="pi_diplomacy" texture="assets\textures\ui\player_info\pi_diplomacy.tga" height="128" width="128"></icon>
+  <icon name="pi_empire" texture="assets\textures\ui\player_info\pi_empire.tga" height="128" width="128"></icon>
+  <icon name="pi_equipmentmods" texture="assets\textures\ui\player_info\pi_equipmentmods.tga" height="128" width="128"></icon>
+  <icon name="pi_fireoverride" texture="assets\textures\ui\player_info\pi_fireoverride.tga" height="128" width="128"></icon>
+  <icon name="pi_inventory" texture="assets\textures\ui\player_info\pi_inventory.tga" height="128" width="128"></icon>
+  <icon name="pi_logbook" texture="assets\textures\ui\player_info\pi_logbook.tga" height="128" width="128"></icon>
+  <icon name="pi_message_unread_high" texture="assets\textures\ui\player_info\pi_message_unread_high.tga" height="128" width="128"></icon>
+  <icon name="pi_message_unread_low" texture="assets\textures\ui\player_info\pi_message_unread_low.tga" height="128" width="128"></icon>
+  <icon name="pi_message_read_low" texture="assets\textures\ui\player_info\pi_message_read_low.tga" height="128" width="128"></icon>
+  <icon name="pi_message_read_high" texture="assets\textures\ui\player_info\pi_message_read_high.tga" height="128" width="128"></icon>
+  <icon name="pi_notificationsettings" texture="assets\textures\ui\player_info\pi_notificationsettings.tga" height="128" width="128"></icon>
+  <icon name="pi_personnelmanagement" texture="assets\textures\ui\player_info\pi_personnelmanagement.tga" height="128" width="128"></icon>
+  <icon name="pi_spacesuit" texture="assets\textures\ui\player_info\pi_spacesuit.tga" height="128" width="128"></icon>
+  <icon name="pi_statistics" texture="assets\textures\ui\player_info\pi_statistics.tga" height="128" width="128"></icon>
+  <icon name="pi_traderules" texture="assets\textures\ui\player_info\pi_traderules.tga" height="128" width="128"></icon>
+  <icon name="pi_transactionlog" texture="assets\textures\ui\player_info\pi_transactionlog.tga" height="128" width="128"></icon>
+
+  <!-- HUD message ticker icons -->
+  <icon name="mt_message_unread_low" texture="assets\textures\ui\message_ticker\mt_message_unread_low.tga" height="128" width="128"></icon>
+  <icon name="mt_message_unread_high" texture="assets\textures\ui\message_ticker\mt_message_unread_high.tga" height="128" width="128"></icon>
+  <icon name="mt_chat_unread_low" texture="assets\textures\ui\message_ticker\mt_chat_unread_low.tga" height="128" width="128"></icon>
+  <icon name="mt_chat_unread_high" texture="assets\textures\ui\message_ticker\mt_chat_unread_high.tga" height="128" width="128"></icon>
+
+  <!-- HUD station icons (visible at target rectangle) -->
+  <icon name="si_buildstorage" texture="assets\textures\ui\stationicon\si_buildstorage.tga" height="128" width="128"></icon>
+  <icon name="si_defensestation" texture="assets\textures\ui\stationicon\si_defensestation.tga" height="128" width="128"></icon>
+  <icon name="si_defensestation_headquarter" texture="assets\textures\ui\stationicon\si_defensestation.tga" height="128" width="128"></icon>
+  <icon name="si_equipmentdock" texture="assets\textures\ui\stationicon\si_equipmentdock.tga" height="128" width="128"></icon>
+  <icon name="si_equipmentdock_headquarter" texture="assets\textures\ui\stationicon\si_equipmentdock.tga" height="128" width="128"></icon>
+  <icon name="si_factory" texture="assets\textures\ui\stationicon\si_factory.tga" height="128" width="128"></icon>
+  <icon name="si_agricultural" texture="assets\textures\ui\stationicon\si_agricultural.tga" height="128" width="128"></icon>
+  <icon name="si_energy" texture="assets\textures\ui\stationicon\si_energy.tga" height="128" width="128"></icon>
+  <icon name="si_food" texture="assets\textures\ui\stationicon\si_food.tga" height="128" width="128"></icon>
+  <icon name="si_hightech" texture="assets\textures\ui\stationicon\si_hightech.tga" height="128" width="128"></icon>
+  <icon name="si_pharmaceutical" texture="assets\textures\ui\stationicon\si_pharmaceutical.tga" height="128" width="128"></icon>
+  <icon name="si_refined" texture="assets\textures\ui\stationicon\si_refined.tga" height="128" width="128"></icon>
+  <icon name="si_shiptech" texture="assets\textures\ui\stationicon\si_shiptech.tga" height="128" width="128"></icon>
+  <icon name="si_water" texture="assets\textures\ui\stationicon\si_water.tga" height="128" width="128"></icon>
+  <icon name="si_playerhq" texture="assets\textures\ui\stationicon\si_playerhq.tga" height="128" width="128"></icon>
+  <icon name="si_poi" texture="assets\textures\ui\stationicon\si_poi.tga" height="128" width="128"></icon>
+  <icon name="si_shipyard" texture="assets\textures\ui\stationicon\si_shipyard.tga" height="128" width="128"></icon>
+  <icon name="si_shipyard_headquarter" texture="assets\textures\ui\stationicon\si_shipyard.tga" height="128" width="128"></icon>
+  <icon name="si_wharf" texture="assets\textures\ui\stationicon\si_wharf.tga" height="128" width="128"></icon>
+  <icon name="si_wharf_headquarter" texture="assets\textures\ui\stationicon\si_wharf.tga" height="128" width="128"></icon>
+  <icon name="si_tradestation" texture="assets\textures\ui\stationicon\si_tradestation.tga" height="128" width="128"></icon>
+  <icon name="si_tradestation_headquarter" texture="assets\textures\ui\stationicon\si_tradestation.tga" height="128" width="128"></icon>
+  <icon name="si_piratestation" texture="assets\textures\ui\stationicon\si_piratestation.tga" height="128" width="128"></icon>
+  <icon name="si_piratestation_headquarter" texture="assets\textures\ui\stationicon\si_piratestation.tga" height="128" width="128"></icon>
+  <icon name="si_hive" texture="assets\textures\ui\stationicon\si_hive.tga" height="128" width="128"></icon>
+  <icon name="si_missionboard" texture="assets\textures\ui\stationicon\si_missionboard.tga" height="128" width="128"></icon>
+  <icon name="si_unknown" texture="assets\textures\ui\stationicon\si_unknown.tga" height="128" width="128"></icon>
+  <icon name="si_weaponplatform" texture="assets\textures\ui\stationicon\si_weaponplatform.tga" height="128" width="128"></icon>
+
+  <!-- logical station overview -->
+  <icon name="lso_error" texture="assets\textures\ui\logical_station_overview\lso_error.tga" height="128" width="128"></icon>
+  <icon name="lso_pause" texture="assets\textures\ui\logical_station_overview\lso_pause.tga" height="128" width="128"></icon>
+  <icon name="lso_pie_00" texture="assets\textures\ui\logical_station_overview\lso_pie_00.tga" height="128" width="128" preload="true"></icon>
+  <icon name="lso_pie_01" texture="assets\textures\ui\logical_station_overview\lso_pie_01.tga" height="128" width="128" preload="true"></icon>
+  <icon name="lso_pie_02" texture="assets\textures\ui\logical_station_overview\lso_pie_02.tga" height="128" width="128" preload="true"></icon>
+  <icon name="lso_pie_03" texture="assets\textures\ui\logical_station_overview\lso_pie_03.tga" height="128" width="128" preload="true"></icon>
+  <icon name="lso_pie_04" texture="assets\textures\ui\logical_station_overview\lso_pie_04.tga" height="128" width="128" preload="true"></icon>
+  <icon name="lso_pie_05" texture="assets\textures\ui\logical_station_overview\lso_pie_05.tga" height="128" width="128" preload="true"></icon>
+  <icon name="lso_pie_06" texture="assets\textures\ui\logical_station_overview\lso_pie_06.tga" height="128" width="128" preload="true"></icon>
+  <icon name="lso_pie_07" texture="assets\textures\ui\logical_station_overview\lso_pie_07.tga" height="128" width="128" preload="true"></icon>
+  <icon name="lso_pie_08" texture="assets\textures\ui\logical_station_overview\lso_pie_08.tga" height="128" width="128" preload="true"></icon>
+  <icon name="lso_pie_09" texture="assets\textures\ui\logical_station_overview\lso_pie_09.tga" height="128" width="128" preload="true"></icon>
+  <icon name="lso_pie_10" texture="assets\textures\ui\logical_station_overview\lso_pie_10.tga" height="128" width="128" preload="true"></icon>
+  <icon name="lso_pie_11" texture="assets\textures\ui\logical_station_overview\lso_pie_11.tga" height="128" width="128" preload="true"></icon>
+  <icon name="lso_pie_12" texture="assets\textures\ui\logical_station_overview\lso_pie_12.tga" height="128" width="128" preload="true"></icon>
+  <icon name="lso_progress" texture="assets\textures\ui\logical_station_overview\lso_progress.tga" height="128" width="128"></icon>
+  <icon name="lso_warning" texture="assets\textures\ui\logical_station_overview\lso_warning.tga" height="128" width="128"></icon>
+  <icon name="lso_build" texture="assets\textures\ui\logical_station_overview\lso_build.tga" height="128" width="128"></icon>
+  <icon name="lso_override" texture="assets\textures\ui\logical_station_overview\lso_override.tga" height="128" width="128"></icon>
+
+  <!-- NPC icons for target element and map -->
+  <icon name="npc_agent" texture="assets\textures\ui\npc\npc_agent.tga" height="128" width="128"></icon>
+  <icon name="npc_factionrep" texture="assets\textures\ui\npc\npc_factionrep.tga" height="128" width="128"></icon>
+  <icon name="npc_missionactor" texture="assets\textures\ui\npc\npc_missionactor.tga" height="128" width="128"></icon>
+  <icon name="npc_diplomat" texture="assets\textures\ui\npc\npc_diplomat.tga" height="128" width="128"></icon>
+  <icon name="npc_shadyguy" texture="assets\textures\ui\npc\npc_shadyguy.tga" height="128" width="128"></icon>
+
+  <!-- Map icons (outdated?)   -->
+  <icon name="map_jumpgate_01" texture="assets\textures\ui\shipicon\ship_xs_fight_01.tga" height="128" width="128"></icon>
+
+  <!-- Modification icons  -->
+  <icon name="mods_grade_01" texture="assets\textures\ui\modifications\mods_grade_01.tga" height="128" width="128"></icon>
+  <icon name="mods_grade_02" texture="assets\textures\ui\modifications\mods_grade_02.tga" height="128" width="128"></icon>
+  <icon name="mods_grade_03" texture="assets\textures\ui\modifications\mods_grade_03.tga" height="128" width="128"></icon>
+  <icon name="mods_grade_circle_01" texture="assets\textures\ui\modifications\mods_grade_circle_01.tga" height="128" width="128"></icon>
+  <icon name="mods_grade_circle_02" texture="assets\textures\ui\modifications\mods_grade_circle_02.tga" height="128" width="128"></icon>
+  <icon name="mods_grade_circle_03" texture="assets\textures\ui\modifications\mods_grade_circle_03.tga" height="128" width="128"></icon>
+
+  <!-- AI orders -->
+  <icon name="order_assigncommander" texture="assets\textures\ui\order\order_assigncommander.tga" height="32" width="32"></icon>
+  <icon name="order_assist" texture="assets\textures\ui\order\order_assist.tga" height="32" width="32"></icon>
+  <icon name="order_attack" texture="assets\textures\ui\order\order_attack.tga" height="32" width="32"></icon>
+  <icon name="order_attack_player" texture="assets\textures\ui\order\order_attack.tga" height="32" width="32"/>
+  <icon name="order_attackinrange" texture="assets\textures\ui\order\order_attackinrange.tga" height="32" width="32"></icon>
+  <icon name="order_board" texture="assets\textures\ui\order\order_board.tga" height="32" width="32"></icon>
+  <icon name="order_collect" texture="assets\textures\ui\order\order_collect.tga" height="32" width="32"></icon>
+  <icon name="order_collectdeployables" texture="assets\textures\ui\order\order_collect.tga" height="32" width="32"></icon>
+  <icon name="order_collectdropsinradius" texture="assets\textures\ui\order\order_collectdropsinradius.tga" height="32" width="32"></icon>
+  <icon name="order_collectlockbox" texture="assets\textures\ui\order\order_collectlockbox.tga" height="32" width="32"></icon>
+  <icon name="order_crewexchange" texture="assets\textures\ui\order\order_crewexchange.tga" height="32" width="32"></icon>
+  <icon name="order_crewexchangepassive" texture="assets\textures\ui\order\order_crewexchange.tga" height="32" width="32"></icon>
+  <icon name="order_deployobjectatposition" texture="assets\textures\ui\order\order_deployobjectatposition.tga" height="32" width="32"></icon>
+  <icon name="order_deploystaticdefensestrategy" texture="assets\textures\ui\order\order_deployobjectatposition.tga" height="32" width="32"></icon>
+  <icon name="order_deployobjectsatgates" texture="assets\textures\ui\order\order_deployobjectsatgates.tga" height="32" width="32"></icon>
+  <icon name="order_deploytostation" texture="assets\textures\ui\order\order_deploytostation.tga" height="32" width="32"></icon>
+  <icon name="order_depositinventory" texture="assets\textures\ui\order\order_depositinventory.tga" height="32" width="32"></icon>
+  <icon name="order_disitributewares" texture="assets\textures\ui\order\order_disitributewares.tga" height="32" width="32"></icon>
+  <icon name="order_dockandwait" texture="assets\textures\ui\order\order_dockandwait.tga" height="32" width="32"></icon>
+  <icon name="order_dockat" texture="assets\textures\ui\order\order_dockat.tga" height="32" width="32"></icon>
+  <icon name="order_equip" texture="assets\textures\ui\order\order_equip.tga" height="32" width="32"></icon>
+  <icon name="order_escort" texture="assets\textures\ui\order\order_escort.tga" height="32" width="32"></icon>
+  <icon name="order_explore" texture="assets\textures\ui\order\order_explore.tga" height="32" width="32"></icon>
+  <icon name="order_exploreupdate" texture="assets\textures\ui\order\order_exploreupdate.tga" height="32" width="32"></icon>
+  <icon name="order_findbuildtasks" texture="assets\textures\ui\order\order_findbuildtasks.tga" height="32" width="32"></icon>
+  <icon name="order_flee" texture="assets\textures\ui\order\order_flee.tga" height="32" width="32"></icon>
+  <icon name="order_follow" texture="assets\textures\ui\order\order_follow.tga" height="32" width="32"></icon>
+  <icon name="order_getsupplies" texture="assets\textures\ui\order\order_getsupplies.tga" height="32" width="32"></icon>
+  <icon name="order_intersectordefence" texture="assets\textures\ui\order\order_intersectordefence.tga" height="128" width="128"></icon>
+  <icon name="order_lasertower" texture="assets\textures\ui\order\order_lasertower.tga" height="32" width="32"></icon>
+  <icon name="order_middleman" texture="assets\textures\ui\order\order_traderoutine.tga" height="32" width="32"/>
+  <icon name="order_miningplayer" texture="assets\textures\ui\order\order_miningplayer.tga" height="32" width="32"></icon>
+  <icon name="order_miningcollect" texture="assets\textures\ui\order\order_miningcollect.tga" height="32" width="32"></icon>
+  <icon name="order_miningroutine" texture="assets\textures\ui\order\order_miningroutine.tga" height="32" width="32"></icon>
+  <icon name="order_miningroutine_basic" texture="assets\textures\ui\order\order_miningroutine_basic.tga" height="32" width="32"/>
+  <icon name="order_miningroutine_advanced" texture="assets\textures\ui\order\order_miningroutine_advanced.tga" height="32" width="32"/>
+  <icon name="order_miningroutine_expert" texture="assets\textures\ui\order\order_miningroutine_expert.tga" height="32" width="32"/>
+  <icon name="order_miningroutine_manual" texture="assets\textures\ui\order\order_miningroutine_manual.tga" height="32" width="32"/>
+  <icon name="order_moveandwait" texture="assets\textures\ui\order\order_moveandwait.tga" height="32" width="32"></icon>
+  <icon name="order_movedie" texture="assets\textures\ui\order\order_movedie.tga" height="32" width="32"></icon>
+  <icon name="order_moveflightbehaviour" texture="assets\textures\ui\order\order_movewait.tga" height="32" width="32"/>
+  <icon name="order_movegeneric" texture="assets\textures\ui\order\order_movewait.tga" height="32" width="32"></icon>
+  <icon name="order_moveracecheckpoints" texture="assets\textures\ui\order\order_movewait.tga" height="32" width="32"/>
+  <icon name="order_movetaxi" texture="assets\textures\ui\order\order_movetaxi.tga" height="32" width="32"></icon>
+  <icon name="order_movetoobject" texture="assets\textures\ui\order\order_movetoobject.tga" height="32" width="32"></icon>
+  <icon name="order_movetoplanet" texture="assets\textures\ui\order\order_movetoplanet.tga" height="32" width="32"></icon>
+  <icon name="order_movewait" texture="assets\textures\ui\order\order_movewait.tga" height="32" width="32"></icon>
+  <icon name="order_patrol" texture="assets\textures\ui\order\order_patrol.tga" height="32" width="32"></icon>
+  <icon name="order_playerattack" texture="assets\textures\ui\order\order_playerattack.tga" height="32" width="32"></icon>
+  <icon name="order_player_docktotrade" texture="assets\textures\ui\order\order_playerdocktotrade.tga" height="32" width="32"></icon>
+  <icon name="order_plunder" texture="assets\textures\ui\order\order_plunder.tga" height="32" width="32"></icon>
+  <icon name="order_police" texture="assets\textures\ui\order\order_patrol.tga" height="32" width="32"></icon>
+  <icon name="order_protectposition" texture="assets\textures\ui\order\order_protectposition.tga" height="32" width="32"></icon>
+  <icon name="order_protectship" texture="assets\textures\ui\order\order_protectship.tga" height="32" width="32"></icon>
+  <icon name="order_protectstation" texture="assets\textures\ui\order\order_protectstation.tga" height="32" width="32"></icon>
+  <icon name="order_recallsubordinates" texture="assets\textures\ui\order\order_recallsubordinates.tga" height="32" width="32"></icon>
+  <icon name="order_recon" texture="assets\textures\ui\order\order_recon.tga" height="32" width="32"></icon>
+  <icon name="order_recycle" texture="assets\textures\ui\order\order_recycle.tga" height="32" width="32"></icon>
+  <icon name="order_recycledefault" texture="assets\textures\ui\order\order_recycle.tga" height="32" width="32"/>
+  <icon name="order_repair" texture="assets\textures\ui\order\order_repair.tga" height="32" width="32"></icon>
+  <icon name="order_rescueinrange" texture="assets\textures\ui\order\order_rescueinrange.tga" height="32" width="32"></icon>
+  <icon name="order_rescueship" texture="assets\textures\ui\order\order_rescueship.tga" height="32" width="32"></icon>
+  <icon name="order_restocksubordinates" texture="assets\textures\ui\order\order_restocksubordinates.tga" height="32" width="32"></icon>
+  <icon name="order_resupply" texture="assets\textures\ui\order\order_resupply.tga" height="32" width="32"></icon>
+  <icon name="order_search" texture="assets\textures\ui\order\order_search.tga" height="32" width="32"></icon>
+  <icon name="order_salvagecollect" texture="assets\textures\ui\order\order_salvagecollect.tga" height="32" width="32"></icon>
+  <icon name="order_salvagecrush" texture="assets\textures\ui\order\order_salvagecrush.tga" height="32" width="32"></icon>
+  <icon name="order_salvagedeliver" texture="assets\textures\ui\order\order_salvagedeliver.tga" height="32" width="32"></icon>
+  <icon name="order_salvagedeliver_notrade" texture="assets\textures\ui\order\order_salvagedeliver.tga" height="32" width="32"/>
+  <icon name="order_salvageinradius" texture="assets\textures\ui\order\order_salvageinradius.tga" height="32" width="32"></icon>
+  <icon name="order_salvageroutine" texture="assets\textures\ui\order\order_salvageroutine.tga" height="32" width="32"></icon>
+  <icon name="order_singlebuy" texture="assets\textures\ui\order\order_singlebuy.tga" height="32" width="32"></icon>
+  <icon name="order_singlesell" texture="assets\textures\ui\order\order_singlesell.tga" height="32" width="32"></icon>
+  <icon name="order_supplyfleet" texture="assets\textures\ui\order\order_supplyfleet.tga" height="32" width="32"></icon>
+  <icon name="order_syncpoint" texture="assets\textures\ui\order\order_syncpoint.tga" height="128" width="128"></icon>
+  <icon name="order_tacticalorder" texture="assets\textures\ui\order\order_tacticalorder.tga" height="32" width="32"></icon>
+  <icon name="order_tradeexchange" texture="assets\textures\ui\order\order_tradeexchange.tga" height="32" width="32"></icon>
+  <icon name="order_tradeexchangenonship" texture="assets\textures\ui\order\order_tradeexchangenonship.tga" height="32" width="32"></icon>
+  <icon name="order_tradeexchangepassive" texture="assets\textures\ui\order\order_tradeexchangepassive.tga" height="32" width="32"></icon>
+  <icon name="order_tradeperform" texture="assets\textures\ui\order\order_tradeperform.tga" height="32" width="32"></icon>
+  <icon name="order_transferworkers" texture="assets\textures\ui\order\order_transferworkers.tga" height="32" width="32"></icon>
+  <icon name="order_transferworkersroutine" texture="assets\textures\ui\order\order_transferworkersroutine.tga" height="32" width="32"></icon>
+  <icon name="order_traderoutine" texture="assets\textures\ui\order\order_traderoutine.tga" height="32" width="32"></icon>
+  <icon name="order_traderoutine_basic" texture="assets\textures\ui\order\order_traderoutine_basic.tga" height="32" width="32"/>
+  <icon name="order_traderoutine_advanced" texture="assets\textures\ui\order\order_traderoutine_advanced.tga" height="32" width="32"/>
+  <icon name="order_traderoutine_manual" texture="assets\textures\ui\order\order_traderoutine_manual.tga" height="32" width="32"/>
+  <icon name="order_undock" texture="assets\textures\ui\order\order_undock.tga" height="32" width="32"></icon>
+  <icon name="order_visitstations" texture="assets\textures\ui\order\order_visitstations.tga" height="32" width="32"></icon>
+  <icon name="order_wait" texture="assets\textures\ui\order\order_wait.tga" height="32" width="32"></icon>
+  <icon name="order_waitforsignal" texture="assets\textures\ui\order\order_waitforsignal.tga" height="32" width="32"></icon>
+  <icon name="order_waitforventure" texture="assets\textures\ui\order\order_waitforventure.tga" height="32" width="32"></icon>
+
+  <!-- dummy icons used in quick menu -->
+  <icon name="dummy_seta" texture="assets\textures\ui\drone_abilities\da_seta.tga" height="128" width="128"></icon>
+  <icon name="dummy_zonemap" texture="assets\textures\ui\drone_abilities\da_zonemap.tga" height="128" width="128"></icon>
+
+  <!--encyclopedia system pictures-->
+  <icon name="enc_cluster01" texture="assets\textures\ui\encyclopedia\systems\cluster_01_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster02" texture="assets\textures\ui\encyclopedia\systems\cluster_02_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster03" texture="assets\textures\ui\encyclopedia\systems\cluster_03_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster04" texture="assets\textures\ui\encyclopedia\systems\cluster_04_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster04_s2" texture="assets\textures\ui\encyclopedia\systems\cluster_04_s2_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster05" texture="assets\textures\ui\encyclopedia\systems\cluster_05_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster06" texture="assets\textures\ui\encyclopedia\systems\cluster_06_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster07" texture="assets\textures\ui\encyclopedia\systems\cluster_07_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster08" texture="assets\textures\ui\encyclopedia\systems\cluster_08_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster09" texture="assets\textures\ui\encyclopedia\systems\cluster_09_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster10" texture="assets\textures\ui\encyclopedia\systems\cluster_10_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster11" texture="assets\textures\ui\encyclopedia\systems\cluster_11_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster12" texture="assets\textures\ui\encyclopedia\systems\cluster_12_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster13" texture="assets\textures\ui\encyclopedia\systems\cluster_13_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster14" texture="assets\textures\ui\encyclopedia\systems\cluster_14_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster15" texture="assets\textures\ui\encyclopedia\systems\cluster_15_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster16" texture="assets\textures\ui\encyclopedia\systems\cluster_16_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster17" texture="assets\textures\ui\encyclopedia\systems\cluster_17_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster18" texture="assets\textures\ui\encyclopedia\systems\cluster_18_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster19" texture="assets\textures\ui\encyclopedia\systems\cluster_19_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster20" texture="assets\textures\ui\encyclopedia\systems\cluster_20_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster21" texture="assets\textures\ui\encyclopedia\systems\cluster_21_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster22" texture="assets\textures\ui\encyclopedia\systems\cluster_22_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster23" texture="assets\textures\ui\encyclopedia\systems\cluster_23_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster24" texture="assets\textures\ui\encyclopedia\systems\cluster_24_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster25" texture="assets\textures\ui\encyclopedia\systems\cluster_25_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster26" texture="assets\textures\ui\encyclopedia\systems\cluster_26_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster27" texture="assets\textures\ui\encyclopedia\systems\cluster_27_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster28" texture="assets\textures\ui\encyclopedia\systems\cluster_28_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster29" texture="assets\textures\ui\encyclopedia\systems\cluster_29_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster30" texture="assets\textures\ui\encyclopedia\systems\cluster_30_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster31" texture="assets\textures\ui\encyclopedia\systems\cluster_31_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster32" texture="assets\textures\ui\encyclopedia\systems\cluster_32_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster33" texture="assets\textures\ui\encyclopedia\systems\cluster_33_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster34" texture="assets\textures\ui\encyclopedia\systems\cluster_34_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster35" texture="assets\textures\ui\encyclopedia\systems\cluster_35_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster36" texture="assets\textures\ui\encyclopedia\systems\cluster_36_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster37" texture="assets\textures\ui\encyclopedia\systems\cluster_37_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster38" texture="assets\textures\ui\encyclopedia\systems\cluster_38_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster39" texture="assets\textures\ui\encyclopedia\systems\cluster_39_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster40" texture="assets\textures\ui\encyclopedia\systems\cluster_40_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster41" texture="assets\textures\ui\encyclopedia\systems\cluster_41_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster42" texture="assets\textures\ui\encyclopedia\systems\cluster_42_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster43" texture="assets\textures\ui\encyclopedia\systems\cluster_43_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster44" texture="assets\textures\ui\encyclopedia\systems\cluster_44_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster45" texture="assets\textures\ui\encyclopedia\systems\cluster_45_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster46" texture="assets\textures\ui\encyclopedia\systems\cluster_46_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster47" texture="assets\textures\ui\encyclopedia\systems\cluster_47_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster48" texture="assets\textures\ui\encyclopedia\systems\cluster_48_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster49" texture="assets\textures\ui\encyclopedia\systems\cluster_49_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster50" texture="assets\textures\ui\encyclopedia\systems\cluster_50_diff.tga" width="960" height="600" ></icon>
+
+  <icon name="enc_cluster709" texture="assets\textures\ui\encyclopedia\systems\cluster_709_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster710" texture="assets\textures\ui\encyclopedia\systems\cluster_710_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster711" texture="assets\textures\ui\encyclopedia\systems\cluster_711_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster712" texture="assets\textures\ui\encyclopedia\systems\cluster_712_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster713" texture="assets\textures\ui\encyclopedia\systems\cluster_713_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster714" texture="assets\textures\ui\encyclopedia\systems\cluster_714_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster715" texture="assets\textures\ui\encyclopedia\systems\cluster_715_diff.tga" width="960" height="600" ></icon>
+
+  <icon name="enc_cluster720" texture="assets\textures\ui\encyclopedia\systems\cluster_720_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster721" texture="assets\textures\ui\encyclopedia\systems\cluster_721_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster722" texture="assets\textures\ui\encyclopedia\systems\cluster_722_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster723" texture="assets\textures\ui\encyclopedia\systems\cluster_723_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster724" texture="assets\textures\ui\encyclopedia\systems\cluster_724_diff.tga" width="960" height="600" ></icon>
+  <icon name="enc_cluster725" texture="assets\textures\ui\encyclopedia\systems\cluster_725_diff.tga" width="960" height="600" ></icon>
+
+  <!--terraforming icons-->
+  <icon name="terraforming_arrow_down" texture="assets\textures\ui\terraforming\terraforming_arrow_down.tga" height="128" width="128"></icon>
+  <icon name="terraforming_arrow_up" texture="assets\textures\ui\terraforming\terraforming_arrow_up.tga" height="128" width="128"></icon>
+  <icon name="terraforming_block_empty" texture="assets\textures\ui\terraforming\terraforming_block_empty.tga" height="128" width="128"></icon>
+  <icon name="terraforming_block_full" texture="assets\textures\ui\terraforming\terraforming_block_full.tga" height="128" width="128"></icon>
+  <icon name="terraforming_carbondioxide" texture="assets\textures\ui\terraforming\terraforming_carbondioxide.tga" height="128" width="128" textheightpercent="150"></icon>
+  <icon name="terraforming_humidity" texture="assets\textures\ui\terraforming\terraforming_humidity.tga" height="128" width="128" textheightpercent="150"></icon>
+  <icon name="terraforming_methane" texture="assets\textures\ui\terraforming\terraforming_methane.tga" height="128" width="128" textheightpercent="150"></icon>
+  <icon name="terraforming_oxygen" texture="assets\textures\ui\terraforming\terraforming_oxygen.tga" height="128" width="128" textheightpercent="150"></icon>
+  <icon name="terraforming_population" texture="assets\textures\ui\terraforming\terraforming_population.tga" height="128" width="128" textheightpercent="150"></icon>
+  <icon name="terraforming_pressure" texture="assets\textures\ui\terraforming\terraforming_pressure.tga" height="128" width="128" textheightpercent="150"></icon>
+  <icon name="terraforming_radioactivity" texture="assets\textures\ui\terraforming\terraforming_radioactivity.tga" height="128" width="128" textheightpercent="150"></icon>
+  <icon name="terraforming_salinity" texture="assets\textures\ui\terraforming\terraforming_salinity.tga" height="128" width="128" textheightpercent="150"></icon>
+  <icon name="terraforming_seismicactivity" texture="assets\textures\ui\terraforming\terraforming_seismicactivity.tga" height="128" width="128" textheightpercent="150"></icon>
+  <icon name="terraforming_temperature" texture="assets\textures\ui\terraforming\terraforming_temperature.tga" height="128" width="128" textheightpercent="150"></icon>
+  <icon name="terraforming_toxicity" texture="assets\textures\ui\terraforming\terraforming_toxicity.tga" height="128" width="128" textheightpercent="150"></icon>
+  <icon name="terraforming_xen_alert" texture="assets\textures\ui\terraforming\terraforming_xen_alert.tga" height="128" width="128" textheightpercent="150"></icon>
+  <icon name="terraforming_xen_production" texture="assets\textures\ui\terraforming\terraforming_xen_production.tga" height="128" width="128" textheightpercent="150"></icon>
+
+  <!--chat-->
+  <icon name="gui_chat_background_01" texture="assets\textures\ui\gui_chat_background_01_diff.tga" height="512" width="512"></icon>
+
+  <!-- diplomacy icons -->
+  <icon name="diplomacy_influence" texture="assets\textures\ui\diplomacy\influence.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_license_positive" texture="assets\textures\ui\diplomacy\diplomacy_license_positive.tga" height="64" width="64"></icon>
+  <icon name="diplomacy_license_negative" texture="assets\textures\ui\diplomacy\diplomacy_license_negative.tga" height="64" width="64"></icon>
+  <icon name="diplomacy_faction" texture="assets\textures\ui\gamestarts\gamestart_custom_people.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_arrow" texture="assets\textures\ui\diplomacy\diplomacy_arrow.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_agent_recruit" texture="assets\textures\ui\diplomacy\diplomacy_agent_recruit.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_agent_apprentice" texture="assets\textures\ui\diplomacy\diplomacy_agent_apprentice.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_agent_asset" texture="assets\textures\ui\diplomacy\diplomacy_agent_asset.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_agent_operative" texture="assets\textures\ui\diplomacy\diplomacy_agent_operative.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_agent_handler" texture="assets\textures\ui\diplomacy\diplomacy_agent_handler.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_agent_spymaster" texture="assets\textures\ui\diplomacy\diplomacy_agent_spymaster.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_agent_vacant" texture="assets\textures\ui\diplomacy\diplomacy_agent_vacant.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_agent_locked" texture="assets\textures\ui\diplomacy\diplomacy_agent_locked.tga" height="128" width="128"></icon>
+
+  <icon name="diplomacy_agent_boron" texture="assets\textures\ui\diplomacy\diplomacy_agent_boron.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_human_female" texture="assets\textures\ui\diplomacy\diplomacy_agent_human_female.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_human_male" texture="assets\textures\ui\diplomacy\diplomacy_agent_human_male.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_paranid" texture="assets\textures\ui\diplomacy\diplomacy_agent_paranid.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_split_female" texture="assets\textures\ui\diplomacy\diplomacy_agent_split_female.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_split_male" texture="assets\textures\ui\diplomacy\diplomacy_agent_split_male.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_teladi" texture="assets\textures\ui\diplomacy\diplomacy_agent_teladi.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_locked_portrait" texture="assets\textures\ui\diplomacy\diplomacy_agent_locked_portrait.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_vacant_portrait" texture="assets\textures\ui\diplomacy\diplomacy_agent_vacant_portrait.tga" height="256" width="256"></icon>
+
+  <icon name="diplomacy_agent_boron_bw" texture="assets\textures\ui\diplomacy\diplomacy_agent_boron_bw.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_human_female_bw" texture="assets\textures\ui\diplomacy\diplomacy_agent_human_female_bw.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_human_male_bw" texture="assets\textures\ui\diplomacy\diplomacy_agent_human_male_bw.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_paranid_bw" texture="assets\textures\ui\diplomacy\diplomacy_agent_paranid_bw.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_split_female_bw" texture="assets\textures\ui\diplomacy\diplomacy_agent_split_female_bw.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_split_male_bw" texture="assets\textures\ui\diplomacy\diplomacy_agent_split_male_bw.tga" height="256" width="256"></icon>
+  <icon name="diplomacy_agent_teladi_bw" texture="assets\textures\ui\diplomacy\diplomacy_agent_teladi_bw.tga" height="256" width="256"></icon>
+
+
+
+
+  <icon name="diplomacy_negotiation" texture="assets\textures\ui\diplomacy\diplomacy_negotiation.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_negotiation_cooldown" texture="assets\textures\ui\diplomacy\diplomacy_negotiation_cooldown.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_espionage" texture="assets\textures\ui\diplomacy\diplomacy_espionage.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_espionage_cooldown" texture="assets\textures\ui\diplomacy\diplomacy_espionage_cooldown.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_interference" texture="assets\textures\ui\diplomacy\diplomacy_interference.tga" height="128" width="128"></icon>
+  <icon name="diplomacy_interference_cooldown" texture="assets\textures\ui\diplomacy\diplomacy_interference_cooldown.tga" height="128" width="128"></icon>
+
+  <icon name="diplomacy_banner_alliance" texture="assets\textures\ui\diplomacy\diplomacy_banner_alliance.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_antigone" texture="assets\textures\ui\diplomacy\diplomacy_banner_antigone.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_argon" texture="assets\textures\ui\diplomacy\diplomacy_banner_argon.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_buccaneers" texture="assets\textures\ui\diplomacy\diplomacy_banner_buccaneers.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_hatikvah" texture="assets\textures\ui\diplomacy\diplomacy_banner_hatikvah.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_holyorder" texture="assets\textures\ui\diplomacy\diplomacy_banner_holyorder.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_khaak" texture="assets\textures\ui\diplomacy\diplomacy_banner_khaak.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_ministry" texture="assets\textures\ui\diplomacy\diplomacy_banner_ministry.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_paranid" texture="assets\textures\ui\diplomacy\diplomacy_banner_paranid.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_scaleplate" texture="assets\textures\ui\diplomacy\diplomacy_banner_scaleplate.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_teladi" texture="assets\textures\ui\diplomacy\diplomacy_banner_teladi.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_trinity" texture="assets\textures\ui\diplomacy\diplomacy_banner_trinity.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_xenon" texture="assets\textures\ui\diplomacy\diplomacy_banner_xenon.png" height="960" width="128"></icon>
+
+  <icon name="diplomacy_banner_ally" texture="assets\textures\ui\diplomacy\diplomacy_banner_ally.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_friend" texture="assets\textures\ui\diplomacy\diplomacy_banner_friend.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_neutral" texture="assets\textures\ui\diplomacy\diplomacy_banner_neutral.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_enemy" texture="assets\textures\ui\diplomacy\diplomacy_banner_enemy.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_hostile" texture="assets\textures\ui\diplomacy\diplomacy_banner_hostile.png" height="960" width="128"></icon>
+
+  <icon name="diplomacy_banner_gatherinfluence" texture="assets\textures\ui\diplomacy\diplomacy_banner_gatherinfluence.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_improverelations" texture="assets\textures\ui\diplomacy\diplomacy_banner_improverelations.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_armistice" texture="assets\textures\ui\diplomacy\diplomacy_banner_armistice.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_assignagent" texture="assets\textures\ui\diplomacy\diplomacy_banner_assignagent.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_negotiatediscount" texture="assets\textures\ui\diplomacy\diplomacy_banner_negotiatediscount.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_declarewar" texture="assets\textures\ui\diplomacy\diplomacy_banner_declarewar.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_buildnetwork" texture="assets\textures\ui\diplomacy\diplomacy_banner_buildnetwork.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_stealblueprint" texture="assets\textures\ui\diplomacy\diplomacy_banner_stealblueprint.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_spypship" texture="assets\textures\ui\diplomacy\diplomacy_banner_spypship.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_aquireinventory" texture="assets\textures\ui\diplomacy\diplomacy_banner_aquireinventory.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_interference" texture="assets\textures\ui\diplomacy\diplomacy_banner_interference.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_protocolnull" texture="assets\textures\ui\diplomacy\diplomacy_banner_protocolnull.png" height="960" width="128"></icon>
+  <icon name="diplomacy_banner_factionlogic031" texture="assets\textures\ui\diplomacy\diplomacy_banner_factionlogic031.png" height="960" width="128"></icon>
+
+  <!--ship stance-->
+  <icon name="stance_cloak" texture="assets\textures\ui\menu\menu_stance_cloak.tga" height="128" width="128"></icon>
+  <icon name="stance_neutral" texture="assets\textures\ui\menu\menu_stance_neutral.tga" height="128" width="128"></icon>
+
+</icons>

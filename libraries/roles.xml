@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<roles>
+  <role id="service" name="{20208,20101}" femalename="{20208,20102}" pluralname="{20208,20103}" description="{20208,20104}" tag="service" hired="true" type="crowd" icon="engineer">
+    <skills>
+      <skill ref="engineering" relevance="75" />
+      <skill ref="morale" relevance="25" />
+    </skills>
+    <tiers>
+      <tier name="{20208,50101}" level="0" />
+      <tier name="{20208,50201}" level="25" />
+      <tier name="{20208,50301}" level="80" />
+    </tiers>
+  </role>
+  <role id="marine" name="{20208,20201}" femalename="{20208,20202}" pluralname="{20208,20203}" description="{20208,20204}" tag="marine" hired="true" type="crowd" icon="marineofficer">
+    <skills>
+      <skill ref="boarding" relevance="90" />
+      <skill ref="morale" relevance="10" />
+    </skills>
+    <tiers>
+      <tier name="{20208,50401}" level="0"/>
+      <tier name="{20208,50501}" level="25"/>
+      <tier name="{20208,50601}" level="80"/>
+    </tiers>
+  </role>
+  <role id="passenger" name="{20208,20301}" femalename="{20208,20302}" pluralname="{20208,20303}" description="{20208,20304}" tag="passenger" type="crowd" icon="pilot" independent="true" />
+  <role id="prisoner" name="{20208,20401}" femalename="{20208,20402}" pluralname="{20208,20403}" description="{20208,20404}" tag="prisoner" type="crowd" icon="pilot" independent="true" />
+  <role id="trainee_group" name="{20208,20501}" femalename="{20208,20502}" pluralname="{20208,20503}" description="{20208,20504}" tag="training" type="crowd" icon="pilot" independent="true" />
+  <role id="worker" name="{20208,20701}" femalename="{20208,20702}" pluralname="{20208,20703}" description="{20208,20704}" tag="transit" type="crowd" icon="pilot" independent="true" />
+  <role id="unassigned" name="{20208,20901}" femalename="{20208,20902}" pluralname="{20208,20903}" description="{20208,20904}" tag="unassigned" type="crowd" icon="pilot"/>
+</roles>

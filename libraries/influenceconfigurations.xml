@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<influencelistconfigurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="influenceconfigurations.xsd">
+  <!--Other influences-->
+
+  <influencelist id="emp_missile" name="{20230,2001}" description="{20230,2002}">
+    <influences>
+      <influence type="disableboost">
+        <profile type="continuous" duration="30" />
+      </influence>
+      <influence type="disabletravel">
+        <profile type="continuous" duration="30" />
+      </influence>
+    </influences>
+  </influencelist>
+
+  <influencelist id="region_travel_disrupt" name="{20230,2005}" description="{20230,2006}">
+    <influences classes="ship">
+      <influence type="disabletravel">
+        <profile type="continuous" duration="10" />
+      </influence>
+    </influences>
+  </influencelist>
+
+  <influencelist id="recharge_oxygen">
+    <influences classes="spacesuit">
+      <influence type="chargeoxygen">
+        <profile type="continuous" startvalue="25" duration="1" />
+      </influence>
+    </influences>
+  </influencelist>
+
+  <influencelist id="damage_radiation_slow">
+    <influences>
+      <influence type="hullshielddamage">
+        <profile type="continuous" startvalue="0.01" duration="1" />
+      </influence>
+    </influences>
+  </influencelist>
+
+  <influencelist id="test_speed">
+    <influences classes="ship">
+      <influence type="disableboost">
+        <profile type="continuous" duration="5"/>
+      </influence>
+      <influence type="maxforwardspeed">
+        <profile type="envelope" delay="3" sustainvalue="0.0" sustainduration="2"/>
+      </influence>
+      <influence type="maxreversespeed">
+        <profile type="envelope" delay="3" sustainvalue="0.0" sustainduration="2"/>
+      </influence>
+    </influences>
+  </influencelist>
+
+  <influencelist id="test_accel">
+    <influences classes="ship">
+      <influence type="disableboost">
+        <profile type="continuous" duration="8"/>
+      </influence>
+      <influence type="forwardacceleration">
+        <profile type="envelope" sustainvalue="0.0" sustainduration="8"/>
+      </influence>
+      <influence type="reverseacceleration">
+        <profile type="envelope" sustainvalue="0.0" sustainduration="8"/>
+      </influence>
+    </influences>
+  </influencelist>
+
+  <influencelist id="test_steering">
+    <influences classes="ship">
+      <!--<influence type="steeringacceleration">-->
+      <influence type="maxsteeringspeed">
+        <profile type="envelope" sustainvalue="0.0" sustainduration="5"/>
+      </influence>
+    </influences>
+  </influencelist>
+
+  <!--Some examples-->
+
+  <!--<influencelist id="full_example" name="{1234,567890}" description="{1234,567891}" icon="be_ability_emp">
+    <influences classes="ship_l ship_xl">
+      <influence type="disabletravel">
+        <profile type="continuous" duration="10" />
+      </influence>
+    </influences>
+    <influences classes="ship">
+      <influence type="disableboost">
+        <profile type="continuous" duration="30" />
+      </influence>
+      <influence type="disabletravel">
+        <profile type="continuous" duration="60" />
+      </influence>
+    </influences>
+  </influencelist>-->
+
+  <!--<influencelist id="regular_damage_example">
+    <influences>
+      <influence type="shieldhulldamage">
+        <profile type="ticking" startvalue="75" />
+      </influence>
+    </influences>
+  </influencelist>-->
+
+  <!--<influencelist id="hull_only_damage_example">
+    <influences>
+      <influence type="hulldamage">
+        <profile type="ticking" startvalue="25" />
+      </influence>
+    </influences>
+  </influencelist>-->
+
+  <!--<influencelist id="ticking_damage_over_time_example">
+    <influences>
+      <influence type="shieldhulldamage">
+        <profile type="ticking" startvalue="25" delay="1" amount="5" />
+      </influence>
+    </influences>
+  </influencelist>-->
+
+  <!--<influencelist id="continuous_damage_over_time_example">
+    <influences>
+      <influence type="shieldhulldamage">
+        <profile type="continuous" startvalue="125" duration="5" />
+      </influence>
+    </influences>
+  </influencelist>-->
+
+  <!--<influencelist id="damage_shield_and_slow_down_example">
+    <influences>
+      <influence type="shielddamage">
+        <profile type="ticking" startvalue="150" />
+      </influence>
+      <influence type="maxforwardspeed">
+        <profile type="envelope" startvalue="1" sustainvalue="0.25" endvalue="1" attackduration="0.5" sustainduration="1.5" releaseduration="1.0" />
+      </influence>
+      <influence type="maxstrafespeed">
+        <profile type="envelope" startvalue="1" sustainvalue="0.25" endvalue="1" attackduration="0.5" sustainduration="1.5" releaseduration="1.0" />
+      </influence>
+      <influence type="maxsteeringspeed">
+        <profile type="envelope" startvalue="1" sustainvalue="0.25" endvalue="1" attackduration="0.5" sustainduration="1.5" releaseduration="1.0" />
+      </influence>
+    </influences>
+  </influencelist>-->
+
+  <!--<influencelist id="booster_example">
+    <influences>
+      -->
+  <!--increase max forward, reduce strafing and steering speeds and accelerations-->
+  <!--
+      <influence type="maxforwardspeed">
+        <profile type="envelope" startvalue="1" sustainvalue="4" endvalue="1" attackduration="1.0" sustainduration="4.0" releaseduration="2.0" />
+      </influence>
+      <influence type="maxstrafespeed">
+        <profile type="envelope" startvalue="1" sustainvalue="0.25" endvalue="1" attackduration="1.0" sustainduration="4.0" releaseduration="2.0" />
+      </influence>
+      <influence type="maxsteeringspeed">
+        <profile type="envelope" startvalue="1" sustainvalue="0.25" endvalue="1" attackduration="1.0" sustainduration="4.0" releaseduration="2.0" />
+      </influence>
+      <influence type="forwardacceleration">
+        <profile type="envelope" startvalue="1" sustainvalue="4" endvalue="1" attackduration="1.0" sustainduration="4.0" releaseduration="2.0" />
+      </influence>
+      <influence type="strafeacceleration">
+        <profile type="envelope" startvalue="1" sustainvalue="0.25" endvalue="1" attackduration="1.0" sustainduration="4.0" releaseduration="2.0" />
+      </influence>
+      <influence type="steeringacceleration">
+        <profile type="envelope" startvalue="1" sustainvalue="0.25" endvalue="1" attackduration="1.0" sustainduration="4.0" releaseduration="2.0" />
+      </influence>
+    </influences>
+  </influencelist>-->
+
+</influencelistconfigurations>

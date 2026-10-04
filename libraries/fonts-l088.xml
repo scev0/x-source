@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ?xml-stylesheet href="races.xsl" type="text/xsl" ? -->
+<fonts>
+  <!-- shared font definitions -->
+  <font name="jfont">
+    <fontsize size="32" yoffset="1" />
+  </font>
+  <font name="csfont">
+    <fontsize size="32" yoffset="6" />
+  </font>
+  <font name="ctfont">
+    <fontsize size="32" yoffset="6" />
+  </font>
+  <font name="kofont">
+    <fontsize size="32" yoffset="6" />
+  </font>
+  <!-- language specific font definitions -->
+  <font name="ctfont Bold">
+    <fontsize size="32" yoffset="6" />
+  </font>
+  <font name="Stars">
+    <fontsize size="32" yoffset="0" />
+  </font>
+    <font name="Terrakana">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="Terrakana Bold">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="Boki">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="Boki Bold">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="DejaVu Sans Mono Outlined">
+    <fontsize size="8" yoffset="0" />
+  </font>
+  <alias name="large" ref="ctfont" />
+  <alias name="default" ref="ctfont" />
+  <alias name="holomap" ref="ctfont" material="ctfont outlined" />
+  <alias name="holomap fixed" ref="ctfont" material="ctfont outlined" fixedwidth="true" />
+  <alias name="holomap bold" ref="ctfont Bold" material="ctfont outlined" />
+  <alias name="holomap bold fixed" ref="ctfont Bold" material="ctfont outlined" fixedwidth="true" />
+  <alias name="Zekton" ref="ctfont" />
+  <alias name="Zekton Bold" ref="ctfont Bold" />
+  <alias name="Zekton fixed" ref="ctfont" fixedwidth="true" />
+  <alias name="Zekton Bold fixed" ref="ctfont Bold" fixedwidth="true" />
+  <alias name="Zekton Outlined" ref="ctfont" material="ctfont outlined" />
+  <alias name="Zekton Bold Outlined" ref="ctfont Bold" material="ctfont bold outlined" />
+  <alias name="debug" ref="DejaVu Sans Mono Outlined" />
+</fonts>

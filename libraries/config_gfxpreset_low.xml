@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <!-- graphic options -->
+  <!-- low gfx preset -->
+  <shaderquality>0</shaderquality>
+  <shadows>1</shadows>
+  <softshadows>false</softshadows>
+  <ssao>0</ssao>
+  <glow>0</glow>
+  <uiglow>0</uiglow>
+  <uiglowintensity>0.75</uiglowintensity>
+  <lodfactor>0.15</lodfactor>
+  <effectdistance>0.15</effectdistance>
+  <distortion>false</distortion>
+  <disableradar>false</disableradar>
+  <radarquality>0</radarquality>
+  <ssr>false</ssr>
+  <ssrquality>low</ssrquality>
+  <texturequality>low</texturequality>
+  <chromaticaberration>false</chromaticaberration>
+  <volumetric>0</volumetric>
+  <pom>low</pom>
+  <envmapprobes>none</envmapprobes>
+</root>

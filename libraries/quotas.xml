@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Set loadmacros to true to force macros to be loaded, even in an empty universe. If false, there will be no error message in case of a typo. -->
+<quotas loadmacros="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quotas.xsd">
+
+  <!-- Galaxy-wide offer settings that can be overridden/restricted for specific spaces. -->
+  <!-- Global default weight = 0, global default limit = none. Defaults for specific spaces are derived from parent nodes. -->
+  <offers zonelimit="10">
+    <offer type="trade" weight="100"/>
+    <offer type="fight" weight="100"/>
+    <offer type="build" weight="100"/>
+    <offer type="think" weight="100"/>
+    <offer type="other" weight="100"/>
+    <offer type="board" weight="100"/>
+    <offer type="deliver" weight="100"/>
+    <offer type="destroy" weight="100"/>
+    <offer type="drop" weight="100"/>
+    <offer type="escort" weight="100"/>
+    <offer type="explore" weight="100"/>
+    <offer type="find" weight="100"/>
+    <offer type="follow" weight="100"/>
+    <offer type="hack" weight="100"/>
+    <offer type="kill" weight="100"/>
+    <offer type="patrol" weight="100"/>
+    <offer type="pickup" weight="100"/>
+    <offer type="protect" weight="100"/>
+    <offer type="race" weight="100"/>
+    <offer type="repair" weight="100"/>
+    <offer type="restock" weight="100"/>
+    <offer type="scan" weight="100"/>
+    <offer type="talkto" weight="100"/>
+    <offer type="transport" weight="100"/>
+    <offer type="intelligence" weight="100"/>
+    <offer type="military" weight="100"/>
+    <offer type="police" weight="100"/>
+  </offers>
+
+  <!-- EXAMPLES
+  <cluster macro="Cluster_A_macro">
+    <offers zonelimit="15">
+      <offer type="build" zonelimit="0"/>
+    </offers>
+
+    <sector macro="Cluster_A_Sector02_macro">
+      <offers>
+        <offer type="build" weight="200" zonelimit="1"/>
+        <offer type="think" zonelimit="1"/>
+      </offers>
+
+      <zone macro="tzoneCluster_A_Sector02_Zone01_macro">
+        <offers zonelimit="0"/>
+      </zone>
+    </sector>
+  </cluster>
+
+  <sector macro="Cluster_B_Sector07_macro">
+    <offers>
+      <offer type="trade" weight="30"/>
+    </offers>
+  </sector>
+  -->
+</quotas>

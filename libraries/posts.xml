@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<posts>
+  <post id="playerpilot" name="{20208,30101}" femalename="{20208,30102}" description="{20208,30103}" icon="pilot" player="true" tag="player" control="playercontrol">
+    <skills>
+      <!-- Assign any skill to make sure the player has a combinedskill value -->
+      <skill ref="piloting" relevance="100" />
+    </skills>
+  </post>
+  <!--TODO @Owen evaluate if aipilot post should remain to have the pilot tag or instead aipilot
+  changing it to aipilot would mean having to add that tag to all pilot connections in assets.
+  As it stands, all character definitions in characters.xml require both pilot and aipilot tags-->
+  <post id="aipilot" name="{20208,30101}" femalename="{20208,30102}" description="{20208,30103}" icon="pilot" type="officer" tag="pilot" control="pilot" task="orders.base">
+    <skills>
+      <skill ref="piloting" relevance="80" />
+      <skill ref="morale" relevance="20" />
+    </skills>
+  </post>
+  <post id="defence" name="{20208,30201}" femalename="{20208,30202}" description="{20208,30203}" icon="defenceofficer" type="officer" computer="true" tag="defence" control="defence">
+    <skills>
+      <skill ref="piloting" relevance="80" />
+      <skill ref="morale" relevance="20" />
+    </skills>
+  </post>
+  <post id="manager" name="{20208,30301}" femalename="{20208,30302}" description="{20208,30303}" icon="manager" type="officer" tag="manager" control="tradenpc">
+    <skills>
+      <skill ref="management" relevance="80" />
+      <skill ref="morale" relevance="20" />
+    </skills>
+  </post>
+  <post id="engineer" name="{20208,30401}" femalename="{20208,30402}" description="{20208,30403}" icon="engineer" type="officer" computer="true" tag="engineer" control="engineer">
+    <skills>
+      <skill ref="engineering" relevance="80" />
+      <skill ref="morale" relevance="20" />
+    </skills>
+  </post>
+  <post id="shadyguy" name="{20208,10801}" femalename="{20208,10802}" description="{20208,10803}" icon="shadyguy" type="shadyguy" tag="shadyguy" control="shadyguy" independent="true" />
+  <post id="shiptrader" name="{20208,30501}" femalename="{20208,30502}" description="{20208,30503}" icon="shipdealer" type="trader" tag="shiptrader" control="shiptrader" />
+  <post id="tradeagent" name="{20208,30601}" femalename="{20208,30602}" description="{20208,30603}" icon="pilot" type="officer" tag="tradeagent" control="tradeagent" />
+  <post id="tradecomputer" name="{20208,30701}" femalename="{20208,30702}" description="{20208,30703}" icon="engineer" type="officer" computer="true" tag="tradecomputer" control="tradecomputer" />
+  <post id="trainee_individual" name="{20208,20601}" femalename="{20208,20602}" description="{20208,20604}" icon="engineer" type="officer" tag="trainee" control="trainee" independent="true" />
+</posts>

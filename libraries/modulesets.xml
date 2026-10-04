@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modulesets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libraries.xsd">
+  <set id="factory" name="{20112,1001}" type="factory" macro="station_gen_factory_base_01_macro" player="true" constructionvesselrequired="true">
+    <race ref="argon"/>
+    <race ref="boron"/>
+    <race ref="split"/>
+    <race ref="paranid"/>
+    <race ref="teladi"/>
+    <race ref="terran"/>
+  </set>
+
+  <set id="piratebase" name="{20112,7001}" type="piratebase" macro="station_gen_piratebase_base_01_macro" player="true" constructionvesselrequired="true">
+    <race ref="argon" />
+    <race ref="teladi" />
+    <race ref="paranid"/>
+  </set>
+
+  <set id="defence_xenon"         name="{20112,5001}" race="xenon"   type="defence"        macro="station_xen_defence_base_01_macro" player="true" constructionvesselrequired="false" />
+  <set id="factory_xenon"         name="{20112,5101}" race="xenon"   type="factory"        macro="station_xen_factory_base_01_macro" player="true" constructionvesselrequired="false" />
+  <set id="shipyard_xenon"        name="{20112,5201}" race="xenon"   type="shipyard"       macro="station_xen_shipyard_base_01_macro" player="true" constructionvesselrequired="false" />
+
+  <set id="tradestation_argon"    name="{20112,2301}" race="argon"   type="tradingstation" macro="station_arg_tradestation_base_01_macro" player="true" constructionvesselrequired="true" />
+
+  <set id="tradestation_paranid"  name="{20112,3301}" race="paranid" type="tradingstation" macro="station_par_tradestation_base_01_macro" player="true" constructionvesselrequired="true" />
+
+  <set id="tradestation_teladi"   name="{20112,4301}" race="teladi"  type="tradingstation" macro="station_tel_tradestation_base_01_macro" player="true" constructionvesselrequired="true" />
+
+  <set id="headquarters_player"   name="{20112,6001}" type="headquarters" macro="station_pla_headquarters_base_01_macro" player="true" constructionvesselrequired="true">
+    <race ref="terran"/>
+    <!-- argon, for spawning the HQ the x4ep1_gamestart_scientist in the god.xml -->
+    <race ref="argon"/>
+    <!-- boron, for spawning the HQ the x4ep1_gamestart_boron2 in the god.xml -->
+    <race ref="boron"/>
+  </set>
+</modulesets>

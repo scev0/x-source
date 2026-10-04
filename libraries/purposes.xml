@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<purposes>
+  <purpose id="trade" name="{20213,200}">
+    <class ref="ship_xs" icon="ship_xs_trade_01" />
+    <class ref="ship_s" icon="ship_s_trade_01" />
+    <class ref="ship_m" icon="ship_m_trade_01" />
+    <class ref="ship_l" icon="ship_l_trade_01" />
+    <class ref="ship_xl" icon="ship_xl_trade_01" />
+  </purpose>
+  <purpose id="fight" name="{20213,300}">
+    <class ref="ship_xs" icon="ship_xs_fight_01" />
+    <class ref="ship_s" icon="ship_s_fight_01" />
+    <class ref="ship_m" icon="ship_m_fight_01" />
+    <class ref="ship_l" icon="ship_l_fight_01" />
+    <class ref="ship_xl" icon="ship_xl_fight_01" />
+  </purpose>
+  <purpose id="build" name="{20213,400}">
+    <class ref="ship_xs" icon="ship_xs_build_01" />
+    <class ref="ship_xl" icon="ship_xl_build_01" />
+  </purpose>
+  <purpose id="mine" name="{20213,500}">
+    <class ref="ship_xs" icon="ship_xs_mine_01" />
+    <class ref="ship_s" icon="ship_s_mine_01" />
+    <class ref="ship_m" icon="ship_m_mine_01" />
+    <class ref="ship_l" icon="ship_l_mine_01" />
+    <class ref="ship_xl" icon="ship_xl_mine_01" />
+  </purpose>
+  <purpose id="hack" name="{20213,600}"/>
+  <purpose id="scan" name="{20213,700}"/>
+  <purpose id="production" name="{20213,800}"/>
+  <purpose id="storage" name="{20213,900}"/>
+  <purpose id="connection" name="{20213,1000}"/>
+  <purpose id="habitation" name="{20213,1100}"/>
+  <purpose id="defence" name="{20213,1200}"/>
+  <purpose id="docking" name="{20213,1300}"/>
+  <purpose id="venture" name="{20213,1400}"/>
+  <purpose id="auxiliary" name="{20213,1500}">
+    <class ref="ship_xs" icon="ship_xs_auxiliary_01" />
+    <class ref="ship_s" icon="ship_s_auxiliary_01" />
+    <class ref="ship_m" icon="ship_m_auxiliary_01" />
+    <class ref="ship_l" icon="ship_l_auxiliary_01" />
+    <class ref="ship_xl" icon="ship_xl_auxiliary_01" />
+  </purpose>
+  <purpose id="welfare" name="{20213,1600}"/>
+  <purpose id="processing" name="{20213,1700}"/>
+  <purpose id="salvage" name="{20213,1800}"/>
+  <purpose id="dismantling" name="{20213,1900}"/>
+  <purpose id="racing" name="{20213,2000}"/>
+  <purpose id="rig" name="{20213,2100}"/>
+  <purpose id="radar" name="{20213,2200}"/>
+</purposes>

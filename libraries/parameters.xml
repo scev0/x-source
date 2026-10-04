@@ -1,0 +1,2523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="parameters.xsd">
+  <playerflight>
+    <input>
+      <controller exponent="1">
+        <curve>
+          <point position="0" value="0" />
+          <point position="1" value="1" />
+        </curve>
+      </controller>
+      <mouse>
+        <curve>
+          <point position="0" value="0" />
+          <point position="0.05" value="0" />
+          <point position="0.8" value="1" />
+        </curve>
+        <vrsteering yaw="30" pitch="30" roll="30" />
+      </mouse>
+      <gesture pitch="30" yaw="30" roll="30" />
+      <throttle button="1.0" mousewheel="0.2" jpmfactor="4.0">
+        <sticky threshold="0.5" time="0.5" />
+        <scale min="0.3" max="0.8" />
+      </throttle>
+      <yawintoroll>
+        <initial start="0.25" end="0.5" />
+        <low start="0.25" end="0.5" />
+      </yawintoroll>
+    </input>
+    <sound fullforward="ui_speedbar_fullforward" fullstop="ui_speedbar_fullstop" fullreverse="ui_speedbar_fullreverse" cannotboost="engine_booster_empty" flightassistdisabled="notification_danger" flightassistenabled="notification_warning">
+      <wall fadein="1" fadeout="2" />
+    </sound>
+    <aimassist angle="10" />
+    <refobject minsize="10" />
+  </playerflight>
+  <aiflight>
+    <skills>
+      <!-- NB: skills are divided by 3 for this purpose -->
+      <skill level="0" reactiontime="0.0">
+        <!-- for instances with values just above max to not be worse than those at min, max has to be at least 1/factor * min -->
+        <strafespeed factor="0.2" min="10.0" max="50.0"/>
+        <strafeacc factor ="0.2" />
+        <steeringspeed factor="0.2" />
+        <steeringacc factor ="0.2" />
+        <formations>
+          <formation shape="distance" />
+          <formation shape="circle" />
+          <formation shape="halfcircle" />
+          <formation shape="singlefile" />
+          <formation shape="lineabreast" />
+          <formation shape="lineastern" />
+        </formations>
+      </skill>
+      <skill level="1" reactiontime="0.0">
+        <!-- max of this higher level being lower than max of a lower level can result in a better pilot having a lower resulting strafe speed. -->
+        <strafespeed factor="0.5" min="10.0" max="50.0"/>
+        <strafeacc factor ="0.5" />
+        <steeringspeed factor="0.5" />
+        <steeringacc factor ="0.5" />
+        <formations>
+          <formation shape="vshape" />
+          <formation shape="invvshape" />
+          <formation shape="triangle" />
+        </formations>
+      </skill>
+      <skill level="2" reactiontime="0.0">
+        <strafespeed factor="0.7" min="10.0" max="50.0"/>
+        <strafeacc factor ="0.7" />
+        <steeringspeed factor="0.7" />
+        <steeringacc factor ="0.7" />
+        <formations>
+          <formation shape="cross" />
+          <formation shape="crossback" />
+          <formation shape="crossforward" />
+          <formation shape="xshape" />
+          <formation shape="xshapeforward" />
+          <formation shape="xshapeback" />
+        </formations>
+      </skill>
+      <skill level="3" reactiontime="0.0">
+        <strafespeed factor="0.8" min="10.0" max="50.0"/>
+        <strafeacc factor ="0.8" />
+        <steeringspeed factor="0.8" />
+        <steeringacc factor ="0.8" />
+        <formations>
+          <formation shape="invpointguard" />
+          <formation shape="pointguard" />
+        </formations>
+      </skill>
+      <skill level="4" reactiontime="0.0">
+        <strafespeed factor="0.85" min="10.0" max="50.0"/>
+        <strafeacc factor ="0.85" />
+        <steeringspeed factor="0.85" />
+        <steeringacc factor ="0.85" />
+        <formations>
+          <formation shape="wshape" />
+          <formation shape="eagle" />
+          <formation shape="twin" />
+        </formations>
+      </skill>
+      <skill level="5" reactiontime="0.0">
+        <strafespeed factor="1.0" />
+        <strafeacc factor ="1.0" />
+        <steeringspeed factor="1.0" />
+        <steeringacc factor ="1.0" />
+        <formations>
+          <formation shape="vulcan" />
+          <formation shape="dartvertical" />
+          <formation shape="darthorizontal" />
+          <formation shape="echelon" />
+        </formations>
+      </skill>
+    </skills>
+    <steering>
+      <linear start="0.9" end="5" />
+      <angular start="5" end="30" />
+    </steering>
+    <spline turnradius="2" rotaccfactor="0.25" maxturnradius="15000.0">
+      <lookahead factor="0.1" min="1" max="10" />
+      <collision tumble="2.0"/> <!--tumble = how long a spline ship should wait after a severe collision to resume movement, in seconds-->
+    </spline>
+    <highway exittime="0.75" />
+    <masstraffic returntime="5" />
+    <angles startboost="15" stopboost="30" starttravel="15" stoptravel="30"/>
+  </aiflight>
+  <aicombat>
+    <skills>
+      <!-- NB: skills are divided by 3 for this purpose -->
+      <skill level="0" reactiontime="0.1" />
+      <skill level="1" reactiontime="0.075" />
+      <skill level="2" reactiontime="0.05" />
+      <skill level="3" reactiontime="0.03" />
+      <skill level="4" reactiontime="0.015" />
+      <skill level="5" reactiontime="0.0" />
+    </skills>
+    <attackrun distance="2000.0"/>
+    <weapon maxaimrangefactor="2.0" fastcharge="1.0"/>
+  </aicombat>
+  <spaceflight maxspeed="12000">
+    <localhighway minspeed="10000" maxspeed="11000" hoverdistance="5" decelerationscale="5.0" maxdecelduration="8.0"/>
+    <superhighway exitspeed="5000" />
+    <equipmentmod factor="1.0" />
+    <steeringcurve flightassistdisabled="0.33" />
+    <!-- basic movement properties when there is no functional main engine, base acceleration to allow slowing down, maxspeedfactor to reduce acceleration and speed provided from thrusters and decelerationscale to allow slowing down quicker than a non-functional object would -->
+    <unpowered acceleration="10" maxspeedfactor="0.5" decelerationscale="0.2" />
+  </spaceflight>
+  <!--TODO @Owen @Matthias schema support-->
+  <playerfirstperson>
+    <body width="0.25" height="1.7" eyeoffset="0.1" />
+    <speed pitch="5" yaw="7" forward="4" reverse="2" strafe="2" runfactor="2" walkfactor="0.5" crouchfactor="0.5" maxfall="90" />
+    <acceleration angular="15" linear="50" gravity="9.81" />
+    <crouch height="0.9" delay="0.2" />
+    <jump minheight="0.5" maxheight="0.5" />
+    <pitch min="-89" max="89" />
+    <bobbing amplitude="0.01" period="0.3" startfactor="1" endfactor="0.5" />
+    <maxslope normal="60" stairway="80" />
+    <input>
+      <controller exponent="3">
+        <curve default="1">
+        </curve>
+      </controller>
+      <discreterotation step="30" />
+    </input>
+    <overrides>
+      <!--Override with either
+      <override race="">
+      OR
+      <override id="">
+      -->
+      <override race="boron">
+        <bobbing amplitude="0" />
+      </override>
+      <override id="argon_slow_stumble">
+        <body width="0.25" height="1.5" eyeoffset="0.1" />
+        <speed pitch="4" yaw="6" forward="2.3" reverse="2" strafe="1.5" runfactor="1.3" walkfactor="0.5" crouchfactor="0.5" maxfall="90" />
+        <acceleration angular="10" linear="30" gravity="9.81" />
+        <crouch height="0.9" delay="0.45" />
+        <jump minheight="0.2" maxheight="0.4" />
+        <bobbing amplitude="0.07" period="0.35" startfactor="1" endfactor="0.8" />
+      </override>
+    </overrides>
+  </playerfirstperson>
+  <playerfirstpersonguidance mindistance="2.0" prunecheckdistance="0.25" recalculationdistance="5" curveradius="0.1" hoverheight="0.2" width="0.025" tiling="8" material="p1effects.gradient_12" color="guidance_firstperson" onscreenstep="0.2" onscreenmaxdist="3.0" pointtoobjective="2.0" />
+  <platformnavigation>
+    <navmesh method="1" tilesize="256" cellwidth="0.13" cellheight="0.11" maxslope="60" maxclimb="0.41" maxedgelength="12.0" maxsimplificationerror="1.3" minregionarea="64" mergeregionarea="400" maxvertsperpoly="6" detailsampledistance="1.2" maxdetailsampleerror="1.0" maxquerynodes="8192" />
+    <smallnavmesh cellwidth="0.075" maxsize="50" maxquerynodes="2048" maxsimplificationerror="0" />
+    <navmesh_overrides>
+      <!--For dynamic interior overrides use by_id and reference that ID when creating the interior-->
+      <by_template template="ship_tel_m_miner_solid_01" issmall="false" bordersize="18" comment="Navmesh break between the transporter and the cockpit floor."/>
+      <by_template template="ship_tel_m_miner_liquid_01" issmall="false" bordersize="18" comment="Navmesh break between the transporter and the cockpit floor."/>
+      <by_template template="ship_arg_m_miner_liquid_01" issmall="false" bordersize="18" comment="Navmesh break between the transporter and the cockpit floor."/>
+      <by_template template="ship_par_m_trans_container_03" issmall="false" cellwidth="0.11" comment="Navmesh break between the pilot chair and the rest of the cockpit."/>
+      <by_template template="bridge_tel_l_01" issmall="true" cellwidth="0.11" comment="Navmesh break between the captain console and the rest of the bridge."/>
+    </navmesh_overrides>
+    <crowd maxagents="128" collisionqueryrange="12" pathoptimizationrange="30" anticipateturns="true" obstacleavoidance="true" optimizetopo="true" optimizevis="true" separation="true" separationweight="0.2" playerseparationweight="0.2" pickwidth="0.5" maxwidth="0.15" maxheight="1.6" />
+    <pathing maxiter="1000000" anyangle="true">
+      <pickextents>
+        <default x="0.5" y="0.6" z="0.5" />
+        <strict x="0.1" y="0.6" z="0.1" />
+      </pickextents>
+    </pathing>
+    <costs walk="2.0" conveyor="1.0" dockingbay="2.5" />
+    <conveyorspeeds default="0">
+      <tag id="speed_1" speed="6" />
+      <tag id="speed_2" speed="12" />
+    </conveyorspeeds>
+    <conveyorcurves>
+      <tag id="curve_01_50" radius="1.5" />
+      <tag id="curve_2" radius="20" />
+    </conveyorcurves>
+    <triggerranges default_xz="2" default_y="0.25">
+      <tag id="range_near" range_xz="1" range_y="0.25" />
+      <tag id="range_far" range_xz="5" range_y="0.25" />
+    </triggerranges>
+    <transporter duration="3.0"/>
+  </platformnavigation>
+  <navigation>
+    <travelspeed space="5000" highway="0.95" />
+    <travelcost gate="20" />
+    <spacereservation maxduration="1800.0"/>
+  </navigation>
+  <playercamera>
+    <input>
+      <linear x="-0.002" y="-0.001" z="-0.00004">
+        <roll x="-0.002" />
+      </linear>
+      <angular x="0.2" y="0.3" z="-0.2">
+        <roll y="0.1" />
+      </angular>
+    </input>
+    <maxpos x="0.1" y="0.1" z="0.02" />
+    <maxangles x="0.5" y="0.5" z="0.5" />
+    <maxvel>
+      <linear x="1" y="1" z="1" />
+      <angular rx="100" ry="100" rz="100"/>
+    </maxvel>
+    <minvel>
+      <linear x="0.0025" y="0.0025" z="0.0025" />
+      <angular rx="0.25" ry="0.25" rz="0.25"/>
+    </minvel>
+    <boost>
+      <shake frequency="61" superpositions="1">
+        <rotation yaw="0.1" pitch="0.1" roll="0" />
+        <speedcurve>
+          <point position="-1.1" value="0" />
+          <point position="0" value="0" />
+          <point position="1" value="0" />
+          <!--end of normal speed range-->
+          <point position="2" value="0.5" />
+          <!--end of boost speed range-->
+          <point position="3" value="1" />
+          <!--end of travel speed range-->
+          <point position="4" value="1" />
+          <!--end of "maximum" speed range-->
+        </speedcurve>
+        <timecurve default="1">
+        </timecurve>
+      </shake>
+      <motionblur>
+        <speedcurve default="0">
+          <!--<point position="0.0" value="0" />
+          <point position="2.0" value="0" />-->
+        </speedcurve>
+      </motionblur>
+    </boost>
+    <lookaround>
+      <internal maxpitch="35" maxyaw="65" anglespeed="200" angleacc="500" trackmaxpitch="85" trackmaxyaw="85"/>
+      <external maxpitch="85" initialpitch="20" anglespeed="180" angleacc="360" zoomspeed="3" zoomperclick="0.1" minzoom="0.1" maxzoom="100" initialzoom="1" maxdistance="10000">
+        <!--<aimindicator template="playership_crosshair_external_01" scale="1" offset="0.5" />-->
+        <!--<targetarrow template="external_view_target_arrow_01" scale="0.02" offset="0.02" color="external_view_target_arrow" />-->
+        <!--<missiontargetarrow template="external_view_target_arrow_01" scale="0.02" offset="0.04" color="external_view_mission_arrow" />-->
+      </external>
+      <externalhighway maxpitch="85" maxyaw="360" minzoom="0.75" maxzoom="30" maxdistance="1000" />
+      <externalengine maxpitch="85" maxyaw="90" initialzoom="2" />
+      <externalsurfaceelement minpitch="5" initialpitch="15" initialzoom="2" />
+    </lookaround>
+    <hud compensation="0.8" />
+    <zoomgoggles step="3" max="27" time="0.5" resettime="20" zoominsound="ui_target_set" zoomoutsound="ui_target_set_fail"/>
+  </playercamera>
+  <playerhelmet>
+    <flight>
+      <velocity>
+        <linear x="0" y="0" z="0" rot="0" />
+        <angular pos="0" rot="0" />
+      </velocity>
+      <acceleration>
+        <linear x="0" y="0" z="0" rot="-0.0001" />
+        <angular pos="0" rot="-0.003" />
+      </acceleration>
+      <maxpos x="0.02" y="0.02" z="0" />
+      <maxvel>
+        <linear x="0.5" y="0.5" z="0.1" />
+        <angular rx="2" ry="2" rz="0"/>
+      </maxvel>
+    </flight>
+    <firstperson>
+      <velocity>
+        <linear x="0" y="0" z="0" rot="0" />
+        <angular pos="0" rot="0" />
+      </velocity>
+      <acceleration>
+        <linear x="0" y="0" z="0" rot="-0.0001" />
+        <angular pos="0" rot="-0.001" />
+      </acceleration>
+      <maxpos x="0.02" y="0.02" z="0" />
+      <maxvel>
+        <linear x="0.5" y="0.5" z="0.1" />
+        <angular rx="2" ry="2" rz="0"/>
+      </maxvel>
+    </firstperson>
+  </playerhelmet>
+  <environmentobject>
+    <!--
+    TODO @ Michael: these values no longer refer to the environment object but to signal leaks, update accordingly
+      // crosshair cone settings (used to calculate the crosshair cone dependant parameter value)
+      // some values use the square distance to speed up calculations a bit
+    -->
+    <crosshair>
+      <!--
+        crosshair.area.min          // percentage of the screen width/height defining the crosshair area when the target is at max distance [0-1]
+        crosshair.area.max          // percentage of the screen width/height defining the crosshair area when the target is at min distance [0-1]
+        crosshair.area.threshold    // percentage of the screen widht/height used as the threshold to determine whether a target element left the crosshair area [0-1]
+        crosshair.area.triggervalue // value at which a target element is considered for triggering an environment object change. 0 = center of crosshair, 1 = in outer ring
+      -->
+      <area min="0.1" max="0.7" threshold="0.1" triggervalue="2.0" />
+      <!--
+        crosshair.distance.max        // max distance for the crosshair cone
+        crosshair.distance.mid        // distance for the crosshair cone, where the parametervalue equals crosshairMidValue (NOTE: stored squared!)
+        crosshair.distance.mid        // min distance for the crosshair cone (NOTE: stored squared!)
+        crosshair.distance.midvalue   // parametervalue at crosshairMidDistance
+        crosshair.distance.sizefactor // controlled object size factor
+        crosshair.distance.spacesuit  // start distance for scanning object size range from a space suit
+        crosshair.distance.start      // start distance for scanning object size range
+      -->
+      <distance min="10" mid="40" max="100" midvalue="0.12" sizefactor="0.75" spacesuit="5" />
+    </crosshair>
+    <!--
+      // environment object change time delays
+      timing.minDelay           // minimal delay before a pending target is changed (in s)
+      timing.maxDelay           // delay before the pending target is changed (in s)
+      timing.checkinterval      // time between environment object checks (in s)
+    -->
+    <timing mindelay="1.0" maxdelay="3.0" checkinterval="0.1" />
+  </environmentobject>
+  <highlight>
+    <target>
+      <outline color="highlight_target_outline" frequency="2" duration="1.5" minalpha="0.2" />
+    </target>
+    <environmentobject>
+      <outline color="highlight_environmentobject_outline" frequency="2" duration="1.5" minalpha="0.2" />
+    </environmentobject>
+    <scan minlevel="0">
+      <outline color="highlight_scan_outline" frequency="2" duration="2.5" />
+      <fill color="highlight_scan_fill_0" duration="1" />
+    </scan>
+    <scan minlevel="1">
+      <fill color="highlight_scan_fill_1" duration="1" />
+    </scan>
+    <scan minlevel="4">
+      <fill color="highlight_scan_fill_4" duration="2" />
+    </scan>
+  </highlight>
+  <scanlevel>
+    <legal max="1" />
+  </scanlevel>
+  <stationicon>
+    <headquarters id="mapob_playerhq" iconscale="3" hud="si_playerhq" />
+    <shipyard id="mapob_shipyard" iconscale="3" hud="si_shipyard" />
+    <wharf id="mapob_wharf" iconscale="3" hud="si_wharf" />
+    <equipmentdock id="mapob_equipmentdock" iconscale="2.5" hud="si_equipmentdock" />
+    <tradestation id="mapob_tradestation" iconscale="2.5" hud="si_tradestation" />
+    <defencestation id="mapob_defensestation" iconscale="2" hud="si_defensestation" />
+    <piratebase id="mapob_piratestation" iconscale="2.5" hud="si_piratestation" />
+    <otherstation id="mapob_factory" iconscale="1.5" hud="si_factory" />
+    <construction id="mapob_constructionsite" iconscale="1.5" hud="si_factory" />
+  </stationicon>
+  <holomap>
+    <general>
+      <macro ref="standardholomap_macro" />
+      <geometries template="map_parts_template" />
+      <materials white="dummy.white" gradient="map.gradient" gradient2="map.gradient2" gradient3="map.gradient3" gradient4="map.map_radar_vertical_01" gradient5="map.gradient_radial_02" cross="map.cross_01" />
+      <icons smallicon="0.4">
+        <factionhq postfix="_headquarter" />
+        <player id="ship_s_fight_01" iconscale="1" />
+        <ship_xs iconscale="1.0" planescale="10" wreckfadetime="10" />
+        <ship_s iconscale="1.0" planescale="20" wreckfadetime="10" />
+        <ship_m iconscale="1.0" planescale="20" wreckfadetime="10" />
+        <ship_l iconscale="1.0" planescale="50" />
+        <ship_xl iconscale="1.5" planescale="50" />
+        <fleetcommander scale="1.25" />
+        <buildstorage id="mapob_buildstorage" iconscale="1.5" />
+        <jumpgate iconscale="1.5">
+          <text scale="1">
+            <position x="500" />
+          </text>
+        </jumpgate>
+        <highwayentry iconscale="1.5">
+          <text scale="1" />
+        </highwayentry>
+        <highwayexit iconscale="1.0">
+          <text scale="1" />
+        </highwayexit>
+        <missile planescale="20" />
+        <collectable iconscale="1.0" />
+        <lockbox iconscale="1.0" />
+        <satellite iconscale="1.0" />
+        <navbeacon iconscale="1.0" />
+        <resourceprobe iconscale="1.0" />
+        <mine iconscale="1" />
+        <asteroid iconscale="1" />
+        <datavault iconscale="1" />
+        <unidentified id="mapob_unknown" iconscale="1" />
+        <otherobject iconscale="1" />
+        <region id="mapob_region" iconscale="1" />
+        <adsign id="mapob_unknown" iconscale="1" />
+        <anomaly id="mapob_anomaly" iconscale="1" />
+        <commander id="ship_squadleader_01" iconscale="1" />
+        <factionrep id="npc_factionrep" iconscale="1" />
+        <diplomat id="npc_diplomat" iconscale="1" />
+        <shadyguy id="npc_shadyguy" iconscale="1" />
+        <missionactor id="npc_missionactor" iconscale="1" />
+        <diplomacyactiontarget id="npc_agent" iconscale="1" />
+        <missiontarget id="mapob_missiontarget" iconscale="1" />
+        <missionoffer prefix="missiontype_" scale="5" fallback="mapob_unknown">
+          <offset x="-400" y="200" />
+        </missionoffer>
+        <upkeepalert id="mapob_alert" iconscale="1" />
+        <busy id="mapob_busy" iconscale="1" />
+        <speaker id="mapob_loudspeaker" iconscale="1" />
+        <illegaltradeoffer id="maptr_illegal" iconscale="1" />
+        <noentry id="menu_noentry" iconscale="1" />
+        <buildtradeoffer id="maptr_buildstorage" iconscale="1" />
+        <supplytradeoffer id="maptr_supply" iconscale="1" />
+        <tradevolume id="maptr_hexagon" iconscale="0.8" />
+        <objectupgrade iconscale="2">
+          <!--engine slots-->
+          <slot tags="engine small standard" id="shipbuildst_engine" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="90" />
+            <size x="2" y="2" z="4" />
+          </slot>
+          <slot tags="engine medium standard" id="shipbuildst_engine" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="90" />
+            <size x="6" y="6" z="12" />
+          </slot>
+          <slot tags="engine large standard" id="shipbuildst_engine" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="90" />
+            <size r="25" h="25" />
+          </slot>
+          <slot tags="engine extralarge standard" id="shipbuildst_engine" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="90" />
+            <size r="75" h="75" />
+          </slot>
+          <slot tags="engine small boron" id="shipbuildst_engine" />
+          <slot tags="engine medium boron" id="shipbuildst_engine" />
+          <slot tags="engine large boron" id="shipbuildst_engine" />
+          <slot tags="engine extralarge boron" id="shipbuildst_engine" />
+          <slot tags="engine small advanced" id="shipbuildst_engine" />
+          <slot tags="engine medium advanced" id="shipbuildst_engine" />
+          <slot tags="engine large advanced" id="shipbuildst_engine" />
+          <slot tags="engine extralarge advanced" id="shipbuildst_engine" />
+          <slot tags="engine small xenon" id="shipbuildst_engine" />
+          <slot tags="engine medium xenon" id="shipbuildst_engine" />
+          <slot tags="engine large xenon" id="shipbuildst_engine" />
+          <slot tags="engine extralarge xenon" id="shipbuildst_engine" />
+          <!--shield slots-->
+          <slot tags="shield small standard" id="shipbuildst_shield" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <size x="1" y="0.5" z="2" />
+          </slot>
+          <slot tags="shield medium standard" id="shipbuildst_shield" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <size x="4" y="2" z="8" />
+          </slot>
+          <slot tags="shield large standard" id="shipbuildst_shield" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <size x="16" y="16" z="32" />
+          </slot>
+          <slot tags="shield extralarge standard" id="shipbuildst_shield" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <size x="48" y="48" z="96" />
+          </slot>
+          <slot tags="shield small boron" id="shipbuildst_shield" />
+          <slot tags="shield medium boron" id="shipbuildst_shield" />
+          <slot tags="shield large boron" id="shipbuildst_shield" />
+          <slot tags="shield extralarge advanced" id="shipbuildst_shield" />
+          <slot tags="shield small advanced" id="shipbuildst_shield" />
+          <slot tags="shield medium advanced" id="shipbuildst_shield" />
+          <slot tags="shield large advanced" id="shipbuildst_shield" />
+          <slot tags="shield extralarge boron" id="shipbuildst_shield" />
+          <slot tags="shield small xenon" id="shipbuildst_shield" />
+          <slot tags="shield medium xenon" id="shipbuildst_shield" />
+          <slot tags="shield large xenon" id="shipbuildst_shield" />
+          <slot tags="shield extralarge xenon" id="shipbuildst_shield" />
+          <!--weapon slots-->
+          <slot tags="weapon small boron" id="shipbuildst_weapon" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="-90" />
+            <size x="0.5" y="0.5" z="1.5" />
+          </slot>
+          <slot tags="weapon medium boron" id="shipbuildst_weapon" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="-90" />
+            <size x="2" y="2" z="6" />
+          </slot>
+          <slot tags="weapon large boron" id="shipbuildst_weapon" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="-90" />
+            <size x="7" y="7" z="24" />
+          </slot>
+          <slot tags="weapon small advanced" id="shipbuildst_weapon" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="-90" />
+            <size x="0.5" y="0.5" z="1.5" />
+          </slot>
+          <slot tags="weapon medium advanced" id="shipbuildst_weapon" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="-90" />
+            <size x="2" y="2" z="6" />
+          </slot>
+          <slot tags="weapon large advanced" id="shipbuildst_weapon" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="-90" />
+            <size x="7" y="7" z="24" />
+          </slot>
+          <slot tags="weapon small xenon" id="shipbuildst_weapon" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="-90" />
+            <size x="0.5" y="0.5" z="1.5" />
+          </slot>
+          <slot tags="weapon medium xenon" id="shipbuildst_weapon" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="-90" />
+            <size x="2" y="2" z="6" />
+          </slot>
+          <slot tags="weapon large xenon" id="shipbuildst_weapon" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="-90" />
+            <size x="7" y="7" z="24" />
+          </slot>
+          <slot tags="weapon small" id="shipbuildst_weapon" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="-90" />
+            <size x="1" y="1" z="3" />
+          </slot>
+          <slot tags="weapon medium" id="shipbuildst_weapon" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="-90" />
+            <size x="4" y="4" z="12" />
+          </slot>
+          <slot tags="weapon large" id="shipbuildst_weapon" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <rotation pitch="-90" />
+            <size x="14" y="14" z="48" />
+          </slot>
+          <!--turret slots-->
+          <slot tags="turret medium boron" id="shipbuildst_turret" boxmaterial="map.gradient2">
+            <color r="125" g="255" b="255" a="255" />
+            <size x="4" y="4" z="4" />
+          </slot>
+          <slot tags="turret large boron" id="shipbuildst_turret" boxmaterial="map.gradient2">
+            <color r="125" g="255" b="255" a="255" />
+            <size x="4" y="4" z="4" />
+          </slot>
+          <slot tags="turret medium advanced" id="shipbuildst_turret" boxmaterial="map.gradient2">
+            <color r="125" g="255" b="255" a="255" />
+            <size x="4" y="4" z="4" />
+          </slot>
+          <slot tags="turret large advanced" id="shipbuildst_turret" boxmaterial="map.gradient2">
+            <color r="125" g="255" b="255" a="255" />
+            <size x="4" y="4" z="4" />
+          </slot>
+          <slot tags="turret medium xenon" id="shipbuildst_turret" boxmaterial="map.gradient2">
+            <color r="125" g="255" b="255" a="255" />
+            <size x="8" y="8" z="8" />
+          </slot>
+          <slot tags="turret large xenon" id="shipbuildst_turret" boxmaterial="map.gradient2">
+            <color r="125" g="255" b="255" a="255" />
+            <size x="16" y="16" z="16" />
+          </slot>
+          <slot tags="turret medium" id="shipbuildst_turret" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <size x="8" y="8" z="8" />
+          </slot>
+          <slot tags="turret large" id="shipbuildst_turret" boxmaterial="map.gradient2" color="holomap_equipment_slot">
+            <size x="32" y="32" z="32" />
+          </slot>
+        </objectupgrade>
+      </icons>
+      <fading>
+        <!-- any player-owned ship always shows at least a plane -->
+        <playership>
+          <icon permanent="true" />
+        </playership>
+        <playerownedship>
+          <plane permanent="true"/>
+          <icon fadeinstart="500000" fadeinend="400000" />
+        </playerownedship>
+        <playerownedcapitalship>
+          <plane permanent="true"/>
+          <icon fadeinstart="500000" fadeinend="400000" />
+          <geometry fadeinstart="50000" fadeinend="40000" />
+        </playerownedcapitalship>
+        <!-- other ships start showing as a small square at some zoom factor, then fade into an icon further in -->
+        <drone>
+          <plane fadeinstart="1000000" fadeinend="800000" fadeoutstart="500000" fadeoutend="400000" />
+          <icon fadeinstart="500000" fadeinend="400000" />
+        </drone>
+        <ship>
+          <plane fadeinstart="1000000" fadeinend="800000" fadeoutstart="500000" fadeoutend="400000" />
+          <icon fadeinstart="500000" fadeinend="400000" />
+        </ship>
+        <capitalship>
+          <plane fadeinstart="1000000" fadeinend="800000" fadeoutstart="500000" fadeoutend="400000" />
+          <icon fadeinstart="500000" fadeinend="400000" />
+          <geometry fadeinstart="50000" fadeinend="40000" />
+        </capitalship>
+        <!--subordinates that are in their commander's sector do not show an icon beyond this-->
+        <subordinate>
+          <icon fadeinstart="300000" fadeinend="240000" />
+        </subordinate>
+        <jumpgate>
+          <icon fadeinstart="1000000" fadeinend="800000" />
+        </jumpgate>
+        <highwayentry>
+          <icon fadeinstart="1000000" fadeinend="800000" />
+        </highwayentry>
+        <highwayexit>
+          <icon fadeinstart="1000000" fadeinend="800000" />
+        </highwayexit>
+        <missile>
+          <plane fadeinstart="100000" fadeinend="80000" />
+        </missile>
+        <collectable>
+          <icon fadeinstart="100000" fadeinend="80000" />
+        </collectable>
+        <lockbox>
+          <icon fadeinstart="500000" fadeinend="400000" />
+        </lockbox>
+        <satellite>
+          <icon fadeinstart="500000" fadeinend="400000" />
+        </satellite>
+        <inspectionradar>
+          <plane fadeinstart="10000000" fadeinend="8000000" />
+        </inspectionradar>
+        <navbeacon>
+          <plane permanent="true" />
+          <icon fadeinstart="500000" fadeinend="400000" />
+        </navbeacon>
+        <resourceprobe>
+          <icon fadeinstart="500000" fadeinend="400000" />
+        </resourceprobe>
+        <mine>
+          <icon fadeinstart="100000" fadeinend="80000" />
+        </mine>
+        <asteroid>
+          <icon fadeinstart="200000" fadeinend="160000" />
+        </asteroid>
+        <datavault>
+          <icon fadeinstart="500000" fadeinend="400000" />
+        </datavault>
+        <unidentified>
+          <icon fadeinstart="1000000" fadeinend="800000" />
+        </unidentified>
+        <otherobject>
+          <icon fadeinstart="200000" fadeinend="160000" />
+          <customtext fadeinstart="400000" fadeinend="320000" />
+        </otherobject>
+        <datavault>
+          <icon fadeinstart="200000" fadeinend="160000" />
+          <geometry fadeinstart="400000" fadeinend="320000" />
+        </datavault>
+        <missionoffer>
+          <icon fadeinstart="800000" fadeinend="400000" />
+        </missionoffer>
+        <!-- important stations always show an icon, plus geometries when zoomed in enough -->
+        <headquarters>
+          <smallicon permanent="true" />
+          <icon fadeinstart="7500000" fadeinend="1000000" />
+          <geometry fadeinstart="400000" fadeinend="320000" />
+        </headquarters>
+        <tradestation>
+          <smallicon permanent="true" />
+          <icon fadeinstart="7500000" fadeinend="1000000" />
+          <geometry fadeinstart="400000" fadeinend="320000" />
+        </tradestation>
+        <equipmentdock>
+          <smallicon permanent="true" />
+          <icon fadeinstart="7500000" fadeinend="1000000" />
+          <geometry fadeinstart="400000" fadeinend="320000" />
+        </equipmentdock>
+        <shipyard>
+          <smallicon permanent="true" />
+          <icon fadeinstart="7500000" fadeinend="1000000" />
+          <geometry fadeinstart="400000" fadeinend="320000" />
+        </shipyard>
+        <wharf>
+          <smallicon permanent="true" />
+          <icon fadeinstart="7500000" fadeinend="1000000" />
+          <geometry fadeinstart="400000" fadeinend="320000" />
+        </wharf>
+        <!-- defence stations and generic factories show a hex when zoomed out, an icon when zoomed in enough, plus geometries even further in -->
+        <defencestation>
+          <hex fadeinstart="1000000" fadeinend="800000" fadeoutstart="800000" fadeoutend="640000" scale="100" />
+          <icon fadeinstart="800000" fadeinend="640000" />
+          <geometry fadeinstart="400000" fadeinend="320000" />
+        </defencestation>
+        <piratebase>
+          <icon fadeinstart="1500000" fadeinend="1200000" />
+          <geometry fadeinstart="400000" fadeinend="320000" />
+        </piratebase>
+        <otherstation>
+          <hex fadeinstart="1000000" fadeinend="800000" fadeoutstart="800000" fadeoutend="400000" scale="100" />
+          <icon fadeinstart="800000" fadeinend="400000" />
+          <geometry fadeinstart="400000" fadeinend="320000" />
+        </otherstation>
+        <localhighway fadeinstart="1500000" fadeinend="1200000" />
+        <region fadeinstart="400000" fadeinend="320000" />
+        <verticaldrag material="map.gradient_14" height="1800" width="40" color="holomap_verticaldrag" lowlightcolor="holomap_verticaldrag_lowlight">
+          <activated default="0.1">
+            <point position="0" value="1" />
+            <point position="0.25" value="0.2" />
+            <point position="0.26" value="1" />
+            <point position="0.5" value="0.2" />
+          </activated>
+          <deactivated default="0">
+            <point position="0" value="0.4" />
+            <point position="0.5" value="0.0" />
+          </deactivated>
+        </verticaldrag>
+      </fading>
+      <camera>
+        <pan speed="2" maxspeed="2" acceleration="5" slideacceleration="2" />
+        <rotation speed="45" sensitivity="120" maxspeed="180" acceleration="10" />
+        <zoom speed="2" maxspeed="10" acceleration="10" />
+        <startrotation pitch="-89" />
+      </camera>
+      <colors>
+        <hostile color="holomap_hostile" geomalpha="92" />
+        <playerlocation_hostile color="holomap_playerlocation_hostile" geomalpha="92" />
+        <enemy color="holomap_enemy" geomalpha="92" />
+        <playerlocation_enemy color="holomap_playerlocation_enemy" geomalpha="92" />
+        <neutral color="holomap_neutral" geomalpha="92" />
+        <playerlocation_neutral color="holomap_playerlocation_neutral" geomalpha="92" />
+        <player color="holomap_player" geomalpha="92" />
+        <playerlocation_playerowned color="holomap_playerlocation_playerowned" geomalpha="92" />
+        <selected color="holomap_selected" strength="0.7" geomalpha="92" geomstrength="0.3" />
+        <picked color="holomap_picked" strength="0.8" geomalpha="92" geomstrength="0.6" />
+        <lowlight color="holomap_lowlight" strength="0.7" geomalpha="92" geomstrength="0.6" />
+        <inspectionlowlight color="holomap_inspectionmode_lowlight" strength="0.7" geomalpha="92" geomstrength="0.6" />
+        <missiontarget color="holomap_missiontarget" geomalpha="92" />
+        <inactivemissiontarget color="holomap_inactivemissiontarget" geomalpha="2" />
+        <visitor color="holomap_visitor" geomalpha="92" />
+        <playerlocation_visitor color="holomap_playerlocation_visitor" geomalpha="92" />
+        <faction geomalpha="92"/>
+        <playerlocation_faction color="holomap_playerlocation_faction" strength="0.5"/>
+        <wreck color="holomap_wreck" geomalpha="92" />
+        <missile color="holomap_missile" geomalpha="92" />
+        <mine color="holomap_mine" geomalpha="92" />
+        <collectable color="holomap_collectable" geomalpha="92" />
+        <jumpgate color="holomap_jumpgate" geomalpha="92" />
+        <inactivejumpgate color="holomap_inactivejumpgate" geomalpha="92" />
+        <highwayentry color="holomap_highwayentry" geomalpha="92" />
+        <highwayexit color="holomap_highwayexit" geomalpha="92" />
+        <asteroid color="holomap_asteroid" geomalpha="92" />
+        <unidentified color="holomap_unidentified" geomalpha="92" />
+        <inactiveradar color="holomap_inactiveradar" geomalpha="92" />
+        <inactiveprobe color="holomap_inactiveprobe" geomalpha="92" />
+        <unlockeddatavault color="holomap_unlockeddatavault" geomalpha="92" />
+        <component>
+          <base color="holomap_component_base" fillalpha="10" geomalpha="92" />
+          <undiscovered color="holomap_component_undiscovered" fillalpha="10" geomalpha="92" />
+          <production color="holomap_component_production" fillalpha="10" geomalpha="92" />
+          <build color="holomap_component_build" fillalpha="10" geomalpha="92" />
+          <efficiency color="holomap_component_efficiency" fillalpha="10" geomalpha="92" />
+          <ventureplatform color="holomap_component_ventureplatform" fillalpha="10" geomalpha="92" />
+          <storage color="holomap_component_storage" fillalpha="10" geomalpha="92" />
+          <shield color="holomap_component_shield" fillalpha="50" geomalpha="92" />
+          <weapon color="holomap_component_weapon" fillalpha="80" geomalpha="92" />
+          <dockingbay color="holomap_component_dockingbay" fillalpha="10" geomalpha="92" />
+          <venturedock color="holomap_component_venturedock" fillalpha="10" geomalpha="92" />
+          <pier color="holomap_component_pier" fillalpha="10" geomalpha="92" />
+          <habitation color="holomap_component_habitation" fillalpha="10" geomalpha="92" />
+          <defence color="holomap_component_defence" fillalpha="5" geomalpha="92" />
+          <connection color="holomap_component_connection" fillalpha="10" geomalpha="92" />
+          <ventureconnection color="holomap_component_ventureconnection" fillalpha="10" geomalpha="92" />
+          <welfare color="holomap_component_welfare" fillalpha="5" geomalpha="92" />
+          <processing color="holomap_component_processing" fillalpha="5" geomalpha="92" />
+          <radar color="holomap_component_radar" fillalpha="5" geomalpha="92" />
+        </component>
+        <upkeepalert>
+          <color level="low" color="holomap_upkeepalert_low" />
+          <color level="medium" color="holomap_upkeepalert_medium" />
+          <color level="high" color="holomap_upkeepalert_high" />
+        </upkeepalert>
+        <tradeprice>
+          <good color="text_price_good" />
+          <average color="text_price_average" />
+          <bad color="text_price_bad" />
+        </tradeprice>
+      </colors>
+      <softtarget bracketpart="part_targetbracket" scale="2" radarscale="1.5" inflationfactor="1.2" color="holomap_target_bracket" />
+      <selection bracketpart="part_targetbracket" scale="2" radarscale="1.5" inflationfactor="1.0" linewidth="10" linelength="15000" linecutoff="150" edgescale="0.9" edgemargin="0.02" color="holomap_selection_bracket" />
+      <fontsize default="27" header="32" />
+      <axislabels fontsize="32" distance="19000">
+        <positive_x text="+x" />
+        <negative_x text="-x" />
+        <positive_y text="+y" />
+        <negative_y text="-y" />
+        <positive_z text="+z" />
+        <negative_z text="-z" />
+      </axislabels>
+      <skyboxes>
+        <skybox class="station" material="map.build_station" sphere="true">
+          <pointlights>
+            <pointlight radius="10000000" specintensity="1.0">
+              <position x="-100000" y="0" z="-100000" />
+              <color r="255" g="255" b="255" intensity="1.5" />
+            </pointlight>
+            <pointlight radius="10000000" specintensity="1.0">
+              <position x="100000" y="0" z="-100000" />
+              <color r="255" g="255" b="255" intensity="1.5" />
+            </pointlight>
+            <pointlight radius="10000000" specintensity="1.0">
+              <position x="0" y="-100000" z="-100000" />
+              <color r="255" g="255" b="255" intensity="1.5" />
+            </pointlight>
+            <pointlight radius="10000000" specintensity="1.0">
+              <position x="0" y="100000" z="-100000" />
+              <color r="255" g="255" b="255" intensity="1.5" />
+            </pointlight>
+          </pointlights>
+          <arealights>
+            <!--<arealight radius="" spotatt="" specintensity="" range="">
+              <position x="" y="" z="" />
+              <rotation yaw="" pitch="" roll="" />
+              <color r="" g="" b="" intensity="" />
+              <area x="" y="" />
+            </arealight>-->
+          </arealights>
+        </skybox>
+        <skybox class="module" material="map.build_station" sphere="true">
+          <pointlights>
+            <pointlight radius="1" specintensity="1.0" global="true">
+              <position x="-1" y="1" z="-1" />
+              <color r="255" g="210" b="180" intensity="2.2" />
+            </pointlight>
+            <pointlight radius="1" specintensity="1.0" global="true">
+              <position x="2" y="-5" z="10" />
+              <color r="255" g="50" b="0" intensity="1" />
+            </pointlight>
+          </pointlights>
+        </skybox>
+        <skybox class="ship_xl" material="map.build_station" sphere="true">
+          <pointlights>
+            <pointlight radius="1" specintensity="1.0" global="true">
+              <position x="-1" y="1" z="-1" />
+              <color r="255" g="210" b="180" intensity="2.2" />
+            </pointlight>
+            <pointlight radius="1" specintensity="1.0" global="true">
+              <position x="2" y="-5" z="10" />
+              <color r="255" g="50" b="0" intensity="1" />
+            </pointlight>
+          </pointlights>
+        </skybox>
+        <skybox class="ship_l" material="map.build_station" sphere="true">
+          <pointlights>
+            <pointlight radius="1" specintensity="1.0" global="true">
+              <position x="-1" y="1" z="-1" />
+              <color r="255" g="210" b="180" intensity="2.2" />
+            </pointlight>
+            <pointlight radius="1" specintensity="1.0" global="true">
+              <position x="2" y="-5" z="10" />
+              <color r="255" g="50" b="0" intensity="1" />
+            </pointlight>
+          </pointlights>
+        </skybox>
+        <skybox class="ship" material="map.build_station" sphere="true">
+          <pointlights>
+            <pointlight radius="1" specintensity="1.0" global="true">
+              <position x="-1" y="1" z="-1" />
+              <color r="255" g="210" b="180" intensity="2.2" />
+            </pointlight>
+            <pointlight radius="1" specintensity="1.0" global="true">
+              <position x="2" y="-5" z="10" />
+              <color r="255" g="50" b="0" intensity="1" />
+            </pointlight>
+          </pointlights>
+        </skybox>
+      </skyboxes>
+      <transformgizmo pickfactor="5" material="dummy.white" axiswidth="10">
+        <translation linelength="50" linewidth="2.5" arrowlength="10" arrowwidth="5">
+          <colors x="holomap_transform_gizmo_translate_x" y="holomap_transform_gizmo_translate_y" z="holomap_transform_gizmo_translate_z" />
+        </translation>
+        <rotation radius="80" width="2">
+          <colors x="holomap_transform_gizmo_rotate_x" y="holomap_transform_gizmo_rotate_y" z="holomap_transform_gizmo_rotate_z" />
+        </rotation>
+        <textbackground width="3" height="2" material="dummy.white" color="holomap_transform_gizmo_text_background" />
+      </transformgizmo>
+      <splinegizmo linelength="25" pointradius="7" fadecolor="holomap_spline_gizmo_faded">
+        <point color="holomap_spline_gizmo_point" />
+        <inlength factor="0.002" color="holomap_spline_gizmo_in" />
+        <outlength factor="0.002" color="holomap_spline_gizmo_out" />
+      </splinegizmo>
+    </general>
+    <radar>
+      <mode>
+        <camera fov="20" follow="true">
+          <offset>
+            <position y="50000" z="-70000" />
+            <rotation pitch="-33" />
+          </offset>
+        </camera>
+        <sector background="false" geometries="false" texts="false" highways="false"/>
+        <missionoffers icons="false" texts="false"/>
+        <background material="map.map_radar_background_01" scale="24500" color="holomap_radar_background" />
+        <ecliptic material="map.map_radar_ecliptic_01" scale="24500" linewidth="50" lineheight="13000" color="holomap_radar_ecliptic" linealpha="0.3" spherealpha="1" glow="0.1" />
+        <axislabels enabled="true" static="true" x="19000" y="13000" z="19000" color="holomap_radar_axis_labels" />
+        <radarrange color="holomap_radar_range" reducedcolor="holomap_radar_range_reduced" ringwidth="200" ringmaterial="map.map_radar_range_01" ringalpha="0.05" allobjects="false"/>
+        <icon scale="0.7" maxsize="250" align="true">
+          <player scale="1" />
+        </icon>
+        <softtarget scale="1.5" />
+        <selection scale="1.5" />
+        <geometries maxdistance="5000"/>
+        <text scale="5" />
+        <distancecurve>
+          <point position="0" value="0" />
+          <point position="5000" value="10000" />
+          <point position="20000" value="15000" />
+          <point position="40000" value="17500" />
+          <point position="80000" value="18750" />
+          <point position="160000" value="19800" />
+          <point position="320000" value="20500" />
+          <point position="640000" value="20600" />
+        </distancecurve>
+        <scalecurve>
+          <point position="0" value="1" />
+          <point position="5000" value="1" />
+          <point position="20000" value="0.5" />
+          <point position="40000" value="0.2" />
+          <point position="80000" value="0.1" />
+          <point position="160000" value="0.05" />
+          <point position="320000" value="0.02" />
+          <point position="640000" value="0.02" />
+        </scalecurve>
+        <alphacurve>
+          <point position="0" value="1" />
+          <point position="5000" value="0.8" />
+          <point position="20000" value="0.6" />
+          <point position="40000" value="0.4" />
+          <point position="80000" value="0.2" />
+          <point position="160000" value="0.1" />
+          <point position="320000" value="0.05" />
+          <point position="640000" value="0.02" />
+        </alphacurve>
+      </mode>
+      <mode>
+        <camera fov="20" follow="true">
+          <offset>
+            <position y="25000" z="-35000" />
+            <rotation pitch="-33" />
+          </offset>
+        </camera>
+        <sector background="false" geometries="false" texts="false" highways="false"/>
+        <missionoffers icons="false" texts="false"/>
+        <background material="map.map_radar_background_01" scale="24500" color="holomap_radar_background" />
+        <ecliptic material="map.map_radar_ecliptic_01" scale="24500" linewidth="50" lineheight="7000" color="holomap_radar_ecliptic" linealpha="0.3" spherealpha="1" glow="0.1" />
+        <axislabels enabled="true" static="true" x="19000" y="6000" z="19000" color="holomap_radar_axis_labels" />
+        <radarrange color="holomap_radar_range" reducedcolor="holomap_radar_range_reduced" ringwidth="200" ringmaterial="map.map_radar_range_01" ringalpha="0.05" allobjects="false"/>
+        <icon scale="0.7" maxsize="250" align="true">
+          <player scale="1" />
+        </icon>
+        <softtarget scale="1.5" />
+        <selection scale="1.5" />
+        <geometries maxdistance="5000"/>
+        <text scale="5" />
+        <distancecurve>
+          <point position="0" value="0" />
+          <point position="5000" value="10000" />
+          <point position="20000" value="15000" />
+          <point position="40000" value="17500" />
+          <point position="80000" value="18750" />
+          <point position="160000" value="19800" />
+          <point position="320000" value="20500" />
+          <point position="640000" value="20600" />
+        </distancecurve>
+        <scalecurve>
+          <point position="0" value="1" />
+          <point position="5000" value="1" />
+          <point position="20000" value="0.5" />
+          <point position="40000" value="0.2" />
+          <point position="80000" value="0.1" />
+          <point position="160000" value="0.05" />
+          <point position="320000" value="0.02" />
+          <point position="640000" value="0.02" />
+        </scalecurve>
+        <alphacurve>
+          <point position="0" value="1" />
+          <point position="5000" value="0.8" />
+          <point position="20000" value="0.6" />
+          <point position="40000" value="0.4" />
+          <point position="80000" value="0.2" />
+          <point position="160000" value="0.1" />
+          <point position="320000" value="0.05" />
+          <point position="640000" value="0.02" />
+        </alphacurve>
+      </mode>
+      <mode>
+        <camera fov="20" follow="true">
+          <offset>
+            <position y="1000000" />
+            <rotation pitch="-90" />
+          </offset>
+        </camera>
+        <sector background="true" geometries="true" texts="false" highways="true"/>
+        <missionoffers icons="true" texts="true"/>
+        <axislabels enabled="true" static="false" x="19000" y="19000" z="19000" color="holomap_radar_axis_labels" />
+        <radarrange color="holomap_radar_range" reducedcolor="holomap_radar_range_reduced" ringwidth="200" ringmaterial="map.map_radar_range_01" ringalpha="0.05" allobjects="false"/>
+        <icon scale="0.7" maxsize="250" align="false">
+          <player scale="1" />
+        </icon>
+        <softtarget scale="1.5" />
+        <selection scale="1.5" />
+        <text scale="5" />
+      </mode>
+      <mode>
+        <camera fov="20" follow="false">
+          <offset>
+            <position y="2500000" />
+            <rotation pitch="-90" />
+          </offset>
+        </camera>
+        <sector background="true" geometries="true" texts="false" highways="true"/>
+        <missionoffers icons="true" texts="true"/>
+        <axislabels enabled="false" />
+        <radarrange color="holomap_radar_range" reducedcolor="holomap_radar_range_reduced" ringwidth="200" ringmaterial="map.map_radar_range_01" ringalpha="0.05" allobjects="false"/>
+        <icon scale="0.7" maxsize="250" align="false">
+          <player scale="1" />
+        </icon>
+        <softtarget scale="1.5" />
+        <selection scale="1.5" />
+        <text scale="5" />
+      </mode>
+    </radar>
+    <universe>
+      <camera zoom="300000" min="1000" max="9200000" steps="150" speed="2.0" />
+      <highway material="map.highway" width="300" scaledist="500000" tilingfactor="3" color="holomap_highway" inactivecolor="holomap_highway_inactive" />
+      <superhighway material="map.highway" width="300" scaledist="100000" tilingfactor="3" color="holomap_superhighway" />
+      <tradeoffer groupdist="0.2" groupalldist="1000000">
+        <frame width="10" color="holomap_tradeoffer_frame" />
+        <expired fading="0.1" />
+        <line width="4000" volumewidth="400" pricewidth="800" volume_s="500" volume_m="5000" volume_l="50000" />
+      </tradeoffer>
+      <yield>
+        <fillbar width="60" color="holomap_yieldbar" emptycolor="holomap_yieldbar_empty" />
+        <text margin="150" color="holomap_yield_value" detailcolor="holomap_yield_detail" />
+      </yield>
+      <missionoffer fontsize="24" textoffset="150" textdistance="200000" />
+      <sectorname fontsize="32" separator=" - " color="holomap_sectorname" pickedcolor="holomap_sectorname_picked">
+        <offset y="0.001" z="0.54" />
+        <fading fadeinstart="1500000" fadeinend="1200000" />
+      </sectorname>
+      <sectorcontent maxdistance="10000000" />
+      <stationname maxzoom="300000" />
+      <hullbar width="25" offset="150" color="holomap_hullbar" emptycolor="holomap_hullbar_empty" />
+      <shieldbar width="25" offset="200" color="holomap_shieldbar" emptycolor="holomap_shieldbar_empty" />
+      <oxygenbar width="25" offset="100" color="holomap_oxygenbar" emptycolor="holomap_oxygenbar_empty" />
+      <progressbar color="holomap_progressbar" emptycolor="holomap_progressbar_empty" />
+      <buyoffer color="holomap_buyoffer" />
+      <selloffer color="holomap_selloffer" />
+      <text scale="4.2" />
+      <ecliptic glow="0.2">
+        <line width="14" alpha="0.125" />
+        <sphere radius="25" alpha="0.4" />
+      </ecliptic>
+      <infobox pickedalpha="0.25">
+        <offset>
+          <single x="400" y="-200" />
+          <group margin="2">
+            <outside x="300" y="150" />
+            <inside x="-100" y="-200" />
+          </group>
+        </offset>
+        <background margin="100" color="holomap_infobox_background" selectedcolor="holomap_infobox_selected" pickedcolor="holomap_infobox_picked" />
+        <frame buffer="0.03" color="holomap_infobox_frame" />
+      </infobox>
+      <radarrange ringwidth="0.002" ringmaterial="dummy.map" ringalpha="0.04" circlematerial="map.gradient_radial_01" circlealpha="0.005" />
+      <proberange ringwidth="0.002" ringmaterial="dummy.map" ringalpha="0.04" circlematerial="map.gradient_radial_01" circlealpha="0.005" />
+    </universe>
+    <universemacro>
+      <icon scale="3" />
+      <text scale="3" />
+      <sectorname>
+        <fading fadeinstart="1000000" fadeinend="800000" />
+      </sectorname>
+      <lockedcolor color="holomap_locked_sector" />
+    </universemacro>
+    <construction>
+      <snap distance="0.1" />
+      <camera min="10" max="40000" steps="400" speed="2.0" distance="1.5" mousedragdistance="2000" mousewheeldistance="200">
+        <rotation yaw="-30" pitch="-60" />
+        <speedcurve>
+          <point position="0.0" value="0" />
+          <point position="1.0" value="200" />
+        </speedcurve>
+      </camera>
+      <colors>
+        <valid color="holomap_construction_valid" />
+        <invalid color="holomap_construction_invalid" />
+        <connections>
+          <compatible color="holomap_construction_compatible">
+            <color tag="venture" color="holomap_construction_venture" />
+          </compatible>
+          <incompatible color="holomap_construction_incompatible">
+            <color tag="venture" color="holomap_construction_incompatible_venture" />
+          </incompatible>
+        </connections>
+      </colors>
+      <frame width="10" mapmaterial="false" color="holomap_construction_frame" obstructedcolor="holomap_construction_frame_obstructed" />
+      <exclusionzone width="10" mapmaterial="false" color="holomap_construction_exclusionzone" />
+      <connections template="axis_gizmo" scale="150" maxamount="2" />
+      <collision scale="0.8" />
+    </construction>
+    <plot validcolor="holomap_plot_valid" invalidcolor="holomap_plot_invalid">
+      <objectbox material="map.map_buildbox_01" />
+    </plot>
+    <upgrade>
+      <camera min="1" max="3" steps="20" speed="2.0">
+        <startrotation yaw="145" pitch="-20" roll="0" />
+      </camera>
+    </upgrade>
+    <orders>
+      <!-- TODO: define proper intermediate and fallback geometries -->
+      <icons prefix="order_" scale="3" queuescale="5" intermediate="" fallback="mapob_unknown" activecolor="holomap_order_active" activeselectedcolor="holomap_order_selected_active" inactivecolor="holomap_order_inactive" inactiveselectedcolor="holomap_order_selected_inactive" overridecolor="holomap_order_override" failedcolor="holomap_order_failed">
+        <offset x="250" y="250" z="-1" />
+        <radius ringwidth="0.005" material="dummy.map" />
+        <syncpoint id="order_syncpoint" iconscale="5" />
+      </icons>
+      <line width="30" selectedwidth="40" pickwidth="50" cutoff="100" dz="5000" activecolor="holomap_orderline_active" activeselectedcolor="holomap_orderline_selected_active" inactivecolor="holomap_orderline_inactive" inactiveselectedcolor="holomap_orderline_selected_inactive">
+        <break icon="" scale="1" />
+      </line>
+    </orders>
+    <intersectordefence>
+      <icon id="order_intersectordefence" iconscale="5" edgemargin="0.04" />
+      <line width="30" tiling="0.02" material="map.map_intersectordefenceline" color="holomap_intersector_defence_line" />
+    </intersectordefence>
+    <guidance>
+      <line width="30" pickwidth="50" cutoff="0" dz="5000" />
+      <radius ringwidth="20" material="dummy.map" />
+      <sphere scale="0.02"/>
+      <findwayicon id="order_search" iconscale="3">
+        <offset x="150" y="150" z="-1" />
+      </findwayicon>
+    </guidance>
+    <jumpgate>
+      <line width="50" cutoff="100" color="holomap_jumpgate_line" material="map.gradient">
+        <fading range="0.2" ringgate="0.3" forceicon="1.1" />
+      </line>
+    </jumpgate>
+    <cluster width="12000" pickwidth="500" material="map.gradient" color="holomap_cluster">
+      <coordinates format="%d, %d" fontsize="24" color="holomap_cluster_coords">
+        <offset x="-0.32" y="0" z="-0.56" />
+      </coordinates>
+    </cluster>
+    <sector minsize="100000" width="30000" sizefactor="0.985" material="map.map_sector_border_01" fillmaterial="map.sectorhex" alpha="0.2" fillalpha="0.8" padding="15000"/>
+    <fogofwar gridsize="5000" material="map.hexgrid">
+      <periphery color="holomap_fogofwar_periphery" />
+      <region>
+        <object_detail material="map.region_object_detail" density="0.0" maxamount="1000" scale="500" color="holomap_regiondetail_object" />
+        <nebula_detail material="map.region_nebula_detail" density="0.0" maxamount="1000" scale="20000" spheresegments_long="12" spheresegments_lat="6" color="holomap_regiondetail_nebula" />
+      </region>
+      <fading fadeinstart="1000000" fadeinend="400000" />
+    </fogofwar>
+    <sectorbackground material="map.map_bg_sector" amount="50" scale="75000" max_xz="250000" mindepth="100000" depth="150000" color="holomap_sectorbg">
+      <fading fadeinstart="200000" fadeinend="160000" />
+    </sectorbackground>
+    <picking>
+      <icon minsize="1.5" renderscale="1.2" />
+      <text bbscale="1.1" renderscale="1.05" />
+    </picking>
+    <sound blip="notification_hint" />
+    <attackmarker duration="1.0" color="holomap_attackmarker" shake="0.002">
+      <fading fadeoutstart="200000" fadeoutend="160000" />
+      <icon id="mapob_alert" iconscale="1"/>
+    </attackmarker>
+    <attackedobject shake="0.002" duration="0.5"/>
+  </holomap>
+  <!-- These are NOT texture coordinates, because the UI only displays 50% of the curve at a time. Make sure to enter the scaled positions relative to the center of the texture (peak) -->
+  <minigame>
+    <difficulties>
+      <difficulty>
+        <curve value="1" />
+      </difficulty>
+      <difficulty>
+        <curve value="3" />
+      </difficulty>
+      <difficulty>
+        <curve value="2" />
+      </difficulty>
+      <difficulty>
+        <curve value="4" />
+      </difficulty>
+      <difficulty>
+        <curve value="5" />
+      </difficulty>
+    </difficulties>
+    <curves>
+      <curve peak="0.5">
+        <position x="-0.06" level="1" />
+        <position x="0.136" level="2" />
+        <position x="0.266" level="3" />
+        <position x="0.38" level="4" />
+        <position x="0.46" level="5" />
+        <position x="0.52" level="4" />
+        <position x="0.558" level="3" />
+        <position x="0.62" level="2" />
+        <position x="0.72" level="1" />
+        <position x="0.876" level="0" />
+      </curve>
+      <curve peak="0.5">
+        <position x="0.436" level="1" />
+        <position x="0.456" level="2" />
+        <position x="0.472" level="3" />
+        <position x="0.482" level="4" />
+        <position x="0.49" level="5" />
+        <position x="0.524" level="4" />
+        <position x="0.62" level="3" />
+        <position x="0.72" level="2" />
+        <position x="0.82" level="1" />
+        <position x="0.924" level="0" />
+      </curve>
+      <curve peak="0.5">
+        <position x="-0.006" level="1" />
+        <position x="0.176" level="2" />
+        <position x="0.332" level="3" />
+        <position x="0.428" level="4" />
+        <position x="0.49" level="5" />
+        <position x="0.528" level="4" />
+        <position x="0.538" level="3" />
+        <position x="0.55" level="2" />
+        <position x="0.58" level="1" />
+        <position x="0.624" level="0" />
+      </curve>
+      <curve peak="0.5">
+        <position x="0.36" level="1" />
+        <position x="0.444" level="2" />
+        <position x="0.476" level="3" />
+        <position x="0.488" level="4" />
+        <position x="0.496" level="5" />
+        <position x="0.536" level="4" />
+        <position x="0.596" level="3" />
+        <position x="0.696" level="2" />
+        <position x="0.854" level="1" />
+        <position x="1.04" level="0" />
+      </curve>
+      <curve peak="0.5">
+        <position x="0.076" level="1" />
+        <position x="0.18" level="2" />
+        <position x="0.28" level="3" />
+        <position x="0.38" level="4" />
+        <position x="0.476" level="5" />
+        <position x="0.51" level="4" />
+        <position x="0.518" level="3" />
+        <position x="0.528" level="2" />
+        <position x="0.544" level="1" />
+        <position x="0.564" level="0" />
+      </curve>
+    </curves>
+  </minigame>
+  <longrangescan>
+    <scan effect="scfx_wave_01" range="200000" speed="25000" coneratio="1">
+      <angle pitch="45" yaw="60" />
+      <chargetime min="2.0" max="2.0" />
+    </scan>
+    <result unidentified="scfx_result_bad_01" target="scfx_result_special_01" maxunidentified="100" maxdistance="20000" scale="0.5" />
+    <visualization maxheight="0.5" minheight="0.01" width="3.0" depth="1.5" fading="0.5" goodcolor="longrangescan_good" badcolor="longrangescan_bad" />
+  </longrangescan>
+  <signalleak>
+    <visualization>
+      <base n="1" dx="0.01" width="0.004" material="p1.gui_gradient_outline_01" color="signalleak_base">
+        <position y="-0.4" z="1.4" />
+        <animationcomponents>
+          <animationcomponent frequency="13" phase="1" amplitude="0.005" />
+          <animationcomponent frequency="17" phase="3" amplitude="0.005" />
+          <animationcomponent frequency="53" phase="10" amplitude="0.005" />
+        </animationcomponents>
+        <background height="0.015" width="0.03" offset="0.01" material="p1.gui_dock_background" color="signalleak_background" />
+      </base>
+      <scanmode n="4" dx="0.01" width="0.004" directionfactor="0.5" minamplitude="0.1" material="p1.gui_gradient_outline_01" color="signalleak_scanmode">
+        <position y="-0.4" z="1.4" />
+        <animationcomponents>
+          <animationcomponent frequency="13" phase="1" amplitude="0.015" />
+          <animationcomponent frequency="17" phase="3" amplitude="0.015" />
+          <animationcomponent frequency="53" phase="10" amplitude="0.015" />
+        </animationcomponents>
+        <background height="0.03" width="0.1" offset="0.01" material="p1.gui_dock_background" color="signalleak_background" />
+      </scanmode>
+    </visualization>
+  </signalleak>
+  <drop>
+    <base>
+      <chance min="0.65" max="0.85" />
+      <percentage min="0.25" max="0.65" />
+    </base>
+    <hack>
+      <chance min="1" max="1" />
+      <percentage min="0.10" max="0.30" />
+    </hack>
+    <collateral chance="0.1" />
+    <asteroid>
+      <yield richchance="10" richpercentage="90" richvariation="50">
+        <skill level="0" bonus="0" />
+        <skill level="1" bonus="25" />
+        <skill level="2" bonus="50" />
+        <skill level="3" bonus="100" />
+        <skill level="4" bonus="150" />
+        <skill level="5" bonus="300" />
+      </yield>
+    </asteroid>
+    <timeout min="1200" max="1800" />
+    <invulnerability time="5" />
+  </drop>
+  <hintpositions>
+    <!-- Mission-Countdown-timer is hardcoded to appear at 0,0 -->
+    <!-- 0: Top Left -->
+    <position x="25" y="25" />
+    <!-- 1: Top Center -->
+    <position x="50" y="25" />
+    <!-- 2: Top Right -->
+    <position x="75" y="25" />
+    <!-- 3: Center Left -->
+    <position x="25" y="50" />
+    <!-- 4: CENTER -->
+    <position x="50" y="50" />
+    <!-- 5: Center Right -->
+    <position x="75" y="50" />
+    <!-- 6: Bottom Left -->
+    <position x="25" y="75" />
+    <!-- 7: Bottom Center -->
+    <position x="50" y="75" />
+    <!-- 8: Bottom Right -->
+    <position x="75" y="75" />
+    <!-- 9: Quadrant 1 (LT)-->
+    <position x="33" y="33" />
+    <!-- 10: Quadrant 2 (RT) -->
+    <position x="66" y="33" />
+    <!-- 11: Quadrant 3 (LB) -->
+    <position x="33" y="66" />
+    <!-- 12: Quadrant 4 (RB) -->
+    <position x="66" y="66" />
+    <!-- 13: Special 1 : Top-Top Center -->
+    <position x="50" y="10" />
+    <!-- 14: Special 2 : Config menu -->
+    <position x="50" y="15" />
+    <!-- 15: Special 3 : Top-Top Center (slightly lower)-->
+    <position x="50" y="11" />
+    <!-- 16: Special 3 : Top-Top Left -->
+    <position x="22" y="15" />
+    <!-- 17: Special 3 : Top-Top Right -->
+    <position x="78" y="15" />
+    <!-- 18: Special 4 : Above weapon indicator -->
+    <position x="50" y="40" />
+    <!-- 19: Special 5 : Top-Top Right 2 (Below Help) -->
+    <position x="85" y="12" />
+  </hintpositions>
+  <physics friction="0.1" restitution="0.1" inertia="10">
+    <planetcollision warning="150000" kill="100000" />
+    <collisiondamage minimpulse="0.2">
+      <shield>
+        <point position="0" value="0" />
+        <point position="200000" value="20000" />
+      </shield>
+      <!--<hullshield>
+        <point position="0" value="0" />
+        <point position="200000" value="10000" />
+      </hullshield>-->
+    </collisiondamage>
+    <density default="0.01" cargo="0.004" />
+    <octreeobject minsize="500" />
+    <smallobject maxsize="50" />
+    <collisionstrength light="0.5" medium="2.5" />
+    <!--
+    spinning -> min rate of max rotational speed which is considered spinning in JPM
+    despin ->   factor to apply to max rotational accelerations to reach non-spinning state in JPM
+    -->
+    <maxspeed linear="1000000" angular="720" spinning="1.4" despin="8.0" />
+    <additionalmass max="0.25" />
+  </physics>
+  <bonuscontent>
+    <!--
+    <content appid="325580" name="The Teladi Outpost" description="{1020,325580}" />
+    <content appid="258990" name="Original Soundtrack Volume 1" description="{1020,258990}" path="Bonus Content\Original Soundtrack Volume 1" />
+    <content appid="258991" name="Original Soundtrack Volume 2" description="{1020,258991}" path="Bonus Content\Original Soundtrack Volume 2" />
+    <content appid="258992" name="Encyclopedia" description="{1020,258992}" path="Bonus Content\Encyclopedia" />
+    <content appid="258993" name="Artworks" description="{1020,258993}" path="Bonus Content\Artworks" />
+    <content appid="258994" name="X The Space Opera" description="{1020,258994}" path="Bonus Content\X The Space Opera" optional="true" />
+  -->
+  </bonuscontent>
+  <damagestate>
+    <!-- this is the value that will be used for the "high" damage state if the hull damage threshold is 0 -->
+    <high defaultpercent="10" />
+    <!-- these are the fractions between the high damage threshold and 100% at which the respective damage states start -->
+    <medium fraction="0.3" />
+    <low fraction="0.6" />
+  </damagestate>
+  <engine>
+    <!-- this is the time over which acceleration ramps up (flight behaviours are not affected by this) -->
+    <acceleration time="0.5" />
+    <!-- these values define how much of an influence velocity and acceleration has on the various engine effects -->
+    <jet acceleration="4.0" velocity="0.5" scale="1" max="1.0" />
+    <glow acceleration="0.3" velocity="1.0" scale="3.5" max="8.0" />
+    <align minspeed="1.0" minacctime="0.04" minthrustdiff="0.09" />
+    <vortex>
+      <rotation min="30.0" max="100.0" />
+      <speed min="10.0" max="100.0" />
+    </vortex>
+  </engine>
+  <controlpanel>
+    <entry type="hack_all_turrets" duration="600" actiontext="{1010,19}" description="{1029,11}" hackeddescription="{1029,12}" ishack="true">
+      <wares>
+        <ware ware="inv_securityslicer" amount="1" />
+      </wares>
+    </entry>
+    <entry type="hack_discount" actiontext="{1010,19}" description="{1029,21}" hackeddescription="{1029,22}" ishack="true">
+      <discount name="{20210,10021}" amount="10" />
+      <commission name="{20211,10001}" amount="10" />
+      <wares>
+        <ware ware="inv_securitydecryptionsystem" amount="1" />
+      </wares>
+    </entry>
+    <entry type="hack_engineer" duration="18000" actiontext="{1010,19}" description="{1029,31}" hackeddescription="{1029,32}" ishack="true">
+      <wares>
+        <ware ware="inv_securitydecryptionsystem" amount="1" />
+      </wares>
+    </entry>
+    <entry type="hack_production" duration="18000" actiontext="{1010,19}" description="{1029,41}" hackeddescription="{1029,42}" ishack="true">
+      <wares>
+        <ware ware="inv_securitydecryptionsystem" amount="1" />
+      </wares>
+    </entry>
+    <entry type="hack_storage" duration="600" actiontext="{1010,19}" description="{1029,51}" hackeddescription="{1029,52}" ishack="true">
+      <wares>
+        <ware ware="inv_securitydecryptionsystem" amount="1" />
+      </wares>
+    </entry>
+    <entry type="hack_buildmodules" duration="18000" actiontext="{1010,19}" description="{1029,61}" hackeddescription="{1029,62}" ishack="true">
+      <wares>
+        <ware ware="inv_securitydecryptionsystem" amount="1" />
+      </wares>
+    </entry>
+    <entry type="hack_shieldgenerators" duration="600" actiontext="{1010,19}" description="{1029,71}" hackeddescription="{1029,72}" ishack="true">
+      <wares>
+        <ware ware="inv_securitydecryptionsystem" amount="1" />
+      </wares>
+    </entry>
+    <entry type="hack_watchdogs" duration="600" actiontext="{1010,19}" description="{1029,81}" hackeddescription="{1029,82}" ishack="true">
+      <wares>
+        <ware ware="inv_securitydecryptionsystem" amount="1" />
+      </wares>
+    </entry>
+    <entry type="hack_hiringdiscount" duration="600" actiontext="{1010,19}" description="{1029,91}" hackeddescription="{1029,92}" ishack="true">
+      <discount name="{20210,10021}" amount="50" />
+      <wares>
+        <ware ware="inv_securitybypasssystem" amount="1" />
+      </wares>
+    </entry>
+    <entry type="hack_moddingdiscount" duration="600" actiontext="{1010,19}" description="{1029,101}" hackeddescription="{1029,102}" ishack="true">
+      <discount name="{20210,10021}" amount="50" />
+      <wares>
+        <ware ware="inv_securitybypasssystem" amount="1" />
+      </wares>
+    </entry>
+    <entry type="hack_repairdiscount" duration="600" actiontext="{1010,19}" description="{1029,111}" hackeddescription="{1029,112}" ishack="true">
+      <discount name="{20210,10021}" amount="100" />
+      <wares>
+        <ware ware="inv_securitybypasssystem" amount="1" />
+      </wares>
+    </entry>
+    <entry type="hack_traderdiscount" duration="600" actiontext="{1010,19}" description="{1029,121}" hackeddescription="{1029,122}" ishack="true">
+      <discount name="{20210,10021}" amount="20" />
+      <commission name="{20211,10001}" amount="20" />
+      <wares>
+        <ware ware="inv_securitybypasssystem" amount="1" />
+      </wares>
+    </entry>
+    <entry type="hack_radar" duration="300" actiontext="{1010,19}" description="{1029,131}" hackeddescription="{1029,132}" ishack="true">
+      <wares>
+        <ware ware="inv_securitydecryptionsystem" amount="1" />
+      </wares>
+    </entry>
+    <entry type="access_scanner" actiontext="{1010,67}" description="{1029,141}" ishack="false" />
+    <entry type="access_jukebox" price="1" logtype="jukebox" actiontext="{1010,67}" description="{1029,151}" ishack="false" />
+    <entry type="access_dockcamera" actiontext="{1010,67}" description="{1029,161}" ishack="false" />
+    <entry type="access_externalcamera" actiontext="{1010,67}" description="{1029,171}" ishack="false" />
+    <entry type="access_peoplelist" actiontext="{1010,67}" description="{1029,181}" ishack="false" />
+  </controlpanel>
+  <!--TODO @Owen / @Michael xsd support for economy node-->
+  <economy>
+    <prices>
+      <rounding up="false" />
+      <!-- required resource threshold for paying max price and profit factor for selling ships -->
+      <build min="0.25" shipsalefactor="0.3" />
+      <!-- Time in seconds (1 to 40 hours) -->
+      <resource min="3600" max="144000" />
+      <!-- Credits -->
+      <product factor="5000000" />
+      <builder fee="50000" />
+    </prices>
+    <storage max="18000" workforce="14400" normalize="43200" factor="0.1" />
+    <!-- build storage drain settings for fully recycled stations -->
+    <!-- drain starts start x interval seconds after the base station was removed, then percentage % of cargo or a minimum of 10000 cargo volume will be drained every interval -->
+    <!-- 36 intervals of 300s = start draining 20%/min 10000 volume after 36*300s = 10800s = 3h, every 300s = 5min-->
+    <buildstorage interval="300" minvolume="10000" start="36" percentage="20" />
+    <reservation player="7200" trade="3600" />
+    <subscriptiondurations base="18000" tradecompleted="18000" />
+    <illegalwares pricemodifier="1.2" workforceinfluence="0.3">
+      <ware ware="majadust" amount="100" />
+      <ware ware="spacefuel" amount="150" />
+      <ware ware="spaceweed" amount="200" />
+    </illegalwares>
+    <logging checkinterval="3600">
+      <!-- Entries that are older than 24h are condensed into entries covering 3h each, and discard condensed entries after 7 days. -->
+      <!-- Instead of creating multiple subsequent related entries (e.g. on production), allow updating a previous log entry within 1h, even before condensing. -->
+      <category type="cargo" enabled="true" updaterange="3600" max="604800">
+        <condense enabled="true" start="86400" step="10800" />
+      </category>
+      <category type="tradeoffer" enabled="true" updaterange="3600" max="604800">
+        <condense enabled="true" start="86400" step="10800" />
+      </category>
+      <category type="trade" enabled="true" max="86400" />
+      <category type="money" enabled="true" updaterange="3600" max="604800">
+        <condense enabled="true" start="86400" step="10800" />
+      </category>
+    </logging>
+    <!--god.xml has its own module limits for generating stations on gamestart-->
+    <modulelimits production="10" storage="10"/>
+    <!--Time in seconds-->
+    <criticalwarelog abortedbuilddrain="1"/>
+  </economy>
+  <hazardwarning distance="1000">
+    <sound ref="region_radiation_01" mindelay="0.25" maxdelay="2" />
+  </hazardwarning>
+  <scriptparams>
+    <!-- Script access via param keyword (e.g. param.boarding.recruitstrength) -->
+    <category name="boarding">
+      <param name="servicedefencefactor" value="0.05" />
+      <param name="mineffectivemarineskill" value="4"/>
+      <param name="boardingpodmacro" value="macro.ship_gen_xs_boardingpod_01_a_macro"/>
+      <param name="boardingresistancebonuscombinedskill" value="65" comment="The ideal combined skill of a single defender unit used to fulfull the 'boardingresistancebonus'. A bonus lower than this results in a single low skilled unit."/>
+    </category>
+    <category name="autosave">
+      <!-- Autosave settings (no effect if autosaves are disabled) -->
+      <!-- Time that must have passed since last autosave or since loading the game, before next autosave can occur: -->
+      <!-- (mintime to maxtime is the window in which certain events such as undocking can trigger an autosave. If there are no events, autosave is triggered on reaching maxtime.) -->
+      <!-- A mintime of 0min means no trigger-based autosaves, so only maxtime matters. A maxtime of 0min means no timer-based autosaves, so only events after mintime matter. -->
+      <param name="mintime" value="40min" />
+      <param name="maxtime" value="80min" />
+      <!-- In case saving is not possible when attempting autosave (e.g. during a conversation): Define time window in which autosaves are attempted repeatedly. -->
+      <!-- NOTE: In case of timeout, the autosave is skipped and the timer is reset, as if the autosave was successful. -->
+      <param name="retrytimeout" value="120s" />
+    </category>
+    <category name="npcstatemachine">
+      <param name="state_initial"             value="'initial'"/>
+      <param name="signal_reinit"             value="'npc_state_reinit'"/>
+      <param name="signal_leavechair"         value="'npc__leave_post'"/>
+      <param name="signal_pilotreturntochair" value="'npc__return_to_post'"/>
+      <param name="signal_podarrived"         value="'npc__pod_arrived'"/>
+    </category>
+    <category name="cooldown">
+      <!-- Notification cooldown times -->
+      <param name="area_damage" value="10s" />
+      <param name="entering_atmosphere" value="5s" />
+      <param name="entering_hazardous_region" value="60s" />
+      <param name="incoming_missile" value="8s" />
+    </category>
+    <!--TODO @Owen move out of scriptparams-->
+    <category name="interiorpath">
+      <!--TODO @Owen remove allowpartial param. Debug only-->
+      <param name="allowpartial" value="false"/>
+    </category>
+    <category name="voice">
+      <!-- Mapping gender-specific honorifics on generic speaker page (male to female) - can be used for automatic adjustment in NPC usecases -->
+      <param name="female_honorifics" value="table[ {3001}=3002, {3006}=3007, {3011}=3012, {3017}=3018, {3101}=3102, {3106}=3107, {3111}=3112, {3117}=3118 ]" />
+      <!-- Ranges for remote comm chatter -->
+      <param name="chatter_range_docking" value="20km" />
+      <param name="chatter_range_normal" value="40km" />
+      <param name="chatter_range_extended" value="70km" />
+    </category>
+    <category name="formation">
+      <param name="skillshapes" value="table[
+             {0} = [formationshape.lineabreast, formationshape.lineastern, formationshape.circle, formationshape.halfcircle],
+             {3} = [formationshape.vshape, formationshape.invvshape, formationshape.triangle],
+             {6} = [formationshape.cross, formationshape.crossback, formationshape.crossforward, formationshape.xshape, formationshape.xshapeforward, formationshape.xshapeback],
+             {9} = [formationshape.pointguard, formationshape.invpointguard], {12} = [formationshape.wshape, formationshape.eagle, formationshape.twin],
+             {15} = [formationshape.vulcan, formationshape.dartvertical, formationshape.darthorizontal, formationshape.echelon] ]"/>
+      <!-- Default values for formation order parameters -->
+      <param name="shape" value="formationshape.pointguard" />
+      <param name="smallshipminradius" value="150m" />
+      <param name="maxshipsperline" value="15" />
+      <param name="rollformation" value="false" />
+      <param name="rollmembers" value="false" />
+    </category>
+    <category name="docking">
+      <!-- max distance at which player.occupiedship might be given permission to dock. -->
+      <param name="maxdistance" value="table[
+             {class.ship_xs} = 500m,
+             {class.ship_s} = 5km,
+             {class.ship_m} = 5km,
+             {class.ship_l} = 15km,
+             {class.ship_xl} = 15km]"/>
+    </category>
+    <category name="crewtransfer">
+      <param name="podmacro" value="macro.ship_gen_xs_escapepod_01_a_macro" />
+      <!-- Some numbers as basis for pre-calculating pod launch and arrival times, especially for simultaneous transfer of many people between two ships -->
+      <param name="max_npcs_per_pod" value="3" comment="Number of people that can be assigned to the same pod" />
+      <param name="max_pods" value="12" comment="Max number of pods to be launched from an object towards the same destination during bulk crew transfer, even if more people are transferred" />
+      <param name="max_pod_launch_delay" value="15s" comment="Reasonable time in which max_pods are expected to be launched" />
+      <param name="travel_estimation_factor" value="1.2" comment="Factor for estimated travel time to improve chance that boarding pod arrives before timeout" />
+      <param name="max_travel_time" value="5min" comment="Max pod travel duration (not including scheduled launch delay) after which the transferred crew is expected to arrive at destination" />
+      <param name="max_instanced_npcs" value="5" comment="Max number of NPCs per object instanced for transfer visualisation within $instanced_npc_timeframe"/>
+      <param name="instanced_npc_timeframe" value="15s" comment="Time after instantiation a NPC is counted towards the current total for that object"/>
+    </category>
+    <category name="mining">
+      <!-- values should be floats from 0.001 to 1.0 -->
+      <param name="efficiency" value="table[
+             {ware.ice} = 0.9f,
+             {ware.ore} = 0.9f,
+             {ware.silicon} = 0.015f,
+             {ware.nividium} = 0.9f,
+             {ware.hydrogen} = 0.9f,
+             {ware.helium} = 0.9f,
+             {ware.methane} = 0.9f]"/>
+    </category>
+    <category name="buildprocessor">
+      <param name="dismantling_station_processing_endtime_varname" value="'$dismantling_station_processing_endtime'" comment="Blackboard variable name. Value is set to a gametime where the processor is safe to process a station dismantling build."/>
+    </category>
+    <category name="criticalwares">
+      <param name="insufficientthreshold" value="0.9" comment="see attributes of generate_shortage_reports for documentation"/>
+      <param name="insufficientthresholdcutoff" value="3600s" comment="see attributes of generate_shortage_reports for documentation"/>
+      <param name="shortagethreshold" value="0.9" comment="see attributes of generate_shortage_reports for documentation"/>
+    </category>
+    <category name="shipbuilding">
+      <param name="blocked_build_priority_time" value="20min" comment="Time after which a blocked build is considered a priority build"/>
+      <param name="loadout_reduction_time" value="20min" comment="Time after which the loadout of a ship queued to be built is reduced to increase chances of starting construction"/>
+      <param name="queued_build_abort_time_military" value="40min" comment="Time after which builds for military ships are aborted if the resources to start construction are not available"/>
+      <param name="queued_build_abort_time_civilian" value="60min" comment="Time after which builds for civilian ships are aborted if the resources to start construction are not available"/>
+    </category>
+    <category name="factionlogic">
+      <param name="request_commandeerable_freighter_release_time" value="90min" comment="Time after which the ship will be released"/>
+
+      <!-- spawn wait times should be longer than the shipbuilding.loadout_reduction_time to increase the chance of the construction starting -->
+      <param name="request_freighter_spawn_wait_time" value="30min" comment="Time to allow the freighter to start being placed in a shipyard"/>
+      <param name="request_freighter_build_wait_time" value="1h" comment="Fallback time to allow the freighter to be built by the shipyard after spawning. Spawning usually only happens when all resources are present and building can start."/>
+      <param name="request_pri_freighter_spawn_wait_time" value="30min" comment="Time to allow the freighter to start being placed in a shipyard"/>
+      <param name="request_pri_freighter_build_wait_time" value="1h" comment="Fallback time to allow the freighter to be built by the shipyard after spawning. Spawning usually only happens when all resources are present and building can start."/>
+
+      <param name="dismantle_station_timeout" value="12h" comment="Time after which to consider dismantling a station if all productions are paused"/>
+      <param name="pause_production_timeout" value="24h" comment="Time to monitor a paused production"/>
+
+      <param name="request_production_build_wait_time" value="5h" comment="Time to allow the building to start"/>
+      <param name="request_production_build_timeout"   value="5h" comment="Time to allow the build to progress before disregarding"/>
+      <param name="request_production_working_timeout" value="5h" comment="Time to allow the factory to work before disregarding"/>
+
+      <param name="request_factory_build_wait_time" value="15h" comment="Time to allow the building to start, where any module is operational or buildmodule is building"/>
+      <param name="request_factory_build_timeout"   value="10h" comment="Time to allow the build to progress before disregarding"/>
+      <param name="request_factory_working_timeout" value="5h" comment="Time to allow the factory to work before disregarding"/>
+    </category>
+    <category name="spacereservation">
+      <param name="maxduration" value="30min" comment="Maximum time a reservation is allowed to persist."/>
+    </category>
+  </scriptparams>
+  <masstraffic>
+    <objects clearance="40" renderdistance="30000" componentdistance="2000" lookahead="0.7">
+      <deviation>
+        <amplitude x="5" y="5" z="2.5" />
+        <period>
+          <min x="5" y="5" z="10" />
+          <max x="10" y="10" z="20" />
+        </period>
+        <phase>
+          <min x="0" y="0" z="0" />
+          <max x="100" y="100" z="100" />
+        </phase>
+      </deviation>
+      <width default="10">
+        <tag id="width_welder_slow" width="0" />
+        <tag id="width_welder_normal" width="10" />
+        <tag id="width_local_highway" width="50" />
+        <tag id="width_super_highway" width="100" />
+        <tag id="width_highway_parallel" width="30" />
+        <tag id="width_empty_space" width="30" />
+        <tag id="width_narrow" width="0" />
+        <tag id="width_normal" width="2.5" />
+        <tag id="width_wide" width="10" />
+        <tag id="width_blocklink" width="10" />
+      </width>
+      <widthfactors>
+        <point position="0" value="1" />
+        <point position="180" value="0" />
+      </widthfactors>
+      <speed default="40">
+        <tag id="speed_welder_slow" speed="10" />
+        <tag id="speed_welder_normal" speed="100" />
+        <tag id="speed_welder_fast" speed="2500" />
+        <tag id="speed_welder_launch" speed="2500" />
+        <tag id="speed_welder_dock" speed="100" />
+        <tag id="speed_highway_entry" speed="50" />
+        <tag id="speed_highway_exit" speed="250" />
+        <tag id="speed_highway_parallel" speed="125" />
+        <tag id="speed_empty_space" speed="100" />
+        <tag id="speed_slow" speed="15" />
+        <tag id="speed_fast" speed="20" />
+        <tag id="speed_faster" speed="40" />
+        <tag id="speed_blocklink" speed="40" />
+      </speed>
+    </objects>
+    <highwaytrailcolor safe="trail_highway_safe" danger="trail_highway_danger" />
+    <network connectstations="true" maxlengthforshortcuts="-1">
+      <blocklinks maxconnections="6" prune="true" maxdistance="5000" />
+      <closelinks maxheight="25" maxdistance="25" />
+      <tangent length="0.33" />
+      <curves maxlength="0.4" turnspeed="30" />
+      <highway connectlocalhighways="false" connecthighwaygates="false">
+        <parallelroad length="5000" distancefactor="1.5" />
+        <entryroad length="-2000" />
+        <exitroad length="2000" />
+      </highway>
+      <build numpaths="10" numpoints="3" />
+      <repair numpaths="1" />
+      <maxflows connection="5" local="50" />
+    </network>
+  </masstraffic>
+  <lowattentioncombat>
+    <!-- 3.00b6:
+          - reduced surfaceelementchance to mitigate loss of surface elements to more closely match high attention,
+              but this effectively decreases the time taken to destroy hulls due to surface elements effectively soaking up damage much less.
+          - reduced damage done in general to simulate bullets missing or not firing due to manoeuvre. -->
+    <!-- 4.00b7:
+          - added param hitchance - global hitchance. can effectively be used to control the duration of low attention combat relative to high to account for events in low occurring faster than in high.
+          - added param missmultiplier - multiplied by hitchance whenever there's a chance to miss. exaggerates the effect of having a chance to miss.
+          - defence minspeed changed to threshold. ships slower than minspeed will not be affected by maneouverfactor.
+          - maneouverfactor and sizefactor increased from 0.4 to 0.7 to make speed and agility more significant in low attention. supported by changes in code.
+          - surfaceelementchance increased from 0.15 to 0.6 to improve consistency with how ships fight in high attention. -->
+    <!-- 4.20b1:
+          - added moduleturretchance to simulate station turrets not being able to fire due to complex geometry
+          - repurposed unused sizefactor for shot miss bonus (currently only for turrets). currently 0.02 for zero sized objects, 1.0 for 100m wide objects
+          - replaced defence minspeed factor with maxspeed and min/maxspeedfactor for shot miss bonus (currently only for turrets). currently 0.2 for 100m/s objects, 0.6 for 0m/s objects
+          - reduced the chance of damage being applied to surface elements instead of the main hull from 0.6 to 0.3
+          - removed maneouverfactor which was applied on total dps after individual weapon systems already factored in target manoeuvrability-->
+    <!-- 6.00:
+          - added turretfirechance to simulate not all turrets being able to fire due to target position
+          - reduced surfaceelementchance from 0.3 to 0.02
+          - missmultiplier set to 1.0 (which negates any affect of this parameter, to be dropped?)
+          - surfaceelementfactor increased from 0.7 to 0.8, to now deal more damage to targeted elements. remaining damage is applied to the object
+          - when selecting random surface elements to attack, the engine now picks from random slots on the object. if that slot has no operational element, the damage is done to the object
+            this is to simulate objects having their surface elements hit less as more are destroyed, or if less are installed
+          - increased missileweaponfactor from 0.52 to 0.9 as part of the improvements to missile damage application, ammo consumption and countermeasure effectivness
+          - added dodgedelay which adds a random time penalty when internally calculating the time the object can manoeuver out of their projected boundingbox of travel-->
+
+    <attack hitchance="0.9" missmultiplier="1.0" firingarea="36000000" laserweaponfactor="1.0" missileweaponfactor="0.9" turretfactor="0.8" moduleturretchance="0.7" dronebulletfactor="0.2275" dronemissilefactor="0.182" minspeed="100" surfaceelementchance="0.02" surfaceelementexplosivechance="0.1" surfaceelementfactor="0.8" shieldgeneratorchance="0.2" missilefirethreshold="0.3" missilehitfactor="0.3" guidedmissilehitfactor="0.8" bullethitfactor="0.7" beamhitfactor="0.9" flakhitfactor="0.9" turretfirechance="0.3"/>
+    <defence maxspeed="600" minspeedfactor="0.3" maxspeedfactor="0.9" dodgedelay="0.5" maxsize="75" sizefactor="0.2" capshipfactor="0.9" countermeasurefactor="0.8" dronedistractionfactor="0.003" dronedamageamount="200000"/>
+  </lowattentioncombat>
+  <lootmagnet range="1000" force="10" maxspeed="50" sound="containermagnet_active">
+    <size classes="ship_m" range="2000" force="20" maxspeed="100" />
+    <size classes="ship_l ship_xl" range="10000" force="20" maxspeed="100" />
+  </lootmagnet>
+  <docking maxspeed="50" shipfrequency="0.25" shipcolor="dockguidance_shiphologram">
+    <dock tags="dock_xs spacesuit" timeout="300" maxdistance="500" unassigndistance="7" retrievalsafety="10" playerretrievalsafety="20">
+      <dockpath zdistance="50" />
+      <farguidance material="p1effects.p1_guidance_docking_01" amount="10" duration="1.5" scale="0.02" starttangent="1.0" startdistance="2.0" maxdistance="200" dx="1" dz="0.5" fadein="2.0" />
+      <nearguidance renderdistance="1.2906321">
+        <background material="p1.gui_dock_background" width="0.5" height="0.5">
+          <offset y="0.2" z="2.0" />
+        </background>
+        <rotation>
+          <uturn material="p1.gui_dock_ship_rot_uturn" width="0.05" height="0.05" frequency="0.75" color="dockui_uturn" />
+          <direction material="p1.gui_dock_ship_rot_horizontal" width="0.04" height="0.04" minangle="5" minoffset="2.0" maxoffset="5.0" frequency="0.75" color="dockui_shiprot_horizontal" />
+          <target material="p1.gui_dock_ship_rot_target" width="0.25" height="0.0625" goodcolor="dockui_target_rot_good" badcolor="dockui_target_rot_bad" />
+          <currentroll material="p1.gui_dock_ship_roll_current" width="0.25" height="0.0625" goodcolor="dockui_current_roll_good" badcolor="dockui_current_roll_bad" />
+          <targetroll material="p1.gui_dock_ship_roll_target" width="0.25" height="0.0625" goodcolor="dockui_target_roll_good" badcolor="dockui_target_roll_bad" />
+        </rotation>
+        <position outsidealpha="0.1">
+          <offset y="-0.2" z="2" />
+          <scale x="0.03" y="0.03" z="0.03" />
+          <min x="-5" y="-5" z="-5" />
+          <max x="5" y="5" z="5" />
+          <base material="p1.gui_dock_frame_ground" width="0.75" height="1.5" goodcolor="dockui_dockframe_ground_good" badcolor="dockui_dockframe_ground_bad" />
+          <horizontal material="p1.gui_dock_pos_horizontal" width="0.75" height="1.5" goodcolor="dockui_dockpos_horizontal_good" badcolor="dockui_dockpos_horizontal_bad" />
+          <vertical material="p1.gui_dock_pos_vertical" width="0.05" height="0.5" goodcolor="dockui_dockpos_vertical_good" badcolor="dockui_dockpos_vertical_bad" />
+          <currentpos material="p1.gui_dock_ship_pos_current" width="0.03" height="0.03" linewidth="0.02" goodcolor="dockui_shippos_current_good" badcolor="dockui_shippos_current_bad" />
+          <projectedpos material="p1.gui_dock_ship_pos_projected" width="0.1" height="0.1" align="false" goodcolor="dockui_shippos_projected_good" badcolor="dockui_shippos_projected_bad" />
+        </position>
+      </nearguidance>
+      <maxoffsets>
+        <maxoffset>
+          <position x="8" y="4" z="4" />
+          <rotation pitch="20" yaw="20" roll="20" />
+        </maxoffset>
+      </maxoffsets>
+      <landing>
+        <entry traffic="normal" vertical="true" duration="3.0">
+          <slowdown duration="0.5" />
+          <align duration="2.0" />
+          <suspension dy="-0.05" duration="0.25" />
+          <sway>
+            <pitch min="0.2" max="0.3" randomsgn="false" cp1="1" cp2="0.2" />
+            <yaw min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="heavy" vertical="true" duration="2.0">
+          <slowdown duration="0.5" />
+          <align duration="1.0" />
+          <suspension dy="-0.05" duration="0.25" />
+          <sway>
+            <pitch min="0.2" max="0.3" randomsgn="false" cp1="1" cp2="0.2" />
+            <yaw min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="gridlock" vertical="true" duration="1.0">
+          <slowdown duration="0.5" />
+          <align duration="0.5" />
+          <suspension dy="-0.05" duration="0.25" />
+          <sway>
+            <pitch min="0.2" max="0.3" randomsgn="false" cp1="1" cp2="0.2" />
+            <yaw min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+      </landing>
+      <takeoff>
+        <entry traffic="normal" vertical="true" duration="2.0">
+          <release duration="0.5" dy="0.1" />
+          <align starttime="1.0" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="heavy" vertical="true" duration="1.0">
+          <release duration="0.5" dy="0.1" />
+          <align starttime="0.5" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="gridlock" vertical="true" duration="0.5">
+          <release duration="0.25" dy="0.1" />
+          <align starttime="0.25" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+      </takeoff>
+    </dock>
+    <dock tags="dock_s" timeout="300" maxdistance="5000" unassigndistance="100" retrievalsafety="15" playerretrievalsafety="25" allowrotated="true">
+      <dockpath zdistance="100" />
+      <farguidance material="p1effects.p1_guidance_docking_01" amount="10" duration="2.0" scale="0.03" starttangent="0.2" startdistance="40.0" maxdistance="2000" dx="15" dz="50" fadein="2.0" />
+      <nearguidance renderdistance="1.2906321">
+        <background material="p1.gui_dock_background" width="1.5" height="1.5">
+          <offset y="0.2" z="2.0" />
+        </background>
+        <rotation>
+          <uturn material="p1.gui_dock_ship_rot_uturn" width="0.05" height="0.05" frequency="0.75" color="dockui_uturn" />
+          <direction material="p1.gui_dock_ship_rot_horizontal" width="0.04" height="0.04" minangle="5" minoffset="2.0" maxoffset="5.0" frequency="0.75" color="dockui_shiprot_horizontal" />
+          <target material="p1.gui_dock_ship_rot_target" width="0.017" height="0.017" goodcolor="dockui_target_rot_good" badcolor="dockui_target_rot_bad" />
+          <currentroll material="p1.gui_dock_ship_roll_current" width="0.25" height="0.0625" goodcolor="dockui_current_roll_good" badcolor="dockui_current_roll_bad" />
+          <targetroll material="p1.gui_dock_ship_roll_target" width="0.25" height="0.0625" goodcolor="dockui_target_roll_good" badcolor="dockui_target_roll_bad" />
+        </rotation>
+        <position outsidealpha="0.1">
+          <offset y="-0.2" z="2" />
+          <scale x="0.01" y="0.005" z="0.1" />
+          <min x="-50" y="-10" z="-10" />
+          <max x="50" y="50" z="10" />
+          <base material="p1.gui_dock_frame_ground" width="0.75" height="1.5" goodcolor="dockui_dockframe_ground_good" badcolor="dockui_dockframe_ground_bad" />
+          <horizontal material="p1.gui_dock_pos_horizontal" width="0.75" height="0.6" goodcolor="dockui_dockpos_horizontal_good" badcolor="dockui_dockpos_horizontal_bad" />
+          <vertical material="p1.gui_dock_pos_vertical" width="0.1" height="0.7" goodcolor="dockui_dockpos_vertical_good" badcolor="dockui_dockpos_vertical_bad" />
+          <currentpos material="p1.gui_dock_ship_pos_current" width="0.08" height="0.08" linewidth="0.02" goodcolor="dockui_shippos_current_good" badcolor="dockui_shippos_current_bad" />
+          <projectedpos material="p1.gui_dock_ship_pos_projected" width="0.08" height="0.08" align="false" goodcolor="dockui_shippos_projected_good" badcolor="dockui_shippos_projected_bad" />
+        </position>
+      </nearguidance>
+      <maxoffsets>
+        <!--S ships have a maximum length and width of 35m - when pitched or rolled by 2 degrees the bottom can deviate from the center offset by sin(2deg) * 17.5m = 0.6m, so the height tolerance needs to be higher than that!-->
+        <maxoffset>
+          <!--Note: the position has been increased to work around certain extreme cases (e.g. a Terran Raptor docking at certain positions in an Argon Wharf). It should be changed back if and when collision detection is improved there.-->
+          <position x="1" y="5" z="3" />
+          <rotation pitch="2" yaw="2" roll="2" />
+        </maxoffset>
+        <maxoffset software="software_dockmk1">
+          <position x="10" y="10" z="10" />
+          <rotation pitch="20" yaw="20" roll="20" />
+        </maxoffset>
+        <maxoffset software="software_dockmk2">
+          <position x="50" y="50" z="50" />
+          <rotation pitch="89" yaw="179" roll="179" />
+        </maxoffset>
+      </maxoffsets>
+      <landing>
+        <entry traffic="normal" vertical="true" duration="8.0">
+          <slowdown duration="0.5" />
+          <align duration="6.0" />
+          <touchdown duration="8.0"/>
+          <suspension dy="-0.15" duration="1" />
+          <sway duration="8.0">
+            <pitch min="0.2" max="0.3" randomsgn="false" cp1="1" cp2="0.2" />
+            <yaw min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="heavy" vertical="true" duration="6.0">
+          <slowdown duration="0.5" />
+          <align duration="4.0" />
+          <touchdown duration="6.0"/>
+          <suspension dy="-0.15" duration="1" />
+          <sway duration="6.0">
+            <pitch min="0.2" max="0.3" randomsgn="false" cp1="1" cp2="0.2" />
+            <yaw min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="gridlock" vertical="true" duration="4.0">
+          <slowdown duration="0.5" />
+          <align duration="3.0" />
+          <touchdown duration="4.0"/>
+          <suspension dy="-0.15" duration="1" />
+          <sway duration="4.0">
+            <pitch min="0.2" max="0.3" randomsgn="false" cp1="1" cp2="0.2" />
+            <yaw min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="normal" vertical="false" usetodockpos="true" duration="8.0">
+          <slowdown duration="0.1" />
+          <align duration="2.0" />
+          <move delay="1.5" duration="5.5" />
+          <touchdown delay="6.5" duration="1.5"/>
+          <suspension dy="-0.15" duration="1" />
+          <sway delay="1.5" duration="6.5">
+            <pitch min="0.2" max="0.3" randomsgn="false" cp1="1" cp2="0.2" />
+            <yaw min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="heavy" vertical="false" usetodockpos="true" duration="6.0">
+          <slowdown duration="0.1" />
+          <align duration="1.5" />
+          <move delay="1.0" duration="4.5" />
+          <touchdown delay="5.0" duration="1.0"/>
+          <suspension dy="-0.15" duration="1" />
+          <sway delay="1.0" duration="5.0">
+            <pitch min="0.2" max="0.3" randomsgn="false" cp1="1" cp2="0.2" />
+            <yaw min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="gridlock" vertical="false" usetodockpos="true" duration="4.0">
+          <slowdown duration="0.1" />
+          <align duration="1.0" />
+          <move delay="0.5" duration="3.25" />
+          <touchdown delay="3.5" duration="0.5"/>
+          <suspension dy="-0.15" duration="1" />
+          <sway delay="0.5" duration="3.5">
+            <pitch min="0.2" max="0.3" randomsgn="false" cp1="1" cp2="0.2" />
+            <yaw min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.1" max="0.25" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+      </landing>
+      <takeoff>
+        <entry traffic="normal" vertical="true" duration="8.0">
+          <release duration="1.5" dy="1.0" />
+          <align starttime="2.0" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="heavy" vertical="true" duration="6.0">
+          <release duration="1.0" dy="1.0" />
+          <align starttime="1.5" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="gridlock" vertical="true" duration="4.0">
+          <release duration="0.5" dy="1.0" />
+          <align starttime="1.0" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="normal" vertical="false" duration="8.0">
+          <release duration="1.5" dy="2.0" />
+          <align starttime="2.0" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="heavy" vertical="false" duration="6.0">
+          <release duration="1.0" dy="2.0" />
+          <align starttime="1.5" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="gridlock" vertical="false" duration="4.0">
+          <release duration="0.5" dy="2.0" />
+          <align starttime="1.0" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+      </takeoff>
+    </dock>
+    <dock tags="dock_m" timeout="300" maxdistance="5000" unassigndistance="100" retrievalsafety="20" playerretrievalsafety="30" allowrotated="true">
+      <dockpath zdistance="300" />
+      <farguidance material="p1effects.p1_guidance_docking_01" amount="10" duration="2.0" scale="0.03" starttangent="0.2" startdistance="40.0" maxdistance="2000" dx="15" dz="50" fadein="2.0" />
+      <nearguidance renderdistance="1.2906321">
+        <background material="p1.gui_dock_background" width="1.5" height="1.5">
+          <offset y="0.2" z="2.0" />
+        </background>
+        <rotation>
+          <uturn material="p1.gui_dock_ship_rot_uturn" width="0.05" height="0.05" frequency="0.75" color="dockui_uturn" />
+          <direction material="p1.gui_dock_ship_rot_horizontal" width="0.04" height="0.04" minangle="5" minoffset="2.0" maxoffset="5.0" frequency="0.75" color="dockui_shiprot_horizontal" />
+          <target material="p1.gui_dock_ship_rot_target" width="0.017" height="0.017" goodcolor="dockui_target_rot_good" badcolor="dockui_target_rot_bad" />
+          <currentroll material="p1.gui_dock_ship_roll_current" width="0.25" height="0.0625" goodcolor="dockui_current_roll_good" badcolor="dockui_current_roll_bad" />
+          <targetroll material="p1.gui_dock_ship_roll_target" width="0.25" height="0.0625" goodcolor="dockui_target_roll_good" badcolor="dockui_target_roll_bad" />
+        </rotation>
+        <position outsidealpha="0.1">
+          <offset y="-0.2" z="2" />
+          <scale x="0.0015" y="0.002" z="0.05" />
+          <min x="-300" y="-10" z="-20" />
+          <max x="300" y="300" z="20" />
+          <base material="p1.gui_dock_frame_ground" width="0.75" height="1.5" goodcolor="dockui_dockframe_ground_good" badcolor="dockui_dockframe_ground_bad" />
+          <horizontal material="p1.gui_dock_pos_horizontal" width="0.75" height="0.6" goodcolor="dockui_dockpos_horizontal_good" badcolor="dockui_dockpos_horizontal_bad" />
+          <vertical material="p1.gui_dock_pos_vertical" width="0.1" height="0.7" goodcolor="dockui_dockpos_vertical_good" badcolor="dockui_dockpos_vertical_bad" />
+          <currentpos material="p1.gui_dock_ship_pos_current" width="0.08" height="0.08" linewidth="0.02" goodcolor="dockui_shippos_current_good" badcolor="dockui_shippos_current_bad" />
+          <projectedpos material="p1.gui_dock_ship_pos_projected" width="0.08" height="0.08" align="false" goodcolor="dockui_shippos_projected_good" badcolor="dockui_shippos_projected_bad" />
+        </position>
+      </nearguidance>
+      <maxoffsets>
+        <!--M ships have a maximum length of 150m - when pitched by 2 degrees the bottom can deviate from the center offset by sin(2deg) * 75m = 2.6m, so the height tolerance needs to be higher than that!-->
+        <maxoffset>
+          <position x="4" y="8" z="4" />
+          <rotation pitch="2" yaw="2" roll="2" />
+        </maxoffset>
+        <maxoffset software="software_dockmk1">
+          <position x="40" y="20" z="40" />
+          <rotation pitch="20" yaw="20" roll="20" />
+        </maxoffset>
+        <maxoffset software="software_dockmk2">
+          <position x="100" y="50" z="100" />
+          <rotation pitch="89" yaw="179" roll="179" />
+        </maxoffset>
+      </maxoffsets>
+      <landing>
+        <entry traffic="normal" vertical="true" duration="16.0">
+          <slowdown duration="0.5" />
+          <align duration="12.0" />
+          <suspension dy="-0.15" duration="2" />
+          <sway>
+            <pitch min="0.1" max="0.25" randomsgn="false" cp1="1" cp2="-0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="heavy" vertical="true" duration="12.0">
+          <slowdown duration="0.5" />
+          <align duration="9.0" />
+          <suspension dy="-0.15" duration="2" />
+          <sway>
+            <pitch min="0.1" max="0.25" randomsgn="false" cp1="1" cp2="-0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="gridlock" vertical="true" duration="8.0">
+          <slowdown duration="0.5" />
+          <align duration="6.0" />
+          <suspension dy="-0.15" duration="2" />
+          <sway>
+            <pitch min="0.1" max="0.25" randomsgn="false" cp1="1" cp2="-0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="normal" vertical="false" usetodockpos="true" duration="16.0">
+          <slowdown duration="0.5" />
+          <align duration="12.0" />
+          <suspension dy="-0.15" duration="2" />
+          <sway>
+            <pitch min="0.1" max="0.25" randomsgn="false" cp1="1" cp2="-0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="heavy" vertical="false" usetodockpos="true" duration="12.0">
+          <slowdown duration="0.5" />
+          <align duration="9.0" />
+          <suspension dy="-0.15" duration="2" />
+          <sway>
+            <pitch min="0.1" max="0.25" randomsgn="false" cp1="1" cp2="-0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="gridlock" vertical="false" usetodockpos="true" duration="8.0">
+          <slowdown duration="0.5" />
+          <align duration="6.0" />
+          <suspension dy="-0.15" duration="2" />
+          <sway>
+            <pitch min="0.1" max="0.25" randomsgn="false" cp1="1" cp2="-0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+      </landing>
+      <takeoff>
+        <entry traffic="normal" vertical="true" duration="16.0">
+          <release duration="2.0" dy="2.0" />
+          <align starttime="2.5" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="heavy" vertical="true" duration="12.0">
+          <release duration="1.5" dy="2.0" />
+          <align starttime="1.5" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="gridlock" vertical="true" duration="8.0">
+          <release duration="1.0" dy="2.0" />
+          <align starttime="1.0" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="normal" vertical="false" duration="16.0">
+          <release duration="2.0" dy="2.0" />
+          <align starttime="2.5" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="heavy" vertical="false" duration="12.0">
+          <release duration="1.5" dy="2.0" />
+          <align starttime="1.5" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+        <entry traffic="gridlock" vertical="false" duration="8.0">
+          <release duration="1.0" dy="2.0" />
+          <align starttime="1.0" />
+          <sway>
+            <pitch min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <yaw min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+            <roll min="0.05" max="0.15" randomsgn="true" cp1="1" cp2="0.2" />
+          </sway>
+        </entry>
+      </takeoff>
+    </dock>
+    <dock tags="dock_l dock_xl" timeout="900" maxdistance="15000" unassigndistance="100" retrievalsafety="10" playerretrievalsafety="20">
+      <dockpath zdistance="10000" />
+      <farguidance material="p1effects.p1_guidance_docking_01" amount="30" duration="2.0" scale="0.03" starttangent="0.2" startdistance="40.0" maxdistance="5000" dx="150" dz="250" fadein="2.0" />
+      <nearguidance renderdistance="1.2906321">
+        <background material="p1.gui_dock_background" width="1.5" height="1.5">
+          <offset y="0.2" z="2.0" />
+        </background>
+        <rotation>
+          <uturn material="p1.gui_dock_ship_rot_uturn" width="0.05" height="0.05" frequency="0.75" color="dockui_uturn" />
+          <direction material="p1.gui_dock_ship_rot_horizontal" width="0.04" height="0.04" minangle="5" minoffset="2.0" maxoffset="5.0" frequency="0.75" color="dockui_shiprot_horizontal" />
+          <target material="p1.gui_dock_ship_rot_target" width="0.017" height="0.017" goodcolor="dockui_target_rot_good" badcolor="dockui_target_rot_bad" />
+          <currentroll material="p1.gui_dock_ship_roll_current" width="0.25" height="0.0625" goodcolor="dockui_current_roll_good" badcolor="dockui_current_roll_bad" />
+          <targetroll material="p1.gui_dock_ship_roll_target" width="0.25" height="0.0625" goodcolor="dockui_target_roll_good" badcolor="dockui_target_roll_bad" />
+        </rotation>
+        <position outsidealpha="0.1">
+          <offset y="-0.2" z="2" />
+          <scale x="0.0005" y="0.001" z="0.001" />
+          <min x="-1000" y="-300" z="-1000" />
+          <max x="1000" y="300" z="1000" />
+          <base material="p1.gui_dock_frame_ground" width="0.75" height="1.5" goodcolor="dockui_dockframe_ground_good" badcolor="dockui_dockframe_ground_bad" />
+          <horizontal material="p1.gui_dock_pos_horizontal" width="0.75" height="0.6" goodcolor="dockui_dockpos_horizontal_good" badcolor="dockui_dockpos_horizontal_bad" />
+          <vertical material="p1.gui_dock_pos_vertical" width="0.1" height="0.7" goodcolor="dockui_dockpos_vertical_good" badcolor="dockui_dockpos_vertical_bad" />
+          <currentpos material="p1.gui_dock_ship_pos_current" width="0.08" height="0.08" linewidth="0.02" goodcolor="dockui_shippos_current_good" badcolor="dockui_shippos_current_bad" />
+          <projectedpos material="p1.gui_dock_ship_pos_projected" width="0.08" height="0.08" align="false" goodcolor="dockui_shippos_projected_good" badcolor="dockui_shippos_projected_bad" />
+        </position>
+      </nearguidance>
+      <maxoffsets>
+        <maxoffset>
+          <position x="10" y="10" z="10" />
+          <rotation pitch="2" yaw="2" roll="2" />
+        </maxoffset>
+        <maxoffset software="software_dockmk1">
+          <position x="100" y="100" z="100" />
+          <rotation pitch="5" yaw="5" roll="5" />
+        </maxoffset>
+        <maxoffset software="software_dockmk2">
+          <position x="500" y="500" z="500" />
+          <rotation pitch="89" yaw="179" roll="179" />
+        </maxoffset>
+      </maxoffsets>
+      <landing>
+        <entry traffic="normal" vertical="true" duration="20.0">
+          <slowdown duration="10.0" />
+          <align duration="5.0" />
+        </entry>
+        <entry traffic="heavy" vertical="true" duration="20.0">
+          <slowdown duration="5.0" />
+          <align duration="5.0" />
+        </entry>
+        <entry traffic="gridlock" vertical="true" duration="20.0">
+          <slowdown duration="5.0" />
+          <align duration="5.0" />
+        </entry>
+      </landing>
+    </dock>
+  </docking>
+  <building margin="4000" basehull="15">
+    <orders equip="Equip" recycling="Recycle"/>
+    <plot baseprice="1000">
+      <gate min="10000" max="50000" factor="5" />
+      <highway min="5000" max="50000" factor="3" />
+      <station min="5000" max="25000" factor="1" highvaluemultiplier="2" />
+      <population factor="0.01" max="25" />
+    </plot>
+    <prices>
+      <factor min="0.5" max="1.5" />
+      <variation min="0.9" max="1.15" />
+    </prices>
+    <recycling>
+      <ship>
+        <resources min="0.2" max="0.5"/>
+      </ship>
+      <station requiresconstructionvessel="0" maxwrecks="2">
+        <resources min="0.2" max="1.0"/>
+      </station>
+    </recycling>
+  </building>
+  <waypoint>
+    <size>
+      <entry tag="sizeLevel1" value="25" />
+      <entry tag="sizeLevel2" value="50" />
+      <entry tag="sizeLevel3" value="100" />
+    </size>
+  </waypoint>
+  <render>
+    <weaponglow max="5" />
+  </render>
+  <sound>
+    <anomaly>
+      <pitchcurve>
+        <!-- increase pitch as the player approaches the center -->
+        <point position="0" value="1" />
+        <point position="1" value="0" />
+      </pitchcurve>
+      <volumecurve>
+        <!-- increase volume as the player approaches the center (in addition to normal sound falloff) -->
+        <point position="0" value="1" />
+        <point position="1" value="0" />
+      </volumecurve>
+    </anomaly>
+    <highspeed startfactor="1.25">
+      <delaycurve>
+        <point position="0" value="5" />
+        <point position="1" value="1" />
+      </delaycurve>
+    </highspeed>
+    <enginedetail>
+      <entry size="dock_xs" amount="10" range="8000" />
+      <entry size="dock_s" amount="5" range="15000" />
+      <entry size="dock_m" amount="5" range="15000" />
+      <entry size="dock_l" amount="5" range="20000" />
+      <entry size="dock_xl" amount="5" range="20000" />
+    </enginedetail>
+  </sound>
+  <workforce>
+    <sustain min="10" range="20"/>
+    <update interval="600" variation="60" />
+    <bonus duration="3600" />
+    <growth interval="600" rate="20">
+      <capacity limit="30000" min="1000" max="1000" />
+      <population limit="10000000000" step="1000000" max="1000" />
+    </growth>
+  </workforce>
+  <upgraderesources>
+    <!-- old/fallback defaults, only used when building is happening on an object that's not covered by the categories below -->
+    <factor countermeasure="200" drone="130" engine="35" missile="600" mine="500" satellite="500" navbeacon="200" resourceprobe="200" lasertower="700" scanner="20" shield="55" thruster="15" turret="101" weapon="30" />
+  </upgraderesources>
+  <shipyardupgraderesources>
+    <!-- large ships tend to have more turret and drone capacity, but relatively few front-mounted weapons -->
+    <factor countermeasure="120" drone="180" engine="20" missile="300" mine="150" satellite="60" navbeacon="30" resourceprobe="60" lasertower="150" scanner="20" shield="30" thruster="5" turret="60" weapon="10" />
+  </shipyardupgraderesources>
+  <wharfupgraderesources>
+    <!-- fewer turrets and drone/missile capacity but a bit more weapons -->
+    <factor countermeasure="25" drone="30" engine="20" missile="150" mine="60" satellite="30" navbeacon="30" resourceprobe="30" lasertower="60" scanner="20" shield="15" thruster="5" turret="30" weapon="20" />
+  </wharfupgraderesources>
+  <equipmentdockupgraderesources>
+    <!-- since these stations typically serve large and small ships alike, their storage focus for surface elements and drones is between wharf and shipyard -->
+    <factor countermeasure="120" drone="200" engine="10" missile="600" mine="200" satellite="60" navbeacon="30" resourceprobe="60" lasertower="150" scanner="20" shield="20" thruster="1" turret="40" weapon="10" />
+  </equipmentdockupgraderesources>
+  <shipupgraderesources>
+    <!-- resupply ship storage allocation based on typical senarios:
+          all ships use countermeasures, some ships use drones, not all ships use missiles, but those that do need lots of them.
+          deployables are very situational. don't stock up on a lot of them for general use. -->
+    <!-- approx 58%, 17%, 22%, 0.7%, 0.6%, 0.7%, 0.6%, 0.6% -->
+    <factor countermeasure="400" drone="120" missile="150" mine="5" satellite="4" navbeacon="5" resourceprobe="4" lasertower="4" scanner="0" engine="0" shield="0" thruster="0" turret="0" weapon="0"/>
+  </shipupgraderesources>
+  <productioncheck reportintermediates="false">
+    <time>
+      <buildshortage min="7200" factor="0.3"/>
+      <production min="7200" />
+      <warning>
+        <low resource="2000" product="1200" />
+      </warning>
+      <trigger>
+        <transport general="6000" special="12000" />
+        <flag nonviable="24000" />
+      </trigger>
+    </time>
+    <threshold resource="0.05" product="0.05" />
+  </productioncheck>
+  <exclusionzones outline="true">
+    <exclusionzone tag="ship_xs" x="70" y="70" z="400" />
+    <exclusionzone tag="ship_s" x="70" y="70" z="400" />
+    <exclusionzone tag="ship_m" x="180" y="180" z="500" />
+    <exclusionzone tag="ship_l" x="1200" y="1200" z="100000" />
+    <exclusionzone tag="ship_xl" x="4000" y="4000" z="100000" />
+    <exclusionzone tag="radar_arg_dish_01" x="1600" y="1400" z="910" />
+  </exclusionzones>
+  <dronemodes>
+    <icons default="hud_drone_error">
+      <entry mode="attackenemies" icon="hud_drone_attackenemies"/>
+      <entry mode="autoassist" icon="hud_drone_autoassist"/>
+      <entry mode="collectanycrate" icon="hud_drone_collect_all"/>
+      <entry mode="collectanymineable" icon="hud_drone_collect_all"/>
+      <entry mode="collecthelium" icon="hud_drone_harvest_helium"/>
+      <entry mode="collecthydrogen" icon="hud_drone_harvest_hydrogen"/>
+      <entry mode="collectice" icon="hud_drone_collect_ice"/>
+      <entry mode="collectillegal" icon="hud_drone_collect_illegal"/>
+      <entry mode="collectlegal" icon="hud_drone_collect_legal"/>
+      <entry mode="collectmethane" icon="hud_drone_harvest_methane"/>
+      <entry mode="collectnividium" icon="hud_drone_collect_nividium"/>
+      <entry mode="collectore" icon="hud_drone_collect_ore"/>
+      <entry mode="collectsilicon" icon="hud_drone_collect_silicon"/>
+      <entry mode="collectselected" icon="hud_drone_collect_selected"/>
+      <entry mode="defend" icon="hud_drone_defend"/>
+      <entry mode="escort" icon="hud_drone_escort"/>
+      <entry mode="missiledefence" icon="hud_drone_missiledefense"/>
+      <entry mode="trade" icon="hud_drone_trade"/>
+    </icons>
+  </dronemodes>
+  <weaponmodes>
+    <icons default="weaponmode_default">
+      <entry mode="attackcapital" icon="weaponmode_attackcapships"/>
+      <entry mode="attackenemies" icon="weaponmode_attackenemies" />
+      <entry mode="attackfighters" icon="weaponmode_attackfighters"/>
+      <entry mode="autoassist" icon="weaponmode_autoassist" />
+      <entry mode="defend" icon="weaponmode_defend" />
+      <entry mode="holdfire" icon="weaponmode_holdfire" />
+      <entry mode="mining" icon="weaponmode_mining" />
+      <entry mode="missiledefence" icon="weaponmode_missiledefence" />
+      <entry mode="prefercapital" icon="weaponmode_prefercapships"/>
+      <entry mode="preferfighters" icon="weaponmode_preferfighters"/>
+      <entry mode="prefermissiles" icon="weaponmode_prefermissiles"/>
+      <entry mode="towing" icon="weaponmode_towing" />
+    </icons>
+  </weaponmodes>
+  <pointer length="3" width="0.001" material="cutscene.laser_pointer">
+    <cursors>
+      <cursor id="asteroid" icon="xrvr_mouse.mousecursor_asteroid" scale="0.02" />
+      <cursor id="collect" icon="xrvr_mouse.mousecursor_collect" scale="0.02" />
+      <cursor id="target" icon="xrvr_mouse.mousecursor_target" scale="0.02" />
+      <cursor id="default" icon="" scale="0.005" />
+      <cursor id="" icon="" scale="0.005" />
+    </cursors>
+    <vrmouse>
+      <origin y="-0.35" z="0.5" />
+    </vrmouse>
+  </pointer>
+  <weaponpointer scale="0.005" material="p1.hud_weaponpointer_01" renderdistance="0.9" inrangecolor="weaponpointer_inrange" outofrangecolor="weaponpointer_outofrange">
+    <pulse amount="1" period="0.3" scale="8"/>
+  </weaponpointer>
+  <storage base="10000000" />
+  <mining>
+    <damagefactors turret="0.7" weapon="1" />
+    <speedfactors ship="0.8" unit="0.8" />
+    <drops distancefactor="3" />
+    <resourcechance min="1" />
+    <yielddensities valuethreshold="6">
+      <ware id="ore" min="0.04" max="40" />
+      <ware id="silicon" min="0.03" max="30" />
+      <ware id="nividium" min="0.0004" max="0.4" />
+      <ware id="ice" min="0.02" max="20" />
+      <ware id="hydrogen" min="0.0034" max="3.4" />
+      <ware id="helium" min="0.0021" max="2.1" />
+      <ware id="methane" min="0.0063" max="6.3" />
+    </yielddensities>
+    <scancolors>
+      <ware id="ore" color="resource_ore" nodecolor="resource_node_ore" iconcolor="resource_icon_ore" />
+      <ware id="silicon" color="resource_silicon" nodecolor="resource_node_silicon" iconcolor="resource_icon_silicon" />
+      <ware id="nividium" color="resource_nividium" nodecolor="resource_node_nividium" iconcolor="resource_icon_nividium" />
+      <ware id="ice" color="resource_ice" nodecolor="resource_node_ice" iconcolor="resource_icon_ice" />
+    </scancolors>
+  </mining>
+  <jobs>
+    <!--<factor galaxy="2.0" cluster="2.0" sector="2.0" zone="2.0" />-->
+    <cleanup maxfactor="1.5" minage="10800" />
+  </jobs>
+  <god>
+    <factor production="1.0" />
+  </god>
+  <input>
+    <controllermouse>
+      <acceleration threshold="0.7">
+        <speedcurve>
+          <digital>
+            <point position="0.5" value="100" />
+            <point position="1.5" value="1500" />
+          </digital>
+          <analog>
+            <point position="0.5" value="100" />
+            <point position="1.5" value="1500" />
+          </analog>
+        </speedcurve>
+      </acceleration>
+    </controllermouse>
+  </input>
+  <loadout level="0.5" variation="0.3" ammo="0.9" software="0.9">
+    <units min="0.2" max="1.0">
+      <defence min="0.2" max="0.8" />
+    </units>
+    <group threshold="0.5" />
+  </loadout>
+  <equipmentmod chance="0.01" additional="0.05" quality="0.2" drop="0.75" recovery="0.5" />
+  <voice>
+    <!-- Range in metres between entities for speaking without remote comm -->
+    <nearby range="20" />
+    <!-- Delay after comm channel opening noise before starting voice -->
+    <comm delay="0.7" />
+    <!-- Note: Background comm typically limited to visible attention level anyway -->
+    <backgroundcomm range="100000">
+      <minvolume factor="0.25" distance="30000" />
+    </backgroundcomm>
+  </voice>
+  <fightmusic minduration="30">
+    <thresholds>
+      <threshold classes="ship_xs" maxdistance="10000" bigfightamount="5" />
+      <threshold classes="ship_s ship_m" maxdistance="10000" bigfightamount="3" />
+      <threshold classes="ship_l ship_xl station" maxdistance="20000" bigfightamount="1" />
+    </thresholds>
+  </fightmusic>
+  <enemywarning>
+    <nearby default="ui_notification_player_alert_07" />
+    <attack default="ui_notification_player_alert_25" />
+  </enemywarning>
+  <playeralert>
+    <sounds>
+      <sound id="ui_notification_player_alert_silence" name="81" tags="disabled"/>
+      <sound id="ui_notification_player_alert_01" name="1011" tags="subtle"/>
+      <sound id="ui_notification_player_alert_02" name="1021" tags="subtle" />
+      <sound id="ui_notification_player_alert_03" name="2011" tags="general" />
+      <sound id="ui_notification_player_alert_04" name="2021" tags="general" />
+      <sound id="ui_notification_player_alert_05" name="3011" tags="hostile" cooldown="60" />
+      <sound id="ui_notification_player_alert_06" name="3021" tags="hostile" cooldown="60" />
+      <sound id="ui_notification_player_alert_07" name="3031" tags="hostile" cooldown="60" />
+      <sound id="ui_notification_player_alert_08" name="3041" tags="hostile" cooldown="60" />
+      <sound id="ui_notification_player_alert_09" name="3051" tags="hostile" cooldown="60" />
+      <sound id="ui_notification_player_alert_10" name="3061" tags="hostile" cooldown="60" />
+      <sound id="ui_notification_player_alert_11" name="3071" tags="hostile" cooldown="60" />
+      <sound id="ui_notification_player_alert_12" name="3081" tags="hostile" cooldown="60" />
+      <sound id="ui_notification_player_alert_13" name="3091" tags="hostile" cooldown="60" />
+      <sound id="ui_notification_player_alert_25" name="3101" tags="hostile" cooldown="60" />
+    </sounds>
+  </playeralert>
+  <shieldimpact minpercentage="5" maxdistance="30" relativedistance="0.2"/>
+  <missions limit="10" limitenabled="false" />
+  <orders>
+    <loop>
+      <skill limit="1" />
+    </loop>
+    <failures queuemax="5" playeronly="true" />
+  </orders>
+  <presentation npcship="ship_par_l_destroyer_01_a_macro" npcconnection="con_npc_stand_006" />
+  <furnace>
+    <trigger>
+      <max x="400" y="400" z="400" />
+    </trigger>
+    <movement slowdown="2" align="10" tostart="8" toend="10" />
+    <guidance material="p1effects.p1_guidance_furnace_01" amount="10" duration="1.5" scale="0.02" starttangent="1.0" startdistance="2.0" maxdistance="2000" dx="15" dz="50" fadein="2.0" />
+  </furnace>
+  <tug speedscale="5" highwayspeedscale="5" accelerationscale="0.002" decelerationscale="0.005" distance="600" maxwidth="50" maxlength="100" />
+  <cutscenes>
+    <default>
+      <scenes npcface="ShowNPCFace" npcdummy="ShowPilot" darktank="ShowCharacterBoronDark" hqtank="ShowCharacterBoron" black="ShowCharacterBlack"/>
+    </default>
+  </cutscenes>
+  <notifications defaulttextcolor="text_notification_text" criticaltextcolor="text_notification_text_critical">
+    <curmission tickertextcolor="messageticker_curmission_text" tickerblinktextcolor="messageticker_curmission_text_highlight" />
+    <bgmission tickertextcolor="messageticker_bgmission_text" tickerblinktextcolor="messageticker_bgmission_text_highlight" />
+  </notifications>
+  <hud>
+    <target>
+      <repeat sound="ui_menu_ability_select_core" timeout="15.0" />
+    </target>
+  </hud>
+  <prestige>
+    <level value="0"  name="{1001,12940}"/>
+    <level value="1"  name="{1001,12941}"/>
+    <level value="50" name="{1001,12942}"/>
+  </prestige>
+</parameters>

@@ -1,0 +1,1710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compatibility>
+  <aiscript name="boarding.pod" version="2">
+    <attention min="unknown">
+      <wait line="27"/>
+      <move_to line="30"/>
+      <wait line="54" sinceversion="2" label="findsurfaceposition"/>
+      <move_to line="66" label="findsurfaceposition"/>
+      <wait line="77" label="findsurfaceposition"/>
+    </attention>
+  </aiscript>
+  <aiscript name="boarding.pod.return" version="0">
+    <attention min="visible">
+      <wait line="26"/>
+      <wait line="36"/>
+      <move_to line="41"/>
+      <move_to line="53"/>
+      <move_docking line="59"/>
+      <wait line="68"/>
+    </attention>
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="build.buildstorage" version="3">
+    <attention min="unknown">
+      <execute_custom_trade line="153" sinceversion="2" label="loop"/>
+      <wait line="239" label="loop"/>
+      <wait line="242" label="loop"/>
+      <wait line="251" label="loop"/>
+    </attention>
+  </aiscript>
+  <aiscript name="build.shiptrader" version="4">
+    <attention min="unknown">
+      <wait line="806" sinceversion="2" label="loop"/>
+      <wait line="812" label="loop"/>
+    </attention>
+  </aiscript>
+  <aiscript name="drone.pickup" version="0">
+    <attention min="visible">
+      <move_to line="41" label="start"/>
+      <move_to line="49" label="start"/>
+      <wait line="73" label="start"/>
+      <wait line="91" label="start"/>
+      <wait line="93" label="start"/>
+    </attention>
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="engineer.ai" version="0">
+    <attention min="unknown">
+      <wait line="68" label="checkforrepair"/>
+      <wait line="73" label="checkforrepair"/>
+      <wait line="77" label="checkforrepair"/>
+    </attention>
+  </aiscript>
+  <aiscript name="fight.attack.object.bigtarget" version="22">
+    <attention min="visible">
+      <run_script line="460" label="fight"/>
+      <move_to line="558" label="fight"/>
+      <move_to line="641" label="fight"/>
+      <run_script line="688" label="fight"/>
+      <wait line="694" label="fight"/>
+      <wait line="736" label="finish"/>
+    </attention>
+    <attention min="unknown">
+      <run_script line="821" label="fight"/>
+      <move_to line="891" label="fight"/>
+      <wait line="902" label="fight"/>
+      <wait line="1018" label="fight"/>
+      <move_to line="1109" label="fight"/>
+      <wait line="1120" label="fight"/>
+      <wait line="1140" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="fight.attack.object.capital" version="34">
+    <attention min="visible">
+      <run_script line="1655" label="Wait"/>
+      <wait line="1660" label="Wait"/>
+      <wait line="2205" label="Attack"/>
+      <wait line="2433" label="Attack"/>
+    </attention>
+    <attention min="unknown">
+      <run_script line="2595" label="Wait"/>
+      <wait line="2599" label="Wait"/>
+      <wait line="2738" sinceversion="21" label="Attack"/>
+      <wait line="2840" label="Attack"/>
+      <wait line="2925" label="Attack"/>
+      <wait line="2951" sinceversion="21" label="Attack"/>
+      <wait line="2968" label="Attack"/>
+    </attention>
+  </aiscript>
+  <aiscript name="fight.attack.object.fighter" version="18">
+    <attention min="visible">
+      <run_script line="269" label="fight"/>
+      <move_to line="371" label="fight"/>
+      <move_to line="404" label="fight"/>
+      <run_script line="470" label="fight"/>
+      <wait line="475" label="fight"/>
+      <wait line="491" label="finish"/>
+    </attention>
+    <attention min="unknown">
+      <run_script line="580" label="fight"/>
+      <move_to line="639" label="fight"/>
+      <wait line="648" label="fight"/>
+      <wait line="743" label="fight"/>
+      <wait line="806" sinceversion="10" label="fight"/>
+      <move_to line="845" label="fight"/>
+      <wait line="853" label="fight"/>
+      <wait line="871" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="fight.attack.object.medium" version="29">
+    <attention min="visible">
+      <run_script line="987" label="Wait"/>
+      <wait line="992" label="Wait"/>
+      <wait line="1667" label="Attack"/>
+    </attention>
+    <attention min="unknown">
+      <run_script line="1809" label="Wait"/>
+      <wait line="1813" label="Wait"/>
+      <wait line="1953" label="Attack"/>
+      <wait line="2028" label="Attack"/>
+      <wait line="2054" label="Attack"/>
+    </attention>
+  </aiscript>
+  <aiscript name="fight.attack.object.station" version="18">
+    <attention min="visible">
+      <wait line="754" label="start"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="1112" sinceversion="16" label="findenemies"/>
+      <wait line="1194" label="fight"/>
+      <wait line="1211" label="fight"/>
+      <wait line="1233" label="fight"/>
+    </attention>
+  </aiscript>
+  <aiscript name="interrupt.attacked" version="0" priority="10">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="interrupt.changedsector" version="0" priority="11">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="interrupt.disengage" version="0" priority="9">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="interrupt.foundabandonedship" version="0" priority="1">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="interrupt.foundlockbox" version="0" priority="1">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="interrupt.inspected" version="0" priority="9">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="interrupt.job.remove" version="0" priority="6">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="interrupt.lostreservation" version="0" priority="11">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="interrupt.missilelock" version="0" priority="10">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="interrupt.npc.usecases" version="0">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="interrupt.restock" version="0" priority="8">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="interrupt.scanned" version="0" priority="9">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="interrupt.stoporder" version="0" priority="90">
+    <attention min="unknown">
+      <run_script line="21"/>
+      <move_to line="32"/>
+      <move_to line="39"/>
+    </attention>
+  </aiscript>
+  <aiscript name="interrupt.targetinvalid" version="0" priority="10">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="interrupt.tide" version="0" priority="99">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="lib.ammo.configupdate" version="1" priority="1">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="lib.ammo.drones" version="0" priority="1">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="lib.ammo.missiles" version="0" priority="1">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="lib.calculate.miningefficiency" version="0">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="lib.define.blacklistgroup" version="0">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="lib.find.point.indeepspace" version="0">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="lib.find.sectors.inrange" version="0">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="lib.fleet.organize.defences" version="0">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="lib.recall.subordinates" version="1" priority="5">
+    <attention min="unknown">
+      <wait line="187" label="issue_orders"/>
+    </attention>
+  </aiscript>
+  <aiscript name="lib.request.orders" version="0">
+    <attention min="unknown">
+      <wait line="280"/>
+    </attention>
+  </aiscript>
+  <aiscript name="lib.respond.foundabandonedship" version="0" priority="1">
+    <attention min="unknown">
+      <run_script line="41"/>
+    </attention>
+  </aiscript>
+  <aiscript name="lib.respond.foundlockbox" version="0" priority="1">
+    <attention min="unknown">
+      <run_script line="29"/>
+    </attention>
+  </aiscript>
+  <aiscript name="lib.respond.inspected" version="0" priority="9">
+    <attention min="unknown">
+      <wait line="81"/>
+      <run_script line="93"/>
+      <run_script line="342"/>
+      <wait line="357"/>
+    </attention>
+  </aiscript>
+  <aiscript name="lib.set.weaponmode" version="0">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="lib.target.selection" version="0">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="lib.target.selection.singletarget" version="0">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="lib.units.combat" version="0">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="lib.units.trade" version="0">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="masstraffic.dummy" version="0">
+    <attention min="visible">
+      <wait line="15"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="20"/>
+    </attention>
+  </aiscript>
+  <aiscript name="masstraffic.fight" version="0">
+    <attention min="visible">
+      <wait line="19" label="start"/>
+      <wait line="22" label="start"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="36" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="masstraffic.flee" version="0" priority="9">
+    <attention min="visible">
+      <move_to line="19"/>
+      <move_navmesh line="43"/>
+      <wait line="54"/>
+      <move_to line="72"/>
+      <wait line="81"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="90"/>
+    </attention>
+  </aiscript>
+  <aiscript name="masstraffic.generic" version="0">
+    <attention min="nearby">
+      <wait line="27" label="start"/>
+      <run_script line="80" label="attack"/>
+      <run_script line="88" label="flee"/>
+      <move_to line="94" label="evade"/>
+    </attention>
+    <attention min="visible">
+      <wait line="125" label="start"/>
+      <wait line="136" label="start"/>
+      <run_script line="146" label="flee"/>
+      <wait line="154" label="evade"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="181" label="returntomasstraffic"/>
+    </attention>
+  </aiscript>
+  <aiscript name="masstraffic.handler.attacked" version="0" priority="9">
+    <attention min="visible">
+      <run_script line="109" label="attack"/>
+      <run_script line="120" label="flee"/>
+    </attention>
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="masstraffic.move.waitforsignal" version="0">
+    <attention min="unknown">
+      <move_to line="57" label="launch"/>
+      <move_to line="81" label="launch"/>
+      <wait line="96" label="launch"/>
+      <move_to line="112" label="dock"/>
+      <dock_masstraffic_drone line="123" label="dock"/>
+      <wait line="132" label="dock"/>
+    </attention>
+  </aiscript>
+  <aiscript name="masstraffic.police" version="0">
+    <attention min="visible">
+      <wait line="57" label="start"/>
+      <wait line="147" label="evaluate"/>
+      <detach_from_masstraffic line="155" label="evaluate"/>
+      <move_to line="156" label="evaluate"/>
+      <move_to line="158" label="evaluate"/>
+      <detach_from_masstraffic line="175" label="evaluate"/>
+      <move_to line="186" label="evaluate"/>
+      <move_to line="189" label="evaluate"/>
+      <detach_from_masstraffic line="241" label="checkscantargets"/>
+      <move_to line="242" label="checkscantargets"/>
+      <move_to line="244" label="checkscantargets"/>
+      <wait line="314" label="preparescan"/>
+      <wait line="346" label="scan"/>
+      <wait line="348" label="scan"/>
+      <run_script line="375" label="attack"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="407" label="returntomasstraffic"/>
+    </attention>
+  </aiscript>
+  <aiscript name="masstraffic.return" version="0">
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="masstraffic.watchdog" version="0">
+    <attention min="nearby">
+      <wait line="75" label="start"/>
+      <wait line="108" label="patrol"/>
+      <move_to line="114" label="patrol"/>
+      <move_to line="166" label="startobserve"/>
+      <wait line="180" label="startobserve"/>
+      <wait line="202" label="startobserve"/>
+      <move_to line="207" label="startobserve"/>
+      <move_to line="224" label="startobserve"/>
+      <run_script line="247" label="startobserve"/>
+      <wait line="268" label="observe"/>
+      <move_to line="298" label="observe"/>
+      <move_to line="314" label="observe"/>
+      <wait line="362" label="startscan"/>
+      <move_to line="378" label="scancargo"/>
+      <run_script line="394" label="scancargo"/>
+      <run_script line="403" label="scancargo"/>
+      <move_to line="417" label="scancargo"/>
+      <wait line="421" label="scancargo"/>
+      <wait line="451" label="scancargo"/>
+      <run_script line="453" label="scancargo"/>
+      <run_script line="469" label="scancargo"/>
+      <run_script line="478" label="scancargo"/>
+      <run_script line="552" label="raisealarm"/>
+      <run_script line="568" label="raisealarm"/>
+      <run_script line="598" label="attack"/>
+      <wait line="646" label="postend"/>
+    </attention>
+    <attention min="visible">
+      <wait line="663" label="start"/>
+      <wait line="674" label="patrol"/>
+      <move_to line="683" label="patrol"/>
+      <wait line="730" label="observe"/>
+      <move_to line="759" label="observe"/>
+      <move_to line="775" label="observe"/>
+      <wait line="785" label="startscan"/>
+      <run_script line="853" label="raisealarm"/>
+      <run_script line="867" label="raisealarm"/>
+      <run_script line="897" label="attack"/>
+      <wait line="945" label="postend"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="971" label="end"/>
+      <wait line="990" label="postend"/>
+    </attention>
+  </aiscript>
+  <aiscript name="mining.collect.drone" version="0">
+    <attention min="visible">
+      <run_script line="32" label="start"/>
+      <move_to line="49" label="collect"/>
+      <run_script line="59" label="collect"/>
+      <wait line="66" label="collect"/>
+      <run_script line="72" label="collect"/>
+      <wait line="84" label="collect"/>
+    </attention>
+    <attention min="unknown">
+      <run_script line="101" label="collect"/>
+    </attention>
+  </aiscript>
+  <aiscript name="mining.collect.ship.capital" version="2">
+    <attention min="visible">
+      <move_to line="261"/>
+      <move_to line="269"/>
+      <move_to line="297"/>
+      <wait line="325"/>
+    </attention>
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="mining.collect.ship.liquid" version="1">
+    <attention min="visible">
+      <move_to line="110"/>
+      <wait line="119"/>
+      <wait line="160"/>
+    </attention>
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="mining.collect.ship.medium" version="4">
+    <attention min="visible">
+      <run_script line="127" sinceversion="1"/>
+      <move_to line="214" sinceversion="3"/>
+      <move_to line="230"/>
+      <move_to line="274"/>
+      <move_to line="297"/>
+      <wait line="316"/>
+      <wait line="325"/>
+      <wait line="350"/>
+    </attention>
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="move.attack.object.capital" version="23">
+    <attention min="unknown">
+      <wait line="334"/>
+      <wait line="528" sinceversion="23" label="fight"/>
+      <move_to line="530" label="fight"/>
+      <wait line="877" label="fight"/>
+      <move_to line="960" label="fight"/>
+      <wait line="1069" sinceversion="16" label="fight"/>
+      <move_strafe line="1155" sinceversion="10" label="fight"/>
+      <move_to line="1180" label="fight"/>
+      <run_script line="1267" sinceversion="5" label="fight"/>
+      <wait line="1304" label="fight"/>
+      <wait line="1318" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.autopilot" version="5">
+    <attention min="visible">
+      <move_undocking line="209" sinceversion="2" label="loop"/>
+      <move_to line="367" label="loop"/>
+      <move_to line="400" label="loop"/>
+      <move_gate line="410" label="loop"/>
+      <move_to line="416" sinceversion="3" label="loop"/>
+    </attention>
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="move.buildership" version="0">
+    <attention min="unknown">
+      <run_script line="48" label="movetozone"/>
+      <move_to line="79" label="movetodestination"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.claim" version="2">
+    <attention min="visible">
+      <move_to line="35" label="move"/>
+      <move_to line="63" label="move"/>
+      <wait line="72" label="move"/>
+      <wait line="103" label="move"/>
+      <wait line="109" sinceversion="1" label="finish"/>
+      <wait line="112" label="finish"/>
+      <run_script line="149" label="finish"/>
+    </attention>
+    <attention min="unknown">
+      <move_to line="176" label="move"/>
+      <wait line="185" label="move"/>
+      <wait line="223" label="finish"/>
+      <run_script line="251" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.collect.drone" version="4">
+    <attention min="visible">
+      <wait line="88" sinceversion="4" label="launch"/>
+      <wait line="118" label="launch"/>
+      <move_to line="122" sinceversion="1" label="launch"/>
+      <run_script line="142" label="launch"/>
+      <wait line="157" sinceversion="3" label="targetlost"/>
+      <run_script line="170" sinceversion="2" label="dock"/>
+      <wait line="180" sinceversion="2" label="dock"/>
+      <move_to line="190" sinceversion="1" label="dock"/>
+      <dock_masstraffic_drone line="214" label="dock"/>
+      <run_script line="219" label="dock"/>
+      <wait line="226" sinceversion="3" label="dock"/>
+      <wait line="237" label="dock"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="257" sinceversion="4" label="launch"/>
+      <wait line="279" label="launch"/>
+      <move_to line="284" label="launch"/>
+      <wait line="294" sinceversion="3" label="targetlost"/>
+      <run_script line="305" sinceversion="2" label="dock"/>
+      <wait line="312" sinceversion="2" label="dock"/>
+      <move_to line="317" label="dock"/>
+      <wait line="333" label="dock"/>
+      <dock_masstraffic_drone line="342" label="dock"/>
+      <run_script line="346" label="dock"/>
+      <wait line="353" sinceversion="3" label="dock"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.collect.ship.capship" version="0">
+    <attention min="unknown">
+      <wait line="71" label="collect"/>
+      <wait line="96" label="collect"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.collect.ship.smallship" version="2">
+    <attention min="unknown">
+      <wait line="42" label="start"/>
+      <run_script line="119" label="start"/>
+      <run_script line="158" label="collect"/>
+      <move_to line="195" label="movetotarget"/>
+      <wait line="218" label="movetotarget"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.crewtransferpod" version="0">
+    <attention min="unknown">
+      <run_script line="85" label="undock"/>
+      <move_to line="103" label="move_to_destination"/>
+      <move_to line="198" label="arrive"/>
+      <run_script line="227" label="arrive"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.escapepod" version="3">
+    <attention min="visible">
+      <wait line="22"/>
+      <run_script line="26" sinceversion="1"/>
+      <wait line="50" label="search"/>
+      <wait line="58" label="search"/>
+      <run_script line="77" label="dock"/>
+      <run_script line="91" label="dock"/>
+      <run_script line="102" sinceversion="2" label="flee"/>
+      <wait line="116" label="waitforrescue"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="134"/>
+      <run_script line="138" sinceversion="1"/>
+      <wait line="162" sinceversion="1" label="search"/>
+      <wait line="170" sinceversion="1" label="search"/>
+      <run_script line="187" sinceversion="1" label="dock"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.evade" version="3">
+    <attention min="visible">
+      <move_to line="66" label="Random"/>
+    </attention>
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="move.flee" version="6">
+    <attention min="unknown">
+      <run_script line="120"/>
+      <run_script line="185" sinceversion="1"/>
+      <run_script line="266" label="highway"/>
+      <run_script line="284" label="dock"/>
+      <run_script line="302" label="boost"/>
+      <run_script line="322" label="maneuver"/>
+      <run_script line="379" sinceversion="3" label="leavecluster"/>
+      <wait line="463" sinceversion="3" label="finish"/>
+      <wait line="520" label="finish"/>
+      <run_script line="532" sinceversion="1" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.flee.boost" version="3">
+    <attention min="unknown">
+      <move_to line="143" sinceversion="3"/>
+      <move_to line="147"/>
+      <move_to line="157"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.flee.dock" version="4">
+    <attention min="unknown">
+      <run_script line="138" label="search"/>
+      <move_to line="157" label="search"/>
+      <run_script line="190" label="dock"/>
+      <wait line="210" sinceversion="2" label="checkifsafe"/>
+      <wait line="229" label="checkifsafe"/>
+      <run_script line="246" label="undock"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.flee.highway" version="0">
+    <attention min="unknown">
+      <move_to line="52"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.flee.maneuver" version="0">
+    <attention min="visible">
+      <move_to line="34"/>
+    </attention>
+    <attention min="unknown"/>
+  </aiscript>
+  <aiscript name="move.flightbehaviour" version="0">
+    <attention min="visible">
+      <wait line="34" label="wait"/>
+      <move_to line="47" label="move"/>
+      <move_to line="54" label="move"/>
+      <wait line="63" label="move"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="77" label="wait"/>
+      <move_to line="90" label="move"/>
+      <move_to line="97" label="move"/>
+      <wait line="107" label="move"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.gate" version="15">
+    <attention min="unknown">
+      <run_script line="134" label="move"/>
+      <move_to line="199" label="move"/>
+      <wait line="207" label="move"/>
+      <move_to line="262" label="cross_gate"/>
+      <move_to line="269" label="cross_gate"/>
+      <wait line="284" sinceversion="7" label="cross_gate"/>
+      <wait line="328" sinceversion="13" label="cross_gate"/>
+      <wait line="348" sinceversion="6" label="cross_gate"/>
+      <wait line="354" sinceversion="8" label="cross_gate"/>
+      <wait line="360" sinceversion="8" label="cross_gate"/>
+      <wait line="363" sinceversion="6" label="cross_gate"/>
+      <move_gate line="392" label="cross_gate"/>
+      <move_to line="406" label="cross_gate"/>
+      <wait line="431" label="cross_gate"/>
+      <wait line="458" label="cross_gate"/>
+      <move_to line="603" sinceversion="5" label="across"/>
+      <move_to line="608" label="across"/>
+      <wait line="647" sinceversion="3" label="waitfor"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.generic" version="23">
+    <attention min="unknown">
+      <wait line="385" sinceversion="7" label="check"/>
+      <wait line="564" label="check"/>
+      <wait line="619" sinceversion="14" label="move"/>
+      <wait line="904" sinceversion="8" label="move"/>
+      <run_script line="968" label="move"/>
+      <move_to line="993" label="move"/>
+      <wait line="1006" label="move"/>
+      <wait line="1011" sinceversion="6" label="move"/>
+      <move_to line="1035" label="move"/>
+      <move_to line="1056" label="move"/>
+      <wait line="1221" sinceversion="6" label="move"/>
+      <move_to line="1228" label="move"/>
+      <move_to line="1235" label="move"/>
+      <wait line="1304" sinceversion="20" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.hack.station.storage" version="2">
+    <attention min="unknown">
+      <wait line="102" label="start"/>
+      <move_to line="180" label="start"/>
+      <wait line="190" sinceversion="2" label="collect"/>
+      <wait line="197" label="collect"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.idle" version="4">
+    <attention min="unknown">
+      <move_to line="99" sinceversion="3" label="start"/>
+      <wait line="104" sinceversion="3" label="start"/>
+      <wait line="111" label="start"/>
+      <move_to line="206" label="start"/>
+      <move_to line="213" label="start"/>
+      <wait line="220" label="start"/>
+      <move_to line="236" sinceversion="2" label="end"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.nearby" version="0">
+    <attention min="unknown">
+      <move_to line="22" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.nohighway" version="0">
+    <attention min="unknown">
+      <wait line="48" label="start"/>
+      <move_to line="100" label="start"/>
+      <move_to line="129" label="start"/>
+      <wait line="146" label="start"/>
+      <wait line="174" label="start"/>
+      <move_to line="201" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.park" version="4" priority="11">
+    <attention min="unknown">
+      <run_script line="101" label="start"/>
+      <run_script line="112" label="start"/>
+      <move_to line="213" label="start"/>
+      <wait line="227" label="start"/>
+      <wait line="266" label="start"/>
+      <wait line="297" label="start"/>
+      <move_to line="306" label="start"/>
+      <move_strafe line="330" label="start"/>
+      <move_to line="336" label="start"/>
+      <move_to line="342" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.race" version="19">
+    <attention min="unknown">
+      <move_to line="33"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.random" version="0">
+    <attention min="unknown">
+      <move_to line="52" label="start"/>
+      <move_to line="57" label="start"/>
+      <wait line="68" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.seekenemies" version="7">
+    <attention min="unknown">
+      <run_script line="134" label="start"/>
+      <wait line="158" label="start"/>
+      <move_to line="175" label="moveto"/>
+      <run_script line="515" label="moveto"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.undock" version="8">
+    <attention min="unknown">
+      <run_script line="93"/>
+      <run_script line="119" label="start"/>
+      <wait line="126" label="start"/>
+      <run_script line="178" label="start"/>
+      <wait line="185" label="start"/>
+      <detach_from_masstraffic line="236" label="start"/>
+      <wait line="264" label="wait"/>
+      <wait line="319" sinceversion="6" label="undock"/>
+      <wait line="322" label="undock"/>
+      <wait line="349" label="undock"/>
+      <wait line="401" label="undock"/>
+      <wait line="410" label="undock"/>
+      <move_to line="432" sinceversion="4" label="undock"/>
+      <move_undocking line="457" label="undock"/>
+      <move_undocking line="471" label="undock"/>
+      <move_to line="496" sinceversion="7" label="undock"/>
+      <move_waypoints line="552" label="undock"/>
+      <move_to line="559" label="undock"/>
+      <move_waypoints line="568" label="undock"/>
+      <move_strafe line="716" label="undock"/>
+      <move_to line="746" label="undock"/>
+      <move_to line="766" sinceversion="8" label="undock"/>
+      <move_to line="792" label="undock"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.unpark" version="1">
+    <attention min="unknown">
+      <detach_from_masstraffic line="57" label="start"/>
+      <wait line="81" label="start"/>
+      <move_strafe line="97" label="start"/>
+      <move_to line="104" label="start"/>
+      <move_to line="111" label="start"/>
+      <move_to line="138" label="start"/>
+      <wait line="152" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="move.wareexchange" version="3">
+    <attention min="unknown">
+      <move_to line="75" label="ready"/>
+      <wait line="99" label="ready"/>
+      <wait line="136" label="ready"/>
+      <run_script line="161" label="ready"/>
+      <move_to line="186" label="ready"/>
+      <move_to line="200" label="ready"/>
+      <wait line="218" label="drop"/>
+      <move_to line="240" label="drop"/>
+      <wait line="272" label="collect"/>
+      <wait line="309" label="collect"/>
+      <run_script line="333" label="collect"/>
+      <wait line="363" label="cleanup"/>
+      <move_to line="395" label="cleanup"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.assign.commander" version="3">
+    <attention min="unknown">
+      <run_script line="136"/>
+      <run_script line="143"/>
+      <run_script line="160"/>
+      <run_script line="170" sinceversion="1"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.assist" version="4">
+    <attention min="unknown">
+      <wait line="125" label="init"/>
+      <wait line="155" label="start"/>
+      <wait line="159" sinceversion="3" label="processorder"/>
+      <run_script line="202" label="processorder"/>
+      <run_script line="239" label="processorder"/>
+      <run_script line="286" sinceversion="2" label="processorder"/>
+      <run_script line="324" label="processorder"/>
+      <run_script line="370" sinceversion="2" label="processorder"/>
+      <run_script line="402" label="processorder"/>
+      <run_script line="438" sinceversion="1" label="processorder"/>
+      <run_script line="467" label="processorder"/>
+      <run_script line="503" label="processorder"/>
+      <run_script line="542" label="processorder"/>
+      <run_script line="562" label="processorder"/>
+      <run_script line="590" label="processorder"/>
+      <run_script line="617" label="processorder"/>
+      <run_script line="641" label="processorder"/>
+      <run_script line="667" label="processorder"/>
+      <run_script line="696" label="processorder"/>
+      <run_script line="724" label="processorder"/>
+      <run_script line="750" label="processorder"/>
+      <run_script line="786" label="processorder"/>
+      <run_script line="819" label="processorder"/>
+      <run_script line="841" label="processorder"/>
+      <run_script line="862" label="processresult"/>
+      <wait line="874" label="processresult"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.build.deploy" version="4">
+    <attention min="unknown">
+      <run_script line="155" label="movetozone"/>
+      <wait line="202" sinceversion="2" label="movetodestination"/>
+      <move_to line="205" label="movetodestination"/>
+      <wait line="246" label="build"/>
+      <wait line="283" label="build"/>
+      <wait line="301" label="build"/>
+      <detach_from_masstraffic line="331" sinceversion="4" label="disengage"/>
+      <run_script line="339" label="disengage"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.build.equip" version="8" priority="3">
+    <attention min="unknown">
+      <wait line="59" sinceversion="8" label="init"/>
+      <run_script line="101" label="init"/>
+      <wait line="156" label="init"/>
+      <wait line="204" label="equip"/>
+      <wait line="322" sinceversion="3" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.build.find.task" version="10">
+    <attention min="unknown">
+      <run_script line="246" label="await build task"/>
+      <run_script line="266" label="await build task"/>
+      <wait line="283" sinceversion="8" label="deploy"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.build.recycle" version="2" priority="3">
+    <attention min="unknown">
+      <wait line="92" label="init"/>
+      <run_script line="134" label="init"/>
+      <wait line="158" label="init"/>
+      <wait line="227" label="await_recycling"/>
+      <wait line="246" label="recycle"/>
+      <wait line="259" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.collect.ship" version="1">
+    <attention min="unknown">
+      <run_script line="109" label="start"/>
+      <run_script line="130" label="collect"/>
+      <run_script line="136" label="collect"/>
+      <wait line="142" label="collect"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.collect.ship.deployable" version="0">
+    <attention min="unknown">
+      <run_script line="26"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.collect.ship.lockbox" version="3">
+    <attention min="visible">
+      <wait line="91"/>
+      <run_script line="120" label="start"/>
+      <move_to line="231" label="openlockbox"/>
+      <wait line="271" label="shoot"/>
+      <run_script line="319" label="collect"/>
+      <wait line="345" label="finish"/>
+      <run_script line="349" sinceversion="1" label="finish"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="362"/>
+      <run_script line="390" label="start"/>
+      <move_to line="410" label="openlockbox"/>
+      <run_script line="447" label="collect"/>
+      <wait line="472" label="finish"/>
+      <run_script line="476" sinceversion="1" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.collect.ship.radius" version="4">
+    <attention min="unknown">
+      <run_script line="60" label="start"/>
+      <run_script line="93" label="collect"/>
+      <run_script line="99" label="collect"/>
+      <wait line="105" label="collect"/>
+      <run_script line="115" sinceversion="1" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.deployobjectatposition" version="4">
+    <attention min="unknown">
+      <run_script line="216"/>
+      <run_script line="251" label="start"/>
+      <move_to line="265" sinceversion="3" label="start"/>
+      <wait line="270" sinceversion="3" label="start"/>
+      <wait line="278" label="start"/>
+      <wait line="289" sinceversion="2" label="deploy"/>
+      <wait line="296" sinceversion="1" label="deploy"/>
+      <wait line="303" sinceversion="1" label="deploy"/>
+      <wait line="309" sinceversion="1" label="deploy"/>
+      <wait line="316" sinceversion="1" label="deploy"/>
+      <wait line="323" sinceversion="1" label="deploy"/>
+      <wait line="345" sinceversion="4" label="deploy"/>
+      <wait line="362" sinceversion="4" label="deploy"/>
+      <wait line="379" sinceversion="4" label="deploy"/>
+      <wait line="398" sinceversion="4" label="deploy"/>
+      <wait line="415" sinceversion="4" label="deploy"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.deployobjectsatgates" version="0">
+    <attention min="unknown">
+      <wait line="133" label="start"/>
+      <run_script line="179" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.deploystaticdefensestrategy" version="2">
+    <attention min="unknown">
+      <wait line="156" sinceversion="2" label="start"/>
+      <run_script line="176" label="randr"/>
+      <run_script line="193" label="idle"/>
+      <wait line="200" sinceversion="1" label="idle"/>
+      <wait line="211" label="requeststrategy"/>
+      <wait line="276" label="updateloadout"/>
+      <wait line="285" label="getnextdeployableandposition"/>
+      <run_script line="320" label="deploy"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.dock" version="27" priority="11">
+    <attention min="unknown">
+      <run_script line="368"/>
+      <wait line="393" sinceversion="2" label="start"/>
+      <run_script line="478" label="movetozone"/>
+      <wait line="495" label="movetozone"/>
+      <run_script line="540" sinceversion="2" label="waitfordockslot"/>
+      <wait line="556" sinceversion="22" label="waitfordockslot"/>
+      <wait line="567" label="waitfordockslot"/>
+      <move_to line="687" label="waitfordockslot"/>
+      <wait line="725" sinceversion="6" label="requestdock"/>
+      <wait line="766" label="requestdock"/>
+      <wait line="827" sinceversion="10" label="movetodockingbay"/>
+      <wait line="846" label="movetodockingbay"/>
+      <move_waypoints line="892" label="movetodockingbay"/>
+      <move_to line="922" sinceversion="14" label="movetodockingbay"/>
+      <move_to line="953" sinceversion="5" label="movetodockingbay"/>
+      <move_waypoints line="980" label="movetodockingbay"/>
+      <move_to line="1008" label="movetodockingbay"/>
+      <move_docking line="1075" label="movetodockpos"/>
+      <wait line="1149" sinceversion="7" label="movetodockpos"/>
+      <wait line="1241" label="finish"/>
+      <wait line="1254" sinceversion="19" label="finish"/>
+      <run_script line="1291" sinceversion="1" label="nodestination"/>
+      <wait line="1361" sinceversion="4" label="nodestination"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.dock.trade.player" version="0">
+    <attention min="unknown">
+      <wait line="54" label="start"/>
+      <run_script line="63" label="signal_player"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.dock.visitstations.routine" version="0">
+    <attention min="unknown">
+      <wait line="103" label="choosedestination"/>
+      <run_script line="142" label="gotodestination"/>
+      <run_script line="154" label="gotodestination"/>
+      <wait line="176" label="gotodestination"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.dock.wait" version="16">
+    <attention min="unknown">
+      <run_script line="323"/>
+      <wait line="357" label="start"/>
+      <run_script line="376" label="start"/>
+      <run_script line="381" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.fight.attack.inrange" version="1">
+    <attention min="unknown">
+      <run_script line="88" label="start"/>
+      <run_script line="127" label="acquiretarget"/>
+      <wait line="169" label="finish"/>
+      <run_script line="174" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.fight.attack.object" version="25">
+    <attention min="unknown">
+      <wait line="575" sinceversion="1" label="selecttarget"/>
+      <run_script line="679" label="selecttarget"/>
+      <wait line="701" sinceversion="17" label="selecttarget"/>
+      <run_script line="829" label="fight"/>
+      <run_script line="1123" label="fight"/>
+      <wait line="1284" sinceversion="23" label="finish"/>
+      <run_script line="1308" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.fight.attack.object.player" version="0">
+    <attention min="unknown">
+      <run_script line="109" label="start"/>
+      <run_script line="146" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.fight.board" version="4">
+    <attention min="unknown">
+      <wait line="130" sinceversion="2"/>
+      <run_script line="135" label="start"/>
+      <run_script line="157" label="start"/>
+      <run_script line="177" label="launchpods"/>
+      <move_to line="234" label="launchpods"/>
+      <move_to line="280" label="launchpods"/>
+      <move_to line="286" label="launchpods"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.fight.escort" version="36" priority="2">
+    <attention min="visible">
+      <wait line="971" sinceversion="25"/>
+      <wait line="983" sinceversion="13"/>
+      <wait line="994" label="start"/>
+      <run_script line="1039" label="start"/>
+      <wait line="1100" label="start"/>
+      <wait line="1274" sinceversion="10" label="start"/>
+      <wait line="1314" label="start"/>
+      <wait line="1347" sinceversion="23" label="start"/>
+      <wait line="1376" label="start"/>
+      <wait line="1389" sinceversion="14" label="start"/>
+      <wait line="1397" label="start"/>
+      <wait line="1837" label="finish"/>
+      <wait line="1944" label="finish"/>
+      <wait line="2001" label="finish"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="2009" sinceversion="25"/>
+      <wait line="2021" sinceversion="13"/>
+      <run_script line="2080" label="start"/>
+      <wait line="2117" label="start"/>
+      <wait line="2282" sinceversion="10" label="start"/>
+      <wait line="2331" sinceversion="23" label="start"/>
+      <wait line="2363" label="start"/>
+      <wait line="2387" label="start"/>
+      <wait line="2541" label="start"/>
+      <move_to line="2563" sinceversion="2" label="start"/>
+      <wait line="2599" label="finish"/>
+      <wait line="2706" label="finish"/>
+      <wait line="2764" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.fight.lasertower" version="11">
+    <attention min="visible">
+      <wait line="271" sinceversion="5"/>
+      <wait line="284" label="scan"/>
+      <wait line="409" sinceversion="7" label="track"/>
+      <move_to line="438" label="track"/>
+      <wait line="529" sinceversion="4" label="inactive"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="552" sinceversion="5"/>
+      <wait line="565" label="scan"/>
+      <wait line="690" label="track"/>
+      <wait line="758" sinceversion="4" label="inactive"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.fight.patrol" version="10">
+    <attention min="unknown">
+      <run_script line="254" label="start"/>
+      <wait line="291" label="find_endzone"/>
+      <run_script line="408" label="find_patrolzone"/>
+      <wait line="454" label="find_position"/>
+      <run_script line="467" label="patrol"/>
+      <wait line="483" label="patrol"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.fight.protect.position" version="5">
+    <attention min="unknown">
+      <run_script line="239" label="start"/>
+      <move_to line="265" label="start"/>
+      <run_script line="305" label="start"/>
+      <wait line="321" label="start"/>
+      <run_script line="332" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.fight.protect.ship" version="1">
+    <attention min="visible">
+      <wait line="147" label="start"/>
+      <move_to line="153" label="start"/>
+      <run_script line="185" label="start"/>
+      <move_to line="237" label="start"/>
+      <move_to line="269" label="start"/>
+      <wait line="314" label="start"/>
+      <wait line="502" label="finish"/>
+    </attention>
+    <attention min="unknown">
+      <run_script line="559" label="start"/>
+      <move_to line="588" label="start"/>
+      <move_to line="594" label="start"/>
+      <wait line="606" label="start"/>
+      <wait line="645" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.fight.protect.station" version="4">
+    <attention min="unknown">
+      <run_script line="188" label="start"/>
+      <run_script line="215" label="start"/>
+      <wait line="233" label="start"/>
+      <run_script line="239" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.fight.tactical" version="6">
+    <attention min="unknown">
+      <wait line="543" sinceversion="2"/>
+      <run_script line="558" sinceversion="6" label="start"/>
+      <move_to line="628" label="attack"/>
+      <wait line="639" label="attack"/>
+      <run_script line="655" label="attack"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.mining.collect.ship" version="4">
+    <attention min="visible">
+      <wait line="110" sinceversion="1"/>
+      <run_script line="119" label="start"/>
+      <run_script line="156" label="start"/>
+      <run_script line="183" label="start"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="200" sinceversion="1"/>
+      <run_script line="210" label="start"/>
+      <wait line="225" label="start"/>
+      <wait line="300" label="start"/>
+      <wait line="303" label="start"/>
+      <run_script line="342" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.mining.player" version="4" priority="2">
+    <attention min="unknown">
+      <wait line="54" sinceversion="3" label="start"/>
+      <run_script line="64" label="start"/>
+      <wait line="79" sinceversion="2" label="start"/>
+      <run_script line="107" label="start"/>
+      <run_script line="117" label="start"/>
+      <run_script line="145" label="start"/>
+      <run_script line="155" sinceversion="1" label="start"/>
+      <wait line="164" label="start"/>
+      <wait line="170" sinceversion="4" label="cleanup"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.mining.routine" version="25">
+    <attention min="unknown">
+      <run_script line="406" sinceversion="1"/>
+      <run_script line="424" label="prep"/>
+      <wait line="452" sinceversion="9" label="prep"/>
+      <wait line="488" sinceversion="8" label="start"/>
+      <wait line="515" sinceversion="22" label="start"/>
+      <run_script line="533" sinceversion="5" label="start"/>
+      <run_script line="552" sinceversion="5" label="start"/>
+      <wait line="618" sinceversion="10" label="start"/>
+      <run_script line="627" sinceversion="10" label="start"/>
+      <wait line="793" sinceversion="6" label="loop"/>
+      <wait line="865" label="loop"/>
+      <run_script line="946" label="loop"/>
+      <wait line="1011" sinceversion="11" label="loop"/>
+      <run_script line="1125" label="loop"/>
+      <wait line="1242" label="loop"/>
+      <run_script line="1279" label="loop"/>
+      <wait line="1345" label="loop"/>
+      <run_script line="1406" label="loop"/>
+      <wait line="1433" label="movetocollect"/>
+      <run_script line="1440" label="collect"/>
+      <run_script line="1454" label="collect"/>
+      <wait line="1481" sinceversion="4" label="collect"/>
+      <run_script line="1509" label="sellwares"/>
+      <run_script line="1601" label="sellwares"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.mining.routine.advanced" version="1">
+    <attention min="unknown">
+      <run_script line="46"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.mining.routine.basic" version="1">
+    <attention min="unknown">
+      <run_script line="43"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.mining.routine.expert" version="1">
+    <attention min="unknown">
+      <run_script line="56"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.move.die" version="9">
+    <attention min="visible">
+      <wait line="102" sinceversion="8" label="checkdocks"/>
+      <wait line="108" sinceversion="4" label="checkdocks"/>
+      <wait line="124" label="start"/>
+      <run_script line="129" label="start"/>
+      <wait line="134" sinceversion="5" label="start"/>
+      <run_script line="152" sinceversion="1" label="start"/>
+      <wait line="168" sinceversion="6" label="start"/>
+      <wait line="176" sinceversion="3" label="start"/>
+      <wait line="184" sinceversion="9" label="start"/>
+      <run_script line="186" sinceversion="3" label="start"/>
+      <run_script line="208" label="start"/>
+      <run_script line="222" label="start"/>
+      <run_script line="228" label="start"/>
+      <wait line="236" label="start"/>
+    </attention>
+    <attention min="unknown">
+      <wait line="272" sinceversion="8" label="checkdocks"/>
+      <run_script line="291" sinceversion="1" label="start"/>
+      <wait line="307" label="start"/>
+      <wait line="316" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.move.follow" version="1">
+    <attention min="unknown">
+      <wait line="75" label="start"/>
+      <run_script line="95" label="warp"/>
+      <wait line="107" label="warp"/>
+      <move_to line="139" label="move"/>
+      <move_to line="170" label="move"/>
+      <wait line="186" label="move"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.move.planet" version="3">
+    <attention min="unknown">
+      <wait line="48" label="start"/>
+      <move_to line="59" label="start"/>
+      <wait line="67" label="start"/>
+      <wait line="69" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.move.recon" version="19">
+    <attention min="unknown">
+      <wait line="526" label="start"/>
+      <run_script line="681" label="gothere"/>
+      <run_script line="721" label="proceedtonextzone"/>
+      <run_script line="779" sinceversion="1" label="proceedtonextzone"/>
+      <run_script line="879" label="lookfortrouble"/>
+      <wait line="885" label="lookfortrouble"/>
+      <run_script line="921" label="lookfortrouble"/>
+      <wait line="972" sinceversion="13" label="scan"/>
+      <wait line="987" sinceversion="14" label="scan"/>
+      <move_to line="1081" label="scan"/>
+      <run_script line="1143" label="scan"/>
+      <wait line="1154" label="scan"/>
+      <wait line="1187" label="scan"/>
+      <move_to line="1217" sinceversion="4" label="scan"/>
+      <move_to line="1230" label="scan"/>
+      <move_to line="1234" sinceversion="5" label="scan"/>
+      <move_strafe line="1244" label="scan"/>
+      <wait line="1250" label="scan"/>
+      <run_script line="1294" label="scan"/>
+      <wait line="1316" sinceversion="11" label="scan"/>
+      <run_script line="1463" label="scan"/>
+      <wait line="1476" label="scan"/>
+      <wait line="1488" label="scan"/>
+      <run_script line="1518" label="scan"/>
+      <run_script line="1556" label="scan"/>
+      <run_script line="1606" label="scan"/>
+      <run_script line="1650" sinceversion="6" label="scan"/>
+      <wait line="1765" label="scan"/>
+      <run_script line="1809" label="report"/>
+      <run_script line="1831" label="report"/>
+      <wait line="1863" label="report"/>
+      <wait line="1890" label="end"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.move.recon.explore" version="5">
+    <attention min="unknown">
+      <wait line="177" sinceversion="3"/>
+      <run_script line="190" label="start"/>
+      <run_script line="205" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.move.recon.police" version="2">
+    <attention min="unknown">
+      <run_script line="52" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.move.recon.update" version="5">
+    <attention min="unknown">
+      <wait line="159" sinceversion="2"/>
+      <run_script line="172" label="start"/>
+      <run_script line="186" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.move.taxi" version="0">
+    <attention min="unknown">
+      <wait line="35"/>
+      <run_script line="53" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.move.wait" version="8">
+    <attention min="unknown">
+      <run_script line="181" sinceversion="1" label="start"/>
+      <run_script line="197" label="start"/>
+      <run_script line="209" label="start"/>
+      <run_script line="250" label="wait"/>
+      <run_script line="260" label="wait"/>
+      <run_script line="271" sinceversion="1" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.move.wait.object" version="2">
+    <attention min="unknown">
+      <run_script line="86" label="start"/>
+      <wait line="122" sinceversion="2" label="wait"/>
+      <run_script line="128" label="wait"/>
+      <run_script line="138" label="wait"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.player.attack" version="0">
+    <attention min="unknown">
+      <run_script line="45" label="start"/>
+      <run_script line="60" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.plunder" version="6">
+    <attention min="unknown">
+      <run_script line="302" label="start"/>
+      <wait line="310" sinceversion="6" label="start"/>
+      <wait line="330" label="start"/>
+      <wait line="433" label="plunder"/>
+      <run_script line="591" label="prep"/>
+      <run_script line="613" label="prep"/>
+      <run_script line="617" label="prep"/>
+      <wait line="681" label="hack"/>
+      <run_script line="695" label="hack"/>
+      <run_script line="729" label="patrol"/>
+      <run_script line="784" label="accost"/>
+      <wait line="792" label="accost"/>
+      <run_script line="795" label="accost"/>
+      <run_script line="810" label="accost"/>
+      <wait line="822" label="accost"/>
+      <wait line="837" label="accost"/>
+      <wait line="859" label="accost"/>
+      <wait line="879" label="accost"/>
+      <run_script line="922" label="accost"/>
+      <wait line="987" sinceversion="3" label="accost"/>
+      <run_script line="1027" label="offload"/>
+      <run_script line="1049" sinceversion="5" label="offload"/>
+      <execute_custom_trade line="1060" sinceversion="5" label="offload"/>
+      <run_script line="1064" sinceversion="5" label="offload"/>
+      <run_script line="1077" label="offload"/>
+      <run_script line="1093" label="offload"/>
+      <wait line="1135" sinceversion="2" label="offload"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.recall.subordinates" version="0" priority="5">
+    <attention min="unknown">
+      <run_script line="29"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.recycle.default" version="0">
+    <attention min="unknown">
+      <wait line="63"/>
+      <wait line="70" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.repair" version="2" priority="3">
+    <attention min="unknown">
+      <wait line="64" sinceversion="2" label="init"/>
+      <run_script line="128" label="flyto"/>
+      <wait line="180" label="flyto"/>
+      <wait line="216" label="repair"/>
+      <wait line="230" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.rescue.inrange" version="0">
+    <attention min="unknown">
+      <run_script line="69" label="start"/>
+      <wait line="89" label="acquiretargets"/>
+      <wait line="146" label="finish"/>
+      <run_script line="151" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.rescue.ship" version="0">
+    <attention min="unknown">
+      <run_script line="88" label="start"/>
+      <move_to line="202" label="move"/>
+      <wait line="226" label="calltodock"/>
+      <wait line="285" label="calltodock"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.restock" version="1" priority="3">
+    <attention min="unknown">
+      <wait line="95"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.restock.getsupplies" version="3">
+    <attention min="unknown">
+      <run_script line="118" label="buy"/>
+      <wait line="172" label="buy"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.restock.subordinates" version="2" priority="2">
+    <attention min="unknown">
+      <run_script line="282" label="flyto"/>
+      <move_to line="325" label="wait"/>
+      <wait line="395" sinceversion="1" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.salvage.collect" version="1">
+    <attention min="unknown">
+      <run_script line="101" label="start"/>
+      <move_to line="132" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.salvage.crush" version="6">
+    <attention min="unknown">
+      <run_script line="147"/>
+      <wait line="190" label="dismantle"/>
+      <detach_from_masstraffic line="209" sinceversion="2" label="dismantle"/>
+      <detach_from_masstraffic line="223" sinceversion="4" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.salvage.deliver" version="6">
+    <attention min="unknown">
+      <run_script line="187" label="start"/>
+      <wait line="276" sinceversion="5" label="movetodrop"/>
+      <move_to line="301" label="movetodrop"/>
+      <move_to line="305" sinceversion="4" label="movetodrop"/>
+      <move_to line="335" label="drop"/>
+      <execute_recyclable_trade line="354" label="drop"/>
+      <run_script line="368" sinceversion="1" label="drop"/>
+      <move_to line="465" sinceversion="4" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.salvage.deliver.notrade" version="0">
+    <attention min="unknown">
+      <run_script line="60" label="start"/>
+      <wait line="82" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.salvage.radius" version="0">
+    <attention min="unknown">
+      <run_script line="108" label="start"/>
+      <run_script line="280" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.salvage.routine" version="7">
+    <attention min="unknown">
+      <run_script line="226" label="evaluate_spaces"/>
+      <run_script line="283" sinceversion="1" label="evaluate_spaces"/>
+      <run_script line="310" label="nowwhat"/>
+      <wait line="400" label="find_wrecks"/>
+      <run_script line="447" sinceversion="3" label="deliver"/>
+      <wait line="464" sinceversion="3" label="deliver"/>
+      <wait line="541" label="execute"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.supply" version="3" priority="2">
+    <attention min="unknown">
+      <wait line="239" label="start"/>
+      <run_script line="260" label="start"/>
+      <run_script line="276" label="start"/>
+      <run_script line="284" label="start"/>
+      <run_script line="297" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.crewexchange" version="4">
+    <attention min="unknown">
+      <wait line="157" label="start"/>
+      <wait line="245" label="move_to_targetobject"/>
+      <run_script line="272" label="move_to_targetobject"/>
+      <wait line="298" label="move_to_targetobject"/>
+      <wait line="328" label="move_to_targetobject"/>
+      <wait line="360" label="check_trade"/>
+      <wait line="430" label="perform_trade"/>
+      <wait line="438" label="perform_trade"/>
+      <wait line="563" label="perform_trade"/>
+      <wait line="574" label="perform_trade"/>
+      <move_to line="646" label="passive_trade"/>
+      <wait line="656" label="passive_trade"/>
+      <wait line="674" label="passive_trade"/>
+      <wait line="695" label="passive_trade"/>
+      <run_script line="721" label="finish"/>
+      <run_script line="740" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.crewexchange.passive" version="2">
+    <attention min="unknown">
+      <run_script line="24"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.depositinventory" version="1">
+    <attention min="unknown">
+      <wait line="63"/>
+      <wait line="98" label="start"/>
+      <run_script line="137" sinceversion="1" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.middleman" version="10">
+    <attention min="unknown">
+      <run_script line="237" sinceversion="2" label="start"/>
+      <run_script line="279" sinceversion="7" label="evaluate_tradespaces"/>
+      <run_script line="328" label="nowwhat"/>
+      <wait line="337" sinceversion="5" label="nowwhat"/>
+      <wait line="473" label="buy"/>
+      <wait line="526" label="buy"/>
+      <wait line="722" label="sell"/>
+      <wait line="822" label="execute"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.perform" version="6">
+    <attention min="unknown">
+      <wait line="148" sinceversion="5" label="start"/>
+      <run_script line="251" label="move_to_targetobject"/>
+      <wait line="311" sinceversion="4" label="perform_trade"/>
+      <run_script line="408" label="perform_trade"/>
+      <execute_trade line="429" label="perform_trade"/>
+      <run_script line="490" label="perform_trade"/>
+      <detach_from_masstraffic line="511" label="perform_trade"/>
+      <wait line="527" label="finish"/>
+      <run_script line="547" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.routine" version="22">
+    <attention min="unknown">
+      <run_script line="369" sinceversion="4"/>
+      <wait line="418" sinceversion="12"/>
+      <run_script line="468" label="prep"/>
+      <wait line="476" sinceversion="12" label="prep"/>
+      <run_script line="498" sinceversion="8" label="start"/>
+      <run_script line="519" sinceversion="8" label="start"/>
+      <run_script line="564" label="find trade run"/>
+      <run_script line="626" label="find trade run"/>
+      <run_script line="723" label="find trade run"/>
+      <wait line="861" label="perform trade run"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.routine.advanced" version="0">
+    <attention min="unknown">
+      <run_script line="49"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.routine.basic" version="1">
+    <attention min="unknown">
+      <run_script line="62"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.single" version="4">
+    <attention min="unknown">
+      <wait line="138" label="buy"/>
+      <wait line="163" label="buy"/>
+      <wait line="224" label="sell"/>
+      <wait line="247" label="sell"/>
+      <run_script line="317" label="execute"/>
+      <move_to line="324" label="execute"/>
+      <wait line="371" sinceversion="4" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.single.buy" version="3">
+    <attention min="unknown">
+      <run_script line="113" label="start"/>
+      <wait line="136" sinceversion="3" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.single.sell" version="4">
+    <attention min="unknown">
+      <run_script line="119" label="start"/>
+      <wait line="141" sinceversion="3" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.wareexchange.nonship" version="1">
+    <attention min="unknown">
+      <run_script line="29" label="start"/>
+      <wait line="48" sinceversion="1" label="start"/>
+      <run_script line="65" label="start"/>
+      <run_script line="75" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.wareexchange.ship" version="7">
+    <attention min="unknown">
+      <wait line="113" sinceversion="3"/>
+      <run_script line="192"/>
+      <wait line="237" label="move_to_targetobject"/>
+      <run_script line="264" label="move_to_targetobject"/>
+      <run_script line="284" label="move_to_targetobject"/>
+      <wait line="319" sinceversion="4" label="move_to_targetobject"/>
+      <wait line="354" sinceversion="1" label="move_to_targetobject"/>
+      <run_script line="396" label="perform_trade"/>
+      <execute_trade line="418" label="perform_trade"/>
+      <run_script line="431" label="perform_trade"/>
+      <detach_from_masstraffic line="461" label="perform_trade"/>
+      <move_to line="474" label="passive_trade"/>
+      <wait line="484" label="passive_trade"/>
+      <wait line="502" label="passive_trade"/>
+      <wait line="522" label="passive_trade"/>
+      <run_script line="553" label="finish"/>
+      <run_script line="564" label="finish"/>
+      <run_script line="583" label="finish"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.trade.wareexchange.ship.passive" version="0">
+    <attention min="unknown">
+      <run_script line="20"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.transferworkers" version="0">
+    <attention min="unknown">
+      <wait line="112" label="move_to_destination"/>
+      <wait line="127" label="move_to_destination"/>
+      <wait line="158" label="transfer"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.transferworkers.routine" version="0">
+    <attention min="unknown">
+      <wait line="82" label="start"/>
+      <wait line="134" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.wait" version="8">
+    <attention min="unknown">
+      <run_script line="205" sinceversion="1"/>
+      <move_to line="213"/>
+      <run_script line="250" sinceversion="7"/>
+      <wait line="255"/>
+      <run_script line="260" sinceversion="7"/>
+      <wait line="264"/>
+      <run_script line="272" sinceversion="1" label="cleanup"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.wait.signal" version="9">
+    <attention min="unknown">
+      <move_to line="178"/>
+      <wait line="190"/>
+      <wait line="198"/>
+      <wait line="203" sinceversion="9" label="end"/>
+    </attention>
+  </aiscript>
+  <aiscript name="order.wait.venture" version="0">
+    <attention min="unknown">
+      <wait line="25" label="start"/>
+    </attention>
+  </aiscript>
+  <aiscript name="orders.base" version="7">
+    <attention min="unknown">
+      <wait line="122" label="loop"/>
+      <run_script line="139" label="loop"/>
+      <wait line="145" label="loop"/>
+      <wait line="229" sinceversion="1" label="loop"/>
+      <run_order_script line="344" label="loop"/>
+      <wait line="360" sinceversion="6" label="loop"/>
+      <wait line="384" label="loop"/>
+    </attention>
+  </aiscript>
+  <aiscript name="orders.base.tradecomputer" version="0">
+    <attention min="unknown">
+      <run_order_script line="93" label="loop"/>
+    </attention>
+  </aiscript>
+  <aiscript name="player.interaction" version="2">
+    <attention min="unknown">
+      <wait line="38"/>
+      <wait line="44"/>
+      <wait line="76" sinceversion="2"/>
+      <wait line="92"/>
+      <wait line="99"/>
+      <wait line="104"/>
+      <wait line="140"/>
+    </attention>
+  </aiscript>
+  <aiscript name="player.interaction.budget" version="0" priority="10">
+    <attention min="unknown">
+      <run_script line="20"/>
+    </attention>
+  </aiscript>
+  <aiscript name="player.interaction.tradefailed" version="0">
+    <attention min="unknown">
+      <run_script line="85"/>
+    </attention>
+  </aiscript>
+  <aiscript name="player.interaction.traderesult" version="0">
+    <attention min="unknown">
+      <run_script line="47"/>
+      <run_script line="48"/>
+    </attention>
+  </aiscript>
+  <aiscript name="trade.find.commander" version="13">
+    <attention min="unknown">
+      <wait line="130" sinceversion="13" label="find trade run"/>
+      <wait line="226" label="find trade run"/>
+      <wait line="229" label="find trade run"/>
+      <wait line="246" sinceversion="6" label="find trade run"/>
+      <wait line="447" sinceversion="4" label="find trade run"/>
+      <wait line="492" label="sell"/>
+      <wait line="495" label="sell"/>
+      <wait line="556" sinceversion="2" label="sell"/>
+      <wait line="563" sinceversion="2" label="sell"/>
+      <wait line="663" label="buy"/>
+      <wait line="666" sinceversion="9" label="buy"/>
+      <wait line="675" label="buy"/>
+      <wait line="678" sinceversion="9" label="buy"/>
+      <run_script line="718" label="buy"/>
+    </attention>
+  </aiscript>
+  <aiscript name="trade.find.free" version="6">
+    <attention min="unknown">
+      <wait line="392" label="find_sell_offers"/>
+      <wait line="602" label="find_buy_offers"/>
+      <wait line="634" label="find_buy_offers"/>
+      <wait line="692" label="find_buy_offers"/>
+      <run_script line="764" label="fail"/>
+      <wait line="770" label="fail"/>
+    </attention>
+  </aiscript>
+  <aiscript name="trade.station" version="7">
+    <attention min="unknown">
+      <wait line="734" label="loop"/>
+      <execute_trade line="816" label="loop"/>
+    </attention>
+  </aiscript>
+</compatibility>

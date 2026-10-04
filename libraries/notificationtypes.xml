@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<notificationtypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="notificationtypes.xsd">
+
+  <!-- ***** Interactive NPC events ***** -->
+
+  <!-- Under attack: Used in md.Notifications.PlayerOwnedAttacked -->
+  <notification category="npc_interactive" id="npc_under_attack" name="{1015,262}" />
+  <!-- Out of ammo: Used in fight.attack.object.fighter and fight.attack.object.bigtarget -->
+  <notification category="npc_interactive" id="npc_out_of_ammo" name="{1015,43}" />
+  <!-- Trade failed: Should not happen, ignored for now -->
+  <!-- <notification category="npc_interactive" id="npc_trade_failed" name="{1015,1007}" /> -->
+  <!-- Illegal cargo dropped: Used in md.Notifications.IllegalCargoDropped_Notification -->
+  <notification category="npc_interactive" id="npc_illegal_cargo_dropped" name="{1015,1020}" />
+
+  <!-- ***** Non-interactive NPC events ***** -->
+
+  <!-- Awaiting orders: Used at the end of most order scripts if no more order is in the queue -->
+  <notification category="npc_info" id="npc_await_orders" name="{1015,1003}" />
+  <!-- Order could not be completed: Used in several order scripts in case of failure -->
+  <notification category="npc_info" id="npc_order_not_complete" name="{1015,1004}" />
+  <!-- Trade successful: Used in player.interaction.traderesult -->
+  <notification category="npc_info" id="npc_trade_successful" name="{1015,5}" />
+  <!-- Starting ware transfer now: Used in order.trade.wareexchange.ship -->
+  <notification category="npc_info" id="npc_start_ware_transfer" name="{1015,1009}" />
+
+  <!-- ***** Ticker messages ***** -->
+
+  <!-- Payment received: Used in md.Notifications.PlayerMoneyTransfer -->
+  <notification category="ticker" id="money_added" name="{1015,1002}" />
+  <!-- Debit withdrawal: Used in md.Notifications.PlayerMoneyTransfer -->
+  <notification category="ticker" id="money_subtracted" name="{1015,1001}" />
+  <!-- Reputation gained: Used in md.Notifications.BaseRelationChanged -->
+  <notification category="ticker" id="reputation_gained" name="{1015,14}" />
+  <!-- Reputation lost: Used in md.Notifications.BaseRelationChanged -->
+  <notification category="ticker" id="reputation_lost" name="{1015,15}" />
+  <!-- Lost reputation temporarily: Used in md.Notifications.TempRelationDropped -->
+  <notification category="ticker" id="reputation_lost_temp" name="{1015,16}" />
+  <!-- Discount unlocked: Used in md.Notifications.PlayerDiscountCommission -->
+  <notification category="ticker" id="discount_unlocked" name="{1015,10}" />
+  <!-- Commission unlocked: Used in md.Notifications.PlayerDiscountCommission -->
+  <notification category="ticker" id="commission_unlocked" name="{1015,11}" />
+  <!-- Ship was destroyed: Used in md.Notifications.PlayerOwnedKilled -->
+  <notification category="ticker" id="ship_destroyed" name="{1015,1010}" />
+  <!-- Station was destroyed: Used in md.Notifications.PlayerOwnedKilled -->
+  <notification category="ticker" id="station_destroyed" name="{1015,1012}" />
+  <!-- Trade successful: Used in player.interaction.traderesult -->
+  <notification category="ticker" id="successful_trade_report" name="{1015,1005}" />
+  <!-- All trade operations completed: Used in order.trade.perform -->
+  <notification category="ticker" id="trade_queue_completed" name="{1015,1008}" />
+  <!-- Ship has returned from a venture: Used in md.Notifications.VentureMissionCompleted -->
+  <notification category="ticker" id="returned_from_venture" name="{1015,1011}" />
+  <!-- Illegal cargo dropped (ticker message): Used in md.Notifications.IllegalCargoDropped_Notification -->
+  <notification category="ticker" id="illegal_cargo_dropped" name="{1015,1020}" />
+  <!-- Illegal station plot: Used in order.move.recon -->
+  <notification category="ticker" id="illegal_plot_detected" name="{1015,1021}" />
+  <!-- Hostile object detected: Used in md.Notifications.Satellite_DetectedHostile -->
+  <!--<notification category="ticker" id="hostile_detected" name="{1015, 1022}"/>-->
+
+</notificationtypes>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<effects>
+  <event name="damage">
+    <parameters />
+  </event>
+  <event name="activation">
+    <parameters />
+  </event>
+  <event name="opening">
+    <parameters />
+  </event>
+  <event name="closing">
+    <parameters />
+  </event>
+  <event name="producing">
+    <parameters />
+  </event>
+  <event name="operational">
+    <parameters />
+  </event>
+</effects>

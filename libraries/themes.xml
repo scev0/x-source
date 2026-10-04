@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<themes>
+  <!-- for groups which contain selections the group node MUST include paintmod="" and/or clothingmod="" to indicate which types of mod(s) the group supports -->
+  
+  <theme id="error_theme" tags="hidden">
+    <!-- default group for all factions -->
+    <group paintmod="paintmod_0015" />
+  </theme>
+
+  <!-- default theme for all factions -->
+  <theme id="painttheme_race_default" default="error_theme" tags="hidden">
+    <group faction="player" paintmod="paintmod_0006" />
+    <group faction="alliance" paintmod="paintmod_0011" />
+    <group faction="antigone" paintmod="paintmod_0003" />
+    <group faction="argon" paintmod="paintmod_0002" />
+    <group faction="buccaneers" paintmod="paintmod_0103" />
+    <group faction="civilian" paintmod="paintmod_0001" /> <!-- only used in masstraffic-->
+    <group faction="criminal" paintmod="paintmod_0001" /> <!-- only used in masstraffic-->
+    <group faction="khaak" paintmod="paintmod_0151" />
+    <group faction="hatikvah" paintmod="paintmod_0007" />
+    <group faction="holyorder" paintmod="paintmod_0010" />
+    <group faction="holyorderfanatic" paintmod="paintmod_0041"/>
+    <group faction="ministry" paintmod="paintmod_0012" />
+    <group faction="ownerless" paintmod="paintmod_0008" />
+    <group faction="paranid" paintmod="paintmod_0009" />
+    <group faction="scaleplate" paintmod="paintmod_0005" />
+    <group faction="smuggler" paintmod="paintmod_0001" /> <!-- only used in masstraffic-->
+    <group faction="teladi" paintmod="paintmod_0004" />
+    <group faction="trinity" paintmod="paintmod_0102" />
+    <group faction="xenon" paintmod="paintmod_0154" />
+  </theme>
+
+  <!-- ship variation theme for all factions -->
+  <theme id="painttheme_race_ship" default="painttheme_race_default" tags="hidden">
+    <group faction="alliance" selection="random" paintmod="">
+      <select paintmod="paintmod_0011" weight="5" />
+      <select paintmod="paintmod_0042" weight="1" />
+      <select paintmod="paintmod_0043" weight="1" />
+      <select paintmod="paintmod_0044" weight="1" />
+    </group>
+    <group faction="antigone" selection="random" paintmod="">
+      <select paintmod="paintmod_0003" weight="5" />
+      <select paintmod="paintmod_0027" weight="1" />
+      <select paintmod="paintmod_0028" weight="1" />
+      <select paintmod="paintmod_0029" weight="1" />
+    </group>   
+    <group faction="argon" selection="random" paintmod="">
+      <select paintmod="paintmod_0002" weight="5" />
+      <select paintmod="paintmod_0024" weight="1" />
+      <select paintmod="paintmod_0025" weight="1" />
+      <select paintmod="paintmod_0026" weight="1" />
+    </group>
+    <group faction="buccaneers" selection="random" paintmod="">
+      <select paintmod="paintmod_0103" weight="5" />
+      <select paintmod="paintmod_0104" weight="1" />
+    </group>
+    <group faction="hatikvah" selection="random" paintmod="">
+      <select paintmod="paintmod_0007" weight="5" />
+      <select paintmod="paintmod_0013" weight="1" />
+      <select paintmod="paintmod_0021" weight="1" />
+      <select paintmod="paintmod_0022" weight="1" />
+      <select paintmod="paintmod_0023" weight="1" />
+    </group>
+    <group faction="holyorder" selection="random" paintmod="">
+      <select paintmod="paintmod_0010" weight="5" />
+      <select paintmod="paintmod_0039" weight="1" />
+      <select paintmod="paintmod_0040" weight="1" />
+      <select paintmod="paintmod_0041" weight="1" />
+    </group>
+    <group faction="ministry" selection="random" paintmod="">
+      <select paintmod="paintmod_0012" weight="5" />
+      <select paintmod="paintmod_0045" weight="1" />
+      <select paintmod="paintmod_0046" weight="1" />
+      <select paintmod="paintmod_0047" weight="1" />
+    </group>
+    <group faction="paranid" selection="random" paintmod="">
+      <select paintmod="paintmod_0009" weight="5" />
+      <select paintmod="paintmod_0036" weight="1" />
+      <select paintmod="paintmod_0037" weight="1" />
+      <select paintmod="paintmod_0038" weight="1" />
+    </group>     
+    <group faction="scaleplate" selection="random" paintmod="">
+      <select paintmod="paintmod_0005" weight="5" />
+      <select paintmod="paintmod_0014" weight="1" />
+      <select paintmod="paintmod_0020" weight="1" />
+      <select paintmod="paintmod_0033" weight="1" />
+      <select paintmod="paintmod_0034" weight="1" />
+      <select paintmod="paintmod_0035" weight="1" />
+    </group>
+    <group faction="teladi" selection="random" paintmod="">
+      <select paintmod="paintmod_0004" weight="5" />
+      <select paintmod="paintmod_0030" weight="1" />
+      <select paintmod="paintmod_0031" weight="1" />
+      <select paintmod="paintmod_0032" weight="1" />
+    </group>
+    <group faction="trinity" selection="random" paintmod="">
+      <select paintmod="paintmod_0102" weight="1" />
+    </group>
+  </theme>
+
+  <!-- player_theme_01 -->
+  <theme id="painttheme_player_01" default="error_theme" name="{20116,10011}">
+    <group faction="player" paintmod="paintmod_0006" />
+  </theme>
+  <!-- player_theme_02 -->
+  <theme id="painttheme_player_02" default="error_theme" name="{20116,10021}">
+    <group faction="player" paintmod="paintmod_0048" />
+  </theme>
+  <!-- player_theme_03 -->
+  <theme id="painttheme_player_03" default="error_theme" name="{20116,10031}">
+    <group faction="player" paintmod="paintmod_0049" />
+  </theme>
+  <!-- player_theme_04 -->
+  <theme id="painttheme_player_04" default="error_theme" name="{20116,10041}">
+    <group faction="player" paintmod="paintmod_0050" />
+  </theme>
+  <!-- player_theme_05 -->
+  <theme id="painttheme_player_05" default="error_theme" name="{20116,10051}">
+    <group faction="player" paintmod="paintmod_0097" />
+  </theme>
+  <!-- player_theme_06 -->
+  <theme id="painttheme_player_06" default="error_theme" name="{20116,10061}">
+    <group faction="player" paintmod="paintmod_0098" />
+  </theme>
+  <!-- player_theme_07 -->
+  <theme id="painttheme_player_07" default="error_theme" name="{20116,10071}">
+    <group faction="player" paintmod="paintmod_0099" />
+  </theme>
+  <!-- player_theme_08 -->
+  <theme id="painttheme_player_08" default="error_theme" name="{20116,10081}">
+    <group faction="player" paintmod="paintmod_0100" />
+  </theme>
+
+  <!-- faction themes available to the player when ALLY -->
+  <theme id="painttheme_player_alliance_0011" default="error_theme" name="{20116,10091}" tags="hidden noblueprint permit">
+    <group faction="alliance" paintmod="" />
+    <group faction="player" paintmod="paintmod_0011" />
+  </theme>
+  <theme id="painttheme_player_antigone_0003" default="error_theme" name="{20116,10101}" tags="hidden noblueprint permit">
+    <group faction="antigone" paintmod="" />
+    <group faction="player" paintmod="paintmod_0003" />
+  </theme>
+  <theme id="painttheme_player_argon_0002" default="error_theme" name="{20116,10111}" tags="hidden noblueprint permit">
+    <group faction="argon" paintmod="" />
+    <group faction="player" paintmod="paintmod_0002" />
+  </theme>
+  <theme id="painttheme_player_buccaneers_0103" default="error_theme" name="{20116,10121}" tags="hidden noblueprint permit">
+    <group faction="buccaneers" paintmod="" />
+    <group faction="player" paintmod="paintmod_0103" />
+  </theme>
+  <theme id="painttheme_player_hatikvah_0007" default="error_theme" name="{20116,10131}" tags="hidden noblueprint permit">
+    <group faction="hatikvah" paintmod="" />
+    <group faction="player" paintmod="paintmod_0007" />
+  </theme>
+  <theme id="painttheme_player_holyorder_0010" default="error_theme" name="{20116,10141}" tags="hidden noblueprint permit">
+    <group faction="holyorder" paintmod="" />
+    <group faction="player" paintmod="paintmod_0010" />
+  </theme>
+  <theme id="painttheme_player_holyorderfanatic_0041" default="error_theme" name="{20116,10151}" tags="hidden noblueprint permit">
+    <group faction="holyorderfanatic" paintmod="" />
+    <group faction="player" paintmod="paintmod_0041" />
+  </theme>
+  <theme id="painttheme_player_ministry_0012" default="error_theme" name="{20116,10161}" tags="hidden noblueprint permit">
+    <group faction="ministry" paintmod="" />
+    <group faction="player" paintmod="paintmod_0012" />
+  </theme>
+  <theme id="painttheme_player_paranid_0009" default="error_theme" name="{20116,10171}" tags="hidden noblueprint permit">
+    <group faction="paranid" paintmod="" />
+    <group faction="player" paintmod="paintmod_0009" />
+  </theme>
+  <theme id="painttheme_player_scaleplate_0005" default="error_theme" name="{20116,10181}" tags="hidden noblueprint permit">
+    <group faction="scaleplate" paintmod="" />
+    <group faction="player" paintmod="paintmod_0005" />
+  </theme>
+  <theme id="painttheme_player_teladi_0004" default="error_theme" name="{20116,10191}" tags="hidden noblueprint permit">
+    <group faction="teladi" paintmod="" />
+    <group faction="player" paintmod="paintmod_0004" />
+  </theme>
+  <theme id="painttheme_player_trinity_0102" default="error_theme" name="{20116,10201}" tags="hidden noblueprint permit">
+    <group faction="trinity" paintmod="" />
+    <group faction="player" paintmod="paintmod_0102" />
+  </theme>
+
+  <!-- player uniforms -->
+  <theme id="clothingmod_player_uniform_01" name="{20116,10011}">
+    <group selection="random" clothingmod="">
+      <select clothingmod="clothingmod_0001" weight="10" />
+      <select clothingmod="clothingmod_0002" weight="1" />
+    </group>
+  </theme>
+  <theme id="clothingmod_player_uniform_02" name="{20116,10021}">
+    <group selection="random" clothingmod="">
+      <select clothingmod="clothingmod_0001" weight="1" />
+      <select clothingmod="clothingmod_0002" weight="10" />
+    </group>
+  </theme>
+
+</themes>
+
+

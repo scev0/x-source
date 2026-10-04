@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- ?xml-stylesheet href="component.xsl" type="text/xsl" ? -->
+<!-- component file may contain an arbitrary collection of components -->
+<!-- read XSD reference, when the XSD-file is there - xsi:noNamespaceSchemaLocation="component.xsd" -->
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <component name="testminingnode" class="miningnode">
+    <connections>
+      <connection name="space" tags="miningnode" />
+    </connections>
+  </component>
+  <component name="standardholomap" class="holomap">
+    <connections>
+      <connection name="space" tags="holomap" value="0" optional="0" />
+    </connections>
+  </component>
+  <component name="standardgalaxy" class="galaxy">
+    <connections>
+      <connection name="clusters" tags="cluster" value="0" optional="1" />
+      <connection name="ships" tags="ship" value="0" optional="1" />
+    </connections>
+  </component>
+  <component name="standardcluster" class="cluster">
+    <connections>
+      <connection name="galaxy" tags="cluster" value="0" optional="0" />
+      <connection name="content" tags="celestialbody" value="0" optional="0" />
+      <connection name="content2" tags="celestialbodydynamic" value="0" optional="0" />
+      <connection name="sectors" tags="sector" value="0" optional="1" />
+      <connection name="areas" tags="area" value="0" optional="1" />
+      <connection name="sechighways" tags="sechighway" value="0" optional="1" />
+      <connection name="planets" tags="planet" value="0" optional="1" />
+      <connection name="suns" tags="sun" value="0" optional="1" />
+      <connection name="nebulas" tags="nebula" value="0" optional="1" />
+      <connection name="rendereffects" tags="rendereffect" />
+      <connection name="lensflares" tags="lensflare" />
+      <connection name="regions" tags="region" value="0" optional="1" />
+    </connections>
+  </component>
+  <component name="standardsector" class="sector">
+    <connections>
+      <connection name="cluster" tags="sector" value="0" optional="0" />
+      <connection name="lensflares" tags="lensflare" value="0" optional="1" />
+      <connection name="lights" tags="light" value="0" optional="1" />
+      <connection name="zones" tags="zone" value="0" optional="1" />
+      <connection name="zonehighways" tags="zonehighway" value="0" optional="1" />
+      <connection name="rendereffects" tags="rendereffect" />
+      <connection name="stardust" tags="stardust" />
+      <connection name="adjacentregions" tags="adjacentregion" />
+    </connections>
+  </component>
+  <component name="standardsechighway" class="highway">
+    <connections>
+      <connection name="cluster" tags="sechighway" value="0" optional="0" />
+      <connection name="visiblezones" tags="visible zone" value="0" optional="1" />
+      <connection name="occludedzones" tags="occluded zone" value="0" optional="1" />
+      <connection name="stations" tags="station" value="0" optional="1" />
+      <connection name="ships" tags="ship" value="0" optional="1" />
+      <connection name="gates" tags="gate" value="0" optional="1" />
+      <connection name="lights" tags="light" value="0" optional="1" />
+      <connection name="lensflares" tags="lensflare" value="0" optional="1" />
+      <connection name="entrypoint" tags="entry" value="-1" optional="0" />
+      <connection name="exitpoint" tags="exit" value="1" optional="0" />
+      <connection name="entrygate" tags="entrygate" value="-1" optional="0" />
+      <connection name="exitgate" tags="exitgate" value="1" optional="0" />
+
+      <connection name="highwayscene" tags="highwayscene" value="1" optional="0" />
+      <connection name="uielement" tags="ui info" value="-1" optional="0" />
+      <connection name="rendereffects" tags="rendereffect" />
+      <connection name="stardust" tags="stardust" />
+      <connection name="bullet" tags="bullet" value="0" optional="0" />
+    </connections>
+  </component>
+  <component name="standardzone" class="zone">
+    <connections>
+      <connection name="sector" tags="zone" value="0" optional="0" />
+      <connection name="visiblezones" tags="visible zone" value="0" optional="1" />
+      <connection name="occludedzones" tags="occluded zone" value="0" optional="1" />
+      <connection name="stations" tags="station" value="0" optional="1" />
+      <connection name="ships" tags="ship" value="0" optional="1" />
+      <connection name="gates" tags="gate" value="0" optional="1" />
+      <connection name="sh" tags="sechighway" value="0" optional="1" />
+      <connection name="lights" tags="light" value="0" optional="1" />
+      <connection name="lensflares" tags="lensflare" value="0" optional="1" />
+      <connection name="bullets" tags="bullet" value="0" optional="1" />
+      <connection name="countermeasures" tags="countermeasure" value="0" optional="1" />
+      <connection name="missiles" tags="missile" value="0" optional="1" />
+      <connection name="asteroids" tags="asteroid" value="0" optional="1" />
+      <connection name="stardust" tags="stardust" />
+      <connection name="entrypoint1" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint2" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint3" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint4" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint5" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint6" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint7" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint8" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint9" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint10" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint11" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint12" tags="exit" value="-1" optional="1" />
+      <connection name="exitpoint1" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint2" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint3" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint4" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint5" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint6" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint7" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint8" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint9" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint10" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint11" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint12" tags="entry" value="1" optional="1" />
+      <connection name="rendereffects" tags="rendereffect" />
+      <connection name="scaneffects" tags="scaneffect" />
+      <!-- only needed for XU Viewer RPC functionality in map EffectUniverse -->
+      <connection name="turrets" tags="turret" value="0" optional="1" />
+      <connection name="positionals" tags="positional position" value="0" optional="1" />
+      <connection name="anything" tags="anything" value="0" optional="1" />
+      <!-- end of needed for XU Viewer -->
+      <connection name="SHCon1_Gate" tags="sechighway" value="0" optional="1">
+        <offset>
+          <position x="-20000" y="0" z="20000" />
+        </offset>
+      </connection>
+      <connection name="SHCon2_Gate" tags="sechighway" value="0" optional="1">
+        <offset>
+          <position x="-20000" y="0" z="-20000" />
+        </offset>
+      </connection>
+      <connection name="SHCon3_Gate" tags="sechighway" value="0" optional="1">
+        <offset>
+          <position x="20000" y="0" z="20000" />
+        </offset>
+      </connection>
+      <connection name="SHCon4_Gate" tags="sechighway" value="0" optional="1">
+        <offset>
+          <position x="20000" y="0" z="-20000" />
+        </offset>
+      </connection>
+      <connection name="SHCon5_Gate" tags="sechighway" value="0" optional="1">
+        <offset>
+          <position x="-5000" y="0" z="20000" />
+        </offset>
+      </connection>
+      <connection name="SHCon6_Gate" tags="sechighway" value="0" optional="1">
+        <offset>
+          <position x="-5000" y="0" z="-20000" />
+        </offset>
+      </connection>
+      <connection name="SHCon7_Gate" tags="sechighway" value="0" optional="1">
+        <offset>
+          <position x="-20000" y="0" z="5000" />
+        </offset>
+      </connection>
+      <connection name="SHCon8_Gate" tags="sechighway" value="0" optional="1">
+        <offset>
+          <position x="-20000" y="0" z="-5000" />
+        </offset>
+      </connection>
+      <connection name="SHCon9_Gate" tags="sechighway" value="0" optional="1">
+        <offset>
+          <position x="5000" y="0" z="20000" />
+        </offset>
+      </connection>
+      <connection name="SHCon10_Gate" tags="sechighway" value="0" optional="1">
+        <offset>
+          <position x="5000" y="0" z="-20000" />
+        </offset>
+      </connection>
+      <connection name="SHCon11_Gate" tags="sechighway" value="0" optional="1">
+        <offset>
+          <position x="20000" y="0" z="5000" />
+        </offset>
+      </connection>
+      <connection name="SHCon12_Gate" tags="sechighway" value="0" optional="1">
+        <offset>
+          <position x="20000" y="0" z="-5000" />
+        </offset>
+      </connection>
+      <connection name="highway01connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway01connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway02connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway02connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway03connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway03connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway04connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway04connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway05connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway05connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway06connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway06connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway07connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway07connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway08connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway08connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway09connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway09connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway10connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway10connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway11connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway11connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway12connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway12connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway13connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway13connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway14connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway14connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway15connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway15connection02_gate" tags="exit highway" value="-1" optional="1"/>
+      <connection name="highway16connection01_gate" tags="entry highway" value="1" optional="1"/>
+      <connection name="highway16connection02_gate" tags="exit highway" value="-1" optional="1"/>
+    </connections>
+  </component>
+  <component name="standardzonehighway" class="highway">
+    <connections>
+      <connection name="sector" tags="zone" value="0" optional="0" />
+      <connection name="visiblezones" tags="visible zone" value="0" optional="1" />
+      <connection name="occludedzones" tags="occluded zone" value="0" optional="1" />
+      <connection name="stations" tags="station" value="0" optional="1" />
+      <connection name="ships" tags="ship" value="0" optional="1" />
+      <connection name="gates" tags="gate" value="0" optional="1" />
+      <connection name="lights" tags="light" value="0" optional="1" />
+      <connection name="lensflares" tags="lensflare" value="0" optional="1" />
+      <connection name="entrypoint" tags="entry" value="-1" optional="0" />
+      <connection name="exitpoint" tags="exit" value="1" optional="0" />
+      <connection name="entrygate" tags="entrygate" value="-1" optional="0" />
+      <connection name="exitgate" tags="exitgate" value="1" optional="0" />
+      <connection name="highwayscene" tags="highwayscene" value="1" optional="0" />
+      <connection name="uielement" tags="ui info" value="-1" optional="0" />
+      <connection name="rendereffects" tags="rendereffect" />
+      <connection name="stardust" tags="stardust" />
+      <connection name="bullet" tags="bullet" value="0" optional="0" />
+    </connections>
+  </component>
+  <component name="standardregion" class="region">
+    <connections>
+      <connection name="cluster" tags="region" value="0" optional="0" />
+    </connections>
+  </component>
+  <component name="stationregion" class="region">
+    <connections>
+      <connection name="cluster" tags="region" value="0" optional="0" />
+      <connection name="station" tags="stationregion" value="0" optional="0" />
+    </connections>
+  </component>
+  <component name="camera_anchor_scene" class="scene">
+    <connections>
+      <connection name="space" tags="cameraanchorscene" />
+      <connection name="uianchor" tags="uianchor" />
+    </connections>
+  </component>
+  <component name="testgalaxy">
+    <connections>
+      <connection name="clusters" tags="cluster" value="0" optional="1" />
+      <connection name="ships" tags="ship" value="0" optional="1" />
+      <connection name="lights" tags="light" value="0" optional="1" />
+      <connection name="rendereffects" tags="rendereffect" />
+    </connections>
+  </component>
+  <component name="testcluster">
+    <offset>
+      <position x="0" y="0" z="0" />
+    </offset>
+    <connections>
+      <connection name="galaxy" tags="cluster" value="0" optional="0" />
+      <connection name="sectors" tags="sector" value="0" optional="1" />
+      <connection name="areas" tags="area" value="0" optional="1" />
+      <connection name="sechighways" tags="sechighway" value="0" optional="1" />
+      <connection name="planets" tags="planet" value="0" optional="1" />
+      <connection name="suns" tags="sun" value="0" optional="1" />
+      <connection name="nebulas" tags="nebula" value="0" optional="1" />
+      <connection name="rendereffects" tags="rendereffect" />
+    </connections>
+  </component>
+  <component name="testsector">
+    <connections>
+      <connection name="cluster" tags="sector" value="0" optional="0" />
+      <connection name="zones" tags="zone" value="0" optional="1" />
+      <connection name="zonehighways" tags="zonehighway" value="0" optional="1" />
+      <connection name="rendereffects" tags="rendereffect" />
+    </connections>
+  </component>
+  <component name="testsechighway">
+    <connections>
+      <connection name="cluster" tags="sechighway" value="0" optional="0" />
+      <connection name="stations" tags="station" value="0" optional="1" />
+      <connection name="ships" tags="ship" value="0" optional="1" />
+      <connection name="gates" tags="gate" value="0" optional="1" />
+      <connection name="lights" tags="light" value="0" optional="1" />
+      <connection name="entrypoint" tags="entry" value="-1" optional="0" />
+      <connection name="exitpoint" tags="exit" value="1" optional="0" />
+      <connection name="entrygate" tags="entrygate" value="-1" optional="0" />
+      <connection name="exitgate" tags="exitgate" value="1" optional="0" />
+      <connection name="highwayscene" tags="highwayscene" value="1" optional="0" />
+      <connection name="uielement" tags="ui info" value="-1" optional="0" />
+      <connection name="rendereffects" tags="rendereffect" />
+    </connections>
+  </component>
+  <component name="testzonehighway">
+    <connections>
+      <connection name="sector" tags="zone" value="0" optional="0" />
+      <connection name="stations" tags="station" value="0" optional="1" />
+      <connection name="ships" tags="ship" value="0" optional="1" />
+      <connection name="gates" tags="gate" value="0" optional="1" />
+      <connection name="lights" tags="light" value="0" optional="1" />
+      <connection name="entrypoint" tags="entry" value="-1" optional="0" />
+      <connection name="exitpoint" tags="exit" value="1" optional="0" />
+      <connection name="entrygate" tags="entrygate" value="-1" optional="0" />
+      <connection name="exitgate" tags="exitgate" value="1" optional="0" />
+      <connection name="highwayscene" tags="highwayscene" value="1" optional="0" />
+      <connection name="uielement" tags="ui info" value="-1" optional="0" />
+      <connection name="rendereffects" tags="rendereffect" />
+    </connections>
+  </component>
+  <component name="testplanet">
+    <connections>
+      <connection name="cluster" tags="planet" value="0" optional="0" />
+    </connections>
+  </component>
+  <component name="testnebula">
+    <connections>
+      <connection name="cluster" tags="nebula" value="0" optional="0" />
+    </connections>
+  </component>
+  <component name="testzone" class="zone">
+    <layer>
+      <size>
+        <max x="25000" y="25000" z="25000" />
+      </size>
+    </layer>
+    <connections>
+      <connection name="sector" tags="zone" value="0" optional="0" />
+      <connection name="visiblezones" tags="visible zone" value="0" optional="1" />
+      <connection name="occludedzones" tags="occluded zone" value="0" optional="1" />
+      <connection name="stations" tags="station" value="0" optional="1" />
+      <connection name="ships" tags="ship" value="0" optional="1" />
+      <connection name="gates" tags="gate" value="0" optional="1" />
+      <connection name="lights" tags="light" value="0" optional="1" />
+      <connection name="bullets" tags="bullet" value="0" optional="1" />
+      <connection name="countermeasures" tags="countermeasure" value="0" optional="1" />
+      <connection name="entrypoint0" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint1" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint2" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint3" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint4" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint5" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint6" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint7" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint8" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint9" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint10" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint11" tags="exit" value="-1" optional="1" />
+      <connection name="entrypoint12" tags="exit" value="-1" optional="1" />
+      <connection name="exitpoint0" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint1" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint2" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint3" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint4" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint5" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint6" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint7" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint8" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint9" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint10" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint11" tags="entry" value="1" optional="1" />
+      <connection name="exitpoint12" tags="entry" value="1" optional="1" />
+      <connection name="rendereffects" tags="rendereffect" />
+    </connections>
+  </component>
+  <component name="viewerspace">
+    <connections>
+      <connection name="sector" tags="zone" value="0" optional="0" />
+      <connection name="stations" tags="station" value="0" optional="1" />
+      <connection name="ships" tags="ship" value="0" optional="1" />
+      <connection name="lights" tags="light" value="0" optional="1" />
+      <connection name="anything" value="0" optional="1" />
+    </connections>
+  </component>
+  <component name="testagent">
+    <connections>
+      <connection name="space" tags="ship" value="0" optional="0" />
+      <connection name="engine" tags="engine" value="0" optional="0" />
+      <connection name="dock" tags="station" value="0" optional="1" />
+      <connection name="storage" tags="storage" value="0" optional="0" />
+      <connection name="cockpit" tags="cockpit" value="-1" optional="0">
+        <offset>
+          <position x="-3.112764E-07" y="2.295255" z="-5.684728" />
+        </offset>
+      </connection>
+    </connections>
+  </component>
+  <component name="testroom">
+    <connections>
+      <connection name="space" tags="station"/>
+      <connection name="container" tags="contents" value="1" optional="1" />
+      <connection name="lights" tags="light" value="0" optional="1" />
+      <connection name="player" tags="player" value="-1" optional="1" />
+    </connections>
+  </component>
+  <component name="targetpoint_dummy">
+    <connections>
+      <connection name="space" tags="targetpoint" optional="0" />
+      <connection name="ConnectionUI" tags="ui" />
+    </connections>
+  </component>
+  <component name="testuielement">
+    <connections>
+      <connection name="anchor" tags="ui" value="1" optional="1" />
+    </connections>
+  </component>
+  <component name="pathfinding_debug_gate">
+    <connections>
+      <connection name="space" tags="gate" value="0" optional="0" />
+      <connection name="destination" tags="gate" value="0" optional="0" />
+    </connections>
+  </component>
+  <component name="stardust">
+    <connections>
+      <connection name="space" tags="stardust" />
+    </connections>
+  </component>
+  <component name="dummy" class="positional">
+    <connections>
+      <connection name="contents" tags="contents" value="0" optional="1" />
+      <connection name="position" tags="position" value="-1" optional="1" />
+      <connection name="space" tags="station" value="0" optional="0" />
+      <connection name="uielement" tags="ui" value="0" optional="1" />
+      <connection name="engine" tags="engine" value="0" optional="1" />
+      <connection name="uielement01" tags="ui info" value="-1" optional="1">
+        <offset>
+          <position x="200" y="0" z="-200" />
+        </offset>
+      </connection>
+    </connections>
+  </component>
+  <component name="testnpc" class="npc">
+    <model type="body" name="assets/characters/test/EMFXExamples/Models/HumanPhonemes/HumanPhonemes" />
+  </component>
+  <component name="forceemitterobject" class="object">
+    <connections>
+      <connection name="space" tags="object"/>
+      <connection name="content" tags="forceemitter"/>
+    </connections>
+  </component>
+</components>

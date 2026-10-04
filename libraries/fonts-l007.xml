@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ?xml-stylesheet href="races.xsl" type="text/xsl" ? -->
+<fonts>
+  <!-- shared font definitions -->
+  <font name="jfont">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="csfont">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="ctfont">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="kofont">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <!-- language specific font definitions -->
+  <!-- note: identical with generic font definition as of X4 v2.60 -->
+  <font name="Zekton">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="Zekton Bold">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="Stars">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="Terrakana">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="Terrakana Bold">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="Boki">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="Boki Bold">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="DejaVu Sans Mono Outlined">
+    <fontsize size="8" yoffset="0" />
+  </font>
+  <alias name="large" ref="Zekton" />
+  <alias name="default" ref="Zekton" />
+  <alias name="holomap" ref="Zekton" material="zekton outlined" />
+  <alias name="holomap fixed" ref="Zekton" material="zekton outlined" fixedwidth="true" />
+  <alias name="holomap bold" ref="Zekton Bold" material="zekton outlined" />
+  <alias name="holomap bold fixed" ref="Zekton Bold" material="zekton outlined" fixedwidth="true" />
+  <alias name="Zekton fixed" ref="Zekton" fixedwidth="true" />
+  <alias name="Zekton Bold fixed" ref="Zekton Bold" fixedwidth="true" />
+  <alias name="Zekton Outlined" ref="Zekton" material="zekton outlined" />
+  <alias name="Zekton Bold Outlined" ref="Zekton Bold" material="zekton Bold outlined" />
+  <alias name="Zekton Outlined fixed" ref="Zekton" material="zekton outlined" fixedwidth="true"/>
+  <alias name="debug" ref="DejaVu Sans Mono Outlined" />
+</fonts>

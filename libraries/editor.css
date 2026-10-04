@@ -1,0 +1,155 @@
+/* general */
+
+body {
+    font-family: Verdana, arial, sans-serif;
+    background-color: #e0e0e0;
+    color: black;
+    font-size: 8pt;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* text styles */
+
+h1 {
+    font-size: 12pt;
+    font-weight: bold;
+}
+h2 {
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+td, th {
+    vertical-align: top;
+    color: black;
+    background-color: white;
+}
+
+th.dummy {
+    color: darkgray;
+}
+
+td.dirty {
+    background-color: #ffeeaa;
+}
+
+#pButtons > button {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+table.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.filters {
+    text-align: left;
+}
+table.filters > tr > td {
+    background-color: inherit;
+    vertical-align: middle;
+}
+table.columnSettings {
+    background-color: white;
+    text-align: left;
+    border: 2px groove black;
+}
+table.columnSettings > tr > td {
+    vertical-align: middle;
+}
+
+/* Rotate header row by 45 degrees */
+table.rotated-header > thead > tr > th {
+    height: 145px;
+    white-space: nowrap;
+}
+table.rotated-header > thead > tr > th > div {
+    transform:
+        translate(3px, 137px)
+        rotate(315deg);
+    width: 30px;
+}
+table.rotated-header > thead > tr > th > div > span {
+    border-top: 1px solid #ccc;
+    padding: 5px 25px;
+}
+
+/* Make sure that tbody is on top of the partially overlapping thead (due to rotated header cells) */
+table.rotated-header > thead {
+    position: relative;
+    z-index: 1;
+}
+table.rotated-header > tbody {
+    position: relative;
+    z-index: 2;
+}
+
+table.base {
+    background-color: white;
+    text-align: left;
+    border: 2px groove black;
+}
+
+/* Table body cells */
+table.base > tbody > tr > td {
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    white-space: nowrap;
+}
+table.base > tbody > tr > td.dummy {
+    border: none;
+}
+/* View mode */
+table.base > tbody > tr.disabled > td {
+    color: darkgray;
+}
+table.base > tbody.view > tr:hover > td {
+    background-color: #eeeeee;
+}
+table.base > tbody.view > tr:hover > td.dirty {
+    background-color: #f4e2a0;
+}
+table.base > tbody.view > tr > td:not(:first-child):not(.dummy):hover {
+    border: 2px solid #66cc88;
+    padding: 3px 7px;
+}
+/* Edit mode */
+table.base > tbody.edit > tr.edit > td {
+    background-color: #d8e8d8;
+}
+table.base > tbody.edit > tr.edit > td.edit {
+    background-color: #d8e8d8;
+    color: black;
+    border: 3px solid #66cc88;
+    padding: 2px 6px;
+}
+
+/* Input controls */
+table.textinput {
+    width: 100%;
+    border: none;
+}
+table.textinput td.text {
+    width: 100%;
+    background-color: #d8e8d8;
+}
+table.textinput td.buttons {
+    background-color: #d8e8d8;
+}
+table.textinput input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #eeffee;
+}
+table.textinput select {
+    width: 100%;
+    background-color: #eeffee;
+}
+table.textinput button.smallbutton {
+    padding: 0px 0px;
+}
+td.edit textarea {
+    background-color: #eeffee;
+}

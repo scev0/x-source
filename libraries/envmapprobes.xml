@@ -1,0 +1,3808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<envmapprobes>
+  <presets>
+    <preset name="dock" priority="100" updateinterval="10" staletime="10" resolution="256" clipdistance="1" lodrule="envmapprobe_lodtag_m" tags="parallaxcorrection">
+      <fade innerrange="0.9" outerrange="1"/>
+    </preset>
+    <preset name="sector" priority="0" updateinterval="10" staletime="10" resolution="256" clipdistance="1" lodrule="envmapprobe_lodtag_m" tags="parallaxcorrection">
+      <fade innerrange="0.9" outerrange="1"/>
+    </preset>
+    <preset name="bridge" priority="200" updateinterval="10" staletime="10" resolution="256" clipdistance="1" lodrule="envmapprobe_lodtag_m" tags="interior parallaxcorrection">
+      <fade innerrange="0.9" outerrange="1"/>
+    </preset>
+    <preset name="cockpit" priority="300" updateinterval="10" staletime="10" resolution="256" clipdistance="1" lodrule="envmapprobe_lodtag_m" tags="interior parallaxcorrection cockpitonly">
+      <fade innerrange="0.9" outerrange="1"/>
+    </preset>
+    <preset name="interior" priority="400" updateinterval="10" staletime="10" resolution="256" clipdistance="1" lodrule="envmapprobe_lodtag_m" tags="interior parallaxcorrection">
+      <fade innerrange="0.9" outerrange="1"/>
+    </preset>
+  </presets>
+  <templates>
+    <template name="scs_gen_spacesuit_32_to_16_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="12" y="12" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_trafficcontrol_01">
+      <envmapprobe name="pobe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-0.08698" y="2.34" z="-10.24"/>
+        </offset>
+        <size x="11" y="3.33" z="6.41"/>
+        <volumeoffset y="0.63" z="-0.99"/>
+      </envmapprobe>
+      <envmapprobe name="pobe_02_mid" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="-0.08698" y="3.12" z="-5.27"/>
+        </offset>
+        <size x="11" y="2.74" z="4.49"/>
+        <volumeoffset y="0.38" z="1"/>
+      </envmapprobe>
+      <envmapprobe name="pobe_03_entry" type="static" shape="cuboid" preset="interior" importance="2">
+        <offset>
+          <position y="3.17" z="-1.43"/>
+        </offset>
+        <size x="5" y="2.3" z="3"/>
+        <volumeoffset y="0.44" z="0.07"/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_securityoffice_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.85" z="-4.38"/>
+        </offset>
+        <size x="3.91" y="2.01" z="5.14"/>
+        <volumeoffset y="-0.1"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_m_miner_solid_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="0.02607" y="-20.34" z="52.25"/>
+        </offset>
+        <size x="3.61" y="1.91" z="3.66"/>
+        <volumeoffset y="0.09" z="0.66"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="0.02607" y="-20.32" z="47.13"/>
+        </offset>
+        <size x="3.61" y="1.91" z="2.49"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position x="0.02607" y="-20.5" z="43.83"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.32" z="-0.36"/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_embassy_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="8" y="3" z="-7.78"/>
+        </offset>
+        <size x="5" y="6" z="9"/>
+        <volumeoffset x="2" y="2"/>
+        <fade innerrange="0.8"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="-8" y="3" z="-7.79"/>
+        </offset>
+        <size x="5" y="6" z="9"/>
+        <volumeoffset x="-2" y="2"/>
+        <fade innerrange="0.8"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="interior" importance="2">
+        <offset>
+          <position y="4" z="-7.79"/>
+        </offset>
+        <size x="7" y="6" z="9"/>
+        <volumeoffset y="1"/>
+        <fade innerrange="0.8"/>
+      </envmapprobe>
+    </template>
+    <template name="room_par_corridor_01">
+      <envmapprobe name="probe_01_transporter" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-8" y="1.3"/>
+        </offset>
+        <size x="1.2" y="1.2" z="1.389"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_corridor" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-4.7" y="1.75"/>
+        </offset>
+        <size x="2.55" y="2" z="2.2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_corridor" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-0.003" y="1.75"/>
+        </offset>
+        <size x="2.63" y="2" z="2.48"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_s_fighter_04">
+      <envmapprobe name="probe_01_rear" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="-0.3" z="4.27"/>
+        </offset>
+        <size x="2" y="2.4" z="2"/>
+        <volumeoffset y="0.22" z="-0.64"/>
+      </envmapprobe>
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="-0.18" z="5.86"/>
+        </offset>
+        <size x="2" y="2.4" z="1.87"/>
+        <volumeoffset y="0.1"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_s_fighter_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-0.26" z="8.36"/>
+        </offset>
+        <size x="2.15" y="1.57" z="1.96"/>
+        <volumeoffset y="-0.36" z="-0.75"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom" type="static" shape="cylinder" preset="cockpit" importance="1">
+        <offset>
+          <position y="-0.55" z="5.4"/>
+        </offset>
+        <size x="0.72" y="2.22" z="0.58"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_s_fighter_03">
+      <envmapprobe name="probe_01_rear" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="-0.3" z="-1.21"/>
+        </offset>
+        <size x="2" y="2.4" z="2"/>
+        <volumeoffset y="0.22" z="-0.64"/>
+      </envmapprobe>
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="-0.18" z="1.5"/>
+        </offset>
+        <size x="2" y="2.4" z="1.87"/>
+        <volumeoffset y="0.1"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_s_fighter_02">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="0.61" z="6.56"/>
+        </offset>
+        <size x="1.25" y="1.32" z="1.97"/>
+        <volumeoffset y="-0.38" z="0.22"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="0.82" z="3.15"/>
+        </offset>
+        <size x="2.28" y="1.32" z="1.97"/>
+        <volumeoffset y="-0.38" z="0.22"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_par_m_trans_container_03">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="9.42" z="-1.88"/>
+        </offset>
+        <size x="6" y="2.02" z="3.12"/>
+        <volumeoffset y="0.37" z="-0.78"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="9.76" z="-9.81"/>
+        </offset>
+        <size x="6.28" y="1.95" z="4.45"/>
+        <volumeoffset y="-0.32"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="9.76" z="-14"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.32" z="-0.5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_exit" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="-7.85" z="33.67"/>
+        </offset>
+        <size x="2.06" y="2.45" z="4.05"/>
+        <volumeoffset y="0.24" z="1.4"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-8.28" z="30.3"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.25" z="-0.44"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_par_m_trans_container_02">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="6.34" z="54.68"/>
+        </offset>
+        <size x="4.24" y="2.18" z="4"/>
+        <volumeoffset y="-0.42" z="-1.34"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="6.28" z="49.45"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.36" z="-1.08"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_par_m_trans_container_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="6.34" z="54.68"/>
+        </offset>
+        <size x="4.24" y="2.18" z="4"/>
+        <volumeoffset y="-0.42" z="-1.34"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="6.28" z="49.45"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.36" z="-1.08"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_exit" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-9.437" z="36.86"/>
+        </offset>
+        <size x="2.06" y="2.92" z="4"/>
+        <volumeoffset y="0.46" z="-1.34"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-9.64" z="40.39"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.4" z="0.35"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_tel_m_trans_container_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="9.24" z="-28.35"/>
+        </offset>
+        <size x="3" y="2" z="2.99"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="9.43" z="-32.07"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.19" z="-0.54"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_exit" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-8.67" z="-34.15"/>
+        </offset>
+        <size x="1.62" y="1.49" z="3.28"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_transporterroom_01" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-8.51" z="-38.14"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.16" z="-0.44"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_tel_m_trans_container_03">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="2.79" z="51.38"/>
+        </offset>
+        <size x="3.38" y="3.04" z="2.12"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="2.79" z="46.41"/>
+        </offset>
+        <size x="3.38" y="3.04" z="3.16"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="3.01" z="42.95"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.29" z="-0.25"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_exit" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="0.005221" y="-9.82" z="47.71"/>
+        </offset>
+        <size x="1.63" y="1.36" z="3.38"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position x="0.005221" y="-9.44" z="43.4"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.38" z="-0.35"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_tel_m_trans_container_02">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="9.24" z="-28.35"/>
+        </offset>
+        <size x="3" y="2" z="2.99"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="9.43" z="-32.07"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.19" z="-0.54"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_exit" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-8.82" z="-34.118"/>
+        </offset>
+        <size x="1.59" y="1.46" z="3.36"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-8.32" z="-38.26"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.5" z="-0.3"/>
+      </envmapprobe>
+    </template>
+    <template name="dockingbay_arg_s_01_lowtech">
+      <envmapprobe name="probe_01_transporterroom" type="static" shape="cuboid" preset="interior" importance="2">
+        <offset>
+          <position x="16.97" y="-1.27" z="19.64"/>
+        </offset>
+        <size x="1.4" y="1.5" z="1.6"/>
+        <volumeoffset x="0.42" y="-0.26"/>
+      </envmapprobe>
+      <envmapprobe name="probe_01_transporterroom1" type="static" shape="cuboid" preset="dock" importance="1">
+        <offset>
+          <position x="14.18" y="-1.25" z="19.64"/>
+        </offset>
+        <size x="4.85" y="1.62" z="2.28"/>
+        <volumeoffset x="-2.78" y="-0.38"/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_detentioncell_01">
+      <envmapprobe name="probe_01_entry" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-0.09734" y="1.43" z="-2.22"/>
+        </offset>
+        <size x="5.95" y="1.75" z="2.88"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_cell_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="3" y="1.53" z="-6.56"/>
+        </offset>
+        <size x="1.18" y="1.66" z="1.63"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_cell_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.53" z="-6.56"/>
+        </offset>
+        <size x="1.18" y="1.66" z="1.63"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_cell_03" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-3" y="1.53" z="-6.56"/>
+        </offset>
+        <size x="1.18" y="1.66" z="1.63"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_tel_m_miner_solid_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="21.36" z="65.41"/>
+        </offset>
+        <size x="2.4" y="3.69" z="1.81"/>
+        <volumeoffset y="-1.04"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="21.46" z="61.35"/>
+        </offset>
+        <size x="2.58" y="2.72" z="2.54"/>
+        <volumeoffset y="-0.67"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterrooom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="21.28" z="58.14"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.49" z="-0.48"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_exit" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-25.16" z="37.267"/>
+        </offset>
+        <size x="1.55" y="1.57" z="3.45"/>
+        <volumeoffset y="-0.19"/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-25.06" z="33.11"/>
+        </offset>
+        <size x="1.6" y="1.6" z="1.4"/>
+        <volumeoffset y="-0.29" z="-0.51"/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_observationdeck_01">
+      <envmapprobe name="" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position y="2.181" z="-12.762"/>
+        </offset>
+        <size x="11" y="5" z="13"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="dockingbay_arg_m_01_hightech">
+      <envmapprobe name="probe_01_main" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="-0.95" z="90.36"/>
+        </offset>
+        <size x="11" y="1.56" z="2.3"/>
+        <volumeoffset y="-0.65"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position y="-0.86" z="88.24"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.65" z="-0.82"/>
+      </envmapprobe>
+    </template>
+    <template name="landmarks_gen_spacesuit_level_01_room_05">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="1" y="-4" z="2"/>
+        </offset>
+        <size x="42" y="44" z="34"/>
+        <volumeoffset x="14" y="12"/>
+      </envmapprobe>
+    </template>
+    <template name="landmarks_gen_spacesuit_level_01_room_04">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="-3" z="-13"/>
+        </offset>
+        <size x="14" y="22" z="21"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="landmarks_gen_spacesuit_level_01_room_03">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-2" z="-5"/>
+        </offset>
+        <size x="39" y="34" z="38"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="landmarks_gen_spacesuit_level_01_room_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-7" y="7" z="5"/>
+        </offset>
+        <size x="25" y="25" z="23"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="landmarks_gen_spacesuit_level_01_room_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-0.93" y="-1.28" z="-0.62"/>
+        </offset>
+        <size x="35" y="28" z="35"/>
+        <volumeoffset x="3.75" y="6.9" z="2.7"/>
+      </envmapprobe>
+    </template>
+    <template name="bridge_par_xl_01">
+      <envmapprobe name="probe_01_main" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position z="-9"/>
+        </offset>
+        <size x="20" y="6" z="14"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_main" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position z="13"/>
+        </offset>
+        <size x="20" y="6" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_16_corner_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="6.99"/>
+        </offset>
+        <size x="9" y="7" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="dockingbay_arg_s_01_hightech">
+      <envmapprobe name="probe_01_transporterroom" type="static" shape="cuboid" preset="interior" importance="2">
+        <offset>
+          <position x="16.97" y="-1.27" z="19.64"/>
+        </offset>
+        <size x="1.4" y="1.5" z="1.6"/>
+        <volumeoffset x="0.42" y="-0.26"/>
+      </envmapprobe>
+      <envmapprobe name="probe_01_transporterroom1" type="static" shape="cuboid" preset="dock" importance="1">
+        <offset>
+          <position x="14.18" y="-1.25" z="19.64"/>
+        </offset>
+        <size x="4.85" y="1.62" z="2.28"/>
+        <volumeoffset x="-2.78" y="-0.38"/>
+      </envmapprobe>
+    </template>
+    <template name="launchtube_xen_s_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position z="26.6"/>
+        </offset>
+        <size x="20" y="20" z="45"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_captainsquarter_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.59" z="-1.6"/>
+        </offset>
+        <size x="4" y="1.8" z="1.89"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="landmarks_tel_prison_hangar_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="-1"/>
+        </offset>
+        <size x="35" y="22" z="36"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_end_01_a">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="17" y="16" z="17"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_factionrepresentative_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position y="2.15" z="-12.06"/>
+        </offset>
+        <size x="5.36" y="2.45" z="5"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.56" z="-2.61"/>
+        </offset>
+        <size x="6.66" y="2.45" z="5"/>
+        <volumeoffset y="0.44" z="-2"/>
+      </envmapprobe>
+    </template>
+    <template name="room_arg_m_station_01_hightech">
+      <envmapprobe name="probe_01_left_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-44" y="62" z="88"/>
+        </offset>
+        <size x="20" y="3" z="13"/>
+        <volumeoffset z="5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="62" z="88"/>
+        </offset>
+        <size x="26" y="3" z="13"/>
+        <volumeoffset z="5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_right_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="44" y="62" z="88"/>
+        </offset>
+        <size x="20" y="3" z="13"/>
+        <volumeoffset z="5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_left_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-44" y="62" z="-94"/>
+        </offset>
+        <size x="20" y="3" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="62" z="-96"/>
+        </offset>
+        <size x="37" y="3" z="5"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_right_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="44" y="62" z="-94"/>
+        </offset>
+        <size x="20" y="3" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_tel_s_miner_solid_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="3.34"/>
+        </offset>
+        <size x="1.55" y="1.85" z="3.67"/>
+        <volumeoffset y="-0.12" z="0.25"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="-1.51"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2.36"/>
+        <volumeoffset y="-0.12" z="-0.52"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.31" z="-6.04"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_m_miner_liquid_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-13.787" z="41.33"/>
+        </offset>
+        <size x="3.96" y="2" z="3.79"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-14.02" z="35.6"/>
+        </offset>
+        <size x="3.66" y="1.78" z="2.49"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-14.05" z="32.36"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.31" z="-0.35"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_gen_m_tugboat_01">
+      <envmapprobe name="probe_01_main" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="2" y="-1" z="15"/>
+        </offset>
+        <size x="5.5" y="3.5" z="6.5"/>
+        <volumeoffset x="-2" y="-1" z="1"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position x="2" y="-3.2" z="11"/>
+        </offset>
+        <size x="3.4" y="1.4" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_s_ship_06">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-0.43" y="10.75" z="-2.5"/>
+          <rotation yaw="0.67609"/>
+        </offset>
+        <size x="40" y="30" z="200"/>
+        <volumeoffset y="15"/>
+        <fade innerrange="0.7"/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_s_ship_07">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="10" z="-2.5"/>
+          <rotation yaw="-0.67609"/>
+        </offset>
+        <size x="40" y="30" z="200"/>
+        <volumeoffset y="15"/>
+        <fade innerrange="0.85"/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_s_ship_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="13"/>
+        </offset>
+        <size x="22" y="15" z="24"/>
+        <volumeoffset y="1"/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_s_ship_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="14" z="-23.11"/>
+        </offset>
+        <size x="22" y="15" z="47"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_s_ship_03">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-20.116" y="3" z="-22"/>
+        </offset>
+        <size x="43" y="15" z="48"/>
+        <volumeoffset y="10"/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_s_ship_12">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="0.7246" y="15" z="3"/>
+        </offset>
+        <size x="40" y="20" z="60"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_s_ship_11">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="0.7246" y="15" z="3"/>
+        </offset>
+        <size x="40" y="20" z="60"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_serverroom_01">
+      <envmapprobe name="probe_01_corridor" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.695" z="-1.76"/>
+        </offset>
+        <size x="1.28" y="1.85" z="2.44"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.83" z="-9.15"/>
+        </offset>
+        <size x="4.2" y="2.32" z="2.67"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_front" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.83" z="-5.49"/>
+        </offset>
+        <size x="4.2" y="2.32" z="2.37"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_rear" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.83" z="-12.38"/>
+        </offset>
+        <size x="4.2" y="2.32" z="2.31"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ics_tel_prison_straight_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="0.05"/>
+        </offset>
+        <size x="3" y="1.75" z="2.6"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ics_tel_prison_straight_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="0.02"/>
+        </offset>
+        <size x="5.67" y="1.78" z="3"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ics_tel_prison_straight_03">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="5.59" y="1.78" z="2.72"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_intersection_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="16"/>
+        </offset>
+        <size x="14" y="14" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_s_miner_solid_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit" importance="2">
+        <offset>
+          <position x="-1.56" y="2.16" z="15.53"/>
+        </offset>
+        <size x="1.51" y="1.9" z="3"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_front" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position x="-1.56" y="1.77" z="12.33"/>
+        </offset>
+        <size x="1.51" y="1.9" z="3"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="-1.71" y="1.69" z="5.48"/>
+        </offset>
+        <size x="2" y="3" z="6"/>
+        <volumeoffset x="-0.53" y="-1.12"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="1.84" y="1.84" z="6.03"/>
+        </offset>
+        <size x="2.38" y="3" z="6"/>
+        <volumeoffset y="-1.27" z="-0.55"/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_rear" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-0.85" z="4.39"/>
+        </offset>
+        <size x="1.25" y="1.9" z="3.73"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_06_cargo" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="-6.93" y="0.99" z="6.59"/>
+        </offset>
+        <size x="3" y="3" z="6"/>
+        <volumeoffset y="-0.66" z="-1.11"/>
+      </envmapprobe>
+      <envmapprobe name="probe_07_cargo" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="6.71" y="0.99" z="6.59"/>
+        </offset>
+        <size x="3" y="3" z="6"/>
+        <volumeoffset y="-0.66" z="-1.11"/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_tel_l_transporter_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="14" z="-23.11"/>
+        </offset>
+        <size x="22" y="15" z="47"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_tel_corridor_01">
+      <envmapprobe name="probe_01_transporter" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-8" y="1.3"/>
+        </offset>
+        <size x="1.2" y="1.2" z="1.389"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_corridor" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-4.7" y="1.75"/>
+        </offset>
+        <size x="2.55" y="2" z="2.2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_corridor" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-0.003" y="1.75"/>
+        </offset>
+        <size x="2.63" y="2" z="2.48"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_arg_m_station_02_lowtech">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="112.954" y="67"/>
+        </offset>
+        <size x="8" y="3" z="20"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="110.17" y="67" z="40.35"/>
+        </offset>
+        <size x="12" y="3" z="25"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="110.17" y="67" z="-40.35"/>
+        </offset>
+        <size x="12" y="3" z="25"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-112.95" y="67"/>
+        </offset>
+        <size x="8" y="3" z="20"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_05" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-110.17" y="67" z="40.35"/>
+        </offset>
+        <size x="12" y="3" z="25"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_06" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-110.17" y="67" z="-40.35"/>
+        </offset>
+        <size x="12" y="3" z="25"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="launchtube_xen_m_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position z="59.19"/>
+        </offset>
+        <size x="52" y="52" z="150"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_casino_01">
+      <envmapprobe name="probe_01_entry" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="2.11" z="-7.55"/>
+        </offset>
+        <size x="11.65" y="2.36" z="8"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="7" z="-7.55"/>
+        </offset>
+        <size x="11.65" y="2.81" z="8"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_tel_m_miner_liquid_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="21.36" z="65.41"/>
+        </offset>
+        <size x="2.4" y="3.69" z="1.81"/>
+        <volumeoffset y="-1.04"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="21.46" z="61.35"/>
+        </offset>
+        <size x="2.58" y="2.72" z="2.54"/>
+        <volumeoffset y="-0.67"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterrooom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="21.28" z="58.14"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.49" z="-0.48"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_exit" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-25.16" z="37.267"/>
+        </offset>
+        <size x="1.55" y="1.57" z="3.45"/>
+        <volumeoffset y="-0.19"/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-25.06" z="33.11"/>
+        </offset>
+        <size x="1.6" y="1.6" z="1.4"/>
+        <volumeoffset y="-0.29" z="-0.51"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_tel_m_frigate_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="11.22" z="63.35"/>
+        </offset>
+        <size x="6" y="3.87" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="11.49" z="58.08"/>
+        </offset>
+        <size x="5.8" y="3.31" z="4.47"/>
+        <volumeoffset y="-0.27"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="11.49" z="53.74"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.27" z="-0.37"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_exit" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-22.53" z="61.81"/>
+        </offset>
+        <size x="1.88" y="1.42" z="3.29"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-22.53" z="57.44"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.3"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_straight_03">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="8"/>
+        </offset>
+        <size x="14" y="12" z="11.52"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="118.97"/>
+        </offset>
+        <size x="14" y="12" z="11.52"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="64"/>
+        </offset>
+        <size x="14" y="12" z="49.44"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_straight_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="8"/>
+        </offset>
+        <size x="14" y="14" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="56"/>
+        </offset>
+        <size x="14" y="14" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="32"/>
+        </offset>
+        <size x="14" y="14" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_straight_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="16"/>
+        </offset>
+        <size x="14" y="14" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_16_straight_03">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="34" y="9" z="7"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_16_straight_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="17" y="7" z="7"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_16_straight_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="9" y="8" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_par_s_scout_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="0.02956" y="-0.18" z="1.68"/>
+        </offset>
+        <size x="1.26" y="1.55" z="2.03"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-0.02" z="-0.9"/>
+        </offset>
+        <size x="1.06" y="1.55" z="1.15"/>
+        <volumeoffset y="-0.16" z="-0.31"/>
+      </envmapprobe>
+    </template>
+    <template name="corner_arg_standard_shipdealer_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-0.9084" y="6.2"/>
+        </offset>
+        <size x="12" y="3.78" z="21"/>
+        <volumeoffset y="1.16"/>
+        <fade innerrange="0.8"/>
+      </envmapprobe>
+      <envmapprobe name="probe_01_entry" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="15" y="5.87"/>
+        </offset>
+        <size x="9" y="3.78" z="7"/>
+        <volumeoffset x="-3" y="1.49"/>
+        <fade innerrange="0.4"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_s_heavyfighter_02">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-0.82" z="8.36"/>
+        </offset>
+        <size x="2.15" y="1.57" z="1.96"/>
+        <volumeoffset y="0.2" z="-0.75"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom" type="static" shape="cylinder" preset="cockpit" importance="1">
+        <offset>
+          <position y="-0.55" z="5.4"/>
+        </offset>
+        <size x="0.72" y="2.22" z="0.58"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_s_heavyfighter_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position x="0.005998" y="0.2178" z="11.36"/>
+        </offset>
+        <size x="2" y="2" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="bridge_arg_xl_01">
+      <envmapprobe name="probe_01_rear" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position y="1.5" z="-8"/>
+        </offset>
+        <size x="8" y="3.5" z="5"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_front" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position y="1.5" z="2"/>
+        </offset>
+        <size x="2.37" y="3.5" z="7"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="1.5" z="-14"/>
+        </offset>
+        <size x="2" y="2" z="1.4"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_frontL" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position x="-4.9" y="1.5" z="2"/>
+        </offset>
+        <size x="3.66" y="3.5" z="7"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_frontR" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position x="4.9" y="1.5" z="2"/>
+        </offset>
+        <size x="3.66" y="3.5" z="7"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_intersection_01_a">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="-1"/>
+        </offset>
+        <size x="17" y="12" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="corner_arg_standard_inventorytrader_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="6" y="6"/>
+        </offset>
+        <size x="12" y="5" z="10"/>
+        <volumeoffset y="2"/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_tel_xl_carrier_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="27" z="15"/>
+        </offset>
+        <size x="61" y="30" z="126"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_16_end_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="11.34"/>
+        </offset>
+        <size x="8" y="8" z="9"/>
+        <volumeoffset z="-4"/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_venturerroom_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position y="2.15" z="-12.06"/>
+        </offset>
+        <size x="5.36" y="2.45" z="5"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.56" z="-2.61"/>
+        </offset>
+        <size x="6.66" y="2.45" z="5"/>
+        <volumeoffset y="0.44" z="-2"/>
+      </envmapprobe>
+    </template>
+    <template name="corner_arg_standard_shipequipment_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="9.529" y="5.636" z="0.08714"/>
+        </offset>
+        <size x="10.91" y="4.84" z="11.2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="1.576" y="5.08" z="-7.271"/>
+        </offset>
+        <size x="1.52" y="1.62" z="1.38"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_corner_01_a">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="16"/>
+        </offset>
+        <size x="18" y="16" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_corner_01_b">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="16"/>
+        </offset>
+        <size x="18" y="16" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_arg_m_station_01_lowtech">
+      <envmapprobe name="probe_01_left_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-44" y="62" z="88"/>
+        </offset>
+        <size x="20" y="3" z="13"/>
+        <volumeoffset z="5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="62" z="88"/>
+        </offset>
+        <size x="26" y="3" z="13"/>
+        <volumeoffset z="5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_right_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="44" y="62" z="88"/>
+        </offset>
+        <size x="20" y="3" z="13"/>
+        <volumeoffset z="5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_left_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-44" y="62" z="-94"/>
+        </offset>
+        <size x="20" y="3" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="62" z="-96"/>
+        </offset>
+        <size x="37" y="3" z="5"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_right_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="44" y="62" z="-94"/>
+        </offset>
+        <size x="20" y="3" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_to_16_01_a">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="9" y="12" z="13"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_entrance_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-26"/>
+        </offset>
+        <size x="41" y="13" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="38"/>
+        </offset>
+        <size x="27" y="13" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_crewquarter_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="0.07702" y="1.3" z="-1.95"/>
+        </offset>
+        <size x="1.5" y="1.5" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="2.68" y="1.3" z="-2"/>
+        </offset>
+        <size x="1.54" y="1.5" z="2.02"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-2.71" y="1.3" z="-2"/>
+        </offset>
+        <size x="1.54" y="1.5" z="2.02"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ics_tel_prison_intersection_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="2.75" y="1.74" z="2.62"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_generator_01">
+      <envmapprobe name="probe_01_entry" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.62" z="-3.668"/>
+        </offset>
+        <size x="11" y="3.53" z="4"/>
+        <volumeoffset y="0.74" z="0.97"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.62" z="-12"/>
+        </offset>
+        <size x="11" y="3.53" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_infrastructureoffice_01">
+      <envmapprobe name="probe_01_right" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-1.84" y="1.74" z="-6.57"/>
+        </offset>
+        <size x="2.03" y="2.2" z="3"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_entry" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.7" z="-1.6"/>
+        </offset>
+        <size x="3.78" y="2.2" z="2.21"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_left" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="2.05" y="1.73" z="-6.57"/>
+        </offset>
+        <size x="2.03" y="2.2" z="3"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_s_trans_container_02">
+      <envmapprobe name="probe_01_rear" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="0.26" z="5.53"/>
+          <rotation pitch="0.12"/>
+        </offset>
+        <size x="2" y="2.4" z="2"/>
+        <volumeoffset y="0.22" z="-0.64"/>
+      </envmapprobe>
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="0.48" z="7.58"/>
+        </offset>
+        <size x="2" y="2.4" z="1.87"/>
+        <volumeoffset y="0.1"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_s_trans_container_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit" importance="2">
+        <offset>
+          <position x="-1.56" y="2.16" z="15.53"/>
+        </offset>
+        <size x="1.51" y="1.9" z="3"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_front" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position x="-1.56" y="1.77" z="12.33"/>
+        </offset>
+        <size x="1.51" y="1.9" z="3"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="-1.71" y="1.69" z="5.48"/>
+        </offset>
+        <size x="2" y="3" z="6"/>
+        <volumeoffset x="-0.53" y="-1.12"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="1.84" y="1.84" z="6.03"/>
+        </offset>
+        <size x="2.38" y="3" z="6"/>
+        <volumeoffset y="-1.27" z="-0.55"/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_rear" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-0.85" z="4.39"/>
+        </offset>
+        <size x="1.25" y="1.9" z="3.73"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_06_cargo" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="-6.93" y="0.99" z="6.59"/>
+        </offset>
+        <size x="3" y="3" z="6"/>
+        <volumeoffset y="-0.66" z="-1.11"/>
+      </envmapprobe>
+      <envmapprobe name="probe_07_cargo" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="6.71" y="0.99" z="6.59"/>
+        </offset>
+        <size x="3" y="3" z="6"/>
+        <volumeoffset y="-0.66" z="-1.11"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_xen_m_miner_solid_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-7.78" z="42.14"/>
+        </offset>
+        <size x="4.06" y="2.92" z="3.49"/>
+        <volumeoffset y="0.26" z="-1.35"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-7.52" z="32.82"/>
+        </offset>
+        <size x="6.79" y="2.92" z="6.74"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_transporter_01" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="6.8" y="-8.23" z="33.01"/>
+        </offset>
+        <size x="1.44" y="1.7" z="1.91"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="landmarks_tel_spacesuit_vertical_bottom_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="-13.78" z="-20.84"/>
+        </offset>
+        <size x="2.29" y="3" z="20"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="-11" z="-45"/>
+        </offset>
+        <size x="2.29" y="3" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cylinder" preset="interior">
+        <offset>
+          <position y="-12"/>
+        </offset>
+        <size x="3" y="17" z="1"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_decointerior" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="5.174" y="90.516" z="27.4"/>
+        </offset>
+        <size x="3.38" y="3.66" z="4.92"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_corner_02_a">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="3"/>
+        </offset>
+        <size x="15" y="17" z="14"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="launchtube_arg_m_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position z="59.19"/>
+        </offset>
+        <size x="52" y="52" z="150"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_xl_resupplier_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="15.369"/>
+        </offset>
+        <size x="110" y="30" z="259"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_arg_corridor_05">
+      <envmapprobe name="probe_01_transporterroom_01" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="-2.4" y="4.61" z="7.02"/>
+        </offset>
+        <size x="1.6" y="1.502" z="1.4"/>
+        <volumeoffset y="-0.44" z="0.42"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom_02" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="0.54" y="3.13" z="-10.3"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.28" z="-0.28"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_lowerlevel" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="0.91" y="1.32" z="-0.31"/>
+        </offset>
+        <size x="2.44" y="1.86" z="4.71"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_mid" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-1.25" y="4.51" z="-6"/>
+        </offset>
+        <size x="4.01" y="3.35" z="3.46"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_upperlevel" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-0.87" y="5.19" z="1.65"/>
+        </offset>
+        <size x="4.53" y="2.88" z="4.84"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_arg_corridor_04">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-2.28" y="2.19" z="1.02"/>
+        </offset>
+        <size x="5.07" y="2.53" z="5.14"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="-2.81" y="1.49" z="6.73"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.403"/>
+        <volumeoffset y="-0.21" z="0.48"/>
+      </envmapprobe>
+    </template>
+    <template name="room_arg_corridor_06">
+      <envmapprobe name="probe_01_main" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-2.79" y="1.873" z="-3.49"/>
+        </offset>
+        <size x="6.14" y="5.08" z="5.69"/>
+        <volumeoffset x="0.68" y="1.86" z="-0.13"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="0.64" y="1.46" z="-9.51"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.16" z="-0.55"/>
+      </envmapprobe>
+    </template>
+    <template name="room_arg_corridor_01">
+      <envmapprobe name="probe_01_transporter" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-8" y="1.3"/>
+        </offset>
+        <size x="1.2" y="1.2" z="1.389"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_corridor" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-4.7" y="1.75"/>
+        </offset>
+        <size x="2.55" y="2" z="2.2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_corridor" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-0.003" y="1.75"/>
+        </offset>
+        <size x="2.63" y="2" z="2.48"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_arg_corridor_03">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="0.2645" y="1.18" z="0.0841"/>
+        </offset>
+        <size x="4.97" y="2.29" z="5.443"/>
+        <volumeoffset y="0.8601"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-6.23" y="1.38" z="3.65"/>
+          <rotation yaw="-59.99998"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.14"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="0.0721" y="1.51" z="-6.84"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.19" z="-0.39"/>
+      </envmapprobe>
+    </template>
+    <template name="room_arg_corridor_02">
+      <envmapprobe name="probe_01_transporterroom_upperlevel" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="-3.753" y="4.286" z="12.13"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_upperlevel" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-3.806" y="3.44" z="4.87"/>
+        </offset>
+        <size x="4.57" y="3.4" z="4.19"/>
+        <volumeoffset x="-0.1" y="-0.44" z="1.13"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_corridor" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-3.69" y="2" z="-2.355"/>
+        </offset>
+        <size x="3.86" y="3.26" z="7"/>
+        <volumeoffset y="1" z="-2"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_toroom" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="1.62" y="1.59" z="-0.03"/>
+        </offset>
+        <size x="1.98" y="1.75" z="1.38"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_transporterroom_lowerlevel" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="1.3" y="1.46" z="-5.22"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.23" z="0.4"/>
+      </envmapprobe>
+      <envmapprobe name="probe_06_corridor2" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="1.38" y="1.82" z="-8.25"/>
+        </offset>
+        <size x="2" y="2" z="2.23"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_livingroomshadyguy_01">
+      <envmapprobe name="probe_01_kitchen" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="2.29" y="1.68" z="-2.53"/>
+        </offset>
+        <size x="4" y="1.6" z="3"/>
+        <volumeoffset x="0.27" y="-0.24"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_livingroom" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-1.5" y="1.2" z="-6.98"/>
+        </offset>
+        <size x="5.33" y="1.85" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_bedroom" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-3.73" y="1.25" z="-1.62"/>
+        </offset>
+        <size x="2.5" y="1.38" z="1.65"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_par_s_trans_container_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="0.17" z="8.463"/>
+        </offset>
+        <size x="1.32" y="1.4" z="3.85"/>
+        <volumeoffset y="-0.18" z="-0.19"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="0.44" z="3.6"/>
+        </offset>
+        <size x="1.37" y="1.4" z="1.5"/>
+        <volumeoffset y="-0.25" z="-0.15"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_s_scout_01">
+      <envmapprobe name="probe_01_rear" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="-0.3" z="-1.21"/>
+        </offset>
+        <size x="2" y="2.4" z="2"/>
+        <volumeoffset y="0.22" z="-0.64"/>
+      </envmapprobe>
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="-0.18" z="1.5"/>
+        </offset>
+        <size x="2" y="2.4" z="1.87"/>
+        <volumeoffset y="0.1"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_tel_m_bomber_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="2.83" z="51.81"/>
+        </offset>
+        <size x="3.32" y="3.45" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="2.83" z="46.82"/>
+        </offset>
+        <size x="3.43" y="3.45" z="3.27"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="2.95" z="43.18"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.24" z="-0.46"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_exit" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-9.85" z="47.66"/>
+        </offset>
+        <size x="1.67" y="1.4" z="3.54"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-9.65" z="43.62"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.2" z="-0.59"/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_end_01_a">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="15"/>
+        </offset>
+        <size x="14" y="14" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_end_01_b">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="15"/>
+        </offset>
+        <size x="14" y="14" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="explosion_xl_01_ring"/>
+    <template name="ship_tel_s_scout_02">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="2" z="3.86"/>
+        </offset>
+        <size x="1.5" y="1.14" z="3"/>
+        <volumeoffset y="-0.3" z="-0.39"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.89" z="-0.54"/>
+        </offset>
+        <size x="1.5" y="1.3" z="1.51"/>
+        <volumeoffset y="-0.39" z="-0.27"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_tel_s_scout_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="2" z="3.86"/>
+        </offset>
+        <size x="1.5" y="1.14" z="3"/>
+        <volumeoffset y="-0.3" z="-0.39"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.89" z="-0.54"/>
+        </offset>
+        <size x="1.5" y="1.3" z="1.51"/>
+        <volumeoffset y="-0.39" z="-0.27"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_par_s_fighter_02">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="0.02956" y="-0.18" z="1.68"/>
+        </offset>
+        <size x="1.26" y="1.55" z="2.03"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-0.02" z="-0.9"/>
+        </offset>
+        <size x="1.06" y="1.55" z="1.15"/>
+        <volumeoffset y="-0.16" z="-0.31"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_par_s_fighter_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="0.006543" y="0.31" z="7.8"/>
+        </offset>
+        <size x="1.23" y="1.48" z="4"/>
+        <volumeoffset y="-0.27" z="0.31"/>
+      </envmapprobe>
+      <envmapprobe name="probe_01_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="0.006543" y="0.66" z="3.28"/>
+        </offset>
+        <size x="1.37" y="1.53" z="1.24"/>
+        <volumeoffset y="-0.41"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_par_m_frigate_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="7.039" z="34.99"/>
+        </offset>
+        <size x="2.89" y="2.37" z="2.75"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="7.039" z="31.24"/>
+        </offset>
+        <size x="2.75" y="1.92" z="1.91"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="6.83" z="28.59"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.27" z="-0.41"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_exit" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="-5.91" z="13.66"/>
+        </offset>
+        <size x="2.51" y="2.36" z="4.53"/>
+        <volumeoffset y="0.03" z="1.62"/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-6.26" z="9.87"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.2" z="-0.33"/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_intersection_01_a">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="16"/>
+        </offset>
+        <size x="14" y="14" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_intersection_01_b">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="16"/>
+        </offset>
+        <size x="14" y="14" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_intersection_02_a">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="16"/>
+        </offset>
+        <size x="14" y="14" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_bar_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.73" z="-5.52"/>
+        </offset>
+        <size x="8" y="4.18" z="9"/>
+        <volumeoffset y="2" z="-3"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_top" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="2.88" y="5.32" z="-11.47"/>
+        </offset>
+        <size x="5.01" y="2.8" z="5"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="bridge_tel_l_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position x="0.02267" y="1" z="8.77"/>
+        </offset>
+        <size x="14" y="9" z="8"/>
+        <volumeoffset z="-1.77"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position x="0.02267" y="0.22" z="-4.59"/>
+        </offset>
+        <size x="11" y="4.34" z="4.5"/>
+        <volumeoffset y="1.62"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position y="-0.45" z="-10.28"/>
+        </offset>
+        <size x="1.51" y="1.5" z="1.4"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_intersection_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="17" y="17" z="15.59"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_intersection_03">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="17" y="17" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_intersection_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="-1"/>
+        </offset>
+        <size x="17" y="16" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_intersection_04">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="17" y="13" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_m_frigate_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="-0.07822" y="24.41" z="-31.78"/>
+        </offset>
+        <size x="3.38" y="1.72" z="4"/>
+        <volumeoffset y="-0.26" z="-0.55"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position x="-0.07822" y="24.49" z="-37.25"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.5"/>
+        <volumeoffset y="-0.34" z="-0.35"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_exit" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="-17.94" z="31.35"/>
+        </offset>
+        <size x="1.93" y="1.48" z="3.98"/>
+        <volumeoffset y="-0.39" z="2.09"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-17.94" z="29.14"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.39" z="-0.39"/>
+      </envmapprobe>
+    </template>
+    <template name="buildmodule_gen_ships_m_dockarea_01">
+      <envmapprobe name="EnvProbe1" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="-61.867"/>
+        </offset>
+        <size x="525" y="23" z="135"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="EnvProbe2" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="75.599"/>
+        </offset>
+        <size x="215" y="122.5" z="261.5"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="EnvProbe3" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-387.537" y="75.599"/>
+        </offset>
+        <size x="215" y="122.5" z="261.5"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="EnvProbe4" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="385.379" y="75.599"/>
+        </offset>
+        <size x="215" y="122.5" z="261.5"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="dockingbay_arg_m_01_lowtech">
+      <envmapprobe name="probe_01_main" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="-0.95" z="90.36"/>
+        </offset>
+        <size x="11" y="1.56" z="2.3"/>
+        <volumeoffset y="-0.65"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position y="-0.86" z="88.24"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.65" z="-0.82"/>
+      </envmapprobe>
+    </template>
+    <template name="launchtube_arg_s_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position z="26.6"/>
+        </offset>
+        <size x="20" y="20" z="45"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_straight_03_a">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="8"/>
+        </offset>
+        <size x="14" y="12" z="11.52"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="118.97"/>
+        </offset>
+        <size x="14" y="12" z="11.52"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="64"/>
+        </offset>
+        <size x="14" y="12" z="49.44"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_straight_02_a">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="8"/>
+        </offset>
+        <size x="14" y="14" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="56"/>
+        </offset>
+        <size x="14" y="14" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="32"/>
+        </offset>
+        <size x="14" y="14" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_straight_01_a">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="16"/>
+        </offset>
+        <size x="14" y="14" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_end_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="15"/>
+        </offset>
+        <size x="14" y="14" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_war_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-0.05814" y="1.346" z="-7.07"/>
+        </offset>
+        <size x="6" y="3" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_left" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="7.84" y="1.1" z="-8.01"/>
+        </offset>
+        <size x="2.51" y="1.64" z="6"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_right" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-7.84" y="1.1" z="-8.01"/>
+        </offset>
+        <size x="2.51" y="1.64" z="6"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_16_end_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="1"/>
+        </offset>
+        <size x="8" y="7" z="7"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_arg_m_station_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="112.954" y="67"/>
+        </offset>
+        <size x="8" y="3" z="20"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="110.17" y="67" z="40.35"/>
+        </offset>
+        <size x="12" y="3" z="25"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="110.17" y="67" z="-40.35"/>
+        </offset>
+        <size x="12" y="3" z="25"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-112.95" y="67"/>
+        </offset>
+        <size x="8" y="3" z="20"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_05" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-110.17" y="67" z="40.35"/>
+        </offset>
+        <size x="12" y="3" z="25"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_06" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-110.17" y="67" z="-40.35"/>
+        </offset>
+        <size x="12" y="3" z="25"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_arg_m_station_01">
+      <envmapprobe name="probe_01_left_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-44" y="62" z="88"/>
+        </offset>
+        <size x="20" y="3" z="13"/>
+        <volumeoffset z="5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="62" z="88"/>
+        </offset>
+        <size x="26" y="3" z="13"/>
+        <volumeoffset z="5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_right_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="44" y="62" z="88"/>
+        </offset>
+        <size x="20" y="3" z="13"/>
+        <volumeoffset z="5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_left_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-44" y="62" z="-94"/>
+        </offset>
+        <size x="20" y="3" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="62" z="-96"/>
+        </offset>
+        <size x="37" y="3" z="5"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_right_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="44" y="62" z="-94"/>
+        </offset>
+        <size x="20" y="3" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_par_xl_carrier_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="56" z="4.258"/>
+        </offset>
+        <size x="300" y="64" z="400"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="bridge_par_l_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="bridge" resolution="128">
+        <offset>
+          <position y="2" z="5"/>
+        </offset>
+        <size x="16" y="6" z="17"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="bridge" importance="1" resolution="128">
+        <offset>
+          <position z="-5"/>
+        </offset>
+        <size x="12" y="5" z="7"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_par_s_heavyfighter_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="0.3" z="8.6"/>
+        </offset>
+        <size x="2" y="2" z="3.45"/>
+        <volumeoffset y="-0.3"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="0.43" z="3.81"/>
+        </offset>
+        <size x="1.34" y="1.5" z="2.01"/>
+        <volumeoffset y="-0.17"/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_m_station_01_hightech">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="64.52"/>
+        </offset>
+        <size x="138.2" y="30" z="160"/>
+        <volumeoffset y="17.14"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_xen_s_heavyfighter_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-0.14" z="20.06"/>
+        </offset>
+        <size x="1.03" y="1.32" z="1.19"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-0.05" z="15.8"/>
+          <rotation pitch="0.05"/>
+        </offset>
+        <size x="1.17" y="1.64" z="3.47"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_end_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="13" y="15" z="15"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_end_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="17" y="14" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="landmarks_tel_tradestation_01_center_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position z="-1650"/>
+        </offset>
+        <size x="350" y="320" z="1050"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_service_01">
+      <envmapprobe name="probe_01_rearmid" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-0.0006291" y="2.05" z="-10.45"/>
+        </offset>
+        <size x="4" y="2.5" z="5.2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_entry" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-3" y="1.8" z="-2.88"/>
+        </offset>
+        <size x="9.48" y="2.19" z="3.22"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_rearleft" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="7.01" y="2.05" z="-10.45"/>
+        </offset>
+        <size x="5" y="2.48" z="5.2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_rearright" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-7.01" y="2.05" z="-10.45"/>
+        </offset>
+        <size x="5" y="2.5" z="5.2"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_par_l_miner_solid_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="12"/>
+        </offset>
+        <size x="23" y="15" z="48"/>
+        <volumeoffset y="1"/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_m_02_tradestation_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-230.292" y="83.468" z="24.714"/>
+        </offset>
+        <size x="260" y="100" z="200"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="230.29" y="83.468" z="24.714"/>
+        </offset>
+        <size x="260" y="100" z="200"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_par_s_miner_solid_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="0.11" z="9.01"/>
+        </offset>
+        <size x="1.32" y="1.4" z="3.85"/>
+        <volumeoffset y="0.07" z="-0.99"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="0.44" z="3.6"/>
+        </offset>
+        <size x="1.37" y="1.4" z="1.5"/>
+        <volumeoffset y="-0.25" z="-0.15"/>
+      </envmapprobe>
+    </template>
+    <template name="buildmodule_gen_equip_m_dockarea_01">
+      <envmapprobe name="EnvProbe1" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="-61.867"/>
+        </offset>
+        <size x="525" y="23" z="135"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="EnvProbe2" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="75.599"/>
+        </offset>
+        <size x="215" y="122.5" z="261.5"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="EnvProbe3" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-387.537" y="75.599"/>
+        </offset>
+        <size x="215" y="122.5" z="261.5"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="EnvProbe4" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="385.379" y="75.599"/>
+        </offset>
+        <size x="215" y="122.5" z="261.5"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="-28" z="-155"/>
+        </offset>
+        <size x="220" y="20" z="32"/>
+        <volumeoffset y="14"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="-28" z="155"/>
+        </offset>
+        <size x="220" y="20" z="32"/>
+        <volumeoffset y="14"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="dock">
+        <offset/>
+        <size x="520" y="150" z="200"/>
+        <volumeoffset y="50"/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_s_ship_01_hightech">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="13"/>
+        </offset>
+        <size x="22" y="15" z="24"/>
+        <volumeoffset y="1"/>
+      </envmapprobe>
+    </template>
+    <template name="bridge_tel_xl_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position x="-0.0259" y="2.013" z="9"/>
+        </offset>
+        <size x="21" y="13" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position x="-0.0259" y="0.01282" z="-7.56"/>
+        </offset>
+        <size x="11" y="5" z="9"/>
+        <volumeoffset y="2"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position y="-0.33" z="-17.52"/>
+        </offset>
+        <size x="1.63" y="1.5" z="1.4"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_playeroffice_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.687" z="-6"/>
+        </offset>
+        <size x="5" y="2" z="7"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_left" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="4.3" y="1.687" z="-6"/>
+        </offset>
+        <size x="3" y="2" z="7"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_right" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-4.3" y="1.687" z="-6"/>
+        </offset>
+        <size x="3" y="2" z="7"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="bridge_arg_l_01">
+      <envmapprobe name="probe_01_back" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position y="1.5" z="-8"/>
+        </offset>
+        <size x="6" y="2" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_front" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position y="2.5" z="2"/>
+        </offset>
+        <size x="8" y="3" z="7"/>
+        <volumeoffset y="-0.5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position y="1.5" z="-13"/>
+        </offset>
+        <size x="2" y="2" z="1.4"/>
+        <volumeoffset y="-0.5"/>
+      </envmapprobe>
+    </template>
+    <template name="ics_tel_prison_airlocksection_01">
+      <envmapprobe name="probe_01_center" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="14.81"/>
+        </offset>
+        <size x="2.67" y="1.8" z="4.57"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_left" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="12.81" z="-7.28"/>
+          <rotation yaw="35"/>
+        </offset>
+        <size x="3" y="1.8" z="4.86"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_left_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="6.96" z="-12.93"/>
+          <rotation yaw="60"/>
+        </offset>
+        <size x="3" y="1.8" z="4.86"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_right" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="12.81" z="7.28"/>
+          <rotation yaw="-35"/>
+        </offset>
+        <size x="3" y="1.8" z="4.86"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_right_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="6.96" z="12.93"/>
+          <rotation yaw="-60"/>
+        </offset>
+        <size x="3" y="1.8" z="4.86"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_07_center" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-14.81"/>
+        </offset>
+        <size x="2.67" y="1.8" z="4.57"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_08_left" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-12.81" z="-7.28"/>
+          <rotation yaw="-35"/>
+        </offset>
+        <size x="3" y="1.8" z="4.86"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_09_left_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-6.96" z="-12.93"/>
+          <rotation yaw="-60"/>
+        </offset>
+        <size x="3" y="1.8" z="4.86"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_10_right" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-12.81" z="7.28"/>
+          <rotation yaw="35"/>
+        </offset>
+        <size x="3" y="1.8" z="4.86"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_11_right_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-6.96" y="45.11" z="12.93"/>
+          <rotation yaw="60"/>
+        </offset>
+        <size x="3" y="1.8" z="4.86"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_12_side" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="-14.94"/>
+          <rotation yaw="90"/>
+        </offset>
+        <size x="2.89" y="1.9" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_13_side" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="14.94"/>
+          <rotation yaw="90"/>
+        </offset>
+        <size x="2.89" y="1.9" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_14_airlock" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="11.52"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.5"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_15_airlock" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-11.52"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.5"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_16_straight_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="8"/>
+        </offset>
+        <size x="9" y="8" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_16_straight_03">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="32"/>
+        </offset>
+        <size x="9" y="9" z="20"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="8"/>
+        </offset>
+        <size x="9" y="9" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="56"/>
+        </offset>
+        <size x="9" y="9" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_16_straight_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="16"/>
+        </offset>
+        <size x="9" y="9" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_managersoffice_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-0.017" y="2" z="-5.765"/>
+        </offset>
+        <size x="6.522" y="2.5" z="6.173"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_to_16_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="8" y="12" z="13"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_m_bomber_02">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="8.62" z="35.88"/>
+        </offset>
+        <size x="2.68" y="1.65" z="2.25"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="8.68" z="32.65"/>
+        </offset>
+        <size x="2.16" y="1.53" z="1.2"/>
+        <volumeoffset y="-0.22"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="8.56" z="30.56"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.22" z="-0.39"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_exit" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="-7.61" z="34.39"/>
+        </offset>
+        <size x="1.81" y="1.44" z="3.67"/>
+        <volumeoffset z="1.72"/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-7.51" z="31.45"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.16" z="-0.2"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_m_bomber_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="8.62" z="35.88"/>
+        </offset>
+        <size x="2.68" y="1.65" z="2.25"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="8.68" z="32.65"/>
+        </offset>
+        <size x="2.16" y="1.53" z="1.2"/>
+        <volumeoffset y="-0.22"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="8.56" z="30.56"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.22" z="-0.39"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_exit" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="-7.61" z="34.39"/>
+        </offset>
+        <size x="1.81" y="1.44" z="3.67"/>
+        <volumeoffset z="1.72"/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-7.51" z="31.45"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.16" z="-0.2"/>
+      </envmapprobe>
+    </template>
+    <template name="landmarks_par_monument_center_01">
+      <envmapprobe name="probe_01_cocoonroom" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-399" y="688" z="199.299"/>
+        </offset>
+        <size x="95" y="36" z="51"/>
+        <volumeoffset y="9"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-250" y="687" z="200"/>
+        </offset>
+        <size x="56" y="9" z="8"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_energyroom" type="static" shape="cylinder" preset="interior">
+        <offset>
+          <position x="-88" y="638" z="200"/>
+        </offset>
+        <size x="87" y="303" z="1"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_energyroom2" type="static" shape="cylinder" preset="interior">
+        <offset>
+          <position x="64" y="638" z="200"/>
+        </offset>
+        <size x="87" y="303" z="1"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_corner_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="3"/>
+        </offset>
+        <size x="15" y="17" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_corner_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-2" y="-5" z="-1"/>
+        </offset>
+        <size x="16" y="16" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_m_trans_container_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position x="0.0003028" y="4.78" z="58.02"/>
+        </offset>
+        <size x="3.5" y="2.18" z="4.49"/>
+        <volumeoffset y="-0.18" z="-1.34"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="0.0003028" y="4.96" z="53.49"/>
+        </offset>
+        <size x="3.07" y="1.42" z="3.9"/>
+        <volumeoffset y="-0.22"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position x="0.0003028" y="4.96" z="48.53"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.22"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_exit" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-8.19" z="47.96"/>
+        </offset>
+        <size x="1.41" y="1.46" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-8" z="45.29"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.19" z="-0.5"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_m_trans_container_02">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="0.0003028" y="4.78" z="57.99"/>
+        </offset>
+        <size x="3.48" y="2.18" z="3"/>
+        <volumeoffset y="-0.18"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="0.0003028" y="4.96" z="52.46"/>
+        </offset>
+        <size x="3.07" y="1.42" z="2.88"/>
+        <volumeoffset y="-0.22"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position x="0.0003028" y="4.96" z="48.53"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.22"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_exit" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-8.19" z="47.96"/>
+        </offset>
+        <size x="1.41" y="1.46" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-8" z="45.29"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.19" z="-0.5"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_xen_m_corvette_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-1.92" z="52.83"/>
+        </offset>
+        <size x="1.89" y="1.45" z="2.35"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-1.92" z="45.68"/>
+        </offset>
+        <size x="3.63" y="1.74" z="6.23"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporter_01" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="4.64" y="-1.74" z="44.638"/>
+        </offset>
+        <size x="1.39" y="1.48" z="1.66"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_xen_m_corvette_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-4.11" z="32.53"/>
+        </offset>
+        <size x="4.06" y="2.92" z="3.49"/>
+        <volumeoffset y="0.26" z="-1.35"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-3.96" z="22.78"/>
+        </offset>
+        <size x="6.79" y="2.92" z="6.74"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_transporter_01" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="6.8" y="-4.5" z="23.55"/>
+        </offset>
+        <size x="1.44" y="1.7" z="1.91"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_par_m_miner_solid_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="9.79" z="-25.75"/>
+        </offset>
+        <size x="6" y="2" z="3.12"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="9.76" z="-32.8"/>
+        </offset>
+        <size x="6.28" y="1.95" z="4.25"/>
+        <volumeoffset y="-0.32"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="9.76" z="-36.97"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.32" z="-0.5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_exit" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-7.98" z="33.9"/>
+        </offset>
+        <size x="2.13" y="2.51" z="4"/>
+        <volumeoffset y="0.2" z="1.23"/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-8.32" z="30.32"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.19" z="-0.51"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_tel_xl_resupplier_01"/>
+    <template name="ship_tel_s_fighter_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="3.34"/>
+        </offset>
+        <size x="1.55" y="1.85" z="3.67"/>
+        <volumeoffset y="-0.12" z="0.25"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="-1.51"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2.36"/>
+        <volumeoffset y="-0.12" z="-0.52"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.31" z="-6.04"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_tel_s_fighter_02">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="3.34"/>
+        </offset>
+        <size x="1.55" y="1.85" z="3.67"/>
+        <volumeoffset y="-0.12" z="0.25"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="-1.51"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2.36"/>
+        <volumeoffset y="-0.12" z="-0.52"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.31" z="-6.04"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_gen_s_fighter_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-1.59" z="10.91"/>
+        </offset>
+        <size x="3" y="2.56" z="3.13"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-1.59" z="5.34"/>
+        </offset>
+        <size x="3" y="2.56" z="3.13"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-2.81" z="0.08"/>
+          <rotation pitch="17"/>
+        </offset>
+        <size x="1" y="1.92" z="2.76"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_common_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position y="1.09" z="-7.21"/>
+        </offset>
+        <size x="3" y="1.66" z="5.18"/>
+        <volumeoffset/>
+        <fade innerrange="0.5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="3.5" y="1.57" z="-6.01"/>
+        </offset>
+        <size x="4.43" y="2.07" z="6.72"/>
+        <volumeoffset/>
+        <fade innerrange="0.8"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-3.5" y="1.57" z="-6.01"/>
+        </offset>
+        <size x="4.43" y="2.07" z="6.72"/>
+        <volumeoffset/>
+        <fade innerrange="0.8"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_arg_xl_carrier_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="-67" z="528"/>
+        </offset>
+        <size x="54" y="16" z="109"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="dockingbay_arg_s_01">
+      <envmapprobe name="probe_01_transporterroom" type="static" shape="cuboid" preset="interior" importance="2">
+        <offset>
+          <position x="16.97" y="-1.27" z="19.64"/>
+        </offset>
+        <size x="1.4" y="1.5" z="1.6"/>
+        <volumeoffset x="0.42" y="-0.26"/>
+      </envmapprobe>
+      <envmapprobe name="probe_01_transporterroom1" type="static" shape="cuboid" preset="dock" importance="1">
+        <offset>
+          <position x="14.18" y="-1.25" z="19.64"/>
+        </offset>
+        <size x="4.85" y="1.62" z="2.28"/>
+        <volumeoffset x="-2.78" y="-0.38"/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_livingroom_01">
+      <envmapprobe name="probe_01_kitchen" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="2.29" y="1.68" z="-2.53"/>
+        </offset>
+        <size x="4" y="1.6" z="3"/>
+        <volumeoffset x="0.27" y="-0.24"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_livingroom" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-1.5" y="1.2" z="-6.98"/>
+        </offset>
+        <size x="5.33" y="1.85" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_bedroom" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-3.73" y="1.25" z="-1.62"/>
+        </offset>
+        <size x="2.5" y="1.38" z="1.65"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_par_m_corvette_01">
+      <envmapprobe name="probe_01_left" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="-1.4" y="0.22" z="16.49"/>
+        </offset>
+        <size x="2.05" y="2.5" z="2.7"/>
+        <volumeoffset x="-0.34" y="0.86"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_right" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position x="1.28" y="0.8" z="16.49"/>
+        </offset>
+        <size x="2.05" y="2.5" z="2.7"/>
+        <volumeoffset x="0.67" y="0.28"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="0.67" z="12.16"/>
+        </offset>
+        <size x="3.66" y="2.5" z="1.81"/>
+        <volumeoffset y="0.28"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="0.6" z="9.53"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.09" z="-0.36"/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_exit" type="static" shape="cuboid" preset="cockpit" tags="interior parallaxcorrection">
+        <offset>
+          <position y="-8.42" z="-4.251"/>
+        </offset>
+        <size x="7.78" y="2.47" z="3.26"/>
+        <volumeoffset y="0.43" z="0.25"/>
+      </envmapprobe>
+      <envmapprobe name="probe_06_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-8.4" z="-7.86"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.42" z="-0.25"/>
+      </envmapprobe>
+    </template>
+    <template name="room_arg_m_station_02_hightech">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="112.954" y="67"/>
+        </offset>
+        <size x="8" y="3" z="20"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="110.17" y="67" z="40.35"/>
+        </offset>
+        <size x="12" y="3" z="25"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="110.17" y="67" z="-40.35"/>
+        </offset>
+        <size x="12" y="3" z="25"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-112.95" y="67"/>
+        </offset>
+        <size x="8" y="3" z="20"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_05" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-110.17" y="67" z="40.35"/>
+        </offset>
+        <size x="12" y="3" z="25"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_06" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position x="-110.17" y="67" z="-40.35"/>
+        </offset>
+        <size x="12" y="3" z="25"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_straight_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="17" y="14" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_straight_03">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="66" y="14" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_straight_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="34" y="12" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_straight_05">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="16" y="17" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_straight_04">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="18"/>
+          <rotation roll="12"/>
+        </offset>
+        <size x="73" y="16" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_straight_07">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="16" y="66" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_32_straight_06">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="16" y="34" z="16"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_par_m_miner_liquid_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="9.79" z="-25.75"/>
+        </offset>
+        <size x="6" y="2" z="3.12"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="9.76" z="-32.8"/>
+        </offset>
+        <size x="6.28" y="1.95" z="4.25"/>
+        <volumeoffset y="-0.32"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_transporterroom" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="9.76" z="-36.97"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.32" z="-0.5"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_exit" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="-7.98" z="33.9"/>
+        </offset>
+        <size x="2.13" y="2.51" z="4"/>
+        <volumeoffset y="0.2" z="1.23"/>
+      </envmapprobe>
+      <envmapprobe name="probe_05_transporterroom_exit" type="static" shape="cuboid" preset="cockpit" importance="1">
+        <offset>
+          <position y="-8.32" z="30.32"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.19" z="-0.51"/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_m_station_02_hightech">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="74.32" z="-0.9902"/>
+        </offset>
+        <size x="170" y="40" z="190"/>
+        <volumeoffset y="26.24"/>
+      </envmapprobe>
+    </template>
+    <template name="weapon_arg_m_ion_01_mk2"/>
+    <template name="scs_gen_spacesuit_16_intersection_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="8"/>
+        </offset>
+        <size x="9" y="8" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_16_intersection_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="7.53"/>
+        </offset>
+        <size x="9" y="8" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="dockingbay_arg_m_01">
+      <envmapprobe name="probe_01_main" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="-0.95" z="90.36"/>
+        </offset>
+        <size x="11" y="1.56" z="2.3"/>
+        <volumeoffset y="-0.65"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_transporterroom" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position y="-0.86" z="88.24"/>
+        </offset>
+        <size x="1.6" y="1.5" z="1.4"/>
+        <volumeoffset y="-0.65" z="-0.82"/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_16_intersection_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="10" y="9" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_16_intersection_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="9" y="8" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_boronoffice_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-0.017" y="2" z="-5.765"/>
+        </offset>
+        <size x="6.522" y="2.5" z="6.173"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_m_station_02_lowtech">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="74.32" z="-0.9902"/>
+        </offset>
+        <size x="170" y="40" z="190"/>
+        <volumeoffset y="26.24"/>
+      </envmapprobe>
+    </template>
+    <template name="room_par_managersoffice_01">
+      <envmapprobe name="probe_01_center" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position y="2.23" z="-10"/>
+        </offset>
+        <size x="3.25" y="2.55" z="2.85"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="3" y="2.47" z="-7.73"/>
+        </offset>
+        <size x="4" y="6" z="7.41"/>
+        <volumeoffset x="0.73" y="0.9" z="-0.94"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="-3.76" y="2.47" z="-7.73"/>
+        </offset>
+        <size x="4" y="6" z="7.41"/>
+        <volumeoffset x="0.24" y="0.9" z="-0.94"/>
+      </envmapprobe>
+      <envmapprobe name="probe_04_rear" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position y="1.91" z="-3.46"/>
+        </offset>
+        <size x="3.64" y="3.57" z="4.61"/>
+        <volumeoffset y="-0.62"/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_intelligenceoffice_01">
+      <envmapprobe name="probe_01_entry" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="1.96" z="-4.429"/>
+        </offset>
+        <size x="7" y="2.29" z="5.02"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position y="2.63" z="-12.85"/>
+        </offset>
+        <size x="7" y="3" z="4"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="bridge_tfm_l_01">
+      <envmapprobe name="probe_01_transporterroom" type="static" shape="cuboid" preset="bridge" importance="2">
+        <offset>
+          <position x="-6.53" y="-0.22" z="-21.528"/>
+        </offset>
+        <size x="1.35" y="1.51" z="1.62"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="bridge" importance="1">
+        <offset>
+          <position y="-0.33" z="-21.48"/>
+        </offset>
+        <size x="5.52" y="2.3" z="2.75"/>
+        <volumeoffset y="0.19" z="0.63"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="bridge" importance="1">
+        <offset>
+          <position y="0.21" z="-16.17"/>
+        </offset>
+        <size x="2.69" y="3.15" z="2.46"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04" type="static" shape="cuboid" preset="bridge" importance="1">
+        <offset>
+          <position y="0.52" z="-5.56"/>
+        </offset>
+        <size x="4" y="3.74" z="9.13"/>
+        <volumeoffset/>
+        <fade innerrange="0.8"/>
+      </envmapprobe>
+      <envmapprobe name="probe_05" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position x="4.78" y="-1.24" z="-6.84"/>
+        </offset>
+        <size x="5.66" y="6" z="12.39"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_06" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position x="-4.78" y="-1.24" z="-6.84"/>
+        </offset>
+        <size x="5.66" y="6" z="12.39"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_07_front" type="static" shape="cuboid" preset="bridge" importance="1">
+        <offset>
+          <position y="1.48" z="7.22"/>
+        </offset>
+        <size x="8" y="4" z="9"/>
+        <volumeoffset/>
+        <fade innerrange="0.8"/>
+      </envmapprobe>
+      <envmapprobe name="probe_08_front_down" type="static" shape="cuboid" preset="bridge">
+        <offset>
+          <position y="-4.52" z="7.22"/>
+        </offset>
+        <size x="8" y="3" z="9"/>
+        <volumeoffset/>
+        <fade innerrange="0.8"/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_m_station_02">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="74.32" z="-0.9902"/>
+        </offset>
+        <size x="170" y="40" z="190"/>
+        <volumeoffset y="26.24"/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_arg_m_station_01"/>
+    <template name="room_tel_managersoffice_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="-1.592" y="1.44" z="-10.9"/>
+        </offset>
+        <size x="5.62" y="3.13" z="6.07"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_02" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="-0.86" y="1.44" z="-3.33"/>
+        </offset>
+        <size x="6.04" y="3.13" z="4.29"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_03" type="static" shape="cuboid" preset="interior" importance="1">
+        <offset>
+          <position x="-8.85" y="0.81" z="-7.46"/>
+        </offset>
+        <size x="2.78" y="2.48" z="9.3"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_04" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position x="10.95" y="1.54" z="-7.4"/>
+        </offset>
+        <size x="7.55" y="3.62" z="8.78"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_spacesuit_32_corner_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="16"/>
+        </offset>
+        <size x="18" y="16" z="18"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="dockarea_par_l_destroyer_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="dock">
+        <offset>
+          <position y="27" z="-1"/>
+        </offset>
+        <size x="102" y="30" z="98"/>
+        <volumeoffset y="1"/>
+      </envmapprobe>
+    </template>
+    <template name="ship_tel_s_trans_container_02">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="3.34"/>
+        </offset>
+        <size x="1.55" y="1.85" z="3.67"/>
+        <volumeoffset y="-0.12" z="0.25"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="-1.51"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2.36"/>
+        <volumeoffset y="-0.12" z="-0.52"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.31" z="-6.04"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="3.34"/>
+        </offset>
+        <size x="1.55" y="1.85" z="3.67"/>
+        <volumeoffset y="-0.12" z="0.25"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="-1.51"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2.36"/>
+        <volumeoffset y="-0.12" z="-0.52"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.31" z="-6.04"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ship_tel_s_trans_container_01">
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="3.34"/>
+        </offset>
+        <size x="1.55" y="1.85" z="3.67"/>
+        <volumeoffset y="-0.12" z="0.25"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="-1.51"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2.36"/>
+        <volumeoffset y="-0.12" z="-0.52"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.31" z="-6.04"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="3.34"/>
+        </offset>
+        <size x="1.55" y="1.85" z="3.67"/>
+        <volumeoffset y="-0.12" z="0.25"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="-1.51"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2.36"/>
+        <volumeoffset y="-0.12" z="-0.52"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.31" z="-6.04"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+      <envmapprobe name="probe_01_front" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="3.34"/>
+        </offset>
+        <size x="1.55" y="1.85" z="3.67"/>
+        <volumeoffset y="-0.12" z="0.25"/>
+      </envmapprobe>
+      <envmapprobe name="probe_02_mid" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.72" z="-1.51"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2.36"/>
+        <volumeoffset y="-0.12" z="-0.52"/>
+      </envmapprobe>
+      <envmapprobe name="probe_03_rear" type="static" shape="cuboid" preset="cockpit">
+        <offset>
+          <position y="1.31" z="-6.04"/>
+        </offset>
+        <size x="1.7" y="1.85" z="2"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="scs_gen_asteroid_16_corner_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset/>
+        <size x="9" y="8" z="9"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="ics_tel_prison_corner_01">
+      <envmapprobe name="probe_01" type="static" shape="cuboid" preset="interior">
+        <offset>
+          <position z="-0.002269"/>
+        </offset>
+        <size x="2.67" y="1.83" z="2.67"/>
+        <volumeoffset/>
+      </envmapprobe>
+    </template>
+    <template name="room_gen_m_buildmodule_01" optional="true"/>
+    <template name="ship_gen_s_lasertower_01" optional="true"/>
+    <template name="ship_gen_m_transdrone_container_01" optional="true"/>
+    <template name="ship_gen_s_transdrone_container_01" optional="true"/>
+    <template name="ship_xen_m_fighter_01" optional="true"/>
+    <template name="room_tel_tradestation_01_dockarea_m_01" optional="true"/>
+    <template name="ship_gen_s_miningdrone_liquid_01" optional="true"/>
+    <template name="ship_gen_s_fightingdrone_01" optional="true"/>
+    <template name="dock_gen_xs_ship_01" optional="true"/>
+    <template name="dockingbay_gen_sm_buildstorage_01" optional="true"/>
+    <template name="ship_xen_s_scout_01" optional="true"/>
+    <template name="ship_xen_m_miner_01" optional="true"/>
+    <template name="ship_kha_s_fighter_02" optional="true"/>
+    <template name="ship_kha_s_fighter_01" optional="true"/>
+    <template name="ship_xen_s_fighter_02" optional="true"/>
+    <template name="ship_xen_s_fighter_01" optional="true"/>
+    <template name="room_gen_coffeemachine_01" optional="true"/>
+    <template name="room_arg_m_02_tradestation_01" optional="true"/>
+    <template name="room_gen_drinkomat_01" optional="true"/>
+    <template name="ship_gen_s_miningdrone_solid_01" optional="true"/>
+    <template name="ship_kha_m_fighter_01" optional="true"/>
+    <template name="ship_kha_m_fighter_02" optional="true"/>
+    <template name="room_gen_locker_01" optional="true"/>
+  </templates>
+</envmapprobes>

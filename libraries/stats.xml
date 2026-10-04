@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="stats.xsd">
+
+  <!-- Time -->
+  <stat id="time_total" name="{1003,1}" comment="Total time" units="seconds" />
+  
+  <stat id="time_playership" name="{1003,28}" comment="Time spent in control of a ship" units="seconds" />
+  <stat id="time_boosting" name="{1003,29}" comment="Time spent boosting" units="seconds" />
+  <stat id="time_local_highways" name="{1003,30}" comment="Flying time in local highways" units="seconds" />
+  <stat id="time_superhighways" name="{1003,31}" comment="Flying time in superhighways" units="seconds" />
+  <!-- <stat id="time_platforms" name="{1003,33}" comment="Time spent on landing platforms" units="seconds" /> -->
+  <stat id="time_autopilot" name="{1003,52}" comment="Time spent using autopilot" units="seconds" />
+  <stat id="time_spacesuit" name="{1003,53}" comment="Time spent in a spacesuit" units="seconds" />
+  <stat id="time_seta_saved" name="{1003,66}" comment="Time saved using SETA" units="seconds" />
+
+  <!-- Modes -->
+  <stat id="time_mode_scan_longrange" name="{1003,36}" comment="Time spent in long range scan mode" secret="true" units="seconds" />
+  <stat id="time_mode_scan" name="{1003,37}" comment="Time spent in scan mode" secret="true" units="seconds" />
+  <stat id="time_mode_travel" name="{1003,38}" comment="Time spent in travel mode" secret="true" units="seconds" />
+  <stat id="time_mode_seta" name="{1003,39}" comment="Time spent in SETA mode" secret="true" units="seconds" />
+
+  <!-- Distances -->
+  <stat id="distance_space" name="{1003,8}" comment="Distance travelled in space" units="kilometres" datatype="double" />
+  <stat id="distance_local_highways" name="{1003,9}" comment="Distance travelled in local highways" units="kilometres" datatype="double" />
+  <stat id="distance_superhighways" name="{1003,11}" comment="Distance travelled in superhighways" units="kilometres" datatype="double" />
+  <stat id="distance_autopilot" name="{1003,55}" comment="Distance travelled using autopilot" units="kilometres" datatype="double" />
+  <stat id="distance_walked" name="{1003,10}" comment="Distance walked" units="metres" datatype="double" />
+
+  <!-- Jumps -->
+  <stat id="gates_traversed" name="{1003,17}" comment="Gates traversed">
+    <addto stat="trade_score" />
+  </stat>
+  <stat id="accelerators_traversed" name="{1003,126}" comment="Accelerators traversed">
+    <addto stat="trade_score" />
+  </stat>
+  <stat id="anomalies_traversed" name="{1003,18}" comment="Gates traversed" secret="true">
+    <addto stat="trade_score" multiplier="10" />
+  </stat>
+
+  <!-- Exploration -->
+  <stat id="sectors_discovered" name="{1003,12}" comment="Sectors discovered" />
+  <stat id="clusters_discovered" name="{1003,13}" comment="Systems discovered" />
+  <stat id="gates_discovered" name="{1003,14}" comment="Gates discovered" />
+  <stat id="accelerators_discovered" name="{1003,125}" comment="Accelerators discovered" />
+  <stat id="anomalies_discovered" name="{1003,15}" comment="Anomalies discovered" secret="true" />
+  <!-- <stat id="platforms_visited" name="{1003,16}" comment="Landing platforms visited" /> -->
+
+  <stat id="drops_collected" name="{1003,27}" comment="Dropped containers collected" secret="true" >
+    <copyto stat="s_drops_collected" />
+  </stat>
+  <stat id="s_drops_collected" highest="true" account="true">
+    <achievement progressstep="33" unlock="99" />
+  </stat>
+
+  <stat id="illegal_drops_collected" name="{1003,49}" comment="Dropped containers with illegal content collected" secret="true" />
+  <stat id="crates_opened" name="{1003,50}" comment="Cases, trunks and lockers opened" />
+
+  <stat id="lockboxes_opened" name="{1003,56}" comment="Lockboxes opened" secret="true">
+    <copyto stat="s_lockboxes_opened" />
+  </stat>
+  <stat id="s_lockboxes_opened" highest="true" account="true">
+    <achievement progressstep="11" unlock="33" />
+  </stat>
+
+  <!-- NOTE: Stat cannot be negative because range for achievement is 0 to 30 -->
+  <stat id="max_faction_relation" name="{1003,51}" comment="Highest reputation with any faction" default="0" highest="true">
+    <copyto stat="s_max_faction_relation" />
+  </stat>
+  <stat id="s_max_faction_relation" highest="true" account="true">
+    <achievement unlock="30" />
+  </stat>
+
+  <!-- Money / Trade / Property -->
+  <stat id="money_player" name="{1003,19}" comment="Account" units="credits">
+    <copyto stat="s_money_player_max" />
+  </stat>
+  <stat id="s_money_player_max" units="credits" highest="true" account="true">
+    <achievement progressstep="250000000" unlock="1000000000" />
+  </stat>
+
+  <stat id="ships_owned" name="{1003,127}" comment="Owned ships">
+    <copyto stat="s_ships_owned_max" />
+  </stat>
+  <stat id="s_ships_owned_max" highest="true" account="true">
+    <achievement progressstep="5" unlock="20" />
+  </stat>
+
+  <stat id="stations_owned" name="{1003,128}" comment="Owned stations" />
+
+  <stat id="discounts_unlocked" name="{1003,64}" comment="Discounts unlocked">
+    <addto stat="trade_score" multiplier="3" />
+  </stat>
+  <stat id="commissions_unlocked" name="{1003,65}" comment="Commissions unlocked">
+    <addto stat="trade_score" multiplier="3" />
+  </stat>
+
+  <stat id="trades_executed" name="{1003,67}" comment="Trades executed">
+    <addto stat="trade_score" />
+  </stat>
+  <stat id="trade_value" name="{1003,68}" comment="Total value of trades" units="credits">
+    <addto stat="trade_score" divisor="10000" />
+  </stat>
+
+  <stat id="objects_recycled" name="{1003,170}" comment="Objects recycled">
+    <copyto stat="s_objects_recycled" />
+  </stat>
+  <stat id="s_objects_recycled" highest="true" account="true">
+    <achievement progressstep="25" unlock="100" />
+  </stat>
+
+  <!-- Build -->
+  <stat id="stations_constructed" name="{1003,69}" comment="Stations constructed">
+    <copyto stat="s_stations_constructed" />
+  </stat>
+  <stat id="s_stations_constructed" highest="true" account="true">
+    <achievement progressstep="5" unlock="10" />
+  </stat>
+
+  <stat id="station_modules_constructed" name="{1003,70}" comment="Station modules constructed">
+    <addto stat="trade_score" multiplier="100"/>
+  </stat>
+
+  <!-- Fight -->
+  <stat id="bullets_fired" name="{1003,4}" comment="Laser shots fired" />
+  <stat id="bullets_hit" name="{1003,102}" comment="Laser shots hit" />
+  <stat id="bullets_hit_percent" name="{1003,5}" comment="Laser hit efficiency" datatype="float" />
+  <stat id="bullets_per_hour" name="{1003,100}" comment="Laser shots fired per hour" />
+
+  <stat id="missiles_fired" name="{1003,6}" comment="Missiles launched" />
+  <stat id="missiles_hit" />
+  <stat id="missiles_hit_percent" name="{1003,7}" comment="Missile hit efficiency" datatype="float" />
+  <stat id="missiles_per_hour" name="{1003,101}" comment="Missiles launched per hour" />
+
+  <!-- Countermeasures / Deployables  -->
+  <stat id="countermeasures_launched" name="{1003,103}" comment="Countermeasures launched" />
+  <stat id="drones_launched" name="{1003,104}" comment="Drones launched" />
+  <stat id="lasertowers_launched" name="{1003,105}" comment="Laser towers launched" />
+  <stat id="mines_launched" name="{1003,106}" comment="Mines launched" />
+  <stat id="satellites_launched" name="{1003,107}" comment="Satellites launched" />
+  <stat id="navbeacons_launched" name="{1003,108}" comment="Nav beacons launched" />
+  <stat id="resourceprobes_launched" name="{1003,109}" comment="Resource probes launched" />
+
+  <!-- Destruction -->
+  <stat id="ships_destroyed" name="{1003,22}" comment="Ships destroyed">
+    <addto stat="fight_score"/>
+  </stat>
+
+  <stat id="capships_destroyed" name="{1003,23}" comment="Capital ships destroyed">
+    <addto stat="fight_score" multiplier="30" />
+  </stat>
+
+  <stat id="modules_destroyed" name="{1003,24}" comment="Station modules destroyed">
+    <addto stat="fight_score" multiplier="10" />
+  </stat>
+
+  <stat id="xenon_ships_destroyed" name="{1003,129}" comment="Xenon ships destroyed">
+    <copyto stat="s_xenon_ships_destroyed" />
+  </stat>
+  <stat id="s_xenon_ships_destroyed" highest="true" account="true">
+    <achievement unlock="128" />
+  </stat>
+
+  <stat id="khaak_ships_destroyed" name="{1003,130}" comment="Kha'ak ships destroyed" />
+
+  <stat id="turrets_destroyed" name="{1003,25}" comment="Turrets destroyed">
+    <copyto stat="s_turrets_destroyed" />
+    <addto stat="fight_score"/>
+  </stat>
+  <stat id="s_turrets_destroyed" highest="true" account="true">
+    <achievement progressstep="25" unlock="100" />
+  </stat>
+
+  <stat id="adsigns_destroyed" name="{1003,26}" comment="Advertising signs destroyed">
+    <copyto stat="s_adsigns_destroyed" />
+  </stat>
+  <stat id="s_adsigns_destroyed" highest="true" account="true">
+    <achievement progressstep="5" unlock="20" />
+  </stat>
+
+  <stat id="pilots_bailed" name="{1003,110}" comment="Ships captured">
+    <copyto stat="s_pilots_bailed" />
+  </stat>
+  <stat id="s_pilots_bailed" highest="true" account="true">
+    <achievement progressstep="10" unlock="50" />
+  </stat>
+
+  <stat id="ships_claimed" name="{1003,111}" comment="Ships claimed">
+    <copyto stat="s_ships_claimed" />
+    <addto stat="fight_score" multiplier="10" />
+  </stat>
+  <stat id="s_ships_claimed" highest="true" account="true">
+    <achievement progressstep="5" unlock="10" />
+  </stat>
+
+  <stat id="boarding_attempts" name="{1003,112}" comment="Boarding attempts" secret="true">
+    <copyto stat="s_boarding_attempts" />
+  </stat>
+  <stat id="s_boarding_attempts" highest="true" account="true" />
+
+  <stat id="ships_boarded" name="{1003,113}" comment="Capital ships boarded" secret="true">
+    <copyto stat="s_ships_boarded" />
+    <addto stat="fight_score" multiplier="100" />
+  </stat>
+  <stat id="s_ships_boarded" highest="true" account="true">
+    <!-- <achievement unlock="1" /> -->
+  </stat>
+
+  <!-- NOTE: Pure account stat, independent of savegames -->
+  <stat id="s_ships_destroyed_extview" comment="Ships destroyed while in External View" highest="true" account="true" scenario="true">
+    <achievement progressstep="5" unlock="10" />
+  </stat>
+
+  <!-- NOTE: Pure account stat, independent of savegames - used only as progress for an achievement in the Timelines DLC -->
+  <stat id="s_tl_all_connected_progress" highest="true" account="true" scenario="true">
+    <achievement progressstep="1" unlock="2" />
+  </stat>
+
+  <!-- Equipment / Paint / Clothing Mods -->
+  <stat id="weapon_mods_installed" name="{1003,71}" comment="Weapon mods installed" />
+  <stat id="shield_mods_installed" name="{1003,72}" comment="Shield mods installed" />
+  <stat id="engine_mods_installed" name="{1003,73}" comment="Engine mods installed" />
+  <stat id="ship_mods_installed" name="{1003,74}" comment="Ship mods installed" />
+  <stat id="paint_mods_installed" name="{1003,81}" comment="Paint mods installed" />
+  <stat id="clothing_mods_installed" name="{1003,82}" comment="Clothing mods installed" />
+
+  <!-- Employer -->
+  <stat id="staff_hired" name="{1003,123}" comment="Staff members hired">
+    <addto stat="trade_score" />
+  </stat>
+
+  <!-- Missions -->
+  <stat id="missions_accepted" name="{1003,20}" comment="Missions accepted" />
+  <stat id="missions_completed" name="{1003,21}" comment="Missions completed">
+    <addto stat="fight_score" multiplier="3" />
+  </stat>
+
+  <stat id="escort_missions_completed" name="{1003,140}" comment="Escort missions completed" secret="true">
+    <copyto stat="s_escort_missions_completed" />
+  </stat>
+  <stat id="s_escort_missions_completed" highest="true" account="true">
+    <!-- <achievement progressstep="11" unlock="33" /> -->
+  </stat>
+
+  <stat id="passenger_missions_completed" name="{1003,141}" comment="Passenger transport missions completed" secret="true">
+    <copyto stat="s_passenger_missions_completed" />
+  </stat>
+  <stat id="s_passenger_missions_completed" highest="true" account="true">
+    <achievement progressstep="5" unlock="20" />
+  </stat>
+  
+  <!-- Diplomacy -->
+  <stat id="diplomacy_actions_completed" name="{1003,171}" comment="Agent Actions completed sucessfully" />
+  <stat id="diplomacy_actions_failed" name="{1003,172}" comment="Agent Actions failed" />
+  <stat id="diplomacy_agents_hired" name="{1003,173}" comment="Agents hired" />
+  <stat id="diplomacy_agents_lost" name="{1003,174}" comment="Agents lost on mission" />
+  <stat id="diplomacy_event_instigated" name="{1003,175}" comment="Diplomatic Events instigated" />
+  <stat id="diplomacy_event_influenced" name="{1003,176}" comment="Diplomatic Events influenced sucessfully" />
+
+  <!-- Terraforming -->
+  <stat id="terraforming_projects_completed" name="{1003,160}" comment="Terraforming projects completed" />
+  <stat id="terraforming_projects_failed" name="{1003,161}" comment="Terraforming projects failed" />
+  <stat id="terraforming_complications_suffered" name="{1003,162}" comment="Terraforming complications suffered" />
+
+  <stat id="terraforming_missions_completed" name="{1003,163}" comment="Terraforming missions completed">
+    <copyto stat="s_terraforming_missions_completed" />
+  </stat>
+  <stat id="s_terraforming_missions_completed" highest="true" account="true">
+    <achievement unlock="7" />
+  </stat>
+
+  <stat id="terraforming_delivery_drones_built" name="{1003,164}" comment="Terraforming delivery drones built" />
+  <stat id="terraforming_delivery_drones_lost" name="{1003,165}" comment="Terraforming delivery drones lost" />
+  <stat id="terraforming_expenses" name="{1003,166}" units="credits" comment="Total terraforming expenses" />
+  <stat id="terraforming_payout" name="{1003,167}" units="credits" comment="Total terraforming payout" />
+  <stat id="terraforming_personnel_trained_in_groups" name="{1003,168}" comment="Personnel trained in groups" />
+  <stat id="terraforming_personnel_trained_individually" name="{1003,169}" comment="Personnel trained individually" />
+
+  <!-- Venture / Visitor -->
+  <stat id="venture_ships_sent" name="{1003,201}" comment="Venture ships sent out" secret="true" />
+  <stat id="venture_ships_returned" name="{1003,202}" comment="Venture ships returned" secret="true" />
+  <!-- Hide venture_missions_completed for now: name="{1003,203}" -->
+  <stat id="venture_missions_completed" comment="Venture missions completed" secret="true" />
+  <stat id="visitor_ships_encountered" name="{1003,211}" comment="Visitor ships encountered" secret="true" />
+  <stat id="visitor_ships_destroyed" name="{1003,212}" comment="Visitor ships destroyed" secret="true" />
+
+  <!-- Other -->
+  <stat id="savegames_loaded" name="{1003,150}" comment="Number of savegames loaded" />
+
+  <!-- Scores / Ranks -->
+  <stat id="trade_score" datatype="double" highest="true" comment="Trade score">
+    <mapto stat="trade_rank" min="1" max="8" value="1" />
+    <mapto stat="trade_rank" min="8" max="18" value="2" />
+    <mapto stat="trade_rank" min="18" max="32" value="3" />
+    <mapto stat="trade_rank" min="32" max="57" value="4" />
+    <mapto stat="trade_rank" min="57" max="100" value="5" />
+    <mapto stat="trade_rank" min="100" max="180" value="6" />
+    <mapto stat="trade_rank" min="180" max="320" value="7" />
+    <mapto stat="trade_rank" min="320" max="580" value="8" />
+    <mapto stat="trade_rank" min="580" max="1000" value="9" />
+    <mapto stat="trade_rank" min="1000" max="1800" value="10" />
+    <mapto stat="trade_rank" min="1800" max="3200" value="11" />
+    <mapto stat="trade_rank" min="3200" max="5800" value="12" />
+    <mapto stat="trade_rank" min="5800" max="10000" value="13" />
+    <mapto stat="trade_rank" min="10000" max="18000" value="14" />
+    <mapto stat="trade_rank" min="18000" max="32000" value="15" />
+    <mapto stat="trade_rank" min="32000" max="58000" value="16" />
+    <mapto stat="trade_rank" min="58000" max="100000" value="17" />
+    <mapto stat="trade_rank" min="100000" max="180000" value="18" />
+    <mapto stat="trade_rank" min="180000" max="320000" value="19" />
+    <mapto stat="trade_rank" min="320000" max="580000" value="20" />
+    <mapto stat="trade_rank" min="580000" max="1000000" value="21" />
+    <mapto stat="trade_rank" min="1000000" max="1800000" value="22" />
+    <mapto stat="trade_rank" min="1800000" max="3200000" value="23" />
+    <mapto stat="trade_rank" min="3200000" max="5800000" value="24" />
+    <mapto stat="trade_rank" min="5800000" max="10000000" value="25" />
+    <mapto stat="trade_rank" min="10000000" max="18000000" value="26" />
+    <mapto stat="trade_rank" min="18000000" max="32000000" value="27" />
+    <mapto stat="trade_rank" min="32000000" max="58000000" value="28" />
+    <mapto stat="trade_rank" min="58000000" max="100000000" value="29" />
+    <mapto stat="trade_rank" min="100000000" value="30" />
+  </stat>
+
+  <stat id="trade_rank" units="named" highest="true" name="{1003,2}" comment="Trade rank">
+    <copyto stat="s_trade_rank" />
+    <namedvalue value="0" name="{20219,1001}" />
+    <namedvalue value="1" name="{20219,1011}" />
+    <namedvalue value="2" name="{20219,1021}" />
+    <namedvalue value="3" name="{20219,1031}" />
+    <namedvalue value="4" name="{20219,1041}" />
+    <namedvalue value="5" name="{20219,1051}" />
+    <namedvalue value="6" name="{20219,1061}" />
+    <namedvalue value="7" name="{20219,1071}" />
+    <namedvalue value="8" name="{20219,1081}" />
+    <namedvalue value="9" name="{20219,1091}" />
+    <namedvalue value="10" name="{20219,1101}" />
+    <namedvalue value="11" name="{20219,1111}" />
+    <namedvalue value="12" name="{20219,1121}" />
+    <namedvalue value="13" name="{20219,1131}" />
+    <namedvalue value="14" name="{20219,1141}" />
+    <namedvalue value="15" name="{20219,1151}" />
+    <namedvalue value="16" name="{20219,1161}" />
+    <namedvalue value="17" name="{20219,1171}" />
+    <namedvalue value="18" name="{20219,1181}" />
+    <namedvalue value="19" name="{20219,1191}" />
+    <namedvalue value="20" name="{20219,1201}" />
+    <namedvalue value="21" name="{20219,1211}" />
+    <namedvalue value="22" name="{20219,1221}" />
+    <namedvalue value="23" name="{20219,1231}" />
+    <namedvalue value="24" name="{20219,1241}" />
+    <namedvalue value="25" name="{20219,1251}" />
+    <namedvalue value="26" name="{20219,1261}" />
+    <namedvalue value="27" name="{20219,1271}" />
+    <namedvalue value="28" name="{20219,1281}" />
+    <namedvalue value="29" name="{20219,1291}" />
+    <namedvalue value="30" name="{20219,1301}" />
+  </stat>
+  <stat id="s_trade_rank" highest="true" account="true">
+    <achievement unlock="16" />
+    <achievement unlock="30" />
+  </stat>
+
+  <stat id="fight_score" datatype="double" highest="true" comment="Fight score">
+    <mapto stat="fight_rank" min="1" max="3" value="1" />
+    <mapto stat="fight_rank" min="3" max="5" value="2" />
+    <mapto stat="fight_rank" min="5" max="7" value="3" />
+    <mapto stat="fight_rank" min="7" max="10" value="4" />
+    <mapto stat="fight_rank" min="10" max="14" value="5" />
+    <mapto stat="fight_rank" min="14" max="20" value="6" />
+    <mapto stat="fight_rank" min="20" max="29" value="7" />
+    <mapto stat="fight_rank" min="29" max="42" value="8" />
+    <mapto stat="fight_rank" min="42" max="60" value="9" />
+    <mapto stat="fight_rank" min="60" max="87" value="10" />
+    <mapto stat="fight_rank" min="87" max="130" value="11" />
+    <mapto stat="fight_rank" min="130" max="190" value="12" />
+    <mapto stat="fight_rank" min="190" max="280" value="13" />
+    <mapto stat="fight_rank" min="280" max="410" value="14" />
+    <mapto stat="fight_rank" min="410" max="590" value="15" />
+    <mapto stat="fight_rank" min="590" max="860" value="16" />
+    <mapto stat="fight_rank" min="860" max="1200" value="17" />
+    <mapto stat="fight_rank" min="1200" max="1700" value="18" />
+    <mapto stat="fight_rank" min="1700" max="2500" value="19" />
+    <mapto stat="fight_rank" min="2500" max="3600" value="20" />
+    <mapto stat="fight_rank" min="3600" max="5200" value="21" />
+    <mapto stat="fight_rank" min="5200" max="7500" value="22" />
+    <mapto stat="fight_rank" min="7500" max="11000" value="23" />
+    <mapto stat="fight_rank" min="11000" max="16000" value="24" />
+    <mapto stat="fight_rank" min="16000" max="23000" value="25" />
+    <mapto stat="fight_rank" min="23000" max="33000" value="26" />
+    <mapto stat="fight_rank" min="33000" max="48000" value="27" />
+    <mapto stat="fight_rank" min="48000" max="70000" value="28" />
+    <mapto stat="fight_rank" min="70000" max="100000" value="29" />
+    <mapto stat="fight_rank" min="100000" value="30" />
+  </stat>
+  
+  <stat id="fight_rank" units="named" highest="true" name="{1003,3}" comment="Fight rank">
+    <copyto stat="s_fight_rank" />
+    <namedvalue value="0" name="{20219,2001}" />
+    <namedvalue value="1" name="{20219,2011}" />
+    <namedvalue value="2" name="{20219,2021}" />
+    <namedvalue value="3" name="{20219,2031}" />
+    <namedvalue value="4" name="{20219,2041}" />
+    <namedvalue value="5" name="{20219,2051}" />
+    <namedvalue value="6" name="{20219,2061}" />
+    <namedvalue value="7" name="{20219,2071}" />
+    <namedvalue value="8" name="{20219,2081}" />
+    <namedvalue value="9" name="{20219,2091}" />
+    <namedvalue value="10" name="{20219,2101}" />
+    <namedvalue value="11" name="{20219,2111}" />
+    <namedvalue value="12" name="{20219,2121}" />
+    <namedvalue value="13" name="{20219,2131}" />
+    <namedvalue value="14" name="{20219,2141}" />
+    <namedvalue value="15" name="{20219,2151}" />
+    <namedvalue value="16" name="{20219,2161}" />
+    <namedvalue value="17" name="{20219,2171}" />
+    <namedvalue value="18" name="{20219,2181}" />
+    <namedvalue value="19" name="{20219,2191}" />
+    <namedvalue value="20" name="{20219,2201}" />
+    <namedvalue value="21" name="{20219,2211}" />
+    <namedvalue value="22" name="{20219,2221}" />
+    <namedvalue value="23" name="{20219,2231}" />
+    <namedvalue value="24" name="{20219,2241}" />
+    <namedvalue value="25" name="{20219,2251}" />
+    <namedvalue value="26" name="{20219,2261}" />
+    <namedvalue value="27" name="{20219,2271}" />
+    <namedvalue value="28" name="{20219,2281}" />
+    <namedvalue value="29" name="{20219,2291}" />
+    <namedvalue value="30" name="{20219,2301}" />
+  </stat>
+  <stat id="s_fight_rank" highest="true" account="true">
+    <achievement unlock="16" />
+    <achievement unlock="30" />
+  </stat>
+
+</stats>

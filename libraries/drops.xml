@@ -1,0 +1,1922 @@
+<?xml version="1.0" encoding="utf-8"?>
+<droplists xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="drops.xsd">
+  <!-- Reusable Ammo Baskets for Lockboxes and ship drops -->
+  <ammo id="basket_ammo_01" selection="random">
+    <select weight="7" macro="missile_cluster_light_mk1_macro" min="2" max="4"/>
+    <select weight="12" macro="missile_dumbfire_light_mk1_macro" min="3" max="6"/>
+    <select weight="8" macro="missile_dumbfire_light_mk2_macro" min="2" max="4"/>
+    <select weight="7" macro="missile_emp_mk1_macro" min="2" max="4"/>
+    <select weight="7" macro="missile_guided_light_mk1_macro" min="2" max="4"/>
+    <select weight="7" macro="missile_heatseeker_light_mk1_macro" min="2" max="4"/>
+    <select weight="5" macro="missile_smart_light_mk1_macro" min="1" max="2"/>
+    <select weight="6" macro="missile_swarm_light_mk1_macro" min="1" max="3"/>
+  </ammo>
+
+  <ammo id="basket_ammo_02" selection="random">
+    <select weight="8" macro="missile_cluster_heavy_mk1_macro" min="1" max="2"/>
+    <select weight="15" macro="missile_dumbfire_heavy_mk1_macro" min="1" max="2"/>
+    <select weight="8" macro="missile_dumbfire_heavy_mk2_macro" min="1" max="2"/>
+    <select weight="7" macro="missile_guided_heavy_mk1_macro" min="1" max="2"/>
+    <select weight="6" macro="missile_heatseeker_heavy_mk1_macro" min="1" max="2"/>
+    <select weight="5" macro="missile_smart_heavy_mk1_macro" min="1" max="2"/>
+    <select weight="7" macro="missile_swarm_heavy_mk1_macro" min="1" max="2"/>
+  </ammo>
+
+  <ammo id="basket_ammo_03" selection="random">
+    <select weight="1" macro="missile_torpedo_heavy_mk1_macro" min="1" max="2"/>
+    <select weight="3" macro="missile_torpedo_light_mk1_macro" min="1" max="2"/>
+  </ammo>
+
+  <!-- Reusable Wares Baskets for Lockboxes and ship drops  -->
+  <wares id="basket_wares_common_01" selection="random">
+    <select weight="7">
+      <ware ware="inv_algaescrubber" min="1" max="3"/>
+    </select>
+    <select weight="7">
+      <ware ware="inv_carbonfilter" min="1" max="3"/>
+    </select>
+    <select weight="7">
+      <ware ware="inv_crystalbit" min="1" max="3"/>
+    </select>
+    <select weight="12">
+      <ware ware="inv_herbicide" min="1" max="3"/>
+    </select>
+    <select weight="10">
+      <ware ware="inv_hydraulicpump" min="1" max="3"/>
+    </select>
+    <select weight="10">
+      <ware ware="inv_microgimble" min="1" max="3"/>
+    </select>
+    <select weight="10">
+      <ware ware="inv_micromotor" min="1" max="3"/>
+    </select>
+    <select weight="8">
+      <ware ware="inv_rapidsandfilter" min="1" max="3"/>
+    </select>
+  </wares>
+
+  <wares id="basket_wares_common_02" selection="random">
+    <select weight="5">
+      <ware ware="inv_argnusteak" min="2" max="5"/>
+    </select>
+    <select weight="7">
+      <ware ware="inv_bandages" min="1" max="5"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_interfaceunit" min="5" max="15"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_mixedfruit" min="1" max="3"/>
+    </select>
+    <select weight="7">
+      <ware ware="inv_needle" min="1" max="3"/>
+    </select>
+    <select weight="7">
+      <ware ware="inv_salvagedelectronics" min="1" max="3"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_securecontainer" min="2" max="12"/>
+    </select>
+    <select weight="7">
+      <ware ware="inv_sedative" min="1" max="5"/>
+    </select>
+  </wares>
+
+  <wares id="basket_wares_common_03" selection="random">
+    <select weight="5">
+      <ware ware="inv_magneticmaterial" min="1" max="2"/>
+    </select>
+    <select weight="7">
+      <ware ware="inv_cahoonas" min="1" max="5"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_capacitor" min="1" max="5"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_crystalbinder" min="1" max="3"/>
+    </select>
+    <select weight="7">
+      <ware ware="inv_datafragment" min="1" max="3"/>
+    </select>
+    <select weight="7">
+      <ware ware="inv_lostfragment" min="1" max="3"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_massompowder" min="1" max="3"/>
+    </select>
+    <select weight="7">
+      <ware ware="inv_produce" min="1" max="5"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_glowmalt" min="1" max="3"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_rarespices" min="1" max="3"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_snailshells" min="1" max="5"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_xenoinscriptions" min="1" max="2"/>
+    </select>
+  </wares>
+
+  <wares id="basket_wares_rare_01" selection="random">
+    <select weight="10">
+      <ware ware="inv_advancedtargetingmodule" min="1" max="3"/>
+    </select>
+    <select weight="20">
+      <ware ware="inv_decryptionmodule" min="1" max="2"/>
+    </select>
+    <select weight="20">
+      <ware ware="inv_hallucinogenics" min="1" max="2"/>
+    </select>
+    <select weight="20">
+      <ware ware="inv_modulartrigger" min="1" max="3"/>
+    </select>
+    <select weight="10">
+      <ware ware="inv_remotedetonator" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="inv_securitybypasssystem" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="inv_securitydecryptionsystem" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="inv_securityslicer" min="1" max="2"/>
+    </select>
+    <select weight="10">
+      <ware ware="inv_spaceflyeggs" min="1" max="4"/>
+    </select>
+  </wares>
+
+  <!--
+  <wares id="basket_wares_rare_02" selection="random">
+    
+  </wares>
+  -->
+
+  <wares id="basket_wares_rare_03" selection="random">
+    <select weight="7">
+      <ware ware="inv_agidevice_01" min="1" max="2"/>
+    </select>
+    <select weight="6">
+      <ware ware="inv_agidevice_02" min="1" max="2"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_agidevice_03" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="inv_damagedsingularityengine" min="1" max="1"/>
+    </select>
+    <select weight="1">
+      <ware ware="inv_fluxcapacitor" min="1" max="1"/>
+    </select>
+    <select weight="2">
+      <ware ware="inv_programmablefieldarray" min="1" max="1"/>
+    </select>
+  </wares>
+
+  <wares id="basket_wares_rare_04" selection="random">
+    <select weight="1">
+      <ware ware="inv_kyondevice_03" min="1" max="1"/>
+    </select>
+  </wares>
+
+  <wares id="basket_madpeople_wares_01" selection="random">
+    <select weight="8">
+      <ware ware="inv_processing_panel_7A" min="1" max="1"/>
+    </select>
+    <select weight="10">
+      <ware ware="inv_processing_panel_8X" min="1" max="1"/>
+    </select>
+  </wares>
+
+  <wares id="basket_madpeople_wares_02" selection="random">
+    <select weight="9">
+      <ware ware="inv_processing_panel_46B" min="1" max="1"/>
+    </select>
+    <select weight="7">
+      <ware ware="inv_processing_panel_19L" min="1" max="1"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_processing_panel_12G" min="1" max="1"/>
+    </select>
+  </wares>
+
+  <wares id="basket_wares_luxury_01" selection="random">
+    <select weight="7">
+      <ware ware="inv_majaglit" min="2" max="5"/>
+    </select>
+    <select weight="1">
+      <ware ware="inv_spaceflycaviar" min="1" max="2"/>
+    </select>
+    <select weight="7">
+      <ware ware="inv_harmonicresonator" min="1" max="2"/>
+    </select>
+    <select weight="10">
+      <ware ware="inv_infusedbeverage" min="1" max="2"/>
+    </select>
+    <select weight="10">
+      <ware ware="inv_aquaponicvegetable" min="1" max="2"/>
+    </select>
+    <select weight="10">
+      <ware ware="inv_microbrewdrink" min="1" max="2"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_neuralstimulator" min="1" max="2"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_nividiumjewel" min="1" max="2"/>
+    </select>
+    <select weight="7">
+      <ware ware="inv_rareartefact" min="1" max="2"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_spacedyepizza" min="1" max="2"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_xenotext" min="1" max="2"/>
+    </select>
+  </wares>
+
+  <wares id="basket_wpsmod_common_01" selection="random">
+    <select weight="1">
+      <ware ware="modpart_extendedfuelcontainer" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="modpart_highenergycatalyst" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="modpart_nividiumcrystallite" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="modpart_nividiumoxide" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="modpart_tuningsoftware" min="1" max="2"/>
+    </select>
+  </wares>
+
+  <wares id="basket_wpsmod_rare_01" selection="random">
+    <select weight="1">
+      <ware ware="modpart_enginefuelinjector_t1" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="modpart_shieldgeneratorcoil_t1" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="modpart_shipnanoweave_t1" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="modpart_weaponchamber_t1" min="1" max="2"/>
+    </select>
+  </wares>
+
+  <wares id="basket_wpsmod_rare_02" selection="random">
+    <select weight="1">
+      <ware ware="modpart_enginefuelinjector_t2" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="modpart_shieldgeneratorcoil_t2" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="modpart_shipnanoweave_t2" min="1" max="2"/>
+    </select>
+    <select weight="1">
+      <ware ware="modpart_weaponchamber_t2" min="1" max="2"/>
+    </select>
+  </wares>
+
+  <wares id="basket_powerup_wares_01" selection="random">
+    <select weight="30">
+      <ware ware="inv_seminar_management_0" min="1" max="3"/>
+    </select>
+    <select weight="15">
+      <ware ware="inv_seminar_management_1" min="1" max="2"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_seminar_management_2" min="1" max="1"/>
+    </select>
+    <select weight="30">
+      <ware ware="inv_seminar_piloting_0" min="1" max="3"/>
+    </select>
+    <select weight="15">
+      <ware ware="inv_seminar_piloting_1" min="1" max="2"/>
+    </select>
+    <select weight="5">
+      <ware ware="inv_seminar_piloting_2" min="1" max="1"/>
+    </select>
+  </wares>
+
+  <!-- TUTORIAL -->
+  <droplist id="drops_tutorial_guided_missiles">
+    <drop macro="sm_gen_ammo_01_macro">
+      <collectable>
+        <ammo macro="missile_dumbfire_light_mk1_macro" exact="1"/>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="drops_flightschool_guided_missile">
+    <drop macro="sm_gen_ammo_01_macro">
+      <collectable>
+        <ammo macro="missile_guided_heavy_mk1_macro" exact="5"/>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="drops_flightschool_lockbox">
+    <drop macro="sm_gen_wares_common_01_macro">
+      <collectable>
+        <wares>
+          <ware ware="inv_argnu_softtoy" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <!-- MISSIONS -->
+  <droplist id="drops_splitstory_spaceflyeggs">
+    <drop macro="sm_gen_wares_common_01_macro">
+      <collectable>
+        <wares selection="random">
+          <select weight="5">
+            <ware ware="inv_spaceflyeggs" min="3" max="4"/>
+          </select>
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" amount="3"/>
+            <ware ware="inv_majaglit"     amount="1"/>
+          </select>
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" amount="3"/>
+            <ware ware="inv_needle"       amount="1"/>
+          </select>
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" amount="3"/>
+            <ware ware="inv_argnusteak"   amount="1"/>
+          </select>
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs"     amount="3"/>
+            <ware ware="inv_unstablecrystal"  amount="1"/>
+          </select>
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" amount="3"/>
+            <ware ware="inv_mixedfruit"   amount="1"/>
+          </select>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="drops_paranidstory_cipher">
+    <drop macro="sm_gen_wares_common_01_macro">
+      <collectable>
+        <wares>
+          <ware ware="inv_artificial_paranid_eye" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <!-- CRYSTALS -->
+  <droplist id="drops_crystal_s_01">
+    <drop macro="collectable_crystal_s_01_macro" min="5" max="10">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_01" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="20">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="drops_crystal_s_02">
+    <drop macro="collectable_crystal_s_02_macro" min="5" max="10">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_02" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="20">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="drops_crystal_s_03">
+    <drop macro="collectable_crystal_s_03_macro" min="5" max="10">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_03" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="20">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="drops_crystal_s_04">
+    <drop macro="collectable_crystal_s_04_macro" min="5" max="10">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_04" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="20">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="drops_crystal_s_05">
+    <drop macro="collectable_crystal_s_05_macro" min="3" max="6">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_05" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="20">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="drops_crystal_m_01">
+    <drop macro="collectable_crystal_s_01_macro" min="5" max="10">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_01" min="1" max="2"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="20">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="drops_crystal_m_02">
+    <drop macro="collectable_crystal_s_02_macro" min="5" max="10">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_02" min="1" max="2"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="20">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="drops_crystal_m_03">
+    <drop macro="collectable_crystal_s_03_macro" min="5" max="10">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_03" min="1" max="2"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="20">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="drops_crystal_m_04">
+    <drop macro="collectable_crystal_s_04_macro" min="5" max="10">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_04" min="1" max="2"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="20">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="drops_crystal_m_05">
+    <drop macro="collectable_crystal_s_05_macro" min="3" max="6">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_05" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="20">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="2" max="5"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <!--individual crystal drops on damage-->
+  <droplist id="extradrops_crystal_s_01">
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_01" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="extradrops_crystal_s_02">
+    <drop macro="collectable_crystal_s_02_macro" min="1" max="1">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_02" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="extradrops_crystal_s_03">
+    <drop macro="collectable_crystal_s_03_macro" min="1" max="1">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_03" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="extradrops_crystal_s_04">
+    <drop macro="collectable_crystal_s_04_macro" min="1" max="1">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_04" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="extradrops_crystal_s_05">
+    <drop macro="collectable_crystal_s_05_macro" min="1" max="1">
+      <collectable>
+        <wares>
+          <ware ware="inv_crystal_05" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+    <drop macro="collectable_crystal_s_01_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares>
+          <ware ware="inv_unstablecrystal" min="1" max="1"/>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <!-- ASTEROIDS -->
+  <!-- TODO @Matthias: add support for macro selections -->
+  <droplist id="asteroid_crystal_xl">
+    <drop macro="env_ast_crystal_xs_01_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_crystal_xs_02_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_crystal_xs_03_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_crystal_xs_04_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_crystal_xs_05_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_crystal_xs_06_frac_macro" min="3" max="3"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="25">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="4"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="3" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_crystal_l">
+    <drop macro="env_ast_crystal_xs_01_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_crystal_xs_02_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_crystal_xs_03_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_crystal_xs_04_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_crystal_xs_05_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_crystal_xs_06_frac_macro" min="1" max="1"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="25">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="3" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_crystal_m">
+    <drop macro="env_ast_crystal_xs_02_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_crystal_xs_03_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_crystal_xs_05_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_crystal_xs_06_frac_macro" min="1" max="1"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="25">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="2"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="3" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_crystal_s">
+    <drop macro="env_ast_crystal_xs_02_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_crystal_xs_06_frac_macro" min="1" max="1"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="30">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="2"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="3" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_ice_xl">
+    <drop macro="env_ast_ice_xs_01_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_ice_xs_02_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_ice_xs_03_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_ice_xs_04_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_ice_xs_05_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_ice_xs_06_frac_macro" min="3" max="3"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="15">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_ice_l">
+    <drop macro="env_ast_ice_xs_01_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_ice_xs_02_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_ice_xs_03_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_ice_xs_04_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_ice_xs_05_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_ice_xs_06_frac_macro" min="1" max="1"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="15">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_ice_m">
+    <drop macro="env_ast_ice_xs_02_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_ice_xs_03_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_ice_xs_05_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_ice_xs_06_frac_macro" min="1" max="1"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="15">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="2"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_ice_s">
+    <drop macro="env_ast_ice_xs_02_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_ice_xs_05_frac_macro" min="1" max="1"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="30">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="2"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_nividium_xl">
+    <drop macro="env_ast_niv_xs_01_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_niv_xs_02_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_niv_xs_03_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_niv_xs_04_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_niv_xs_05_frac_macro" min="4" max="4"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="15">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="2" max="4"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_nividium_l">
+    <drop macro="env_ast_niv_xs_01_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_niv_xs_02_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_niv_xs_03_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_niv_xs_04_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_niv_xs_05_frac_macro" min="1" max="1"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="15">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="4"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_nividium_m">
+    <drop macro="env_ast_niv_xs_02_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_niv_xs_03_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_niv_xs_04_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_niv_xs_05_frac_macro" min="1" max="1"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="15">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_nividium_s">
+    <drop macro="env_ast_niv_xs_02_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_niv_xs_04_frac_macro" min="1" max="1"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="30">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="2"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_ore_xl">
+    <drop macro="env_ast_ore_xs_01_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_ore_xs_02_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_ore_xs_03_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_ore_xs_04_frac_macro" min="3" max="3"/>
+    <drop macro="env_ast_ore_xs_05_frac_macro" min="4" max="4"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="15">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="4"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_ore_l">
+    <drop macro="env_ast_ore_xs_01_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_ore_xs_02_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_ore_xs_03_frac_macro" min="2" max="2"/>
+    <drop macro="env_ast_ore_xs_04_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_ore_xs_05_frac_macro" min="1" max="1"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="15">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_ore_m">
+    <drop macro="env_ast_ore_xs_02_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_ore_xs_03_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_ore_xs_04_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_ore_xs_05_frac_macro" min="1" max="1"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="15">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="2"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_ore_m_rigged">
+    <drop macro="env_ast_ore_xs_01_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_ore_xs_02_frac_macro" min="1" max="1"/>
+    <!--<drop macro="props_sm_container_xs_wares_macro">
+      <collectable>
+        <wares>
+          <ware ware="inv_scrapmetal" min="3" max="5"/>
+        </wares>
+      </collectable>
+    </drop>-->
+  </droplist>
+  <droplist id="asteroid_ore_s">
+    <drop macro="env_ast_ore_xs_02_frac_macro" min="1" max="1"/>
+    <drop macro="env_ast_ore_xs_04_frac_macro" min="1" max="1"/>
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="30">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="2"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <!-- 11.3% -->
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+          <!-- 31.8% -->
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_ore_mining_node">
+    <drop macro="env_ast_ore_xs_01_frac_macro" />
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="20">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="3"/>
+          </select>
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="asteroid_hot_l">
+    <!--<drop macro="env_ast_ore_xs_01_frac_macro" />-->
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="30">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="3"/>
+          </select>
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <droplist id="asteroid_hot_xl">
+    <!--<drop macro="env_ast_ore_xs_01_frac_macro" />-->
+    <drop macro="collectable_asteroidchunk_s_01_macro" chance="30">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_spaceflyeggs" min="1" max="3"/>
+          </select>
+          <select weight="1">
+            <ware ware="inv_magneticmaterial" min="1" max="3"/>
+          </select>
+          <select weight="1">
+            <ware ware="inv_unstablecrystal" min="1" max="10"/>
+          </select>
+        </wares>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <!--=================-->
+  <!--=== LOCKBOXES ===-->
+  <!--=================-->
+
+  <!-- Common Lockbox -->
+  <droplist id="hidden_common_lockbox">
+    <!--Common Trade Wares-->
+    <drop macro="sm_gen_wares_common_01_macro" min="1" max="1" chance="100">
+      <collectable>
+        <wares ref="basket_wares_common_01"/>
+      </collectable>
+    </drop>
+    <!--Common Crafting Wares-->
+    <drop macro="sm_gen_wares_common_02_macro" min="1" max="3" chance="70">
+      <collectable>
+        <wares ref="basket_wares_common_02"/>
+      </collectable>
+    </drop>
+    <drop macro="sm_gen_wares_common_03_macro" min="1" max="3" chance="50">
+      <collectable>
+        <wares ref="basket_wares_common_03"/>
+      </collectable>
+    </drop>
+    <!--Shady Crafting Wares-->
+    <drop macro="sm_gen_wares_rare_01_macro" min="1" max="1" chance="50">
+      <collectable>
+        <wares ref="basket_wares_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T1-->
+    <drop macro="sm_gen_wpsmod_rare_01_macro" min="1" max="1" chance="50">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_01"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <!-- Unusual Lockbox -->
+  <droplist id="hidden_unusual_lockbox" rarity="1">
+    <!--Common Trade Wares-->
+    <drop macro="sm_gen_wares_common_01_macro" min="2" max="3" chance="100">
+      <collectable>
+        <wares ref="basket_wares_common_01"/>
+      </collectable>
+    </drop>
+    <!--Common Crafting Wares-->
+    <drop macro="sm_gen_wares_common_02_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wares_common_02"/>
+      </collectable>
+    </drop>
+    <drop macro="sm_gen_wares_common_03_macro" min="1" max="3" chance="50">
+      <collectable>
+        <wares ref="basket_wares_common_03"/>
+      </collectable>
+    </drop>
+    <!--Shady Crafting Wares-->
+    <drop macro="sm_gen_wares_rare_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <wares ref="basket_wares_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Shady Rare Crafting Wares and SETA parts-->
+    <drop macro="sm_gen_wares_rare_03_macro" min="1" max="2" chance="30">
+      <collectable>
+        <wares ref="basket_wares_rare_03"/>
+      </collectable>
+    </drop>
+    <!--Seminars-->
+    <drop macro="sm_gen_powerup_wares_01_macro" min="1" max="2" chance="10">
+      <collectable>
+        <wares ref="basket_powerup_wares_01"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T1-->
+    <drop macro="sm_gen_wpsmod_rare_01_macro" min="1" max="1" chance="50">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Light  Missiles-->
+    <drop macro="sm_gen_ammo_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <ammo ref="basket_ammo_01"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <!-- Rare Lockbox -->
+  <droplist id="hidden_rare_lockbox" rarity="2">
+    <!--Common Trade Wares-->
+    <drop macro="sm_gen_wares_common_01_macro" min="1" max="1" chance="100">
+      <collectable>
+        <wares ref="basket_wares_common_01"/>
+      </collectable>
+    </drop>
+    <!--Common Crafting Wares-->
+    <drop macro="sm_gen_wares_common_02_macro" min="1" max="3" chance="70">
+      <collectable>
+        <wares ref="basket_wares_common_02"/>
+      </collectable>
+    </drop>
+    <!--Shady Crafting Wares-->
+    <drop macro="sm_gen_wares_rare_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <wares ref="basket_wares_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Shady Rare Crafting Wares and SETA parts-->
+    <drop macro="sm_gen_wares_rare_03_macro" min="1" max="2" chance="30">
+      <collectable>
+        <wares ref="basket_wares_rare_03"/>
+      </collectable>
+    </drop>
+    <!--Seminars-->
+    <drop macro="sm_gen_powerup_wares_01_macro" min="1" max="2" chance="10">
+      <collectable>
+        <wares ref="basket_powerup_wares_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T1-->
+    <drop macro="sm_gen_wpsmod_rare_01_macro" min="1" max="1" chance="90">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Light  Missiles-->
+    <drop macro="sm_gen_ammo_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <ammo ref="basket_ammo_01"/>
+      </collectable>
+    </drop>
+    <!--Heavy Missiles-->
+    <drop macro="sm_gen_ammo_02_macro" min="1" max="2" chance="20">
+      <collectable>
+        <ammo ref="basket_ammo_02"/>
+      </collectable>
+    </drop>
+    <!--Torpedoes-->
+    <drop macro="sm_gen_ammo_03_macro" min="1" max="1" chance="20">
+      <collectable>
+        <ammo ref="basket_ammo_03"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <!-- Exploration (Data Vaults) -->
+  <droplist id="exploration_drops">
+    <!--Shady Crafting Wares-->
+    <drop macro="sm_gen_wares_rare_01_macro" min="2" max="3" chance="100">
+      <collectable>
+        <wares ref="basket_wares_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Shady Rare Crafting Wares and SETA parts-->
+    <drop macro="sm_gen_wares_rare_03_macro" min="1" max="3" chance="30">
+      <collectable>
+        <wares ref="basket_wares_rare_03"/>
+      </collectable>
+    </drop>
+    <!--Luxury Wares-->
+    <drop macro="sm_gen_wares_luxury_01_macro" min="1" max="3" chance="100">
+      <collectable>
+        <wares ref="basket_wares_luxury_01"/>
+      </collectable>
+    </drop>
+    <!--Seminars-->
+    <drop macro="sm_gen_powerup_wares_01_macro" min="1" max="2" chance="10">
+      <collectable>
+        <wares ref="basket_powerup_wares_01"/>
+      </collectable>
+    </drop>
+    <!--Credits-->
+    <drop macro="sm_gen_credits_macro" min="1" max="1" chance="100">
+      <collectable>
+        <money min="100000" max="200000"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T1-->
+    <drop macro="sm_gen_wpsmod_rare_01_macro" min="1" max="1" chance="50">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_01"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <!-- Luxury Lockbox -->
+  <droplist id="hidden_luxury_lockbox" rarity="2">
+    <!--Luxury Wares-->
+    <drop macro="sm_gen_wares_luxury_01_macro" min="1" max="3" chance="100">
+      <collectable>
+        <wares ref="basket_wares_luxury_01"/>
+      </collectable>
+    </drop>
+
+    <drop macro="sm_gen_wares_luxury_01_macro" min="2" max="4" chance="50">
+      <collectable>
+        <wares ref="basket_wares_luxury_01"/>
+      </collectable>
+    </drop>
+
+    <!--Shady Crafting Wares-->
+    <drop macro="sm_gen_wares_rare_01_macro" min="1" max="1" chance="20">
+      <collectable>
+        <wares ref="basket_wares_rare_01"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <!-- Mines Lockbox -->
+  <droplist id="hidden_mines_lockbox" rarity="2">
+    <!--Common Trade Wares-->
+    <drop macro="sm_gen_wares_common_01_macro" min="2" max="4" chance="100">
+      <collectable>
+        <wares ref="basket_wares_common_01"/>
+      </collectable>
+    </drop>
+    <!--Common Crafting Wares-->
+    <drop macro="sm_gen_wares_common_02_macro" min="2" max="4" chance="70">
+      <collectable>
+        <wares ref="basket_wares_common_02"/>
+      </collectable>
+    </drop>
+    <drop macro="sm_gen_wares_common_03_macro" min="1" max="3" chance="50">
+      <collectable>
+        <wares ref="basket_wares_common_03"/>
+      </collectable>
+    </drop>
+    <!--Shady Crafting Wares-->
+    <drop macro="sm_gen_wares_rare_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <wares ref="basket_wares_rare_01"/>
+      </collectable>
+    </drop>
+    <drop macro="weapon_gen_mine_02_a_macro" min="2" max="8" chance="100" owner="criminal"/>
+  </droplist>
+
+  <!-- Trap Lockbox (Unused) -->
+  <droplist id="hidden_trap_lockbox" rarity="2">
+    <!--Empty - It's a trap!-->
+  </droplist>
+  
+  <!-- Trap 2 Lockbox (Unused) -->
+  <droplist id="hidden_trap2_lockbox" rarity="2">
+    <!--Common Trade Wares-->
+    <drop macro="sm_gen_wares_common_01_macro" min="1" max="2" chance="100">
+      <collectable>
+        <wares ref="basket_wares_common_01"/>
+      </collectable>
+    </drop>
+    <!--Common Crafting Wares-->
+    <drop macro="sm_gen_wares_common_02_macro" min="1" max="2" chance="70">
+      <collectable>
+        <wares ref="basket_wares_common_02"/>
+      </collectable>
+    </drop>
+    <!--Shady Crafting Wares-->
+    <drop macro="sm_gen_wares_rare_01_macro" min="1" max="1" chance="20">
+      <collectable>
+        <wares ref="basket_wares_rare_01"/>
+      </collectable>
+    </drop>
+    <drop macro="weapon_gen_mine_02_a_macro" min="2" max="8" chance="100" owner="criminal"/>
+  </droplist>
+
+  <!--=============-->
+  <!--=== SHIPS ===-->
+  <!--=============-->
+  <droplist id="ship_small_military">
+    <!--Common Trade Wares-->
+    <drop macro="sm_gen_wares_common_01_macro" min="1" max="2" chance="100">
+      <collectable>
+        <wares ref="basket_wares_common_01"/>
+      </collectable>
+    </drop>
+    <!--Common Crafting Wares-->
+    <drop macro="sm_gen_wares_common_02_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wares_common_02"/>
+      </collectable>
+    </drop>
+    <drop macro="sm_gen_wares_common_03_macro" min="1" max="3" chance="50">
+      <collectable>
+        <wares ref="basket_wares_common_03"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T1-->
+    <drop macro="sm_gen_wpsmod_rare_01_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Light  Missiles-->
+    <drop macro="sm_gen_ammo_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <ammo ref="basket_ammo_01"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <droplist id="ship_small_pirate">
+    <!--Common Trade Wares-->
+    <drop macro="sm_gen_wares_common_01_macro" min="1" max="2" chance="100">
+      <collectable>
+        <wares ref="basket_wares_common_01"/>
+      </collectable>
+    </drop>
+    <!--Shady Crafting Wares-->
+    <drop macro="sm_gen_wares_rare_01_macro" min="1" max="1" chance="30">
+      <collectable>
+        <wares ref="basket_wares_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Light  Missiles-->
+    <drop macro="sm_gen_ammo_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <ammo ref="basket_ammo_01"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <droplist id="ship_small_civilian">
+    <!--Common Trade Wares-->
+    <drop macro="sm_gen_wares_common_01_macro" min="1" max="2" chance="100">
+      <collectable>
+        <wares ref="basket_wares_common_01"/>
+      </collectable>
+    </drop>
+    <!--Common Crafting Wares-->
+    <drop macro="sm_gen_wares_common_02_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wares_common_02"/>
+      </collectable>
+    </drop>
+    <drop macro="sm_gen_wares_common_03_macro" min="1" max="3" chance="50">
+      <collectable>
+        <wares ref="basket_wares_common_03"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Light  Missiles-->
+    <drop macro="sm_gen_ammo_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <ammo ref="basket_ammo_01"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <droplist id="ship_small_xenon">
+    <!--MadPeople Wares S/M Ships-->
+    <drop macro="sm_gen_madpeople_wares_01_macro" min="1" max="1" chance="50">
+      <collectable>
+        <wares ref="basket_madpeople_wares_01"/>
+      </collectable>
+    </drop>
+    <!--Shady Crafting Wares-->
+    <drop macro="sm_gen_wares_rare_01_macro" min="1" max="2" chance="30">
+      <collectable>
+        <wares ref="basket_wares_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Shady Rare Crafting Wares and SETA parts-->
+    <drop macro="sm_gen_wares_rare_03_macro" min="1" max="1" chance="30">
+      <collectable>
+        <wares ref="basket_wares_rare_03"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T1-->
+    <drop macro="sm_gen_wpsmod_rare_01_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Light  Missiles-->
+    <drop macro="sm_gen_ammo_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <ammo ref="basket_ammo_01"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <droplist id="ship_small_khaak">
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T1-->
+    <drop macro="sm_gen_wpsmod_rare_01_macro" min="1" max="1" chance="30">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Kha'ak Wares-->
+    <drop macro="sm_gen_wares_rare_04_macro" min="1" max="1" chance="5">
+      <collectable>
+        <wares ref="basket_wares_rare_04"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <droplist id="ship_large_khaak">
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="25">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T1-->
+    <drop macro="sm_gen_wpsmod_rare_01_macro" min="1" max="1" chance="40">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Kha'ak Wares-->
+    <drop macro="sm_gen_wares_rare_04_macro" min="1" max="1" chance="35">
+      <collectable>
+        <wares ref="basket_wares_rare_04"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <droplist id="ship_medium_civilian">
+    <!--Common Trade Wares-->
+    <drop macro="sm_gen_wares_common_01_macro" min="1" max="2" chance="100">
+      <collectable>
+        <wares ref="basket_wares_common_01"/>
+      </collectable>
+    </drop>
+    <!--Common Crafting Wares-->
+    <drop macro="sm_gen_wares_common_02_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wares_common_02"/>
+      </collectable>
+    </drop>
+    <drop macro="sm_gen_wares_common_03_macro" min="1" max="3" chance="50">
+      <collectable>
+        <wares ref="basket_wares_common_03"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Light  Missiles-->
+    <drop macro="sm_gen_ammo_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <ammo ref="basket_ammo_01"/>
+      </collectable>
+    </drop>
+    <!--Heavy Missiles-->
+    <drop macro="sm_gen_ammo_02_macro" min="1" max="2" chance="20">
+      <collectable>
+        <ammo ref="basket_ammo_02"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <droplist id="ship_medium_xenon">
+    <!--MadPeople Wares S/M Ships-->
+    <drop macro="sm_gen_madpeople_wares_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_madpeople_wares_01"/>
+      </collectable>
+    </drop>
+    <!--Shady Crafting Wares-->
+    <drop macro="sm_gen_wares_rare_01_macro" min="1" max="1" chance="50">
+      <collectable>
+        <wares ref="basket_wares_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Shady Rare Crafting Wares and SETA parts-->
+    <drop macro="sm_gen_wares_rare_03_macro" min="1" max="2" chance="30">
+      <collectable>
+        <wares ref="basket_wares_rare_03"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T1-->
+    <drop macro="sm_gen_wpsmod_rare_01_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Light  Missiles-->
+    <drop macro="sm_gen_ammo_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <ammo ref="basket_ammo_01"/>
+      </collectable>
+    </drop>
+    <!--Heavy Missiles-->
+    <drop macro="sm_gen_ammo_02_macro" min="1" max="2" chance="20">
+      <collectable>
+        <ammo ref="basket_ammo_02"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <droplist id="ship_medium_luxury">
+    <!--Luxury Wares-->
+    <drop macro="sm_gen_wares_luxury_01_macro" min="1" max="2" chance="100">
+      <collectable>
+        <wares ref="basket_wares_luxury_01"/>
+      </collectable>
+    </drop>
+    <!--Common Trade Wares-->
+    <drop macro="sm_gen_wares_common_01_macro" min="1" max="2" chance="70">
+      <collectable>
+        <wares ref="basket_wares_common_01"/>
+      </collectable>
+    </drop>
+    <!--Common Crafting Wares-->
+    <drop macro="sm_gen_wares_common_02_macro" min="1" max="1" chance="50">
+      <collectable>
+        <wares ref="basket_wares_common_02"/>
+      </collectable>
+    </drop>
+    <drop macro="sm_gen_wares_common_03_macro" min="1" max="3" chance="30">
+      <collectable>
+        <wares ref="basket_wares_common_03"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <droplist id="ship_large_civilian">
+    <!--Common Trade Wares-->
+    <drop macro="sm_gen_wares_common_01_macro" min="1" max="2" chance="100">
+      <collectable>
+        <wares ref="basket_wares_common_01"/>
+      </collectable>
+    </drop>
+    <!--Common Crafting Wares-->
+    <drop macro="sm_gen_wares_common_02_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wares_common_02"/>
+      </collectable>
+    </drop>
+    <drop macro="sm_gen_wares_common_03_macro" min="1" max="3" chance="50">
+      <collectable>
+        <wares ref="basket_wares_common_03"/>
+      </collectable>
+    </drop>
+    <!--Seminars-->
+    <drop macro="sm_gen_powerup_wares_01_macro" min="1" max="2" chance="10">
+      <collectable>
+        <wares ref="basket_powerup_wares_01"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T1-->
+    <drop macro="sm_gen_wpsmod_rare_01_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Light  Missiles-->
+    <drop macro="sm_gen_ammo_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <ammo ref="basket_ammo_01"/>
+      </collectable>
+    </drop>
+    <!--Heavy Missiles-->
+    <drop macro="sm_gen_ammo_02_macro" min="1" max="2" chance="20">
+      <collectable>
+        <ammo ref="basket_ammo_02"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <droplist id="ship_large_military">
+    <!--Common Trade Wares-->
+    <drop macro="sm_gen_wares_common_01_macro" min="1" max="2" chance="100">
+      <collectable>
+        <wares ref="basket_wares_common_01"/>
+      </collectable>
+    </drop>
+    <!--Common Crafting Wares-->
+    <drop macro="sm_gen_wares_common_02_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wares_common_02"/>
+      </collectable>
+    </drop>
+    <drop macro="sm_gen_wares_common_03_macro" min="1" max="3" chance="50">
+      <collectable>
+        <wares ref="basket_wares_common_03"/>
+      </collectable>
+    </drop>
+    <!--Shady Rare Crafting Wares and SETA parts-->
+    <drop macro="sm_gen_wares_rare_03_macro" min="1" max="2" chance="30">
+      <collectable>
+        <wares ref="basket_wares_rare_03"/>
+      </collectable>
+    </drop>
+    <!--Seminars-->
+    <drop macro="sm_gen_powerup_wares_01_macro" min="1" max="2" chance="10">
+      <collectable>
+        <wares ref="basket_powerup_wares_01"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T1-->
+    <drop macro="sm_gen_wpsmod_rare_01_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T2-->
+    <drop macro="sm_gen_wpsmod_rare_02_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_02"/>
+      </collectable>
+    </drop>
+    <!--Light  Missiles-->
+    <drop macro="sm_gen_ammo_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <ammo ref="basket_ammo_01"/>
+      </collectable>
+    </drop>
+    <!--Heavy Missiles-->
+    <drop macro="sm_gen_ammo_02_macro" min="1" max="2" chance="20">
+      <collectable>
+        <ammo ref="basket_ammo_02"/>
+      </collectable>
+    </drop>
+    <!--Torpedoes-->
+    <drop macro="sm_gen_ammo_03_macro" min="1" max="1" chance="20">
+      <collectable>
+        <ammo ref="basket_ammo_03"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <droplist id="ship_large_xenon">
+    <!--MadPeople Wares L Ships-->
+    <drop macro="sm_gen_madpeople_wares_02_macro" min="1" max="1" chance="100">
+      <collectable>
+        <wares ref="basket_madpeople_wares_02"/>
+      </collectable>
+    </drop>
+    <!--Shady Crafting Wares-->
+    <drop macro="sm_gen_wares_rare_01_macro" min="1" max="1" chance="50">
+      <collectable>
+        <wares ref="basket_wares_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T1-->
+    <drop macro="sm_gen_wpsmod_rare_01_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T2-->
+    <drop macro="sm_gen_wpsmod_rare_02_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_02"/>
+      </collectable>
+    </drop>
+    <!--Light  Missiles-->
+    <drop macro="sm_gen_ammo_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <ammo ref="basket_ammo_01"/>
+      </collectable>
+    </drop>
+    <!--Heavy Missiles-->
+    <drop macro="sm_gen_ammo_02_macro" min="1" max="2" chance="20">
+      <collectable>
+        <ammo ref="basket_ammo_02"/>
+      </collectable>
+    </drop>
+    <!--Torpedoes-->
+    <drop macro="sm_gen_ammo_03_macro" min="1" max="1" chance="20">
+      <collectable>
+        <ammo ref="basket_ammo_03"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <droplist id="ship_large_xenon_tf">
+    <!--MadPeople Wares L Ships-->
+    <drop macro="sm_gen_madpeople_wares_02_macro" min="1" max="1" chance="100">
+      <collectable>
+        <wares ref="basket_madpeople_wares_02"/>
+      </collectable>
+    </drop>
+    <!--Xenon Tech Research Ware -->
+    <drop macro="sm_gen_wares_xenon_01_macro" min="1" max="1" chance="100">
+      <collectable>
+        <wares selection="random">
+          <select weight="1">
+            <ware ware="inv_quantum_data_shard" min="1" max="1"/>
+          </select>
+        </wares>
+      </collectable>
+    </drop>
+    <!--Shady Crafting Wares-->
+    <drop macro="sm_gen_wares_rare_01_macro" min="1" max="1" chance="50">
+      <collectable>
+        <wares ref="basket_wares_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Common Mod Parts-->
+    <drop macro="sm_gen_wpsmod_common_01_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wpsmod_common_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T1-->
+    <drop macro="sm_gen_wpsmod_rare_01_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Rare Mod Parts T2-->
+    <drop macro="sm_gen_wpsmod_rare_02_macro" min="1" max="1" chance="10">
+      <collectable>
+        <wares ref="basket_wpsmod_rare_02"/>
+      </collectable>
+    </drop>
+    <!--Light  Missiles-->
+    <drop macro="sm_gen_ammo_01_macro" min="1" max="2" chance="50">
+      <collectable>
+        <ammo ref="basket_ammo_01"/>
+      </collectable>
+    </drop>
+    <!--Heavy Missiles-->
+    <drop macro="sm_gen_ammo_02_macro" min="1" max="2" chance="20">
+      <collectable>
+        <ammo ref="basket_ammo_02"/>
+      </collectable>
+    </drop>
+    <!--Torpedoes-->
+    <drop macro="sm_gen_ammo_03_macro" min="1" max="1" chance="20">
+      <collectable>
+        <ammo ref="basket_ammo_03"/>
+      </collectable>
+    </drop>
+  </droplist>
+
+  <!--===================-->
+  <!--=== MASSTRAFFIC ===-->
+  <!--===================-->
+  <droplist id="masstraffic_civilian">
+    <!--Common Trade Wares-->
+    <drop macro="sm_gen_wares_common_01_macro" min="1" max="2" chance="70">
+      <collectable>
+        <wares ref="basket_wares_common_01"/>
+      </collectable>
+    </drop>
+    <!--Common Crafting Wares-->
+    <drop macro="sm_gen_wares_common_02_macro" min="1" max="1" chance="70">
+      <collectable>
+        <wares ref="basket_wares_common_02"/>
+      </collectable>
+    </drop>
+    <drop macro="sm_gen_wares_common_03_macro" min="1" max="1" chance="50">
+      <collectable>
+        <wares ref="basket_wares_common_03"/>
+      </collectable>
+    </drop>
+  </droplist>
+  <droplist id="masstraffic_xenon">
+    <!--Shady Crafting Wares-->
+    <drop macro="sm_gen_wares_rare_01_macro" min="1" max="1" chance="30">
+      <collectable>
+        <wares ref="basket_wares_rare_01"/>
+      </collectable>
+    </drop>
+    <!--Shady Rare Crafting Wares and SETA parts-->
+    <drop macro="sm_gen_wares_rare_03_macro" min="1" max="1" chance="30">
+      <collectable>
+        <wares ref="basket_wares_rare_03"/>
+      </collectable>
+    </drop>
+  </droplist>
+</droplists>

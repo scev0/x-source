@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unlocks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="unlocks.xsd">
+  <!--  
+  <discount id="example" name="Example Discount" description="This is a syntax example">
+    <conditions weight="15">
+      <owner factions="argongovernment aquarius" negate="false" />
+      <wares sells="energycells graphene" matchall="true"/>
+      <viewangle max="20"/>
+      <distance min="300m" max="400m"/>
+      <relation min="friend" max="self" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6" profile="bell"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="40min" max="1h"/>
+  </discount>
+  -->
+
+  <!-- global definitions -->
+  <globals threshold="800m" rechecktime="5s">
+    <adjustment discount="{20212,1201}" commission="{20212,1301}" />
+  </globals>
+
+  <!-- common discounts from level 1 data leaks (requiring scanner level 1 or 2) -->
+  <discount id="fruitfulcultivation" name="{20210,1011}" description="">
+    <conditions weight="20">
+      <wares sells="wheat meat spices spaceweed"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="yieldingore" name="{20210,1021}" description="">
+    <conditions weight="20">
+      <wares sells="refinedmetals siliconwafers"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="pureice" name="{20210,1031}" description="">
+    <conditions weight="20">
+      <wares sells="water"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="solarmaximum" name="{20210,1041}" description="">
+    <conditions weight="20">
+      <wares sells="energycells"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="compactgas" name="{20210,1051}" description="">
+    <conditions weight="20">
+      <wares sells="antimattercells graphene superfluidcoolant"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="foodvouchers" name="{20210,1061}" description="">
+    <conditions weight="20">
+      <wares sells="foodrations spacefuel"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="pharmaceuticalstudy" name="{20210,1071}" description="">
+    <conditions weight="20">
+      <wares sells="medicalsupplies"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="hightechsale" name="{20210,1081}" description="">
+    <conditions weight="20">
+      <wares sells="advancedcomposites microchips quantumtubes scanningarrays"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+
+  <!-- uncommon discounts from level 1 data leaks (requiring scanner level 1 or 2) -->
+  <discount id="storagemaintenance" name="{20210,2011}" description="">
+    <conditions weight="1">
+      <viewangle max="20"/>
+      <distance exact="500m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="6" max="10"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="surplusproduction" name="{20210,2021}" description="">
+    <conditions weight="1">
+      <viewangle max="20"/>
+      <distance exact="500m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="6" max="10"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="productionchange" name="{20210,2031}" description="">
+    <conditions weight="1">
+      <viewangle max="20"/>
+      <distance exact="500m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="6" max="10"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="promotionaloffer" name="{20210,2041}" description="">
+    <conditions weight="1">
+      <viewangle max="20"/>
+      <distance exact="500m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="6" max="10"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="clearancesale" name="{20210,2051}" description="">
+    <conditions weight="1">
+      <viewangle max="20"/>
+      <distance exact="500m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="6" max="10"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+
+  <!-- rare discounts from level 2 data leaks (requiring scanner level 3) -->
+  <discount id="plentifulharvest" name="{20210,3011}" description="">
+    <conditions weight="5">
+      <wares sells="wheat meat spices spaceweed"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="miningrush" name="{20210,3021}" description="">
+    <conditions weight="5">
+      <wares sells="refinedmetals siliconwafers"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="overloadmelters" name="{20210,3031}" description="">
+    <conditions weight="5">
+      <wares sells="water"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="solarstorm" name="{20210,3041}" description="">
+    <conditions weight="5">
+      <wares sells="energycells"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="densegascloud" name="{20210,3051}" description="">
+    <conditions weight="50">
+      <wares sells="antimattercells graphene superfluidcoolant"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="foodsubsidy" name="{20210,3061}" description="">
+    <conditions weight="5">
+      <wares sells="foodrations spacefuel"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="patentinfringement" name="{20210,3071}" description="">
+    <conditions weight="5">
+      <wares sells="medicalsupplies"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+  <discount id="hightechglut" name="{20210,3081}" description="">
+    <conditions weight="5">
+      <wares sells="advancedcomposites microchips quantumtubes scanningarrays"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+
+  <!-- special discount from diplomatic action that negotiates trade deals
+  Weight is 0 so it does not come up organically through regular gameplay-->
+  <discount id="diplomaticdiscount" name="{20210,3131}" description="">
+    <conditions leak="false">
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </discount>
+
+  <!-- common commisions from level 1 data leaks (requiring scanner level 1 or 2) -->
+  <commission id="orebounty" name="{20211,1011}" description="">
+    <conditions weight="20">
+      <wares buys="nividium ore silicon"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="iceshortfall" name="{20211,1021}" description="">
+    <conditions weight="20">
+      <wares buys="ice"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="gasdeficiency" name="{20211,1031}" description="">
+    <conditions weight="20">
+      <wares buys="hydrogen methane helium"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="agriculturalaids" name="{20211,1041}" description="">
+    <conditions weight="20">
+      <wares buys="wheat meat spices spaceweed"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="inferiorfeedstock" name="{20211,1051}" description="">
+    <conditions weight="20">
+      <wares buys="refinedmetals siliconwafers"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="watershortage" name="{20211,1061}" description="">
+    <conditions weight="20">
+      <wares buys="water"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="powerdeficit" name="{20211,1071}" description="">
+    <conditions weight="20">
+      <wares buys="energycells superfluidcoolant graphene antimattercells"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="foodshortage" name="{20211,1081}" description="">
+    <conditions weight="20">
+      <wares buys="foodrations"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="techenticement" name="{20211,1091}" description="">
+    <conditions weight="20">
+      <wares buys="advancedcomposites microchips quantumtubes scanningarrays"/>
+      <viewangle max="20"/>
+      <distance exact="600m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="2" max="6"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+
+  <!-- uncommon commisions from level 1 data leaks (requiring scanner level 1 or 2) -->
+  <commission id="commisionpeak" name="{20211,2011}" description="">
+    <conditions weight="1">
+      <viewangle max="20"/>
+      <distance exact="500m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="6" max="10"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="ordersituation" name="{20211,2021}" description="">
+    <conditions weight="1">
+      <viewangle max="20"/>
+      <distance exact="500m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="6" max="10"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="productionspike" name="{20211,2031}" description="">
+    <conditions weight="1">
+      <viewangle max="20"/>
+      <distance exact="500m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="6" max="10"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="lowstocklevels" name="{20211,2041}" description="">
+    <conditions weight="1">
+      <viewangle max="20"/>
+      <distance exact="500m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="6" max="10"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="supplybottleneck" name="{20211,2051}" description="">
+    <conditions weight="1">
+      <viewangle max="20"/>
+      <distance exact="500m"/>
+      <scannerlevel max="2" />
+    </conditions>
+    <actions>
+      <amount min="6" max="10"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+
+  <!-- rare commisions from level 2 data leaks (requiring scanner level 3) -->
+  <commission id="orethievery" name="{20211,3011}" description="">
+    <conditions weight="5">
+      <wares buys="nividium ore silicon"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="leakypipes" name="{20211,3021}" description="">
+    <conditions weight="5">
+      <wares buys="ice"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="gasleak" name="{20211,3031}" description="">
+    <conditions weight="5">
+      <wares buys="hydrogen methane helium"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="pestinfestation" name="{20211,3041}" description="">
+    <conditions weight="5">
+      <wares buys="wheat meat spices spaceweed"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="chippedfeedstock" name="{20211,3051}" description="">
+    <conditions weight="5">
+      <wares buys="refinedmetals siliconwafers"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="watercontamination" name="{20211,3061}" description="">
+    <conditions weight="5">
+      <wares buys="water"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="energydischarge" name="{20211,3071}" description="">
+    <conditions weight="5">
+      <wares buys="energycells superfluidcoolant graphene antimattercells"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="supplycrisis" name="{20211,3081}" description="">
+    <conditions weight="5">
+      <wares buys="foodrations spacefuel"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+  <commission id="manufacturingfault" name="{20211,3091}" description="">
+    <conditions weight="5">
+      <wares buys="advancedcomposites microchips quantumtubes scanningarrays"/>
+      <viewangle max="20"/>
+      <distance exact="400m"/>
+      <scannerlevel min="3" />
+    </conditions>
+    <actions>
+      <amount min="10" max="14"/>
+      <duration min="24h" max="48h"/>
+    </actions>
+    <rechecktime min="24h" max="36h"/>
+  </commission>
+
+  <!-- blueprint from level 1 data leaks (requiring scanner level 1 or 2) -->
+  <blueprint id="common_blueprint_l1">
+    <conditions weight="5">
+      <owner factions="scaleplate" negate="true" />
+      <distance max="500m" />
+      <relation min="0.0" max="1.0" />
+      <scannerlevel max="2" />
+      <blueprintsecrecy max="0" />
+    </conditions>
+    <rechecktime exact="1min" />
+  </blueprint>
+
+  <blueprint id="rare_blueprint_l1">
+    <conditions weight="1">
+      <owner factions="scaleplate" negate="true" />
+      <distance max="500m" />
+      <relation min="0.0" max="1.0" />
+      <scannerlevel max="2" />
+      <blueprintsecrecy min="1" />
+    </conditions>
+    <rechecktime exact="1min" />
+  </blueprint>
+
+  <!-- blueprint from level 2 data leaks (requiring scanner level 3) -->
+  <blueprint id="common_blueprint_l2">
+    <conditions weight="5">
+      <owner factions="scaleplate" negate="true" />
+      <distance max="500m" />
+      <relation min="0.0" max="1.0" />
+      <scannerlevel min="3" />
+      <blueprintsecrecy max="0" />
+    </conditions>
+    <rechecktime exact="1min" />
+  </blueprint>
+
+  <blueprint id="rare_blueprint_l2">
+    <conditions weight="1">
+      <owner factions="scaleplate" negate="true" />
+      <distance max="500m" />
+      <relation min="0.0" max="1.0" />
+      <scannerlevel max="2" />
+      <blueprintsecrecy min="1" />
+    </conditions>
+    <rechecktime exact="1min" />
+  </blueprint>
+</unlocks>

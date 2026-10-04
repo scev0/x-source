@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stocks>
+  <!--
+  <stock id="stockid" faction="argon" entitytype="trader" tags="one two three"> - all entries except id are optional
+    <ware ref="wareid" min="1" max="100" chance="50"/> - single ware, present in quantity between min/max with percentage chance
+    ...
+    <basket ref="basketid" min="1" max="100" chance="50"/> - each ware in the basket will receive the same min/max/chance values
+    ...
+  </stock>
+  -->
+  <!--
+  min=0 max=0 - can be sold to but not bought from trader
+  TODO: In future we may want to set the sell only wares to chance 100 so that the ware is listed even when players dont have any in inventory.
+  -->
+
+  <stock id="default_trader" entitytype="trader">
+    <!-- General Items -->
+    <basket ref="generalitems_trade" min="0" max="20" chance="75"/>
+    <basket ref="generalitems_crafting" min="0" max="5" chance="40"/>
+    <basket ref="generalitems_crafted" min="0" max="0"/>
+    <!-- Curiosities -->
+    <basket ref="curiosities_trade" min="0" max="0" chance="75"/>
+    <basket ref="curiosities_crafting" min="0" max="3" chance="40"/>
+    <basket ref="curiosities_crafted" min="0" max="0"/>
+    <!-- Luxury Items -->
+    <basket ref="luxuryitems_crafting" min="0" max="5" chance="40"/>
+    <basket ref="luxuryitems_crafted" min="0" max="0"/>
+    <!-- Hardware -->
+    <basket ref="hardware_trade" min="0" max="0" chance="75"/>
+    <basket ref="hardware_crafting" min="0" max="5" chance="40"/>
+    <basket ref="hardware_crafted" min="0" max="0"/>
+    <!-- Equipment -->
+    <basket ref="equipment_trade" min="1" max="1" chance="100"/>
+    <!-- Seminars -->
+    <basket ref="seminars_trade" min="0" max="2" chance="75"/>
+  </stock>
+
+  <stock id="default_shadyguy" entitytype="shadyguy">
+    <!-- Hardware -->
+    <ware ref="bomb_player_limpet_emp_01_mk1" min="1" max="5" chance="50"/>
+    <ware ref="bomb_player_limpet_mine_01_mk1" min="1" max="5" chance="50"/>
+    <!-- Equipment -->
+    <basket ref="equipment_trade" min="1" max="1" chance="100"/>
+    <!-- Contraband -->
+    <basket ref="contraband_trade" min="0" max="0"/>
+    <basket ref="contraband_crafting" min="0" max="10" chance="40"/>
+    <basket ref="contraband_crafted" min="0" max="0"/>
+  </stock>
+
+  <stock id="pirate_trader" entitytype="trader">
+    <!-- General Items -->
+    <basket ref="generalitems_trade" min="0" max="20" chance="75"/>
+    <basket ref="generalitems_crafting" min="0" max="5" chance="40"/>
+    <basket ref="generalitems_crafted" min="0" max="0"/>
+    <!-- Curiosities -->
+    <basket ref="curiosities_trade" min="0" max="0" chance="75"/>
+    <basket ref="curiosities_crafting" min="0" max="3" chance="40"/>
+    <basket ref="curiosities_crafted" min="0" max="0"/>
+    <!-- Hardware -->
+    <ware ref="bomb_player_limpet_emp_01_mk1" min="1" max="5" chance="50"/>
+    <ware ref="bomb_player_limpet_mine_01_mk1" min="1" max="5" chance="50"/>
+    <!-- Equipment -->
+    <basket ref="equipment_trade" min="1" max="1" chance="100"/>
+    <!-- Seminars -->
+    <basket ref="seminars_trade" min="0" max="2" chance="75"/>
+    <!-- Contraband -->
+    <basket ref="contraband_trade" min="0" max="0"/>
+    <basket ref="contraband_crafting" min="0" max="5" chance="40"/>
+    <basket ref="contraband_crafted" min="0" max="0"/>
+  </stock>
+
+  <stock id="civilian_trader" entitytype="trader">
+    <!-- General Items -->
+    <basket ref="generalitems_trade" min="0" max="20" chance="75"/>
+    <basket ref="generalitems_crafting" min="0" max="5" chance="40"/>
+    <basket ref="generalitems_crafted" min="0" max="0"/>
+    <!-- Curiosities -->
+    <basket ref="curiosities_trade" min="0" max="0" chance="75"/>
+    <basket ref="curiosities_crafting" min="0" max="3" chance="40"/>
+    <basket ref="curiosities_crafted" min="0" max="0"/>
+    <!-- Luxury Items -->
+    <basket ref="luxuryitems_crafting" min="0" max="10" chance="75"/>
+    <basket ref="luxuryitems_crafted" min="0" max="0"/>
+    <!-- Hardware -->
+    <ware ref="bomb_player_limpet_emp_01_mk1" min="1" max="2" chance="50"/>
+    <ware ref="bomb_player_limpet_mine_01_mk1" min="1" max="2" chance="50"/>
+    <!-- Equipment -->
+    <!-- NOTE: The civilian traders cannot sell equipment that requires generaluse licence!
+    <basket ref="equipment_trade" min="1" max="1" chance="100"/>-->
+    <!-- Seminars -->
+    <basket ref="seminars_trade" min="0" max="2" chance="75"/>
+    <!-- Contraband -->
+    <basket ref="contraband_trade" min="0" max="0"/>
+    <basket ref="contraband_crafting" min="0" max="2" chance="40"/>
+    <basket ref="contraband_crafted" min="0" max="0"/>
+  </stock>
+
+  <stock id="tutorial_trader" entitytype="trader">
+    <!--stock required by tutorial-->
+    <ware ref="inv_rarespices" min="3" max="3" chance="100"/>
+    <ware ref="inv_argnusteak" min="5" max="5" chance="100"/>
+    <!--bought wares-->
+    <ware ref="inv_majaglit" min="0" max="0"/>
+    <ware ref="inv_interfaceunit" min="0" max="0"/>
+    <ware ref="inv_needle" min="0" max="0"/>
+    <ware ref="inv_bandages" min="0" max="0"/>
+    <ware ref="inv_sedative" min="0" max="0"/>
+    <ware ref="inv_crystalbit" min="0" max="0"/>
+    <ware ref="inv_micromotor" min="0" max="0"/>
+    <ware ref="inv_hydraulicpump" min="0" max="0"/>
+    <ware ref="inv_microgimble" min="0" max="0"/>
+    <ware ref="inv_algaescrubber" min="0" max="0"/>
+    <ware ref="inv_rapidsandfilter" min="0" max="0"/>
+    <ware ref="inv_carbonfilter" min="0" max="0"/>
+    <ware ref="inv_herbicide" min="0" max="0"/>
+    <ware ref="inv_securecontainer" min="0" max="0"/>
+    <ware ref="inv_magneticmaterial" min="0" max="0"/>
+    <ware ref="inv_firstaidkit" min="0" max="0"/>
+    <ware ref="inv_fluxcapacitor" min="0" max="0"/>
+    <ware ref="inv_damagedsingularityengine" min="0" max="0"/>
+    <ware ref="inv_programmablefieldarray" min="0" max="0"/>
+    <ware ref="inv_crystal_01" min="0" max="0"/>
+    <ware ref="inv_crystal_02" min="0" max="0"/>
+    <ware ref="inv_crystal_03" min="0" max="0"/>
+    <ware ref="inv_crystal_04" min="0" max="0"/>
+    <ware ref="inv_crystal_05" min="0" max="0"/>
+    <ware ref="inv_electronics" min="0" max="0"/>
+    <ware ref="inv_salvagedelectronics" min="0" max="0"/>
+    <ware ref="inv_spaceflycaviar" min="0" max="0"/>
+    <ware ref="inv_spaceflyeggs" min="0" max="0"/>
+    <ware ref="inv_finemeal" min="0" max="0"/>
+    <!--spacesuit upgrades, kept here for consistency with all other traders-->
+    <ware ref="engine_gen_spacesuit_01_mk2" min="1" max="1" chance="100"/>
+    <ware ref="weapon_gen_spacesuit_repairlaser_01_mk1" min="1" max="1" chance="100"/>
+    <ware ref="weapon_gen_spacesuit_laser_01_mk1" min="1" max="1" chance="100"/>
+    <ware ref="weapon_gen_spacesuit_demolition_01_mk1" min="1" max="1" chance="100"/>
+    <ware ref="software_scannerobjectmk3" min="1" max="1" chance="100"/>
+  </stock>
+</stocks>

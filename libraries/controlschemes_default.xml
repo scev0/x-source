@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<controlschemes>
+  <!--***-->
+  <!--*** Dummy controls for ships following an animated path.-->
+  <!--***-->
+  <scheme identifier="animation" refspace="ship">
+    <conditions>
+      <condition id="player_following_animation" />
+    </conditions>
+    <collisions linear_factor="0" angular_factor="0" linear_relative_max="0" angular_relative_max="0" />
+    <values>
+      <value id="min_x" basevalue="10" factors="remaining_animation_fraction" />
+      <value id="min_y" basevalue="10" factors="remaining_animation_fraction" />
+      <value id="min_z" basevalue="0" />
+      <value id="max_x" basevalue="10" factors="remaining_animation_fraction" />
+      <value id="max_y" basevalue="10" factors="remaining_animation_fraction" />
+      <value id="max_z" basevalue="0" />
+      <value id="target_x" basevalue="1" factors="input_x max_x" />
+      <value id="target_y" basevalue="1" factors="input_y max_y" />
+      <value id="target_z" basevalue="0" />
+      <value id="target_pitch" basevalue="0" />
+      <value id="target_yaw" basevalue="0" />
+      <value id="target_roll" basevalue="0" />
+    </values>
+  </scheme>
+  <!--***-->
+  <!--*** Highway controls.-->
+  <!--***-->
+  <scheme identifier="localhighway" refspace="zone">
+    <conditions>
+      <condition id="player_in_local_highway" />
+    </conditions>
+    <values>
+      <!--***-->
+      <!--*** Increased acceleration when at low highway speed.-->
+      <!--***-->
+      <value id="max_a_z" basevalue="100" factors="highway_max_a_z" />
+      <value id="max_a_z" basevalue="-99" factors="rel_v_z highway_max_a_z" add_to="true" />
+      <!--***-->
+      <!--*** Target forward speed comes directly from highway, can only be overridden by manually boosting.-->
+      <!--*** This speed depends on whether the player is manually boosting, in a blocker, booster and/or at the edge of the highway.-->
+      <!--***-->
+      <value id="target_v_z" basevalue="1" factors="highway_target_v_z" />
+      <value id="target_v_z" basevalue="1" factors="max_v_z input_z" add_to="true">
+        <conditions>
+          <condition id="player_near_highway_edge" inverted="true" />
+        </conditions>
+      </value>
+      <value id="target_v_z" basevalue="-1" factors="highway_target_v_z input_z" add_to="true">
+        <conditions>
+          <condition id="player_near_highway_edge" inverted="true" />
+        </conditions>
+      </value>
+      <value id="target_v_z" basevalue="1" factors="highway_min_v_z">
+        <conditions>
+          <condition id="player_in_highwayblocker" />
+        </conditions>
+      </value>
+      <!--***-->
+      <!--*** Angles (eye candy only).-->
+      <!--***-->
+      <!--You can play with these values as much as you like, they have little to no actual impact on the controls.-->
+      <!--What you can try out, other than changing the base values: replace rel_v_* with input_* to have the angle change more immediate.-->
+      <!--Turning speed (and acceleration) is increased greatly to make the player turn in the direction of movement much more quickly.-->
+      <value id="minmax_v_pitch" basevalue="5" factors="minmax_v_pitch" />
+      <value id="minmax_v_yaw" basevalue="5" factors="minmax_v_yaw" />
+      <value id="minmax_a_pitch" basevalue="5" factors="minmax_a_pitch" />
+      <value id="minmax_a_yaw" basevalue="5" factors="minmax_a_yaw" />
+      <value id="target_pitch" basevalue="0" />
+      <value id="target_yaw" basevalue="0" />
+      <value id="target_roll" basevalue="0.3" factors="input_x" />
+      <value id="target_roll" basevalue="0.3" factors="input_yaw" add_to="true" />
+      <value id="target_roll" basevalue="-0.3" factors="input_roll" add_to="true" />
+      <!--Constrain values to tube.-->
+      <value id="max_r_xy" basevalue="1" factors="highway_radius" />
+      <value id="min_z" basevalue="0" />
+      <value id="max_z" basevalue="1" />
+      <!--Max x/y speed/acceleration - these values are also in NavigationController::UpdateEngineParameters()-->
+      <value id="minmax_v_xy" basevalue="200" />
+      <value id="minmax_a_xy" basevalue="400" />
+      <!--Target x/y speed-->
+      <value id="target_v_x" basevalue="1" factors="input_x max_v_x" />
+      <value id="target_v_x" basevalue="1" factors="input_yaw max_v_x" add_to="true" />
+      <value id="target_v_x" basevalue="-1" factors="input_roll max_v_x" add_to="true" />
+      <value id="target_v_y" basevalue="1" factors="input_y max_v_y" />
+      <value id="target_v_y" basevalue="-1" factors="input_pitch max_v_y" add_to="true" />
+      <!--Slow down when "braking" or at edge-->
+      <value id="minmax_a_xy" basevalue="10" factors="minmax_a_xy">
+        <conditions>
+          <condition id="quick_highway_exit" />
+        </conditions>
+      </value>
+      <!--Move towards "floor" by default-->
+      <value id="target_y" basevalue="1" factors="highway_target_y">
+        <conditions>
+          <condition id="value" valueid="input_y" equals="0" />
+          <condition id="value" valueid="input_pitch" equals="0" />
+        </conditions>
+      </value>
+      <!--Steer up while "braking"-->
+      <value id="target_y" basevalue="5000">
+        <conditions>
+          <condition id="quick_highway_exit" />
+        </conditions>
+      </value>
+      <!--Slow down if near "bounce" area-->
+      <value id="target_v_z" basevalue="0.1" factors="highway_min_v_z">
+        <conditions>
+          <condition id="value" valueid="x" greater_than="110" />
+          <condition id="value" valueid="v_x" greater_than="0" />
+        </conditions>
+      </value>
+      <value id="target_v_z" basevalue="0.1" factors="highway_min_v_z">
+        <conditions>
+          <condition id="value" valueid="x" less_than="-110" />
+          <condition id="value" valueid="v_x" less_than="0" />
+        </conditions>
+      </value>
+      <!--Bounce off sides and floor-->
+      <value id="v_x" basevalue="-0.25" factors="v_x">
+        <conditions>
+          <condition id="value" valueid="x" greater_than="120" />
+          <condition id="value" valueid="v_x" greater_than="0" />
+        </conditions>
+      </value>
+      <value id="v_x" basevalue="-0.25" factors="v_x">
+        <conditions>
+          <condition id="value" valueid="x" less_than="-120" />
+          <condition id="value" valueid="v_x" less_than="0" />
+        </conditions>
+      </value>
+      <value id="v_y" basevalue="-0.1" factors="v_y">
+        <conditions>
+          <condition id="value" valueid="rel_y_highway" less_than="-4" />
+          <condition id="value" valueid="v_y" less_than="0" />
+        </conditions>
+      </value>
+    </values>
+  </scheme>
+  <scheme identifier="superhighway" refspace="zone">
+    <conditions>
+      <condition id="player_in_super_highway" />
+    </conditions>
+    <values>
+      <!--***-->
+      <!--*** Increased acceleration when at low highway speed.-->
+      <!--***-->
+      <value id="max_a_z" basevalue="100" factors="highway_max_a_z" />
+      <value id="max_a_z" basevalue="-99" factors="rel_v_z highway_max_a_z" add_to="true" />
+      <!--***-->
+      <!--*** Target forward speed comes directly from highway, can only be overridden by manually boosting.-->
+      <!--*** This speed depends on whether the player is manually boosting, in a blocker, booster and/or at the edge of the highway.-->
+      <!--***-->
+      <value id="target_v_z" basevalue="1" factors="highway_target_v_z" />
+      <value id="target_v_z" basevalue="1" factors="max_v_z input_z" add_to="true" />
+      <value id="target_v_z" basevalue="-1" factors="highway_target_v_z input_z" add_to="true" />
+      <value id="target_v_z" basevalue="1" factors="highway_min_v_z">
+        <conditions>
+          <condition id="player_in_highwayblocker" />
+        </conditions>
+      </value>
+      <!--***-->
+      <!--*** Angles (eye candy only).-->
+      <!--***-->
+      <!--You can play with these values as much as you like, they have little to no actual impact on the controls.-->
+      <!--What you can try out, other than changing the base values: replace rel_v_* with input_* to have the angle change more immediate.-->
+      <!--Turning speed (and acceleration) is increased greatly to make the player turn in the direction of movement much more quickly.-->
+      <value id="minmax_v_pitch" basevalue="5" factors="minmax_v_pitch" />
+      <value id="minmax_v_yaw" basevalue="5" factors="minmax_v_yaw" />
+      <value id="minmax_a_pitch" basevalue="5" factors="minmax_a_pitch" />
+      <value id="minmax_a_yaw" basevalue="5" factors="minmax_a_yaw" />
+      <value id="target_pitch" basevalue="0" />
+      <value id="target_yaw" basevalue="0" />
+      <value id="target_roll" basevalue="0" />
+      <!--Constrain values to tube.-->
+      <value id="max_r_xy" basevalue="1" factors="highway_radius" />
+      <value id="min_z" basevalue="0" />
+      <value id="max_z" basevalue="1" />
+      <!--Max x/y speed/acceleration - these values are also in NavigationController::UpdateEngineParameters()-->
+      <value id="minmax_v_xy" basevalue="200" />
+      <value id="minmax_a_xy" basevalue="400" />
+      <!--Target x/y speed-->
+      <value id="target_v_x" basevalue="1" factors="input_x max_v_x" />
+      <value id="target_v_y" basevalue="1" factors="input_y max_v_y" />
+      <value id="target_v_x" basevalue="1" factors="input_yaw max_v_x" add_to="true" />
+      <value id="target_v_x" basevalue="1" factors="input_roll max_v_x" add_to="true" />
+      <value id="target_v_y" basevalue="-1" factors="input_pitch max_v_y" add_to="true" />
+      <!--Slow down when "braking" or at edge-->
+      <value id="minmax_a_xy" basevalue="10" factors="minmax_a_xy">
+        <conditions>
+          <condition id="quick_highway_exit" />
+        </conditions>
+      </value>
+      <!--Steer towards edge while "braking"-->
+      <value id="target_x" basevalue="5000">
+        <conditions>
+          <condition id="quick_highway_exit" />
+          <condition id="value" valueid="x" greater_than="10" />
+        </conditions>
+      </value>
+      <value id="target_x" basevalue="-5000">
+        <conditions>
+          <condition id="quick_highway_exit" />
+          <condition id="value" valueid="x" less_than="-10" />
+        </conditions>
+      </value>
+      <value id="target_x" basevalue="-5000">
+        <conditions>
+          <condition id="quick_highway_exit" />
+          <condition id="value" valueid="x" less_than="10" />
+          <condition id="value" valueid="x" greater_than="-10" />
+          <condition id="value" valueid="y" less_than="10" />
+          <condition id="value" valueid="y" greater_than="-10" />
+        </conditions>
+      </value>
+      <value id="target_y" basevalue="5000">
+        <conditions>
+          <condition id="quick_highway_exit" />
+          <condition id="value" valueid="y" greater_than="10" />
+        </conditions>
+      </value>
+      <value id="target_y" basevalue="-5000">
+        <conditions>
+          <condition id="quick_highway_exit" />
+          <condition id="value" valueid="y" less_than="-10" />
+        </conditions>
+      </value>
+      <value id="target_y" basevalue="-5000">
+        <conditions>
+          <condition id="quick_highway_exit" />
+          <condition id="value" valueid="x" less_than="10" />
+          <condition id="value" valueid="x" greater_than="-10" />
+          <condition id="value" valueid="y" less_than="10" />
+          <condition id="value" valueid="y" greater_than="-10" />
+        </conditions>
+      </value>
+    </values>
+  </scheme>
+  <!--***-->
+  <!--*** Default flight control scheme.-->
+  <!--***-->
+  <scheme identifier="default" refspace="ship">
+    <transformations>
+      <transformation id="rotate_velocity" source="player" />
+    </transformations>
+    <collisionavoidance rayhitscaleexponent="1" raylengthfactor="1.0" diagonalraylengthfactor="0.25" steerpitchfactor="1" steeryawfactor="1" strafeleftrightfactor="1" strafeupdownfactor="2" steerpitchmaxeffect="0.25" steeryawmaxeffect="0.25" strafeleftrightmaxeffect="0.5" strafeupdownmaxeffect="0.75" />
+    <values>
+      <!--Reduce roll speed when pitch input (steer up or down) is active. The effect is that roll will not be reset during a looping.-->
+      <!--Changing the base value is probably not desirable here, but the scaling function could be changed, for example to a quadratic one.-->
+      <!--To achieve this just add the input_pitch value a second time to the abs_factors list.-->
+      <!--A quadratic version would then look like abs_factors="input_pitch input_pitch", a cubic version like abs_factors="input_pitch input_pitch input_pitch".-->
+      <value id="minmax_v_roll" basevalue="-1" factors="minmax_v_roll" abs_factors="input_pitch" add_to="true">
+        <conditions>
+          <condition id="player_autoroll_active" />
+          <condition id="player_flightassist_active" />
+          <condition id="value" valueid="input_roll" equals="0" />
+        </conditions>
+      </value>
+      <!--Scale down the roll velocity when nearing extreme pitch values.-->
+      <!--The basevalue is -2/PI, so that it becomes -1 when multiplied with the maximum pitch value of PI/2 (90 degrees).-->
+      <value id="minmax_v_roll" basevalue="-0.636619772" factors="minmax_v_roll" abs_factors="pitch" add_to="true">
+        <conditions>
+          <condition id="player_autoroll_active" />
+          <condition id="player_flightassist_active" />
+          <condition id="value" valueid="input_roll" equals="0" />
+        </conditions>
+      </value>
+      <value id="minmax_v_roll" basevalue="-0.636619772" factors="minmax_v_roll" abs_factors="pitch" add_to="true">
+        <conditions>
+          <condition id="player_autoroll_active" />
+          <condition id="player_flightassist_active" />
+          <condition id="value" valueid="input_roll" equals="0" />
+        </conditions>
+      </value>
+      <value id="minmax_v_roll" basevalue="-0.636619772" factors="minmax_v_roll" abs_factors="pitch" add_to="true">
+        <conditions>
+          <condition id="player_autoroll_active" />
+          <condition id="player_flightassist_active" />
+          <condition id="value" valueid="input_roll" equals="0" />
+        </conditions>
+      </value>
+
+      <value id="minmax_a_roll" basevalue="-1" factors="minmax_a_roll" abs_factors="input_pitch" add_to="true">
+        <conditions>
+          <condition id="player_autoroll_active" />
+          <condition id="player_flightassist_active" />
+          <condition id="value" valueid="input_roll" equals="0" />
+          <condition id="value" valueid="roll" less_than="0.1" />
+          <condition id="value" valueid="roll" greater_than="-0.1" />
+        </conditions>
+      </value>
+      <value id="minmax_a_roll" basevalue="-0.636619772" factors="minmax_a_roll" abs_factors="pitch" add_to="true">
+        <conditions>
+          <condition id="player_autoroll_active" />
+          <condition id="player_flightassist_active" />
+          <condition id="value" valueid="input_roll" equals="0" />
+          <condition id="value" valueid="roll" less_than="0.1" />
+          <condition id="value" valueid="roll" greater_than="-0.1" />
+        </conditions>
+      </value>
+      <value id="minmax_a_roll" basevalue="-0.636619772" factors="minmax_a_roll" abs_factors="pitch" add_to="true">
+        <conditions>
+          <condition id="player_autoroll_active" />
+          <condition id="player_flightassist_active" />
+          <condition id="value" valueid="input_roll" equals="0" />
+          <condition id="value" valueid="roll" less_than="0.1" />
+          <condition id="value" valueid="roll" greater_than="-0.1" />
+        </conditions>
+      </value>
+      <value id="minmax_a_roll" basevalue="-0.636619772" factors="minmax_a_roll" abs_factors="pitch" add_to="true">
+        <conditions>
+          <condition id="player_autoroll_active" />
+          <condition id="player_flightassist_active" />
+          <condition id="value" valueid="input_roll" equals="0" />
+          <condition id="value" valueid="roll" less_than="0.1" />
+          <condition id="value" valueid="roll" greater_than="-0.1" />
+        </conditions>
+      </value>
+
+      <!--Roll the ship when steering sideways.-->
+      <!--Set 'basevalue' to the desired maximum angle in radians. PI/2, or about 1.57, is 90 degrees.-->
+      <value id="target_roll" basevalue="0.4" factors="input_yaw rel_v_z">
+        <conditions>
+          <condition id="player_autoroll_active" />
+          <condition id="player_flightassist_active" />
+          <condition id="value" valueid="input_roll" equals="0" />
+        </conditions>
+      </value>
+      <value id="target_roll" basevalue="0.0">
+        <conditions>
+          <condition id="player_boost_active" />
+          <condition id="player_autoroll_active" />
+          <condition id="player_flightassist_active" />
+          <condition id="value" valueid="input_roll" equals="0" />
+        </conditions>
+      </value>
+      <!--***-->
+      <!--*** No tweaking values below this point.-->
+      <!--***-->
+      <!--Forced max throttle when boosting or traveling (unless speed matching is active)-->
+      <value id="input_z" basevalue="1" factors="max_v_z">
+        <conditions>
+          <condition id="player_boost_active" />
+          <condition id="player_flightassist_active" />
+        </conditions>
+      </value>
+      <value id="input_z" basevalue="1" factors="max_v_z">
+        <conditions>
+          <condition id="player_travelmode_charging" />
+          <condition id="player_match_speed_active" inverted="true" />
+          <condition id="player_flightassist_active" />
+        </conditions>
+      </value>
+      <value id="input_z" basevalue="1" factors="max_v_z">
+        <conditions>
+          <condition id="player_travelmode_active" />
+          <condition id="player_match_speed_active" inverted="true" />
+          <condition id="player_flightassist_active" />
+        </conditions>
+      </value>
+      <!--Flight assist turned on:-->
+      <value id="target_v_x" basevalue="1" factors="input_x max_v_x">
+        <conditions>
+          <condition id="player_flightassist_active" />
+        </conditions>
+      </value>
+      <value id="target_v_y" basevalue="1" factors="input_y max_v_y">
+        <conditions>
+          <condition id="player_flightassist_active" />
+        </conditions>
+      </value>
+      <value id="target_v_z" basevalue="1" factors="input_z max_v_z">
+        <conditions>
+          <condition id="player_flightassist_active" />
+          <condition id="value" valueid="input_z" greater_than="0" />
+        </conditions>
+      </value>
+      <value id="target_v_z" basevalue="1" factors="input_z min_v_z">
+        <conditions>
+          <condition id="player_flightassist_active" />
+          <condition id="value" valueid="input_z" less_than="0" />
+        </conditions>
+      </value>
+      <value id="target_v_z" basevalue="0">
+        <conditions>
+          <condition id="player_flightassist_active" />
+          <condition id="value" valueid="input_z" equals="0" />
+        </conditions>
+      </value>
+      <!--Flight assist turned off and flying normally:-->
+      <value id="rel_a_x" basevalue="1" factors="input_x">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+          <!--<condition id="player_boost_active" inverted="true" />
+          <condition id="player_travelmode_active" inverted="true" />-->
+        </conditions>
+      </value>
+      <value id="rel_a_y" basevalue="1" factors="input_y">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+          <!--<condition id="player_boost_active" inverted="true" />
+          <condition id="player_travelmode_active" inverted="true" />-->
+        </conditions>
+      </value>
+      <value id="rel_a_z" basevalue="1" factors="input_z">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+          <condition id="player_boost_active" inverted="true" />
+          <condition id="player_travelmode_active" inverted="true" />
+        </conditions>
+      </value>
+      <!--Flight assist turned off and traveling:-->
+      <!-- disabled a_x and a_y reset while traveling to allow the use of strafe drive while TD is enganged -->
+      <!--<value id="a_x" basevalue="0">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+          <condition id="player_boost_active" inverted="true" />
+          <condition id="player_travelmode_active" />
+        </conditions>
+      </value>
+      <value id="a_y" basevalue="0">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+          <condition id="player_boost_active" inverted="true" />
+          <condition id="player_travelmode_active" />
+        </conditions>
+      </value>-->
+      <value id="a_z" basevalue="0">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+          <condition id="player_boost_active" inverted="true" />
+          <condition id="player_travelmode_active" />
+        </conditions>
+      </value>
+      <!--Flight assist turned off and boosting:-->
+      <value id="target_v_x" basevalue="0">
+        <conditions>
+          <!-- this will quickly arrest horizontal movement while boosting -->
+          <condition id="player_flightassist_active" inverted="true" />
+          <condition id="player_travelmode_active" inverted="true" />
+          <condition id="player_boost_active" />
+          <condition id="value" valueid="rel_a_x" equals="0" />
+        </conditions>
+      </value>
+      <value id="target_v_y" basevalue="0">
+        <conditions>
+          <!-- this will quickly arrest vertical movement while boosting -->
+          <condition id="player_flightassist_active" inverted="true" />
+          <condition id="player_travelmode_active" inverted="true" />
+          <condition id="player_boost_active" />
+          <condition id="value" valueid="rel_a_y" equals="0" />
+        </conditions>
+      </value>
+      <value id="rel_a_z" basevalue="1">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+          <condition id="player_travelmode_active" inverted="true" />
+          <condition id="player_boost_active" />
+        </conditions>
+      </value>
+      <!--Flight assist turned off:-->
+      <!-- this will make strafe speed go down to max base strafe speed when going faster (this will use the strafe deceleration curve) -->
+      <value id="target_v_x" basevalue="0">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+          <condition id="player_travelmode_active" inverted="true" />
+          <condition id="player_boost_active" inverted="true" />
+          <condition id="value" valueid="rel_v_x" greater_than="1.01" />
+        </conditions>
+      </value>
+      <value id="target_v_x" basevalue="0">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+          <condition id="player_travelmode_active" inverted="true" />
+          <condition id="player_boost_active" inverted="true" />
+          <condition id="value" valueid="rel_v_x" less_than="-1.01" />
+        </conditions>
+      </value>
+      <value id="target_v_y" basevalue="0">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+          <condition id="player_travelmode_active" inverted="true" />
+          <condition id="player_boost_active" inverted="true" />
+          <condition id="value" valueid="rel_v_y" greater_than="1.01" />
+        </conditions>
+      </value>
+      <value id="target_v_y" basevalue="0">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+          <condition id="player_travelmode_active" inverted="true" />
+          <condition id="player_boost_active" inverted="true" />
+          <condition id="value" valueid="rel_v_y" less_than="-1.01" />
+        </conditions>
+      </value>
+      <value id="target_v_z" basevalue="1" factors="max_v_z">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+          <condition id="value" valueid="rel_v_z" greater_than="1.01" />
+        </conditions>
+      </value>
+      <value id="target_v_z" basevalue="1" factors="max_v_z">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+          <condition id="value" valueid="rel_v_z" less_than="-1.01" />
+        </conditions>
+      </value>
+      <!--Full stop forced (regardless of flight assist status):-->
+      <value id="target_v_x" basevalue="0">
+        <conditions>
+          <condition id="player_full_stop_forced" />
+        </conditions>
+      </value>
+      <value id="target_v_y" basevalue="0">
+        <conditions>
+          <condition id="player_full_stop_forced" />
+        </conditions>
+      </value>
+      <value id="target_v_z" basevalue="0">
+        <conditions>
+          <condition id="player_full_stop_forced" />
+        </conditions>
+      </value>
+      <!--Steering isn't affected by flight assist being on or off-->
+      <value id="target_v_pitch" basevalue="1" factors="input_pitch max_v_pitch" />
+      <value id="target_v_yaw" basevalue="1" factors="input_yaw max_v_yaw" />
+      <!-- TODO @Matthias: this could be simplified a lot with 'or' functionality -->
+      <value id="target_v_roll" basevalue="1" factors="input_roll max_v_roll">
+        <conditions>
+          <condition id="player_autoroll_active" inverted="true" />
+        </conditions>
+      </value>
+      <value id="target_v_roll" basevalue="1" factors="input_roll max_v_roll">
+        <conditions>
+          <condition id="player_flightassist_active" inverted="true" />
+        </conditions>
+      </value>
+    </values>
+  </scheme>
+</controlschemes>

@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soundenvironmentlibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <global>
+    <property name="speedofsound"			value="3435"		description="float value in meters/s. For normal atmosphere this would be 343.5m/s"/>
+    <property name="maximumvelocity"		value="1500"		description="float value in meters/s"/>
+  </global>
+  <occlusion>
+    <volumecurve>
+      <point position="0" value="0" />
+      <point position="0.5" value="0.8" />
+      <point position="1" value="1" />
+    </volumecurve>
+    <frequencycurve>
+      <point position="0" value="50" />
+      <point position="0.5" value="200" />
+      <point position="1" value="6000" />
+    </frequencycurve>
+    <oneoverqcurve default="1.5" />
+  </occlusion>
+  <!--environment name="" description="" roomsize="10" drymix="5" density="90" /-->
+  <environment name="auditorium" description="auditorium">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-476"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="4.32"/>
+    <property name="decayhfratio" type="float" value="0.59"/>
+    <property name="reflections" type="integer" value="-789"/>
+    <property name="reflectionsdelay" type="float" value="0.02"/>
+    <property name="reverb" type="integer" value="-289"/>
+    <property name="reverbdelay" type="float" value="0.03"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="plain" description="plain">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-2000"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.49"/>
+    <property name="decayhfratio" type="float" value="0.5"/>
+    <property name="reflections" type="integer" value="-2466"/>
+    <property name="reflectionsdelay" type="float" value="0.179"/>
+    <property name="reverb" type="integer" value="-2514"/>
+    <property name="reverbdelay" type="float" value="0.1"/>
+    <property name="diffusion" type="percent" value="21"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="plate" description="plate">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-200"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.3"/>
+    <property name="decayhfratio" type="float" value="0.9"/>
+    <property name="reflections" type="integer" value="0"/>
+    <property name="reflectionsdelay" type="float" value="0.002"/>
+    <property name="reverb" type="integer" value="0"/>
+    <property name="reverbdelay" type="float" value="0.01"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="75"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="quarry" description="quarry">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-1000"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.49"/>
+    <property name="decayhfratio" type="float" value="0.83"/>
+    <property name="reflections" type="integer" value="-10000"/>
+    <property name="reflectionsdelay" type="float" value="0.061"/>
+    <property name="reverb" type="integer" value="500"/>
+    <property name="reverbdelay" type="float" value="0.025"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="forest" description="forest">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-3300"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.49"/>
+    <property name="decayhfratio" type="float" value="0.54"/>
+    <property name="reflections" type="integer" value="-2560"/>
+    <property name="reflectionsdelay" type="float" value="0.162"/>
+    <property name="reverb" type="integer" value="-613"/>
+    <property name="reverbdelay" type="float" value="0.088"/>
+    <property name="diffusion" type="percent" value="79"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="living room" description="living room">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-6000"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="0.1"/>
+    <property name="reflections" type="integer" value="-1376"/>
+    <property name="reflectionsdelay" type="float" value="0.003"/>
+    <property name="reverb" type="integer" value="-1104"/>
+    <property name="reverbdelay" type="float" value="0.004"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="alley" description="alley">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-270"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.49"/>
+    <property name="decayhfratio" type="float" value="0.86"/>
+    <property name="reflections" type="integer" value="-1204"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="-4"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="arena" description="arena">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-698"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="7.24"/>
+    <property name="decayhfratio" type="float" value="0.33"/>
+    <property name="reflections" type="integer" value="-1166"/>
+    <property name="reflectionsdelay" type="float" value="0.02"/>
+    <property name="reverb" type="integer" value="16"/>
+    <property name="reverbdelay" type="float" value="0.03"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="default" description="default">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-10000"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1"/>
+    <property name="decayhfratio" type="float" value="0.5"/>
+    <property name="reflections" type="integer" value="-10000"/>
+    <property name="reflectionsdelay" type="float" value="0.02"/>
+    <property name="reverb" type="integer" value="-10000"/>
+    <property name="reverbdelay" type="float" value="0.04"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="medium room" description="medium room">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-600"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.3"/>
+    <property name="decayhfratio" type="float" value="0.83"/>
+    <property name="reflections" type="integer" value="-1000"/>
+    <property name="reflectionsdelay" type="float" value="0.01"/>
+    <property name="reverb" type="integer" value="-200"/>
+    <property name="reverbdelay" type="float" value="0.02"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="padded cell" description="padded cell">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-6000"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.17"/>
+    <property name="decayhfratio" type="float" value="0.1"/>
+    <property name="reflections" type="integer" value="-1204"/>
+    <property name="reflectionsdelay" type="float" value="0.001"/>
+    <property name="reverb" type="integer" value="207"/>
+    <property name="reverbdelay" type="float" value="0.002"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="psychotic" description="psychotic">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-151"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="7.56"/>
+    <property name="decayhfratio" type="float" value="0.91"/>
+    <property name="reflections" type="integer" value="-626"/>
+    <property name="reflectionsdelay" type="float" value="0.02"/>
+    <property name="reverb" type="integer" value="774"/>
+    <property name="reverbdelay" type="float" value="0.03"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="drugged" description="drugged">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="8.39"/>
+    <property name="decayhfratio" type="float" value="1.39"/>
+    <property name="reflections" type="integer" value="-115"/>
+    <property name="reflectionsdelay" type="float" value="0.002"/>
+    <property name="reverb" type="integer" value="985"/>
+    <property name="reverbdelay" type="float" value="0.03"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="large hall" description="large hall">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-600"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.8"/>
+    <property name="decayhfratio" type="float" value="0.7"/>
+    <property name="reflections" type="integer" value="-2000"/>
+    <property name="reflectionsdelay" type="float" value="0.03"/>
+    <property name="reverb" type="integer" value="-1400"/>
+    <property name="reverbdelay" type="float" value="0.06"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="concert hall" description="concert hall">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-500"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="3.92"/>
+    <property name="decayhfratio" type="float" value="0.7"/>
+    <property name="reflections" type="integer" value="-1230"/>
+    <property name="reflectionsdelay" type="float" value="0.02"/>
+    <property name="reverb" type="integer" value="-2"/>
+    <property name="reverbdelay" type="float" value="0.029"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="room" description="room">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-454"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.4"/>
+    <property name="decayhfratio" type="float" value="0.83"/>
+    <property name="reflections" type="integer" value="-1646"/>
+    <property name="reflectionsdelay" type="float" value="0.002"/>
+    <property name="reverb" type="integer" value="53"/>
+    <property name="reverbdelay" type="float" value="0.003"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="hangar" description="hangar">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-1000"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="10.05"/>
+    <property name="decayhfratio" type="float" value="0.23"/>
+    <property name="reflections" type="integer" value="-602"/>
+    <property name="reflectionsdelay" type="float" value="0.02"/>
+    <property name="reverb" type="integer" value="198"/>
+    <property name="reverbdelay" type="float" value="0.03"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="hallway" description="hallway">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-300"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.49"/>
+    <property name="decayhfratio" type="float" value="0.59"/>
+    <property name="reflections" type="integer" value="-1219"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="underwater" description="underwater">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-4000"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.49"/>
+    <property name="decayhfratio" type="float" value="0.1"/>
+    <property name="reflections" type="integer" value="-449"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="1700"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="medium hall" description="medium hall">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-600"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.8"/>
+    <property name="decayhfratio" type="float" value="0.7"/>
+    <property name="reflections" type="integer" value="-1300"/>
+    <property name="reflectionsdelay" type="float" value="0.015"/>
+    <property name="reverb" type="integer" value="-800"/>
+    <property name="reverbdelay" type="float" value="0.03"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="stone corridor" description="stone corridor">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-237"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="2.7"/>
+    <property name="decayhfratio" type="float" value="0.79"/>
+    <property name="reflections" type="integer" value="-1214"/>
+    <property name="reflectionsdelay" type="float" value="0.013"/>
+    <property name="reverb" type="integer" value="395"/>
+    <property name="reverbdelay" type="float" value="0.02"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="parking lot" description="parking lot">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.65"/>
+    <property name="decayhfratio" type="float" value="1.5"/>
+    <property name="reflections" type="integer" value="-1363"/>
+    <property name="reflectionsdelay" type="float" value="0.008"/>
+    <property name="reverb" type="integer" value="-1153"/>
+    <property name="reverbdelay" type="float" value="0.012"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="sewer pipe" description="sewer pipe">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-1000"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="2.81"/>
+    <property name="decayhfratio" type="float" value="0.14"/>
+    <property name="reflections" type="integer" value="429"/>
+    <property name="reflectionsdelay" type="float" value="0.014"/>
+    <property name="reverb" type="integer" value="648"/>
+    <property name="reverbdelay" type="float" value="0.021"/>
+    <property name="diffusion" type="percent" value="80"/>
+    <property name="density" type="percent" value="60"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="stone room" description="stone room">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-300"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="2.31"/>
+    <property name="decayhfratio" type="float" value="0.64"/>
+    <property name="reflections" type="integer" value="-711"/>
+    <property name="reflectionsdelay" type="float" value="0.012"/>
+    <property name="reverb" type="integer" value="83"/>
+    <property name="reverbdelay" type="float" value="0.017"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="large room" description="large room">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-600"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.5"/>
+    <property name="decayhfratio" type="float" value="0.83"/>
+    <property name="reflections" type="integer" value="-1600"/>
+    <property name="reflectionsdelay" type="float" value="0.02"/>
+    <property name="reverb" type="integer" value="-1000"/>
+    <property name="reverbdelay" type="float" value="0.04"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="small room" description="small room">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-600"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.1"/>
+    <property name="decayhfratio" type="float" value="0.83"/>
+    <property name="reflections" type="integer" value="-400"/>
+    <property name="reflectionsdelay" type="float" value="0.005"/>
+    <property name="reverb" type="integer" value="500"/>
+    <property name="reverbdelay" type="float" value="0.01"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="carpeted hallway" description="carpeted hallway">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-4000"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.3"/>
+    <property name="decayhfratio" type="float" value="0.1"/>
+    <property name="reflections" type="integer" value="-1831"/>
+    <property name="reflectionsdelay" type="float" value="0.002"/>
+    <property name="reverb" type="integer" value="-1630"/>
+    <property name="reverbdelay" type="float" value="0.03"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="city" description="city">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-800"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.49"/>
+    <property name="decayhfratio" type="float" value="0.67"/>
+    <property name="reflections" type="integer" value="-2273"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="-2217"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="50"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="bath room" description="bath room">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-1200"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.49"/>
+    <property name="decayhfratio" type="float" value="0.54"/>
+    <property name="reflections" type="integer" value="-370"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="1030"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="60"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="dizzy" description="dizzy">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-400"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="17.23"/>
+    <property name="decayhfratio" type="float" value="0.56"/>
+    <property name="reflections" type="integer" value="-1713"/>
+    <property name="reflectionsdelay" type="float" value="0.02"/>
+    <property name="reverb" type="integer" value="-613"/>
+    <property name="reverbdelay" type="float" value="0.03"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="mountains" description="mountains">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-2500"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.49"/>
+    <property name="decayhfratio" type="float" value="0.21"/>
+    <property name="reflections" type="integer" value="-2780"/>
+    <property name="reflectionsdelay" type="float" value="0.3"/>
+    <property name="reverb" type="integer" value="-2014"/>
+    <property name="reverbdelay" type="float" value="0.1"/>
+    <property name="diffusion" type="percent" value="27"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="cave" description="cave">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="2.91"/>
+    <property name="decayhfratio" type="float" value="1.3"/>
+    <property name="reflections" type="integer" value="-602"/>
+    <property name="reflectionsdelay" type="float" value="0.015"/>
+    <property name="reverb" type="integer" value="-302"/>
+    <property name="reverbdelay" type="float" value="0.022"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="generic" description="generic">
+    <property name="wetdrymix" type="percent" value="100"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-100"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.49"/>
+    <property name="decayhfratio" type="float" value="0.83"/>
+    <property name="reflections" type="integer" value="-2602"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="200"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <!-- properties
+  // ratio of wet (processed) signal to dry (original) signal
+    float WetDryMix;            // [0, 100] (percentage)
+
+    // Standard I3DL2 parameters
+    INT32 Room;                 // [-10000, 0] in mB (hundredths of decibels)
+    INT32 RoomHF;               // [-10000, 0] in mB (hundredths of decibels)
+    float RoomRolloffFactor;    // [0.0, 10.0]
+    float DecayTime;            // [0.1, 20.0] in seconds
+    float DecayHFRatio;         // [0.1, 2.0]
+    INT32 Reflections;          // [-10000, 1000] in mB (hundredths of decibels)
+    float ReflectionsDelay;     // [0.0, 0.3] in seconds
+    INT32 Reverb;               // [-10000, 2000] in mB (hundredths of decibels)
+    float ReverbDelay;          // [0.0, 0.1] in seconds
+    float Diffusion;            // [0.0, 100.0] (percentage)
+    float Density;              // [0.0, 100.0] (percentage)
+    float HFReference;          // [20.0, 20000.0] in Hz
+  -->
+  <environment name="test" description="test Environment">
+    <!-- Base: Hallway -->
+    <property name="wetdrymix" type="percent" value="20"/>
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  
+  <!-- Player -->
+
+  <environment name="playership_cockpit_01" description="The Cockpit">
+    <property name="wetdrymix" type="percent" value="10"/>
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>  
+  <environment name="playership_back_01" description="The backroom of the player ship">
+    <property name="wetdrymix" type="percent" value="20"/>
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  
+  <!-- ARGON -->
+  
+  <environment name="ar_airshaft_01" description="Standard airshaft of Argon station"> <!-- Done & Tested -->
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 30 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.0"/>
+    <property name="decayhfratio" type="float" value="2.0"/>
+    <property name="reflections" type="integer" value="1.0"/>
+    <property name="reflectionsdelay" type="float" value="0.0"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.1"/>
+    <property name="diffusion" type="percent" value="10"/>
+    <property name="density" type="percent" value="10"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="ar_ammo_01" description="Space Bar of Argon Station">
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 15 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="-500"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.1"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-2000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>   
+  <environment name="ar_architectroom_01" description="Architect Room of Argon Station">
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 15 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="-500"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.1"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-2000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>   
+  <environment name="ar_captains_office_01" description="Captains Office">
+    <property name="wetdrymix" type="percent" value="5"/>
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="-2500"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>    
+  <environment name="ar_corridor_01" description="Standard corridor of Argon station"> <!-- Done & Tested -->
+    <property name="wetdrymix" type="percent" value="5"/> <!-- set to 20 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>  
+  <environment name="ar_corridor_narrow_01" description="Narrow corridor of Argon station"> <!-- Done & Tested -->
+    <property name="wetdrymix" type="percent" value="5"/>
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="-2500"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>    
+  <environment name="ar_engibay_01" description="Engineering bay">
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 20 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="ar_hangar_01" description="Hangar of Argon station">
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 20 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-1000"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="3.0"/>
+    <property name="decayhfratio" type="float" value="0.14"/>
+    <property name="reflections" type="integer" value="429"/>
+    <property name="reflectionsdelay" type="float" value="0.014"/>
+    <property name="reverb" type="integer" value="648"/>
+    <property name="reverbdelay" type="float" value="0.021"/>
+    <property name="diffusion" type="percent" value="80"/>
+    <property name="density" type="percent" value="60"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>    
+  <environment name="ar_landingplatform_01" description="Huge Landing Platform of Argon station">
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 20 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-1000"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="3.0"/>
+    <property name="decayhfratio" type="float" value="0.14"/>
+    <property name="reflections" type="integer" value="429"/>
+    <property name="reflectionsdelay" type="float" value="0.014"/>
+    <property name="reverb" type="integer" value="648"/>
+    <property name="reverbdelay" type="float" value="0.021"/>
+    <property name="diffusion" type="percent" value="80"/>
+    <property name="density" type="percent" value="60"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="ar_market_01" description="Hangar of Argon Station">
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 20 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="-1000"/>
+    <property name="roomhf" type="integer" value="-1000"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="3.0"/>
+    <property name="decayhfratio" type="float" value="0.14"/>
+    <property name="reflections" type="integer" value="429"/>
+    <property name="reflectionsdelay" type="float" value="0.014"/>
+    <property name="reverb" type="integer" value="648"/>
+    <property name="reverbdelay" type="float" value="0.021"/>
+    <property name="diffusion" type="percent" value="80"/>
+    <property name="density" type="percent" value="60"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>   
+  <environment name="ar_repairdock_01" description="Hangar of Argon station">
+    <property name="wetdrymix" type="percent" value="5" />  <!-- set to 100 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="-10000" />
+    <property name="roomhf" type="integer" value="-10000" />
+    <property name="roomrollofffactor" type="float" value="10.0" />
+    <property name="decaytime" type="float" value="20.0" />
+    <property name="decayhfratio" type="float" value="2.0" />
+    <property name="reflections" type="integer" value="1000" />
+    <property name="reflectionsdelay" type="float" value="0.3" />
+    <property name="reverb" type="integer" value="2000" />
+    <property name="reverbdelay" type="float" value="0.1" />
+    <property name="diffusion" type="percent" value="100.0" />
+    <property name="density" type="percent" value="100.0" />
+    <property name="hfreference" type="float" value="20000.0" />
+  </environment>   
+  <environment name="ar_spacebar_01" description="Space Bar of Argon Station"> <!-- Done & Tested -->
+    <property name="wetdrymix" type="percent" value="2"/>
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="-500"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.1"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-2000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>     
+  <environment name="ar_staircase_01" description="Staircase of Argon station"> <!-- Done & Tested -->
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 30 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="-1000"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.0"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="0"/>
+    <property name="reflectionsdelay" type="float" value="0.0"/>
+    <property name="reverb" type="integer" value="2"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="10"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>    
+  <environment name="ar_quarters_01" description="Military quarters">
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 10 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>
+  <environment name="ar_vip_01" description="VIP Room"> 
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 20 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>  
+
+<!-- DE VRIES -->  
+
+  <environment name="dv_corridor_01" description="Big corridor of DeVries">
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 10 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>    
+  <environment name="dv_corridor_narrow_01" description="Narrow corridor of De Vries">
+    <property name="wetdrymix" type="percent" value="5"/>
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="-2500"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment> 
+  <environment name="dv_corridor_cross_big_01" description="Narrow corridor of De Vries">
+    <property name="wetdrymix" type="percent" value="5"/>
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="-2500"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>   
+  <environment name="dv_roofwindow_01" description="Open sunny corridor of DeVries">
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 10 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>   
+  
+<!-- OMICRON -->
+  <environment name="ol_corridor_01" description="Big corridor of Omciron">
+    <property name="wetdrymix" type="percent" value="5"/>
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>    
+  <environment name="ol_prison_01" description="Prison">
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 20 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>   
+  <environment name="ol_serveroom_01" description="Serverroom">
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 20 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="0"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.5"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-3000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="50"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>   
+  <environment name="ol_spacebar_01" description="Space Bar of Omicron Station">
+    <property name="wetdrymix" type="percent" value="2"/>
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="-500"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="0.1"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="-2000"/>
+    <property name="reflectionsdelay" type="float" value="0.007"/>
+    <property name="reverb" type="integer" value="441"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="100"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>   
+  <environment name="ol_staircase_01" description="Staircase of Omicron station">
+    <property name="wetdrymix" type="percent" value="5"/>  <!-- set to 30 as soon as Martin has fixed the issue, that the env-setup is taken from the component at 0,0,0 of the interior-macro -->
+    <property name="room" type="integer" value="0"/>
+    <property name="roomhf" type="integer" value="-1000"/>
+    <property name="roomrollofffactor" type="float" value="0"/>
+    <property name="decaytime" type="float" value="1.0"/>
+    <property name="decayhfratio" type="float" value="1.0"/>
+    <property name="reflections" type="integer" value="0"/>
+    <property name="reflectionsdelay" type="float" value="0.0"/>
+    <property name="reverb" type="integer" value="2"/>
+    <property name="reverbdelay" type="float" value="0.011"/>
+    <property name="diffusion" type="percent" value="100"/>
+    <property name="density" type="percent" value="10"/>
+    <property name="hfreference" type="float" value="5000"/>
+  </environment>     
+  
+</soundenvironmentlibrary>

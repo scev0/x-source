@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<controlschemes>
+  <!--***-->
+  <!--*** Dummy controls for ships following an animated path.-->
+  <!--***-->
+  <scheme identifier="animation" refspace="ship">
+    <conditions>
+      <condition id="player_following_animation" />
+    </conditions>
+    <collisions linear_factor="0" angular_factor="0" linear_relative_max="0" angular_relative_max="0" />
+    <values>
+      <value id="autospeed_delay" basevalue="-1" />
+      <value id="min_x" basevalue="10" factors="remaining_animation_fraction" />
+      <value id="min_y" basevalue="10" factors="remaining_animation_fraction" />
+      <value id="min_z" basevalue="0" />
+      <value id="max_x" basevalue="10" factors="remaining_animation_fraction" />
+      <value id="max_y" basevalue="10" factors="remaining_animation_fraction" />
+      <value id="max_z" basevalue="0" />
+      <value id="target_x" basevalue="1" factors="input_x max_x" />
+      <value id="target_y" basevalue="1" factors="input_y max_y" />
+      <value id="target_z" basevalue="0" />
+      <value id="target_pitch" basevalue="0" />
+      <value id="target_yaw" basevalue="0" />
+      <value id="target_roll" basevalue="0" />
+    </values>
+  </scheme>
+  <!--***-->
+  <!--*** Highway controls.-->
+  <!--***-->
+  <scheme identifier="highway" refspace="zone">
+    <conditions>
+      <condition id="player_in_highway" />
+    </conditions>
+    <values>
+      <value id="autospeed_delay" basevalue="-1" />
+      <!--***-->
+      <!--*** Default forward velocities and accelerations - use highway values instead of engine values for forward movement.-->
+      <!--*** Note: these values are calculated using values out of the component macro/template (speeds) and the highway configuration (accelerations).-->
+      <!--***-->
+      <value id="min_a_z" basevalue="1" factors="highway_min_a_z" />
+      <value id="max_a_z" basevalue="1" factors="highway_max_a_z" />
+      <value id="min_v_z" basevalue="1" factors="highway_min_v_z" />
+      <value id="max_v_z" basevalue="1" factors="highway_max_v_z" />
+      <!--***-->
+      <!--*** Adjust strafing velocities and accelerations.-->
+      <!--***-->
+      <value id="minmax_v_xy" basevalue="5" factors="minmax_v_xy" />
+      <value id="minmax_a_xy" basevalue="10" factors="minmax_a_xy" />
+      <!--***-->
+      <!--*** Target forward speed comes directly from highway, can only be overridden by manually boosting.-->
+      <!--*** This speed depends on whether the player is in a blocker, booster and/or at the edge of the highway.-->
+      <!--***-->
+      <value id="target_v_z" basevalue="1" factors="highway_target_v_z" />
+      <!--***-->
+      <!--*** Angles (eye candy only).-->
+      <!--***-->
+      <!--You can play with these values as much as you like, they have little to no actual impact on the controls.-->
+      <!--What you can try out, other than changing the base values: replace rel_v_* with input_* to have the angle change more immediate.-->
+      <value id="target_pitch" basevalue="0.025" factors="rel_v_y" />
+      <value id="target_yaw" basevalue="0.025" factors="rel_v_x" />
+      <value id="target_roll" basevalue="0.05" factors="input_x" />
+      <!--Roll value in case we strafe using the yaw input.-->
+      <value id="target_roll" basevalue="0.05" factors="input_yaw">
+        <conditions>
+          <condition id="value" valueid="input_x" equals="0" />
+        </conditions>
+      </value>
+      <!--Constrain values to tube.-->
+      <value id="max_r_xy" basevalue="1" factors="highway_radius" />
+      <value id="min_z" basevalue="0" />
+      <value id="max_z" basevalue="1" />
+      <!--Handle edge collision-->
+      <value id="v_x" basevalue="-1.25" factors="v_x" abs_factors="x" inv_factors="highway_radius">
+        <conditions>
+          <condition id="value" valueid="rel_r_xy_highway" equals="1" />
+        </conditions>
+      </value>
+      <value id="v_y" basevalue="-1.25" factors="v_y" abs_factors="y" inv_factors="highway_radius">
+        <conditions>
+          <condition id="value" valueid="rel_r_xy_highway" equals="1" />
+        </conditions>
+      </value>
+      <!--Target x/y-->
+      <value id="target_x" basevalue="1" factors="highway_target_x" />
+      <value id="target_y" basevalue="1" factors="highway_target_y" />
+      <!--Slow down when "braking"-->
+      <value id="target_v_z" basevalue="0">
+        <conditions>
+          <condition id="value" valueid="input_z" equals="-1" />
+        </conditions>
+      </value>
+      <!--Steer towards edge while "braking"-->
+      <!--TODO: select direction based on current position-->
+      <value id="target_x" basevalue="-500">
+        <conditions>
+          <condition id="value" valueid="input_z" equals="-1" />
+        </conditions>
+      </value>
+      <value id="target_y" basevalue="-500">
+        <conditions>
+          <condition id="value" valueid="input_z" equals="-1" />
+        </conditions>
+      </value>
+    </values>
+  </scheme>
+  <!--***-->
+  <!--*** Default flight control scheme.-->
+  <!--***-->
+  <scheme identifier="default" refspace="ship">
+    <transformations>
+      <transformation id="rotate_velocity" source="player" />
+    </transformations>
+    <collisionavoidance rayhitscaleexponent="1" raylengthfactor="1.0" diagonalraylengthfactor="0.25" steerpitchfactor="1" steeryawfactor="1" strafeleftrightfactor="1" strafeupdownfactor="2" steerpitchmaxeffect="0.25" steeryawmaxeffect="0.25" strafeleftrightmaxeffect="0.5" strafeupdownmaxeffect="0.75" />
+    <values>
+      <value id="autospeed_delay" basevalue="-1" />
+      <!--Change the base strafe velocity/acceleration. 'basevalue' is the factor by which it will be scaled.-->
+      <value id="minmax_v_xy" basevalue="1.0" factors="minmax_v_xy" />
+      <value id="minmax_a_xy" basevalue="0.2" factors="minmax_a_xy" />
+      <value id="minmax_v_angular" basevalue="1.0" factors="minmax_v_angular" />
+      <value id="minmax_a_angular" basevalue="1.0" factors="minmax_a_angular" />
+      <!--Increase strafe acceleration (by a factor of basevalue+1) in the direction of strafe input-->
+      <value id="minmax_a_x" basevalue="15" abs_factors="input_x" add_to="true" />
+      <value id="minmax_a_y" basevalue="15" abs_factors="input_y" add_to="true" />
+      <!--Increase steering acceleration (by a factor of basevalue+1) in the direction of steering input-->
+      <value id="minmax_a_pitch" basevalue="0.5" abs_factors="input_pitch" add_to="true" />
+      <value id="minmax_a_yaw" basevalue="0.5" abs_factors="input_yaw" add_to="true" />
+      <!--Reduce the forward velocity during steering. 'basevalue' is the maximum factor by which it will be scaled.-->
+      <!--Values range from 0 to -1, where 0 means no effect and -1 means setting forward velocity to 0 when rotating at full speed.-->
+      <!--You can also change the influence from linear to quadratic, cubic or more. See the documentation for the roll speed reduction below for examples.-->
+      <!--Reduction from pitch velocity.-->
+      <!--<value id="max_v_z" basevalue="-0.5" factors="max_v_z" abs_factors="rel_v_pitch" add_to="true" />-->
+      <!--Reduction from yaw velocity.-->
+      <!--<value id="max_v_z" basevalue="-0.5" factors="max_v_z" abs_factors="rel_v_yaw" add_to="true" />-->
+      <!--Reduce roll speed when pitch input (steer up or down) is active. The effect is that roll will not be reset during a looping.-->
+      <!--Changing the base value is probably not desirable here, but the scaling function could be changed, for example to a quadratic one.-->
+      <!--To achieve this just add the input_pitch value a second time to the abs_factors list.-->
+      <!--A quadratic version would then look like abs_factors="input_pitch input_pitch", a cubic version like abs_factors="input_pitch input_pitch input_pitch".-->
+      <value id="minmax_v_roll" basevalue="-1" factors="minmax_v_roll" abs_factors="input_pitch" add_to="true">
+        <conditions>
+          <condition id="player_autoroll_active" />
+        </conditions>
+      </value>
+      <!--<value id="minmax_v_roll" basevalue="-1" factors="minmax_v_roll" abs_factors="input_yaw" add_to="true" />-->
+      <!--Scale down the roll velocity when nearing extreme pitch values.-->
+      <!--The basevalue is -2/PI, so that it becomes -1 when multiplied with the maximum pitch value of PI/2 (90 degrees).-->
+      <value id="minmax_v_roll" basevalue="-0.636619772" factors="minmax_v_roll" abs_factors="pitch" add_to="true">
+        <conditions>
+          <condition id="player_autoroll_active" />
+        </conditions>
+      </value>
+      <value id="minmax_v_roll" basevalue="-0.636619772" factors="minmax_v_roll" abs_factors="pitch" add_to="true">
+        <conditions>
+          <condition id="player_autoroll_active" />
+        </conditions>
+      </value>
+      <value id="minmax_v_roll" basevalue="-0.636619772" factors="minmax_v_roll" abs_factors="pitch" add_to="true">
+        <conditions>
+          <condition id="player_autoroll_active" />
+        </conditions>
+      </value>
+      <!--Roll the ship when steering sideways.-->
+      <!--Set 'basevalue' to the desired maximum angle in radians. PI/2, or about 1.57, is 90 degrees.-->
+      <!--<value id="target_roll" basevalue="1.0" factors="input_yaw rel_v_z max_roll" />-->
+      <value id="target_roll" basevalue="0.4" factors="input_yaw rel_v_z">
+        <conditions>
+          <condition id="player_autoroll_active" />
+        </conditions>
+      </value>
+      <value id="target_roll" basevalue="0.0">
+        <conditions>
+          <condition id="player_boost_active" />
+          <condition id="player_autoroll_active" />
+        </conditions>
+      </value>
+      <!--***-->
+      <!--*** Increase acceleration when going faster than allowed.-->
+      <!--***-->
+      <value id="minmax_a_x" basevalue="1" factors="minmax_a_x rel_v_x rel_v_x" add_to="true" />
+      <value id="minmax_a_y" basevalue="1" factors="minmax_a_y rel_v_y rel_v_y" add_to="true" />
+      <value id="min_a_z" basevalue="1" factors="min_a_z rel_v_z rel_v_z" add_to="true" />
+      <value id="max_a_z" basevalue="1" factors="max_a_z rel_v_z rel_v_z" add_to="true" />
+      <!--***-->
+      <!--*** Increase active deceleration.-->
+      <!--***-->
+      <value id="min_a_z" basevalue="2" factors="min_a_z">
+        <conditions>
+          <condition id="value" valueid="input_z" equals="-1" />
+        </conditions>
+      </value>
+      <!--***-->
+      <!--*** No tweaking values below this point.-->
+      <!--***-->
+      <!--Plain ol' steering and strafing.-->
+      <value id="target_v_x" basevalue="1" factors="input_x max_v_x" />
+      <value id="target_v_y" basevalue="1" factors="input_y max_v_y" />
+      <value id="target_v_z" basevalue="1" factors="input_z input_z input_z max_v_z" />
+      <value id="target_v_pitch" basevalue="1" factors="input_pitch max_v_pitch" />
+      <value id="target_v_yaw" basevalue="1" factors="input_yaw max_v_yaw" />
+      <value id="target_v_roll" basevalue="1" factors="input_roll max_v_roll">
+        <conditions>
+          <condition id="player_autoroll_active" inverted="true" />
+        </conditions>
+      </value>
+      <!--Use maximum forward velocity when boosting, or when auto speed mode has been engaged. This happens when pressing the left shoulder button.-->
+      <!--The mode is deactivated by pulling the left trigger.-->
+      <value id="target_v_z" basevalue="1" factors="max_v_z">
+        <conditions>
+          <condition id="player_autospeed_active" />
+        </conditions>
+      </value>
+      <value id="target_v_z" basevalue="1" factors="max_v_z">
+        <conditions>
+          <condition id="player_boost_active" />
+        </conditions>
+      </value>
+    </values>
+  </scheme>
+</controlschemes>

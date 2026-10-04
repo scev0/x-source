@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<controlschemes>
+  <!--***-->
+  <!--*** Dummy controls for ships following an animated path.-->
+  <!--***-->
+  <scheme identifier="animation" refspace="ship">
+    <conditions>
+      <condition id="player_following_animation" />
+    </conditions>
+    <values>
+      <value id="target_x" basevalue="0" />
+      <value id="target_y" basevalue="0" />
+      <value id="target_z" basevalue="0" />
+      <value id="target_pitch" basevalue="0" />
+      <value id="target_yaw" basevalue="0" />
+      <value id="target_roll" basevalue="0" />
+    </values>
+  </scheme>
+  <!--***-->
+  <!--*** Simplified Highway controls. The player always stays in the middle and flies with a constant velocity.-->
+  <!--***-->
+  <scheme identifier="highway" refspace="zone">
+    <conditions>
+      <condition id="player_in_highway" />
+    </conditions>
+    <values>
+      <value id="target_x" basevalue="0" />
+      <value id="target_y" basevalue="0" />
+      <value id="target_pitch" basevalue="0" />
+      <value id="target_yaw" basevalue="0" />
+      <value id="target_roll" basevalue="0" />
+      <!--@Bernd: change the basevalue to change the forward speed of the ship in the highway.-->
+      <value id="v_z" basevalue="1" factors="highway_min_v_z" />
+    </values>
+  </scheme>
+  <!--***-->
+  <!--*** Default flight control scheme. These are basically the normal game controls, but with much slower speeds and accelerations so it's easier to have smoother movement.-->
+  <!--***-->
+  <scheme identifier="default" refspace="ship">
+    <transformations>
+      <transformation id="rotate_velocity" source="player" />
+    </transformations>
+    <values>
+      <!--@Bernd: change the basevalue to change the maximum strafing velocity-->
+      <value id="minmax_v_xy" basevalue="0.25" factors="minmax_v_xy" />
+      <!--@Bernd: change the basevalue to change the maximum strafing acceleration (i.e. how long it takes to change the velocity)-->
+      <value id="minmax_a_xy" basevalue="0.25" factors="minmax_a_xy" />
+      <!--@Bernd: change the basevalue to change the maximum forward velocity-->
+      <value id="max_v_z" basevalue="0.25" factors="max_v_z" />
+      <!--@Bernd: change the basevalue to change the maximum forward acceleration (i.e. how long it takes to change the velocity)-->
+      <value id="max_a_z" basevalue="0.25" factors="max_a_z" />
+      <!--@Bernd: change the basevalue to change the maximum reverse velocity-->
+      <value id="min_v_z" basevalue="1.0" factors="min_v_z" />
+      <!--@Bernd: change the basevalue to change the maximum reverse acceleration (i.e. how long it takes to change the velocity)-->
+      <value id="min_a_z" basevalue="1.0" factors="min_a_z" />
+      <!--@Bernd: change the basevalue to change the maximum rotation velocity-->
+      <value id="minmax_v_angular" basevalue="0.25" factors="minmax_v_angular" />
+      <!--@Bernd: change the basevalue to change the maximum rotation acceleration (i.e. how long it takes to change the velocity)-->
+      <value id="minmax_a_angular" basevalue="0.05" factors="minmax_a_angular" />
+      <!--the values below this point should not be of interest-->
+      <value id="target_v_x" basevalue="1" factors="input_x max_v_x" />
+      <value id="target_v_y" basevalue="1" factors="input_y max_v_y" />
+      <value id="target_v_z" basevalue="1" factors="input_z max_v_z" />
+      <value id="target_v_pitch" basevalue="1" factors="input_pitch max_v_pitch" />
+      <value id="target_v_yaw" basevalue="1" factors="input_yaw max_v_yaw" />
+      <value id="target_roll" basevalue="0" />
+    </values>
+  </scheme>
+</controlschemes>

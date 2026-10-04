@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sequencestates SYSTEM "animation_sequences.dtd" >
+<sequencestates>
+  <!-- Door states -->
+  <state name="doors_closed">
+    <transition nextstate="doors_opening" trigger="open_doors" />
+  </state>
+  <state name="doors_opening">
+    <transition nextstate="doors_open" />
+  </state>
+  <state name="doors_open">
+    <transition nextstate="doors_closing" trigger="close_doors" />
+  </state>
+  <state name="doors_closing">
+    <transition nextstate="doors_closed" />
+  </state>
+  <!-- Door2 states -->
+  <state name="doors2_closed">
+    <transition nextstate="doors2_opening" trigger="open_doors2" />
+  </state>
+  <state name="doors2_opening">
+    <transition nextstate="doors2_open" />
+  </state>
+  <state name="doors2_open">
+    <transition nextstate="doors2_closing" trigger="close_doors2" />
+  </state>
+  <state name="doors2_closing">
+    <transition nextstate="doors2_closed" />
+  </state>
+  <!-- Scrap Hatch states -->
+  <state name="scraphatch_closed">
+    <transition nextstate="scraphatch_opening" trigger="open_scraphatch" />
+  </state>
+  <state name="scraphatch_opening">
+    <transition nextstate="scraphatch_open" />
+  </state>
+  <state name="scraphatch_open">
+    <transition nextstate="scraphatch_closing" trigger="close_scraphatch" />
+  </state>
+  <state name="scraphatch_closing">
+    <transition nextstate="scraphatch_closed" />
+  </state>
+  <!-- Drone states -->
+  <state name="flymode">
+    <transition nextstate="attackmode_activating" trigger="activate" />
+    <transition nextstate="attackmode_activating" trigger="battlestate_red" />
+    <transition nextstate="attackmode_activating" trigger="battlestate_yellow" />
+  </state>
+  <state name="attackmode_activating">
+    <transition nextstate="attackmode" />
+  </state>
+  <state name="attackmode">
+    <transition nextstate="attackmode_deactivating" trigger="deactivate" />
+    <transition nextstate="attackmode_deactivating" trigger="battlestate_jumpprep" />
+  </state>
+  <state name="attackmode_deactivating">
+    <transition nextstate="flymode" />
+  </state>
+  <!-- Turret activation and deactivation - WARNING: Hardcoded check for "turret_active" in x4-code -->
+  <state name="turret_inactive">
+    <transition nextstate="turret_activating" trigger="activate" />
+    <transition nextstate="turret_activating" trigger="battlestate_red" />
+    <transition nextstate="turret_activating" trigger="battlestate_yellow" />
+  </state>
+  <state name="turret_activating">
+    <transition nextstate="turret_active" />
+  </state>
+  <state name="turret_active">
+    <transition nextstate="turret_deactivating" trigger="deactivate" />
+    <transition nextstate="turret_deactivating" trigger="battlestate_jumpprep" />
+    <transition nextstate="gun_firing" trigger="fire" />
+  </state>
+  <state name="gun_firing">
+    <transition nextstate="turret_active" />
+  </state>
+  <state name="turret_deactivating">
+    <transition nextstate="turret_inactive" />
+  </state>
+  <!-- TurretLOOP activation and deactivation - WARNING: Hardcoded check for "turretloop_active" in x4-code  -->
+  <state name="turretloop_inactive">
+    <transition nextstate="turretloop_activating" trigger="activate" />
+    <transition nextstate="turretloop_activating" trigger="battlestate_red" />
+    <transition nextstate="turretloop_activating" trigger="battlestate_yellow" />
+  </state>
+  <state name="turretloop_activating">
+    <transition nextstate="turretloop_active" />
+  </state>
+  <state name="turretloop_active">
+    <transition nextstate="turretloop_active" />
+    <transition nextstate="turretloop_deactivating" trigger="deactivate" />
+    <transition nextstate="turretloop_deactivating" trigger="battlestate_jumpprep" />
+    <transition nextstate="turretloop_firing" trigger="fire" />
+  </state>
+  <state name="turretloop_firing">
+    <transition nextstate="turretloop_active" />
+  </state>
+  <state name="turretloop_deactivating">
+    <transition nextstate="turretloop_inactive" />
+  </state>
+  <!-- Turret hatch activation and deactivation -->
+  <state name="turrethatch_inactive">
+    <transition nextstate="turrethatch_activating" trigger="activate_turret_hatch" />
+  </state>
+  <state name="turrethatch_activating">
+    <transition nextstate="turrethatch_active" />
+  </state>
+  <state name="turrethatch_active">
+    <transition nextstate="turrethatch_deactivating" trigger="deactivate_turret_hatch" />
+  </state>
+  <state name="turrethatch_deactivating">
+    <transition nextstate="turrethatch_inactive" />
+  </state>
+  <!-- Pods activation and deactivation -->
+  <state name="pods_inactive">
+    <transition nextstate="pods_activating" trigger="activate" />
+    <transition nextstate="pods_activating" trigger="battlestate_red" />
+    <transition nextstate="pods_activating" trigger="battlestate_yellow" />
+  </state>
+  <state name="pods_activating">
+    <transition nextstate="pods_active" />
+  </state>
+  <state name="pods_active">
+    <transition nextstate="pods_deactivating" trigger="deactivate" />
+    <transition nextstate="pods_deactivating" trigger="battlestate_jumpprep" />
+  </state>
+  <state name="pods_deactivating">
+    <transition nextstate="pods_inactive" />
+  </state>
+  <!-- Weapon firing states -->
+  <state name="weapon_firing">
+    <transition nextstate="weapon_firing" trigger="fire" />
+  </state>
+
+  <!-- chair states (default configuration) -->
+  <state name="chair_default_inactive">
+    <!-- chair is not occupied -->
+    <transition nextstate="chair_default_activating" trigger="activate_chair" />
+    <transition nextstate="chair_default_to_paranid" trigger="chairconfig_paranid" />
+  </state>
+  <state name="chair_default_activating">
+    <!-- person sat down, chair is moving to 'active' position -->
+    <transition nextstate="chair_default_active" />
+  </state>
+  <state name="chair_default_active">
+    <!-- chair is occupied -->
+    <transition nextstate="chair_default_deactivating" trigger="deactivate_chair" />
+  </state>
+  <state name="chair_default_deactivating">
+    <!-- person wants to get up, chair is moving to 'inactive' position -->
+    <transition nextstate="chair_default_inactive" />
+  </state>
+  <!-- chair states (paranid configuration) -->
+  <state name="chair_paranid_inactive">
+    <!-- chair is not occupied -->
+    <transition nextstate="chair_paranid_activating" trigger="activate_chair" />
+    <transition nextstate="chair_paranid_to_default" trigger="chairconfig_default" />
+  </state>
+  <state name="chair_paranid_activating">
+    <!-- person sat down, chair is moving to 'active' position -->
+    <transition nextstate="chair_paranid_active" />
+  </state>
+  <state name="chair_paranid_active">
+    <!-- chair is occupied -->
+    <transition nextstate="chair_paranid_deactivating" trigger="deactivate_chair" />
+  </state>
+  <state name="chair_paranid_deactivating">
+    <!-- person wants to get up, chair is moving to 'inactive' position -->
+    <transition nextstate="chair_paranid_inactive" />
+  </state>
+  <!-- transition states between chair configurations -->
+  <state name="chair_default_to_paranid">
+    <!-- chair is moving from default to to paranid configuration -->
+    <transition nextstate="chair_paranid_inactive" />
+  </state>
+  <state name="chair_paranid_to_default">
+    <!-- chair is changing from paranid to default configuration -->
+    <transition nextstate="chair_default_inactive" />
+  </state>
+
+  <!-- chair states (mock UI hologram for NPCs on/off) -->
+  <state name="chair_holo_inactive">
+    <transition nextstate="chair_holo_activating" trigger="activate_chair_holo" />
+  </state>
+  <state name="chair_holo_activating">
+    <transition nextstate="chair_holo_active" />
+  </state>
+  <state name="chair_holo_active">
+    <transition nextstate="chair_holo_active" />
+    <transition nextstate="chair_holo_deactivating" trigger="deactivate_chair_holo" />
+  </state>
+  <state name="chair_holo_deactivating">
+    <transition nextstate="chair_holo_inactive" />
+  </state>
+
+  <!-- pilot holo controls on chair -->
+  <state name="chair_steering_inactive">
+    <transition nextstate="chair_steering_activating" trigger="activate_chair_steering" />
+    <transition nextstate="chair_steering_par_activating" trigger="activate_chair_steering_par" />
+  </state>
+  <state name="chair_steering_activating">
+    <transition nextstate="chair_steering_active" />
+  </state>
+  <state name="chair_steering_active">
+    <transition nextstate="chair_steering_deactivating" trigger="deactivate_chair_steering" />
+  </state>
+  <state name="chair_steering_deactivating">
+    <transition nextstate="chair_steering_inactive" />
+  </state>
+  <state name="chair_steering_par_activating">
+    <transition nextstate="chair_steering_par_active" />
+  </state>
+  <state name="chair_steering_par_active">
+    <transition nextstate="chair_steering_par_deactivating" trigger="deactivate_chair_steering" />
+  </state>
+  <state name="chair_steering_par_deactivating">
+    <transition nextstate="chair_steering_inactive" />
+  </state>
+
+  <!-- Damage states -->
+  <state name="cockpit_damagestate_none">
+    <transition nextstate="cockpit_damagestate_low" trigger="damage_low" />
+    <transition nextstate="cockpit_damagestate_medium" trigger="damage_medium" />
+    <transition nextstate="cockpit_damagestate_high" trigger="damage_high" />
+  </state>
+  <state name="cockpit_damagestate_low">
+    <transition nextstate="cockpit_damagestate_none" trigger="damage_none" />
+    <transition nextstate="cockpit_damagestate_medium" trigger="damage_medium" />
+    <transition nextstate="cockpit_damagestate_high" trigger="damage_high" />
+  </state>
+  <state name="cockpit_damagestate_medium">
+    <transition nextstate="cockpit_damagestate_none" trigger="damage_none" />
+    <transition nextstate="cockpit_damagestate_low" trigger="damage_low" />
+    <transition nextstate="cockpit_damagestate_high" trigger="damage_high" />
+  </state>
+  <state name="cockpit_damagestate_high">
+    <transition nextstate="cockpit_damagestate_none" trigger="damage_none" />
+    <transition nextstate="cockpit_damagestate_low" trigger="damage_low" />
+    <transition nextstate="cockpit_damagestate_medium" trigger="damage_medium" />
+  </state>
+  <state name="cockpit_closed">
+    <transition nextstate="cockpit_opening" trigger="open_cockpit" />
+  </state>
+  <state name="cockpit_opening">
+    <transition nextstate="cockpit_open" />
+  </state>
+  <state name="cockpit_open">
+    <transition nextstate="cockpit_open" />
+    <transition nextstate="cockpit_closing" trigger="close_cockpit" />
+  </state>
+  <state name="cockpit_closing">
+    <transition nextstate="cockpit_closed" />
+  </state>
+  <state name="cockpit_inactive">
+    <transition nextstate="cockpit_activating" trigger="activate_cockpit" />
+  </state>
+  <state name="cockpit_activating">
+    <transition nextstate="cockpit_active" />
+  </state>
+  <state name="cockpit_active">
+    <transition nextstate="cockpit_active" />
+    <transition nextstate="cockpit_deactivating" trigger="deactivate_cockpit" />
+  </state>
+  <state name="cockpit_deactivating">
+    <transition nextstate="cockpit_inactive" />
+  </state>
+  <!-- Alarm / battle states -->
+  <state name="battlestate_green">
+    <transition nextstate="battlestate_green_to_red" trigger="battlestate_red" />
+  </state>
+  <state name="battlestate_green_to_red">
+    <transition nextstate="battlestate_red" />
+  </state>
+  <state name="battlestate_red">
+    <transition nextstate="battlestate_red_to_green" trigger="battlestate_jumpprep" />
+  </state>
+  <state name="battlestate_red_to_green">
+    <transition nextstate="battlestate_green" />
+  </state>
+  <!-- Generic states -->
+  <state name="loop">
+    <transition nextstate="loop" />
+  </state>
+  <state name="loop3_1">
+    <transition nextstate="loop3_2" />
+  </state>
+  <state name="loop3_2">
+    <transition nextstate="loop3_3" />
+  </state>
+  <state name="loop3_3">
+    <transition nextstate="loop3_1" />
+  </state>
+  <state name="loop4_1">
+    <transition nextstate="loop4_2" />
+  </state>
+  <state name="loop4_2">
+    <transition nextstate="loop4_3" />
+  </state>
+  <state name="loop4_3">
+    <transition nextstate="loop4_4" />
+  </state>
+  <state name="loop4_4">
+    <transition nextstate="loop4_1" />
+  </state>
+  <state name="flip">
+    <transition nextstate="flop" />
+  </state>
+  <state name="flop">
+    <transition nextstate="flip" />
+  </state>
+  <state name="loop_random" random="1">
+    <transition nextstate="loop_random" />
+  </state>
+  <state name="repeat">
+    <transition nextstate="repeat" />
+  </state>
+  <state name="playonce2">
+    <transition nextstate="stopped2" />
+  </state>
+  <state name="stopped2"></state>
+  <state name="playonce"></state>
+  <state name="spin_up"></state>
+  <state name="spin_down"></state>
+  <state name="deactivated">
+    <transition nextstate="activating" trigger="activate" />
+  </state>
+  <state name="activating">
+    <transition nextstate="active" />
+  </state>
+  <state name="active">
+    <transition nextstate="deactivating" trigger="deactivate" />
+  </state>
+  <state name="deactivating">
+    <transition nextstate="deactivated" />
+  </state>
+  <state name="chargedeactivated">
+    <transition nextstate="chargeactivating" trigger="chargeon"/>
+    <transition nextstate="chargedeactivated" />
+  </state>
+  <state name="chargeactivating">
+    <transition nextstate="chargeactive" />
+  </state>
+  <state name="chargeactive">
+    <transition nextstate="chargedeactivating" trigger="chargeoff"/>
+    <transition nextstate="chargeactive" />
+  </state>
+  <state name="chargedeactivating">
+    <transition nextstate="chargedeactivated" />
+  </state>
+  <state name="gatedeactivated">
+    <transition nextstate="gateactivating" trigger="gateon"/>
+    <transition nextstate="gatedeactivated" />
+  </state>
+  <state name="gateactivating">
+    <transition nextstate="gatedeactivated" />
+  </state>
+  <state name="bulletstart">
+    <transition nextstate="loop" />
+  </state>
+  <state name="mode_inactive">
+    <transition nextstate="mode_activating" trigger="activate" />
+  </state>
+  <state name="mode_activating">
+    <transition nextstate="mode_active" />
+    <transition nextstate="mode_abort" trigger="abort" />
+  </state>
+  <state name="mode_active">
+    <transition nextstate="mode_active" />
+    <transition nextstate="mode_deactivating" trigger="deactivate" />
+    <transition nextstate="mode_abort" trigger="abort" />
+  </state>
+  <state name="mode_active_random" random="1">
+    <transition nextstate="mode_active_random" />
+    <transition nextstate="mode_deactivating" trigger="deactivate" />
+  </state>
+  <state name="mode_deactivating">
+    <transition nextstate="mode_inactive" />
+  </state>
+  <state name="mode_abort">
+    <transition nextstate="mode_inactive" />
+  </state>
+  <state name="tlopa" random="1">
+    <transition nextstate="tlopb" autostart="3"/>
+  </state>
+  <state name="tlopb">
+    <transition nextstate="tlopa" autostart="3"/>
+  </state>
+  <state name="train_move01">
+    <transition nextstate="train_wait01" />
+  </state>
+  <state name="train_wait01">
+    <transition nextstate="train_move02" />
+  </state>
+  <state name="train_move02">
+    <transition nextstate="train_wait02" />
+  </state>
+  <state name="train_wait02">
+    <transition nextstate="train_move03" />
+  </state>
+  <state name="train_move03">
+    <transition nextstate="train_wait03" />
+  </state>
+  <state name="train_wait03">
+    <transition nextstate="train_move04" />
+  </state>
+  <state name="train_move04">
+    <transition nextstate="train_wait04" />
+  </state>
+  <state name="train_wait04">
+    <transition nextstate="train_move01" />
+  </state>
+  <state name="loop_active">
+    <transition nextstate="loop_active" />
+    <transition nextstate="loop_inactive" trigger="deactivate" />
+  </state>
+  <state name="loop_inactive">
+    <transition nextstate="loop_active" trigger="activate" />
+  </state>
+  <state name="landinggears_inactive">
+    <transition nextstate="landinggears_activating" trigger="activate_landinggears" />
+  </state>
+  <state name="landinggears_activating">
+    <transition nextstate="landinggears_active" />
+  </state>
+  <state name="landinggears_active">
+    <transition nextstate="landinggears_deactivating" trigger="deactivate_landinggears" />
+  </state>
+  <state name="landinggears_deactivating">
+    <transition nextstate="landinggears_inactive" />
+  </state>
+  <state name="fan_deactivated">
+    <transition nextstate="fan_activating" trigger="activate" />
+  </state>
+  <state name="fan_activating">
+    <transition nextstate="fan_active" />
+  </state>
+  <state name="fan_active">
+    <transition nextstate="fan_deactivating" trigger="deactivate" />
+    <transition nextstate="fan_active"/>
+  </state>
+  <state name="fan_deactivating">
+    <transition nextstate="fan_deactivated" />
+  </state>
+  <state name="landingeffects_inactive">
+    <transition nextstate="landingeffects_activating" trigger="activate_landinggears" />
+  </state>
+  <state name="landingeffects_activating">
+    <transition nextstate="landingeffects_active" />
+  </state>
+  <state name="landingeffects_active">
+    <transition nextstate="landingeffects_deactivating" trigger="deactivate_landinggears" />
+  </state>
+  <state name="landingeffects_deactivating">
+    <transition nextstate="landingeffects_inactive" />
+  </state>
+  <state name="lasertower_inactive">
+    <transition nextstate="lasertower_activating" trigger="activate" />
+  </state>
+  <state name="lasertower_activating">
+    <transition nextstate="lasertower_activeloop" />
+  </state>
+  <state name="lasertower_activeloop">
+    <transition nextstate="lasertower_activeloop" />
+    <transition nextstate="lasertower_deactivating" trigger="deactivate" />
+  </state>
+  <state name="lasertower_deactivating">
+    <transition nextstate="lasertower_inactive" />
+  </state>
+  <state name="dockguidance_inactive">
+    <transition nextstate="dockguidance_activating" trigger="activate_dockguidance" />
+  </state>
+  <state name="dockguidance_activating">
+    <transition nextstate="dockguidance_active" />
+  </state>
+  <state name="dockguidance_active">
+    <!-- the "active" state of dock guidance should loop -->
+    <transition nextstate="dockguidance_active" />
+    <transition nextstate="dockguidance_deactivating" trigger="deactivate_dockguidance" />
+  </state>
+  <state name="dockguidance_deactivating">
+    <transition nextstate="dockguidance_inactive" />
+  </state>
+  <state name="dockingbay_unassigned">
+    <transition nextstate="dockingbay_assigning" trigger="assign_dockingbay" />
+  </state>
+  <state name="dockingbay_assigning">
+    <transition nextstate="dockingbay_assigned" />
+  </state>
+  <state name="dockingbay_assigned">
+    <transition nextstate="dockingbay_assigned" />
+    <transition nextstate="dockingbay_unassigning" trigger="unassign_dockingbay" />
+  </state>
+  <state name="dockingbay_unassigning">
+    <transition nextstate="dockingbay_unassigned" />
+  </state>
+  <state name="dockingbay_warning_inactive">
+    <transition nextstate="dockingbay_warning_activating" trigger="activate_dockingbay_warning" />
+  </state>
+  <state name="dockingbay_warning_activating">
+    <transition nextstate="dockingbay_warning_active" />
+  </state>
+  <state name="dockingbay_warning_active">
+    <transition nextstate="dockingbay_warning_active" />
+    <transition nextstate="dockingbay_warning_deactivating" trigger="deactivate_dockingbay_warning" />
+  </state>
+  <state name="dockingbay_warning_deactivating">
+    <transition nextstate="dockingbay_warning_inactive" />
+  </state>
+  <state name="dockingbay_closed">
+    <transition nextstate="dockingbay_opening" trigger="open_dockingbay" />
+  </state>
+  <state name="dockingbay_opening">
+    <transition nextstate="dockingbay_open" />
+  </state>
+  <state name="dockingbay_open">
+    <transition nextstate="dockingbay_closing" trigger="close_dockingbay" />
+  </state>
+  <state name="dockingbay_closing">
+    <transition nextstate="dockingbay_closed" />
+  </state>
+  <state name="dockingbay_fence_closed">
+    <transition nextstate="dockingbay_fence_opening" trigger="open_dockingbay_fence" />
+  </state>
+  <state name="dockingbay_fence_opening">
+    <transition nextstate="dockingbay_fence_open" />
+  </state>
+  <state name="dockingbay_fence_open">
+    <transition nextstate="dockingbay_fence_closing" trigger="close_dockingbay_fence" />
+  </state>
+  <state name="dockingbay_fence_closing">
+    <transition nextstate="dockingbay_fence_closed" />
+  </state>
+  <state name="dockingbay_idle">
+    <transition nextstate="dockingbay_storingship" trigger="store_ship" />
+    <transition nextstate="dockingbay_storingship_faster" trigger="store_ship_faster" />
+    <transition nextstate="dockingbay_storingship_fastest" trigger="store_ship_fastest" />
+    <transition nextstate="dockingbay_retrievingship" trigger="retrieve_ship" />
+    <transition nextstate="dockingbay_retrievingship_faster" trigger="retrieve_ship_faster" />
+    <transition nextstate="dockingbay_retrievingship_fastest" trigger="retrieve_ship_fastest" />
+  </state>
+  <state name="dockingbay_storingship">
+    <transition nextstate="dockingbay_idle" />
+  </state>
+  <state name="dockingbay_storingship_faster">
+    <transition nextstate="dockingbay_idle" />
+  </state>
+  <state name="dockingbay_storingship_fastest">
+    <transition nextstate="dockingbay_idle" />
+  </state>
+  <state name="dockingbay_retrievingship">
+    <transition nextstate="dockingbay_idle" />
+  </state>
+  <state name="dockingbay_retrievingship_faster">
+    <transition nextstate="dockingbay_idle" />
+  </state>
+  <state name="dockingbay_retrievingship_fastest">
+    <transition nextstate="dockingbay_idle" />
+  </state>
+
+  <state name="switchable01_inactive">
+    <transition nextstate="switchable01_activating" trigger="switch01" />
+  </state>
+  <state name="switchable01_activating">
+    <transition nextstate="switchable01_active" />
+  </state>
+  <state name="switchable01_active">
+    <transition nextstate="switchable01_deactivating" trigger="switch01" />
+  </state>
+  <state name="switchable01_deactivating">
+    <transition nextstate="switchable01_inactive" />
+  </state>
+  <state name="switchable02_inactive">
+    <transition nextstate="switchable02_activating" trigger="switch02" />
+  </state>
+  <state name="switchable02_activating">
+    <transition nextstate="switchable02_active" />
+  </state>
+  <state name="switchable02_active">
+    <transition nextstate="switchable02_deactivating" trigger="switch02" />
+  </state>
+  <state name="switchable02_deactivating">
+    <transition nextstate="switchable02_inactive" />
+  </state>
+  <state name="switchable03_inactive">
+    <transition nextstate="switchable03_activating" trigger="switch03" />
+  </state>
+  <state name="switchable03_activating">
+    <transition nextstate="switchable03_active" />
+  </state>
+  <state name="switchable03_active">
+    <transition nextstate="switchable03_deactivating" trigger="switch03" />
+  </state>
+  <state name="switchable03_deactivating">
+    <transition nextstate="switchable03_inactive" />
+  </state>
+
+  <state name="signal_normalmode">
+    <transition nextstate="signal_normalmode" />
+    <transition nextstate="signal_scanmode" trigger="startscan01"/>
+    <transition nextstate="signal_scanmode" trigger="startscan02"/>
+    <transition nextstate="signal_scanmode" trigger="startscan03"/>
+  </state>
+  <state name="signal_scanmode">
+    <transition nextstate="signal_scanmode" />
+    <transition nextstate="signal_scanmode" trigger="startscan01"/>
+    <transition nextstate="signal_scanmode" trigger="startscan02"/>
+    <transition nextstate="signal_scanmode" trigger="startscan03"/>
+    <transition nextstate="signal_normalmode" trigger="stopscan"/>
+  </state>
+
+  <!-- Lock/unlock states -->
+  <state name="locked">
+    <transition nextstate="unlocking" trigger="unlock" />
+  </state>
+  <state name="unlocking">
+    <transition nextstate="unlocked" />
+  </state>
+  <state name="unlocked">
+    <transition nextstate="locking" trigger="lock" />
+  </state>
+  <state name="locking">
+    <transition nextstate="locked" />
+  </state>
+
+  <!-- DO NOT USE! THIS IS INTERNAL STUFF - ASK SIMON OR MARTIN ABOUT IT -->
+  <state name="scaling_range"></state>
+  <state name="cutsceneloop">
+    <transition nextstate="gamestart1" trigger="gamestart1"/>
+    <transition nextstate="gamestart1" trigger="gamestart2"/>
+    <transition nextstate="gamestart3" trigger="gamestart3"/>
+    <transition nextstate="gamestart4" trigger="gamestart4"/>
+    <transition nextstate="gamestart5" trigger="gamestart5"/>
+    <transition nextstate="cutsceneloop"/>
+  </state>
+  <state name="gamestart1">
+    <transition nextstate="cutsceneloop"/>
+  </state>
+  <state name="gamestart2">
+    <transition nextstate="cutsceneloop"/>
+  </state>
+  <state name="gamestart3">
+    <transition nextstate="cutsceneloop"/>
+  </state>
+  <state name="gamestart4">
+    <transition nextstate="cutsceneloop"/>
+  </state>
+  <state name="gamestart5">
+    <transition nextstate="cutsceneloop"/>
+  </state>
+
+  <state name="interiorbar_music_default">
+    <transition nextstate="interiorbar_music_default"/>
+    <transition nextstate="interiorbar_music_01" trigger="music_01"/>
+    <transition nextstate="interiorbar_music_02" trigger="music_02"/>
+    <transition nextstate="interiorbar_music_03" trigger="music_03"/>
+    <transition nextstate="interiorbar_music_04" trigger="music_04"/>
+    <transition nextstate="interiorbar_music_off" trigger="music_off"/>
+    <transition nextstate="interiorbar_music_01" trigger="music_next"/>
+  </state>
+  <state name="interiorbar_music_01">
+    <transition nextstate="interiorbar_music_01"/>
+    <transition nextstate="interiorbar_music_default" trigger="music_default"/>
+    <transition nextstate="interiorbar_music_02" trigger="music_02"/>
+    <transition nextstate="interiorbar_music_03" trigger="music_03"/>
+    <transition nextstate="interiorbar_music_04" trigger="music_04"/>
+    <transition nextstate="interiorbar_music_off" trigger="music_off"/>
+    <transition nextstate="interiorbar_music_02" trigger="music_next"/>
+  </state>
+  <state name="interiorbar_music_02">
+    <transition nextstate="interiorbar_music_02"/>
+    <transition nextstate="interiorbar_music_default" trigger="music_default"/>
+    <transition nextstate="interiorbar_music_01" trigger="music_01"/>
+    <transition nextstate="interiorbar_music_03" trigger="music_03"/>
+    <transition nextstate="interiorbar_music_04" trigger="music_04"/>
+    <transition nextstate="interiorbar_music_off" trigger="music_off"/>
+    <transition nextstate="interiorbar_music_03" trigger="music_next"/>
+  </state>
+  <state name="interiorbar_music_03">
+    <transition nextstate="interiorbar_music_03"/>
+    <transition nextstate="interiorbar_music_default" trigger="music_default"/>
+    <transition nextstate="interiorbar_music_01" trigger="music_01"/>
+    <transition nextstate="interiorbar_music_02" trigger="music_02"/>
+    <transition nextstate="interiorbar_music_04" trigger="music_04"/>
+    <transition nextstate="interiorbar_music_off" trigger="music_off"/>
+    <transition nextstate="interiorbar_music_04" trigger="music_next"/>
+  </state>
+  <state name="interiorbar_music_04">
+    <transition nextstate="interiorbar_music_04"/>
+    <transition nextstate="interiorbar_music_default" trigger="music_default"/>
+    <transition nextstate="interiorbar_music_01" trigger="music_01"/>
+    <transition nextstate="interiorbar_music_02" trigger="music_02"/>
+    <transition nextstate="interiorbar_music_03" trigger="music_03"/>
+    <transition nextstate="interiorbar_music_off" trigger="music_off"/>
+    <transition nextstate="interiorbar_music_default" trigger="music_next"/>
+  </state>
+  <state name="interiorbar_music_off">
+    <transition nextstate="interiorbar_music_off"/>
+    <transition nextstate="interiorbar_music_default" trigger="music_default"/>
+    <transition nextstate="interiorbar_music_01" trigger="music_01"/>
+    <transition nextstate="interiorbar_music_02" trigger="music_02"/>
+    <transition nextstate="interiorbar_music_03" trigger="music_03"/>
+    <transition nextstate="interiorbar_music_04" trigger="music_04"/>
+    <transition nextstate="interiorbar_music_default" trigger="music_next"/>
+  </state>
+  <state name="function_inactive">
+    <transition nextstate="function_activating" trigger="functionregained" />
+  </state>
+  <state name="function_activating">
+    <transition nextstate="function_active" />
+  </state>
+  <state name="function_active">
+    <transition nextstate="function_deactivating" trigger="functionlost" />
+  </state>
+  <state name="function_deactivating">
+    <transition nextstate="function_inactive" />
+  </state>
+  <state name="detector_inactive">
+    <transition nextstate="detector_activating" trigger="detectionstarted" />
+  </state>
+  <state name="detector_activating">
+    <transition nextstate="detector_active" />
+  </state>
+  <state name="detector_active">
+    <transition nextstate="detector_deactivating" trigger="detectionstopped" />
+  </state>
+  <state name="detector_deactivating">
+    <transition nextstate="detector_inactive" />
+  </state>
+  <state name="influence_inactive">
+    <transition nextstate="influence_activating" trigger="influencestarted" />
+  </state>
+  <state name="influence_activating">
+    <transition nextstate="influence_active" />
+  </state>
+  <state name="influence_active">
+    <transition nextstate="influence_deactivating" trigger="influencestopped" />
+  </state>
+  <state name="influence_deactivating">
+    <transition nextstate="influence_inactive" />
+  </state>
+  <state name="bubble_activating">
+    <transition nextstate="bubble_active" />
+  </state>
+  <state name="bubble_active">
+    <transition nextstate="bubble_active" />
+    <transition nextstate="bubble_size1anim" trigger="shrinkbubble"/>
+  </state>
+  <state name="bubble_size1anim">
+    <transition nextstate="bubble_size1" />
+  </state>
+  <state name="bubble_size1">
+    <transition nextstate="bubble_size1" />
+    <transition nextstate="bubble_size2anim" trigger="shrinkbubble"/>
+  </state>
+  <state name="bubble_size2anim">
+    <transition nextstate="bubble_size2" />
+  </state>
+  <state name="bubble_size2">
+    <transition nextstate="bubble_size2" />
+    <transition nextstate="bubble_size3anim" trigger="shrinkbubble"/>
+  </state>
+  <state name="bubble_size3anim">
+    <transition nextstate="bubble_size3" />
+  </state>
+  <state name="bubble_size3">
+    <transition nextstate="bubble_size3" />
+    <transition nextstate="bubble_size4anim" trigger="shrinkbubble"/>
+  </state>
+  <state name="bubble_size4anim">
+    <transition nextstate="bubble_size4" />
+  </state>
+  <state name="bubble_size4">
+    <transition nextstate="bubble_collapse" trigger="collapsebubble"/>
+  </state>
+  <state name="bubble_collapse">
+  </state>
+
+  <state name="shipcontrol_inactive">
+    <transition nextstate="shipcontrol_activating" trigger="startcontrol" />
+  </state>
+  <state name="shipcontrol_activating">
+    <transition nextstate="shipcontrol_active" />
+  </state>
+  <state name="shipcontrol_active">
+    <transition nextstate="shipcontrol_deactivating" trigger="stopcontrol" />
+  </state>
+  <state name="shipcontrol_deactivating">
+    <transition nextstate="shipcontrol_inactive" />
+  </state>
+  <state name="anomaly_unstable">
+    <transition nextstate="anomaly_unstable" />
+    <transition nextstate="anomaly_stabilizing_player" trigger="stabilize_anomaly" />
+  </state>
+  <state name="anomaly_stabilizing_player">
+    <transition nextstate="anomaly_stabilized_player" />
+  </state>
+  <state name="anomaly_stabilized_player">
+    <transition nextstate="anomaly_stabilized_player" />
+    <transition nextstate="anomaly_stabilizing_smallships" trigger="stabilize_anomaly" />
+  </state>
+  <state name="anomaly_stabilizing_smallships">
+    <transition nextstate="anomaly_stabilized_smallships" />
+  </state>
+  <state name="anomaly_stabilized_smallships">
+    <transition nextstate="anomaly_stabilized_smallships" />
+    <transition nextstate="anomaly_stabilizing_capships" trigger="stabilize_anomaly" />
+  </state>
+  <state name="anomaly_stabilizing_capships">
+    <transition nextstate="anomaly_stabilized_capships" />
+  </state>
+  <state name="anomaly_stabilized_capships">
+    <transition nextstate="anomaly_stabilized_capships" />
+    <transition nextstate="anomaly_networkintegrating" trigger="stabilize_anomaly" />
+  </state>
+  <state name="anomaly_networkintegrating">
+    <transition nextstate="anomaly_networkintegrated" />
+  </state>
+  <state name="anomaly_networkintegrated">
+    <transition nextstate="anomaly_networkintegrated" />
+  </state>
+  <!--below states are disabled for now due to animation sequence system issues with double triggers-->
+  <!--state name="startmenu_begin">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama1"/>
+      <select weight="1" nextstate="startmenu_diorama2"/>
+      <select weight="1" nextstate="startmenu_diorama3"/>
+      <select weight="1" nextstate="startmenu_diorama4"/>
+      <select weight="1" nextstate="startmenu_diorama5"/>
+      <select weight="1" nextstate="startmenu_diorama6"/>
+    </transition>
+  </state>
+  <state name="startmenu_diorama1">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama2"/>
+      <select weight="1" nextstate="startmenu_diorama3"/>
+      <select weight="1" nextstate="startmenu_diorama4"/>
+      <select weight="1" nextstate="startmenu_diorama5"/>
+      <select weight="1" nextstate="startmenu_diorama6"/>
+    </transition>
+  </state>
+  <state name="startmenu_diorama2">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama1"/>
+      <select weight="1" nextstate="startmenu_diorama3"/>
+      <select weight="1" nextstate="startmenu_diorama4"/>
+      <select weight="1" nextstate="startmenu_diorama5"/>
+      <select weight="1" nextstate="startmenu_diorama6"/>
+    </transition>
+  </state>
+  <state name="startmenu_diorama3">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama1"/>
+      <select weight="1" nextstate="startmenu_diorama2"/>
+      <select weight="1" nextstate="startmenu_diorama4"/>
+      <select weight="1" nextstate="startmenu_diorama5"/>
+      <select weight="1" nextstate="startmenu_diorama6"/>
+    </transition>
+  </state>
+  <state name="startmenu_diorama4">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama1"/>
+      <select weight="1" nextstate="startmenu_diorama2"/>
+      <select weight="1" nextstate="startmenu_diorama3"/>
+      <select weight="1" nextstate="startmenu_diorama5"/>
+      <select weight="1" nextstate="startmenu_diorama6"/>
+    </transition>
+  </state>
+  <state name="startmenu_diorama5">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama1"/>
+      <select weight="1" nextstate="startmenu_diorama2"/>
+      <select weight="1" nextstate="startmenu_diorama3"/>
+      <select weight="1" nextstate="startmenu_diorama4"/>
+      <select weight="1" nextstate="startmenu_diorama6"/>
+    </transition>
+  </state>
+  <state name="startmenu_diorama6">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama1"/>
+      <select weight="1" nextstate="startmenu_diorama2"/>
+      <select weight="1" nextstate="startmenu_diorama3"/>
+      <select weight="1" nextstate="startmenu_diorama4"/>
+      <select weight="1" nextstate="startmenu_diorama5"/>
+    </transition>
+  </state-->
+  <state name="startmenu_begin">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama1"/>
+    </transition>
+  </state>
+  <state name="startmenu_diorama1">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama2"/>
+    </transition>
+  </state>
+  <state name="startmenu_diorama2">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama3"/>
+    </transition>
+  </state>
+  <state name="startmenu_diorama3">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama4"/>
+    </transition>
+  </state>
+  <state name="startmenu_diorama4">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama5"/>
+    </transition>
+  </state>
+  <state name="startmenu_diorama5">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama6"/>
+    </transition>
+  </state>
+  <state name="startmenu_diorama6">
+    <transition selection="random">
+      <select weight="1" nextstate="startmenu_diorama1"/>
+    </transition>
+  </state>
+</sequencestates>

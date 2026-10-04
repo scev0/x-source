@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Last exported: 04.09.2025 14:55:47-->
+<races xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="races.xsd">
+  <race id="argon" name="{20202,101}" description="{20202,102}" shortname="{20202,103}" spacename="{20202,105}" homespacename="{20202,106}" names="20301" tags="workforce">
+    <character height="1.78">
+      <speed slowwalk="0.8" walk="1.15" run="2.6" acceleration="4" />
+      <eventmonitor adjusty="0.1" adjustz="-0.25" facecutscenekey="ShowNPCFaceArgon" />
+      <spacesuit ref="ship_arg_xs_spacesuit_01_a_macro" />
+    </character>
+    <icon active="race_argon" inactive="race_argon" />
+    <agent>
+      <icon id="diplomacy_agent_human_male" female="diplomacy_agent_human_female" />
+    </agent>
+    <relations>
+      <relation race="boron" relation="1" />
+      <relation race="paranid" relation="-1" />
+    </relations>
+    <trail brightness="1" contrast="1" saturation="0.6" hue="140" />
+  </race>
+  <race id="boron" name="{20202,201}" description="{20202,202}" shortname="{20202,203}" spacename="{20202,205}" homespacename="{20202,206}" names="20305" tags="workforce">
+    <chair config="chairconfig_paranid" animation="chair_paranid_active">
+      <steering trigger="activate_chair_steering_par" animation="chair_steering_par_active" />
+    </chair>
+    <character height="1.8">
+      <speed slowwalk="1" walk="2" run="4" acceleration="4" />
+      <eventmonitor adjusty="-0.35" adjustz="0.25" facecutscenekey="ShowNPCFaceBoron" />
+      <spacesuit ref="ship_bor_xs_spacesuit_01_a_macro" />
+    </character>
+    <icon active="race_boron" inactive="race_boron" />
+    <agent>
+      <icon id="diplomacy_agent_boron" />
+    </agent>
+    <relations>
+      <relation race="argon" relation="1" />
+      <relation race="split" relation="-1" />
+    </relations>
+    <trail brightness="1" contrast="1" saturation="0.58" hue="184" />
+  </race>
+  <race id="drone" name="{20202,801}" description="{20202,802}" tags="hidden" />
+  <race id="khaak" name="{20202,901}" description="{20202,902}" shortname="{20202,903}" spacename="{20202,905}" homespacename="{20202,906}">
+    <icon active="race_khaak" inactive="race_khaak" />
+    <trail brightness="1" contrast="1" saturation="0.6" hue="100" />
+  </race>
+  <race id="paranid" name="{20202,401}" description="{20202,402}" shortname="{20202,403}" spacename="{20202,405}" homespacename="{20202,406}" names="20306" tags="workforce">
+    <chair config="chairconfig_paranid" animation="chair_paranid_active">
+      <steering trigger="activate_chair_steering_par" animation="chair_steering_par_active" />
+    </chair>
+    <character height="1.9">
+      <speed slowwalk="0.92" walk="2.2" run="4.25" acceleration="4" />
+      <eventmonitor adjusty="-0.5" adjustz="0.1" facecutscenekey="ShowNPCFaceParanid" />
+      <spacesuit ref="ship_par_xs_spacesuit_01_a_macro" />
+    </character>
+    <icon active="race_paranid" inactive="race_paranid" />
+    <agent>
+      <icon id="diplomacy_agent_paranid" />
+    </agent>
+    <relations>
+      <relation race="argon" relation="-1" />
+    </relations>
+    <trail brightness="1" contrast="1" saturation="0.2" hue="90" />
+  </race>
+  <race id="split" name="{20202,301}" description="{20202,302}" shortname="{20202,303}" spacename="{20202,305}" homespacename="{20202,306}" names="20302" tags="workforce">
+    <character height="1.78">
+      <speed slowwalk="0.8" walk="1.15" run="2.6" acceleration="4" />
+      <eventmonitor adjusty="0.1" adjustz="-0.25" facecutscenekey="ShowNPCFaceSplit" />
+      <spacesuit ref="ship_spl_xs_spacesuit_01_a_macro" />
+    </character>
+    <icon active="race_split" inactive="race_split" />
+    <agent>
+      <icon id="diplomacy_agent_split_male" female="diplomacy_agent_split_female" />
+    </agent>
+    <relations>
+      <relation race="boron" relation="-1" />
+    </relations>
+    <trail brightness="1" contrast="1" saturation="0.5" hue="345" />
+  </race>
+  <race id="teladi" name="{20202,501}" description="{20202,502}" shortname="{20202,503}" spacename="{20202,505}" homespacename="{20202,506}" names="20303" tags="workforce">
+    <character height="1.55">
+      <speed slowwalk="0.65" walk="1.65" run="4" acceleration="4" />
+      <eventmonitor adjusty="-0.1" adjustz="0.07" facecutscenekey="ShowNPCFaceTeladi" />
+      <spacesuit ref="ship_tel_xs_spacesuit_01_a_macro" />
+    </character>
+    <icon active="race_teladi" inactive="race_teladi" />
+    <agent>
+      <icon id="diplomacy_agent_teladi" />
+    </agent>
+    <trail brightness="1" contrast="1" saturation="0.2" hue="225" />
+  </race>
+  <race id="terran" name="{20202,701}" description="{20202,702}" shortname="{20202,703}" spacename="{20202,705}" homespacename="{20202,706}" names="20304" tags="workforce">
+    <character height="1.83">
+      <speed slowwalk="0.8" walk="1.15" run="2.6" acceleration="4" />
+      <eventmonitor adjusty="0.1" adjustz="-0.25" facecutscenekey="ShowNPCFaceArgon" />
+      <spacesuit ref="ship_arg_xs_spacesuit_01_a_macro" />
+    </character>
+    <icon active="race_terran" inactive="race_terran" />
+    <trail brightness="1" contrast="1" saturation="0.1" hue="130" />
+  </race>
+  <race id="xenon" name="{20202,601}" description="{20202,602}" shortname="{20202,603}" spacename="{20202,605}" homespacename="{20202,606}" tags="nocockpitview">
+    <icon active="race_xenon" inactive="race_xenon" />
+    <trail brightness="1" contrast="1" saturation="0.8" hue="0" />
+  </race>
+</races>

@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inputcontexts>
+  <context id="INPUT_CONTEXT_EMPTY">
+  </context>
+  <context id="INPUT_CONTEXT_BASE">
+    <action id="INPUT_ACTION_STOP" />
+    <action id="INPUT_ACTION_SCREENSHOT">
+      <feedback id="all" text="1012001" />
+    </action>
+    <action id="INPUT_ACTION_PAUSE" />
+    <action id="INPUT_ACTION_TOGGLE_REDUCED_SPEED_MODE" />
+    <action id="INPUT_ACTION_DEBUG_FEATURE_1" />
+    <action id="INPUT_ACTION_DEBUG_FEATURE_2" />
+    <action id="INPUT_ACTION_DEBUG_FEATURE_3" />
+    <action id="INPUT_ACTION_DEBUG_FEATURE_4" />
+    <action id="INPUT_ACTION_TOGGLECOCKPIT">
+      <feedback id="active" text="1016601" />
+      <feedback id="inactive" text="1016602" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_AUTOPILOT" />
+    <action id="INPUT_ACTION_TOGGLE_HUD">
+      <feedback id="active" text="1022301" />
+      <feedback id="inactive" text="1022302" />
+    </action>
+    <action id="INPUT_ACTION_MUTE">
+      <feedback id="active" text="1021901" />
+      <feedback id="inactive" text="1021902" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLETEXT" />
+    <action id="INPUT_ACTION_VR_RESET">
+      <feedback id="all" text="1026001" />
+    </action>
+    <action id="INPUT_ACTION_VR_TOGGLE_TRACKING">
+      <feedback id="active" text="1032501" />
+      <feedback id="inactive" text="1032502" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_3DPOINTER" />
+    <action id="INPUT_ACTION_TOGGLE_FPS_DISPLAY" />
+    <action id="INPUT_ACTION_CUT" />
+    <action id="INPUT_ACTION_COPY" />
+    <action id="INPUT_ACTION_PASTE" />
+    <state id="INPUT_STATE_3DPOINTER_ACTIVE" />
+    <state id="INPUT_STATE_3DPOINTER_LBUTTON"/>
+    <state id="INPUT_STATE_3DPOINTER_RBUTTON"/>
+    <state id="INPUT_STATE_3DPOINTER_MBUTTON"/>
+    <state id="INPUT_STATE_VR_RESET" />
+    <state id="INPUT_STATE_VR_TOGGLE_STEERING" />
+  </context>
+  <context id="INPUT_CONTEXT_DEBUG_BASE">
+    <action id="INPUT_ACTION_TOGGLE_DEBUG_INPUT" />
+    <action id="INPUT_ACTION_DEBUG_INSERT" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F1" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F2" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F3" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F4" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F5" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F6" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F7" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F8" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F9" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F10" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F11" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F12" repeat="1" />
+  </context>
+  <context id="INPUT_CONTEXT_DEBUG">
+    <action id="INPUT_ACTION_DEBUG_1" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_2" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_3" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_4" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_5" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_6" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_7" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_8" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_9" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_0" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_A" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_B" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_C" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_D" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_E" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_G" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_H" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_I" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_J" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_K" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_L" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_M" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_N" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_O" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_P" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_Q" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_R" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_S" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_T" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_U" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_V" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_W" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_X" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_Y" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_Z" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F1" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F2" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F3" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F4" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F5" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F6" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F7" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F8" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F9" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F10" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F11" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_F12" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_PAGEDOWN" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_PAGEUP" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_SPACE" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_NUMPAD0" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_NUMPAD1" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_NUMPAD2" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_NUMPAD3" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_NUMPAD4" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_NUMPAD5" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_NUMPAD6" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_NUMPAD7" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_NUMPAD8" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_NUMPAD9" repeat="1" />
+    <action id="INPUT_ACTION_DEBUG_DELETE" repeat="1" />
+  </context>
+  <context id="INPUT_CONTEXT_INFO_ACTION">
+    <action id="INPUT_ACTION_INFO_ACTION" />
+  </context>
+  <context id="INPUT_CONTEXT_COMM_ACTION">
+    <action id="INPUT_ACTION_COMM_ACTION" />
+  </context>
+  <context id="INPUT_CONTEXT_SCAN_ACTION">
+    <action id="INPUT_ACTION_SCAN_ACTION" />
+  </context>
+  <context id="INPUT_CONTEXT_TELEPORT_ACTION">
+    <action id="INPUT_ACTION_TELEPORT_ACTION" />
+  </context>
+  <context id="INPUT_CONTEXT_UNDOCK_ACTION">
+    <action id="INPUT_ACTION_UNDOCK">
+      <feedback id="active" text="1021101" />
+      <feedback id="fasttravel" text="1021102" />
+      <feedback id="busy" text="1021103" />
+      <feedback id="inprogress" text="1021104" />
+      <feedback id="failed" text="1021105" />
+    </action>
+    <!-- allow same assignment as for INPUT_ACTION_DOCK_ACTION in patch -->
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+  </context>
+  <context id="INPUT_CONTEXT_GET_UP_ACTION">
+    <action id="INPUT_ACTION_GET_UP" />
+  </context>
+  <context id="INPUT_CONTEXT_CAMERA">
+    <action id="INPUT_ACTION_CAMERA_RESETVIEW" />
+    <state id="INPUT_STATE_CAMERA_MOUSELOOK" />
+    <range id="INPUT_RANGE_MOUSELOOK_YAW" />
+    <range id="INPUT_RANGE_MOUSELOOK_PITCH" />
+  </context>
+  <context id="INPUT_CONTEXT_CAMERA_COCKPIT">
+    <state id="INPUT_STATE_CAMERA_ZOOMIN" />
+    <state id="INPUT_STATE_CAMERA_ZOOMOUT" />
+    <state id="INPUT_STATE_CAMERA_LEFT" />
+    <state id="INPUT_STATE_CAMERA_RIGHT" />
+    <state id="INPUT_STATE_CAMERA_UP" />
+    <state id="INPUT_STATE_CAMERA_DOWN" />
+    <state id="INPUT_STATE_CAMERA_UP_LEFT" />
+    <state id="INPUT_STATE_CAMERA_UP_RIGHT" />
+    <state id="INPUT_STATE_CAMERA_DOWN_LEFT" />
+    <state id="INPUT_STATE_CAMERA_DOWN_RIGHT" />
+  </context>
+  <context id="INPUT_CONTEXT_CAMERA_EXTERNAL">
+    <action id="INPUT_ACTION_EDIT_FOLLOWCAM_OFFSET" />
+    <action id="INPUT_ACTION_TOGGLE_RADAR_MODE">
+      <feedback id="all" text="1017801" />
+    </action>
+    <state id="INPUT_STATE_CAMERA_ZOOMIN" />
+    <state id="INPUT_STATE_CAMERA_ZOOMOUT" />
+    <state id="INPUT_STATE_CAMERA_LEFT" />
+    <state id="INPUT_STATE_CAMERA_RIGHT" />
+    <state id="INPUT_STATE_CAMERA_UP" />
+    <state id="INPUT_STATE_CAMERA_DOWN" />
+    <state id="INPUT_STATE_CAMERA_UP_LEFT" />
+    <state id="INPUT_STATE_CAMERA_UP_RIGHT" />
+    <state id="INPUT_STATE_CAMERA_DOWN_LEFT" />
+    <state id="INPUT_STATE_CAMERA_DOWN_RIGHT" />
+  </context>
+  <context id="INPUT_CONTEXT_TARGET">
+    <action id="INPUT_ACTION_DESELECT_TARGET">
+      <feedback id="all" text="1028901" />
+    </action>
+  </context>
+  <context id="INPUT_CONTEXT_TOGGLED_HUD">
+    <action id="INPUT_ACTION_TOGGLE_HUD">
+      <feedback id="active" text="1022301" />
+      <feedback id="inactive" text="1022302" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_HUD_ESC" />
+    <action id="INPUT_ACTION_MUTE">
+      <feedback id="active" text="1021901" />
+      <feedback id="inactive" text="1021902" />
+    </action>
+    <action id="INPUT_ACTION_SCREENSHOT">
+      <feedback id="all" text="1012001" />
+    </action>
+    <action id="INPUT_ACTION_PAUSE" />
+    <action id="INPUT_ACTION_TOGGLE_REDUCED_SPEED_MODE" />
+    <action id="INPUT_ACTION_DEBUG_FEATURE_1" />
+    <action id="INPUT_ACTION_DEBUG_FEATURE_2" />
+    <action id="INPUT_ACTION_TOGGLECOCKPIT">
+      <feedback id="active" text="1016601" />
+      <feedback id="inactive" text="1016602" />
+    </action>
+  </context>
+  <context id="INPUT_CONTEXT_PLAYER">
+    <action id="INPUT_ACTION_TRIGGER_VIDEOMODE">
+      <feedback id="active" text="1012101" />
+      <feedback id="inactive" text="1012102" />
+    </action>
+    <action id="INPUT_ACTION_QUICKSAVE" />
+    <action id="INPUT_ACTION_QUICKLOAD" />
+    <action id="INPUT_ACTION_OPTIONSMENU" />
+    <action id="INPUT_ACTION_SAVEGAMEMENU">
+      <feedback id="inactive" text="1016002" />
+      <feedback id="impossible" text="1016003" />
+      <feedback id="failed" text="1016004" />
+    </action>
+    <action id="INPUT_ACTION_LOADGAMEMENU" />
+    <action id="INPUT_ACTION_QUITGAMEMENU" />
+    <action id="INPUT_ACTION_COCKPIT_VIEW" />
+    <action id="INPUT_ACTION_EXTERNAL_VIEW" />
+    <action id="INPUT_ACTION_TARGET_VIEW" />
+    <action id="INPUT_ACTION_FLOATING_VIEW" />
+    <action id="INPUT_ACTION_CYCLE_VIEW" />
+    <action id="INPUT_ACTION_CINEMATIC_CAMERA" />
+    <action id="INPUT_ACTION_ZOOMGOGGLES" />
+    <action id="INPUT_ACTION_ZOOMGOGGLES_RESET" />
+    <action id="INPUT_ACTION_TOGGLE_COVER">
+      <feedback id="active" text="1037701" />
+      <feedback id="inactive" text="1037702" />
+      <feedback id="unavailable" text="1037703" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_STANCE">
+      <feedback id="active" text="1038101" />
+      <feedback id="unavailable" text="1038102" />
+    </action>
+    <state id="INPUT_STATE_COMPASSMENU" />
+    <state id="INPUT_STATE_COMPASSMENU_2" />
+  </context>
+  <context id="INPUT_CONTEXT_SPACE">
+    <action id="INPUT_ACTION_STOP">
+      <feedback id="all" text="1012301" />
+      <feedback id="seta" text="1012302" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_AUTO_SPEED" />
+    <action id="INPUT_ACTION_TOGGLEMOUSESTEERING">
+      <feedback id="active" text="1000701" />
+      <feedback id="inactive" text="1000702" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLEDIRECTMOUSESTEERING">
+      <feedback id="active" text="1032401" />
+      <feedback id="inactive" text="1032402" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLEAUTOROLL">
+      <feedback id="active" text="1033001" />
+      <feedback id="inactive" text="1033002" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLEAIMASSIST">
+      <feedback id="active" text="1033101" />
+      <feedback id="inactive" text="1033102" />
+    </action>
+    <action id="INPUT_ACTION_PREV_SUBCOMPONENT" repeat="1">
+      <feedback id="shield" text="1021401" />
+      <feedback id="turret" text="1021402" />
+      <feedback id="engine" text="1021403" />
+    </action>
+    <action id="INPUT_ACTION_NEXT_SUBCOMPONENT" repeat="1">
+      <feedback id="shield" text="1021401" />
+      <feedback id="turret" text="1021402" />
+      <feedback id="engine" text="1021403" />
+    </action>
+    <action id="INPUT_ACTION_NEXT_TARGET_ACTION" repeat="1">
+      <feedback id="all" />
+    </action>
+    <action id="INPUT_ACTION_PREV_TARGET_ACTION" repeat="1">
+      <feedback id="all" />
+    </action>
+    <action id="INPUT_ACTION_CYCLE_NEXT_PRIMARY_WEAPONGROUP">
+      <feedback id="group_1" text="1013901" />
+      <feedback id="group_2" text="1014001" />
+      <feedback id="group_3" text="1014101" />
+      <feedback id="group_4" text="1014201" />
+      <feedback id="group_5" text="1014301" />
+      <feedback id="group_6" text="1014401" />
+      <feedback id="group_7" text="1014501" />
+      <feedback id="group_8" text="1014601" />
+      <feedback id="group_9" text="1014701" />
+      <feedback id="group_10" text="1014801" />
+    </action>
+    <action id="INPUT_ACTION_CYCLE_PREV_PRIMARY_WEAPONGROUP">
+      <feedback id="group_1" text="1013901" />
+      <feedback id="group_2" text="1014001" />
+      <feedback id="group_3" text="1014101" />
+      <feedback id="group_4" text="1014201" />
+      <feedback id="group_5" text="1014301" />
+      <feedback id="group_6" text="1014401" />
+      <feedback id="group_7" text="1014501" />
+      <feedback id="group_8" text="1014601" />
+      <feedback id="group_9" text="1014701" />
+      <feedback id="group_10" text="1014801" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_PRIMARY_WEAPONGROUP_1">
+      <feedback id="all" text="1013901" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_PRIMARY_WEAPONGROUP_2">
+      <feedback id="all" text="1014001" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_PRIMARY_WEAPONGROUP_3">
+      <feedback id="all" text="1014101" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_PRIMARY_WEAPONGROUP_4">
+      <feedback id="all" text="1014201" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_PRIMARY_WEAPONGROUP_5">
+      <feedback id="all" text="1014301" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_PRIMARY_WEAPONGROUP_6">
+      <feedback id="all" text="1014401" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_PRIMARY_WEAPONGROUP_7">
+      <feedback id="all" text="1014501" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_PRIMARY_WEAPONGROUP_8">
+      <feedback id="all" text="1014601" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_PRIMARY_WEAPONGROUP_9">
+      <feedback id="all" text="1014701" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_PRIMARY_WEAPONGROUP_10">
+      <feedback id="all" text="1014801" />
+    </action>
+    <action id="INPUT_ACTION_CYCLE_NEXT_SECONDARY_WEAPONGROUP">
+      <feedback id="group_1" text="1014901" />
+      <feedback id="group_2" text="1015001" />
+      <feedback id="group_3" text="1015101" />
+      <feedback id="group_4" text="1015201" />
+      <feedback id="group_5" text="1015301" />
+      <feedback id="group_6" text="1015401" />
+      <feedback id="group_7" text="1015501" />
+      <feedback id="group_8" text="1015601" />
+      <feedback id="group_9" text="1015701" />
+      <feedback id="group_10" text="1015801" />
+    </action>
+    <action id="INPUT_ACTION_CYCLE_PREV_SECONDARY_WEAPONGROUP">
+      <feedback id="group_1" text="1014901" />
+      <feedback id="group_2" text="1015001" />
+      <feedback id="group_3" text="1015101" />
+      <feedback id="group_4" text="1015201" />
+      <feedback id="group_5" text="1015301" />
+      <feedback id="group_6" text="1015401" />
+      <feedback id="group_7" text="1015501" />
+      <feedback id="group_8" text="1015601" />
+      <feedback id="group_9" text="1015701" />
+      <feedback id="group_10" text="1015801" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_SECONDARY_WEAPONGROUP_1">
+      <feedback id="all" text="1014901" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_SECONDARY_WEAPONGROUP_2">
+      <feedback id="all" text="1015001" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_SECONDARY_WEAPONGROUP_3">
+      <feedback id="all" text="1015101" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_SECONDARY_WEAPONGROUP_4">
+      <feedback id="all" text="1015201" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_SECONDARY_WEAPONGROUP_5">
+      <feedback id="all" text="1015301" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_SECONDARY_WEAPONGROUP_6">
+      <feedback id="all" text="1015401" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_SECONDARY_WEAPONGROUP_7">
+      <feedback id="all" text="1015501" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_SECONDARY_WEAPONGROUP_8">
+      <feedback id="all" text="1015601" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_SECONDARY_WEAPONGROUP_9">
+      <feedback id="all" text="1015701" />
+    </action>
+    <action id="INPUT_ACTION_SELECT_SECONDARY_WEAPONGROUP_10">
+      <feedback id="all" text="1015801" />
+    </action>
+    <action id="INPUT_ACTION_TARGET_NEXT_ENEMY">
+      <feedback id="all" />
+    </action>
+    <action id="INPUT_ACTION_TARGET_NEXT_TARGET">
+      <feedback id="all" />
+    </action>
+    <action id="INPUT_ACTION_DOCK_ACTION">
+      <feedback id="active" text="1017501" />
+      <feedback id="aborted" text="1017506" />
+      <feedback id="queued" text="1017502" />
+      <feedback id="failed" text="1017504" />
+      <feedback id="toofar" text="1017505" />
+      <feedback id="denied" text="1017503" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_FLIGHT_ASSIST">
+      <feedback id="active" text="1022101" />
+      <feedback id="inactive" text="1022102" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_STEERING_AXIS">
+      <feedback id="primary" text="1026101" />
+      <feedback id="secondary" text="1026102" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_TARGET_LOCK">
+      <feedback id="active" text="1027501" />
+      <feedback id="inactive" text="1027502" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_TRAVEL_MODE">
+      <feedback id="active" text="1030301" />
+      <feedback id="inactive" text="1030302" />
+      <feedback id="impossible" text="1030303" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_SCAN_MODE">
+      <feedback id="active" text="1030401" />
+      <feedback id="inactive" text="1030402" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_LONGRANGE_SCAN_MODE">
+      <feedback id="active" text="1030501" />
+      <feedback id="inactive" text="1030502" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_SETA_MODE">
+      <feedback id="active" text="1022501" />
+      <feedback id="inactive" text="1022502" />
+    </action>
+    <action id="INPUT_ACTION_DEPLOY_COUNTERMEASURE">
+      <feedback id="all" text="1030701" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_GUIDANCE">
+      <feedback id="active" text="1031901" />
+      <feedback id="inactive" text="1031902" />
+    </action>
+    <action id="INPUT_ACTION_CYCLE_NEXT_ACTIVE_WEAPON_AMMO">
+      <feedback id="all" text="1032101" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_TURRET_ACTIVE">
+      <feedback id="active" text="1032801" />
+      <feedback id="inactive" text="1032802" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_DRONE_LAUNCH">
+      <feedback id="active" text="1032901" />
+      <feedback id="inactive" text="1032902" />
+    </action>
+    <action id="INPUT_ACTION_SQUAD_ATTACK_TARGET">
+      <feedback id="all" text="1034301" />
+    </action>
+    <action id="INPUT_ACTION_SQUAD_RESUME_ASSIGNMENT">
+      <feedback id="all" text="1034401" />
+    </action>
+    <action id="INPUT_ACTION_DEPLOY_SATELLITE">
+      <feedback id="all" text="1034501" />
+    </action>
+    <action id="INPUT_ACTION_DEPLOY_NAVBEACON">
+      <feedback id="all" text="1034601" />
+    </action>
+    <action id="INPUT_ACTION_DEPLOY_RESOURCEPROBE">
+      <feedback id="all" text="1034701" />
+    </action>
+    <action id="INPUT_ACTION_DEPLOY_MINE">
+      <feedback id="all" text="1034801" />
+    </action>
+    <action id="INPUT_ACTION_DEPLOY_LASERTOWER">
+      <feedback id="all" text="1034901" />
+    </action>
+    <action id="INPUT_ACTION_REPEAT_DEPLOYMENT">
+      <feedback id="satellite" text="1034501" />
+      <feedback id="navbeacon" text="1034601" />
+      <feedback id="resourceprobe" text="1034701" />
+      <feedback id="mine" text="1034801" />
+      <feedback id="lasertower" text="1034901" />
+    </action>
+    <action id="INPUT_ACTION_REPEAT_CIVILIAN_DEPLOYMENT">
+      <feedback id="satellite" text="1034501" />
+      <feedback id="navbeacon" text="1034601" />
+      <feedback id="resourceprobe" text="1034701" />
+    </action>
+    <action id="INPUT_ACTION_REPEAT_MILITARY_DEPLOYMENT">
+      <feedback id="mine" text="1034801" />
+      <feedback id="lasertower" text="1034901" />
+    </action>
+    <state id="INPUT_STATE_FIRE_PRIMARY_WEAPON">
+      <feedback id="inactive" text="2002401" />
+    </state>
+    <state id="INPUT_STATE_FIRE_PRIMARY_WEAPON_AT_CURSOR" />
+    <state id="INPUT_STATE_FIRE_SECONDARY_WEAPON">
+      <feedback id="inactive" text="2002501" />
+    </state>
+    <state id="INPUT_STATE_FIRE_SECONDARY_WEAPON_AT_CURSOR" />
+    <state id="INPUT_STATE_INTERACTION_MENU" />
+    <state id="INPUT_STATE_STEER_LEFT" />
+    <state id="INPUT_STATE_STEER_RIGHT" />
+    <state id="INPUT_STATE_STEER_UP" />
+    <state id="INPUT_STATE_STEER_DOWN" />
+    <state id="INPUT_STATE_STEER_UP_LEFT" />
+    <state id="INPUT_STATE_STEER_UP_RIGHT" />
+    <state id="INPUT_STATE_STEER_DOWN_LEFT" />
+    <state id="INPUT_STATE_STEER_DOWN_RIGHT" />
+    <state id="INPUT_STATE_ROLL_LEFT" />
+    <state id="INPUT_STATE_ROLL_RIGHT" />
+    <state id="INPUT_STATE_STRAFE_LEFT" />
+    <state id="INPUT_STATE_STRAFE_RIGHT" />
+    <state id="INPUT_STATE_STRAFE_UP" />
+    <state id="INPUT_STATE_STRAFE_DOWN" />
+    <state id="INPUT_STATE_STRAFE_UP_LEFT" />
+    <state id="INPUT_STATE_STRAFE_UP_RIGHT" />
+    <state id="INPUT_STATE_STRAFE_DOWN_LEFT" />
+    <state id="INPUT_STATE_STRAFE_DOWN_RIGHT" />
+    <state id="INPUT_STATE_ACCELERATE">
+      <feedback id="failed" text="2001301" />
+    </state>
+    <state id="INPUT_STATE_DECELERATE">
+      <feedback id="failed" text="2001401" />
+    </state>
+    <state id="INPUT_STATE_FULLFORWARD">
+      <feedback id="failed" text="2001501" />
+    </state>
+    <state id="INPUT_STATE_FULLREVERSE">
+      <feedback id="failed" text="2001601" />
+    </state>
+    <state id="INPUT_STATE_BOOST">
+      <feedback id="failed" text="2001701" />
+      <feedback id="inactive" text="2001702" />
+    </state>
+    <state id="INPUT_STATE_TOGGLEMOUSESTEERING" />
+    <state id="INPUT_STATE_INVERT_THROTTLE" />
+    <state id="INPUT_STATE_MATCH_SPEED">
+      <feedback id="active" text="2009101" />
+    </state>
+    <state id="INPUT_STATE_SUSPEND_FLIGHT_ASSIST" />
+    <range id="INPUT_RANGE_THROTTLE">
+      <feedback id="failed" text="3000401" />
+    </range>
+    <range id="INPUT_RANGE_STRAFE_LEFT_RIGHT" />
+    <range id="INPUT_RANGE_STRAFE_UP_DOWN" />
+    <range id="INPUT_RANGE_FIRE_PRIMARY_WEAPON" />
+    <range id="INPUT_RANGE_FIRE_PRIMARY_WEAPON_AT_CURSOR" />
+    <range id="INPUT_RANGE_FIRE_SECONDARY_WEAPON" />
+    <range id="INPUT_RANGE_FIRE_SECONDARY_WEAPON_AT_CURSOR" />
+    <range id="INPUT_RANGE_MOUSEWHEEL">
+      <feedback id="failed" text="3001001" />
+    </range>
+    <excludedcontext id="INPUT_CONTEXT_ADDON_DETAILMONITOR_MAP" />
+  </context>
+  <context id="INPUT_CONTEXT_TARGETMOUSE">
+    <state id="INPUT_STATE_TARGETMOUSE_SELECT" />
+    <state id="INPUT_STATE_TARGETMOUSE_INTERACTION_MENU" />
+    <state id="INPUT_STATE_TARGETMOUSE_SELECT_AND_INTERACT" />
+    <excludedcontext id="INPUT_CONTEXT_CUTSCENE" />
+    <excludedcontext id="INPUT_CONTEXT_FIRST_PERSON_INTERACTION" />
+  </context>
+  <context id="INPUT_CONTEXT_FLIGHT">
+    <range id="INPUT_RANGE_STEERING_YAW" />
+    <range id="INPUT_RANGE_STEERING_PITCH" />
+    <range id="INPUT_RANGE_STEERING_ROLL" />
+    <range id="INPUT_RANGE_STEERING_PRIMARY" />
+    <range id="INPUT_RANGE_STEERING_SECONDARY" />
+  </context>
+  <context id="INPUT_CONTEXT_MOUSESTEERING">
+    <range id="INPUT_RANGE_MOUSESTEERING_YAW" />
+    <range id="INPUT_RANGE_MOUSESTEERING_PITCH" />
+    <range id="INPUT_RANGE_MOUSESTEERING_ROLL" />
+    <range id="INPUT_RANGE_MOUSESTEERING_PRIMARY" />
+    <range id="INPUT_RANGE_MOUSESTEERING_SECONDARY" />
+  </context>
+  <context id="INPUT_CONTEXT_SHIP">
+    <action id="INPUT_ACTION_TOGGLE_RADAR_MODE">
+      <feedback id="all" text="1017801" />
+    </action>
+    <action id="INPUT_ACTION_TOGGLE_AUTOPILOT" />
+    <state id="INPUT_STATE_LOOTMAGNET">
+      <feedback id="active" text="2008001" />
+      <feedback id="inactive" text="2008002" />
+    </state>
+    <excludedcontext id="INPUT_CONTEXT_ADDON_DETAILMONITOR_MAP" />
+  </context>
+  <context id="INPUT_CONTEXT_INTERACTIVE_NOTIFICATION">
+    <action id ="INPUT_ACTION_EXECUTE_NOTIFICATION" />
+  </context>
+  <context id="INPUT_CONTEXT_WIDGET_FRAME">
+    <action id="INPUT_ACTION_WIDGET_BACK" />
+    <action id="INPUT_ACTION_WIDGET_PAGEDOWN" repeat="1" />
+    <action id="INPUT_ACTION_WIDGET_PAGEUP" repeat="1" />
+    <action id="INPUT_ACTION_WIDGET_QUIT" />
+    <action id="INPUT_ACTION_WIDGET_SCROLL_DOWN" repeat="1" />
+    <action id="INPUT_ACTION_WIDGET_SCROLL_UP" repeat="1" />
+    <action id="INPUT_ACTION_WIDGET_SCROLL_DOWN_CTRL" repeat="1" />
+    <action id="INPUT_ACTION_WIDGET_SCROLL_UP_CTRL" repeat="1" />
+    <action id="INPUT_ACTION_WIDGET_SCROLL_DOWN_SHIFT" repeat="1" />
+    <action id="INPUT_ACTION_WIDGET_SCROLL_UP_SHIFT" repeat="1" />
+    <action id="INPUT_ACTION_WIDGET_TAB" repeat="1" />
+    <action id="INPUT_ACTION_WIDGET_TABSCROLL_RIGHT" repeat="1" />
+    <action id="INPUT_ACTION_WIDGET_TABSCROLL_LEFT" repeat="1" />
+    <action id="INPUT_ACTION_WIDGET_SPACE" repeat="1" />
+    <action id="INPUT_ACTION_WIDGET_SPACE_CTRL" repeat="1" />
+    <action id="INPUT_ACTION_WIDGET_SPACE_SHIFT" repeat="1" />
+    <state id="INPUT_STATE_WIDGET_SELECT" />
+    <state id="INPUT_STATE_WIDGET_INTERACT" />
+    <state id="INPUT_STATE_WIDGET_SCROLL_LEFT" />
+    <state id="INPUT_STATE_WIDGET_SCROLL_RIGHT" />
+    <range id="INPUT_RANGE_WIDGET_MOUSEWHEEL" />
+    <range id="INPUT_RANGE_WIDGET_MOUSEWHEEL_SHIFT" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+    <excludedcontext id="INPUT_CONTEXT_FIRST_PERSON" />
+    <excludedcontext id="INPUT_CONTEXT_GAMESTART" />
+  </context>
+  <context id="INPUT_CONTEXT_CONVERSATION">
+    <action id="INPUT_ACTION_DIALOG_SKIPLINE" />
+  </context>
+  <context id="INPUT_CONTEXT_CONVERSATION_MANAGER">
+    <action id="INPUT_ACTION_DIALOG_BACK" />
+    <action id="INPUT_ACTION_DIALOG_CLOSE" />
+  </context>
+  <context id="INPUT_CONTEXT_MENUS">
+    <action id="INPUT_ACTION_OPEN_MAP" />
+    <action id="INPUT_ACTION_OPEN_MULTIVERSE" />
+    <action id="INPUT_ACTION_OPEN_MISSIONS" />
+    <action id="INPUT_ACTION_OPEN_PLAYERSHIP_INFO" />
+    <action id="INPUT_ACTION_OPEN_PROPERTY_MENU" />
+    <action id="INPUT_ACTION_OPEN_PLAYER_INVENTORY_MENU" />
+    <action id="INPUT_ACTION_OPEN_COCKPIT_MENU" />
+    <action id="INPUT_ACTION_OPEN_DIPLOMACY_MENU" />
+    <action id="INPUT_ACTION_HELP" />
+  </context>
+  <context id="INPUT_CONTEXT_DIALOG_MENU">
+    <state id="INPUT_STATE_DIALOG_MENU" />
+    <action id="INPUT_ACTION_DIALOG_1" />
+    <action id="INPUT_ACTION_DIALOG_2" />
+    <action id="INPUT_ACTION_DIALOG_3" />
+    <action id="INPUT_ACTION_DIALOG_4" />
+    <action id="INPUT_ACTION_DIALOG_5" />
+    <action id="INPUT_ACTION_DIALOG_6" />
+    <action id="INPUT_ACTION_DIALOG_POV_1" />
+    <action id="INPUT_ACTION_DIALOG_POV_2" />
+    <action id="INPUT_ACTION_DIALOG_POV_3" />
+    <action id="INPUT_ACTION_DIALOG_POV_4" />
+    <action id="INPUT_ACTION_DIALOG_POV_5" />
+    <action id="INPUT_ACTION_DIALOG_POV_6" />
+    <action id="INPUT_ACTION_DIALOG_MENU_UP" />
+    <action id="INPUT_ACTION_DIALOG_MENU_DOWN" />
+    <action id="INPUT_ACTION_DIALOG_MENU_LEFT" />
+    <action id="INPUT_ACTION_DIALOG_MENU_RIGHT" />
+    <action id="INPUT_ACTION_DIALOG_MENU_SELECT" />
+  </context>
+  <context id="INPUT_CONTEXT_DIALOG_MENU_GAMEPAD">
+    <range id="INPUT_RANGE_MENUSCROLL_X" />
+    <range id="INPUT_RANGE_MENUSCROLL_Y" />
+  </context>
+  <context id="INPUT_CONTEXT_COMPASSMENU">
+    <range id="INPUT_RANGE_COMPASSMENU_SCROLL_X" />
+    <range id="INPUT_RANGE_COMPASSMENU_SCROLL_Y" />
+  </context>
+  <context id="INPUT_CONTEXT_FIRST_PERSON_INTERACTION">
+    <state id="INPUT_STATE_FP_INTERACTION_MENU" />
+    <state id="INPUT_STATE_FP_INTERACTION_MENU_MOUSECLICK" />
+  </context>
+  <context id="INPUT_CONTEXT_FIRST_PERSON">
+    <action id="INPUT_ACTION_FP_RUN" />
+    <state id="INPUT_STATE_FP_RUN_FORWARD" />
+    <state id="INPUT_STATE_FP_MOVE_FORWARD" />
+    <state id="INPUT_STATE_FP_MOVE_BACKWARD" />
+    <state id="INPUT_STATE_FP_TURN_LEFT" />
+    <state id="INPUT_STATE_FP_TURN_RIGHT" />
+    <state id="INPUT_STATE_FP_LOOK_UP" />
+    <state id="INPUT_STATE_FP_LOOK_DOWN" />
+    <state id="INPUT_STATE_FP_STRAFE_LEFT" />
+    <state id="INPUT_STATE_FP_STRAFE_RIGHT" />
+    <state id="INPUT_STATE_FP_CROUCH" />
+    <state id="INPUT_STATE_FP_WALK" />
+    <state id="INPUT_STATE_FP_JUMP" />
+    <range id="INPUT_RANGE_FP_YAW" />
+    <range id="INPUT_RANGE_FP_PITCH" />
+    <range id="INPUT_RANGE_FP_STRAFE" />
+    <range id="INPUT_RANGE_FP_WALK" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+  </context>
+  <context id="INPUT_CONTEXT_GAMESTART">
+    <action id="INPUT_ACTION_START_GAME" />
+  </context>
+  <context id="INPUT_CONTEXT_EXTRO">
+    <action id="INPUT_ACTION_SKIP_EXTRO" />
+  </context>
+  <context id="INPUT_CONTEXT_LOADINGSCREEN">
+    <action id="INPUT_ACTION_SKIP_SCREENSHOT" />
+  </context>
+  <context id="INPUT_CONTEXT_MAP">
+    <action id="INPUT_ACTION_MAP_ZOOM_IN" />
+    <action id="INPUT_ACTION_MAP_ZOOM_OUT" />
+    <state id="INPUT_STATE_MAP_ZOOM_IN" />
+    <state id="INPUT_STATE_MAP_ZOOM_OUT" />
+    <state id="INPUT_STATE_MAP_PAN_LEFT" />
+    <state id="INPUT_STATE_MAP_PAN_RIGHT" />
+    <state id="INPUT_STATE_MAP_PAN_UP" />
+    <state id="INPUT_STATE_MAP_PAN_DOWN" />
+    <state id="INPUT_STATE_MAP_ROTATE_LEFT" />
+    <state id="INPUT_STATE_MAP_ROTATE_RIGHT" />
+    <state id="INPUT_STATE_MAP_ROTATE_UP" />
+    <state id="INPUT_STATE_MAP_ROTATE_DOWN" />
+    <state id="INPUT_STATE_MAP_PAN_TO_ROTATE" />
+    <range id="INPUT_RANGE_MAP_PAN_LEFT_RIGHT" />
+    <range id="INPUT_RANGE_MAP_PAN_UP_DOWN" />
+    <range id="INPUT_RANGE_MAP_ROTATE_LEFT_RIGHT" />
+    <range id="INPUT_RANGE_MAP_ROTATE_UP_DOWN" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+  </context>
+  <context id="INPUT_CONTEXT_CUTSCENE">
+    <action id="INPUT_ACTION_STOP_CUTSCENE" />
+    <action id="INPUT_ACTION_CINEMATIC_CAMERA_SWITCH_CHANNEL" />
+    <action id="INPUT_ACTION_CINEMATIC_CAMERA_LOCK_TARGET" />
+    <action id="INPUT_ACTION_CINEMATIC_CAMERA_TOGGLE_LETTERBOX" />
+    <action id="INPUT_ACTION_CINEMATIC_CAMERA_PREV_OBJECT" />
+    <action id="INPUT_ACTION_CINEMATIC_CAMERA_NEXT_OBJECT" />
+    <action id="INPUT_ACTION_CINEMATIC_CAMERA_PREV_LOCATION" />
+    <action id="INPUT_ACTION_CINEMATIC_CAMERA_NEXT_LOCATION" />
+    <action id="INPUT_ACTION_CINEMATIC_CAMERA_LOCK_CHANNEL" />
+    <action id="INPUT_ACTION_COCKPIT_VIEW" />
+    <action id="INPUT_ACTION_OPEN_MAP"/>
+    <excludedcontext id="INPUT_CONTEXT_SHIP" />
+    <excludedcontext id="INPUT_CONTEXT_ADDON_DETAILMONITOR_MAP" />
+    <excludedcontext id="INPUT_CONTEXT_MAP" />
+    <excludedcontext id="INPUT_CONTEXT_WIDGET_EDITBOX" />
+    <excludedcontext id="INPUT_CONTEXT_WIDGET_SLIDERCELL" />
+    <excludedcontext id="INPUT_CONTEXT_ADDON_HELPTEXT_MULTI" />
+    <excludedcontext id="INPUT_CONTEXT_ADDON_DETAILMONITOR_MAP_ARROWS" />
+    <excludedcontext id="INPUT_CONTEXT_GAMESTART" />
+    <excludedcontext id="INPUT_CONTEXT_PLAYER" />
+    <excludedcontext id="INPUT_CONTEXT_WIDGET_FRAME" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+    <excludedcontext id="INPUT_CONTEXT_FIRST_PERSON" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_CHATWINDOW">
+    <action id="INPUT_ACTION_SHOW_CHAT_WINDOW">
+      <feedback id="active" text="1031001" />
+      <feedback id="inactive" text="1031002" />
+    </action>
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_CHATWINDOW_COMMANDBAR">
+    <state id="INPUT_STATE_ADDON_CHATWINDOW_COMMANDBAR">
+      <feedback id="active" text="2009601" />
+    </state>
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_DEBUGLOG">
+      <action id="INPUT_ACTION_OPEN_DEBUG_LOG" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_DETAILMONITOR_MAP">
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_G" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_T" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_I" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_F1" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_F3" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_P" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_REMOVE_ORDER" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_ZONE_VIEW" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_SECTOR_VIEW" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_CLOSE_MAP" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_MISSIONS" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_MULTIVERSE" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_TELEPORT" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_PROPERTY_OWNED" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_CURRENT_SHIP" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+    <excludedcontext id="INPUT_CONTEXT_SHIP" />
+    <!-- allow same assignment as for INPUT_ACTION_OPEN_MAP in patch -->
+    <excludedcontext id="INPUT_CONTEXT_MENUS" />
+    <excludedcontext id="INPUT_CONTEXT_CUTSCENE" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_DETAILMONITOR_MAP_ARROWS">
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_RIGHT" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_LEFT" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_DETAILMONITOR_CONTEXT">
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_CONTEXT_MENU" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_DETAILMONITOR_PLAYERINFO">
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_CLOSE_PLAYERINFO" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_DETAILMONITOR_HELP">
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_CLOSE_HELP" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_DETAILMONITOR_DIPLOMACY">
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_CLOSE_DIPLOMACY" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_DETAILMONITOR_COMM">
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_C" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_DETAILMONITOR_AUTOPILOT">
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_A_SHIFT" />
+    <!-- allow same assignment as for INPUT_ACTION_TOGGLE_AUTOPILOT in patch -->
+    <excludedcontext id="INPUT_CONTEXT_BASE" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+    <excludedcontext id="INPUT_CONTEXT_SHIP" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_DETAILMONITOR_UNDO">
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_UNDO" />
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_REDO" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_DETAILMONITOR_MODES">
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_TRAVELMODE">
+      <feedback id="active" text="1030301" />
+      <feedback id="inactive" text="1030302" />
+    </action>
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_SETA">
+      <feedback id="active" text="1022501" />
+      <feedback id="inactive" text="1022502" />
+    </action>
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+    <excludedcontext id="INPUT_CONTEXT_SHIP" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_DETAILMONITOR_CLOSE_FOLLOWCAM_OFFSET">
+    <action id="INPUT_ACTION_ADDON_DETAILMONITOR_CLOSE_FOLLOWCAM_OFFSET" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_HELPTEXT">
+    <action id="INPUT_ACTION_ADDON_HELPTEXT_CLOSE" />
+    <action id="INPUT_ACTION_ADDON_HELPTEXT_BACK" />
+  </context>
+  <context id="INPUT_CONTEXT_ADDON_HELPTEXT_MULTI">
+    <action id="INPUT_ACTION_ADDON_HELPTEXT_RIGHT" />
+    <action id="INPUT_ACTION_ADDON_HELPTEXT_LEFT" />
+  </context>
+  <context id="INPUT_CONTEXT_DETAILMONITOR_A">
+    <state id="INPUT_STATE_DETAILMONITOR_A" />
+  </context>
+  <context id="INPUT_CONTEXT_DETAILMONITOR_X">
+    <state id="INPUT_STATE_DETAILMONITOR_X" />
+  </context>
+  <context id="INPUT_CONTEXT_DETAILMONITOR_Y">
+    <state id="INPUT_STATE_DETAILMONITOR_Y" />
+  </context>
+  <context id="INPUT_CONTEXT_DETAILMONITOR_B">
+    <state id="INPUT_STATE_DETAILMONITOR_B" />
+  </context>
+  <context id="INPUT_CONTEXT_DETAILMONITOR_0">
+    <state id="INPUT_STATE_DETAILMONITOR_0" />
+  </context>
+  <context id="INPUT_CONTEXT_DETAILMONITOR_RESET_VIEW">
+    <state id="INPUT_STATE_DETAILMONITOR_RESET_VIEW" />
+  </context>
+  <context id="INPUT_CONTEXT_DETAILMONITOR_TOGGLE_FILTER_1">
+    <state id="INPUT_STATE_DETAILMONITOR_TOGGLE_FILTER_1" />
+    <excludedcontext id="INPUT_CONTEXT_DIALOG_MENU" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+    <excludedcontext id="INPUT_CONTEXT_DETAILMONITOR_B" />
+  </context>
+  <context id="INPUT_CONTEXT_DETAILMONITOR_TOGGLE_FILTER_2">
+    <state id="INPUT_STATE_DETAILMONITOR_TOGGLE_FILTER_2" />
+    <excludedcontext id="INPUT_CONTEXT_DIALOG_MENU" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+  </context>
+  <context id="INPUT_CONTEXT_DETAILMONITOR_TOGGLE_FILTER_3">
+    <state id="INPUT_STATE_DETAILMONITOR_TOGGLE_FILTER_3" />
+    <excludedcontext id="INPUT_CONTEXT_DIALOG_MENU" />
+    <excludedcontext id="INPUT_CONTEXT_SPACE" />
+    <excludedcontext id="INPUT_CONTEXT_DETAILMONITOR_Y" />
+  </context>
+  <context id="INPUT_CONTEXT_DEBUGLOG_PREV">
+    <state id="INPUT_STATE_DEBUGLOG_PREV" />
+  </context>
+  <context id="INPUT_CONTEXT_DEBUGLOG_NEXT">
+    <state id="INPUT_STATE_DEBUGLOG_NEXT" />
+  </context>
+  <context id="INPUT_CONTEXT_DEBUGLOG_COPY">
+    <state id="INPUT_STATE_DEBUGLOG_COPY" />
+  </context>
+  <context id="INPUT_CONTEXT_DEBUGLOG_FIRST">
+    <state id="INPUT_STATE_DEBUGLOG_FIRST" />
+  </context>
+  <context id="INPUT_CONTEXT_DEBUGLOG_LAST">
+    <state id="INPUT_STATE_DEBUGLOG_LAST" />
+  </context>
+  <context id="INPUT_CONTEXT_WIDGET_EDITBOX">
+    <action id="INPUT_ACTION_WIDGET_BACK" />
+    <action id="INPUT_ACTION_EDITBOX_TAB" />
+    <action id="INPUT_ACTION_WIDGET_HOME" />
+    <action id="INPUT_ACTION_WIDGET_END" />
+    <action id="INPUT_ACTION_WIDGET_HOME_SHIFT" />
+    <action id="INPUT_ACTION_WIDGET_END_SHIFT" />
+    <action id="INPUT_ACTION_WIDGET_SELECT_ALL" />
+    <state id="INPUT_STATE_WIDGET_SELECT" />
+    <state id="INPUT_STATE_WIDGET_SCROLL_LEFT" />
+    <state id="INPUT_STATE_WIDGET_SCROLL_RIGHT" />
+    <state id="INPUT_STATE_WIDGET_SCROLL_LEFT_SHIFT" />
+    <state id="INPUT_STATE_WIDGET_SCROLL_RIGHT_SHIFT" />
+    <state id="INPUT_STATE_WIDGET_SCROLL_LEFT_CTRL" />
+    <state id="INPUT_STATE_WIDGET_SCROLL_RIGHT_CTRL" />
+    <state id="INPUT_STATE_WIDGET_SCROLL_LEFT_SHIFT_CTRL" />
+    <state id="INPUT_STATE_WIDGET_SCROLL_RIGHT_SHIFT_CTRL" />
+    <state id="INPUT_STATE_WIDGET_REMOVE_NEXT_CHAR" />
+  </context>
+  <context id="INPUT_CONTEXT_WIDGET_SLIDERCELL">
+    <state id="INPUT_STATE_SLIDERCELL_SCROLL_LEFT_SHIFT" />
+    <state id="INPUT_STATE_SLIDERCELL_SCROLL_RIGHT_SHIFT" />
+  </context>
+  <context id="INPUT_CONTEXT_CONTROLLERMOUSE">
+    <range id="INPUT_RANGE_CONTROLLERMOUSECURSOR_X" />
+    <range id="INPUT_RANGE_CONTROLLERMOUSECURSOR_Y" />
+    <state id="INPUT_STATE_CONTROLLERMOUSE_LEFT" />
+    <state id="INPUT_STATE_CONTROLLERMOUSE_RIGHT" />
+    <state id="INPUT_STATE_CONTROLLERMOUSE_UP" />
+    <state id="INPUT_STATE_CONTROLLERMOUSE_DOWN" />
+    <state id="INPUT_STATE_CONTROLLERMOUSE_UP_LEFT" />
+    <state id="INPUT_STATE_CONTROLLERMOUSE_UP_RIGHT" />
+    <state id="INPUT_STATE_CONTROLLERMOUSE_DOWN_LEFT" />
+    <state id="INPUT_STATE_CONTROLLERMOUSE_DOWN_RIGHT" />
+  </context>
+  <context id="INPUT_CONTEXT_CONTROLLERMOUSE_BUTTONS">
+    <state id="INPUT_STATE_CONTROLLERMOUSEBUTTON_LEFT" />
+    <state id="INPUT_STATE_CONTROLLERMOUSEBUTTON_RIGHT" />
+    <state id="INPUT_STATE_CONTROLLERMOUSEBUTTON_MIDDLE" />
+  </context>
+</inputcontexts>

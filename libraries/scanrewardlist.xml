@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rewards>
+  <!--Example usage:
+  <reward macro="pmc_test_macro" ware="pmc_test_blueprint" percentage="100" />
+  <reward macro="pmc_test_macro" ware="pmc_test_efficiency_upgrade" percentage="10" />-->
+</rewards>

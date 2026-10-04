@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<targetpoints supportedtags="ship_xs scan hack ship_s ship_m dockpath plot launchpath">
+  <pointlist macro="hab_arg_l_01_macro" tags="scan">
+    <point x="172.237" y="-177.705" z="-356.577" r="50"/>
+    <point x="-175.175" y="-175.207" z="-331.182" r="50"/>
+    <point x="-163.67" y="-182.608" z="336.219" r="50"/>
+  </pointlist>
+  <pointlist macro="hab_arg_m_01_macro" tags="scan">
+    <point x="-5.521" y="-39.358" z="-255.716" r="50"/>
+    <point x="-232.099" y="-36.557" z="-146.424" r="50"/>
+    <point x="137.768" y="-72.212" z="284.427" r="50"/>
+  </pointlist>
+  <pointlist macro="hab_arg_s_01_macro" tags="scan">
+    <point x="-5.225" y="-29.22" z="-260.596" r="50"/>
+    <point x="-152.948" y="-13.909" z="36.067" r="50"/>
+    <point x="119.662" y="17.835" z="290.573" r="50"/>
+  </pointlist>
+  <pointlist macro="defence_par_tube_01_macro" tags="scan">
+    <point x="-94.503" y="-1.653" z="-100.962" r="50"/>
+    <point x="-79.953" y="2.823" z="10.599" r="50"/>
+    <point x="-74.318" y="-64.009" z="-50.083" r="50"/>
+  </pointlist>
+  <pointlist macro="defence_arg_tube_01_macro" tags="ship_xs scan">
+    <point x="-14.255" y="123.291" z="-81.029" r="50"/>
+    <point x="-19.597" y="106.467" z="48.694" r="50"/>
+  </pointlist>
+  <pointlist macro="defence_arg_tube_01_macro" tags="ship_xs hack">
+    <point x="0.2594" y="98.813" z="-134.753" r="50"/>
+    <point x="-0.5871" y="90.385" z="42.363" r="50"/>
+  </pointlist>
+  <pointlist macro="prod_arg_spacefuel_macro" tags="scan">
+    <point r="50"/>
+    <point x="173.733" y="142.814" z="-104.533" r="50"/>
+    <point x="40.01" y="-22.71" z="458.795" r="50"/>
+    <point r="50"/>
+    <point r="50"/>
+  </pointlist>
+  <pointlist macro="landmarks_xen_aqueduct_01_macro" tags="ship_xs scan">
+    <point x="-1127.796" y="55.35" z="-5175.766" r="50"/>
+    <point x="-728.629" y="-39.212" z="-4473.024" r="50"/>
+    <point x="-9.681" y="-67.681" z="-3869.435" r="50"/>
+    <point x="296.427" y="-2.45" z="-3339.792" r="50"/>
+    <point x="284.487" y="63.075" z="-2586.064" r="50"/>
+  </pointlist>
+  <pointlist macro="landmarks_xen_aqueduct_02_macro" tags="ship_xs scan">
+    <point x="-297.517" y="177.381" z="-6212.759" r="50"/>
+    <point x="-220.796" y="167.103" z="-5741.538" r="50"/>
+    <point x="-89.686" y="178.465" z="-5322.742" r="50"/>
+    <point x="-256.54" y="182.289" z="-4984.429" r="50"/>
+    <point x="-566.386" y="161.546" z="-4810.474" r="50"/>
+  </pointlist>
+  <pointlist macro="landmarks_xen_aqueduct_03_macro" tags="ship_xs scan">
+    <point x="127.304" y="67.216" z="-8135.157" r="50"/>
+    <point x="134.352" y="-96.998" z="-8112.674" r="50"/>
+    <point x="185.299" y="-333.078" z="-8047.169" r="50"/>
+    <point x="187.541" y="-637.906" z="-8019.743" r="50"/>
+    <point x="186.522" y="-817.586" z="-8033.069" r="50"/>
+  </pointlist>
+  <pointlist macro="landmarks_xen_aqueduct_04_macro" tags="ship_xs scan">
+    <point x="1970.952" y="16.125" z="-5188.29" r="50"/>
+    <point x="1849.911" y="37.7" z="-4903.014" r="50"/>
+    <point x="1556.288" y="126.748" z="-4443.264" r="50"/>
+    <point x="1426.37" y="220.751" z="-3995.554" r="50"/>
+    <point x="1378.405" y="216.62" z="-3632.199" r="50"/>
+  </pointlist>
+  <pointlist macro="landmarks_xen_aqueduct_05_macro" tags="ship_xs scan">
+    <point x="-1365.901" y="-52.937" z="-3772.714" r="50"/>
+    <point x="-1364.042" y="-63.248" z="-3542.529" r="50"/>
+    <point x="-1361.035" y="-59.21" z="-3287.778" r="50"/>
+    <point x="-1355.857" y="-38.701" z="-3090.188" r="50"/>
+    <point x="-1347.74" y="-25.103" z="-2900.05" r="50"/>
+    <point x="-1346.988" y="-12.59" z="-2696.156" r="50"/>
+  </pointlist>
+  <pointlist macro="landmarks_xen_aqueduct_06_macro" tags="ship_xs scan">
+    <point x="-2485.95" y="319.911" z="5.758" r="50"/>
+    <point x="-2409.35" y="321.862" z="213.486" r="50"/>
+    <point x="-2466.695" y="306.616" z="415.87" r="50"/>
+    <point x="-2623.327" y="227.712" z="440.339" r="50"/>
+    <point x="-2747.054" y="204.926" z="758.409" r="50"/>
+  </pointlist>
+  <pointlist macro="landmarks_xen_aqueduct_07_macro" tags="ship_xs scan">
+    <point x="2292.389" y="270.593" z="-2832.038" r="50"/>
+    <point x="2234.546" y="238.933" z="-2364.427" r="50"/>
+    <point x="2263.083" y="247.877" z="-2028.182" r="50"/>
+    <point x="2371.065" y="297.824" z="-1519.407" r="50"/>
+    <point x="2453.471" y="333.381" z="-1180.768" r="50"/>
+  </pointlist>
+  <pointlist macro="xenon_asteroid_01_base_01_macro" tags="ship_xs dockpath">
+    <point x="683.511" y="-230.962" z="1681.071" r="50"/>
+    <point x="678.397" y="-194.131" z="1148.238" r="50"/>
+  </pointlist>
+  <pointlist macro="xenon_asteroid_01_base_01_macro" tags="ship_xs launchpath">
+    <point x="679.102" y="-113.586" z="1147.315" r="50"/>
+    <point x="682.632" y="-79.779" z="1515.115" r="50"/>
+  </pointlist>
+</targetpoints>

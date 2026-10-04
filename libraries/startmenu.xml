@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<startmenu>
+  <background default="startmenu_background">
+    <scene cutscene="startmenu_background" music="music_menu_main_music" map="blackgalaxy_macro" >
+      <cluster name="cluster_black_macro" background="cluster_sm3_background_macro" />
+    </scene>
+    <scene cutscene="startmenu_basegame_background" music="music_menu_main_bg_music" map="blackgalaxy_macro" >
+      <cluster name="cluster_black_macro" background="cluster_sm_basegame_background_macro" />
+    </scene>
+  </background>
+</startmenu>

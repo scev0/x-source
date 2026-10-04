@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infounlocklist>
+  <unlocks>
+    <secrecy level="1">
+      <scan level="0" percent="50" />
+    </secrecy>
+    <secrecy level="2">
+      <scan level="0" percent="33" />
+      <scan level="1" percent="66" />
+    </secrecy>
+    <secrecy level="3">
+      <scan level="0" percent="25" />
+      <scan level="1" percent="50" />
+      <scan level="2" percent="75" />
+    </secrecy>
+  </unlocks>
+  <infos>
+    <info type="name" percent="1" />                                <!-- object menu -->
+    <info type="owner" percent="1" />                               <!-- map menu: info tab -->
+    <info type="production_products" percent="30" />                <!-- production menu -->
+    <info type="production_resources" percent="30" />               <!-- production menu -->
+    <info type="production_rate" percent="40" />                    <!-- storage menu, production menu, LuaFunction::GetStorageData() -->
+    <info type="production_time" percent="40" />                    <!-- object menu, production menu -->
+    <info type="consumption_rate" percent="50" />                   <!-- production menu -->
+    <info type="operator_name" percent="60" />                      <!-- object menu, controlentities menu, orders menu -->
+    <info type="operator_details" percent="70" />                   <!-- controlentities menu, orders menu -->
+    <info type="operator_commands" percent="80" />                  <!-- ships menu, controlentities menu, orders menu -->
+    <info type="defence_level" percent="60" />                      <!-- object menu, military menu -->
+    <info type="defence_status" percent="80" />                     <!-- object menu, military menu -->
+    <info type="efficiency_type" percent="50" />                    <!-- production menu -->
+    <info type="efficiency_amount" percent="90" />                  <!-- object menu, production menu -->
+    <info type="equipment_mods" percent="90" />
+    <info type="storage_capacity" percent="30" />                   <!-- object menu, storage menu, LuaFunction::GetStorageData() -->
+    <info type="storage_amounts" percent="50" />                    <!-- object menu, storage menu, LuaFunction::GetStorageData() -->
+    <info type="storage_warelist" percent="30" />                   <!-- storage menu, LuaFunction::GetStorageData() -->
+    <info type="managed_ships" percent="90" />                      <!-- object menu -->
+    <info type="docked_ships" percent="80" />
+    <info type="units_amount" percent="80" />                       <!-- storage menu -->
+    <info type="units_capacity" percent="70" />                     <!-- storage menu -->
+    <info type="units_details" percent="90" />                      <!-- storage menu -->
+    <!-- Dummy information for flavour below - will be (quasi-)randomised, has no effect on the game -->
+    <info type="dummy_manufacturer" percent="20" />
+    <info type="dummy_crew" percent="30" />
+    <info type="dummy_energyusage" percent="40" />
+    <info type="dummy_airtemperature" percent="50" />
+    <info type="dummy_airpressure" percent="60" />
+  </infos>
+</infounlocklist>

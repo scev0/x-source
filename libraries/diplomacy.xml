@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diplomacy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="diplomacy.xsd">
+  <!--Influence levels
+  none:       0
+  verylow:    1
+  low:        2
+  lowmedium:  4
+  medium:     7
+  mediumhigh: 12
+  high:       20
+  veryhigh:   33
+  -->
+
+  <!--=======================-->
+  <!--==== Agent Actions ====-->
+  <!--=======================-->
+  <actions>
+    <!-- Negotiation Actions -->
+    <action id="cultivate_influence" category="negotiation" name="{20235,10101}" description="{20235,10102}" shortdescription="{20235,10103}" unique="true" hidden="false">
+      <agent experience="0" type="negotiation" risk="none"/>
+      <cost money="5000" maxinfluencefactor="20"/>
+      <reward influence="4" text="{20235,10131}"/>
+      <time duration="900" cooldown="1200" maxinfluencefactor="10"/>
+      <icon active="diplomacy_negotiation" image="diplomacy_banner_gatherinfluence"/>
+      <success chance="100" text="{20235,10121}"/>
+      <params>
+        <param name="station" text="{20235,101}" type="object" isfactionexclusive="true" isagenttarget="true">
+          <input_param name="stationtype" value="[stationtype.tradingstation, stationtype.shipyard, stationtype.wharf, stationtype.equipmentdock]" comment="Filter by station type"/>
+          <input_param name="inrelationrange" value="'dock'" comment="Filter by relation"/>
+          <input_param name="notinrelationrange" value="'self'" comment="Filter by relation"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="improve_relations_low" category="negotiation" name="{20235,10201}" description="{20235,10202}" shortdescription="{20235,10203}" unique="false" hidden="true" friendgroup="improve_relations">
+      <agent experience="0" type="negotiation" risk="none"/>
+      <cost influence="1" money="250000"/>
+      <reward text="{20235,10231}"/>
+      <time duration="1800" cooldown="900"/>
+      <icon active="diplomacy_negotiation" image="diplomacy_banner_improverelations"/>
+      <success chance="100" text="{20235,10221}"/>
+      <params>
+        <param name="station" text="{20235,111}" type="object" isfactionexclusive="true" isagenttarget="true">
+          <input_param name="isfactionhq" value="true" comment="Filter for the headquarters"/>
+          <input_param name="notinrelationrange" value="'killmilitary'" comment="Filter by relation"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="improve_relations_medium" category="negotiation" name="{20235,10301}" description="{20235,10302}" shortdescription="{20235,10303}" unique="false" hidden="true" friendgroup="improve_relations">
+      <agent experience="10" type="negotiation" risk="low"/>
+      <cost influence="4" money="150000">
+        <wares tags="bribe">
+          <ware ware="inv_spaceflycaviar" amount="1"/>
+        </wares>
+      </cost>
+      <reward text="{20235,10331}"/>
+      <time duration="3600" cooldown="900"/>
+      <icon active="diplomacy_negotiation" image="diplomacy_banner_improverelations"/>
+      <failure text="{20235,10311}"/>
+      <success chance="70" text="{20235,10321}"/>
+      <params>
+        <param name="station" text="{20235,111}" type="object" isfactionexclusive="true" isagenttarget="true">
+          <input_param name="isfactionhq" value="true" comment="Filter for the headquarters"/>
+          <input_param name="notinrelationrange" value="'killmilitary'" comment="Filter by relation"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="negotiate_ceasefire" category="negotiation" name="{20235,10401}" description="{20235,10402}" shortdescription="{20235,10403}" unique="true" hidden="true" >
+      <agent experience="50" type="negotiation" risk="medium"/>
+      <cost influence="20" money="4000000">
+        <wares tags="bribe"/>
+      </cost>
+      <reward text="{20235,10431}"/>
+      <time duration="1800" cooldown="3600"/>
+      <icon active="diplomacy_negotiation" image="diplomacy_banner_armistice"/>
+      <failure text="{20235,10411}"/>
+      <success chance="40" text="{20235,10421}"/>
+      <params>
+        <param name="station" text="{20235,111}" type="object" isagenttarget="true">
+          <input_param name="isfactionhq" value="true" comment="Filter for the headquarters"/>
+          <input_param name="inrelationrange" value="'killmilitary'" comment="Filter by relation"/>
+          <input_param name="excludeanyfactiontags" value="tag.nodiplomacyselection"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="active_station_information" category="negotiation" name="{20235,10501}" description="{20235,10502}" shortdescription="{20235,10503}" unique="false" hidden="true" >
+      <agent experience="10" type="negotiation" risk="low"/>
+      <cost influence="2" money="50000">
+        <wares>
+          <ware ware="inv_finemeal" amount="1"/>
+        </wares>
+      </cost>
+      <reward text="{20235,10531}"/>
+      <time duration="10800" cooldown="600"/>
+      <icon active="diplomacy_negotiation" image="diplomacy_banner_assignagent"/>
+      <success chance="100" text="{20235,10521}"/>
+      <params>
+        <param name="station" text="{20235,121}" type="object" isagenttarget="true">
+          <input_param name="class" value="[class.station]" comment="Filter by class station"/>
+          <input_param name="inrelationrange" value="'dock'" comment="Filter by relation"/>
+          <input_param name="notinrelationrange" value="'self'" comment="Filter by relation"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="active_ship_information" category="negotiation" name="{20235,10601}" description="{20235,10602}" shortdescription="{20235,10603}" unique="false" hidden="true" >
+      <agent experience="20" type="negotiation" risk="low"/>
+      <cost influence="2" money="150000">
+        <wares>
+          <ware ware="inv_finemeal" amount="1"/>
+        </wares>
+      </cost>
+      <reward text="{20235,10631}"/>
+      <time duration="10800" cooldown="600"/>
+      <icon active="diplomacy_negotiation" image="diplomacy_banner_assignagent"/>
+      <success chance="100" text="{20235,10621}"/>
+      <params>
+        <param name="ship" text="{20235,131}" type="object" isagenttarget="true">
+          <input_param name="class" value="[class.ship_l, class.ship_xl]" comment="Filter by class, l and xl"/>
+          <input_param name="inrelationrange" value="'dock'" comment="Filter by relation"/>
+          <input_param name="notinrelationrange" value="'self'" comment="Filter by relation"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="negotiate_trade_deal" category="negotiation" name="{20235,10701}" description="{20235,10702}" shortdescription="{20235,10703}" unique="false" hidden="true" >
+      <agent experience="10" type="negotiation" risk="none"/>
+      <cost influence="2" money="50000">
+        <wares tags="bribe"/>
+      </cost>
+      <reward text="{20235,10731}">
+        <unlocks>
+          <unlock id="diplomaticdiscount"/>
+        </unlocks>
+      </reward>
+      <time duration="1800" cooldown="1800"/>
+      <icon active="diplomacy_negotiation" image="diplomacy_banner_negotiatediscount"/>
+      <failure text="{20235,10711}"/>
+      <success chance="70" text="{20235,10721}"/>
+      <params>
+        <param name="station" text="{20235,141}" type="object" isagenttarget="true">
+          <input_param name="stationtype" value="[stationtype.factory, stationtype.shipyard, stationtype.wharf]" comment="Filter by station types"/>
+          <input_param name="inrelationrange" value="'dock'" comment="Filter by relation"/>
+          <input_param name="notinrelationrange" value="'self'" comment="Filter by relation"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="declare_war" category="negotiation" name="{20235,10801}" description="{20235,10802}" shortdescription="{20235,10803}" unique="true" hidden="true" >
+      <agent experience="0" type="negotiation" risk="none"/>
+      <cost influence="0" money="0"/>
+      <reward influence="12" text="{20235,10831}"/>
+      <time duration="300" cooldown="600"/>
+      <icon active="diplomacy_negotiation" image="diplomacy_banner_declarewar"/>
+      <success chance="100" text="{20235,10821}"/>
+      <params>
+        <param name="station" text="{20235,111}" type="object" isagenttarget="true">
+          <input_param name="isfactionhq" value="true" comment="Filter for the headquarters"/>
+          <input_param name="notinrelationrange" value="'killmilitary'" comment="Filter by relation"/>
+        </param>
+      </params>
+    </action>
+
+    <!-- Espionage Actions -->
+    <action id="build_intelligence_network" category="espionage" name="{20235,20101}" description="{20235,20102}" shortdescription="{20235,20103}" unique="false" hidden="true" >
+      <agent experience="12" type="espionage" risk="medium"/>
+      <cost influence="0" money="0" maxinfluencefactor="20">
+        <wares tags="bribe"/>
+      </cost>
+      <reward influence="12" text="{20235,20131}"/>
+      <time duration="1800" cooldown="600" maxinfluencefactor="5"/>
+      <icon active="diplomacy_espionage" image="diplomacy_banner_buildnetwork"/>
+      <failure text="{20235,20111}"/>
+      <success chance="50" text="{20235,20121}"/>
+      <params>
+        <param name="station" text="{20235,101}" type="object" isfactionexclusive="true" isagenttarget="true">
+          <input_param name="stationtype" value="[stationtype.tradingstation, stationtype.shipyard, stationtype.wharf, stationtype.equipmentdock]" comment="Filter by station type"/>
+          <input_param name="notinrelationrange" value="'self'" comment="Filter by relation"/>
+          <input_param name="excludeanyfactiontags" value="tag.nodiplomacyselection"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="steal_blueprint_equipment" category="espionage" name="{20235,20501}" description="{20235,20502}" shortdescription="{20235,20503}" unique="true" hidden="true" >
+      <agent experience="20" type="espionage" risk="medium"/>
+      <cost influence="7" money="125000">
+        <wares tags="bribe">
+          <ware ware="inv_electronics" amount="5"/>
+        </wares>
+      </cost>
+      <reward text="{20235,20531}"/>
+      <time duration="1800" cooldown="600"/>
+      <icon active="diplomacy_espionage" image="diplomacy_banner_stealblueprint"/>
+      <failure text="{20235,20511}"/>
+      <success chance="50" text="{20235,20521}"/>
+      <params>
+        <param name="station" text="{20235,171}" type="object" isagenttarget="true">
+          <input_param name="stationtype" value="stationtype.equipmentdock" comment="Filter by station type"/>
+          <input_param name="notinrelationrange" value="'self'" comment="Filter by relation"/>
+          <input_param name="excludeanyfactiontags" value="tag.nodiplomacyselection"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="steal_blueprint_module" category="espionage" name="{20235,20401}" description="{20235,20402}" shortdescription="{20235,20403}" unique="true" hidden="true" >
+      <agent experience="100" type="espionage" risk="high"/>
+      <cost influence="12" money="350000">
+        <wares tags="bribe">
+          <ware ware="inv_securityslicer" amount="5"/>
+        </wares>
+      </cost>
+      <reward text="{20235,20431}"/>
+      <time duration="2400" cooldown="600"/>
+      <icon active="diplomacy_espionage" image="diplomacy_banner_stealblueprint"/>
+      <failure text="{20235,20411}"/>
+      <success chance="30" text="{20235,20421}"/>
+      <params>
+        <param name="station" text="{20235,111}" type="object" isagenttarget="true">
+          <input_param name="isfactionhq" value="true" comment="Filter for the headquarters"/>
+          <input_param name="notinrelationrange" value="'self'" comment="Filter by relation"/>
+          <input_param name="excludeanyfactiontags" value="tag.nodiplomacyselection"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="steal_blueprint_ship_sm" category="espionage" name="{20235,20301}" description="{20235,20302}" shortdescription="{20235,20303}" unique="true" hidden="true" >
+      <agent experience="50" type="espionage" risk="medium"/>
+      <cost influence="7" money="1500000">
+        <wares tags="bribe">
+          <ware ware="inv_securitydecryptionsystem" amount="2"/>
+        </wares>
+      </cost>
+      <reward text="{20235,20331}"/>
+      <time duration="3000" cooldown="900"/>
+      <icon active="diplomacy_espionage" image="diplomacy_banner_stealblueprint"/>
+      <failure text="{20235,20311}"/>
+      <success chance="50" text="{20235,20321}"/>
+      <params>
+        <param name="station" text="{20235,161}" type="object" isagenttarget="true">
+          <input_param name="stationtype" value="stationtype.wharf" comment="Filter by station type"/>
+          <input_param name="notinrelationrange" value="'self'" comment="Filter by relation"/>
+          <input_param name="excludeanyfactiontags" value="tag.nodiplomacyselection"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="steal_blueprint_ship_lxl" category="espionage" name="{20235,20201}" description="{20235,20202}" shortdescription="{20235,20203}" unique="true" hidden="true" >
+      <agent experience="100" type="espionage" risk="veryhigh"/>
+      <cost influence="20" money="15000000">
+        <wares tags="bribe">
+          <ware ware="inv_securitybypasssystem" amount="3"/>
+        </wares>
+      </cost>
+      <reward text="{20235,20231}"/>
+      <time duration="3600" cooldown="900"/>
+      <icon active="diplomacy_espionage" image="diplomacy_banner_stealblueprint"/>
+      <failure text="{20235,20211}"/>
+      <success chance="30" text="{20235,20221}"/>
+      <params>
+        <param name="station" text="{20235,151}" type="object" isagenttarget="true">
+          <input_param name="stationtype" value="stationtype.shipyard" comment="Filter by station type"/>
+          <input_param name="notinrelationrange" value="'self'" comment="Filter by relation"/>
+          <input_param name="excludeanyfactiontags" value="tag.nodiplomacyselection"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="spy_station" category="espionage" name="{20235,20601}" description="{20235,20602}" shortdescription="{20235,20603}" unique="false" hidden="true" >
+      <agent experience="50" type="espionage" risk="high"/>
+      <cost influence="7" money="30000">
+        <wares tags="bribe">
+          <ware ware="inv_securitybypasssystem" amount="1"/>
+        </wares>
+      </cost>
+      <reward text="{20235,20631}"/>
+      <time duration="18000" cooldown="600" durationisbeneficial="true"/>
+      <icon active="diplomacy_espionage" image="diplomacy_banner_spypship"/>
+      <failure text="{20235,20611}"/>
+      <success chance="70" text="{20235,20621}"/>
+      <params>
+        <param name="station" text="{20235,121}" type="object" isagenttarget="true">
+          <input_param name="class" value="[class.station]" comment="Filter by class station"/>
+          <input_param name="inrelationrange" value="'enemy'" comment="Filter by relation"/>
+          <input_param name="excludeanyfactiontags" value="tag.nodiplomacyselection"/>
+          <input_param name="notinrelationrange" value="'self'" comment="Filter by relation"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="spy_ship" category="espionage" name="{20235,20701}" description="{20235,20702}" shortdescription="{20235,20703}" unique="false" hidden="true" >
+      <agent experience="100" type="espionage" risk="high"/>
+      <cost influence="12" money="0">
+        <wares tags="bribe">
+          <ware ware="inv_securityslicer" amount="2"/>
+        </wares>
+      </cost>
+      <reward text="{20235,20731}"/>
+      <time duration="18000" cooldown="600" durationisbeneficial="true"/>
+      <icon active="diplomacy_espionage" image="diplomacy_banner_spypship"/>
+      <failure text="{20235,20711}"/>
+      <success chance="70" text="{20235,20721}"/>
+      <params>
+        <param name="ship" text="{20235,131}" type="object" isagenttarget="true">
+          <input_param name="class" value="[class.ship_l, class.ship_xl]" comment="Filter by class, l and xl"/>
+          <input_param name="inrelationrange" value="'enemy'" comment="Filter by relation"/>
+          <input_param name="excludeanyfactiontags" value="tag.nodiplomacyselection"/>
+          <input_param name="notinrelationrange" value="'self'" comment="Filter by relation"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="acquire_inventory_item_low" category="espionage" name="{20235,20801}" description="{20235,20802}" shortdescription="{20235,20803}" unique="false" hidden="true" >
+      <agent experience="20" type="espionage" risk="none"/>
+      <cost influence="2" money="0"/>
+      <reward text="{20235,20831}"/>
+      <time duration="900" cooldown="600"/>
+      <icon active="diplomacy_espionage" image="diplomacy_banner_aquireinventory"/>
+      <failure text="{20235,20811}"/>
+      <success chance="80" text="{20235,20821}"/>
+      <params>
+        <param name="station" text="{20235,101}" type="object" isagenttarget="true">
+          <input_param name="stationtype" value="[stationtype.tradingstation, stationtype.shipyard, stationtype.wharf, stationtype.equipmentdock, stationtype.defence]" comment="Filter by station type"/>
+          <input_param name="excludeanyfactiontags" value="tag.nodiplomacyselection"/>
+        </param>
+        <param name="ware" text="{1001,12833}" type="ware" warecostfactor="1.5">
+          <input_param name="warebasket" value="'acquire_inventory_item_low'"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="acquire_inventory_item_medium" category="espionage" name="{20235,20901}" description="{20235,20902}" shortdescription="{20235,20903}" unique="false" hidden="true" >
+      <agent experience="50" type="espionage" risk="low"/>
+      <cost influence="4" money="0"/>
+      <reward text="{20235,20931}"/>
+      <time duration="1800" cooldown="600"/>
+      <icon active="diplomacy_espionage" image="diplomacy_banner_aquireinventory"/>
+      <failure text="{20235,20911}"/>
+      <success chance="50" text="{20235,20921}"/>
+      <params>
+        <param name="station" text="{20235,101}" type="object" isagenttarget="true">
+          <input_param name="stationtype" value="[stationtype.tradingstation, stationtype.shipyard, stationtype.wharf, stationtype.equipmentdock, stationtype.defence]" comment="Filter by station type"/>
+          <input_param name="excludeanyfactiontags" value="tag.nodiplomacyselection"/>
+        </param>
+        <param name="ware" text="{1001,12833}" type="ware" warecostfactor="1">
+          <input_param name="warebasket" value="'acquire_inventory_item_medium'"/>
+        </param>
+      </params>
+    </action>
+
+    <action id="acquire_inventory_item_high" category="espionage" name="{20235,21001}" description="{20235,21002}" shortdescription="{20235,21003}" unique="false" hidden="true" >
+      <agent experience="100" type="espionage" risk="medium"/>
+      <cost influence="7" money="0"/>
+      <reward text="{20235,21031}"/>
+      <time duration="2400" cooldown="600"/>
+      <icon active="diplomacy_espionage" image="diplomacy_banner_aquireinventory"/>
+      <failure text="{20235,21011}"/>
+      <success chance="30" text="{20235,21021}"/>
+      <params>
+        <param name="station" text="{20235,101}" type="object" isagenttarget="true">
+          <input_param name="stationtype" value="[stationtype.tradingstation, stationtype.shipyard, stationtype.wharf, stationtype.equipmentdock, stationtype.defence]" comment="Filter by station type"/>
+          <input_param name="excludeanyfactiontags" value="tag.nodiplomacyselection"/>
+        </param>
+        <param name="ware" text="{1001,12833}" type="ware" warecostfactor="0.3">
+          <input_param name="warebasket" value="'acquire_inventory_item_high'"/>
+        </param>
+      </params>
+    </action>
+
+    <!-- Interference Actions -->
+    <action id="initiate_diplomatic_interference" category="interference" name="{20235,30101}" description="{20235,30102}" shortdescription="{20235,30103}" unique="true" hidden="true" triggersevent="true" >
+      <agent type="espionage" risk="none"/>
+      <cost influence="12" money="0">
+        <wares>
+          <ware ware="inv_spaceflycaviar" amount="1"/>
+        </wares>
+      </cost>
+      <reward text="{20235,30131}"/>
+      <time duration="1800" cooldown="1800"/>
+      <icon active="diplomacy_interference" image="diplomacy_banner_interference"/>
+      <success chance="100" text="{20235,30121}"/>
+      <params>
+        <factionpair>
+          <first name="faction1" text="First Faction"/>
+          <second name="faction2" text="Second Faction"/>
+        </factionpair>
+      </params>
+    </action>
+
+    <action id="enable_protocol_null" category="interference" name="{20235,30201}" description="{20235,30202}" shortdescription="{20235,30203}" unique="true" hidden="true" >
+      <agent experience="50" type="espionage" risk="none"/>
+      <cost influence="7" money="0"/>
+      <reward text="{20235,30231}"/>
+      <time duration="1800" cooldown="3600"/>
+      <icon active="diplomacy_interference" image="diplomacy_banner_protocolnull"/>
+      <success chance="100" text="{20235,30221}"/>
+    </action>
+
+    <action id="disable_protocol_null" category="interference" name="{20235,30301}" description="{20235,30302}" shortdescription="{20235,30303}" unique="true" hidden="true" >
+      <agent experience="0" type="espionage" risk="none"/>
+      <cost influence="0" money="0"/>
+      <reward text="{20235,30331}"/>
+      <time duration="600" cooldown="3600"/>
+      <icon active="diplomacy_interference" image="diplomacy_banner_protocolnull"/>
+      <success chance="100" text="{20235,30321}"/>
+    </action>
+
+    <action id="enable_factionlogic_hereticsend" category="interference" name="{20235,30401}" description="{20235,30402}" shortdescription="{20235,30403}" unique="true" hidden="true" >
+      <agent experience="0" type="negotiation" risk="none"/>
+      <cost influence="0" money="0"/>
+      <reward text="{20235,30431}"/>
+      <time duration="900" cooldown="300"/>
+      <icon active="diplomacy_interference" image="diplomacy_banner_factionlogic031"/>
+      <success chance="100" text="{20235,30421}"/>
+    </action>
+  </actions>
+
+  <!--===========================-->
+  <!--==== Diplomatic Events ====-->
+  <!--===========================-->
+  <events>
+    <!-- Ally Events -->
+    <event id="ally_espionage_suspicion" name="{20236,10101}" description="{20236,10102}" shortdescription="{20236,10103}" duration="14400">
+      <icon image="diplomacy_banner_ally"/>
+      <!-- Status Quo -->
+      <options>
+        <option id="ally_espionage_suspicion_statusquo" name="{20236,10121}" description="{20236,10122}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1500000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,10152}"/>
+          <relation value="0.75"/>
+          <result text="{20236,10162}"/>
+          <success weight="80" selectionweightbonus="guaranteed" />
+        </option>
+        <!-- Escalation -->
+        <option id="ally_espionage_suspicion_escalation" name="{20236,10131}" description="{20236,10132}" menuposition="1">
+          <agent risk="veryhigh"/>
+          <cost influence="20" money="500000">
+            <wares>
+              <ware ware="inv_securitydecryptionsystem" amount="2"/>
+              <ware ware="inv_securityslicer" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,10153}"/>
+          <relation value="0.032"/>
+          <result text="{20236,10163}"/>
+          <success weight="20" selectionweightbonus="130"/>
+        </option>
+      </options>
+    </event>
+    <event id="ally_ethical_dilemma" name="{20236,10201}" description="{20236,10202}" shortdescription="{20236,10203}" duration="12600">
+      <icon image="diplomacy_banner_ally"/>
+      <!-- Status Quo -->
+      <options>
+        <option id="ally_ethical_dilemma_statusquo" name="{20236,10221}" description="{20236,10222}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1600000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,10252}"/>
+          <relation value="0.75"/>
+          <result text="{20236,10262}"/>
+          <success weight="70" selectionweightbonus="guaranteed" />
+        </option>
+        <!-- Escalation -->
+        <option id="ally_ethical_dilemma_escalation" name="{20236,10231}" description="{20236,10232}" menuposition="1">
+          <agent risk="veryhigh"/>
+          <cost influence="20" money="450000">
+            <wares>
+              <ware ware="inv_nividiumjewel" amount="6"/>
+              <ware ware="inv_majaglit" amount="4"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,10253}"/>
+          <relation value="0.032"/>
+          <result text="{20236,10263}"/>
+          <success weight="30" selectionweightbonus="120"/>
+        </option>
+      </options>
+    </event>
+    <event id="ally_unilateral_action" name="{20236,10301}" description="{20236,10302}" shortdescription="{20236,10303}" duration="13500">
+      <icon image="diplomacy_banner_ally"/>
+      <!-- Status Quo -->
+      <options>
+        <option id="ally_unilateral_action_statusquo" name="{20236,10321}" description="{20236,10322}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1550000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,10352}"/>
+          <relation value="0.75"/>
+          <result text="{20236,10362}"/>
+          <success weight="75" selectionweightbonus="guaranteed" />
+        </option>
+        <!-- Escalation -->
+        <option id="ally_unilateral_action_escalation" name="{20236,10331}" description="{20236,10332}" menuposition="1">
+          <agent risk="veryhigh"/>
+          <cost influence="20" money="450000">
+            <wares>
+              <ware ware="inv_nividiumjewel" amount="6"/>
+              <ware ware="inv_majaglit" amount="4"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,10353}"/>
+          <relation value="0.032"/>
+          <result text="{20236,10363}"/>
+          <success weight="25" selectionweightbonus="125"/>
+        </option>
+      </options>
+    </event>
+    <!-- Friend Events -->
+    <event id="friend_diplomatic_insult" name="{20236,30101}" description="{20236,30102}" shortdescription="{20236,30103}" duration="10800">
+      <icon image="diplomacy_banner_friend"/>
+      <options>
+        <!-- Cooperation -->
+        <option id="friend_diplomatic_insult_cooperation" name="{20236,30111}" description="{20236,30112}" menuposition="-1">
+          <agent risk="low"/>
+          <cost influence="20" money="500000">
+            <wares>
+              <ware ware="inv_microbrewdrink" amount="2"/>
+              <ware ware="inv_nividiumjewel" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,30151}"/>
+          <relation value="0.75"/>
+          <result text="{20236,30161}"/>
+          <success weight="30" selectionweightbonus="70"/>
+        </option>
+        <!-- Status Quo -->
+        <option id="friend_diplomatic_insult_statusquo" name="{20236,30121}" description="{20236,30122}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1500000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,30152}"/>
+          <relation value="0.032"/>
+          <result text="{20236,30162}"/>
+          <success weight="40" selectionweightbonus="guaranteed"/>
+        </option>
+        <!-- Escalation -->
+        <option id="friend_diplomatic_insult_escalation" name="{20236,30131}" description="{20236,30132}" menuposition="1">
+          <agent risk="high"/>
+          <cost influence="12" money="3000000">
+            <wares>
+              <ware ware="inv_securitydecryptionsystem" amount="2"/>
+              <ware ware="inv_securityslicer" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,30153}"/>
+          <relation value="0"/>
+          <result text="{20236,30163}"/>
+          <success weight="30" selectionweightbonus="70"/>
+        </option>
+      </options>
+    </event>
+    <event id="friend_mining_rights" name="{20236,30201}" description="{20236,30202}" shortdescription="{20236,30203}" duration="11520">
+      <icon image="diplomacy_banner_friend"/>
+      <options>
+        <!-- Cooperation -->
+        <option id="friend_mining_rights_cooperation" name="{20236,30211}" description="{20236,30212}" menuposition="-1">
+          <agent risk="low"/>
+          <cost influence="20" money="600000">
+            <wares>
+              <ware ware="inv_infusedbeverage" amount="4"/>
+              <ware ware="inv_aquaponicvegetable" amount="2"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,30251}"/>
+          <relation value="0.75"/>
+          <result text="{20236,30261}"/>
+          <success weight="25" selectionweightbonus="75"/>
+        </option>
+        <!-- Status Quo -->
+        <option id="friend_mining_rights_statusquo" name="{20236,30221}" description="{20236,30222}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1500000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,30252}"/>
+          <relation value="0.032"/>
+          <result text="{20236,30262}"/>
+          <success weight="40" selectionweightbonus="guaranteed"/>
+        </option>
+        <!-- Escalation -->
+        <option id="friend_mining_rights_escalation" name="{20236,30231}" description="{20236,30232}" menuposition="1">
+          <agent risk="high"/>
+          <cost influence="12" money="2800000">
+            <wares>
+              <ware ware="inv_neuralstimulator" amount="3"/>
+              <ware ware="inv_electronics" amount="3"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,30253}"/>
+          <relation value="0"/>
+          <result text="{20236,30263}"/>
+          <success weight="35" selectionweightbonus="65"/>
+        </option>
+      </options>
+    </event>
+    <event id="friend_security_cooperation" name="{20236,30301}" description="{20236,30302}" shortdescription="{20236,30303}" duration="12600">
+      <icon image="diplomacy_banner_friend"/>
+      <options>
+        <!-- Cooperation -->
+        <option id="friend_security_cooperation_cooperation" name="{20236,30311}" description="{20236,30312}" menuposition="-1">
+          <agent risk="low"/>
+          <cost influence="20" money="700000">
+            <wares>
+              <ware ware="inv_rareartefact" amount="2"/>
+              <ware ware="inv_xenotext" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,30351}"/>
+          <relation value="0.75"/>
+          <result text="{20236,30361}"/>
+          <success weight="20" selectionweightbonus="80"/>
+        </option>
+        <!-- Status Quo -->
+        <option id="friend_security_cooperation_statusquo" name="{20236,30321}" description="{20236,30322}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1600000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,30352}"/>
+          <relation value="0.032"/>
+          <result text="{20236,30362}"/>
+          <success weight="60" selectionweightbonus="guaranteed"/>
+        </option>
+        <!-- Escalation -->
+        <option id="friend_security_cooperation_escalation" name="{20236,30331}" description="{20236,30332}" menuposition="1">
+          <agent risk="high"/>
+          <cost influence="12" money="2900000">
+            <wares>
+              <ware ware="inv_finemeal" amount="4"/>
+              <ware ware="inv_infusedbeverage" amount="2"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,30353}"/>
+          <relation value="0"/>
+          <result text="{20236,30363}"/>
+          <success weight="20" selectionweightbonus="80"/>
+        </option>
+      </options>
+    </event>
+    <!-- Neutral Events -->
+    <event id="neutral_trade_dispute" name="{20236,40101}" description="{20236,40102}" shortdescription="{20236,40103}" duration="7200">
+      <icon image="diplomacy_banner_neutral"/>
+      <options>
+        <!-- Cooperation -->
+        <option id="neutral_trade_dispute_cooperation" name="{20236,40111}" description="{20236,40112}" menuposition="-1">
+          <agent risk="low"/>
+          <cost influence="12" money="500000">
+            <wares>
+              <ware ware="inv_microbrewdrink" amount="2"/>
+              <ware ware="inv_nividiumjewel" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,40151}"/>
+          <relation value="0.032"/>
+          <result text="{20236,40161}"/>
+          <success weight="20" selectionweightbonus="80"/>
+        </option>
+        <!-- Status Quo -->
+        <option id="neutral_trade_dispute_statusquo" name="{20236,40121}" description="{20236,40122}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1500000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,40152}"/>
+          <relation value="0"/>
+          <result text="{20236,40162}"/>
+          <success weight="60" selectionweightbonus="guaranteed"/>
+        </option>
+        <!-- Escalation -->
+        <option id="neutral_trade_dispute_escalation" name="{20236,40131}" description="{20236,40132}" menuposition="1">
+          <agent risk="high"/>
+          <cost influence="20" money="3000000">
+            <wares>
+              <ware ware="inv_securitydecryptionsystem" amount="2"/>
+              <ware ware="inv_securityslicer" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,40153}"/>
+          <relation value="-0.21"/>
+          <result text="{20236,40163}"/>
+          <success weight="20" selectionweightbonus="80"/>
+        </option>
+      </options>
+    </event>
+    <event id="neutral_illegal_activity" name="{20236,40201}" description="{20236,40202}" shortdescription="{20236,40203}" duration="9000">
+      <icon image="diplomacy_banner_neutral"/>
+      <options>
+        <!-- Cooperation -->
+        <option id="neutral_trade_dispute_cooperation" name="{20236,40211}" description="{20236,40212}" menuposition="-1">
+          <agent risk="low"/>
+          <cost influence="12" money="400000">
+            <wares>
+              <ware ware="inv_microbrewdrink" amount="3"/>
+              <ware ware="inv_nividiumjewel" amount="2"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,40251}"/>
+          <relation value="0.032"/>
+          <result text="{20236,40261}"/>
+          <success weight="25" selectionweightbonus="75"/>
+        </option>
+        <!-- Status Quo -->
+        <option id="neutral_trade_dispute_statusquo" name="{20236,40221}" description="{20236,40222}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1500000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,40252}"/>
+          <relation value="0"/>
+          <result text="{20236,40262}"/>
+          <success weight="50" selectionweightbonus="guaranteed"/>
+        </option>
+        <!-- Escalation -->
+        <option id="neutral_trade_dispute_escalation" name="{20236,40231}" description="{20236,40232}" menuposition="1">
+          <agent risk="high"/>
+          <cost influence="20" money="2800000">
+            <wares>
+              <ware ware="inv_hallucinogenics" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="3"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,40253}"/>
+          <relation value="-0.21"/>
+          <result text="{20236,40263}"/>
+          <success weight="25" selectionweightbonus="75"/>
+        </option>
+      </options>
+    </event>
+    <event id="neutral_territorial_claim" name="{20236,40301}" description="{20236,40302}" shortdescription="{20236,40303}" duration="8100">
+      <icon image="diplomacy_banner_neutral"/>
+      <options>
+        <!-- Cooperation -->
+        <option id="neutral_trade_dispute_cooperation" name="{20236,40311}" description="{20236,40312}" menuposition="-1">
+          <agent risk="low"/>
+          <cost influence="12" money="300000">
+            <wares>
+              <ware ware="inv_finemeal" amount="5"/>
+              <ware ware="inv_infusedbeverage" amount="2"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,40351}"/>
+          <relation value="0.032"/>
+          <result text="{20236,40361}"/>
+          <success weight="30" selectionweightbonus="70"/>
+        </option>
+        <!-- Status Quo -->
+        <option id="neutral_trade_dispute_statusquo" name="{20236,40321}" description="{20236,40322}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1500000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,40352}"/>
+          <relation value="0"/>
+          <result text="{20236,40362}"/>
+          <success weight="40" selectionweightbonus="guaranteed"/>
+        </option>
+        <!-- Escalation -->
+        <option id="neutral_trade_dispute_escalation" name="{20236,40331}" description="{20236,40332}" menuposition="1">
+          <agent risk="high"/>
+          <cost influence="20" money="2500000">
+            <wares>
+              <ware ware="inv_rareartefact" amount="2"/>
+              <ware ware="inv_xenotext" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,40353}"/>
+          <relation value="-0.21"/>
+          <result text="{20236,40363}"/>
+          <success weight="30" selectionweightbonus="70"/>
+        </option>
+      </options>
+    </event>
+    <event id="neutral_cyber_attack" name="{20236,40401}" description="{20236,40402}" shortdescription="{20236,40403}" duration="9900">
+      <icon image="diplomacy_banner_neutral"/>
+      <options>
+        <!-- Cooperation -->
+        <option id="neutral_cyber_attack_cooperation" name="{20236,40411}" description="{20236,40412}" menuposition="-1">
+          <agent risk="low"/>
+          <cost influence="12" money="400000">
+            <wares>
+              <ware ware="inv_aquaponicvegetable" amount="3"/>
+              <ware ware="inv_cahoonas" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,40451}"/>
+          <relation value="0.032"/>
+          <result text="{20236,40461}"/>
+          <success weight="20" selectionweightbonus="80"/>
+        </option>
+        <!-- Status Quo -->
+        <option id="neutral_cyber_attack_statusquo" name="{20236,40421}" description="{20236,40422}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1500000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,40452}"/>
+          <relation value="0"/>
+          <result text="{20236,40462}"/>
+          <success weight="60" selectionweightbonus="guaranteed"/>
+        </option>
+        <!-- Escalation -->
+        <option id="neutral_cyber_attack_escalation" name="{20236,40431}" description="{20236,40432}" menuposition="1">
+          <agent risk="high"/>
+          <cost influence="20" money="2800000">
+            <wares>
+              <ware ware="inv_finemeal" amount="3"/>
+              <ware ware="inv_infusedbeverage" amount="2"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,40453}"/>
+          <relation value="-0.21"/>
+          <result text="{20236,40463}"/>
+          <success weight="20" selectionweightbonus="80"/>
+        </option>
+      </options>
+    </event>
+    <!-- Enemy Events -->
+    <event id="enemy_corrupted_official" name="{20236,50101}" description="{20236,50102}" shortdescription="{20236,50103}" duration="10800">
+      <icon image="diplomacy_banner_enemy"/>
+      <options>
+        <!-- Cooperation -->
+        <option id="enemy_corrupted_official_cooperation" name="{20236,50111}" description="{20236,50112}" menuposition="-1">
+          <agent risk="medium"/>
+          <cost influence="20" money="3000000">
+            <wares>
+              <ware ware="inv_microbrewdrink" amount="2"/>
+              <ware ware="inv_nividiumjewel" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,50151}"/>
+          <relation value="0"/>
+          <result text="{20236,50161}"/>
+          <success weight="20" selectionweightbonus="80"/>
+        </option>
+        <!-- Status Quo -->
+        <option id="enemy_corrupted_official_statusquo" name="{20236,50121}" description="{20236,50122}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1500000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,50152}"/>
+          <relation value="-0.21"/>
+          <result text="{20236,50162}"/>
+          <success weight="60" selectionweightbonus="guaranteed"/>
+        </option>
+        <!-- Escalation -->
+        <option id="enemy_corrupted_official_escalation" name="{20236,50131}" description="{20236,50132}" menuposition="1">
+          <agent risk="veryhigh"/>
+          <cost influence="20" money="3000000">
+            <wares>
+              <ware ware="inv_securitydecryptionsystem" amount="2"/>
+              <ware ware="inv_securityslicer" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,50153}"/>
+          <relation value="-0.66"/>
+          <result text="{20236,50163}"/>
+          <success weight="20" selectionweightbonus="80"/>
+        </option>
+      </options>
+    </event>
+    <event id="enemy_infiltration_attempt" name="{20236,50201}" description="{20236,50202}" shortdescription="{20236,50203}" duration="9900">
+      <icon image="diplomacy_banner_enemy"/>
+      <options>
+        <!-- Cooperation -->
+        <option id="enemy_infiltration_attempt_cooperation" name="{20236,50211}" description="{20236,50212}" menuposition="-1">
+          <agent risk="medium"/>
+          <cost influence="20" money="2800000">
+            <wares>
+              <ware ware="inv_hallucinogenics" amount="5"/>
+              <ware ware="inv_nividiumjewel" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,50251}"/>
+          <relation value="0"/>
+          <result text="{20236,50261}"/>
+          <success weight="25" selectionweightbonus="75"/>
+        </option>
+        <!-- Status Quo -->
+        <option id="enemy_infiltration_attempt_statusquo" name="{20236,50221}" description="{20236,50222}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1500000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,50252}"/>
+          <relation value="-0.21"/>
+          <result text="{20236,50262}"/>
+          <success weight="50" selectionweightbonus="guaranteed"/>
+        </option>
+        <!-- Escalation -->
+        <option id="enemy_infiltration_attempt_escalation" name="{20236,50231}" description="{20236,50232}" menuposition="1">
+          <agent risk="veryhigh"/>
+          <cost influence="20" money="2800000">
+            <wares>
+              <ware ware="inv_harddrug_01" amount="3"/>
+              <ware ware="inv_decryptionmodule" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,50253}"/>
+          <relation value="-0.66"/>
+          <result text="{20236,50263}"/>
+          <success weight="25" selectionweightbonus="75"/>
+        </option>
+      </options>
+    </event>
+    <event id="enemy_military_investments" name="{20236,50301}" description="{20236,50302}" shortdescription="{20236,50303}" duration="11700">
+      <icon image="diplomacy_banner_enemy"/>
+      <options>
+        <!-- Cooperation -->
+        <option id="enemy_military_investments_cooperation" name="{20236,50311}" description="{20236,50312}" menuposition="-1">
+          <agent risk="medium"/>
+          <cost influence="20" money="3000000">
+            <wares>
+              <ware ware="inv_microbrewdrink" amount="2"/>
+              <ware ware="inv_nividiumjewel" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,50351}"/>
+          <relation value="0"/>
+          <result text="{20236,50361}"/>
+          <success weight="30" selectionweightbonus="70"/>
+        </option>
+        <!-- Status Quo -->
+        <option id="enemy_military_investments_statusquo" name="{20236,50321}" description="{20236,50322}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1500000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,50352}"/>
+          <relation value="-0.21"/>
+          <result text="{20236,50362}"/>
+          <success weight="40" selectionweightbonus="guaranteed"/>
+        </option>
+        <!-- Escalation -->
+        <option id="enemy_military_investments_escalation" name="{20236,50331}" description="{20236,50332}" menuposition="1">
+          <agent risk="veryhigh"/>
+          <cost influence="20" money="3000000">
+            <wares>
+              <ware ware="inv_securitydecryptionsystem" amount="2"/>
+              <ware ware="inv_securityslicer" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,50353}"/>
+          <relation value="-0.66"/>
+          <result text="{20236,50363}"/>
+          <success weight="30" selectionweightbonus="70"/>
+        </option>
+      </options>
+    </event>
+    <!-- Hostile Events -->
+    <event id="hostile_peace_talks" name="{20236,60101}" description="{20236,60102}" shortdescription="{20236,60103}" duration="14400">
+      <icon image="diplomacy_banner_hostile"/>
+      <options>
+        <!-- Cooperation -->
+        <option id="hostile_peace_talks_cooperation" name="{20236,60111}" description="{20236,60112}" menuposition="-1">
+          <agent risk="high"/>
+          <cost influence="33" money="3000000">
+            <wares>
+              <ware ware="inv_microbrewdrink" amount="2"/>
+              <ware ware="inv_nividiumjewel" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,60151}"/>
+          <relation value="-0.21"/>
+          <result text="{20236,60161}"/>
+          <success weight="20" selectionweightbonus="80"/>
+        </option>
+        <!-- Status Quo -->
+        <option id="hostile_peace_talks_statusquo" name="{20236,60121}" description="{20236,60122}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1500000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,60152}"/>
+          <relation value="-0.66"/>
+          <result text="{20236,60162}"/>
+          <success weight="80" selectionweightbonus="guaranteed"/>
+        </option>
+      </options>
+    </event>
+    <event id="hostile_policy_shift" name="{20236,60201}" description="{20236,60202}" shortdescription="{20236,60203}" duration="14400">
+      <icon image="diplomacy_banner_hostile"/>
+      <options>
+        <!-- Cooperation -->
+        <option id="hostile_policy_shift_cooperation" name="{20236,60211}" description="{20236,60212}" menuposition="-1">
+          <agent risk="high"/>
+          <cost influence="33" money="2800000">
+            <wares>
+              <ware ware="inv_aquaponicvegetable" amount="5"/>
+              <ware ware="inv_spacedyepizza" amount="3"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,60251}"/>
+          <relation value="-0.21"/>
+          <result text="{20236,60261}"/>
+          <success weight="30" selectionweightbonus="70"/>
+        </option>
+        <!-- Status Quo -->
+        <option id="hostile_policy_shift_statusquo" name="{20236,60221}" description="{20236,60222}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1500000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,60252}"/>
+          <relation value="-0.66"/>
+          <result text="{20236,60262}"/>
+          <success weight="70" selectionweightbonus="guaranteed"/>
+        </option>
+      </options>
+    </event>
+    <event id="hostile_common_enemy" name="{20236,60301}" description="{20236,60302}" shortdescription="{20236,60303}" duration="13500">
+      <icon image="diplomacy_banner_hostile"/>
+      <options>
+        <!-- Cooperation -->
+        <option id="hostile_common_enemy_cooperation" name="{20236,60311}" description="{20236,60312}" menuposition="-1">
+          <agent risk="high"/>
+          <cost influence="33" money="2900000">
+            <wares>
+              <ware ware="inv_infusedbeverage" amount="3"/>
+              <ware ware="inv_aquaponicvegetable" amount="2"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,60351}"/>
+          <relation value="-0.21"/>
+          <result text="{20236,60361}"/>
+          <success weight="25" selectionweightbonus="80"/>
+        </option>
+        <!-- Status Quo -->
+        <option id="hostile_common_enemy_statusquo" name="{20236,60321}" description="{20236,60322}" menuposition="0">
+          <agent risk="none"/>
+          <cost influence="7" money="1500000">
+            <wares>
+              <ware ware="inv_spaceflycaviar" amount="2"/>
+              <ware ware="inv_neuralstimulator" amount="1"/>
+            </wares>
+          </cost>
+          <conclusion text="{20236,60352}"/>
+          <relation value="-0.66"/>
+          <result text="{20236,60362}"/>
+          <success weight="75" selectionweightbonus="guaranteed"/>
+        </option>
+      </options>
+    </event>
+  </events>
+  <gifts>
+    <defaults negative="-5" positive="10"/>
+    <!-- Full list
+    <gift ware="inv_spacedyepizza" faction="[kaori, terran, pioneers, alliance]"/>
+    <gift ware="inv_finemeal" faction="[alliance, antigone, argon, hatikvah, kaori, scavenger]"/>
+    <gift ware="inv_aquaponicvegetable" faction="[alliance, boron, scavenger]"/>
+    <gift ware="inv_microbrewdrink" faction="[antigone, argon, terran, freesplit]"/>
+    <gift ware="inv_infusedbeverage" faction="[buccaneers, scavenger, loanshark, yaki, split, court]"/>
+    <gift ware="inv_neuralstimulator" faction="[paranid, holyorder, ministry, trinity, teladi]"/>
+    <gift ware="inv_harmonicresonator" faction="[antigone, kaori, pioneers, boron]"/>
+    <gift ware="inv_nividiumjewel" faction="[buccaneers, freesplit, teladi, yaki, court]"/>
+    <gift ware="inv_majaglit" faction="[paranid, holyorder, ministry, trinity]"/>
+    <gift ware="inv_rareartefact" faction="[alliance, kaori, pioneers, terran]"/>
+    <gift ware="inv_xenotext" faction="[alliance, antigone, argon, paranid, hatikvah, holyorder, boron, kaori, trinity, pioneers, teladi, terran, split]"/>
+    -->
+    <gift ware="inv_spacedyepizza" faction="[alliance]"/>
+    <gift ware="inv_finemeal" faction="[alliance, antigone, argon, hatikvah]"/>
+    <gift ware="inv_aquaponicvegetable" faction="[alliance]"/>
+    <gift ware="inv_microbrewdrink" faction="[antigone, argon]"/>
+    <gift ware="inv_infusedbeverage" faction="[buccaneers]"/>
+    <gift ware="inv_neuralstimulator" faction="[paranid, holyorder, ministry, trinity, teladi]"/>
+    <gift ware="inv_harmonicresonator" faction="[antigone]"/>
+    <gift ware="inv_nividiumjewel" faction="[buccaneers, teladi]"/>
+    <gift ware="inv_majaglit" faction="[paranid, holyorder, ministry, trinity]"/>
+    <gift ware="inv_rareartefact" faction="[alliance]"/>
+    <gift ware="inv_xenotext" faction="[alliance, antigone, argon, paranid, hatikvah, holyorder, trinity, teladi]"/>
+  </gifts>
+  <experience>
+    <level value="0"    name="{1046,6011}" comment="Unskilled"/>
+    <level value="10"   name="{1046,6021}" comment="Novice"/>
+    <level value="20"   name="{1046,6031}" comment="Competent"/>
+    <level value="50"   name="{1046,6041}" comment="Proficient"/>
+    <level value="100"  name="{1046,6051}" comment="Experienced"/>
+    <level value="200"  name="{1046,6061}" comment="Expert"/>
+  </experience>
+  <rank>
+    <level value="0"    name="{1046,7011}"  eventbonus="1.0" icon="diplomacy_agent_recruit" comment="Recruit"/>
+    <level value="20"   name="{1046,7021}"  eventbonus="1.1" icon="diplomacy_agent_apprentice" comment="Apprentice"/>
+    <level value="50"   name="{1046,7031}"  eventbonus="1.3" icon="diplomacy_agent_asset" comment="Asset"/>
+    <level value="100"  name="{1046,7041}"  eventbonus="1.6" icon="diplomacy_agent_operative" comment="Operative"/>
+    <level value="200"  name="{1046,7051}"  eventbonus="2.0" icon="diplomacy_agent_handler" comment="Handler"/>
+    <level value="400"  name="{1046,7061}"  eventbonus="2.5" icon="diplomacy_agent_spymaster" comment="Spymaster"/>
+  </rank>
+  <influencecostcurve>
+    <influence position="0" value="1" />
+    <influence position="1" value="1.1" />
+    <influence position="2" value="1.3" />
+    <influence position="4" value="1.8" />
+    <influence position="7" value="3" />
+    <influence position="12" value="5" />
+    <influence position="20" value="8" />
+    <influence position="33" value="13" />
+    <influence position="54" value="20" />
+  </influencecostcurve>
+  <ship>
+    <bonuses>
+      <actions maxdurationreduction="0.5" maxdurationbenefitincrease="1.5"/>
+      <curves>
+        <dpscurve>
+          <dps position="200"  value="0.0"/>
+          <dps position="500"  value="0.03"/>
+          <dps position="2000" value="0.08"/>
+          <dps position="5000" value="0.15"/>
+          <dps position="15000" value="0.25"/>
+        </dpscurve>
+        <prestigecurve>
+          <prestige position="0"  value="0.0" />
+          <prestige position="50" value="0.3" />
+          <prestige position="75" value="0.5" />
+          <prestige position="100" value="0.5" />
+        </prestigecurve>
+        <speedcurve>
+          <speed position="1000"  value="0.0" />
+          <speed position="2500"  value="0.03" />
+          <speed position="5000"  value="0.08" />
+          <speed position="7500"  value="0.15" />
+          <speed position="10000" value="0.25" />
+        </speedcurve>
+      </curves>
+    </bonuses>
+  </ship>
+</diplomacy>

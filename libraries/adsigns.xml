@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adsigns>
+  <!-- highway signs -->
+  <type ref="highway">
+    <!-- all factions -->
+    <adsign ware="advancedcomposites" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="advancedelectronics" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="antimattercells" macro="props_adsigns_warez_energy_01_macro" />
+    <adsign ware="antimatterconverters" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="claytronics" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="dronecomponents" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="energycells" macro="props_adsigns_warez_energy_01_macro" />
+    <adsign ware="engineparts" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="fieldcoils" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="foodrations" macro="props_adsigns_warez_meat_01_macro" />
+    <adsign ware="graphene" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="helium" macro="props_adsigns_warez_energy_01_macro" />
+    <adsign ware="hullparts" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="hydrogen" macro="props_adsigns_warez_energy_01_macro" />
+    <adsign ware="ice" macro="props_adsigns_warez_meat_01_macro" />
+    <adsign ware="majadust" macro="props_adsigns_warez_snails_01_macro" />
+    <adsign ware="majasnails" macro="props_adsigns_warez_snails_01_macro" />
+    <adsign ware="meat" macro="props_adsigns_warez_meat_01_macro" />
+    <adsign ware="medicalsupplies" macro="props_adsigns_warez_meat_01_macro" />
+    <adsign ware="methane" macro="props_adsigns_warez_energy_01_macro" />
+    <adsign ware="microchips" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="missilecomponents" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="nividium" macro="props_adsigns_warez_crystal_01_macro" />
+    <adsign ware="nostropoil" macro="props_adsigns_warez_meat_01_macro" />
+    <adsign ware="ore" macro="props_adsigns_warez_crystal_01_macro" />
+    <adsign ware="plasmaconductors" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="quantumtubes" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="refinedmetals" macro="props_adsigns_warez_hullplate_01_macro" />
+    <adsign ware="scanningarrays" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="shieldcomponents" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="silicon" macro="props_adsigns_warez_crystal_01_macro" />
+    <adsign ware="siliconwafers" macro="props_adsigns_warez_crystal_01_macro" />
+    <adsign ware="smartchips" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="sojabeans" macro="props_adsigns_warez_meat_01_macro" />
+    <adsign ware="sojahusk" macro="props_adsigns_warez_meat_01_macro" />
+    <adsign ware="spacefuel" macro="props_adsigns_warez_meat_01_macro" />
+    <adsign ware="spaceweed" macro="props_adsigns_warez_meat_01_macro" />
+    <adsign ware="spices" macro="props_adsigns_warez_meat_01_macro" />
+    <adsign ware="sunriseflowers" macro="props_adsigns_warez_meat_01_macro" />
+    <adsign ware="superfluidcoolant" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="swampplant" macro="props_adsigns_warez_meat_01_macro" />
+    <adsign ware="teladianium" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="turretcomponents" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="water" macro="props_adsigns_warez_meat_01_macro" />
+    <adsign ware="weaponcomponents" macro="props_adsigns_warez_construction_01_macro" />
+    <adsign ware="wheat" macro="props_adsigns_warez_meat_01_macro" />
+  </type>
+  <!-- station signs -->
+  <type ref="station">
+    <!-- all factions -->
+    <!-- production wares -->
+    <adsign ware="advancedcomposites" macro="props_adsign_gen_advancedcomposites_macro" />
+    <adsign ware="advancedelectronics" macro="props_adsign_gen_advancedelectronics_macro" />
+    <adsign ware="antimattercells" macro="props_adsign_gen_antimattercells_macro" />
+    <adsign ware="antimatterconverters" macro="props_adsign_gen_antimatterconverters_macro" />
+    <adsign ware="claytronics" macro="props_adsign_gen_claytronics_macro" />
+    <adsign ware="dronecomponents" macro="props_adsign_gen_dronecomponents_macro" />
+    <adsign ware="energycells" macro="props_adsign_gen_energycells_macro" />
+    <adsign ware="engineparts" macro="props_adsign_gen_engineparts_macro" />
+    <adsign ware="fieldcoils" macro="props_adsign_gen_fieldcoils_macro" />
+    <adsign ware="foodrations" macro="props_adsign_arg_foodrations_macro" />
+    <adsign ware="graphene" macro="props_adsign_gen_graphene_macro" />
+    <adsign ware="helium" macro="props_adsign_gen_advancedcomposites_macro" />
+    <adsign ware="hullparts" macro="props_adsign_gen_hullparts_macro" />
+    <adsign ware="hydrogen" macro="props_adsign_gen_advancedcomposites_macro" />
+    <adsign ware="ice" macro="props_adsign_gen_advancedcomposites_macro" />
+    <adsign ware="majadust" macro="props_adsign_par_majadust_macro" />
+    <adsign ware="majasnails" macro="props_adsign_par_majasnails_macro" />
+    <adsign ware="meat" macro="props_adsign_arg_meat_macro" />
+    <adsign ware="medicalsupplies" macro="props_adsign_gen_medicalsupplies_macro" />
+    <adsign ware="methane" macro="props_adsign_gen_advancedcomposites_macro" />
+    <adsign ware="microchips" macro="props_adsign_gen_microchips_macro" />
+    <adsign ware="missilecomponents" macro="props_adsign_gen_missilecomponents_macro" />
+    <adsign ware="nividium" macro="props_adsign_gen_advancedcomposites_macro" />
+    <adsign ware="nostropoil" macro="props_adsign_tel_nostropoil_macro" />
+    <adsign ware="ore" macro="props_adsign_gen_advancedcomposites_macro" />
+    <adsign ware="plasmaconductors" macro="props_adsign_gen_plasmaconductors_macro" />
+    <adsign ware="quantumtubes" macro="props_adsign_gen_quantumtubes_macro" />
+    <adsign ware="refinedmetals" macro="props_adsign_gen_refinedmetals_macro" />
+    <adsign ware="scanningarrays" macro="props_adsign_gen_scanningarrays_macro" />
+    <adsign ware="shieldcomponents" macro="props_adsign_gen_shieldcomponents_macro" />
+    <adsign ware="silicon" macro="props_adsign_gen_siliconwavers_macro" />
+    <adsign ware="siliconwafers" macro="props_adsign_gen_siliconwavers_macro" />
+    <adsign ware="smartchips" macro="props_adsign_gen_smartchips_macro" />
+    <adsign ware="sojabeans" macro="props_adsign_par_sojabeans_macro" />
+    <adsign ware="sojahusk" macro="props_adsign_par_sojahusk_macro" />
+    <adsign ware="spacefuel" macro="props_adsign_arg_spacefuel_macro" />
+    <adsign ware="spaceweed" macro="props_adsign_tel_spaceweed_macro" />
+    <adsign ware="spices" macro="props_adsign_gen_spices_macro" />
+    <adsign ware="sunriseflowers" macro="props_adsign_tel_sunriseflowers_macro" />
+    <adsign ware="superfluidcoolant" macro="props_adsign_gen_superfluidcoolant_macro" />
+    <adsign ware="swampplant" macro="props_adsign_tel_swampplants_macro" />
+    <adsign ware="teladianium" macro="props_adsign_tel_teladianium_macro" />
+    <adsign ware="turretcomponents" macro="props_adsign_gen_turretcomponents_macro" />
+    <adsign ware="water" macro="props_adsign_gen_water_macro" />
+    <adsign ware="weaponcomponents" macro="props_adsign_gen_weaponcomponents_macro" />
+    <adsign ware="wheat" macro="props_adsign_arg_wheat_macro" />
+    <!-- shipyard/equipment wares -->
+    <adsign waregroup="drones" macro="props_adsign_gen_advancedcomposites_macro" />
+    <adsign waregroup="countermeasures" macro="props_adsign_gen_advancedcomposites_macro" />    
+    <adsign waregroup="engines" macro="props_adsign_gen_advancedcomposites_macro" />    
+    <adsign waregroup="missiles" macro="props_adsign_gen_advancedcomposites_macro" />    
+    <adsign waregroup="shields" macro="props_adsign_gen_advancedcomposites_macro" />    
+    <adsign waregroup="software" macro="props_adsign_gen_advancedcomposites_macro" />    
+    <adsign waregroup="thrusters" macro="props_adsign_gen_advancedcomposites_macro" />    
+    <adsign waregroup="turrets" macro="props_adsign_gen_advancedcomposites_macro" />    
+    <adsign waregroup="weapons" macro="props_adsign_gen_advancedcomposites_macro" />    
+    <!-- specific factions -->
+    <!-- Xenon should not advertise their wares-->    
+    <faction ref="xenon" adsigns="false" />
+    <!--
+    <faction ref="...">
+      <adsign ware="..." macro="..." />
+    </faction>
+    -->
+  </type>
+</adsigns>

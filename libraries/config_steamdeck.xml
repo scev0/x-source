@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <!-- graphic options -->
+  <upmode>fsr_balanced</upmode>
+  <!-- high gfx preset -->
+  <shadows>1</shadows>
+  <softshadows>false</softshadows>
+  <ssao>2</ssao>
+  <glow>2</glow>
+  <lodfactor>0.30</lodfactor>
+  <effectdistance>0.30</effectdistance>
+  <texturequality>medium</texturequality>
+  <pom>medium</pom>
+  <volumetric>1</volumetric>
+</root>

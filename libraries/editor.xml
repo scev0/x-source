@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<editor xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <textdb path="../t" file="0001-l044.xml" />
+
+  <types>
+    <import type="warebasket" source="baskets.xml" select="/baskets/basket" field="@id" allowpreview="true" sorted="true" />
+    <import type="class" source="common.xsd" select="/xs:schema/xs:simpleType[substring(@name, string-length(@name) - string-length('classlookup') + 1) = 'classlookup']//xs:enumeration" field="@value" ignoreprefix="true" sorted="true" />
+    <import type="faction" source="factions.xml" select="/factions/faction" field="@id" allowpreview="true" sorted="true" />
+    <import type="relationcomparison" source="common.xsd" select="/xs:schema/xs:simpleType[@name = 'relationcomparison']//xs:enumeration" field="@value" />
+    <import type="relation" source="common.xsd" select="/xs:schema/xs:simpleType[@name = 'relationlookup']//xs:enumeration" field="@value" />
+    <import type="entitytype" source="common.xsd" select="/xs:schema/xs:simpleType[@name='entitytypeexprlookup']//xs:enumeration" field="@value" ignoreprefix="true" sorted="true" />
+    <import type="shipgroup" source="shipgroups.xml" select="/groups/group" field="@name" allowpreview="true" sorted="true" />
+    <import type="shipdef" source="ships.xml" select="/ships/ship" field="@id" allowpreview="true" sorted="true" />
+    <import type="shipcategorysize" source="common.xsd" select="/xs:schema/xs:complexType[@name='shipdbcategory']/xs:attribute[@name='size']//xs:enumeration" field="@value" />
+  </types>
+
+  <table id="jobs" name="Jobs">
+    <file name="jobs.xml" select="/jobs/job[ship and not(masstraffic)]" />
+    <schema name="libraries.xsd" select="/xs:schema/xs:element[@name='jobs']/xs:complexType/xs:element[@name='job']" />
+    <disabledrows test="@disabled" />
+    <column value="@disabled" name="Enabled" type="boolean" negate="true" disablerow="true" />
+    <column value="@id" name="ID" key="true" />
+    <column value="@name" name="Name" type="text" />
+    <columngroup name="Flags">
+      <column value="@startactive" name="Start Active" type="boolean" default="true" />
+      <column value="modifiers/@commandeerable" name="Commandeerable" type="boolean" />
+      <column value="modifiers/@invincible" name="Invincible" type="boolean" hidden="true" />
+      <column value="modifiers/@rebuild" name="Rebuild" type="boolean" default="true" hidden="true" />
+      <column value="modifiers/@subordinate" name="Subordinate" type="boolean" />
+      <column value="@fullname" name="Full Ship Name" type="boolean" default="true" hidden="true" />
+      <column value="@ignorecommanderwares" name="Ign. Commander Wares" type="boolean" hidden="true" />
+    </columngroup>
+    <column value="basket/@basket" name="Default Basket" type="warebasket" />
+    <column value="orders" name="Orders" type="xmlnode">
+      <display>
+        <xsl:for-each select="orders/order">
+          <xsl:if test="position() != 1">, </xsl:if>
+          <xsl:if test="@default = 'true' or @default = '1'">default=</xsl:if>
+          <xsl:value-of select="@order" />
+        </xsl:for-each>
+      </display>
+    </column>
+    <column value="subordinates" name="Subordinates" type="xmlnode">
+      <display>
+        <xsl:for-each select="subordinates/subordinate">
+          <xsl:if test="position() != 1">, </xsl:if>
+          <xsl:value-of select="@job" />
+        </xsl:for-each>
+      </display>
+    </column>
+    <columngroup name="Ship" base="ship">
+      <column value="@ref" name="ShipDB Ref" type="shipdef" />
+      <column value="@group" name="Ship Group" type="shipgroup" />
+      <column value="@macro" name="Macro" />
+      <column value="select/@faction" name="Select by Faction" type="faction" />
+      <column value="select/@tags" name="Select by Tags" />
+      <column value="select/@size" name="Select by Size" type="shipcategorysize" />
+      <column value="owner/@exact" name="Owner" type="faction" />
+      <column value="owner/@overridenpc" name="Override NPC Owner" type="boolean" />
+    </columngroup>
+    <columngroup name="Quota" base="quota">
+      <column value="@galaxy" name="Galaxy" type="integer" />
+      <column value="@maxgalaxy" name="MaxGalaxy" type="integer" />
+      <column value="@cluster" name="Cluster" type="integer" />
+      <column value="@sector" name="Sector" type="integer" />
+      <column value="@zone" name="Zone" type="integer" />
+      <column value="@station" name="Station" type="integer" />
+      <column value="@wing" name="Wing" type="integer" />
+      <column value="@variation" name="Variation" type="integer" />
+    </columngroup>
+    <column value="quotas" name="Gamestart Quotas" type="xmlnode" hidden="true" />
+    <columngroup name="Location" base="location">
+      <column value="@class" name="Class" type="class" />
+      <column value="@macro" name="Macro" />
+      <column value="@faction" name="Faction" type="faction" />
+      <column value="@comparison" name="Relation Comparison" type="relationcomparison" />
+      <column value="@relation" name="Relation" type="relation" />
+      <column value="@regionbasket" name="Region Basket" type="warebasket" />
+    </columngroup>
+    <columngroup name="Commander" base="commander">
+      <column value="@macro" name="Macro" hidden="true" />
+      <column value="@entitytype" name="Entity Type" type="entitytype" hidden="true" />
+    </columngroup>
+    <columngroup name="Environment" base="environment">
+      <column value="@zone" name="Zone" type="boolean" />
+      <column value="@gate" name="Gate" type="boolean" />
+      <column value="@buildatshipyard" name="Build At Shipyard" type="boolean" />
+      <column value="@preferbuilding" name="Prefer Building" type="boolean" />
+      <column value="@spawninsector" name="Spawn In Sector" type="boolean" />
+      <column value="@spawnoutofsector" name="Spawn Out of Sector" type="boolean" />
+      <column value="@chancedocked" name="Docked Spawn Chance" type="integer" />
+    </columngroup>
+    <columngroup name="Position" base="position">
+      <column value="@x" name="X" type="float" hidden="true" />
+      <column value="@y" name="Y" type="float" hidden="true" />
+      <column value="@z" name="Z" type="float" hidden="true" />
+      <column value="distance/@exact" name="Exact Distance" type="float" hidden="true" />
+      <column value="distance/@min" name="Min Distance" type="float" hidden="true" />
+      <column value="distance/@max" name="Max Distance" type="float" hidden="true" />
+    </columngroup>
+    <columngroup name="Timing">
+      <column value="time/@interval" name="Min Interval" type="float" />
+      <column value="time/@start" name="First Time" type="float" />
+      <column value="expirationtime/@min" name="Min Expiration Time" type="float" />
+      <column value="expirationtime/@max" name="Max Expiration Time" type="float" />
+    </columngroup>
+    <column value="@description" name="Description" type="text" hidden="true" />
+    <column value="@comment" name="Comment" />
+  </table>
+
+</editor>

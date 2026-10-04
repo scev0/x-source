@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ?xml-stylesheet href="characters.xsl" type="text/xsl" ? -->
+<bodypartgroups>
+  <group id="casual" type="torso" name="{20118,2011}" />
+  <group id="terran" type="torso" name="{20118,2021}" />
+</bodypartgroups>

@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<camerasettings>
+  <follow>
+    <default camspeed="40" camacc="40" shipspeedcap="0.45">
+      <linear x="-0.5" y="-0.5" z="-0.5"/>
+      <angular x="0.3" y="0.125" z="0.3"/>
+    </default>
+    <classes>
+      <class id="ship_xs" camspeed="30" camacc="30" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.7" z="-0.8"/>
+        <angular x="1" y="2" z="0.35"/>
+        <position y="6.848" z="-20.709"/>
+      </class>
+      <class id="ship_s" camspeed="50" camacc="50" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.7" z="-0.8"/>
+        <angular x="1" y="2" z="0.35"/>
+        <position y="8.235" z="-27.967"/>
+      </class>
+      <class id="ship_m" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.75" y="-0.5" z="-0.5"/>
+        <angular x="2.7" y="1.8" z="0.3"/>
+        <position y="37.754" z="-125.557"/>
+      </class>
+      <class id="ship_l" camspeed="100" camacc="70" shipspeedcap="0.35">
+        <linear x="-0.5" y="-0.5" z="-0.4"/>
+        <angular x="2" y="1" z="0.7"/>
+        <position y="200" z="-550"/>
+      </class>
+      <class id="ship_xl" camspeed="140" camacc="80" shipspeedcap="0.35">
+        <linear x="-0.5" y="-0.5" z="-0.4"/>
+        <angular x="2" y="1" z="1.5"/>
+        <position y="612.566" z="-2153.119"/>
+      </class>
+    </classes>
+    <templates>
+      <template id="ship_arg_m_miner_solid_01">
+        <position y="30.565" z="-126.485"/>
+      </template>
+      <template id="ship_arg_s_fighter_04" camspeed="40" camacc="40" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.7" z="-0.8"/>
+        <angular x="1.6" y="2" z="0.35"/>
+        <position y="13.08" z="-32.737"/>
+      </template>
+      <template id="ship_arg_s_fighter_01" camspeed="40" camacc="40" shipspeedcap="0.45">
+        <linear x="-0.5" y="-1.2" z="-1"/>
+        <angular x="1" y="2.3" z="0.35"/>
+        <position y="10.683" z="-28.073"/>
+      </template>
+      <template id="ship_arg_s_fighter_03" camspeed="40" camacc="40" shipspeedcap="0.45">
+        <linear x="-1" y="-1" z="-0.8"/>
+        <angular x="1.7" y="2" z="0.35"/>
+        <position y="8.472" z="-31.926"/>
+      </template>
+      <template id="ship_arg_s_fighter_02" camspeed="40" camacc="40" shipspeedcap="0.45">
+        <linear x="-1" y="-1" z="-0.8"/>
+        <angular x="3.7" y="2.5" z="0.35"/>
+        <position y="9.366" z="-29.175"/>
+      </template>
+      <template id="ship_par_m_trans_container_03" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.75" z="-0.35"/>
+        <angular x="2.2" y="2.8" z="0.7"/>
+        <position y="44.23" z="-145.422"/>
+      </template>
+      <template id="ship_par_m_trans_container_02" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.75" z="-0.35"/>
+        <angular x="4" y="3.2" z="0.7"/>
+        <position y="40.085" z="-129.968"/>
+      </template>
+      <template id="ship_par_m_trans_container_01" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.75" z="-0.35"/>
+        <angular x="4" y="3.2" z="0.7"/>
+        <position y="40.085" z="-129.968"/>
+      </template>
+      <template id="ship_tel_m_trans_container_01" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.5" z="-0.3"/>
+        <angular x="3" y="2" z="0.3"/>
+        <position y="32.35" z="-125.469"/>
+      </template>
+      <template id="ship_tel_m_trans_container_03" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.75" z="-0.4"/>
+        <angular x="1.8" y="1.8" z="0.3"/>
+        <position y="32.463" z="-146.71"/>
+      </template>
+      <template id="ship_tel_m_trans_container_02" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.5" z="-0.3"/>
+        <angular x="3" y="2" z="0.3"/>
+        <position y="31.011" z="-123.557"/>
+      </template>
+      <template id="ship_par_xs_spacesuit_01_a" camspeed="20" camacc="20" shipspeedcap="1">
+        <linear x="-0.7" y="-0.7" z="-0.4"/>
+        <angular x="3" y="0.75" z="0.7"/>
+        <position y="0.6063" z="-3.205"/>
+      </template>
+      <template id="ship_par_l_miner_liquid_01">
+        <position y="181.369" z="-568.196"/>
+      </template>
+      <template id="ship_par_l_miner_liquid_02" camspeed="100" camacc="70" shipspeedcap="0.22">
+        <linear x="-0.5" y="-0.6" z="-0.35"/>
+        <angular x="2.8" y="3" z="0.7"/>
+        <position y="217.783" z="-800.025"/>
+      </template>
+      <template id="ship_tel_m_miner_solid_01">
+        <position y="50.651" z="-159.102"/>
+      </template>
+      <template id="ship_par_l_trans_container_01">
+        <position y="176.965" z="-550"/>
+      </template>
+      <template id="ship_par_l_trans_container_02">
+        <position y="180.192" z="-550"/>
+      </template>
+      <template id="ship_spl_xs_spacesuit_01_a" camspeed="20" camacc="20" shipspeedcap="1">
+        <linear x="-0.7" y="-0.7" z="-0.4"/>
+        <angular x="3" y="0.75" z="0.7"/>
+        <position y="0.6063" z="-3.205"/>
+      </template>
+      <template id="ship_xen_m_fighter_01">
+        <position y="49.872" z="-143.117"/>
+      </template>
+      <template id="ship_par_l_destroyer_02" camspeed="100" camacc="70" shipspeedcap="0.3">
+        <linear x="-0.5" y="-0.5" z="-0.35"/>
+        <angular x="2" y="1.5" z="0.7"/>
+        <position y="249.275" z="-939.911"/>
+      </template>
+      <template id="ship_par_l_destroyer_01" camspeed="100" camacc="70" shipspeedcap="0.3">
+        <linear x="-0.5" y="-0.5" z="-0.35"/>
+        <angular x="2" y="1.2" z="0.7"/>
+        <position y="262.418" z="-608.395"/>
+      </template>
+      <template id="ship_tfm_xl_carrier_01">
+        <position y="1507.1" z="-5382.5"/>
+      </template>
+      <template id="ship_tel_l_miner_solid_01" camspeed="100" camacc="70" shipspeedcap="0.3">
+        <linear x="-0.5" y="-0.5" z="-0.8"/>
+        <angular x="2.3" y="0.8" z="0.7"/>
+        <position y="277.01" z="-678.505"/>
+      </template>
+      <template id="ship_tel_s_miner_solid_01">
+        <position y="10.741" z="-38.359"/>
+      </template>
+      <template id="ship_arg_m_miner_liquid_01" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.75" y="-0.5" z="-0.5"/>
+        <angular x="3" y="2" z="0.3"/>
+        <position y="33.545" z="-115.06"/>
+      </template>
+      <template id="ship_gen_m_tugboat_01">
+        <position y="44.866" z="-125.341"/>
+      </template>
+      <template id="ship_tel_xs_spacesuit_01_a" camspeed="20" camacc="20" shipspeedcap="1">
+        <linear x="-0.7" y="-0.7" z="-0.4"/>
+        <angular x="3" y="0.75" z="0.7"/>
+        <position y="0.6063" z="-3.205"/>
+      </template>
+      <template id="ship_arg_s_miner_solid_01">
+        <position y="11.974" z="-37.555"/>
+      </template>
+      <template id="ship_tel_m_miner_liquid_01" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.5" z="-0.4"/>
+        <angular x="3" y="2" z="0.3"/>
+        <position y="51.207" z="-157.711"/>
+      </template>
+      <template id="ship_tel_m_frigate_01" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.5" z="-0.5"/>
+        <angular x="2" y="1.3" z="0.3"/>
+        <position y="43.834" z="-157.595"/>
+      </template>
+      <template id="ship_tel_xl_builder_01" camspeed="120" camacc="70" shipspeedcap="0.3">
+        <linear x="-0.5" y="-0.5" z="-0.4"/>
+        <angular x="2.5" y="2.7" z="1.5"/>
+        <position y="539.613" z="-1788.381"/>
+      </template>
+      <template id="ship_par_l_miner_solid_01">
+        <position y="181.369" z="-568.196"/>
+      </template>
+      <template id="ship_par_l_miner_solid_02" camspeed="100" camacc="70" shipspeedcap="0.22">
+        <linear x="-0.5" y="-0.6" z="-0.35"/>
+        <angular x="2.8" y="3" z="0.7"/>
+        <position y="217.783" z="-800.025"/>
+      </template>
+      <template id="ship_tel_l_miner_liquid_01" camspeed="100" camacc="70" shipspeedcap="0.3">
+        <linear x="-0.5" y="-0.5" z="-0.8"/>
+        <angular x="2.3" y="0.8" z="0.7"/>
+        <position y="277.01" z="-678.505"/>
+      </template>
+      <template id="ship_par_s_scout_01">
+        <position y="9.656" z="-34.104"/>
+      </template>
+      <template id="ship_arg_s_heavyfighter_02" camspeed="40" camacc="40" shipspeedcap="0.45">
+        <linear x="-0.5" y="-1.2" z="-0.8"/>
+        <angular x="1.25" y="2.5" z="0.35"/>
+        <position y="11.789" z="-39.735"/>
+      </template>
+      <template id="ship_xen_s_scout_01">
+        <position y="10.513" z="-34.173"/>
+      </template>
+      <template id="ship_arg_l_miner_liquid_01" camspeed="100" camacc="70" shipspeedcap="0.35">
+        <linear x="-0.5" y="-0.5" z="-0.5"/>
+        <angular x="1.7" y="0.8" z="0.7"/>
+        <position y="244.377" z="-596.82"/>
+      </template>
+      <template id="ship_xen_m_miner_01">
+        <position y="49.421" z="-160.428"/>
+      </template>
+      <template id="ship_arg_s_trans_container_02" camspeed="40" camacc="40" shipspeedcap="0.4">
+        <linear x="-0.5" y="-0.7" z="-0.4"/>
+        <angular x="2.2" y="2" z="0.35"/>
+        <position y="8.707" z="-24.508"/>
+      </template>
+      <template id="ship_arg_s_trans_container_01">
+        <position y="11.974" z="-37.555"/>
+      </template>
+      <template id="ship_arg_l_miner_solid_01" camspeed="100" camacc="70" shipspeedcap="0.35">
+        <linear x="-0.5" y="-0.5" z="-0.5"/>
+        <angular x="3" y="1.2" z="0.7"/>
+        <position y="353.559" z="-754.68"/>
+      </template>
+      <template id="ship_par_s_trans_container_01" camspeed="40" camacc="40" shipspeedcap="0.4">
+        <linear x="-0.5" y="-1" z="-0.4"/>
+        <angular x="1.6" y="2.2" z="0.35"/>
+        <position y="10.734" z="-37.658"/>
+      </template>
+      <template id="ship_kha_s_fighter_02">
+        <position y="32.85" z="-96.024"/>
+      </template>
+      <template id="ship_arg_s_scout_01">
+        <position y="9.551" z="-31.518"/>
+      </template>
+      <template id="ship_xen_s_fighter_02">
+        <position y="16.058" z="-55.734"/>
+      </template>
+      <template id="ship_xen_s_fighter_01">
+        <position y="13.067" z="-47.976"/>
+      </template>
+      <template id="ship_tel_m_bomber_01" camspeed="100" camacc="100" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.5" z="-0.4"/>
+        <angular x="3" y="1.75" z="0.3"/>
+        <position y="31.043" z="-122.557"/>
+      </template>
+      <template id="ship_tel_s_scout_02" camspeed="40" camacc="40" shipspeedcap="0.4">
+        <linear x="-0.5" y="-1.2" z="-0.4"/>
+        <angular x="1.5" y="1.9" z="0.35"/>
+        <position y="8.9" z="-32.543"/>
+      </template>
+      <template id="ship_tel_s_scout_01" camspeed="40" camacc="40" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.7" z="-0.8"/>
+        <angular x="1.8" y="2" z="0.35"/>
+        <position y="8.837" z="-31.977"/>
+      </template>
+      <template id="ship_par_s_fighter_02" camspeed="40" camacc="40" shipspeedcap="0.45">
+        <linear x="-0.4" y="-1" z="-0.4"/>
+        <angular x="1.1" y="3" z="0.35"/>
+        <position y="10.945" z="-39.408"/>
+      </template>
+      <template id="ship_par_s_fighter_01" camspeed="40" camacc="40" shipspeedcap="0.45">
+        <linear x="-0.4" y="-1" z="-0.4"/>
+        <angular x="1.1" y="3" z="0.35"/>
+        <position y="11.601" z="-36.745"/>
+      </template>
+      <template id="ship_par_m_frigate_01" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.75" z="-0.4"/>
+        <angular x="1.9" y="3" z="0.7"/>
+        <position y="54.798" z="-173.108"/>
+      </template>
+      <template id="ship_par_xl_carrier_02" camspeed="180" camacc="80" shipspeedcap="0.25">
+        <linear x="-0.35" y="-0.7" z="-0.4"/>
+        <angular x="1.1" y="1.8" z="3.3"/>
+        <position y="595.736" z="-2260.885"/>
+      </template>
+      <template id="ship_par_xl_carrier_01">
+        <position y="874.044" z="-1940.693"/>
+      </template>
+      <template id="ship_arg_m_frigate_01" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.75" z="-0.4"/>
+        <angular x="1.5" y="1.5" z="0.3"/>
+        <position y="38.555" z="-134.634"/>
+      </template>
+      <template id="ship_arg_l_destroyer_01" camspeed="100" camacc="70" shipspeedcap="0.35">
+        <linear x="-0.5" y="-0.5" z="-0.4"/>
+        <angular x="1.2" y="1" z="0.7"/>
+        <position y="192.746" z="-584.972"/>
+      </template>
+      <template id="ship_arg_l_destroyer_02" camspeed="100" camacc="70" shipspeedcap="0.35">
+        <linear x="-0.55" y="-0.55" z="-0.4"/>
+        <angular x="1.1" y="1" z="0.7"/>
+        <position y="179.757" z="-811.09"/>
+      </template>
+      <template id="ship_par_xl_resupplier_01">
+        <position y="633.08" z="-2099.578"/>
+      </template>
+      <template id="ship_par_xl_resupplier_02" camspeed="180" camacc="80" shipspeedcap="0.25">
+        <linear x="-0.5" y="-0.7" z="-0.5"/>
+        <angular x="2.4" y="2.8" z="2.7"/>
+        <position y="543.435" z="-2535.554"/>
+      </template>
+      <template id="ship_par_xl_builder_01" camspeed="180" camacc="80" shipspeedcap="0.25">
+        <linear x="-0.5" y="-0.7" z="-0.5"/>
+        <angular x="2.8" y="2.8" z="2.7"/>
+        <position y="603.914" z="-1990.292"/>
+      </template>
+      <template id="ship_par_s_heavyfighter_01" camspeed="40" camacc="40" shipspeedcap="0.45">
+        <linear x="-0.4" y="-0.8" z="-0.4"/>
+        <angular x="1.4" y="2.8" z="0.35"/>
+        <position y="12.373" z="-39.008"/>
+      </template>
+      <template id="ship_xen_s_heavyfighter_01">
+        <position y="13.476" z="-36.186"/>
+      </template>
+      <template id="ship_arg_xl_resupplier_01" camspeed="130" camacc="60" shipspeedcap="0.35">
+        <linear x="-0.5" y="-0.5" z="-0.4"/>
+        <angular x="1.8" y="2.2" z="0.7"/>
+        <position y="593.884" z="-1638.444"/>
+      </template>
+      <template id="ship_arg_xl_builder_01" camspeed="120" camacc="60" shipspeedcap="0.35">
+        <linear x="-0.5" y="-0.5" z="-0.4"/>
+        <angular x="1.6" y="2" z="0.7"/>
+        <position y="386.483" z="-1037.638"/>
+      </template>
+      <template id="ship_par_s_miner_solid_01" camspeed="40" camacc="40" shipspeedcap="0.4">
+        <linear x="-0.5" y="-1" z="-0.4"/>
+        <angular x="1.6" y="2.2" z="0.35"/>
+        <position y="10.734" z="-37.658"/>
+      </template>
+      <template id="ship_arg_xs_spacesuit_01_a" camspeed="20" camacc="20" shipspeedcap="1">
+        <linear x="-0.7" y="-0.7" z="-0.4"/>
+        <angular x="3" y="0.75" z="0.7"/>
+        <position y="0.6063" z="-3.205"/>
+      </template>
+      <template id="ship_arg_m_bomber_02" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-1" y="-1" z="-0.4"/>
+        <angular x="3" y="2" z="0.7"/>
+        <position y="36.586" z="-124.588"/>
+      </template>
+      <template id="ship_arg_m_bomber_01" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-1" y="-1" z="-0.4"/>
+        <angular x="3" y="2" z="0.7"/>
+        <position y="36.586" z="-124.588"/>
+      </template>
+      <template id="ship_arg_m_trans_container_01" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-1" y="-1" z="-0.4"/>
+        <angular x="3.5" y="1.8" z="0.7"/>
+        <position y="30.061" z="-120.41"/>
+      </template>
+      <template id="ship_arg_m_trans_container_02" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-1" y="-1" z="-0.4"/>
+        <angular x="3.5" y="1.8" z="0.7"/>
+        <position y="30.061" z="-120.41"/>
+      </template>
+      <template id="ship_xen_m_corvette_01" camspeed="80" camacc="100" shipspeedcap="0.45">
+        <linear x="-0.2" y="-0.2" z="-0.35"/>
+        <angular x="3" y="1.5" z="1"/>
+        <position y="50.482" z="-143.948"/>
+      </template>
+      <template id="ship_par_m_miner_solid_01" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.75" z="-0.35"/>
+        <angular x="2.2" y="2.8" z="0.7"/>
+        <position y="44.23" z="-145.422"/>
+      </template>
+      <template id="ship_tel_xl_resupplier_01" camspeed="120" camacc="70" shipspeedcap="0.2">
+        <linear x="-0.5" y="-0.5" z="-0.6"/>
+        <angular x="1.4" y="1" z="0.7"/>
+        <position y="592.126" z="-2103.34"/>
+      </template>
+      <template id="ship_arg_l_trans_container_05" camspeed="100" camacc="70" shipspeedcap="0.3">
+        <linear x="-0.5" y="-0.5" z="-0.25"/>
+        <angular x="2" y="1" z="0.7"/>
+        <position y="242.116" z="-1150.409"/>
+      </template>
+      <template id="ship_arg_l_trans_container_04" camspeed="100" camacc="70" shipspeedcap="0.3">
+        <linear x="-0.5" y="-0.5" z="-0.22"/>
+        <angular x="2" y="1" z="0.7"/>
+        <position y="271.39" z="-1425.143"/>
+      </template>
+      <template id="ship_arg_l_trans_container_03" camspeed="100" camacc="70" shipspeedcap="0.3">
+        <linear x="-0.5" y="-0.5" z="-0.25"/>
+        <angular x="2" y="1" z="0.7"/>
+        <position y="236.968" z="-1437.481"/>
+      </template>
+      <template id="ship_arg_l_trans_container_02">
+        <position y="200" z="-628.837"/>
+      </template>
+      <template id="ship_arg_l_trans_container_01">
+        <position y="200" z="-628.837"/>
+      </template>
+      <template id="ship_tel_s_fighter_01" camspeed="40" camacc="40" shipspeedcap="0.4">
+        <linear x="-0.5" y="-1.4" z="-0.4"/>
+        <angular x="1" y="2.5" z="0.35"/>
+        <position y="12.024" z="-31.957"/>
+      </template>
+      <template id="ship_tel_s_fighter_02" camspeed="40" camacc="40" shipspeedcap="0.4">
+        <linear x="-0.5" y="-1.4" z="-0.5"/>
+        <angular x="1.8" y="2.4" z="0.35"/>
+        <position y="13.502" z="-38.219"/>
+      </template>
+      <template id="ship_gen_s_fighter_01" camspeed="40" camacc="40" shipspeedcap="0.4">
+        <linear x="-0.5" y="-1.4" z="-0.4"/>
+        <angular x="2" y="2.2" z="0.35"/>
+        <position y="18.685" z="-55.558"/>
+      </template>
+      <template id="ship_xen_xl_destroyer_01">
+        <position y="558.088" z="-1924.322"/>
+      </template>
+      <template id="ship_arg_xl_carrier_01" camspeed="180" camacc="80" shipspeedcap="0.25">
+        <linear x="-0.5" y="-0.5" z="-0.5"/>
+        <angular x="1.4" y="1.2" z="0.7"/>
+        <position y="605.161" z="-1982.751"/>
+      </template>
+      <template id="ship_arg_xl_carrier_02" camspeed="180" camacc="80" shipspeedcap="0.25">
+        <linear x="-0.5" y="-0.5" z="-0.5"/>
+        <angular x="1.4" y="1.2" z="0.7"/>
+        <position y="604.68" z="-2199.695"/>
+      </template>
+      <template id="ship_par_m_corvette_01" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.75" z="-0.4"/>
+        <angular x="1.8" y="2.4" z="0.3"/>
+        <position y="31.312" z="-115.096"/>
+      </template>
+      <template id="ship_tel_l_destroyer_01" camspeed="100" camacc="70" shipspeedcap="0.25">
+        <linear x="-0.5" y="-0.5" z="-1"/>
+        <angular x="2.6" y="0.7" z="0.7"/>
+        <position y="407.204" z="-745.511"/>
+      </template>
+      <template id="ship_tel_l_destroyer_02" camspeed="110" camacc="80" shipspeedcap="0.25">
+        <linear x="-0.5" y="-0.5" z="-0.9"/>
+        <angular x="2.6" y="0.7" z="0.7"/>
+        <position y="442.448" z="-880.583"/>
+      </template>
+      <template id="ship_par_m_miner_liquid_01" camspeed="80" camacc="60" shipspeedcap="0.45">
+        <linear x="-0.5" y="-0.75" z="-0.35"/>
+        <angular x="2.2" y="2.8" z="0.7"/>
+        <position y="44.23" z="-145.422"/>
+      </template>
+      <template id="ship_xen_l_terraformer_01" camspeed="120" camacc="70" shipspeedcap="0.25">
+        <linear x="-0.5" y="-0.5" z="-0.75"/>
+        <angular x="2.6" y="0.7" z="0.7"/>
+        <position y="182.36" z="-790.899"/>
+      </template>
+      <template id="ship_tel_xl_carrier_01">
+        <position y="677.826" z="-2030.594"/>
+      </template>
+      <template id="ship_kha_m_fighter_02">
+        <position y="50.533" z="-143.876"/>
+      </template>
+      <template id="ship_kha_l_destroyer_01">
+        <position y="430.387" z="-1400"/>
+      </template>
+      <template id="landmarks_kha_weaponplatform_01">
+        <position y="87.535" z="-201.113"/>
+      </template>
+      <template id="ship_xen_xl_carrier_01">
+        <position y="639.387" z="-3895.556"/>
+      </template>
+      <template id="ship_tel_s_trans_container_02">
+        <position y="12.196" z="-40.968"/>
+      </template>
+      <template id="ship_tel_s_trans_container_01">
+        <position y="10.741" z="-38.359"/>
+      </template>
+      <template id="ship_tel_l_trans_container_02" camspeed="100" camacc="70" shipspeedcap="0.3">
+        <linear x="-0.5" y="-0.5" z="-0.7"/>
+        <angular x="2.3" y="0.8" z="0.7"/>
+        <position y="253.828" z="-609.187"/>
+      </template>
+      <template id="ship_tel_l_trans_container_03" camspeed="100" camacc="70" shipspeedcap="0.3">
+        <linear x="-0.5" y="-0.5" z="-0.7"/>
+        <angular x="2.3" y="0.8" z="0.7"/>
+        <position y="361.213" z="-796.084"/>
+      </template>
+      <template id="ship_tel_l_trans_container_01" camspeed="100" camacc="70" shipspeedcap="0.3">
+        <linear x="-0.5" y="-0.5" z="-0.7"/>
+        <angular x="2" y="0.8" z="0.7"/>
+        <position y="253.828" z="-609.187"/>
+      </template>
+    </templates>
+  </follow>
+</camerasettings>

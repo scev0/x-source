@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<clothingmods>
+	<!-->paint  ware="warename" quality="1-3" hue="float" brightness="float" saturation="float" metal="float" smooth="float"
+              pattern="path+filename" scale="float" strength="float" sharpness="float" invert="bool" red="float" green="float" blue="float" alpha="float" personal="texture from personal folder?"-->
+  
+	<clothing ware="clothingmod_0001" quality="1" hue="190" metal="-0.2" smooth="0.4" pattern="assets\textures\pattern\pattern_18_diff" scale="20" sharpness="100" />
+  <clothing ware="clothingmod_0002" quality="1" hue="90" metal="0.2" smooth="0.4" pattern="assets\textures\pattern\pattern_11_diff" scale="20" sharpness="100" />
+  <clothing ware="clothingmod_0003" quality="1" hue="0" pattern="assets\textures\fx\white_01_diff" saturation="1.0" red="255.0" green="255.0" blue="255.0" metal="0.0" smooth="0.0" scale="20" sharpness="100" />
+  
+</clothingmods>

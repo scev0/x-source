@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actions>
+  <!-- 
+  This file defines objects or components that have been replaced and all occurences in savegames need to be patched to reflect the updated state.
+  Elements defined in the map file have to be specified with their full connection path relative to the root map macro.
+  Objects that are created independently from the universe map must be specified relative to the object macro to apply to all instances of that macro.
+  Macro names and paths should be all lowercase.
+  -->
+  <action version="700" build="529247">
+    <macros>
+      <!-- Replace dockingbay macro on Xenon XL buildmodule -->
+      <macro macro="buildmodule_xen_ships_xl_macro" path= "../connection_dockarea01" />
+    </macros>
+  </action>
+  <action version="750" build="538291">
+    <macros>
+      <macro macro="ship_arg_l_destroyer_01_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_arg_l_destroyer_01_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_arg_l_miner_liquid_01_a_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_arg_l_miner_liquid_01_b_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_arg_l_miner_solid_01_a_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_arg_l_miner_solid_01_b_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_arg_l_trans_container_01_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_arg_l_trans_container_01_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_arg_l_trans_container_02_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_arg_l_trans_container_02_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_arg_l_trans_container_03_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_arg_l_trans_container_03_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_arg_l_trans_container_04_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_arg_l_trans_container_04_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_arg_l_trans_container_05_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_arg_l_trans_container_05_b_macro" path= "../con_shipstorage_s_01"/>
+
+      <macro macro="ship_par_l_destroyer_01_a_macro" path= "../con_shipstorage_m_01"/>
+      <macro macro="ship_par_l_destroyer_01_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_l_destroyer_01_b_macro" path= "../con_shipstorage_m_01"/>
+      <macro macro="ship_par_l_destroyer_01_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_l_miner_liquid_01_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_l_miner_liquid_01_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_l_miner_liquid_02_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_l_miner_solid_01_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_l_miner_solid_01_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_l_miner_solid_02_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_l_trans_container_01_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_l_trans_container_01_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_l_trans_container_02_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_l_trans_container_02_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_l_trans_container_03_a_macro" path= "../con_shipstorage_s_01"/>
+
+      <macro macro="ship_tel_l_destroyer_01_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_l_destroyer_01_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_l_miner_liquid_01_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_l_miner_liquid_01_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_l_miner_liquid_02_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_l_miner_solid_01_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_l_miner_solid_01_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_l_miner_solid_02_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_l_trans_container_01_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_l_trans_container_01_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_l_trans_container_02_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_l_trans_container_02_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_l_trans_container_03_a_macro" path= "../con_shipstorage_s_01"/>
+
+      <macro macro="ship_arg_xl_builder_01_a_macro" path= "../con_shipstorage_m_01"/>
+      <macro macro="ship_arg_xl_builder_01_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_arg_xl_builder_01_b_macro" path= "../con_shipstorage_m_01"/>
+      <macro macro="ship_arg_xl_builder_01_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_arg_xl_carrier_01_a_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_arg_xl_carrier_01_a_macro" path= "../con_shipstorage02"/>
+      <macro macro="ship_arg_xl_carrier_01_b_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_arg_xl_carrier_01_b_macro" path= "../con_shipstorage02"/>
+      <macro macro="ship_arg_xl_resupplier_01_a_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_arg_xl_resupplier_01_a_macro" path= "../con_shipstorage02"/>
+      <macro macro="ship_arg_xl_resupplier_01_b_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_arg_xl_resupplier_01_b_macro" path= "../con_shipstorage02"/>
+
+      <macro macro="ship_par_xl_builder_01_a_macro" path= "../con_shipstorage_m_01"/>
+      <macro macro="ship_par_xl_builder_01_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_xl_builder_01_b_macro" path= "../con_shipstorage_m_01"/>
+      <macro macro="ship_par_xl_builder_01_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_par_xl_carrier_01_a_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_par_xl_carrier_01_a_macro" path= "../con_shipstorage02"/>
+      <macro macro="ship_par_xl_carrier_01_b_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_par_xl_carrier_01_b_macro" path= "../con_shipstorage02"/>
+      <macro macro="ship_par_xl_carrier_02_a_macro" path= "../con_shipstorage02"/>
+      <macro macro="ship_par_xl_resupplier_01_a_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_par_xl_resupplier_01_a_macro" path= "../con_shipstorage02"/>
+      <macro macro="ship_par_xl_resupplier_01_b_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_par_xl_resupplier_01_b_macro" path= "../con_shipstorage02"/>
+      <macro macro="ship_par_xl_resupplier_02_a_macro" path= "../con_shipstorage01"/>
+
+      <macro macro="ship_tel_xl_builder_01_a_macro" path= "../con_shipstorage_m_01"/>
+      <macro macro="ship_tel_xl_builder_01_a_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_xl_builder_01_b_macro" path= "../con_shipstorage_m_01"/>
+      <macro macro="ship_tel_xl_builder_01_b_macro" path= "../con_shipstorage_s_01"/>
+      <macro macro="ship_tel_xl_carrier_01_a_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_tel_xl_carrier_01_a_macro" path= "../con_shipstorage02"/>
+      <macro macro="ship_tel_xl_carrier_01_b_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_tel_xl_carrier_01_b_macro" path= "../con_shipstorage02"/>
+      <macro macro="ship_tel_xl_resupplier_01_a_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_tel_xl_resupplier_01_a_macro" path= "../con_shipstorage02"/>
+      <macro macro="ship_tel_xl_resupplier_01_b_macro" path= "../con_shipstorage01"/>
+      <macro macro="ship_tel_xl_resupplier_01_b_macro" path= "../con_shipstorage02"/>
+    </macros>
+  </action>
+</actions>

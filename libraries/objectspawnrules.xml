@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objectspawnrules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="objectspawnrules.xsd">
+  <!-- Rules are evalated from top to bottom. Every object goes through these and chooses the first one that applies to it. -->
+  <!--Note: these definitions are just an example of what we could do, don't assume that they are based on fully thought out design-->
+  <!--chance is in percent (0-100)-->
+  <stations>
+    <rule owner="xenon" hazardousregion="true" chance="100" drop="hidden_rare_lockbox" />
+    <rule owner="xenon" chance="50" drop="hidden_unusual_lockbox" />
+    <rule stationtype="piratebase" hazardousregion="true" chance="50" drop="hidden_unusual_lockbox" />
+    <rule stationtype="piratebase" chance="20" drop="hidden_unusual_lockbox" />
+    <rule hazardousregion="true" chance="25" drop="hidden_unusual_lockbox" />
+    <rule stationtype="shipyard" chance="20" drop="hidden_common_lockbox" />
+    <rule stationtype="equipmentdock" chance="20" drop="hidden_common_lockbox" />
+    <rule stationtype="tradingstation" owner="argon" chance="10" drop="hidden_common_lockbox" />
+    <!--this and the 2 below could get race-specific drop lists-->
+    <rule stationtype="tradingstation" owner="teladi" chance="10" drop="hidden_common_lockbox" />
+    <rule stationtype="tradingstation" owner="paranid" chance="10" drop="hidden_common_lockbox" />
+    <rule stationtype="tradingstation" chance="10" drop="hidden_common_lockbox" />
+    <rule chance="30" drop="hidden_common_lockbox" />
+  </stations>
+  <regions>
+    <!--These will use a spawn point (with associated macro) when one exists, otherwise a random position on the surface is chosen-->
+    <!--rule fieldtype="asteroid" owner="argon" hazardousregion="false" chance="100" macro="env_ast_crystal_detail_s_01_macro" /-->
+    <!--rule fieldtype="asteroid" owner="argon" hazardousregion="false" chance="100" macro="env_ast_crystal_detail_s_02_macro" /-->
+    <!--rule fieldtype="asteroid" owner="argon" hazardousregion="false" chance="100" macro="env_ast_crystal_detail_s_03_macro" /-->
+    <!--rule fieldtype="asteroid" owner="argon" hazardousregion="false" chance="100" macro="env_ast_crystal_detail_s_04_macro" /-->
+    <!--xenon space rule-->
+    <rule fieldtype="asteroid" owner="xenon" hazardousregion="false" chance="30" maxsize="250">
+      <select macro="env_ast_crystal_detail_s_01_macro" weight="160"/>
+      <select macro="env_ast_crystal_detail_s_02_macro" weight="110" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_s_03_macro" weight="50" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_s_04_macro" weight="30" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_s_05_macro" weight="1" cooldown="120"/>
+    </rule>
+    <rule fieldtype="asteroid" owner="xenon" hazardousregion="false" chance="30" minsize="250">
+      <select macro="env_ast_crystal_detail_m_01_macro" weight="160"/>
+      <select macro="env_ast_crystal_detail_m_02_macro" weight="110" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_m_03_macro" weight="50" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_m_04_macro" weight="30" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_m_05_macro" weight="2" cooldown="120"/>
+    </rule>
+    <!--hazardous region rule-->
+    <rule fieldtype="asteroid" hazardousregion="true" chance="30" maxsize="250">
+      <select macro="env_ast_crystal_detail_s_01_macro" weight="160"/>
+      <select macro="env_ast_crystal_detail_s_02_macro" weight="110" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_s_03_macro" weight="50" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_s_04_macro" weight="30" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_s_05_macro" weight="1" cooldown="120"/>
+    </rule>
+    <rule fieldtype="asteroid" hazardousregion="true" chance="40" minsize="250">
+      <select macro="env_ast_crystal_detail_m_01_macro" weight="160"/>
+      <select macro="env_ast_crystal_detail_m_02_macro" weight="110" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_m_03_macro" weight="50" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_m_04_macro" weight="30" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_m_05_macro" weight="2" cooldown="120"/>
+    </rule>
+    <!--genreral rule-->    
+    <rule fieldtype="asteroid" hazardousregion="false" chance="10" maxsize="250">
+      <select macro="env_ast_crystal_detail_s_01_macro" weight="160"/>
+      <select macro="env_ast_crystal_detail_s_02_macro" weight="110" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_s_03_macro" weight="50" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_s_04_macro" weight="30" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_s_05_macro" weight="1" cooldown="120"/>
+    </rule>
+    <rule fieldtype="asteroid" hazardousregion="false" chance="20" minsize="250">
+      <select macro="env_ast_crystal_detail_m_01_macro" weight="160"/>
+      <select macro="env_ast_crystal_detail_m_02_macro" weight="110" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_m_03_macro" weight="50" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_m_04_macro" weight="30" cooldown="60"/>
+      <select macro="env_ast_crystal_detail_m_05_macro" weight="2" cooldown="120"/>
+    </rule>
+    <rule fieldtype="asteroid" owner="xenon" hazardousregion="true" chance="1" drop="hidden_rare_lockbox" />
+    <rule fieldtype="asteroid" owner="xenon" chance="0.1" drop="hidden_unusual_lockbox" />
+    <rule fieldtype="asteroid" hazardousregion="true" chance="0.1" drop="hidden_unusual_lockbox" />
+    <rule fieldtype="asteroid" chance="0.01" drop="hidden_common_lockbox" />
+    <rule fieldtype="debris" owner="xenon" hazardousregion="true" chance="1" drop="hidden_rare_lockbox" />
+    <rule fieldtype="debris" owner="xenon" chance="0.1" drop="hidden_unusual_lockbox" />
+    <rule fieldtype="debris" hazardousregion="true" chance="0.1" drop="hidden_unusual_lockbox" />
+    <rule fieldtype="debris" chance="0.01" drop="hidden_common_lockbox" />
+  </regions>
+</objectspawnrules>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stardust>
+  <!--default configuration - please don't remove-->
+  <configuration material="p2particle.prt_p2_stardust_01" amount="50" size="1" distance="300" maxvel="1000" minvel="4">
+    <scale linear="0.15" angular="0.0" />
+  </configuration>
+</stardust>

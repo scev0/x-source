@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<timeline xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="timeline.xsd">
+  <entry id="earth_jumpgates"             name="{20299, 1261}" description="{20299, 1262}" date="-128.0" group="1" voice="timeline_earth_jumpgates"             video="timeline_earth_jumpgates" />
+  <entry id="winterblossom"               name="{20299, 1171}" description="{20299, 1172}" date="-124.0" group="1" voice="timeline_winterblossom"               video="timeline_winterblossom" />
+  
+  <entry id="terraformer_project_starts"  name="{20299, 1101}" description="{20299, 1102}" date="-104.0" group="2" voice="timeline_terraformer_project_starts"  video="timeline_terraformer_project_starts" />
+  <entry id="terraformer_project_ends"    name="{20299, 1271}" description="{20299, 1272}" date="-71.0" group="2" voice="timeline_terraformer_project_ends"     video="timeline_terraformer_project_ends" />
+  <entry id="terraformer_war"             name="{20299, 1111}" description="{20299, 1112}" date="-25.0" group="2" voice="timeline_terraformer_war"              video="timeline_terraformer_war" />
+  
+  <entry id="first_contact_paranid"       name="{20299, 1031}" description="{20299, 1032}" date="130.0" group="3" voice="timeline_first_contact_paranid"        video="timeline_first_contact_paranid" />
+  <entry id="foundation_federation"       name="{20299, 1041}" description="{20299, 1042}" date="241.0" group="3" voice="timeline_foundation_federation"        video="timeline_foundation_federation" />
+  <entry id="first_contact_boron"         name="{20299, 1051}" description="{20299, 1052}" date="323.0" group="3" voice="timeline_first_contact_boron"          video="timeline_first_contact_boron" />
+  <entry id="first_contact_split"         name="{20299, 1061}" description="{20299, 1062}" date="324.0" group="3" voice="timeline_first_contact_split"          video="timeline_first_contact_split" />
+  <entry id="foundation_community"        name="{20299, 1071}" description="{20299, 1072}" date="328.0" group="3" voice="timeline_foundation_community"         video="timeline_foundation_community" />
+  <entry id="cold_war"                    name="{20299, 1081}" description="{20299, 1082}" date="514.0" group="3" voice="timeline_cold_war"                     video="timeline_cold_war" />
+  <entry id="first_contact_teladi"        name="{20299, 1091}" description="{20299, 1092}" date="550.0" group="3" voice="timeline_first_contact_teladi"         video="timeline_first_contact_teladi" />
+
+  <entry id="xenon_evolution"             name="{20299, 1121}" description="{20299, 1122}" date="742.0" group="4" voice="timeline_xenon_evolution"              video="timeline_xenon_evolution" />
+  
+  <entry id="kyle_brennan_arrival"        name="{20299, 1001}" description="{20299, 1002}" date="742.1" group="5" voice="timeline_kyle_brennan_arrival"         video="timeline_kyle_brennan_arrival" />
+  
+  <entry id="khaak_arrival"               name="{20299, 1011}" description="{20299, 1012}" date="763.0" group="6" voice="timeline_khaak_arrival"                video="timeline_khaak_arrival" />
+  <entry id="presidents_end"              name="{20299, 1211}" description="{20299, 1212}" date="763.1" group="6" voice="timeline_presidents_end"               video="timeline_presidents_end" />
+  <entry id="omicron_lyrae"               name="{20299, 1221}" description="{20299, 1222}" date="763.2" group="6" voice="timeline_omicron_lyrae"                video="timeline_omicron_lyrae" />
+  
+  <entry id="race_to_find_earth"          name="{20299, 1021}" description="{20299, 1022}" date="764.0" group="7" voice="timeline_race_to_find_earth"           video="timeline_race_to_find_earth" />
+
+  <entry id="terran_khaak_assistance"     name="{20299, 1131}" description="{20299, 1132}" date="764.1" group="8" voice="timeline_terran_khaak_assistance"      video="timeline_terran_khaak_assistance" />
+  <entry id="operation_final_fury"        name="{20299, 1231}" description="{20299, 1232}" date="764.2" group="8" voice="timeline_operation_final_fury"         video="timeline_operation_final_fury" />
+  
+  <entry id="agi_tension"                 name="{20299, 1141}" description="{20299, 1142}" date="770.0" group="9" voice="timeline_agi_tension"                  video="timeline_agi_tension" />
+  <entry id="terran_conflict"             name="{20299, 1151}" description="{20299, 1152}" date="774.0" group="9" voice="timeline_terran_conflict"              video="timeline_terran_conflict" />
+  <entry id="torus_aeternal"              name="{20299, 1161}" description="{20299, 1162}" date="778.0" group="9" voice="timeline_torus_aeternal"               video="timeline_torus_aeternal" />
+
+  <entry id="warp_instability"            name="{20299, 1181}" description="{20299, 1182}" date="780.0" group="10" voice="timeline_warp_instability"            video="timeline_warp_instability" />
+  <entry id="gate_shutdown"               name="{20299, 1191}" description="{20299, 1192}" date="782.0" group="10" voice="timeline_gate_shutdown"               video="timeline_gate_shutdown" />
+
+  <entry id="alliance_of_the_word"        name="{20299, 1201}" description="{20299, 1202}" date="801.0" group="11" voice="timeline_alliance_of_the_word"        video="timeline_alliance_of_the_word" />
+  <entry id="gate_reopening"              name="{20299, 1241}" description="{20299, 1242}" date="803.0" group="11" voice="timeline_gate_reopening"              video="timeline_gate_reopening" />
+
+  <entry id="gate_stabilisation"          name="{20299, 1251}" description="{20299, 1252}" date="820.0" group="12" voice="timeline_gate_stabilisation"          video="timeline_gate_stabilisation" />
+</timeline>

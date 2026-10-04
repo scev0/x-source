@@ -1,0 +1,15 @@
+<!ELEMENT icons (icon)+>
+<!ELEMENT icon EMPTY>
+<!ATTLIST icon
+	name CDATA #REQUIRED
+	texture CDATA #IMPLIED
+	personal CDATA #IMPLIED
+  tags CDATA #IMPLIED
+	width CDATA #IMPLIED
+	height CDATA #IMPLIED
+  textheightpercent CDATA #IMPLIED
+	selected CDATA #IMPLIED	
+	active CDATA #IMPLIED
+	inactive CDATA #IMPLIED
+	preload CDATA #IMPLIED
+>

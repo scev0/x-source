@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <!-- graphic options -->
+  <!-- ultra gfx preset -->
+  <shaderquality>2</shaderquality>
+  <shadows>3</shadows>
+  <softshadows>true</softshadows>
+  <ssao>3</ssao>
+  <glow>3</glow>
+  <uiglow>3</uiglow>
+  <uiglowintensity>0.75</uiglowintensity>
+  <lodfactor>1.00</lodfactor>
+  <effectdistance>1.00</effectdistance>
+  <distortion>true</distortion>
+  <disableradar>false</disableradar>
+  <radarquality>1</radarquality>
+  <ssr>true</ssr>
+  <ssrquality>medium</ssrquality>
+  <texturequality>high</texturequality>
+  <chromaticaberration>true</chromaticaberration>
+  <volumetric>3</volumetric>
+  <pom>high</pom>
+  <envmapprobes>high</envmapprobes>
+</root>

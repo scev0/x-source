@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ?xml-stylesheet href="races.xsl" type="text/xsl" ? -->
+<fonts>
+  <!-- shared font definitions -->
+  <font name="jfont">
+    <fontsize size="32" yoffset="1" />
+  </font>
+  <font name="csfont">
+    <fontsize size="32" yoffset="6" />
+  </font>
+  <font name="ctfont">
+    <fontsize size="32" yoffset="6" />
+  </font>
+  <font name="kofont">
+    <fontsize size="32" yoffset="6" />
+  </font>
+  <!-- language specific font definitions -->
+  <font name="kofont Bold">
+    <fontsize size="32" yoffset="6" />
+  </font>
+  <font name="Stars">
+    <fontsize size="32" yoffset="0" />
+  </font>
+    <font name="Terrakana">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="Terrakana Bold">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="Boki">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="Boki Bold">
+    <fontsize size="32" yoffset="0" />
+  </font>
+  <font name="DejaVu Sans Mono Outlined">
+    <fontsize size="8" yoffset="0" />
+  </font>
+  <alias name="large" ref="kofont" />
+  <alias name="default" ref="kofont" />
+  <alias name="holomap" ref="kofont" material="kofont outlined" />
+  <alias name="holomap fixed" ref="kofont" material="kofont outlined" fixedwidth="true" />
+  <alias name="holomap bold" ref="kofont Bold" material="kofont outlined" />
+  <alias name="holomap bold fixed" ref="kofont Bold" material="kofont outlined" fixedwidth="true" />
+  <alias name="Zekton" ref="kofont" />
+  <alias name="Zekton Bold" ref="kofont Bold" />
+  <alias name="Zekton fixed" ref="kofont" fixedwidth="true" />
+  <alias name="Zekton Bold fixed" ref="kofont Bold" fixedwidth="true" />
+  <alias name="Zekton Outlined" ref="kofont" material="kofont outlined" />
+  <alias name="Zekton Bold Outlined" ref="kofont Bold" material="kofont bold outlined" />
+  <alias name="debug" ref="DejaVu Sans Mono Outlined" />
+</fonts>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+  <!-- Mouse cursors -->
+  <entry name="asteroid" value="mousecursors\asteroid" />
+  <entry name="boxselect" value="mousecursors\box_select" />
+  <entry name="collect" value="mousecursors\collect" />
+  <entry name="crossarrows" value="mousecursors\crossarrows" />
+  <entry name="cursor" value="mousecursors\cursor" />
+  <entry name="cursormove" value="mousecursors\cursor_move" />
+  <entry name="cursorplus" value="mousecursors\cursor_plus" />
+  <entry name="flyto" value="mousecursors\flyto" />
+  <entry name="movehere" value="mousecursors\movehere" />
+  <entry name="slider" value="mousecursors\slider" />
+  <entry name="target" value="mousecursors\target" />
+  <entry name="targetred" value="mousecursors\targetred" />
+  <entry name="textinput" value="mousecursors\textinput" />
+  <entry name="trade" value="mousecursors\trade" />
+  <entry name="unavailable" value="mousecursors\unavailable" />
+  <entry name="cursororder" value="mousecursors\cursor_order" />
+  <entry name="crossarrowsorder" value="mousecursors\crossarrows_order" />
+</index>

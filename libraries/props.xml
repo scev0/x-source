@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<props xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libraries.xsd">
+  <!-- example
+  <prop id="dummy" group="dummy">
+    <category tags="corner" macro="[dockarea_arg_m_station_01_hightech_macro, dockarea_arg_m_station_02_hightech_macro]" flags="canbuildships policechief factionrepresentative">
+      <economy min="0.1" max="0.3" />
+      <security min="0.2" max="0.5" />
+      <maintenance min="0.5" max="1.0" />
+    </category>
+  </prop>
+  -->
+  <!-- CORNERS -->
+  <!-- Corner configuration for shipyards/wharfs and equipment docks -->
+  <prop id="corner_canbuildship_hq_01" group="corner_canbuildship_01">
+    <category tags="corner" macro="[dockarea_arg_m_station_01_macro, dockarea_arg_m_station_01_lowtech_macro, dockarea_arg_m_station_01_hightech_macro,
+                                    dockarea_arg_m_station_02_macro, dockarea_arg_m_station_02_lowtech_macro, dockarea_arg_m_station_02_hightech_macro, buildmodule_gen_ships_m_dockarea_01_macro]" flags="canbuildships factionrepresentative" />
+    <limits>
+      <limit macro="corner_arg_standard_shipdealer_01_macro" object="1"/>
+    </limits>
+  </prop>
+
+  <prop id="corner_canequipship_hq_01" group="corner_canequipship_01">
+    <category tags="corner" macro="[dockarea_arg_m_station_01_macro, dockarea_arg_m_station_01_lowtech_macro, dockarea_arg_m_station_01_hightech_macro,
+                                    dockarea_arg_m_station_02_macro, dockarea_arg_m_station_02_lowtech_macro, dockarea_arg_m_station_02_hightech_macro, buildmodule_gen_equip_m_dockarea_01_macro]" flags="cannotbuildships equipmentdock factionrepresentative" />
+    <limits>
+      <limit macro="corner_arg_standard_shipequipment_01_macro" object="1"/>
+    </limits>
+  </prop>
+
+  <prop id="corner_nocanequipship_hq_01" group="corner_nocanequipship_01">
+    <category tags="corner" macro="[dockarea_arg_m_station_01_macro, dockarea_arg_m_station_01_lowtech_macro, dockarea_arg_m_station_01_hightech_macro,
+                                    dockarea_arg_m_station_02_macro, dockarea_arg_m_station_02_lowtech_macro, dockarea_arg_m_station_02_hightech_macro, buildmodule_gen_ships_m_dockarea_01_macro,
+                                    dockarea_arg_m_02_tradestation_01_macro, landmarks_tel_tradestation_01_dockarea_m_01_macro]" flags="cannotbuildships cannotequipships factionrepresentative" />
+  </prop>
+
+  <prop id="corner_canbuildship_01" group="corner_canbuildship_01">
+    <category tags="corner" macro="[dockarea_arg_m_station_01_macro, dockarea_arg_m_station_01_lowtech_macro, dockarea_arg_m_station_01_hightech_macro,
+                                    dockarea_arg_m_station_02_macro, dockarea_arg_m_station_02_lowtech_macro, dockarea_arg_m_station_02_hightech_macro, buildmodule_gen_ships_m_dockarea_01_macro]" flags="canbuildships" />
+    <limits>
+      <limit macro="corner_arg_standard_shipdealer_01_macro" object="1"/>
+    </limits>
+  </prop>
+
+  <prop id="corner_canequipship_01" group="corner_canequipship_01">
+    <category tags="corner" macro="[dockarea_arg_m_station_01_macro, dockarea_arg_m_station_01_lowtech_macro, dockarea_arg_m_station_01_hightech_macro,
+                                    dockarea_arg_m_station_02_macro, dockarea_arg_m_station_02_lowtech_macro, dockarea_arg_m_station_02_hightech_macro, buildmodule_gen_equip_m_dockarea_01_macro]" flags="cannotbuildships equipmentdock" />
+    <limits>
+      <limit macro="corner_arg_standard_shipequipment_01_macro" object="1"/>
+    </limits>
+  </prop>
+
+  <!-- Corner configuration for everything else -->
+  <prop id="corner_nocanequipship_01" group="corner_nocanequipship_01">
+    <category tags="corner" macro="[dockarea_arg_m_station_01_macro, dockarea_arg_m_station_01_lowtech_macro, dockarea_arg_m_station_01_hightech_macro, 
+                                    dockarea_arg_m_station_02_macro, dockarea_arg_m_station_02_lowtech_macro, dockarea_arg_m_station_02_hightech_macro,
+                                    dockarea_arg_m_02_tradestation_01_macro, landmarks_tel_tradestation_01_dockarea_m_01_macro]" flags="cannotbuildships cannotequipships fallback" />
+  </prop>
+
+  <!-- INTERIOR PROPS  -->
+
+  <prop id="props_dockarea_arg_m_station_01_standard" group="props_dockarea_arg_m_station_01">
+    <category tags="interiorprops" macro="dockarea_arg_m_station_01_macro" />
+  </prop>
+
+  <prop id="props_dockarea_arg_m_station_01_hightech" group="props_dockarea_arg_m_station_01_hightech">
+    <category tags="interiorprops" macro="dockarea_arg_m_station_01_hightech_macro" />
+  </prop>
+
+  <prop id="props_dockarea_arg_m_station_01_lowtech" group="props_dockarea_arg_m_station_01_lowtech">
+    <category tags="interiorprops" macro="dockarea_arg_m_station_01_lowtech_macro" />
+  </prop>
+
+  <prop id="props_dockarea_arg_m_station_02_standard" group="props_dockarea_arg_m_station_02">
+    <category tags="interiorprops" macro="dockarea_arg_m_station_02_macro" />
+  </prop>
+
+  <prop id="props_dockarea_arg_m_station_02_hightech" group="props_dockarea_arg_m_station_02_hightech">
+    <category tags="interiorprops" macro="dockarea_arg_m_station_02_hightech_macro" />
+  </prop>
+
+  <prop id="props_dockarea_arg_m_station_02_lowtech" group="props_dockarea_arg_m_station_02_lowtech">
+    <category tags="interiorprops" macro="dockarea_arg_m_station_02_lowtech_macro" />
+  </prop>
+
+  <prop id="props_dockarea_tel_m_tradestation_01_hightech" group="props_dockarea_tel_m_tradestation_01_hightech">
+    <category tags="interiorprops" macro="landmarks_tel_tradestation_01_dockarea_m_01_macro" />
+  </prop>
+
+  <prop id="props_dockarea_arg_m_tradestation_01_hightech" group="props_dockarea_arg_m_tradestation_01_hightech">
+    <category tags="interiorprops" macro="dockarea_arg_m_02_tradestation_01_macro" />
+  </prop>
+
+  <prop id="props_dockarea_arg_m_buildmodule_01_standard" group="props_dockarea_arg_m_buildmodule_01_standard">
+    <category tags="interiorprops" macro="buildmodule_gen_ships_m_dockarea_01_macro" />
+  </prop>
+
+  <!-- NPC PROP ROOMS -->
+  <!--prop id="test_npc_prop_room" group="test_npc_prop_rooms">
+    <category tags="prop_vendingmachine" macro="dockarea_arg_m_station_01_macro" >
+    </category>
+  </prop-->
+
+  <prop id="npc_prop_vendingmachine" group="npc_prop_vendingmachine">
+    <category tags="prop_vendingmachine" macro="dockarea_arg_m_station_01_macro" >
+    </category>
+  </prop>
+
+  <prop id="npc_prop_coffeemachine" group="npc_prop_coffeemachine">
+    <category tags="prop_coffeemachine" macro="room_gen_factionrepresentative_01_macro" >
+    </category>
+  </prop>
+
+  <prop id="npc_prop_vendingmachine_test" group="npc_prop_vendingmachine">
+    <category tags="prop_vendingmachine" macro="bridge_arg_xl_01_macro" >
+    </category>
+  </prop>
+
+  <!--prop id="npc_prop_groundhatch" group="npc_prop_groundhatch">
+    <category tags="prop_groundhatch" macro="dockarea_arg_m_station_01_macro" >
+    </category>
+  </prop-->
+
+  <prop id="npc_prop_locker" group="npc_prop_locker">
+    <category tags="prop_locker" macro="dockarea_arg_m_station_01_macro" >
+    </category>
+  </prop>
+
+</props>

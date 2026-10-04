@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<regionlods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="region_lodvalues.xsd">
+  <fading time="1.0" distance="0.15" />
+  <distances>
+    <!--largest size, should only apply to virtual things like fog-->
+    <distance minobjectsize="50000" component="10000" render="5000000" calculation="5000000" chunksize="16384" />
+    <!--large size, usually only fog-->
+    <distance minobjectsize="15000" component="10000" render="2000000" calculation="2000000" chunksize="512" />
+    <!--XXL-->
+    <distance minobjectsize="2500" component="10000" render="250000" calculation="270000" chunksize="128" />
+    <!--XL-->
+    <distance minobjectsize="1000" component="10000" render="100000" calculation="160000" chunksize="64" />
+    <!--L-->
+    <distance minobjectsize="500" component="10000" render="50000" calculation="80000" chunksize="32" />
+    <!--M-->
+    <distance minobjectsize="100" component="10000" render="30000" calculation="40000" chunksize="16" />
+    <!--S-->
+    <distance minobjectsize="50" component="9000" render="11000" calculation="12000" chunksize="8" />
+    <!--XS Special, this rule was made by Simon for Objects like the Lockbox which has a size of ca 37.5m and was faded out a bit too early -->
+    <distance minobjectsize="25" component="9000" render="11000" calculation="12000" chunksize="2" />
+    <!--XS-->
+    <distance minobjectsize="10" component="4000" render="5000" calculation="6000" chunksize="2" />
+    <!--XXS-->
+    <distance minobjectsize="0" component="2000" render="2500" calculation="4000" chunksize="2" />
+  </distances>
+</regionlods>

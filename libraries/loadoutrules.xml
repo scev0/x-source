@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="loadoutrules.xsd">
+  <unit>
+    <macros>
+      <macro category="transport" mk="1" macro="ship_gen_xs_cargodrone_empty_01_a_macro" />
+      <macro category="transport" mk="1" macro="ship_gen_xs_cargodrone_container_01_a_macro" tags="container" />
+      <macro category="transport" mk="1" macro="ship_gen_xs_cargodrone_solid_01_a_macro" tags="solid" />
+      <macro category="transport" mk="1" macro="ship_gen_xs_cargodrone_liquid_01_a_macro" tags="liquid" />
+      <macro category="transport" mk="1" macro="ship_gen_xs_cargodrone_equipment_01_a_macro" tags="equipment" />
+      <macro category="transport" mk="1" macro="ship_gen_xs_cargodrone_pickup_01_a_macro" tags="pickup" />
+
+      <macro category="orecollector" mk="1" macro="ship_gen_s_miningdrone_solid_01_a_macro" />
+
+      <macro category="gascollector" mk="1" macro="ship_gen_s_miningdrone_liquid_01_a_macro" />
+
+      <macro category="build" mk="1" macro="ship_gen_xs_buildingdrone_01_a_macro" />
+
+      <macro category="repair" mk="1" macro="ship_gen_xs_repairdrone_01_a_macro" />
+
+      <macro category="defence" mk="1" macro="ship_gen_s_fightingdrone_01_a_macro" />
+
+      <macro category="police" mk="1" macro="ship_arg_xs_police_01_a_macro" factions="argon antigone hatikvah" />
+      <macro category="police" mk="1" macro="ship_par_xs_police_01_a_macro" factions="paranid holyorder alliance" />
+      <macro category="police" mk="1" macro="ship_tel_xs_police_01_a_macro" factions="teladi ministry scaleplate" />
+      <macro category="police" mk="2" macro="ship_tel_xs_police_02_a_macro" factions="teladi ministry scaleplate" />
+      <macro category="police" mk="3" macro="ship_tel_xs_police_03_a_macro" factions="teladi ministry scaleplate" />
+    </macros>
+    <rules>
+      <ruleset type="player">
+        <!-- used for all player property -->
+        <rule category="repair"       mk="1" weight="10"  classes="ship_l ship_xl station"/>
+        <rule category="repair"       mk="1" weight="40"  classes="ship_l ship_xl" important="true" purposes="auxiliary" />
+        <rule category="transport"    mk="1" weight="20"  classes="station"/>
+        <rule category="transport"    mk="1" weight="20"  classes="ship_l ship_xl"  important="true"  purposes="trade mine auxiliary"/>
+        <rule category="defence"      mk="1" weight="20"  classes="ship_m ship_l ship_xl"             purposes="fight"                    requiredocking="true" requireundocking="true"/>
+        <rule category="build"        mk="1" weight="40"  classes="ship_l ship_xl"  important="true"  purposes="build dismantling"/>
+        <rule category="orecollector" mk="1" weight="40"  classes="ship_l ship_xl"  important="true"  purposes="mine" cargotags="solid"   requiredocking="true" requireundocking="true"/>
+        <rule category="gascollector" mk="1" weight="40"  classes="ship_l ship_xl"  important="true"  purposes="mine" cargotags="liquid"  requiredocking="true" requireundocking="true"/>
+        <!-- keep the rest empty! -->
+        <rule category=""             mk="0" weight="20"/>
+      </ruleset>
+      <ruleset type="xenon">
+        <rule category="defence"      mk="1" weight="60"  classes="ship_m ship_l ship_xl" requiredocking="true" requireundocking="true" />
+        <rule category="defence"      mk="1" weight="100" classes="defencemodule" />
+        <rule category="transport"    mk="1" weight="30"  classes="production buildmodule" />
+        <rule category="build"        mk="1" weight="40"  classes="buildmodule" />
+        <rule category="repair"       mk="1" weight="10"  classes="dockarea buildmodule" />
+      </ruleset>
+      <ruleset type="default">
+        <!-- stations -->
+        <rule category="transport"    mk="1" weight="50"  classes="station" />
+        <rule category="repair"       mk="1" weight="10"  classes="station" />
+        <rule category="build"        mk="1" weight="75"  classes="buildmodule" important="true" />
+        <rule category="transport"    mk="1" weight="20"  classes="buildmodule" important="true" />
+        <rule category="police"       mk="1" weight="5"   classes="buildmodule" factiontags="watchdoguser" />
+        <rule category="defence"      mk="1" weight="100" classes="defencemodule" />
+        <rule category="transport"    mk="1" weight="75"  classes="production" important="true" />
+        <rule category="repair"       mk="1" weight="5"   classes="production" />
+        <rule category="police"       mk="1" weight="20"  classes="production" factiontags="watchdoguser" />
+        <rule category="transport"    mk="1" weight="80"  classes="pier" important="true" />
+        <rule category="repair"       mk="1" weight="20"  classes="pier" />
+        <!-- additional repair units for factions that need those (e.g. due to expected frequent station damage) -->
+        <rule category="repair"       mk="1" weight="50"  classes="dockarea" factiontags="extrarepair" />
+        <!-- ships -->
+        <rule category="repair"       mk="1" weight="15"  classes="ship_l ship_xl" />
+        <rule category="repair"       mk="1" weight="40"  classes="ship_l ship_xl" important="true" purposes="auxiliary" />
+        <rule category="transport"    mk="1" weight="20"  classes="ship_l ship_xl" important="true" purposes="trade mine auxiliary" />
+        <rule category="orecollector" mk="1" weight="40"  classes="ship_l ship_xl" important="true" purposes="mine" cargotags="solid" requiredocking="true" requireundocking="true" />
+        <rule category="gascollector" mk="1" weight="40"  classes="ship_l ship_xl" important="true" purposes="mine" cargotags="liquid" requiredocking="true" requireundocking="true" />
+        <rule category="build"        mk="1" weight="100"  classes="ship_l ship_xl" important="true" purposes="build dismantling" />
+        <rule category="defence"      mk="1" weight="5"   classes="ship_m ship_l ship_xl" purposes="trade mine build" requiredocking="true" requireundocking="true" />
+        <rule category="defence"      mk="1" weight="5"   classes="ship_l ship_xl" purposes="fight auxiliary" requiredocking="true" requireundocking="true" />
+        <!-- plunder-using fight ships need cargolifters -->
+        <rule category="transport"    mk="1" weight="10"  classes="ship_l ship_xl" important="true" purposes="fight" factiontags="plunder"/>
+        <!-- do not fill non-combat medium ships with defence drones completely -->
+        <rule category=""             mk="0" weight="10"  classes="ship_m" purposes="trade mine build" />
+      </ruleset>
+    </rules>
+  </unit>
+  <deployable>
+    <macros>
+      <macro category="lasertower" mk="1" macro="ship_gen_xs_lasertower_01_a_macro" />
+      <macro category="lasertower" mk="2" macro="ship_gen_s_lasertower_01_a_macro" />
+
+      <macro category="mine" mk="1" macro="weapon_gen_mine_01_macro" />
+      <macro category="mine" mk="2" macro="weapon_gen_mine_02_macro" />
+      <macro category="mine" mk="3" macro="weapon_gen_mine_03_macro" />
+
+      <macro category="satellite" mk="1" macro="eq_arg_satellite_01_macro" />
+      <macro category="satellite" mk="2" macro="eq_arg_satellite_02_macro" />
+
+      <macro category="navbeacon" mk="1" macro="env_deco_nav_beacon_t1_macro" />
+
+      <macro category="resourceprobe" mk="1" macro="eq_arg_resourceprobe_01_macro" />
+    </macros>
+    <rules>
+      <!--
+        categories: lasertower, mine, navbeacon, resourceprobe, satellite
+        rulesets: default, player, xenon, shipyard, military, highvalue
+        classes: ship, ship_s, ship_m, ship_l, ship_xl (tied to specific ship hulls in ship macro.)
+        purposes: trade, fight, build, mine, hack, scan, production, storage, connection, habitation, defence, docking (tied to specific ship hulls in ship macro.)
+        cargotags: container, solid, liquid (tied to specific storage modules in storage module asset macros. lookup connected storage in ship macro.)
+        factiontags: aggressive, economic, noresupply, notradeoffer, police, privateloadout, privateship, protective, publicloadout, publicship, watchdoguser, claimspace, plunder, visitor (tied to specific factions in factions.xml)
+      -->
+      <!-- ships don't need these things to function. small amount of satellite, resource probes, and nav beacons. leave some free space to allow the player to decide which other deployables to equip. -->
+      <ruleset type="player">
+        <rule category=""               mk="0"/>
+      </ruleset>
+      <ruleset type="xenon">
+        <!-- Mk1 lasertowers require XS docks -->
+        <rule category="lasertower"     mk="1"  weight="10" requireundocking="true"/>
+        <!-- Mk2 lasertowers require S docks -->
+        <rule category="lasertower"     mk="2"  weight="1"  requireundocking="true"/>
+        <rule category="mine"           mk="1"  weight="10" purposes="fight"/>
+        <rule category="mine"           mk="2"  weight="2"  purposes="fight"/>
+        <rule category="mine"           mk="3"  weight="1"  purposes="fight"/>
+      </ruleset>
+      <ruleset type="default">
+        <!-- all ships that can launch them -->
+        <!-- Mk1 lasertowers require XS docks -->
+        <rule category="lasertower"     mk="1"  weight="2"  requireundocking="true"/>
+        <!-- Mk2 lasertowers require S docks -->
+        <rule category="lasertower"     mk="2"  weight="1"  requireundocking="true"/>
+
+        <!-- all fight ships -->
+        <rule category="mine"           mk="1"  weight="10" purposes="fight"/>
+        <rule category="mine"           mk="2"  weight="2"  purposes="fight"/>
+        <rule category="mine"           mk="3"  weight="1"  purposes="fight"/>
+        <!-- only available for some factions. always prefer when available. -->
+        <rule category="mine"           mk="4"  weight="20"/>
+
+        <!-- scout ships -->
+        <rule category="satellite"      mk="1"  weight="20" purposes="fight"  classes="ship_s"/>
+        <rule category="satellite"      mk="2"  weight="2"  purposes="fight"  classes="ship_s"/>
+        <rule category="satellite"      mk="1"  weight="10" purposes="build"/>
+        <rule category="satellite"      mk="2"  weight="2"  purposes="build"/>
+
+        <!-- mining ships and scout ships -->
+        <rule category="resourceprobe"  mk="1"  weight="10" purposes="fight"  classes="ship_s"/>
+        <rule category="resourceprobe"  mk="1"  weight="10" purposes="mine"/>
+
+        <!-- trading ships, mining ships, and scout ships -->
+        <rule category="navbeacon"      mk="1"  weight="10" purposes="fight"  classes="ship_s"/>
+        <rule category="navbeacon"      mk="1"  weight="10" purposes="mine trade build"/>
+      </ruleset>
+    </rules>
+  </deployable>
+</rules>

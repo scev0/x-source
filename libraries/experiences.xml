@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<experiences>
+  <experience id="ship_kill_hard">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.43" limit="15"/>
+      <group base="1.0" falloff="0.21" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.68" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.83" limit="15"/>
+      <group base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+  </experience>
+  <experience id="ship_kill_easy">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.43" limit="9"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.68" limit="12"/>
+      <group base="1.0" falloff="0.43" limit="12"/>
+    </skill>
+  </experience>
+  <experience id="ship_kill_surfaceelement">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.21" limit="9"/>
+    </skill>
+    <skill ref="engineering">
+      <individual base="1.0" falloff="0.21" limit="11"/>
+      <group base="1.0" falloff="0.21" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.43" limit="12"/>
+      <group base="1.0" falloff="0.43" limit="12"/>
+    </skill>
+  </experience>
+  <experience id="ship_kill_station">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.68" limit="15"/>
+      <group base="1.0" falloff="0.32" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="1.0" limit="15"/>
+      <group base="1.0" falloff="0.83" limit="15"/>
+    </skill>
+  </experience>
+  <experience id="ship_kill_stationmodule">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.55" limit="9"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.32" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.68" limit="12"/>
+      <group base="1.0" falloff="0.43" limit="12"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_disable_hard">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.55" limit="15"/>
+      <group base="1.0" falloff="0.21" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.83" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.83" limit="15"/>
+      <group base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+  </experience>
+  <experience id="ship_disable_easy">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.55" limit="9"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.32" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.68" limit="12"/>
+      <group base="1.0" falloff="0.43" limit="12"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_repel_hard">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.21" limit="15"/>
+      <group base="1.0" falloff="0.21" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.55" limit="15"/>
+      <group base="1.0" falloff="0.32" limit="15"/>
+    </skill>
+  </experience>
+  <experience id="ship_repel_easy">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.21" limit="9"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.21" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.55" limit="12"/>
+      <group base="1.0" falloff="0.32" limit="12"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_flee">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.32" limit="9"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.21" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="-0.002" falloff="0.9" limit="15"/>
+      <group base="-0.002" falloff="0.7" limit="15"/>
+    </skill>
+  </experience>
+  <experience id="ship_flee_hard">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.68" limit="15"/>
+      <group base="1.0" falloff="0.32" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.43" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.68" limit="15"/>
+      <group base="1.0" falloff="0.68" limit="15"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_discovered_gate">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.68" limit="15"/>
+      <group base="1.0" falloff="0.32" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.68" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.83" limit="15"/>
+      <group base="1.0" falloff="0.83" limit="15"/>
+    </skill>
+  </experience>
+  <experience id="ship_discovered_station">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.43" limit="15"/>
+      <group base="1.0" falloff="0.21" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.43" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.55" limit="15"/>
+      <group base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+  </experience>
+  <experience id="ship_discovered_station_important">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.55" limit="15"/>
+      <group base="1.0" falloff="0.32" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.68" limit="15"/>
+      <group base="1.0" falloff="0.68" limit="15"/>
+    </skill>
+  </experience>
+  <experience id="ship_discovered_station_hq">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.83" limit="15"/>
+      <group base="1.0" falloff="0.55" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.83" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="1.0" limit="15"/>
+      <group base="1.0" falloff="1.0" limit="15"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_opened_lockbox">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.68" limit="15"/>
+      <group base="1.0" falloff="0.43" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.43" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.55" limit="15"/>
+      <group base="1.0" falloff="0.32" limit="15"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_rescued_person">
+    <skill ref="morale">
+      <individual base="1.0" falloff="1.0" limit="15"/>
+      <group base="1.0" falloff="1.0" limit="15"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_trade_normal">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.32" limit="9"/>
+    </skill>
+    <skill ref="management">
+      <individual base="1.0" falloff="0.43" limit="8"/>
+      <group base="1.0" falloff="0.21" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.43" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.32" limit="12"/>
+      <group base="1.0" falloff="0.32" limit="12"/>
+    </skill>
+  </experience>
+  <experience id="ship_trade_good">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.32" limit="15"/>
+    </skill>
+    <skill ref="management">
+      <individual base="1.0" falloff="0.68" limit="8"/>
+      <group base="1.0" falloff="0.21" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.68" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.55" limit="15"/>
+      <group base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+  </experience>
+  <experience id="ship_trade_bad">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.32" limit="9"/>
+    </skill>
+    <skill ref="management">
+      <individual base="1.0" falloff="0.55" limit="8"/>
+      <group base="1.0" falloff="0.21" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.32" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="-0.016" falloff="0.9" limit="15"/>
+      <group base="-0.016" falloff="0.7" limit="15"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_mine_full">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.43" limit="9"/>
+      <group base="1.0" falloff="0.21" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <individual base="1.0" falloff="0.21" limit="11"/>
+      <group base="1.0" falloff="0.43" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.55" limit="8"/>
+      <group base="1.0" falloff="0.32" limit="8"/>
+    </skill>
+  </experience>
+  <experience id="ship_mine_good">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.43" limit="15"/>
+      <group base="1.0" falloff="0.21" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <individual base="1.0" falloff="0.21" limit="11"/>
+      <group base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.55" limit="12"/>
+      <group base="1.0" falloff="0.32" limit="12"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_collect_scrap">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.43" limit="15"/>
+      <group base="1.0" falloff="0.21" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <individual base="1.0" falloff="0.21" limit="11"/>
+      <group base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.55" limit="12"/>
+      <group base="1.0" falloff="0.32" limit="12"/>
+    </skill>
+  </experience>
+
+  <!-- TEMP. TEST -->
+  <experience id="ship_repair_test">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="1.0" limit="15"/>
+      <group base="1.0" falloff="1.0" limit="15"/>
+    </skill>
+    <skill ref="engineering">
+      <individual base="1.0" falloff="1.0" limit="15"/>
+      <group base="1.0" falloff="1.0" limit="15"/>
+    </skill>
+    <skill ref="boarding">
+      <individual base="1.0" falloff="1.0" limit="15"/>
+      <group base="1.0" falloff="1.0" limit="15"/>
+    </skill>
+    <skill ref="management">
+      <individual base="1.0" falloff="1.0" limit="15"/>
+      <group base="1.0" falloff="1.0" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="-1.0" falloff="1.0" limit="15"/>
+      <group base="-1.0" falloff="1.0" limit="15"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_repair">
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.68" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <group base="1.0" falloff="0.32" limit="15"/>
+    </skill>
+  </experience>
+
+  <experience id="board_success">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.21" limit="15"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.68" limit="15"/>
+    </skill>
+    <skill ref="boarding">
+      <individual base="1.0" falloff="0.21" limit="11"/>
+      <group base="1.0" falloff="0.83" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.68" limit="15"/>
+      <group base="1.0" falloff="0.68" limit="15"/>
+    </skill>
+  </experience>
+  <experience id="board_survived_hard">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.21" limit="15"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.43" limit="15"/>
+    </skill>
+    <skill ref="boarding">
+      <individual base="1.0" falloff="0.21" limit="11"/>
+      <group base="1.0" falloff="0.68" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.68" limit="15"/>
+      <group base="1.0" falloff="0.68" limit="15"/>
+    </skill>
+  </experience>
+  <experience id="board_repel">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.21" limit="15"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.32" limit="15"/>
+    </skill>
+    <skill ref="boarding">
+      <individual base="1.0" falloff="0.21" limit="11"/>
+      <group base="1.0" falloff="0.68" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.83" limit="15"/>
+      <group base="1.0" falloff="0.83" limit="15"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_construct_station">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.32" limit="15"/>
+    </skill>
+    <skill ref="management">
+      <group base="1.0" falloff="0.32" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.83" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.55" limit="15"/>
+      <group base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_dismantle_station">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.32" limit="15"/>
+    </skill>
+    <skill ref="management">
+      <group base="1.0" falloff="0.32" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.83" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.55" limit="15"/>
+      <group base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+  </experience>
+  <experience id="ship_dismantle_capship">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="0.32" limit="15"/>
+    </skill>
+    <skill ref="management">
+      <group base="1.0" falloff="0.32" limit="8"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="0.83" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.55" limit="15"/>
+      <group base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_bored">
+    <skill ref="morale">
+      <individual base="-0.001" falloff="0.9" limit="15"/>
+      <group base="-0.001" falloff="0.7" limit="15"/>
+    </skill>
+  </experience>
+
+  <experience id="station_trade_normal">
+    <skill ref="management">
+      <individual base="1.0" falloff="0.43" limit="9"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.32" limit="12"/>
+    </skill>
+  </experience>
+  <experience id="station_trade_good">
+    <skill ref="management">
+      <individual base="1.0" falloff="0.68" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+  </experience>
+  <experience id="station_trade_bad">
+    <skill ref="management">
+      <individual base="1.0" falloff="0.55" limit="9"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="-0.016" falloff="0.9" limit="15"/>
+    </skill>
+  </experience>
+
+  <experience id="station_build_shipupgraded">
+    <skill ref="management">
+      <individual base="1.0" falloff="0.21" limit="9"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.32" limit="12"/>
+    </skill>
+  </experience>
+  <experience id="station_build_shipbuilt">
+    <skill ref="management">
+      <individual base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="0.55" limit="15"/>
+    </skill>
+  </experience>
+
+  <experience id="ship_venture">
+    <skill ref="piloting">
+      <individual base="1.0" falloff="1.0" limit="15"/>
+    </skill>
+    <skill ref="boarding">
+      <group base="1.0" falloff="1.0" limit="15"/>
+    </skill>
+    <skill ref="engineering">
+      <group base="1.0" falloff="1.0" limit="15"/>
+    </skill>
+    <skill ref="morale">
+      <individual base="1.0" falloff="1.0" limit="15"/>
+      <group base="1.0" falloff="1.0" limit="15"/>
+    </skill>
+  </experience>
+</experiences>

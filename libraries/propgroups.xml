@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<groups>
+  <!-- example
+  <group name="dummy" >
+    <select macro="[props_01_dockarea_arg_m_station_01_hightech_macro, props_01_dockarea_arg_m_station_01_hightech_macro, props_02_dockarea_arg_m_station_01_hightech_macro]" />
+    <select macro="[props_02_dockarea_arg_m_station_01_hightech_macro, props_02_dockarea_arg_m_station_01_hightech_macro, props_01_dockarea_arg_m_station_01_hightech_macro]" />
+  </group>
+  -->
+  <!-- CORNERS -->
+  <group name="corner_canbuildship_01">
+    <select macro="[corner_arg_standard_shipdealer_01_macro, corner_arg_standard_inventorytrader_01_macro, corner_gen_empty_01_macro, corner_gen_empty_01_macro]" />
+  </group>
+
+  <group name="corner_canequipship_01">
+    <select macro="[corner_arg_standard_shipequipment_01_macro, corner_arg_standard_inventorytrader_01_macro, corner_gen_empty_01_macro, corner_gen_empty_01_macro]" />
+  </group>
+  
+  <group name="corner_nocanequipship_01">
+    <select macro="[corner_arg_standard_inventorytrader_01_macro, corner_gen_empty_01_macro, corner_gen_empty_01_macro, corner_gen_empty_01_macro]" />
+  </group>
+    
+  <!-- INTERIOR PROPS -->
+  <group name="props_dockarea_arg_m_station_01" >
+    <select macro="props_01_dockarea_arg_m_station_01_macro" />
+    <select macro="props_02_dockarea_arg_m_station_01_macro" />
+    <select macro="props_03_dockarea_arg_m_station_01_macro" />
+  </group>     
+  <group name="props_dockarea_arg_m_station_01_hightech" >
+    <select macro="props_01_dockarea_arg_m_station_01_hightech_macro" />
+    <select macro="props_02_dockarea_arg_m_station_01_hightech_macro" /> 
+    <select macro="props_03_dockarea_arg_m_station_01_hightech_macro" />     
+  </group>   
+  <group name="props_dockarea_arg_m_station_01_lowtech" >
+    <select macro="props_01_dockarea_arg_m_station_01_lowtech_macro" />
+    <select macro="props_02_dockarea_arg_m_station_01_lowtech_macro" />
+    <select macro="props_03_dockarea_arg_m_station_01_lowtech_macro" />    
+  </group>
+
+  <group name="props_dockarea_arg_m_station_02" >
+    <select macro="props_01_dockarea_arg_m_station_02_macro" />
+    <select macro="props_02_dockarea_arg_m_station_02_macro" /> 
+    <select macro="props_03_dockarea_arg_m_station_02_macro" />     
+  </group>
+  <group name="props_dockarea_arg_m_station_02_hightech" >
+    <select macro="props_01_dockarea_arg_m_station_02_hightech_macro" />
+    <select macro="props_02_dockarea_arg_m_station_02_hightech_macro" /> 
+    <select macro="props_03_dockarea_arg_m_station_02_hightech_macro" />     
+  </group>
+  <group name="props_dockarea_arg_m_station_02_lowtech" >
+    <select macro="props_01_dockarea_arg_m_station_02_lowtech_macro" />
+    <select macro="props_02_dockarea_arg_m_station_02_lowtech_macro" /> 
+    <select macro="props_03_dockarea_arg_m_station_02_lowtech_macro" />     
+  </group>
+  
+  <group name="props_dockarea_tel_m_tradestation_01_hightech" >
+    <select macro="props_01_dockarea_tel_m_tradestation_01_hightech_macro" />    
+  </group> 
+  
+  <group name="props_dockarea_arg_m_tradestation_01_hightech" >
+    <select macro="props_01_dockarea_arg_m_tradestation_01_hightech_macro" />    
+  </group>   
+
+  <group name="props_dockarea_arg_m_buildmodule_01_standard" >
+    <select macro="props_01_dockarea_arg_m_buildmodule_01_macro" />    
+  </group>  
+  
+  
+  <!-- NPC PROP ROOMS -->
+  <!--group name="test_npc_prop_rooms">
+    <select macro="test_room_gen_props_drinkmat_01_macro" />
+  </group-->
+  
+  <group name="npc_prop_vendingmachine">
+    <select macro="room_gen_drinkomat_01_macro" />
+  </group>
+  
+  <group name="npc_prop_coffeemachine">
+    <select macro="room_gen_coffeemachine_01_macro" />
+  </group>  
+
+  <!--group name="npc_prop_groundhatch">
+    <select macro="test_room_gen_groundhatch_01_macro" />
+  </group-->   
+
+  <group name="npc_prop_locker">
+    <select macro="room_gen_locker_01_macro" />
+  </group>   
+  
+</groups>

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- maximum render range (LOD's will be distributed over this given range) in meters for a 1280:720 mainscene (19-22" LCD computer screen), size contribution in percent, fadespeed in seconds 0.5 is allowed -->
+<renderparameters>
+  <lodrules>
+
+    <!-- Default -->
+    <rule name="dbglodrule_default" range="20000.0" sizecontrib="50" speed="2.0">
+      <connections>
+        <tag name="default_lodtag" />
+      </connections>
+    </rule>
+
+    <!-- Default -->
+    <rule name="dbglodrule_npc" range="20000.0" sizecontrib="100" speed="2.0" lodradius0="200" lodradius1="100" lodradius2="40" lodradius3="10.0">
+      <connections>
+        <tag name="npc_lodtag" />
+      </connections>
+    </rule>
+
+    <rule name="dbglodrule_npccockpit" range="20000.0" sizecontrib="100" speed="2.0" lodradius0="200" lodradius1="100" lodradius2="40" lodradius3="10.0">
+      <connections>
+        <tag name="npccockpit_lodtag" />
+      </connections>
+    </rule>
+
+    <!-- LodRule for Pointlights (which don't have lod's, but will fade at 2/3 towards lodradius3) -->
+    <rule name="dbglodrule_pointlight" lodradius0="40" lodradius1="40" lodradius2="40" lodradius3="15">
+      <connections>
+        <tag name="pointlight_lodtag" />
+      </connections>
+    </rule>
+
+    <!-- LodRule for EnvMap Probes (which don't have lod's, but will fade at 2/3 towards lodradius3) -->
+    <rule name="dbglodrule_envmapprobe_m" lodradius0="160" lodradius1="160" lodradius2="160" lodradius3="60">
+      <connections>
+        <tag name="envmapprobe_lodtag_m" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_envmapprobe_s" lodradius0="320" lodradius1="320" lodradius2="320" lodradius3="120">
+      <connections>
+        <tag name="envmapprobe_lodtag_s" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_envmapprobe_xs" lodradius0="480" lodradius1="480" lodradius2="480" lodradius3="240">
+      <connections>
+        <tag name="envmapprobe_lodtag_xs" />
+      </connections>
+    </rule>
+
+    <!-- LodRule for Arealights (which don't have lod's, but will fade at 2/3 towards lodradius3) -->
+    <rule name="dbglodrule_spotlight" lodradius0="80" lodradius1="80" lodradius2="80" lodradius3="30">
+      <connections>
+        <tag name="spotlight_lodtag" />
+      </connections>
+    </rule>
+
+    <!-- LodRule for Arealights (which don't have lod's, but will fade at 2/3 towards lodradius3) -->
+    <rule name="dbglodrule_arealight" lodradius0="80" lodradius1="80" lodradius2="80" lodradius3="30">
+      <connections>
+        <tag name="arealight_lodtag" />
+      </connections>
+    </rule>
+
+    <!-- LodRule for Boxlights (which don't have lod's, but will fade at 2/3 towards lodradius3) -->
+    <rule name="dbglodrule_boxlight" lodradius0="80" lodradius1="80" lodradius2="80" lodradius3="30">
+      <connections>
+        <tag name="boxlight_lodtag" />
+      </connections>
+    </rule>
+
+    <!-- per-class overides -->
+    <rule name="dbglodrule_cluster" range="5000000.0" sizecontrib="0" speed="20.0" lodradius0="200" lodradius1="100" lodradius2="3" lodradius3="2" >
+      <connections>
+        <tag name="cluster_l_detail" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_cluster_inside" range="250.0" sizecontrib="0" speed="1.0">
+      <connections>
+        <tag name="cluster_inside_detail" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_1" range="40000.0" sizecontrib="50" speed="2.0" lodradius0="200" lodradius1="100" lodradius2="35" lodradius3="5">
+      <connections>
+        <tag name="destructible" />
+        <tag name="storage" />
+        <tag name="positional" />
+        <tag name="production" />
+        <tag name="habitation" />
+        <tag name="welfaremodule" />
+        <tag name="dockarea" />
+        <tag name="radar" />
+        <tag name="buildmodule" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_fogvolume" range="20000.0" sizecontrib="0" speed="1.0">
+      <connections>
+        <tag name="fogvolume" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_interior" range="150.0" sizecontrib="100" speed="1.0">
+      <connections>
+        <tag name="interior" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_nebula" range="60000.0" sizecontrib="0" speed="1.0">
+      <connections>
+        <tag name="nebula" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_nebulamedium" range="100000.0" sizecontrib="0" speed="1.0">
+      <connections>
+        <tag name="nebulamedium" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_nebulafar" range="600000.0" sizecontrib="0" speed="1.0">
+      <connections>
+        <tag name="nebulafar" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_station_position" range="40000.0" sizecontrib="50" speed="2.0" lodradius0="200" lodradius1="100" lodradius2="70" lodradius3="28">
+      <connections>
+        <tag name="position" />
+        <tag name="station" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_2" range="20000.0" sizecontrib="50" speed="2.0">
+      <connections>
+        <tag name="adsign" />
+        <tag name="adspot" />
+        <tag name="rendereffect" />
+        <tag name="effect" />
+        <tag name="street" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_asteroids" range="35000.0" sizecontrib="80" speed="1.0">
+      <connections>
+        <tag name="asteroid" />
+        <tag name="debris" />
+        <tag name="recyclable" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_asteroidxl" range="450000.0" sizecontrib="0" speed="1.0">
+      <connections>
+        <tag name="asteroidxl" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_highway" range="30000.0" sizecontrib="50" speed="2.0" priority="1" lodradius0="400" lodradius1="200" lodradius2="100" lodradius3="10">
+      <connections>
+        <tag name="highwayentrygate" />
+        <tag name="highwayexitgate" />
+        <tag name="entrygate" />
+        <tag name="exitgate" />
+      </connections>
+    </rule>
+
+    <rule name="dbglodrule_gates" range="30000.0" sizecontrib="50" speed="2.0" priority="1" lodradius0="400" lodradius1="200" lodradius2="100" lodradius3="10">
+      <connections>
+        <tag name="gate" />
+      </connections>
+    </rule>
+
+    <rule name="dbglodrule_characters" range="100.0" sizecontrib="20" speed="2.0">
+      <connections>
+        <tag name="character" />
+      </connections>
+    </rule>
+
+    <!-- Ship render rules -->
+    <rule name="dbglodrule_ship" range="30000.0" sizecontrib="50" speed="2.0" priority="0" lodradius0="300" lodradius1="125" lodradius2="10" lodradius3="3">
+      <connections>
+        <tag name="ship" />
+      </connections>
+
+
+    </rule>
+    <rule name="dbglodrule_ship_xl" range="30000.0" sizecontrib="50" speed="2.0" priority="1" lodradius0="400" lodradius1="200" lodradius2="100" lodradius3="10">
+      <connections>
+        <tag name="ship_xl" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_ship_l" range="30000.0" sizecontrib="50" speed="2.0" priority="1" lodradius0="300" lodradius1="150" lodradius2="35" lodradius3="7">
+      <connections>
+        <tag name="ship_l" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_ship_m" range="30000.0" sizecontrib="50" speed="2.0" priority="1" lodradius0="300" lodradius1="125" lodradius2="20" lodradius3="5">
+      <connections>
+        <tag name="ship_m" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_ship_s" range="30000.0" sizecontrib="50" speed="2.0" priority="1" lodradius0="300" lodradius1="100" lodradius2="10" lodradius3="3">
+      <connections>
+        <tag name="ship_s" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_ship_xs" range="30000.0" sizecontrib="50" speed="2.0"  priority="1" lodradius0="20" lodradius1="10" lodradius2="5" lodradius3="1">
+      <connections>
+        <tag name="ship_xs" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_masstraffic" range="8000.0" sizecontrib="100" speed="2.0" lodradius0="10" lodradius1="5" lodradius2="2" lodradius3="1">
+      <connections>
+        <tag name="masstraffic" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_cockpit" range="3000.0" sizecontrib="50" speed="2.0" priority="1" lodradius0="300" lodradius1="125" lodradius2="40" lodradius3="25">
+      <connections>
+        <tag name="detail_cockpit" />
+      </connections>
+    </rule>
+
+    <!-- weapon render rules -->
+    <rule name="dbglodrule_weapon" range="8000.0" sizecontrib="100" speed="2.0" lodradius0="60" lodradius1="30" lodradius2="10" lodradius3="5">
+      <connections>
+        <tag name="weapon" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_boost" range="100000.0" priority="3" sizecontrib="100" speed="1.0" lodradius0="10" lodradius1="10" lodradius2="5" lodradius3="2.0">
+      <connections>
+        <tag name="detail_boost" />
+      </connections>
+    </rule>
+    <!-- detail part render rules -->
+    <rule name="dbglodrule_detail_xxl" range="16000.0" sizecontrib="100" speed="1.0"  lodradius0="10" lodradius1="10" lodradius2="10" lodradius3="5">
+      <connections>
+        <tag name="detail_xxl" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_detail_xl" range="16000.0" sizecontrib="100" speed="1.0"  lodradius0="25" lodradius1="25" lodradius2="25" lodradius3="20">
+      <connections>
+        <tag name="detail_xl" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_detail_l" range="8000.0" sizecontrib="100" speed="1.0"  lodradius0="200" lodradius1="200" lodradius2="200" lodradius3="50">
+      <connections>
+        <tag name="detail_l" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_detail_m" range="4000.0" sizecontrib="100" speed="1.0" lodradius0="300" lodradius1="300" lodradius2="300" lodradius3="200">
+      <connections>
+        <tag name="detail_m" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_detail_s" range="2000.0" sizecontrib="100" speed="1.0" lodradius0="400" lodradius1="400" lodradius2="400" lodradius3="300">
+      <connections>
+        <tag name="detail_s" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_detail_xs" range="1000.0" sizecontrib="100" speed="1.0" lodradius0="500" lodradius1="500" lodradius2="500" lodradius3="400">
+      <connections>
+        <tag name="detail_xs" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_engine" range="20000.0" sizecontrib="50" speed="1.0" lodradius0="100" lodradius1="50" lodradius2="20" lodradius3="10">
+      <connections>
+        <tag name="engine" />
+        <tag name="enginejet" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_turret" range="20000.0" sizecontrib="50" speed="1.0" lodradius0="100" lodradius1="50" lodradius2="20" lodradius3="10">
+      <connections>
+        <tag name="turret" />
+      </connections>
+    </rule>
+    <!-- xr turret lod rules? -->
+    <rule name="dbglodrule_turret_small" range="3000.0" sizecontrib="100" speed="1.0">
+      <connections>
+        <tag name="turret_small_mg" />
+        <tag name="turret_small_sg" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_turred_med" range="6000.0" sizecontrib="100" speed="1.0">
+      <connections>
+        <tag name="turret_medium_pe" />
+        <tag name="turret_medium_lb" />
+        <tag name="turret_missile_df" />
+        <tag name="turret_missile_sm" />
+        <tag name="shieldgenerator" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_turret_dock" range="16000.0" sizecontrib="100" speed="1.0">
+      <connections>
+        <tag name="turret_big" />
+        <tag name="dockingbay" />
+        <tag name="dockpos" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_drone_harvest" range="5000.0" sizecontrib="0" speed="3.0">
+      <connections>
+        <!--
+        <tag name="waretrade" />
+        <tag name="shiptrade" />
+        -->
+        <tag name="drone" />
+        <tag name="harvestable" />
+      </connections>
+    </rule>
+    <!--
+    <rule range="40000.0" sizecontrib="50" speed="2.0">
+      <connections>
+        <tag name="position" />
+        <tag name="anything" />
+      </connections>
+    </rule>
+    -->
+    <rule name="dbglodrule_billboard" range="15000.0" sizecontrib="100" speed="1.0">
+      <connections>
+        <tag name="billboard" />
+      </connections>
+    </rule>
+
+    <rule name="dbglodrule_cockpit" range="15000.0" sizecontrib="100" speed="1.0">
+      <connections>
+        <tag name="cockpit" />
+      </connections>
+    </rule>
+
+    <rule name="dbglodrule_bullet" range="25000.0" sizecontrib="100" speed="1.0" lodradius0="1" lodradius1="1" lodradius2="1" lodradius3="1">
+      <connections>
+        <tag name="bullet" />
+        <tag name="bulletcloud" />
+        <tag name="laser" />
+      </connections>
+    </rule>
+
+    <rule name="dbglodrule_bullet_small" range="25000.0" sizecontrib="0" speed="1.0" priority="2" lodradius0="1" lodradius1="1" lodradius2="1" lodradius3="1">
+      <connections>
+        <tag name="bullet_small" />
+      </connections>
+    </rule>
+
+    <!-- LodRule for effect-geometry (e.g. muzzle-flashes, when firing a weapon), which is a 'positional' -->
+    <rule name="dbglodrule_effectobject" lodradius0="600" lodradius1="380" lodradius2="340" lodradius3="300.5">
+      <connections>
+        <tag name="effectobject" />
+      </connections>
+    </rule>
+
+    <!-- LodRule for ParticleEffects (e.g. the puffy-cloud, when firing a weapon), see ParticleSystem::QueueGeometries() -->
+    <!-- See library/particle_effects.xml, lodclasses for valid "tags" for the below lodrules -->
+    <rule name="dbglodrule_particle_default" lodradius="0.5">
+      <connections>
+        <tag name="default_particlelodtag" />
+      </connections>
+    </rule>
+
+    <rule name="dbglodrule_particle_tinyeffect" lodradius="2.0">
+      <connections>
+        <tag name="tinyeffect" />
+      </connections>
+    </rule>
+
+    <rule name="dbglodrule_particle_smalleffect" lodradius="1.0">
+      <connections>
+        <tag name="smalleffect" />
+      </connections>
+    </rule>
+
+    <rule name="dbglodrule_particle_mediumeffect" lodradius="0.5">
+      <connections>
+        <tag name="mediumeffect" />
+      </connections>
+    </rule>
+
+    <rule name="dbglodrule_particle_largeeffect" lodradius="0.2">
+      <connections>
+        <tag name="largeeffect" />
+      </connections>
+    </rule>
+
+    <rule name="dbglodrule_particle_megaeffect" lodradius="0.01">
+      <connections>
+        <tag name="megaeffect" />
+      </connections>
+    </rule>
+
+    <rule name="dbglodrule_particle_ubereffect" lodradius="0.005">
+      <connections>
+        <tag name="ubereffect" />
+      </connections>
+    </rule>
+
+    <rule name="dbglodrule_particle_scfx" lodradius="1.0">
+      <connections>
+        <tag name="scfx" />
+      </connections>
+    </rule>
+
+    <!-- Be carefull here what we set to unlimited render range! -->
+    <rule name="dbglodrule_infinity" range="999999999.0" sizecontrib="0" speed="0.0" lodradius="0.0">
+      <connections>
+        <!-- HACK Start: to make viewer mode templates visible -->
+        <!--
+        <tag name="position" />
+        <tag name="anything" />
+        -->
+        <!-- End of HACK -->
+        <tag name="planet" />
+        <!--tag name="cockpit" /-->
+        <tag name="cluster" />
+        <tag name="celestialbody" />
+        <!--tag name="entrygate" /-->
+        <tag name="highwaytube" />
+        <tag name="lensflare" />
+        <tag name="lightonly"/>
+        <!--tag name="gate" /-->
+      </connections>
+    </rule>
+    <rule name="dbglodrule_lockbox" range="30000.0" sizecontrib="50" speed="2.0" lodradius0="75" lodradius1="30" lodradius2="10" lodradius3="3">
+      <connections>
+        <tag name="lockbox" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_detailxxs" range="10000.0" priority="2" sizecontrib="0" speed="2.0" lodradius0="2" lodradius1="2" lodradius2="2" lodradius3="2">
+      <connections>
+        <tag name="detailxxs" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_signalleak" range="10000.0" sizecontrib="0" priority="2" speed="1.0"  lodradius0="2" lodradius1="2" lodradius2="2" lodradius3="2">
+      <connections>
+        <tag name="signalleak" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_mine" range="10000.0" sizecontrib="50" speed="2.0" lodradius0="30" lodradius1="12" lodradius2="9" lodradius3="6">
+      <connections>
+        <tag name="mine" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_navbeacon" range="30000.0" sizecontrib="50" speed="1.0" lodradius0="0" lodradius1="0" lodradius2="0" lodradius3="0">
+      <connections>
+        <tag name="navbeacon" />
+      </connections>
+    </rule>
+    <rule name="dbglodrule_object" range="30000.0" sizecontrib="50" speed="2.0" lodradius0="75" lodradius1="30" lodradius2="10" lodradius3="3">
+      <connections>
+        <tag name="object" />
+      </connections>
+    </rule>
+  </lodrules>
+
+
+
+  <!-- renderrules define basic render options and special behavior /-->
+  <!-- culling="full(default),frustumoff,lodoff,none(=neither frustum nor lod)" -->
+  <!-- shadow="full,receiver,caster,none" -->
+  <renderrules>
+    <rule culling="full" shadow="full">
+      <connections>
+        <tag name="default_rendertag" />
+      </connections>
+    </rule>
+    <rule culling="full" shadow="none">
+      <connections>
+        <tag name="bullet" />
+        <tag name="bulletcloud" />
+        <tag name="laser" />
+        <tag name="rendereffect" />
+        <tag name="effect" />
+        <tag name="lensflare" />
+        <tag name="billboard" />
+        <tag name="planet" />
+      </connections>
+    </rule>
+    <rule culling="full" shadow="receiver">
+      <connections>
+        <tag name="masstraffic" />
+        <tag name="detail" />
+        <tag name="noshadowcaster" />
+      </connections>
+    </rule>
+    <rule culling="none" shadow="full">
+      <connections>
+        <tag name="noculling" />
+        <tag name="navbeacon" />
+      </connections>
+    </rule>
+  </renderrules>
+</renderparameters>

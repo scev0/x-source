@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <!-- graphic options -->
+  <!-- medium gfx preset -->
+  <shaderquality>1</shaderquality>
+  <shadows>1</shadows>
+  <softshadows>false</softshadows>
+  <ssao>0</ssao>
+  <glow>1</glow>
+  <uiglow>3</uiglow>
+  <uiglowintensity>0.75</uiglowintensity>
+  <lodfactor>0.25</lodfactor>
+  <effectdistance>0.30</effectdistance>
+  <distortion>false</distortion>
+  <disableradar>false</disableradar>
+  <radarquality>1</radarquality>
+  <ssr>false</ssr>
+  <ssrquality>low</ssrquality>
+  <texturequality>medium</texturequality>
+  <chromaticaberration>true</chromaticaberration>
+  <volumetric>1</volumetric>
+  <pom>medium</pom>
+  <envmapprobes>none</envmapprobes>
+</root>

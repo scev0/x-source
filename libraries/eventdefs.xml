@@ -1,0 +1,16 @@
+<events>
+  <!-- param1name = float, param2name= string Objectname param3name = string soundidname/charactername/effectname...-->
+  <event name="fadein" param1name="duration" />
+  <event name="fadeout" param1name="duration"/>
+  <event name="switchCamera" param2name="camera name"/>
+  <event name="startmusic" param1name="fadeinduration" param3name="soundid"/>
+  <event name="playsound"  param2name="object" param3name="soundid"/>
+  <event name="fireprimary" param1name="duration" param2name="shooter"/>
+  <event name="firesecondary" param1name="nr of shots" param2name="shooter" param3name="target"/>
+  <event name="explode" param2name="object" />
+  <event name="createCharacter" param2name="connection" param3name="character" param4name="extra"/>
+  <event name="animCharacter" param2name="connection" param3name="animation" />
+  <event name="speakcharacter" param2name="connection" param3name="pageid" param4name="textid" />
+  <event name="playAnim" param3name="animation" />
+  <event name="playNext" param3name="cutscene" />
+</events>

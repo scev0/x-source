@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tools>
+  <!-- NPC tools -->
+  <tool id="tool2hand" geometry="assets/characters/argon/props/pickup_tool_two_handed_01">
+    <animation carry="mix_right_arm_carry_01"/>
+  </tool>
+  <tool id="tool1hand" geometry="assets/characters/argon/props/pickup_tool_one_handed_01">
+    <animation carry="mix_right_arm_carry_02"/>
+  </tool>
+  <tool id="mug1hand" geometry="assets/characters/argon/props/pickup_mug_one_handed_01">
+    <animation carry="mix_right_arm_carry_03"/>
+  </tool>
+  <tool id="lunch1hand" geometry="assets/characters/argon/props/pickup_lunchbox_one_handed_01">
+    <animation carry="mix_right_arm_carry_03"/>
+  </tool>
+  <tool id="suitcase1hand" geometry="assets/characters/argon/props/pickup_suitcase_one_handed_01">
+	</tool>
+  <tool id="pda1hand" geometry="assets/characters/argon/props/pickup_pda">
+  </tool>
+</tools>

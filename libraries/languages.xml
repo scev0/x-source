@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languages>
+  <!-- English -->
+  <language id="44" name="English" voice="true" warning="A restart is required for changes to take effect!" />
+  <!-- German -->
+  <language id="49" name="Deutsch" voice="true" warning="Damit die Änderung wirksam wird, ist ein Neustart notwendig!" />
+  <!-- French -->
+  <language id="33" name="Français" voice="true" warning="Un redémarrage est nécessaire pour la prise en compte des changements !" />
+  <!-- Italian -->
+  <language id="39" name="Italiano" warning="I cambiamenti saranno effettivi al prossimo riavvio!" />
+  <!-- Russian -->
+  <language id="7" name="Русский" voice="true" warning="Перезагрузите игру, чтобы изменения вступили в силу!" />
+  <!-- Spanish -->
+  <language id="34" name="Español" warning="¡Es necesario reiniciar para que los cambios surtan efecto!" />
+  <!-- Portuguese (Brazil) -->
+  <language id="55" name="Português (Brasil)" voice="true" warning="Para que as mudanças funcionem, é preciso reiniciar!" />
+  <!-- Polish -->
+  <language id="48" name="Polski" warning="Wymagane jest ponowne uruchomienie, aby zmiany zadziałały!" />
+  <!-- Czech -->
+  <language id="42" name="Čeština" warning="Aby se změny projevily, je nutný restart!" />
+  <!-- Turkish -->
+  <!-- language id="90" name="Türkçe" warning="Değişikliklerin etkili olması için yeniden başlatma gerekiyor!" /-->
+  <!-- Ukrainian -->
+  <!-- language id="380" name="Українська" warning="Перезавантажте гру, щоб зміни набули чинності!" /-->
+  <!-- Simplified Chinese -->
+  <language id="86" name="简体中文" font="csfont" displaytimefactor="5.0" warning="需要重新启动以使更改生效！" />
+  <!-- Traditional Chinese -->
+  <language id="88" name="繁體中文" font="ctfont" displaytimefactor="5.0" warning="需要重新啟動以使更改生效！" />
+  <!-- Korean -->
+  <language id="82" name="한국어" font="kofont" displaytimefactor="5.0" warning="변경내용이 적용되기 위해서는 새로 시작하셔야 합니다." />
+  <!-- Japanese -->
+  <language id="81" name="日本語" font="jfont" displaytimefactor="5.0" warning="変更を有効にするには再起動してください！" />
+</languages>

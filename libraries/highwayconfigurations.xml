@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<highwayconfigurations>
+  <!--
+  For documentation please refer to the TDD.
+  -->
+  <configurations>
+    <configuration id="defaultlocalhighwayconfiguration">
+      <tubeconfiguration ref="experimental_tube_config" />
+      <motionblurconfiguration ref="local_hw_motionblur_config" />
+      <entryandexitgateconfiguration ref="local_hw_entry_exit_gate_config" />
+      <blockerconfiguration ref="empty_blocker_config" />
+      <boosterconfiguration ref="local_hw_booster_config" />
+      <trafficconfiguration ref="local_hw_traffic_config" />
+      <effectconfiguration ref="local_hw_effect_config" />
+    </configuration>
+    <configuration id="defaultsuperhighwayconfiguration">
+      <tubeconfiguration ref="super_hw_tube_config" />
+      <motionblurconfiguration ref="super_hw_motionblur_config" />
+      <entryandexitgateconfiguration ref="super_hw_entry_exit_gate_config" />
+      <blockerconfiguration ref="super_hw_blocker_config" />
+      <boosterconfiguration ref="super_hw_booster_config" />
+      <trafficconfiguration ref="super_hw_traffic_config" />
+      <effectconfiguration ref="super_hw_effect_config" />
+    </configuration>
+    <configuration id="experimentallocalhighwayconfiguration">
+      <tubeconfiguration ref="experimental_tube_config" />
+      <motionblurconfiguration ref="local_hw_motionblur_config" />
+      <entryandexitgateconfiguration ref="local_hw_entry_exit_gate_config" />
+      <blockerconfiguration ref="empty_blocker_config" />
+      <boosterconfiguration ref="local_hw_booster_config" />
+      <trafficconfiguration ref="local_hw_traffic_config" />
+      <effectconfiguration ref="local_hw_effect_config" />
+    </configuration>
+    <configuration id="ringlocalhighwayconfiguration">
+      <tubeconfiguration ref="ring_tube_config" />
+      <motionblurconfiguration ref="local_hw_motionblur_config" />
+      <entryandexitgateconfiguration ref="local_hw_entry_exit_gate_config" />
+      <blockerconfiguration ref="empty_blocker_config" />
+      <boosterconfiguration ref="local_hw_booster_config" />
+      <trafficconfiguration ref="local_hw_traffic_config" />
+      <effectconfiguration ref="local_hw_effect_config" />
+    </configuration>
+    <configuration id="xenonlocalhighwayconfiguration">
+      <tubeconfiguration ref="ring_tube_config" />
+      <motionblurconfiguration ref="local_hw_motionblur_config" />
+      <entryandexitgateconfiguration ref="local_hw_entry_exit_gate_config" />
+      <blockerconfiguration ref="empty_blocker_config" />
+      <boosterconfiguration ref="local_hw_booster_config" />
+      <trafficconfiguration ref="local_hw_xenontraffic_config" />
+      <effectconfiguration ref="local_hw_effect_config" />
+    </configuration>
+  </configurations>
+
+  <tubeconfigurations>
+    <tubeconfiguration id="super_hw_tube_config" material="" macroname="props_he_super_highway_stream_macro">
+      <scaling maxplayerspeedscale="1.5" maxhighwayspeedscale="2" />
+      <fading fadeinfraction="0.1" fadeoutfraction="0.1" />
+      <edge edgestartfraction="0.75" maxedgedeceleration="50" breakoutspeed="0.0" />
+      <acceleration base="0.05" decelerationfactor="250" />
+      <aifactor speed="0" acceleration="0.25" />
+      <part partname="repeater_part" speed="2.5" />
+      <roll lookahead="3" factor="2" />
+    </tubeconfiguration>
+    <tubeconfiguration id="experimental_tube_config" material="effects.dummy_highway_road" macroname="props_he_local_highway_stream_02_macro" adsignmacroname="adsign_gen_signholder_01_macro">
+      <scaling maxplayerspeedscale="2" maxhighwayspeedscale="4" />
+      <fading fadeinfraction="0.08" fadeoutfraction="0.05" />
+      <edge edgestartfraction="0.9" maxedgedeceleration="0.5" breakoutspeed="0.9" height="50" speedfactor="0.5" />
+      <acceleration base="0.005" decelerationfactor="250" />
+      <aifactor speed="0.05" acceleration="0.25" />
+      <part partname="anim_repeater" speed="5" />
+      <roll lookahead="2" factor="4" />
+      <mesh tiling="15000" tiling_blips="1000" static="0.015" maxsheer="2" sample="250" skip="10" />
+    </tubeconfiguration>
+    <tubeconfiguration id="ring_tube_config" material="effects.dummy_highway_road" macroname="props_he_local_highway_stream_02_macro" adsignmacroname="adsign_gen_signholder_02_macro">
+      <scaling maxplayerspeedscale="2" maxhighwayspeedscale="4" />
+      <fading fadeinfraction="0.08" fadeoutfraction="0.05" />
+      <edge edgestartfraction="0.9" maxedgedeceleration="0.5" breakoutspeed="0.9" height="50" speedfactor="0.5" />
+      <acceleration base="0.005" decelerationfactor="250" />
+      <aifactor speed="0.05" acceleration="0.25" />
+      <part partname="anim_repeater" speed="5" />
+      <roll lookahead="2" factor="4" />
+      <mesh tiling="15000" tiling_blips="1000" static="0.015" maxsheer="2" sample="250" skip="10" />
+    </tubeconfiguration>
+  </tubeconfigurations>
+
+  <motionblurconfigurations>
+    <motionblurconfiguration id="local_hw_motionblur_config" playerspeedfactor="1" highwayspeedfactor="2" />
+    <motionblurconfiguration id="super_hw_motionblur_config" playerspeedfactor="1" highwayspeedfactor="2" />
+  </motionblurconfigurations>
+
+  <entryandexitgateconfigurations>
+    <entryandexitgateconfiguration id="local_hw_entry_exit_gate_config" entrygate="he_gen_localhighway_entrance_01_macro" exitgate="he_gen_localhighway_exit_01_macro" />
+    <entryandexitgateconfiguration id="super_hw_entry_exit_gate_config" entrygate="he_gen_superhighway_entrance_01_macro" exitgate="he_gen_superhighway_exit_01_macro" />
+  </entryandexitgateconfigurations>
+
+  <blockerconfigurations>
+    <blockerconfiguration id="empty_blocker_config" />
+    <blockerconfiguration id="super_hw_blocker_config">
+      <blocker macroname="props_he_super_highway_blocker_macro" factor="0">
+        <offset>
+          <position z="0.2" />
+        </offset>
+        <offset_var>
+          <position x="150" y="150" z="0.1" />
+          <rotation roll="180" />
+        </offset_var>
+      </blocker>
+      <blocker macroname="props_he_super_highway_blocker_macro" factor="0">
+        <offset>
+          <position z="0.4" />
+        </offset>
+        <offset_var>
+          <position x="150" y="150" z="0.1" />
+          <rotation roll="180" />
+        </offset_var>
+      </blocker>
+      <blocker macroname="props_he_super_highway_blocker_macro" factor="0">
+        <offset>
+          <position z="0.6" />
+        </offset>
+        <offset_var>
+          <position x="150" y="150" z="0.1" />
+          <rotation roll="180" />
+        </offset_var>
+      </blocker>
+      <blocker macroname="props_he_super_highway_blocker_macro" factor="0">
+        <offset>
+          <position z="0.8" />
+        </offset>
+        <offset_var>
+          <position x="150" y="150" z="0.1" />
+          <rotation roll="180" />
+        </offset_var>
+      </blocker>
+    </blockerconfiguration>
+  </blockerconfigurations>
+
+  <boosterconfigurations>
+    <boosterconfiguration id="super_hw_booster_config">
+      <booster shipsize="spacesuit" macroname="" />
+      <booster shipsize="dock_xs" macroname="" />
+      <booster shipsize="dock_s" macroname="" />
+      <booster shipsize="dock_m" macroname="" />
+      <booster shipsize="dock_l" macroname="" />
+      <booster shipsize="dock_xl" macroname="" />
+    </boosterconfiguration>
+    <boosterconfiguration id="local_hw_booster_config">
+      <booster shipsize="spacesuit" macroname="" />
+      <booster shipsize="dock_xs" macroname="" />
+      <booster shipsize="dock_s" macroname="" />
+      <booster shipsize="dock_m" macroname="" />
+      <booster shipsize="dock_l" macroname="" />
+      <booster shipsize="dock_xl" macroname="" />
+    </boosterconfiguration>
+  </boosterconfigurations>
+
+  <trafficconfigurations>
+    <trafficconfiguration id="super_hw_traffic_config" zscale="100000" densityfactor="1.0" />
+    <trafficconfiguration id="local_hw_traffic_config" zscale="100000" densityfactor="0.1" />
+    <trafficconfiguration id="local_hw_xenontraffic_config" zscale="100000" densityfactor="0.0" />
+  </trafficconfigurations>
+
+  <effectconfigurations>
+    <effectconfiguration id="super_hw_effect_config" entered="highway_entered" left="highway_left" edgehit="highway_edge_hit" edgehitdelay="0" boosterentered="" boosterleft="" boosteredgehit="" boosteredgehitdelay="1" speedup="" speeddown="" brake="highway_brake" />
+    <effectconfiguration id="local_hw_effect_config" entered="highway_entered" left="highway_left" edgehit="highway_edge_hit" edgehitdelay="0" boosterentered="" boosterleft="" boosteredgehit="" boosteredgehitdelay="1" speedup="" speeddown="" brake="highway_brake" />
+  </effectconfigurations>
+
+</highwayconfigurations>
