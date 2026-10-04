@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiscript name="interrupt.lostreservation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="aiscripts.xsd" priority="11">
+  <interrupts>
+    <library>
+      <!-- MAINTENANCE: sync with changes in handler in move.autopilot -->
+      <handler name="LostReservationHandler">
+        <conditions>
+          <event_space_reservation_expired object="this.assignedcontrolled" check="false"/>
+          <check_value value="@$reservedspace.$zone == event.param"/>
+          <check_value value="@$reservedspace.$index == event.param2"/>
+        </conditions>
+        <actions>
+          <remove_value name="$reservedspace.$zone"/>
+          <remove_value name="$reservedspace.$index"/>
+        </actions>
+      </handler>
+    </library>
+  </interrupts>
+</aiscript>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<aiscript name="order.dock.visitstations.routine" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="aiscripts.xsd">
+  <order id="VisitStations" name="{1041, 911}" description="{1041, 912}" category="internal" allowinloop="false" infinite="true">
+    <params>
+      <param name="internalorder" type="internal" default="false" comment="Will be passed on to move.generic for blacklist enforcement."/>
+      <param name="debugchance" type="bool" default="0" advanced="true" text="{1041, 10086}" comment="Print debug output">
+        <input_param name="truevalue" value="100"/>
+      </param>
+    </params>
+    <requires>
+      <!-- ship should be able to use cover -->
+      <match shiptype="shiptype.envoy"/>
+    </requires>
+  </order>
+  <interrupts>
+    <library>
+      <actions name="AssumeCover_VisitStations">
+        <do_if value="$destination.isoperational">
+          <set_value name="$potentialcoverfactions" exact="global.$DiplomaticFactions.clone"/>
+          <shuffle_list list="$potentialcoverfactions"/>
+          <do_for_each name="$_locfaction" in="$potentialcoverfactions">
+            <!-- we do this on sector transition and $destination is always a claiming station, so if claiming station is hostile, sector owner would be hostile in the same way.
+              unless sector ownership is contested -->
+            <do_if value="($_locfaction != this.trueowner) and (not this.sector or ($destination.hascontext.{this.sector} and not $destination.hasrelation.enemy.{$_locfaction}) or not this.sector.owner.hasrelation.enemy.{$_locfaction})">
+              <set_value name="$coverfaction" exact="$_locfaction"/>
+              <signal_objects object="player.galaxy" param="'Cover'" param2="[this.assignedcontrolled, $coverfaction]"/>
+              <debug_text text="'%s %s %s assumed cover as %s'.[@this.assignedcontrolled.idcode, @this.assignedcontrolled.knownname, this.assignedcontrolled, $coverfaction]" chance="$debugchance"/>
+              <break/>
+            </do_if>
+          </do_for_each>
+        </do_if>
+      </actions>
+    </library>
+    <handler>
+      <conditions>
+        <event_object_changed_sector object="this.assignedcontrolled"/>
+        <debug_text text="'%s %s %s\nchanged sectors from %s to %s\ncover: %s\nsector owner: %s\nhostile sector: %s'.[@this.assignedcontrolled.idcode, @this.assignedcontrolled.knownname, this.assignedcontrolled, @event.param2.knownname, @event.param.knownname, this.coverowner, @event.param.owner, @event.param.owner.mayattack.{this.assignedcontrolled}]" debugchance="0"/>
+        <check_any>
+          <!-- i need cover or i need new cover -->
+          <!-- NB: envoy has purpose fight and $faction.mayattack.{$faction} checks relation.kill rather than killmilitary. killmilitary should be safer for this in any case since it's wider than kill. -->
+          <check_value value="@event.param.owner.hasrelation.killmilitary.{this.owner}"/>
+          <!-- i need to drop cover -->
+          <check_value value="this.assignedcontrolled.coverowner and @event.param.owner and not event.param.owner.hasrelation.killmilitary.{this.trueowner}"/>
+        </check_any>
+      </conditions>
+      <actions>
+        <do_if value="this.assignedcontrolled.coverowner and @event.param.owner and not event.param.owner.hasrelation.killmilitary.{this.trueowner}">
+          <debug_text text="'%s %s %s arrived in friendly sector: %s, owned by %s. dropping cover.'.[@this.assignedcontrolled.idcode, this.assignedcontrolled.knownname, this.assignedcontrolled, event.param.knownname, event.param.owner]" chance="$debugchance"/>
+          <signal_objects object="this.assignedcontrolled" param="'LoseCover'" param2="false"/>
+        </do_if>
+        <do_else>
+          <include_interrupt_actions ref="AssumeCover_VisitStations"/>
+          <debug_text text="'%s %s %s in dangerous space\nowned by %s.\nchanging cover to %s'.[@this.assignedcontrolled.idcode, this.assignedcontrolled.knownname, this.assignedcontrolled, this.sector.owner, @$coverfaction]" chance="$debugchance"/>
+        </do_else>
+      </actions>
+    </handler>
+    <handler ref="AttackHandler"/>
+    <handler ref="MissileLockHandler" />
+    <handler ref="ScannedHandler"/>
+    <handler ref="InspectedHandler"/>
+    <handler ref="FoundAbandonedHandler"/>
+    <handler ref="FoundLockboxHandler"/>
+    <handler ref="ResupplyHandler"/>
+  </interrupts>
+  <init>
+    
+  </init>
+  <attention min="unknown">
+    <actions>
+
+      <set_value name="$list_ignoredfactions" exact="[]"/>
+      <!-- we either start at one of our own stations, in a foreign station, or in space.
+        if at one of our own stations, go to a foreign station.
+        if at a foreign station, go to one of our own stations.
+        if in space, go to either.
+        we also start from here when we return from having been interrupted. -->
+      <do_if value="this.assignedcontrolled.dock">
+        <set_value name="$gohome" exact="true"/>
+        <do_if value="this.assignedcontrolled.container.trueowner == this.trueowner">
+          <debug_text text="'%1 (%2) ready to resupply.'.[this.ship.knownname, this.ship]" chance="$debugchance"/>
+          <signal_objects object="this.assignedcontrolled" param="'resupply'" param2="[false]" param3="$debugchance" comment="param2 = [urgent?, resupplystationID], param3 = $debugchance"/>
+          <set_value name="$gohome" exact="false"/>
+        </do_if>
+        <debug_text text="'%s %s %s, docked at %s %s %s going home: %s'.[@this.assignedcontrolled.idcode, @this.assignedcontrolled.knownname, this.assignedcontrolled, @this.assignedcontrolled.container.idcode, @this.assignedcontrolled.container.knownname, this.assignedcontrolled.container, $gohome]" chance="$debugchance"/>
+      </do_if>
+      <do_else>
+        <!-- this assumes that the first stance is good for stealth. -->
+        <do_if value="this.assignedcontrolled.stances.canswitch">
+          <set_value name="$stances" exact="this.assignedcontrolled.stances.list"/>
+          <do_if value="$stances.count and (this.assignedcontrolled.stances.active != $stances.{1})">
+            <activate_ship_stance ship="this.assignedcontrolled" stance="$stances.{1}"/>
+          </do_if>
+          <remove_value name="$stances"/>
+        </do_if>
+        <do_any>
+          <set_value name="$gohome" exact="true"/>
+          <set_value name="$gohome" exact="false"/>
+        </do_any>
+      </do_else>
+
+      <label name="choosedestination"/>
+
+      <wait min="100ms" max="2s"/>
+
+      <do_if value="$gohome">
+        <find_station_by_true_owner name="$destination" faction="this.trueowner" canclaimownership="true" space="player.galaxy" reachablefrom="this.zone"/>
+        <do_if value="not @$destination.isoperational">
+          <debug_text text="'no valid destination found for faction %s'.[this.trueowner]" chance="$debugchance"/>
+          <set_value name="$gohome" exact="false"/>
+          <resume label="choosedestination"/>
+        </do_if>
+      </do_if>
+      <do_else>
+        <set_value name="$factions" exact="global.$DiplomaticFactions.clone"/>
+        <shuffle_list list="$factions"/>
+        <do_for_each name="$locfaction" in="$factions">
+          <do_if value="$locfaction.isactive and ($locfaction != this.trueowner) and $locfaction.isdiplomacyactive and not $list_ignoredfactions.indexof.{$locfaction}">
+            <set_value name="$targetfaction" exact="$locfaction"/>
+            <break/>
+          </do_if>
+        </do_for_each>
+        <do_if value="@$targetfaction">
+          <find_station_by_true_owner name="$destination" faction="$targetfaction" canclaimownership="true" space="player.galaxy" reachablefrom="this.zone"/>
+          <do_if value="not @$destination.isoperational">
+            <debug_text text="'no valid destination found for faction %s'.[$targetfaction]" chance="$debugchance"/>
+            <append_to_list name="$list_ignoredfactions" exact="$targetfaction"/>
+            <remove_value name="$targetfaction"/>
+            <resume label="choosedestination"/>
+          </do_if>
+          <remove_value name="$targetfaction"/>
+        </do_if>
+        <do_else>
+          <debug_text text="'No valid target faction found.'" filter="error"/>
+        </do_else>
+      </do_else>
+      <debug_text text="'%s %s %s (trueowner: %s)\ngoing to %s %s %s'.[@this.assignedcontrolled.idcode, @this.assignedcontrolled.knownname, this.assignedcontrolled, this.assignedcontrolled.trueowner, @$destination.idcode, @$destination.knownname, $destination]" chance="$debugchance"/>
+
+      <label name="gotodestination"/>
+
+      <do_if value="not this.hascontext.{$destination.zone}">
+        <do_if value="this.assignedcontrolled.dock">
+          <run_script name="'move.undock'">
+            <!--<param name="debugchance" value="$debugchance"/>-->
+          </run_script>
+        </do_if>
+        <!-- this assumes that the first stance is good for stealth. -->
+        <do_if value="this.assignedcontrolled.stances.canswitch">
+          <set_value name="$stances" exact="this.assignedcontrolled.stances.list"/>
+          <do_if value="$stances.count and (this.assignedcontrolled.stances.active != $stances.{1})">
+            <activate_ship_stance ship="this.assignedcontrolled" stance="$stances.{1}"/>
+          </do_if>
+          <remove_value name="$stances"/>
+        </do_if>
+        <run_script name="'move.generic'" result="$movesuccess">
+          <param name="destination" value="$destination"/>
+          <param name="endintargetzone" value="true"/>
+          <param name="strictblacklist" value="$internalorder"/>
+          <!--<param name="debugchance" value="$debugchance"/>-->
+        </run_script>
+        <do_if value="not $movesuccess">
+          <do_if value="@this.assignedcontrolled.order.isrunning">
+            <set_order_failed order="this.assignedcontrolled.order" text="{1045, 101}" comment="Unable to reach destination."/>
+          </do_if>
+          <debug_text text="'Unable to move to destination %s %s possibly due to blacklist. Choosing new destination.'.[$destination_station.class, @$destination_station.knownname]" chance="$debugchance"/>
+          <resume label="choosedestination"/>
+        </do_if>
+      </do_if>
+
+      <set_value name="$staytime" min="30min" max="2h"/>
+      <create_order object="this.assignedcontrolled" id="'DockAndWait'">
+        <param name="destination" value="$destination"/>
+        <param name="timeout" value="$staytime"/>
+        <!--<param name="debugchance" value="$debugchance"/>-->
+      </create_order>
+
+      <wait/>
+
+    </actions>
+  </attention>
+</aiscript>

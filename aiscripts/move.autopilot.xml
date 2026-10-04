@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<aiscript name="move.autopilot" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="aiscripts.xsd" version="5">
+  <params>
+    <param name="target" />
+    <param name="ship" default="this.ship" />
+    <param name="targetpos" default="position.[0, 0, 0]" />
+    <param name="isguidance" default="false" />
+    <param name="useunknown" default="false" />
+  </params>
+  <interrupts>
+    <library>
+      <actions name="Autopilot_ProcessPathComponent">
+        <do_if value="@$loccomp">
+          <do_if value="$loccomp.isclass.gate">
+            <append_to_list name="$locgates" exact="$loccomp" create="true"/>
+          </do_if>
+          <do_elseif value="$loccomp.isclass.highway and $loccomp.entry">
+            <append_to_list name="$locgates" exact="$loccomp.entry" create="true"/>
+          </do_elseif>
+          <do_if value="$loccomp.sector.exists and not $pathsectors.indexof.{$loccomp.sector}">
+            <append_to_list name="$pathsectors" exact="$loccomp.sector"/>
+            <debug_text text="'adding %s %s to pathsectors. index: %s'.[$loccomp.sector.class, $loccomp.sector.knownname, $i]" chance="$debugchance"/>
+          </do_if>
+        </do_if>
+      </actions>
+    </library>
+    <handler>
+      <conditions>
+        <check_all>
+          <check_any>
+            <event_object_signalled object="this" param="'guidance_updated'" />
+            <event_object_signalled object="this" param="'guidance_ended'" />
+          </check_any>
+          <check_value value="@$isguidance" />
+        </check_all>
+      </conditions>
+      <actions>
+        <do_if value="event.param == 'guidance_updated'">
+          <debug_text text="'guidance updated'" chance="$debugchance" />
+          <set_value name="$target" exact="event.param2" />
+          <set_value name="$targetpos" exact="event.param3"/>
+          <abort_called_scripts resume="start" />
+        </do_if>
+        <do_else>
+          <debug_text text="'guidance ended, stopping autopilot'" chance="$debugchance" />
+          <abort_called_scripts resume="end" />
+        </do_else>
+      </actions>
+    </handler>
+    <handler>
+      <conditions>
+        <event_object_target_invalid object="this.ship"/>
+      </conditions>
+      <actions>
+        <debug_text text="'target invalid'" chance="$debugchance"/>
+        <do_if value="player.age lt @$invalidtargettime + 1s">
+          <signal_objects object="player.computer" param="'autopilotfailed_invalidtarget'"/>
+          <show_notification text="{10002, 925}" comment="Target is invalid. Deactivating autopilot."/>
+          <debug_text text="'target invalid. deactivating autopilot.'" chance="$debugchance"/>
+          <set_value name="$preventendspeak"/>
+          <abort_called_scripts resume="end"/>
+        </do_if>
+        <do_else>
+          <set_value name="$invalidtargettime" exact="player.age"/>
+          <abort_called_scripts resume="start"/>
+        </do_else>
+      </actions>
+    </handler>
+    <handler>
+      <conditions>
+        <event_player_stopped_control/>
+      </conditions>
+      <actions>
+        <debug_text text="'player stopped control. deactivating autopilot.'" chance="$debugchance"/>
+        <abort_called_scripts resume="end"/>
+      </actions>
+    </handler>
+    <handler comment="player bridge crew: navigator: usecase: approaching gate/accelerator/superhighway">
+      <conditions>
+        <event_object_changed_attention group="$gates" attention="attention.inzone" comment="event only triggers when ship is not in a highway" />
+        <check_any>
+          <check_value value="event.object == player.activemissionwaypoint" />
+          <check_value value="event.object.isclass.highwayentrygate and event.object.highway.issuperhighway and player.activemissionwaypoint == event.object.highway" comment="activemissionwaypoint is never a highwayentrygate but can be its associated highway" />
+        </check_any>
+        <check_any comment="do only if last gate is not the same type. i.e. fail the conditions if event.object is the same class/isaccelerator as the (previous) $gate.">
+          <check_value value="not $gate" />
+          <check_value value="$gate.isclass.gate != event.object.isclass.gate" comment="accounts for $gate being a (gate or accelerator) then a highwayentrygate for the next valid use, and then vice-versa" />
+          <check_all comment="accounts for $gate being a gate then an accelerator for the next valid use, and then vice-versa">
+            <check_value value="$gate.isclass.gate" />
+            <check_value value="$gate.isaccelerator != event.object.isaccelerator" />
+          </check_all>
+        </check_any>
+      </conditions>
+      <actions>
+        <set_value name="$gate" exact="event.object" />
+        <!-- player bridge crew: navigator -->
+        <do_if value="$gate.isclass.gate">
+          <include_interrupt_actions ref="NPCUseCase_NavApproachJumpGate" />
+        </do_if>
+        <do_else>
+          <include_interrupt_actions ref="NPCUseCase_NavApproachSuperHWGate" />
+        </do_else>
+      </actions>
+    </handler>
+    <!-- MAINTENANCE: sync with changes in interrupt.lostreservation
+        custom handler since betty usually runs this script. -->
+    <handler>
+      <conditions>
+        <event_space_reservation_expired object="$ship"/>
+        <check_value value="@$reservedspace.$zone == event.param"/>
+        <check_value value="@$reservedspace.$index == event.param2"/>
+      </conditions>
+      <actions>
+        <remove_value name="$reservedspace.$zone"/>
+        <remove_value name="$reservedspace.$index"/>
+      </actions>
+    </handler>
+    <handler ref="SectorChangeHandler"/>
+  </interrupts>
+  <init>
+    <create_group groupname="$gates" />
+    <set_value name="$gate" exact="null" />
+  </init>
+  <patch sinceversion="4">
+    <set_value name="$useunknown" exact="false" />
+  </patch>
+  <patch sinceversion="5" early="true">
+    <do_if value="not $gates?">
+      <create_group groupname="$gates" />
+    </do_if>
+    <do_if value="not $gate?">
+      <set_value name="$gate" exact="null" />
+    </do_if>
+  </patch>
+  <attention min="visible">
+    <actions>
+
+      <label name="start" />
+
+      <set_value name="$debugchance" exact="0" />
+
+      <!-- <set_flight_control_model object="$ship" flightcontrolmodel="flightcontrolmodel.steering" /> -->
+
+      <do_if value="$ship.dock">
+        <signal_objects object="player.computer" param="'autopilotfailed_docked'"/>
+        <show_notification text="{10002, 923}" comment="This ship is docked. Unable to activate autopilot."/>
+        <debug_text text="'ship is docked. cannot activate autopilot.'" chance="$debugchance"/>
+        <set_value name="$preventendspeak"/>
+        <resume label="end"/>
+      </do_if>
+
+      <do_if value="$ship.pilot != player.entity">
+        <signal_objects object="player.computer" param="'autopilotfailed_nopilot'"/>
+        <show_notification text="{10002, 924}" comment="You are not piloting this ship. Unable to activate autopilot."/>
+        <debug_text text="'player is not the pilot. unable to activate autopilot.'" chance="$debugchance"/>
+        <set_value name="$preventendspeak"/>
+        <resume label="end"/>
+      </do_if>
+
+      <do_if value="$ship.gatedistance.{$target} lt 0">
+        <signal_objects object="player.computer" param="'autopilotfailed_invalidtarget'"/>
+        <show_notification text="{10002, 925}" comment="Target is invalid. Deactivating autopilot."/>
+        <debug_text text="'no path to target.'" chance="$debugchance"/>
+        <set_value name="$preventendspeak"/>
+        <resume label="end"/>
+      </do_if>
+
+      <do_if value="$target.isclass.zone or $target.isclass.sector">
+        <debug_text text="'autopilot activated, flying to %1 (pos: %2, isguidance: %3)'.[$target.knownname, $targetpos, $isguidance]" chance="$debugchance" />
+      </do_if>
+      <do_else>
+        <debug_text text="'autopilot activated, flying to %1 in %2 (pos: %3, isguidance: %4)'.[$target.knownname, @$target.zone.knownname, $targetpos, $isguidance]" chance="$debugchance" />
+      </do_else>
+
+      <!-- Set the command -->
+      <do_if value="$target.isclass.ship">
+        <debug_text text="'follow ship'" chance="$debugchance" />
+        <set_command command="command.follow" param="$target" />
+      </do_if>
+      <do_elseif value="$target.isclass.zone">
+        <debug_text text="'fly to zone'" chance="$debugchance" />
+        <set_command command="command.movetozone" param="$target" />
+      </do_elseif>
+      <do_else>
+        <debug_text text="'fly to sector or object'" chance="$debugchance" />
+        <set_command command="command.move" param="$target" />
+      </do_else>
+
+      <!-- Subposition calculations -->
+
+      <do_if value="$target.isclass.dockingbay">
+        <set_value name="$subtargetpos" exact="$target.todockpos" />
+        <set_value name="$targetpos" exact="$subtargetpos" />
+      </do_if>
+      <do_elseif value="$target.isclass.walkablemodule">
+        <set_value name="$subtargetpos" exact="$target.entrypos" />
+        <set_value name="$targetpos" exact="$subtargetpos" />
+      </do_elseif>
+
+      <label name="loop" />
+
+      <!-- Autopilot loop, while target is operational -->
+      <do_while value="$target.isoperational or $target.isconstruction">
+        <debug_text text="'target = %1 %2 [%3], zone = %4 [%5]'.[$target.class, $target.knownname, $target, @$target.zone.knownname, @$target.zone]" chance="$debugchance"/>
+        <do_if value="(@$ship.environment.isclass.container or @$ship.environment.isclass.walkablemodule)">
+          <!--we're currently inside a module, perform undock movement using the nearest dock we can find to give systems like dock paths a chance to get us out of here-->
+          <find_closest_dockingbay name="$dock" object="$ship.environment" ship="$ship" allowplayeronly="true" />
+          <do_if value="$dock and $ship.environment.haswaypointpath.{$dock.grouptag}.[tag.dockpath, tag.start]">
+            <move_undocking object="$ship" dock="$dock" finishonapproach="false" forceposition="false" forcerotation="false" forcesteering="true" flightbehaviour="flightbehaviour.undockpath" commandaction="false" sinceversion="2" />
+          </do_if>
+        </do_if>
+        <set_value name="$tooclose" exact="false" />
+        <set_value name="$forcesteering" exact="false" />
+        <do_if value="$target.isclass.ship">
+          <do_if value="($target.zone == $ship.zone) or (($ship.distanceto.{$target} lt 50km) and (not $target.zone.isclass.highway))">
+            <set_value name="$forcesteering" exact="true" />
+          </do_if>
+          <do_elseif value="$ship.zone.isclass.highway">
+            <do_if value="$target.zone.distanceto.{$ship.zone.destination} lt 25km">
+              <set_value name="$forcesteering" exact="true" />
+            </do_if>
+          </do_elseif>
+        </do_if>
+
+        <do_if value="@$reservedspace.$zone">
+          <cancel_space_reservation component="$ship" zone="$reservedspace.$zone" index="$reservedspace.$index"/>
+          <debug_text text="'cancelling reservation: %s in %s'.[$reservedspace.$index, $reservedspace.$zone]" chance="$debugchance"/>
+        </do_if>
+        <do_else>
+          <set_value name="$reservedspace" exact="table[ $duration = param.spacereservation.maxduration ]"/>
+        </do_else>
+
+        <set_value name="$interrupted" exact="true" />
+        <do_if value="$forcesteering">
+          <set_value name="$targetpos" exact="position.[0,0,0]" />
+          <set_value name="$targetrot" exact="rotation.[0,0,0]" />
+        </do_if>
+        <do_elseif value="$target.isclass.highway">
+          <set_value name="$targetpos" exact="$target.closestpointtoplayer" />
+          <set_value name="$targetrot" exact="rotation.[0,0,0]" />
+        </do_elseif>
+        <do_elseif value="$target.isclass.zone">
+          <get_safe_pos result="$targetpos" zone="$target" radius="$ship.safesize" value="$targetpos" object="$target"/>
+          <set_value name="$targetrot" exact="rotation.[0,0,0]"/>
+          <do_if value="$incompletepath? and @$nexttarget.exists">
+            <create_orientation name="$targetrot" orientation="look_at" refobject="$nexttarget">
+              <position value="$targetpos" object="$target" space="$target"/>
+            </create_orientation>
+          </do_if>
+          <reserve_space component="$ship" space="$target" radius="$ship.safesize" duration="$reservedspace.$duration" index="$reservedspace.$index" safezone="$reservedspace.$zone">
+            <position value="$targetpos" object="$target"/>
+            <rotation value="$targetrot"/>
+          </reserve_space>
+        </do_elseif>
+        <do_elseif value="$target.isclass.sector">
+          <set_value name="$targetrot" exact="rotation.[0,0,0]" />
+          <get_safe_pos result="$targetpos" sector="$target" radius="$ship.safesize" value="$targetpos" object="$target">
+            <spacereservation component="$ship" duration="$reservedspace.$duration" index="$reservedspace.$index" safezone="$reservedspace.$zone">
+              <rotation value="$targetrot"/>
+            </spacereservation>
+          </get_safe_pos>
+        </do_elseif>
+        <do_else>
+          <do_if value="$target.isclass.gate and $target.destination != null">
+            <get_gate_approach_pos ship="$ship" gate="$target" position="$targetpos" rotation="$targetrot" />
+          </do_if>
+          <set_value name="$targetrot" exact="rotation.[0,0,0]" />
+          <do_if value="not $target.isclass.object">
+            <set_value name="$maintarget" exact="$target.container" />
+            <do_if value="$maintarget.exists">
+              <do_if value="$ship.distanceto.{$maintarget} lt ($maintarget.size / 2.f) ">
+                <set_value name="$tooclose" exact="true" />
+              </do_if>
+            </do_if>
+          </do_if>
+          <do_if value="not @$tooclose">
+            <get_safe_pos result="$targetpos" zone="$target.zone" radius="$ship.safesize * 2.f" object="$target" value="$targetpos" directionobject="$ship" ignored="$ship">
+              <spacereservation component="$ship" duration="$reservedspace.$duration" index="$reservedspace.$index" safezone="$reservedspace.$zone">
+                <orientation orientation="look_at" refobject="$target"/>
+              </spacereservation>
+            </get_safe_pos>
+            <create_position name="$targetpos" object="$target.zone" space="$target" value="$targetpos" />
+            <create_orientation name="$targetrot" orientation="look_at" refobject="$target" >
+              <position value="$targetpos" object="$target" space="$target"/>
+            </create_orientation>
+            <debug_text text="'getting safepos. new pos: ' + $targetpos + ', new rot: ' + $targetrot" chance="$debugchance"/>
+          </do_if>
+        </do_else>
+
+        <do_if value="not $forcesteering and not $ship.zone.isclass.highway">
+          <set_flight_control_model object="$ship" flightcontrolmodel="flightcontrolmodel.spline" />
+        </do_if>
+
+        <do_if value="not @$tooclose">
+          <debug_text text="'moving to %s rel to %s %s %s %s'.[$targetpos, $target.class, @$target.idcode, $target.knownname, $target]" chance="$debugchance"/>
+          <get_global_path component="$pathcomponents" uselocalhighways="not $ship.iscapitalship" multiple="true" refobject="$ship" useknownpath="not $useunknown">
+            <start object="$ship"/>
+            <end object="$target"/>
+          </get_global_path>
+          <set_value name="$pathsectors" exact="[]"/>
+          <do_for_each name="$loccomp" in="$pathcomponents" counter="$i">
+            <include_interrupt_actions ref="Autopilot_ProcessPathComponent"/>
+          </do_for_each>
+          <do_if value="not $pathcomponents.count and not $useunknown">
+            <!--no known path found, identify the last known component along the way that is not a local highway and redirect pathing to it-->
+            <!--IMPORTANT: changes to path finding logic here need to be kept consistent with guidance code-->
+            <set_value name="$useunknown" exact="true"/>
+            <get_global_path component="$allpathcomponents" uselocalhighways="not $ship.iscapitalship" multiple="true" refobject="$ship" useknownpath="false">
+              <start object="$ship"/>
+              <end object="$target"/>
+            </get_global_path>
+            <do_for_each name="$loccomp" in="$allpathcomponents" counter="$i">
+              <debug_text text="'%s %s index: %s'.[$loccomp.class, $loccomp.debugname, $i]" chance="$debugchance"/>
+              <do_if value="$loccomp.isknown">
+                <do_if value="not $loccomp.isclass.zone or $loccomp.issuperhighway">
+                  <set_value name="$lastknowncomponent" exact="$loccomp"/>
+                </do_if>
+                <!-- prevents calculating a new path each time we change sectors -->
+                <include_interrupt_actions ref="Autopilot_ProcessPathComponent"/>
+              </do_if>
+              <do_elseif value="$loccomp != $target and not $loccomp.isclass.gate">
+                <!-- iterate until you get the next gate or the next path component is the target -->
+                <continue/>
+              </do_elseif>
+              <do_else>
+                <set_value name="$incompletepath"/>
+                <set_value name="$nexttarget" exact="$loccomp"/>
+                <debug_text text="'no known path. last known component: %s %s %s'.[@$lastknowncomponent.class, @$lastknowncomponent.knownname, $lastknowncomponent]" chance="$debugchance"/>
+                <do_if value="$lastknowncomponent.isclass.gate">
+                  <do_if value="@$reservedspace.$zone">
+                    <cancel_space_reservation component="$ship" zone="$reservedspace.$zone" index="$reservedspace.$index"/>
+                    <debug_text text="'cancelling reservation: %s in %s'.[$reservedspace.$index, $reservedspace.$zone]" chance="$debugchance"/>
+                  </do_if>
+                  <do_else>
+                    <set_value name="$reservedspace" exact="table[ $duration = param.spacereservation.maxduration ]"/>
+                  </do_else>
+                  <!--redirect to the exit gate's zone so that AI pathing works-->
+                  <debug_text text="'incomplete path 1. old target: %s %s, new target: %s %s\nnext target: %s %s'.[$target.class, $target, class.zone, $lastknowncomponent.zone, $loccomp.class, $loccomp]" chance="$debugchance"/>
+                  <set_value name="$target" exact="$lastknowncomponent.zone"/>
+                  <!-- end at $lastknowncomponent's zone roughly facing the next (unknown) path component -->
+                  <get_zone_exit_pos position="$targetpos" rotation="$targetrot" destination="$loccomp" zone="$target" radius="$ship.size/2m">
+                    <position object="$lastknowncomponent"/>
+                  </get_zone_exit_pos>
+                  <reserve_space component="$ship" space="$target" radius="$ship.safesize" duration="$reservedspace.$duration" index="$reservedspace.$index" safezone="$reservedspace.$zone">
+                    <position value="$targetpos" object="$target"/>
+                    <rotation value="$targetrot"/>
+                  </reserve_space>
+                  <debug_text text="'exitpos: %s, exitrot: %s'.[$targetpos, $targetrot]" chance="$debugchance"/>
+                </do_if>
+                <do_else>
+                  <debug_text text="'incomplete path 2. old target: %s %s, new target: %s %s'.[$target.class, $target, $lastknowncomponent.class, $lastknowncomponent]" chance="$debugchance"/>
+                  <set_value name="$target" exact="$lastknowncomponent"/>
+                  <set_value name="$targetpos" exact="position.[0,0,0]"/>
+                  <set_value name="$targetrot" exact="rotation.[0,0,0]"/>
+                </do_else>
+                <debug_text text="'setting %s in %s as target'.[$target.debugname, $target.sector.knownname]" chance="$debugchance"/>
+                <break/>
+              </do_else>
+            </do_for_each>
+          </do_if>
+          <do_if value="$locgates?">
+            <add_to_group groupname="$gates" list="$locgates" replace="true"/>
+            <remove_value name="$locgates"/>
+          </do_if>
+          <debug_text text="'move_to %s in %s'.[@$target.debugname, @$target.sector.knownname]" chance="$debugchance"/>
+          <do_if value="$target? and $target != $ship">
+            <move_to object="$ship" destination="$target" uselocalhighways="not $ship.iscapitalship" abortpath="true" flightbehaviour="flightbehaviour.playerautopilot2" forcesteering="$forcesteering" finishonapproach="false" forceposition="false" forcerotation="$incompletepath? and $target.isclass.zone" travel="true" useknownpath="not $useunknown">
+              <position value="$targetpos" />
+              <rotation value="$targetrot" comment="rotation node is important, otherwise the internal targetoffset will have an incorrect rotation" />
+              <interrupt>
+                <conditions>
+                  <check_any>
+                    <event_object_changed_zone object="$target" />
+                    <event_object_destroyed object="$target" />
+                    <event_object_docked object="$target" />
+                    <check_all>
+                      <event_object_approaching_waypoint object="$ship" />
+                      <check_value value="not $target.isclass.ship" />
+                      <check_value value="not $target.isclass.highway" />
+                      <check_value value="not $incompletepath?"/>
+                    </check_all>
+                  </check_any>
+                </conditions>
+                <actions>
+                  <debug_text text="'%s: object: %s %s %s %s, param = %s, param2 = %s'.[event.name, event.object.class, event.object.idcode, event.object.knownname, event.object, event.param, event.param2]" chance="$debugchance"/>
+                  <do_if value="event.name == 'event_object_changed_zone'">
+                    <set_value name="$interrupted" exact="false" />
+                  </do_if>
+                </actions>
+              </interrupt>
+            </move_to>
+          </do_if>
+        </do_if>
+        <debug_text text="'interrupted? %1 - target sector: %2 - own sector: %3'.[$interrupted, $target.sector, $ship.sector]" chance="$debugchance"/>
+        <do_if value="$interrupted">
+          <!-- the move_to finished, exit gracefully -->
+          <do_if value="not $target.isclass.object and not $target.isclass.highway and $subtargetpos?">
+            <!-- target is a subcomponent -->
+            <debug_text text="'move to subcomponent'" chance="$debugchance" />
+            <move_to uselocalhighways="not $ship.iscapitalship" object="$ship" destination="$target" abortpath="true" flightbehaviour="flightbehaviour.playerautopilot2" forcesteering="$forcesteering" finishonapproach="false" forceposition="false" useknownpath="not $useunknown">
+              <position value="$subtargetpos" />
+              <rotation yaw="0deg" comment="rotation node is important, otherwise the internal targetoffset will have an incorrect rotation" />
+              <interrupt>
+                <conditions>
+                  <event_object_destroyed object="$target" />
+                </conditions>
+              </interrupt>
+            </move_to>
+          </do_if>
+          <move_gate object="$ship" gate="$target" abortpath="true" chance="0"/>
+
+          <do_if value="$target.sector and $ship.sector != $target.sector">
+            <do_if value="$ship.zone.isclass.highway">
+              <!--just leave the highway right away, then abort-->
+              <create_position name="$exitpos" object="$ship" space="$ship.sector" />
+              <move_to object="$ship" destination="$ship.sector" abortpath="true" sinceversion="3">
+                <position value="$exitpos" />
+                <interrupt>
+                  <conditions>
+                    <event_object_changed_zone object="$ship" />
+                  </conditions>
+                </interrupt>
+              </move_to>
+            </do_if>
+            <stop_player_autopilot />
+          </do_if>
+          <break />
+        </do_if>
+      </do_while>
+
+      <label name="end" />
+
+      <do_if value="@$reservedspace.$zone">
+        <cancel_space_reservation component="$ship" zone="$reservedspace.$zone" index="$reservedspace.$index"/>
+        <debug_text text="'cancelling reservation: %s in %s'.[$reservedspace.$index, $reservedspace.$zone]" chance="$debugchance"/>
+      </do_if>
+
+      <do_if value="$target.isclass.highway">
+        <!-- when using autopilot to enter a highway we want the throttle set to max speed -->
+        <set_playership_throttle value="1" />
+      </do_if>
+      <do_elseif value="$subtargetpos?">
+        <!-- when using autopilot to fly to a sub-component, we want the throttle to make us stop flying -->
+        <set_playership_throttle value="0" />
+      </do_elseif>
+
+      <debug_text text="'arrived / target docked'" chance="$debugchance" />
+
+      <stop_boost object="$ship" />
+      <do_if value="player.activity == activity.travel">
+        <set_player_activity activity="activity.none" />
+      </do_if>
+      <stop_player_autopilot speak="not $preventendspeak?"/>
+      <set_playership_throttle value="0" />
+      <set_to_default_flight_control_model object="$ship"/>
+
+    </actions>
+  </attention>
+  <on_abort>
+    <do_if value="@$ship.isoperational">
+      <do_if value="@$reservedspace.$zone">
+        <cancel_space_reservation component="$ship" zone="$reservedspace.$zone" index="$reservedspace.$index"/>
+        <debug_text text="'on_abort: cancelling reservation: %s in %s'.[$reservedspace.$index, $reservedspace.$zone]" chance="$debugchance"/>
+      </do_if>
+    </do_if>
+  </on_abort>
+</aiscript>
