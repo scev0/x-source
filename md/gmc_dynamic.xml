@@ -1,0 +1,1560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="GMC_Dynamic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+  <cues>
+
+    <!--
+      Dynamic Generic Mission, which has a configurable start-, mid- and end-section. 
+    -->
+
+    <!--
+      Building Blocks: 
+      
+      Additional ideas
+      - Incorporate RPG-like NPC's 
+      - GMC which is very dynamic (generated from environent near player)
+      - Possible a second system which can also use the building blocks, but can be used for pre-spawned items in the universe (nonrandom, pre-specified missions)
+      
+
+      Preconditions (additional checks, which unlock story dynGMC's)
+      - Once you found 5 special items, unlock a dynGMC where you are to bring these 5 items to a location
+      - Kyon Emitter Research, dynGMC1 unlocks dynGMC2, unlocks... (chain of dynGMC's)
+      - Unlocking an exploration sector, unlocks a dynGMC (e.g. unlocking the sector with the Kha'ak hive)
+
+      EntryPoint:
+      - Cue to spawn an NPC offering a conversation option to start the breadcrumb GMC
+      - Cue to spawn a keycard in hidden location in a room  (e.g. keycard below a table in the bar)
+        - the randomly selected item defines what the follow-up section will be 
+          - e.g. prison keycard will follow up with prisoner/escape mission
+          - e.g. access card will follow up with teleporter on station unlocks new room with an item
+          - e.g. scanner-keycard will follow up with scanner gameplay (TBD) which points you to the next location
+          - e.g. audio log, listening to it triggers the next section
+        - picking up the item signals the next section
+      - Cue to spawn an item near a Landmark 
+        - Item is not behind a locked door, so it can be found by exploring
+        - finding & picking up the item signals the next section (potentially aborting the simultaneously running dynGMC which leads you to the item)
+        - possibly there is another dynGMC running where an NPC asks you to fetch the item (which then aborts this dynGMC)
+        - or maybe this GMC handles both the case of finding the item first, and the NPC guiding you to the item.
+        
+      MidSection:
+      - Cue to select a door on a landmark/asteroid, spawn a maze/rooms behind that door, spawn dangers(optional), spawn item-to-be-found 
+        - pickup up the item signals the next section
+      - Cue to spawn a prisoner in a prison on a nearby station 
+        - opening the prison door signals the next section
+      - Cue to add a "hidden" room on a station with an item-to-be-found
+        - room is made visible in the transporter, when having an appropriate item
+        - picking up that item signals the next section
+      - Cue to select an asteroid, spawn a maze, spawn dangers(chance), spawn item-to-be-found
+      
+   
+      Example 1 
+      - Entry: Talk to NPC, he offers a mission
+      - Mid: Step 1: Finding a keycard in a hidden location in a room on a station (e.g. bar, below the table)
+      - Mid: Stap 2: Go to the targetstation, keycard will unlock a new destination in the transporter room with an item to be found
+      - End: Go back to questgiver to deliver the item you acquired
+
+      Example 2: 
+      - Entry: Talk to NPC, he offers a mission
+      - Mid: Random destination selection (asteroid with room, reserve door/room on nearby landmark, ...), random populate - item to be found
+      - End: Go back to questgiver to deliver the item you acquired
+
+      Example3: 
+      - Entry: Find hidden keycard (below table in the bar)
+      - Mid: Using the "special scanner" (gameplayer TBD) leads you to a targetstation, keycard unlocked a new room with an item to be found
+      - End: ?
+      
+      Example 4: 
+      - Entry: Find item spawned near a landmark/wreck/...
+      - Mid/End: Pirate comes to steal the item 
+
+      Example 5a: Kyon emitter research, a chain of dynGMC's
+      - Entry: Talk to NPC, fetch item from Kha'ak Station
+      - Mid: Dock deep inside Kha'ak station 
+      - End: Return item to NPC 
+      Example 5b: 
+      - precondition: Completed 5a + 1 hour
+      - Entry: Talk to NPC, fetch item from Kha'ak Station
+      - Mid: Spacesuit section inside Kha'ak Station 
+      - End: Return item to NPC 
+      Example 5c: 
+        - etc
+    
+    -->
+
+    <!-- 
+      Using the above building blocks, put together a mission 
+      Should we have a cue per mission, smartly using buildingblocks to put it together ???
+      gmc_dynamic_missions ?
+    -->
+    <cue name="Mission_Prison" instantiate="true">
+      <conditions>
+        <event_cue_signalled/>
+      </conditions>
+      <cues>
+        <library name="Mission_Prison_Setup">
+          <conditions>
+            <event_cue_signalled/>
+          </conditions>
+          <actions>
+            <!-- Use run_actions block to:
+            - spawn keycard (entrypoint) in hidden location in room on station 
+            - select random destination (asteroid/landmark/...) with maze/room with item to be found 
+              - spawn maze/room with dangers(optional)
+              - spawn item-to-be-found
+            -->
+            <run_actions ref="Setup_Station_HiddenKeycard" result="$Item">
+              <param name="TargetStation" value="1"/>
+            </run_actions>
+            <do_any>
+              <run_actions ref="Setup_Landmark_Item" result="$Item">
+                <param name="TargetSector"  value="1"/>
+                <param name="TargetMacro"   value="1"/>
+              </run_actions>
+              <run_actions ref="Setup_Landmark_Item" result="$Item">
+                <param name="TargetLandmark" value="1"/>
+              </run_actions>
+            </do_any>
+            <!-- Maybe start an RML to collect the item, with completion cue pointing to Mission_Prison_EntryCompleted? -->
+          </actions>
+        </library>
+        <library name="Mission_Prison_EntryCompleted">
+          <conditions>
+            <event_cue_signalled comment="Picked up relevant keycard: missions started"/>
+          </conditions>
+          <actions>
+          </actions>
+        </library>
+        <library name="Mission_Prison_MidCompleted">
+          <conditions>
+            <event_cue_signalled comment="Picked up relevant keycard: missions started"/>
+          </conditions>
+          <actions>
+          </actions>
+        </library>
+      </cues>
+    </cue>
+
+    <cue name="Mission_FetchItem" instantiate="true">
+      <conditions>
+        <event_cue_signalled/>
+      </conditions>
+      <cues>
+        <library name="Mission_FetchItem_Setup">
+          <conditions>
+            <event_cue_signalled/>
+          </conditions>
+          <actions>
+            <!-- Use run_actions block to:
+            - spawn keycard (entrypoint) in hidden location in room on station 
+            - select random destination (asteroid/landmark/...) with maze/room with item to be found 
+              - spawn maze/room with dangers(optional)
+              - spawn item-to-be-found
+            -->
+            <run_actions ref="Setup_Station_RumoursNPC" result="$ActorRef">
+              <param name="TargetStation" value="1"/>
+              <param name="TargetRoom" value="1"/>
+              <param name="Actor" value="1"/>
+              <param name="ActorPage" value="1"/>
+              <param name="ConversationOptions" value="[{1001,1}, {1001,2}, 'Mission_FetchItem_ConvAccepted', {1001,1}]"/>
+            </run_actions>
+            <!-- Maybe start an RML "on selected conversation option?" -->
+          </actions>
+        </library>
+        <cue name="Mission_FetchItem_ConvAccepted">
+          <conditions>
+            <event_cue_signalled comment="... or listen if the conversation option was selected (without RML)"/>
+          </conditions>
+          <actions>
+            <!-- add mission to logbook -->
+          </actions>
+        </cue>
+      </cues>
+    </cue>
+
+    <!-- High level logic
+      - Checks for start/mid/exit section completion 
+      
+        Can we generalize this by passing in some "Entry/Mid/Setup-cues" ???
+    -->
+    <library name="Start">
+      <params>
+        <param name="Page"          comment="Allows a different text page to be used instead of the generic one. Text IDs must be mapped similarly."/>
+        <param name="TextOffset"    comment="The text offset for this variant's text on the page. The entries[] within that offset have to match for all variants."/>
+        <param name="DebugChance"   default="0"/>
+        <param name="EntrySection"  comment=""/>
+        <param name="MidSection"    comment=""/>
+        <param name="ExitSection"   comment=""/>
+      </params>
+      <actions>
+        <debug_text text="'Starting dynamic GMC page=%s offset=%s'.[$Page, $TextOffset]" chance="$DebugChance"/>
+        <set_value name="$MissionCue" exact="Start"/>
+        <set_value name="$DebugChance" exact="0"/>
+        <set_value name="$DeepDebugChance" exact="0"/>
+      </actions>
+      <cues>
+
+        <cue name="Setup">
+          <!-- Setup the mission -->
+        </cue>
+
+        <cue name="Cleanup">
+          <conditions>
+            <event_cue_signalled comment="signalled on abort/completion"/>
+          </conditions>
+          <actions>
+            <!-- cleanup counterpart to Setup -->
+          </actions>
+        </cue>
+
+        <cue name="EntryCondition">
+          <conditions>
+            <event_cue_signalled comment="start condition completed  (picked up the keycard, selected the dialog option, ..."/>
+          </conditions>
+          <!-- Do some checks (item, or maybe even RML which will signal MidCondition on completion -->
+          <!-- Add to Mission Log -->
+        </cue>
+
+        <cue name="MidCondition">
+          <conditions>
+            <event_cue_signalled comment="signalled by EntryCondition once completed"/>
+          </conditions>
+          <actions>
+            <!-- start an RML which will trigger ExitCondition on completion -->
+          </actions>
+        </cue>
+
+        <cue name="ExitCondition">
+          <conditions>
+            <event_cue_signalled comment="signalled by MidCondition once completed"/>
+          </conditions>
+          <actions>
+            <!-- start an RML which will trigger CompletionCondition on completion -->
+          </actions>
+        </cue>
+
+        <cue name="CompletionCondition">
+          <conditions>
+            <event_cue_signalled comment="signalled by EndCondition once completed"/>
+          </conditions>
+          <actions>
+            <!-- rewards, concluding dialogs, cleanup -->
+          </actions>
+        </cue>
+
+      </cues>
+    </library>
+
+
+    <!-- Specific mission instances, here is where we use the Legally Distinct Toy Building Bricks to quickly add new variations 
+    -->
+    <cue name="MissionChains" checkinterval="1s" mapeditor="false" namespace="this">
+      <conditions>
+        <cue_is_complete cue="Manager"/>
+      </conditions>
+      <cues>
+        <cue name="Room_Crate_Item_To_Bar_Twice">
+          <actions>
+            <append_to_list name="Manager.$MissionEvaluationRegister" exact="Room_Crate_Item_To_Bar_Twice__Eval"/>
+          </actions>
+          <cues>
+            <library name="Room_Crate_Item_To_Bar_Twice__Eval" purpose="run_actions">
+              <params>
+                <param name="MissionValTable" default="table[$sector = player.sector]"/>
+                <param name="DebugChance" default="0"/>
+              </params>
+              <actions>
+                <set_value name="$DebugChance" exact="100"/>
+
+                <do_if value="not $MissionValTable.$sector">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Create instruction set list to populate $MissionValTable with suitable objects and variables-->
+                <set_value name="$InstructionSet" exact="[
+                   table[$key = '$landmark', $instruction = 'landmark'],
+                   ]"/>
+                <run_actions ref="ProcessInstructions" result="$Successful">
+                  <param name="MissionValTable" value="$MissionValTable"/>
+                  <param name="InstructionSet" value="$InstructionSet"/>
+                </run_actions>
+
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Some more complicated actions to find objects suitable for this mission-->
+                <find_station name="$NeutralStations" space="$MissionValTable.$sector" multiple="true">
+                  <match_relation_to faction="faction.player" relation="neutral" comparison="ge"/>
+                </find_station>
+                <do_if value="$NeutralStations.count lt 2">
+                  <return value="null"/>
+                </do_if>
+                <shuffle_list list="$NeutralStations"/>
+                <set_value name="$MissionValTable.$station_1" exact="$NeutralStations.{1}"/>
+                <set_value name="$MissionValTable.$station_2" exact="$NeutralStations.{2}"/>
+
+                <!--Set known static values for this mission variant or any that rely on the processed instructions-->
+                <set_value name="$MissionValTable.$inventory_item1" exact="ware.inv_remotedetonator"/>
+                <set_value name="$MissionValTable.$inventory_item2" exact="ware.inv_magneticmaterial"/>
+                <set_value name="$MissionValTable.$item_holder_macro" exact="macro.crate_gen_s_01_macro"/>
+                <set_value name="$MissionValTable.$client_owner" exact="$MissionValTable.$station_1.trueowner"/>
+
+                <!--Initialise $ChainDefinitionTable. It will contain the definitions of missions and helper libraries with their parameters and outcome branches.-->
+                <include_actions ref="Initialise_ChainDefinitionTable"/>
+
+                <!--Call the Generate_NPC_Creation_Helper to create a table which will instruct how to create the client NPC later-->
+                <!--TODO @Owen allow this to place the NPC or leave it to individual missions?-->
+                <run_actions ref="Generate_NPC_Creation_Helper" result="$Successful">
+                  <param name="ChainDefinitionTable"    value="$ChainDefinitionTable"/>
+                  <param name="ClientTableKey"          value="'$client'"/>
+                  <param name="ClientOwner"             value="$MissionValTable.$client_owner"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Call each mission evaluator in order to see if they can work with the values in $MissionValTable. They can add their own to $MissionValTable for the next mission.-->
+                <!--Mission #1-->
+                <run_actions ref="md.GM_BringItems.Dynamic_Mission_Eval" result="$Successful">
+                  <param name="ChainDefinitionTable"          value="$ChainDefinitionTable"/>
+                  <param name="OutcomeTable"                  value="table[$success = '$MISSION_1_SUCCESS_TEXT', $valid = '$MISSION_1_FAIL_TEXT']"/>
+                  <param name="DebugChance"                   value="$DebugChance"/>
+                  <param name="ItemWareKey"                   value="'$inventory_item1'"/>
+                  <param name="AcceptOnItemObjectCollection"  value="true" comment="First mission so start inactive"/>
+                  <param name="CreatedItemInteriorKey"        value="'$item_interior'"/>
+                  <param name="CreatedItemInteriorObjectKey"  value="'$station_1'"/>
+                  <param name="CreatedItemInteriorRoom"       value="tag.bar"/>
+                  <param name="CreatedItemInteriorCorridor"   value="[tag.corridor, tag.entertainmentcorridor]"/>
+
+                  <param name="ItemHolderKey"                 value="'$item_holder_macro'"/>
+                  <param name="ItemPlacementRule"             value="'$item_interior'" comment="Referencing the created interior"/>
+
+                  <param name="CreatedNPCInteriorKey"         value="'$delivery_npc_interior'"/>
+                  <param name="CreatedNPCInteriorObjectKey"   value="'$station_2'"/>
+                  <param name="CreatedNPCInteriorRoom"        value="tag.bar"/>
+                  <param name="CreatedNPCInteriorCorridor"    value="[tag.corridor, tag.genericcorridor]"/>
+
+                  <param name="DeliveryNPCKey"                value="'$client'"/>
+                  <param name="DeliveryNPCPlacementRule"      value="['$delivery_npc_interior', tag.npc_generic]"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--LABEL: MISSION_1_SUCCESS_TEXT-->
+                <run_actions ref="Incoming_Message_Helper" result="$Successful">
+                  <param name="Label"                   value="'$MISSION_1_SUCCESS_TEXT'"/>
+                  <param name="ChainDefinitionTable"    value="$ChainDefinitionTable"/>
+                  <param name="OutcomeTable"            value="table[$valid = '$FOLLOWUP_MISSION_2']"/>
+                  <param name="SourceText"              value="'You succeeded that last mission. Well done.'"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--LABEL: MISSION_1_FAIL_TEXT-->
+                <run_actions ref="Incoming_Message_Helper" result="$Successful">
+                  <param name="Label"                   value="'$MISSION_1_FAIL_TEXT'"/>
+                  <param name="ChainDefinitionTable"    value="$ChainDefinitionTable"/>
+                  <param name="OutcomeTable"            value="table[$valid = '$FOLLOWUP_MISSION_2']"/>
+                  <param name="SourceText"              value="'You failed that last mission.'"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--LABEL: FOLLOWUP_MISSION_2-->
+                <run_actions ref="md.GM_BringItems.Dynamic_Mission_Eval" result="$Successful">
+                  <param name="Label"                         value="'$FOLLOWUP_MISSION_2'"/>
+                  <param name="ChainDefinitionTable"          value="$ChainDefinitionTable"/>
+                  <param name="DebugChance"                   value="$DebugChance"/>
+                  <param name="ItemWareKey"                   value="'$inventory_item2'"/>
+                  <param name="AcceptOnItemObjectCollection"  value="false" comment="Followup mission so automatically start"/>
+                  <param name="CreatedItemInteriorKey"        value="'$item2_interior'"/>
+                  <param name="CreatedItemInteriorObjectKey"  value="'$station_2'"/>
+                  <param name="CreatedItemInteriorRoom"       value="tag.bar"/>
+                  <param name="CreatedItemInteriorCorridor"   value="[tag.corridor, tag.genericcorridor]"/>
+
+                  <!--TODO @Owen support passing in a macro without it having to be a table key-->
+                  <param name="ItemHolderKey"                 value="'$item_holder_macro'"/>
+                  <param name="ItemPlacementRule"             value="'$item2_interior'" comment="Referencing the created interior"/>
+
+                  <param name="DeliveryNPCKey"                value="'$client'"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <run_actions ref="Incoming_Message_Helper" result="$Successful">
+                  <param name="ChainDefinitionTable"    value="$ChainDefinitionTable"/>
+                  <param name="SourceText"              value="'End of mission 2'"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <return value="$ChainDefinitionTable"/>
+              </actions>
+            </library>
+          </cues>
+        </cue>
+
+        <cue name="Rescue_Ship_From_Minefield_Twice">
+          <actions>
+            <append_to_list name="Manager.$MissionEvaluationRegister" exact="Rescue_Ship_From_Minefield_Twice__Eval"/>
+          </actions>
+          <cues>
+            <library name="Rescue_Ship_From_Minefield_Twice__Eval" purpose="run_actions">
+              <params>
+                <param name="MissionValTable" default="table[$sector = player.sector]"/>
+                <param name="DebugChance" default="0"/>
+              </params>
+              <actions>
+                <set_value name="$DebugChance" exact="100"/>
+
+                <do_if value="not $MissionValTable.$sector">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Create instruction set list to populate $MissionValTable with suitable objects and variables-->
+                <set_value name="$InstructionSet" exact="[
+                   table[$key = '$landmark', $instruction = 'landmark'],
+                   ]"/>
+                <run_actions ref="ProcessInstructions" result="$Successful">
+                  <param name="MissionValTable" value="$MissionValTable"/>
+                  <param name="InstructionSet" value="$InstructionSet"/>
+                </run_actions>
+
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Some more complicated actions to find objects and positions suitable for this mission-->
+                <set_value name="$Sector" exact="$MissionValTable.$sector"/>
+                <do_if value="$Sector.owner != faction.ownerless" chance="80">
+                  <set_value name="$Faction" exact="$Sector.owner"/>
+                </do_if>
+                <do_if value="not $Faction?">
+                  <set_value name="$Faction" exact="md.$StandardFactions.random"/>
+                </do_if>
+                <set_value name="$MissionValTable.$client_owner" exact="$Faction"/>
+
+                <get_safe_pos result="$destination_1_coordinates" sector="$Sector"  x="[0km, $Sector.coresize/1.8m].randominrange" y="[-20km,20km].randominrange" z="[0km, $Sector.coresize/1.8m].randominrange" radius="30km"/>
+                <set_value name="$ShipPlacementRule_1" exact="[$Sector, $destination_1_coordinates]"/>
+                <set_value name="$MissionValTable.$ShipPlacementRule_1" exact="$ShipPlacementRule_1"/>
+
+                <get_factions_by_relation result="$PotentialEnemyFactions" faction="$Faction" relation="enemy"/>
+                <set_value name="$EnemyFaction" exact="$PotentialEnemyFactions.random"/>
+                <set_value name="$MissionValTable.$EnemyFactionKey" exact="$EnemyFaction"/>
+
+                <find_station name="$destination_2_landmark" space="$MissionValTable.$sector" multiple="false">
+                  <match_relation_to faction="faction.player" relation="neutral" comparison="ge"/>
+                </find_station>
+                <do_if value="$destination_2_landmark">
+                  <set_value name="$ShipPlacementRule_2" exact="$destination_2_landmark"/>
+                </do_if>
+                <do_else>
+                  <get_safe_pos result="$destination_2_coordinates" sector="$Sector" x="[0km, $Sector.coresize/1.5m].randominrange" y="[-20km,20km].randominrange" z="[0km, $Sector.coresize/1.5m].randominrange" radius="30km"/>
+                  <set_value name="$ShipPlacementRule_2" exact="[player.sector , $destination_2_coordinates]"/>
+                </do_else>
+                <set_value name="$MissionValTable.$ShipPlacementRule_2" exact="$ShipPlacementRule_2"/>
+
+                <!-- Determine a suitable rescue ship macro based on the faction -->
+                <get_ship_definition macro="$rescueship_macro" faction="$Faction" size="class.ship_m" tags="[tag.trader, tag.miner].random" />
+                <set_value name="$MissionValTable.$RescueShipKey" exact="$rescueship_macro"/>
+
+                <!--Set known static values for this mission variant or any that rely on the processed instructions-->
+
+                <!--Initialise $ChainDefinitionTable. It will contain the definitions of missions and helper libraries with their parameters and outcome branches.-->
+                <include_actions ref="Initialise_ChainDefinitionTable"/>
+
+                <!--Call the Generate_NPC_Creation_Helper to create a table which will instruct how to create the client NPC later-->
+                <!--TODO @Owen allow this to place the NPC or leave it to individual missions?-->
+                <run_actions ref="Generate_NPC_Creation_Helper" result="$Successful">
+                  <param name="ChainDefinitionTable"    value="$ChainDefinitionTable"/>
+                  <param name="ClientTableKey"          value="'$client'"/>
+                  <param name="ClientOwner"             value="$MissionValTable.$client_owner"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Call each mission evaluator in order to see if they can work with the values in $MissionValTable. They can add their own to $MissionValTable for the next mission.-->
+                <!--Mission #1-->
+                <run_actions ref="md.GM_Rescue_Ship.Dynamic_Mission_Eval" result="$Successful">
+                  <param name="ChainDefinitionTable"          value="$ChainDefinitionTable"/>
+                  <param name="DebugChance"                   value="$DebugChance"/>
+
+                  <param name="AcceptOnRescueShipDiscovery"  value="true" comment="First mission so start inactive"/>
+
+                  <!--TODO @Owen support passing in a macro without it having to be a table key-->
+                  <param name="RescueShipKey"                 value="'$RescueShipKey'"/>
+                  <param name="ShipPlacementRule"             value="'$ShipPlacementRule_1'" comment="Either a list of a space and coordinates, or a specific landmark object"/>
+
+                  <param name="EnemyFactionKey"               value="'$EnemyFactionKey'" comment="could be an enemy faction, or 'generating' if we want an enemy faction to be selected during play"/>
+
+                  <param name="ClientNPCKey"                  value="'$client'"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Mission #2-->
+                <run_actions ref="md.GM_Rescue_Ship.Dynamic_Mission_Eval" result="$Successful">
+                  <param name="ChainDefinitionTable"          value="$ChainDefinitionTable"/>
+                  <param name="DebugChance"                   value="$DebugChance"/>
+
+                  <param name="AcceptOnRescueShipDiscovery"  value="false" comment="Automatically continue after the first mission was completed"/>
+
+                  <!--TODO @Owen support passing in a macro without it having to be a table key-->
+                  <param name="RescueShipKey"                 value="'$RescueShipKey'"/>
+                  <param name="ShipPlacementRule"             value="'$ShipPlacementRule_2'" comment="Either a list of a space and coordinates, or a specific landmark object"/>
+
+                  <param name="EnemyFactionKey"               value="'$EnemyFactionKey'" comment="could be an enemy faction, or 'Generate' if we want an enemy faction to be selected during play"/>
+
+                  <param name="ClientNPCKey"                  value="'$client'"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <return value="$ChainDefinitionTable"/>
+              </actions>
+            </library>
+          </cues>
+        </cue>
+
+        <cue name="Find_Object_Twice">
+          <actions>
+            <!--<append_to_list name="Manager.$MissionEvaluationRegister" exact="Find_Object_Twice__Eval"/>-->
+          </actions>
+          <cues>
+            <library name="Find_Object_Twice__Eval" purpose="run_actions">
+              <params>
+                <param name="MissionValTable" default="table[$sector = player.sector]"/>
+                <param name="DebugChance" default="0"/>
+              </params>
+              <actions>
+                <set_value name="$DebugChance" exact="100"/>
+
+                <do_if value="not $MissionValTable.$sector">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Create instruction set list to populate $MissionValTable with suitable objects and variables-->
+                <set_value name="$InstructionSet" exact="[
+                   table[$key = '$landmark', $instruction = 'landmark'],
+                   ]"/>
+                <run_actions ref="ProcessInstructions" result="$Successful">
+                  <param name="MissionValTable" value="$MissionValTable"/>
+                  <param name="InstructionSet" value="$InstructionSet"/>
+                </run_actions>
+
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Some more complicated actions to find objects and positions suitable for this mission-->
+                <find_object name="$Satellites" space="player.galaxy" sortbydistanceto="player.entity" sortlimit="2" class="class.satellite" multiple="true"/>
+                <set_value name="$Satellite_1" exact="$Satellites.{1}"/>
+                <set_value name="$Satellite_2" exact="$Satellites.{2}"/>
+                <add_to_group groupname="$TargetObjectKey_1" object="$Satellite_1"/>
+                <set_value name="$MissionValTable.$TargetObjectKey_1" exact="$TargetObjectKey_1"/>
+                <add_to_group groupname="$TargetObjectKey_2" object="$Satellite_2"/>
+                <set_value name="$MissionValTable.$TargetObjectKey_2" exact="$TargetObjectKey_2"/>
+
+                <!--Set known static values for this mission variant or any that rely on the processed instructions-->
+                <set_value name="$MissionValTable.$FactionKey" exact="player.sector.owner"/>
+                <set_value name="$MissionValTable.$client_owner" exact="player.sector.owner"/>
+                <set_value name="$MissionValTable.$TargetRadiusKey" exact="60km"/>
+
+                <!--Initialise $ChainDefinitionTable. It will contain the definitions of missions and helper libraries with their parameters and outcome branches.-->
+                <include_actions ref="Initialise_ChainDefinitionTable"/>
+
+                <!--Call the Generate_NPC_Creation_Helper to create a table which will instruct how to create the client NPC later-->
+                <!--TODO @Owen allow this to place the NPC or leave it to individual missions?-->
+                <run_actions ref="Generate_NPC_Creation_Helper" result="$Successful">
+                  <param name="ChainDefinitionTable"    value="$ChainDefinitionTable"/>
+                  <param name="ClientTableKey"          value="'$client'"/>
+                  <param name="ClientOwner"             value="$MissionValTable.$client_owner"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Call each mission evaluator in order to see if they can work with the values in $MissionValTable. They can add their own to $MissionValTable for the next mission.-->
+                <!--Mission #1-->
+                <run_actions ref="md.GM_FindObject.Dynamic_Mission_Eval" result="$Successful">
+                  <param name="ChainDefinitionTable"          value="$ChainDefinitionTable"/>
+                  <param name="DebugChance"                   value="$DebugChance"/>
+                  <param name="Client"                        value="'$client'"/>
+
+                  <!--TODO @Owen support passing in a macro without it having to be a table key-->
+                  <param name="TargetObjectKey"                 value="'$TargetObjectKey_1'" comment="is either a group of objects, or 'generating' if we want an object be generated during play"/>
+                  <param name="FactionKey"                    value="'$FactionKey'" comment="could be an enemy faction, or 'generating' if we want an enemy faction to be selected during play"/>
+                  <param name="TargetRadius"                  value="'$TargetRadiusKey'"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Mission #2-->
+                <run_actions ref="md.GM_FindObject.Dynamic_Mission_Eval" result="$Successful">
+                  <param name="ChainDefinitionTable"          value="$ChainDefinitionTable"/>
+                  <param name="DebugChance"                   value="$DebugChance"/>
+                  <param name="Client"                        value="'$client'"/>
+
+                  <!--TODO @Owen support passing in a macro without it having to be a table key-->
+                  <param name="TargetObjectKey"                 value="'$TargetObjectKey_2'" comment="is either a group of objects, or 'generating' if we want an object be generated during play"/>
+                  <param name="FactionKey"                    value="'$FactionKey'" comment="could be an enemy faction, or 'generating' if we want an enemy faction to be selected during play"/>
+                  <param name="TargetRadius"                  value="'$TargetRadiusKey'"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <return value="$ChainDefinitionTable"/>
+              </actions>
+            </library>
+          </cues>
+        </cue>
+
+        <cue name="Deploy_Object_Twice">
+          <actions>
+            <!--<append_to_list name="Manager.$MissionEvaluationRegister" exact="Deploy_Object_Twice__Eval"/>-->
+          </actions>
+          <cues>
+            <library name="Deploy_Object_Twice__Eval" purpose="run_actions">
+              <params>
+                <param name="MissionValTable" default="table[$sector = player.sector]"/>
+                <param name="DebugChance" default="0"/>
+              </params>
+              <actions>
+                <set_value name="$DebugChance" exact="100"/>
+
+                <do_if value="not $MissionValTable.$sector">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Create instruction set list to populate $MissionValTable with suitable objects and variables-->
+                <set_value name="$InstructionSet" exact="[
+                   table[$key = '$landmark', $instruction = 'landmark'],
+                   ]"/>
+                <run_actions ref="ProcessInstructions" result="$Successful">
+                  <param name="MissionValTable" value="$MissionValTable"/>
+                  <param name="InstructionSet" value="$InstructionSet"/>
+                </run_actions>
+
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Some more complicated actions to find objects and positions suitable for this mission-->
+
+                <!--Set known static values for this mission variant or any that rely on the processed instructions-->
+                <set_value name="$MissionValTable.$TargetSectorKey" exact="player.sector"/>
+                <get_safe_pos result="$MissionValTable.$TargetOffsetKey_1" sector="$MissionValTable.$TargetSectorKey" min="0km" max="80km" radius="15km" allowyaxis="false"/>
+                <get_safe_pos result="$MissionValTable.$TargetOffsetKey_2" sector="$MissionValTable.$TargetSectorKey" min="0km" max="80km" radius="15km" allowyaxis="false"/>
+                <set_value name="$MissionValTable.$TargetRadius" exact="10km"/>
+                <set_value name="$MissionValTable.$TargetCount_1" exact="1"/>
+                <set_value name="$MissionValTable.$TargetCount_2" exact="6"/>
+
+                <set_value name="$MissionValTable.$DeployableCategoryKey_1" exact="deployablecategory.satellite"/>
+                <set_value name="$MissionValTable.$DeployableCategoryKey_2" exact="deployablecategory.lasertower"/>
+
+                <set_value name="$MissionValTable.$DeployableMacrosKey_1" exact="[macro.eq_arg_satellite_01_macro]"/>
+                <set_value name="$MissionValTable.$DeployableMacrosKey_2" exact="[macro.ship_gen_xs_lasertower_01_a_macro]"/>
+                <set_value name="$MissionValTable.$client_owner" exact="player.sector.owner"/>
+                <set_value name="$MissionValTable.$FactionKey" exact="player.sector.owner"/>
+
+                <!--Initialise $ChainDefinitionTable. It will contain the definitions of missions and helper libraries with their parameters and outcome branches.-->
+                <include_actions ref="Initialise_ChainDefinitionTable"/>
+
+                <!--Call the Generate_NPC_Creation_Helper to create a table which will instruct how to create the client NPC later-->
+                <!--TODO @Owen allow this to place the NPC or leave it to individual missions?-->
+                <run_actions ref="Generate_NPC_Creation_Helper" result="$Successful">
+                  <param name="ChainDefinitionTable"    value="$ChainDefinitionTable"/>
+                  <param name="ClientTableKey"          value="'$client'"/>
+                  <param name="ClientOwner"             value="$MissionValTable.$client_owner"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+
+                <!--Call each mission evaluator in order to see if they can work with the values in $MissionValTable. They can add their own to $MissionValTable for the next mission.-->
+                <!--Mission #1-->
+                <run_actions ref="md.GM_DeployInPlace.Dynamic_Mission_Eval" result="$Successful">
+                  <param name="ChainDefinitionTable"          value="$ChainDefinitionTable"/>
+                  <param name="DebugChance"                   value="$DebugChance"/>
+                  <param name="Client"                        value="'$client'"/>
+                  <param name="AcceptOnLocationProximity"  value="false" comment="First mission so start inactive"/>
+
+                  <!--TODO @Owen support passing in a macro without it having to be a table key-->
+                  <param name="TargetSectorKey"  value="'$TargetSectorKey'"/>
+                  <param name="TargetOffsetKey" value="'$TargetOffsetKey_1'"/>
+                  <param name="TargetRadius" value="'$TargetRadius'"/>
+                  <param name="TargetCount" value="'$TargetCount_1'"/>
+                  <param name="DeployableCategoryKey" value="'$DeployableCategoryKey_1'"/>
+                  <param name="DeployableMacrosKey"  value="'$DeployableMacrosKey_1'"/>
+                  <param name="FactionKey" value="'$FactionKey'"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Mission #2-->
+                <run_actions ref="md.GM_DeployInPlace.Dynamic_Mission_Eval" result="$Successful">
+                  <param name="ChainDefinitionTable"          value="$ChainDefinitionTable"/>
+                  <param name="DebugChance"                   value="$DebugChance"/>
+                  <param name="Client"                     value="'$client'"/>
+                  <param name="AcceptOnLocationProximity"  value="false" comment="First mission so start inactive"/>
+
+                  <!--TODO @Owen support passing in a macro without it having to be a table key-->
+                  <param name="TargetSectorKey"  value="'$TargetSectorKey'"/>
+                  <param name="TargetOffsetKey" value="'$TargetOffsetKey_2'"/>
+                  <param name="TargetRadius" value="'$TargetRadius'"/>
+                  <param name="TargetCount" value="'$TargetCount_2'"/>
+                  <param name="DeployableCategoryKey" value="'$DeployableCategoryKey_2'"/>
+                  <param name="DeployableMacrosKey"  value="'$DeployableMacrosKey_2'"/>
+                  <param name="FactionKey" value="'$FactionKey'"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <return value="$ChainDefinitionTable"/>
+              </actions>
+            </library>
+          </cues>
+        </cue>
+
+        <cue name="Repair_Object_Twice">
+          <actions>
+            <!--<append_to_list name="Manager.$MissionEvaluationRegister" exact="Repair_Object_Twice__Eval"/>-->
+          </actions>
+          <cues>
+            <library name="Repair_Object_Twice__Eval" purpose="run_actions">
+              <params>
+                <param name="MissionValTable" default="table[$sector = player.sector]"/>
+                <param name="DebugChance" default="0"/>
+              </params>
+              <actions>
+                <set_value name="$DebugChance" exact="100"/>
+
+                <do_if value="not $MissionValTable.$sector">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Create instruction set list to populate $MissionValTable with suitable objects and variables-->
+                <set_value name="$InstructionSet" exact="[
+                   table[$key = '$landmark', $instruction = 'landmark'],
+                   ]"/>
+                <run_actions ref="ProcessInstructions" result="$Successful">
+                  <param name="MissionValTable" value="$MissionValTable"/>
+                  <param name="InstructionSet" value="$InstructionSet"/>
+                </run_actions>
+
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Some more complicated actions to find objects and positions suitable for this mission-->
+                <find_ship name="$RepairShip" space="player.sector" class="class.ship_m" commandeerable="true">
+                  <match_relation_to faction="faction.player" relation="neutral" comparison="ge"/>
+                </find_ship>
+                <commandeer_object object="$RepairShip"/>
+                <cancel_all_orders object="$RepairShip"/>
+
+                <create_order object="$RepairShip" id="'Wait'"/>
+                <set_object_hull object="$RepairShip" exact="85"/>
+                <add_to_group groupname="$RepairShipGroup" object="$RepairShip"/>
+                <set_value name="$MissionValTable.$TargetsKey_1" exact="$RepairShipGroup"/>
+
+                <find_object groupname="$SatelliteGroup" multiple="true" sortlimit="1" class="class.satellite" space="player.galaxy" sortbydistanceto="player.entity"/>
+                <set_object_hull object="$SatelliteGroup.{1}" exact="85"/>
+                <set_value name="$MissionValTable.$TargetsKey_2" exact="$SatelliteGroup"/>
+
+                <!--Set known static values for this mission variant or any that rely on the processed instructions-->
+                <set_value name="$MissionValTable.$client_owner" exact="$RepairShip.owner"/>
+                <set_value name="$MissionValTable.$RepairPercentageKey" exact="90"/>
+
+                <!--Initialise $ChainDefinitionTable. It will contain the definitions of missions and helper libraries with their parameters and outcome branches.-->
+                <include_actions ref="Initialise_ChainDefinitionTable"/>
+
+                <!--Call the Generate_NPC_Creation_Helper to create a table which will instruct how to create the client NPC later-->
+                <!--TODO @Owen allow this to place the NPC or leave it to individual missions?-->
+                <run_actions ref="Generate_NPC_Creation_Helper" result="$Successful">
+                  <param name="ChainDefinitionTable"    value="$ChainDefinitionTable"/>
+                  <param name="ClientTableKey"          value="'$client'"/>
+                  <param name="ClientOwner"             value="$MissionValTable.$client_owner"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+                <set_value name="$MissionValTable.$client_owner" exact="$RepairShip.pilot"/>
+
+                <!--Call each mission evaluator in order to see if they can work with the values in $MissionValTable. They can add their own to $MissionValTable for the next mission.-->
+                <!--Mission #1-->
+                <run_actions ref="md.GM_RepairObject.Dynamic_Mission_Eval" result="$Successful">
+                  <param name="ChainDefinitionTable"          value="$ChainDefinitionTable"/>
+                  <param name="DebugChance"                   value="$DebugChance"/>
+
+                  <param name="AcceptOnRepairObjectDiscovery" value="true" comment="Accept the mission when the player is in close proximity to the repair object, otherwise active from the moment of spawning"/>
+
+                  <!--Repair object and Repair Percentage parameters -->
+                  <param name="TargetsKey" value="'$TargetsKey_1'" comment="Group containing objects or object components to repair"/>
+                  <param name="RepairPercentageKey" value="'$RepairPercentageKey'" comment="Repair percentage to pass for completion"/>
+
+                  <!--Client NPC parameters-->
+                  <param name="ClientNPCKey" value="'$client'" comment="Table key to client data. If the value evaluates to 'generating' then the NPC is set to be created before this mission spawns."/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Mission #2-->
+                <run_actions ref="md.GM_RepairObject.Dynamic_Mission_Eval" result="$Successful">
+                  <param name="ChainDefinitionTable"          value="$ChainDefinitionTable"/>
+                  <param name="DebugChance"                   value="$DebugChance"/>
+
+                  <param name="AcceptOnRepairObjectDiscovery" value="false" comment="As a follow up, this will already be activated by default"/>
+
+                  <!--Repair object and Repair Percentage parameters -->
+                  <param name="TargetsKey" value="'$TargetsKey_2'" comment="Group containing objects or object components to repair"/>
+                  <param name="RepairPercentageKey" value="'$RepairPercentageKey'" comment="Repair percentage to pass for completion"/>
+
+                  <!--Client NPC parameters-->
+                  <param name="ClientNPCKey" value="'$client'" comment="Table key to client data. If the value evaluates to 'generating' then the NPC is set to be created before this mission spawns."/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <return value="$ChainDefinitionTable"/>
+              </actions>
+            </library>
+          </cues>
+        </cue>
+
+        <cue name="Ambush_Player_Once">
+          <actions>
+            <!--<append_to_list name="Manager.$MissionEvaluationRegister" exact="Ambush_Player_Once__Eval"/>-->
+          </actions>
+          <cues>
+            <library name="Ambush_Player_Once__Eval" purpose="run_actions">
+              <params>
+                <param name="MissionValTable" default="table[$sector = player.sector]"/>
+                <param name="DebugChance" default="100"/>
+              </params>
+              <actions>
+                <set_value name="$DebugChance" exact="100"/>
+
+                <do_if value="not $MissionValTable.$sector">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Create instruction set list to populate $MissionValTable with suitable objects and variables-->
+                <set_value name="$InstructionSet" exact="[
+                   table[$key = '$landmark', $instruction = 'landmark'],
+                   ]"/>
+                <run_actions ref="ProcessInstructions" result="$Successful">
+                  <param name="MissionValTable" value="$MissionValTable"/>
+                  <param name="InstructionSet" value="$InstructionSet"/>
+                </run_actions>
+
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Some more complicated actions to find objects and positions suitable for this mission-->
+
+                <!--Set known static values for this mission variant or any that rely on the processed instructions-->
+                <set_value name="$MissionValTable.$EnemyFactionKey" exact="md.$PirateFactions.random"/>
+                <set_value name="$MissionValTable.$EnemiesKey"      exact="'commandeering'"/>
+                <set_value name="$MissionValTable.$client_owner"    exact="player.sector.owner"/>
+                <set_value name="$MissionValTable.$FactionKey"      exact="player.sector.owner"/>
+
+                <!--Initialise $ChainDefinitionTable. It will contain the definitions of missions and helper libraries with their parameters and outcome branches.-->
+                <include_actions ref="Initialise_ChainDefinitionTable"/>
+
+                <!--Call the Generate_NPC_Creation_Helper to create a table which will instruct how to create the client NPC later-->
+                <!--TODO @Owen allow this to place the NPC or leave it to individual missions?-->
+                <run_actions ref="Generate_NPC_Creation_Helper" result="$Successful">
+                  <param name="ChainDefinitionTable"    value="$ChainDefinitionTable"/>
+                  <param name="ClientTableKey"          value="'$client'"/>
+                  <param name="ClientOwner"             value="$MissionValTable.$client_owner"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <!--Call each mission evaluator in order to see if they can work with the values in $MissionValTable. They can add their own to $MissionValTable for the next mission.-->
+                <!--Mission #1-->
+                <run_actions ref="md.GM_Ambush.Dynamic_Mission_Eval" result="$Successful">
+                  <param name="ChainDefinitionTable"          value="$ChainDefinitionTable"/>
+                  <param name="DebugChance"                   value="$DebugChance"/>
+                  <param name="Client"                        value="'$client'"/>
+
+                  <!--TODO @Owen support passing in a macro without it having to be a table key-->
+                  <param name="EnemiesKey"  value="'$EnemiesKey'"/>
+                  <param name="EnemyFactionKey" value="'$EnemyFactionKey'"/>
+                  <param name="FactionKey" value="'$FactionKey'"/>
+                </run_actions>
+                <do_if value="not $Successful">
+                  <return value="null"/>
+                </do_if>
+
+                <return value="$ChainDefinitionTable"/>
+              </actions>
+            </library>
+          </cues>
+        </cue>
+      </cues>
+    </cue>
+
+    <!--
+      Manager determining when/where to spawn GMC missions
+      - Don't spawn GMC's requiring an item which is already 'reserved' for a running GMC
+      - Don't spawn too many (maybe some timeout between spawning another one, maybe a limit on max concurrent 
+      
+    -->
+    <cue name="Manager" mapeditor="false">
+      <conditions>
+        <event_cue_signalled cue="md.Setup.Start"/>
+        <check_value value="player.galaxy.macro == macro.xu_ep2_universe_macro" comment="only in main-galaxy"/>
+      </conditions>
+      <actions>
+        <set_value name="$DebugChance" exact="0"/>
+        <set_value name="$MissionEvaluationRegister" exact="[]"/>
+      </actions>
+      <cues>
+        <cue name="PlayerChangedSector" instantiate="true" namespace="this">
+          <conditions>
+            <event_object_changed_sector object="player.entity"/>
+            <check_value value="event.param"/>
+
+            <!--#########DISABLED###########-->
+            <check_value value="false"/>
+          </conditions>
+          <actions>
+            <set_value name="$DebugChance" exact="Manager.$DebugChance"/>
+            <set_value name="$DebugChance" exact="100"/>
+
+            <shuffle_list list="Manager.$MissionEvaluationRegister"/>
+            <do_for_each name="$MissionEvaluator" in="Manager.$MissionEvaluationRegister">
+              <run_actions ref="$MissionEvaluator" result="$ChainDefinition">
+                <param name="MissionValTable" value="table[$sector = event.param]"/>
+              </run_actions>
+              <do_if value="$ChainDefinition">
+                <debug_text text="$MissionEvaluator + ' was selected to generate a mission chain.'" chance="$DebugChance"/>
+                <signal_cue_instantly cue="Chain_Instance" param="table[$chaindefinition = $ChainDefinition]"/>
+                <break/>
+              </do_if>
+              <do_else>
+                <debug_text text="$MissionEvaluator + ' failed to generate a variation with the provided params. Aborting.'" chance="$DebugChance"/>
+              </do_else>
+            </do_for_each>
+
+          </actions>
+        </cue>
+
+        <cue name="Chain_Instance" instantiate="true" namespace="this">
+          <conditions>
+            <event_cue_signalled/>
+          </conditions>
+          <actions>
+            <set_value name="$ChainDefinition" exact="event.param.$chaindefinition"/>
+            <set_value name="$CurrentDefinition" exact="$ChainDefinition.$FirstDefinition"/>
+            <set_value name="$MissionValTable" exact="$CurrentDefinition.$MissionValTable"/>
+            <set_value name="$MissionValTable.$ChainInstance" exact="this"/>
+            <set_value name="$CurrentDefinition" exact="$CurrentDefinition.$Outcomes.$start"/>
+          </actions>
+          <cues>
+            <cue name="Chain_Instance_Trigger_Mission">
+              <actions>
+                <do_if value="not $CurrentDefinition">
+                  <!--TODO @Owen Cleanup-->
+                  <cancel_cue cue="Chain_Instance"/>
+                </do_if>
+                <do_else>
+                  <set_value name="$MissionValTable.$ChainMissionReportCue" exact="Chain_Instance_Mission_Report_Signal"/>
+                  <debug_text text="'Processing definition ' + $CurrentDefinition"/>
+                  <!--Depending on the existence of certain keys, either run a helper library ($Params must exist) OR a static mission cue to be signalled.-->
+                  <do_if value="$CurrentDefinition.$HelperLibraryCue?">
+                    <debug_text text="$CurrentDefinition.$HelperLibraryCue"/>
+                    <run_actions ref="$CurrentDefinition.$HelperLibraryCue" result="$Result">
+                      <param name="MissionValTable" value="$MissionValTable"/>
+                      <param name="Params" value="$CurrentDefinition.$Params"/>
+                    </run_actions>
+                    <debug_text text="'Created thingie ' + $Result + ' ' + @$Result.knownname"/>
+                    <do_if value="$Result">
+                      <set_value name="$SelectedOutcome" exact="null"/>
+                      <!--Multiple passes over outcomes, becoming less stringent, until we find one that matches the result-->
+                      <do_for_each name="$PossibleOutcomeID" valuename="$PossibleOutcomeDefinition" in="$CurrentDefinition.$Outcomes" chance="if $SelectedOutcome then 0 else 100">
+                        <!--Pass 1: Match by exact outcome-->
+                        <do_if value="$PossibleOutcomeID == $Result">
+                          <set_value name="$SelectedOutcome" exact="$PossibleOutcomeDefinition"/>
+                          <break/>
+                        </do_if>
+                      </do_for_each>
+                      <do_for_each name="$PossibleOutcomeID" valuename="$PossibleOutcomeDefinition" in="$CurrentDefinition.$Outcomes" chance="if $SelectedOutcome then 0 else 100">
+                        <!--Pass 2: Match by '$valid' criterion (any non-zero and non-error $Result)-->
+                        <do_if value="$PossibleOutcomeID == '$valid' and $Result">
+                          <set_value name="$SelectedOutcome" exact="$PossibleOutcomeDefinition"/>
+                          <break/>
+                        </do_if>
+                      </do_for_each>
+                      <do_if value="$SelectedOutcome">
+                        <!--TODO @Owen what about cleanup of $Result later e.g. it is a created NPC-->
+                        <set_value name="$CurrentDefinition" exact="$SelectedOutcome"/>
+                        <reset_cue cue="this"/>
+                      </do_if>
+                      <do_else>
+                        <!--TODO @Owen Cleanup-->
+                        <debug_text text="'Helper library cue ' + $CurrentDefinition.$HelperLibraryCue + ' failed to return a valid result'" filter="error"/>
+                        <cancel_cue cue="Chain_Instance"/>
+                      </do_else>
+                    </do_if>
+                    <do_else>
+                      <!--TODO @Owen Cleanup-->
+                      <debug_text text="'Helper library cue ' + $CurrentDefinition.$HelperLibraryCue + ' failed to return a valid result'" filter="error"/>
+                      <cancel_cue cue="Chain_Instance"/>
+                    </do_else>
+                  </do_if>
+                  <do_elseif value="$CurrentDefinition.$StaticMissionCue?">
+                    <signal_cue_instantly cue="$CurrentDefinition.$StaticMissionCue" param="table[$instanceparams = $CurrentDefinition.$Params, $missionvaltable = $MissionValTable]"/>
+                  </do_elseif>
+                  <do_else>
+                    <debug_text text="'Definition is neither a helper library reference or static mission reference. Definition: ' + $CurrentDefinition" filter="error"/>
+                  </do_else>
+                </do_else>
+              </actions>
+              <cues>
+                <!--Hack-->
+                <cue name="Chain_Instance_Trigger_Mission_Keep_Alive">
+                  <conditions>
+                    <event_cue_signalled/>
+                  </conditions>
+                </cue>
+              </cues>
+            </cue>
+
+            <cue name="Chain_Instance_Mission_Report_Signal" instantiate="true">
+              <conditions>
+                <event_cue_signalled/>
+              </conditions>
+              <actions>
+                <do_if value="@static.$EndFeedbackValue">
+                  <debug_text text="'Mission ended with feedback: ' + static.$EndFeedbackValue"/>
+                  <set_value name="$SelectedOutcome" exact="null"/>
+                  <!--Multiple passes over outcomes, becoming less stringent, until we find one that matches the result-->
+                  <do_for_each name="$PossibleOutcomeID" valuename="$PossibleOutcomeDefinition" in="$CurrentDefinition.$Outcomes" chance="if $SelectedOutcome then 0 else 100">
+                    <!--Pass 1: Match by feedback value ID-->
+                    <do_if value="$PossibleOutcomeID == static.$EndFeedbackValue.$ID">
+                      <set_value name="$SelectedOutcome" exact="$PossibleOutcomeDefinition"/>
+                      <break/>
+                    </do_if>
+                  </do_for_each>
+                  <do_for_each name="$PossibleOutcomeID" valuename="$PossibleOutcomeDefinition" in="$CurrentDefinition.$Outcomes" chance="if $SelectedOutcome then 0 else 100">
+                    <debug_text text="'Checking outcome ' + $PossibleOutcomeID"/>
+                    <!--Pass 2: Match by feedback value 'type' code (with a prepended $)-->
+                    <do_if value="$PossibleOutcomeID == ('$' + static.$EndFeedbackValue.$type)">
+                      <set_value name="$SelectedOutcome" exact="$PossibleOutcomeDefinition"/>
+                      <break/>
+                    </do_if>
+                  </do_for_each>
+                  <do_for_each name="$PossibleOutcomeID" valuename="$PossibleOutcomeDefinition" in="$CurrentDefinition.$Outcomes" chance="if $SelectedOutcome then 0 else 100">
+                    <!--Pass 3: Match by '$valid' criterion (any non-zero and non-error $Result)-->
+                    <do_if value="$PossibleOutcomeID == '$valid'">
+                      <set_value name="$SelectedOutcome" exact="$PossibleOutcomeDefinition"/>
+                      <break/>
+                    </do_if>
+                  </do_for_each>
+                  <do_if value="$SelectedOutcome">
+                    <!--TODO @Owen what about cleanup of $Result later e.g. it is a created NPC-->
+                    <debug_text text="'EndFeedbackValue ' + static.$EndFeedbackValue + ' satisfied outcome for ' + $CurrentDefinition.$Label"/>
+                    <set_value name="$CurrentDefinition" exact="$SelectedOutcome"/>
+                    <reset_cue cue="Chain_Instance_Trigger_Mission"/>
+                  </do_if>
+                  <do_else>
+                    <!--TODO @Owen Cleanup-->
+                    <debug_text text="'Mission instance for ' + $CurrentDefinition.$StaticMissionCue + ' returned result ' + static.$EndFeedbackValue + ' which does not have a valid outcome'" filter="error"/>
+                    <cancel_cue cue="Chain_Instance"/>
+                  </do_else>
+                  <remove_value name="static.$EndFeedbackValue"/>
+                </do_if>
+              </actions>
+            </cue>
+          </cues>
+        </cue>
+      </cues>
+    </cue>
+
+    <!--$Instruction
+    $key = Table key to read/write to $MissionValTable
+    $instruction = Instruction to perform if the table value does not yet exist
+    $required = Is result required? In failure abort the calling library? (defaults to true)-->
+    <library name="ProcessInstructions" purpose="run_actions">
+      <params>
+        <param name="MissionValTable"/>
+        <param name="InstructionSet"/>
+      </params>
+      <actions>
+        <do_for_each name="$Instruction" in="$InstructionSet" counter="$instruction_i">
+          <do_if value="$MissionValTable.{$Instruction.$key}?">
+            <!--Table already contains the requested key.-->
+            <continue/>
+          </do_if>
+
+          <run_actions ref="ProcessInstruction_Internal" result="$InstructionResult">
+            <param name="MissionValTable" value="$MissionValTable"/>
+            <param name="Instruction"     value="$Instruction.$instruction"/>
+          </run_actions>
+          <do_if value="$InstructionResult == 'invalid'">
+            <do_if value="not $Instruction.$required? or $Instruction.$required">
+              <return value="false"/>
+            </do_if>
+          </do_if>
+          <do_else>
+            <set_value name="$MissionValTable.{$Instruction.$key}" exact="$InstructionResult"/>
+          </do_else>
+        </do_for_each>
+        <return value="true"/>
+      </actions>
+    </library>
+
+    <!--Instruction documentation
+    hazardous_region_adjacent         - Sector position adjacent to a hazardous region
+    hazardous_region_within           - Sector position within a hazardous region
+    hollow_asteroid                   - A persistent hollow asteroid
+    landmark                          - A landmark object
+    minefield_adjacent                - Sector position adjacent to a mine field
+    minefield_within                  - Sector position within a mine field
+    neutral_station                   - A station neutral to the player. Docking is not assured.-->
+    <library name="ProcessInstruction_Internal" purpose="run_actions">
+      <params>
+        <param name="MissionValTable"/>
+        <param name="Instruction"/>
+      </params>
+      <actions>
+        <set_value name="$ResultVal" exact="'invalid'"/>
+        <set_value name="$Sector" exact="$MissionValTable.$sector"/>
+
+        <do_if value="$Instruction == 'hazardous_region_adjacent'">
+
+        </do_if>
+        <do_elseif value="$Instruction == 'hazardous_region_within'">
+
+        </do_elseif>
+        <do_elseif value="$Instruction == 'hollow_asteroid'">
+
+        </do_elseif>
+        <do_elseif value="$Instruction == 'landmark'">
+          <find_object name="$ResultVal" landmark="true" space="$Sector"/>
+        </do_elseif>
+        <do_elseif value="$Instruction == 'minefield_adjacent'">
+
+        </do_elseif>
+        <do_elseif value="$Instruction == 'minefield_within'">
+
+        </do_elseif>
+        <do_elseif value="$Instruction == 'neutral_station'">
+          <find_station name="$ResultVal" space="$Sector">
+            <match_relation_to faction="faction.player" relation="neutral" comparison="ge"/>
+          </find_station>
+        </do_elseif>
+
+
+        <return value="$ResultVal"/>
+      </actions>
+    </library>
+
+    <!--Requires $MissionValTable to already be set-->
+    <library name="Initialise_ChainDefinitionTable" purpose="include_actions">
+      <actions>
+        <set_value name="$ChainDefinitionTable" exact="table[]"/>
+        <!--Set up the first definition to accept the next following definition as the default, just to get us started. After this, the outcomes are processed in the definition libraries.-->
+        <set_value name="$ChainDefinitionTable.$FirstDefinition" exact="table[$Label = 'first_definition', $MissionValTable = $MissionValTable]"/>
+        <set_value name="$ChainDefinitionTable.$FirstDefinition.$Outcomes" exact="table[$start = table[$Label = '$defaultnext', $ParentSource = $ChainDefinitionTable.$FirstDefinition, $MissionValTable = $MissionValTable]]"/>
+        <set_value name="$ChainDefinitionTable.$BranchRegister" exact="table[]"/>
+        <set_value name="$ChainDefinitionTable.$BranchRegister.$defaultnext" exact="[$ChainDefinitionTable.$FirstDefinition]"/>
+        <set_value name="$ChainDefinitionTable.$ConstructingDefinitionRef" exact="null"/>
+      </actions>
+    </library>
+
+    <library name="Get_Branch_Sources" purpose="include_actions">
+      <actions>
+        <debug_text text="'Finding outcome branch for label ' + $Label"/>
+        <set_value name="$BranchSources" exact="[]"/>
+        <do_if value="@$IsInternalLibrary">
+          <append_to_list name="$BranchSources" exact="$ChainDefinitionTable.$ConstructingDefinitionRef"/>
+        </do_if>
+        <do_else>
+          <do_for_each name="$DebugBranchLabel" valuename="$DebugBranchList" in="$ChainDefinitionTable.$BranchRegister">
+            <debug_text text="'Registered listeners for branch label ' + $DebugBranchLabel + ': ' + $DebugBranchList.count + ' ' + $DebugBranchList"/>
+          </do_for_each>
+          <do_if value="typeof $ChainDefinitionTable.$BranchRegister.{$Label} == datatype.list and $ChainDefinitionTable.$BranchRegister.{$Label}.count">
+            <do_for_each name="$BranchSource" in="$ChainDefinitionTable.$BranchRegister.{$Label}" reverse="true" counter="$branch_reg_i">
+              <do_for_each name="$PotentialBranchOutcomeID" valuename="$PotentialBranchOutcome" in="$BranchSource.$Outcomes">
+                <do_if value="$PotentialBranchOutcome.$Label == $Label">
+                  <debug_text text="'Appending outcome ' + $PotentialBranchOutcome"/>
+                  <append_to_list name="$BranchSources" exact="$PotentialBranchOutcome"/>
+                </do_if>
+              </do_for_each>
+              <remove_value name="$ChainDefinitionTable.$BranchRegister.{$Label}.{$branch_reg_i}"/>
+            </do_for_each>
+          </do_if>
+          <do_else>
+            <debug_text text="'Invalid branch source for label ' + $Label + ' - ' + @$ChainDefinitionTable.$BranchRegister.{$Label}" filter="error"/>
+          </do_else>
+          <debug_text text="$BranchSources"/>
+        </do_else>
+      </actions>
+    </library>
+
+    <library name="Set_Up_Outcome_Branches" purpose="include_actions">
+      <actions>
+        <set_value name="$_processingdef" exact="$ChainDefinitionTable.$ConstructingDefinitionRef"/>
+        <do_if value="$_processingdef.$Outcomes?">
+          <debug_text text="'$_processingdef ' + $_processingdef + ' ' + $_processingdef.$Label + ' already has outcomes'" filter="error"/>
+          <set_value name="$ERROR" exact="true"/>
+        </do_if>
+        <do_else>
+          <do_if value="@$IsInternalLibrary">
+            <!--If this is an internal library, just set up a simple outcome branch and prepare for any following definition to latch onto this one-->
+            <set_value name="$NewOutcomes" exact="table[]"/>
+            <set_value name="$_processingdef.$Outcomes" exact="$NewOutcomes"/>
+            <assert value="$OutcomeTable.keys.count == 1" text="'Attempted to set up multiple outcome branches for an internal library which is not supported'"/>
+            <do_for_each name="$OutcomeKey" valuename="$OutcomeLabel" in="$OutcomeTable">
+              <set_value name="$NewOutcomes.{$OutcomeKey}" exact="table[$Label = $OutcomeLabel, $ParentSource = $_processingdef, $MissionValTable = $MissionValTable]"/>
+              <!--No need to set up the $BranchRegister as we are already internally processing whatever should come next-->
+              <!--Update $ConstructingDefinitionRef so the caller of this library can write to this new outcome-->
+              <set_value name="$ChainDefinitionTable.$ConstructingDefinitionRef" exact="$NewOutcomes.{$OutcomeKey}"/>
+              <break/>
+            </do_for_each>
+          </do_if>
+          <do_elseif value="$OutcomeTable">
+            <set_value name="$NewOutcomes" exact="table[]"/>
+            <set_value name="$_processingdef.$Outcomes" exact="$NewOutcomes"/>
+            <set_value name="$FirstBranch" exact="true"/>
+            <do_for_each name="$OutcomeKey" valuename="$OutcomeLabel" in="$OutcomeTable">
+              <do_if value="$FirstBranch">
+                <set_value name="$FirstBranch" exact="false"/>
+                <set_value name="$NewOutcomes.{$OutcomeKey}" exact="table[$Label = $OutcomeLabel, $ParentSource = $_processingdef, $MissionValTable = $MissionValTable]"/>
+                <debug_text text="'Setting up first branch for outcome ' + $OutcomeKey + ' for branch source ' + $_processingdef.$Label"/>
+              </do_if>
+              <do_else>
+                <!--More than one branch. Clone $MissionValTable for this branch.-->
+                <set_value name="$NewOutcomes.{$OutcomeKey}" exact="table[$Label = $OutcomeLabel, $ParentSource = $_processingdef, $MissionValTable = $MissionValTable.clone]"/>
+              </do_else>
+
+              <!--Register these outcomes so that when we evaluate those libraries we can update the source callers and their $MissionValTable-->
+              <do_if value="not $ChainDefinitionTable.$BranchRegister.{$OutcomeLabel}?">
+                <set_value name="$ChainDefinitionTable.$BranchRegister.{$OutcomeLabel}" exact="[]"/>
+              </do_if>
+              <append_to_list name="$ChainDefinitionTable.$BranchRegister.{$OutcomeLabel}" exact="$_processingdef"/>
+            </do_for_each>
+          </do_elseif>
+        </do_else>
+        <remove_value name="$_processingdef"/>
+      </actions>
+    </library>
+
+    <!--Library to return a list with reference to the NPC creation library and a table of instructions so we can create (NOT PLACE) a suitable cue NPC when we start the mission-->
+    <library name="Generate_NPC_Creation_Helper" purpose="run_actions">
+      <params>
+        <param name="Label" default="'$defaultnext'" comment="'$defaultnext' is the label for the standard outcome. Override if branching definitions with different outcomes."/>
+        <param name="ChainDefinitionTable"/>
+        <param name="OutcomeTable" default="table[$valid = '$defaultnext']" comment="Table of outcomes with key as the outcome code and the value as the resulting label. See Process_NPC_Creation_Helper"/>
+        <param name="IsInternalLibrary" default="false" comment="Set to true if this helper is called from within another library. Any following definition will link onto this def. ChainDefinitionTable.$ConstructingDefinitionRef will be updated."/>
+        <param name="DebugChance" default="0"/>
+
+        <param name="ClientTableKey"/>
+        <param name="ClientOwner"/>
+        <!--TODO @Owen other params e.g. selection tags, reference ID-->
+      </params>
+      <actions>
+        <include_actions ref="Get_Branch_Sources"/>
+        <do_if value="$BranchSources.count == 0">
+          <return value="null"/>
+        </do_if>
+
+        <do_for_each name="$BranchSource" in="$BranchSources">
+          <set_value name="$ChainDefinitionTable.$ConstructingDefinitionRef" exact="$BranchSource"/>
+          <set_value name="$MissionValTable" exact="$BranchSource.$MissionValTable"/>
+
+          <do_if value="not (typeof $ClientTableKey).isstring">
+            <debug_text text="'$ClientTableKey ' + $ClientTableKey + ' is not a string for use as a table key'" filter="error"/>
+            <return value="null"/>
+          </do_if>
+
+          <set_value name="$ClientTableValue" exact="@$MissionValTable.{$ClientTableKey}"/>
+          <do_if value="$ClientTableValue">
+            <debug_text text="'Client table key ' + $ClientTableKey + ' already resolves to value ' + $ClientTableValue + ' when it should not yet be valid.'" filter="error"/>
+            <return value="null"/>
+          </do_if>
+
+          <do_if value="typeof $ClientOwner != datatype.faction">
+            <debug_text text="'$ClientOwner ' + $ClientOwner + ' is not a faction'" filter="error"/>
+            <return value="null"/>
+          </do_if>
+
+
+          <!--Set the $ClientTableKey value to 'generating' so mission evaluators referencing the client can be assured (hopefully) that a NPC will be created when the missions are spawned-->
+          <set_value name="$MissionValTable.{$ClientTableKey}" exact="'generating'"/>
+
+          <!--Append the table to instruct how to generate the NPC when the mission chain is spawned-->
+          <set_value name="$ChainDefinitionTable.$ConstructingDefinitionRef.$HelperLibraryCue" exact="Process_NPC_Creation_Helper"/>
+          <set_value name="$ChainDefinitionTable.$ConstructingDefinitionRef.$Params"           exact="table[
+                                                                            $TableKey = $ClientTableKey,
+                                                                            $Owner = $ClientOwner]"/>
+
+          <include_actions ref="Set_Up_Outcome_Branches"/>
+          <do_if value="$ERROR?">
+            <return value="null"/>
+          </do_if>
+
+        </do_for_each>
+
+        <return value="true"/>
+      </actions>
+    </library>
+
+    <!---->
+    <library name="Process_NPC_Creation_Helper" purpose="run_actions">
+      <params>
+        <param name="MissionValTable"/>
+        <param name="DebugChance" default="0"/>
+
+        <param name="Params"/>
+      </params>
+      <actions>
+        <do_if value="$MissionValTable.$ChainInstance.exists and $Params.$TableKey">
+          <!--TODO @Owen more parameters and sanity checks-->
+          <create_cue_actor cue="$MissionValTable.$ChainInstance" name="$ResultNPC">
+            <select faction="$Params.$Owner"/>
+            <owner exact="$Params.$Owner"/>
+          </create_cue_actor>
+          <do_if value="$ResultNPC">
+            <set_value name="$ResultNPC.$Stay"/>
+            <set_value name="$MissionValTable.{$Params.$TableKey}" exact="$ResultNPC"/>
+            <return value="$ResultNPC"/>
+          </do_if>
+        </do_if>
+
+        <return value="null"/>
+      </actions>
+    </library>
+
+    <library name="Generate_Interior_Creation_Helper" purpose="run_actions">
+      <params>
+        <param name="Label" default="'$defaultnext'" comment="'$defaultnext' is the label for the standard outcome. Override if branching definitions with different outcomes."/>
+        <param name="ChainDefinitionTable"/>
+        <param name="OutcomeTable" default="table[$valid = '$defaultnext']" comment="Table of outcomes with key as the outcome code and the value as the resulting label. See Process_NPC_Creation_Helper"/>
+        <param name="IsInternalLibrary" default="false" comment="Set to true if this helper is called from within another library. Any following definition will link onto this def. ChainDefinitionTable.$ConstructingDefinitionRef will be updated."/>
+        <param name="DebugChance" default="0"/>
+
+        <param name="InteriorKey" default="null" comment="Key to save the created interior to."/>
+        <param name="InteriorObjectKey" default="null" comment="Object to create the interior on."/>
+        <param name="InteriorRoom" default="null" comment="Room macro or tag to generate a suitable room"/>
+        <param name="InteriorCorridor" default="null" comment="Room macro or tag to generate the corridor"/>
+        <!--TODO @Owen other params such as interior name-->
+      </params>
+      <actions>
+
+        <do_if value="not (typeof $InteriorKey).isstring">
+          <debug_text text="'$InteriorKey ' + $InteriorKey + ' is not a string for use as a table key'" filter="error"/>
+          <return value="null"/>
+        </do_if>
+
+        <include_actions ref="Get_Branch_Sources"/>
+
+        <do_if value="$BranchSources.count == 0">
+          <return value="null"/>
+        </do_if>
+        <debug_text text="'$BranchSources ' + $BranchSources"/>
+
+        <do_for_each name="$BranchSource" in="$BranchSources">
+          <set_value name="$ChainDefinitionTable.$ConstructingDefinitionRef" exact="$BranchSource"/>
+          <set_value name="$MissionValTable" exact="$BranchSource.$MissionValTable"/>
+
+          <set_value name="$InteriorObject" exact="@$MissionValTable.{$InteriorObjectKey}"/>
+          <set_value name="$RoomMacro" exact="null"/>
+          <set_value name="$CorridorMacro" exact="null"/>
+          <do_if value="$InteriorObject == 'generating'">
+            <!--Object is set to be generated by a preceeding mission. Assume it will be suitable.-->
+          </do_if>
+          <do_elseif value="$InteriorObject.canhavedynamicinterior">
+            <do_all exact="2" counter="$i" comment="2 passes. First the room and then the corridor">
+              <set_value name="$RoomCriteria" exact="if $i == 1 then $InteriorRoom else $InteriorCorridor"/>
+
+              <do_if value="typeof $RoomCriteria == datatype.macro">
+                <do_if value="$RoomCriteria.isclass.room">
+                  <!--If the interior room macro is explicit, allow it regardless of what this faction can usually spawn-->
+                </do_if>
+                <do_else>
+                  <debug_text text="$RoomCriteria + ' is not of room class'" filter="error"/>
+                  <return value="null"/>
+                </do_else>
+              </do_if>
+              <do_else>
+                <!--Check this faction and object can create the dynamic interior from the tag or list of tags-->
+                <do_if value="typeof $RoomCriteria == datatype.tag">
+                  <!--Valid-->
+                </do_if>
+                <do_elseif value="typeof $RoomCriteria == datatype.list">
+                  <do_for_each name="$RoomCriteriaElement" in="$RoomCriteria">
+                    <do_if value="typeof $RoomCriteriaElement != datatype.tag">
+                      <debug_text text="$RoomCriteria + ' contains a non tag element'" filter="error"/>
+                      <return value="null"/>
+                    </do_if>
+                  </do_for_each>
+                </do_elseif>
+
+                <get_room_definition macro="$FoundRoomMacro" race="$InteriorObject.trueowner.primaryrace" tags="$RoomCriteria"/>
+                <do_if value="$FoundRoomMacro">
+                  <do_if value="$i == 1">
+                    <set_value name="$RoomMacro" exact="$FoundRoomMacro"/>
+                  </do_if>
+                  <do_else>
+                    <set_value name="$CorridorMacro" exact="$FoundRoomMacro"/>
+                  </do_else>
+                </do_if>
+                <do_else>
+                  <debug_text text="$InteriorObject + ' ' + $InteriorObject.knownname + ' of race ' + $InteriorObject.trueowner.primaryrace + ' can not spawn room of tag ' + $RoomCriteria" filter="error"/>
+                  <return value="null"/>
+                </do_else>
+              </do_else>
+            </do_all>
+          </do_elseif>
+          <do_else>
+            <debug_text text="$InteriorObject + ' is unable to have dynamic interiors. Interior: ' + $InteriorRoom" filter="error"/>
+            <return value="null"/>
+          </do_else>
+
+          <!--Set the $InteriorKey value to 'generating' so mission evaluators referencing the interior can be assured (hopefully) that the interior will be created when the missions are spawned-->
+          <set_value name="$MissionValTable.{$InteriorKey}" exact="'generating'"/>
+
+          <!--Append the table to instruct how to generate the NPC when the mission chain is spawned-->
+          <set_value name="$ChainDefinitionTable.$ConstructingDefinitionRef.$HelperLibraryCue" exact="Process_Interior_Creation_Helper"/>
+          <set_value name="$ChainDefinitionTable.$ConstructingDefinitionRef.$Params" exact="table[
+                                                                        $TableKey = $InteriorKey,
+                                                                        $InteriorObjectKey = $InteriorObjectKey,
+                                                                        $InteriorRoom = $RoomMacro,
+                                                                        $InteriorCorridor = $CorridorMacro
+                                                                        ]"/>
+
+          <include_actions ref="Set_Up_Outcome_Branches"/>
+        </do_for_each>
+
+        <return value="true"/>
+      </actions>
+    </library>
+
+    <library name="Process_Interior_Creation_Helper" purpose="run_actions">
+      <params>
+        <param name="MissionValTable"/>
+        <param name="DebugChance" default="0"/>
+
+        <param name="Params"/>
+      </params>
+      <actions>
+        <do_if value="$MissionValTable.$ChainInstance.exists and $Params.$TableKey">
+          <!--TODO @Owen more parameters and sanity checks-->
+          <set_value name="$InteriorObject" exact="$MissionValTable.{$Params.$InteriorObjectKey}"/>
+          <do_if value="$InteriorObject.canhavedynamicinterior">
+            <create_dynamic_interior interiorname="$ResultInterior" object="$InteriorObject" room="$Params.$InteriorRoom" corridor="$Params.$InteriorCorridor" name="'Interior ' + player.age + ' #' + [1, 99].randominrange" persistent="true"/>
+            <do_if value="$ResultInterior">
+              <set_value name="$MissionValTable.{$Params.$TableKey}" exact="$ResultInterior"/>
+              <return value="$ResultInterior"/>
+            </do_if>
+          </do_if>
+          <do_else>
+            <debug_text text="'waoh now.'" filter="error"/>
+          </do_else>
+        </do_if>
+
+        <return value="null"/>
+      </actions>
+    </library>
+
+
+
+
+    <library name="Incoming_Message_Helper" purpose="run_actions">
+      <params>
+        <param name="Label" default="'$defaultnext'" comment="'$defaultnext' is the label for the standard outcome. Override if branching definitions with different outcomes."/>
+        <param name="ChainDefinitionTable"/>
+        <param name="OutcomeTable" default="table[$valid = '$defaultnext']" comment="Table of outcomes with key as the outcome code and the value as the resulting label. See Process_NPC_Creation_Helper"/>
+        <param name="IsInternalLibrary" default="false"/>
+        <param name="DebugChance" default="0"/>
+
+        <param name="SourceText"/>
+        <param name="SubstituteTextTable" default="null"/>
+      </params>
+      <actions>
+
+        <include_actions ref="Get_Branch_Sources"/>
+
+        <do_if value="$BranchSources.count == 0">
+          <return value="null"/>
+        </do_if>
+        <debug_text text="'$BranchSources ' + $BranchSources"/>
+
+        <do_for_each name="$BranchSource" in="$BranchSources">
+          <set_value name="$ChainDefinitionTable.$ConstructingDefinitionRef" exact="$BranchSource"/>
+          <set_value name="$MissionValTable" exact="$BranchSource.$MissionValTable"/>
+
+          <!--Append the table to instruct how to generate the NPC when the mission chain is spawned-->
+          <set_value name="$ChainDefinitionTable.$ConstructingDefinitionRef.$HelperLibraryCue" exact="Process_Incoming_Message_Helper"/>
+          <set_value name="$ChainDefinitionTable.$ConstructingDefinitionRef.$Params" exact="table[
+                                                                        $SourceText = $SourceText,
+                                                                        $SubstituteTextTable = $SubstituteTextTable,
+                                                                        ]"/>
+
+          <include_actions ref="Set_Up_Outcome_Branches"/>
+        </do_for_each>
+
+        <return value="true"/>
+      </actions>
+    </library>
+
+    <library name="Process_Incoming_Message_Helper" purpose="run_actions">
+      <params>
+        <param name="MissionValTable"/>
+        <param name="DebugChance" default="0"/>
+
+        <param name="Params"/>
+      </params>
+      <actions>
+        <do_if value="$MissionValTable.$ChainInstance.exists">
+          <set_value name="$Text" exact="$Params.$SourceText"/>
+          <do_if value="$Params.$SubstituteTextTable">
+            <do_for_each name="$String" valuename="$Replacement" in="$Params.$SubstituteTextTable">
+              <do_if value="$MissionValTable.{$Replacement}?">
+                <!--The replacement is a variable-->
+                <do_if value="$MissionValTable.{$Replacement}?">
+                  <!--TODO @Owen check datatype for .name / .knownname-->
+                  <substitute_text source="$Text" text="$Text">
+                    <replace string="$String" with="$Replacement.name"/>
+                  </substitute_text>
+                </do_if>
+              </do_if>
+              <do_else>
+                <substitute_text source="$Text" text="$Text">
+                  <replace string="$String" with="$Replacement"/>
+                </substitute_text>
+              </do_else>
+            </do_for_each>
+          </do_if>
+
+          <write_incoming_message source="'TODO'" title="'TODO'" text="$Text"/>
+          <return value="true"/>
+        </do_if>
+
+        <return value="null"/>
+      </actions>
+    </library>
+
+  </cues>
+</mdscript>

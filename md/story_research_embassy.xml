@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="Story_Research_Embassy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+  <cues>
+    <!-- Used to Patch User data even when loading saves with completed research -->
+    <cue name="Patch_Userdata" instantiate="true" mapeditor="false">
+      <conditions>
+        <event_game_loaded/>
+      </conditions>
+      <delay exact="1ms"/>
+      <actions>
+        <do_if value="ware.research_diplomacy_network.research.unlocked">
+          <set_userdata storystate="'research_diplomacy_network'" value="1"/>
+          <debug_text text="'Setting userdata research_diplomacy_network to ' + userdatasigned.research_diplomacy_network" filter="savegame"/>
+        </do_if>
+      </actions>
+    </cue>
+    
+    <cue name="Start" namespace="this">
+      <conditions>
+        <event_cue_signalled cue="md.Setup.Start" />
+        <check_value value="player.galaxy.macro == macro.xu_ep2_universe_macro" comment="only in main-galaxy"/>
+      </conditions>
+      <actions>
+        <set_value name="$DebugChance" exact="0"/>
+        <set_value name="$CharacterCutsceneTable" exact="table[]"/>
+        <set_value name="$LastResearchDescriptionTime" exact="0"/>
+      </actions>
+      <cues>
+
+        <cue name="Check_Research_Unlocked" onfail="cancel">
+          <conditions>
+            <cue_is_complete cue="md.X4Ep1_Mentor_Subscriptions.UnlockResearch"/>
+          </conditions>
+        </cue>
+
+        <cue name="Research_Unlocked">
+          <conditions>
+            <check_any>
+              <event_cue_completed cue="md.X4Ep1_Mentor_Subscriptions.UnlockResearch"/>
+              <event_cue_completed cue="Check_Research_Unlocked"/>
+            </check_any>
+          </conditions>
+          <actions>
+            <!--Check if research has been already unlocked (via custom gamestart for example)-->
+            <do_if value="ware.research_diplomacy_network.research.unlocked">
+              <signal_cue cue="md.X4Ep1_Mentor_Subscriptions.Manage_EmbassyOffice_Room" check="false"/>
+              <cancel_cue cue="this"/>
+            </do_if>
+          </actions>
+          <!--Delay to allow any further initialisation of the HQ and mentors-->
+          <delay exact="300s"/>
+          <actions>
+            <write_incoming_message title="{30005,14500}" text="{30005,14510}" source="{30301,101}" highpriority="true"/>
+            <do_if value="md.X4Ep1_Mentor_Subscriptions.Start.$BoronMet?" comment="only if we already met with Boso">
+              <do_if value="not $Boso?">
+                <set_value name="$Boso" exact="@md.$PersistentCharacters.$BosoTa"/>
+                <do_if value="$Boso">
+                  <set_value name="$CharacterCutsceneTable.{$Boso}" exact="table[$key = 'ShowCharacterBoron']"/>
+                  <!-- NPC Usecase Setup -->
+                  <set_value name="$MissionActors" exact="table[]"/>
+                  <set_value name="$MissionActors.$Boso" exact="table[
+                                                            $entity = $Boso,
+                                                            $monitor = table[
+                                                              $cutscenekey = 'ShowCharacterBoron',
+                                                              $caption = true
+                                                            ]
+                                                          ]"/>
+                </do_if>
+              </do_if>
+            </do_if>
+          </actions>
+          <cues>
+            <cue name="Research_Unlocked_Wait">
+              <conditions>
+                <event_cue_completed cue="Research_Unlocked"/>
+              </conditions>
+              <actions>
+                <add_encyclopedia_entry type="researchables" item="'research_diplomacy_network'"/>
+                <set_value name="$LastResearchDescriptionTime" exact="player.age"/>
+              </actions>
+              <cues>
+                <cue name="ResearchEntryAdded" checkinterval="5s">
+                  <conditions>
+                    <check_value value="not player.isinconversation"/>
+                    <check_value value="not player.isscreenshotmode"/>
+                    <check_value value="not md.$MissionDND.count"/>
+                    <check_value value="player.age ge (md.$LastMentorSpeak + 5min)"/>
+                  </conditions>
+                  <actions>
+                    <do_if value="not ware.research_diplomacy_network.research.unlocked">
+                      <signal_cue_instantly cue="md.NPC_UseCases.UseCase" param="table[
+                                                                          $caller = this, $preset = '$plotlike', $actors = $MissionActors, $debugchance = $DebugChance,
+                                                                          $script = [
+                                                                                    table[ $actor = '$Boso', $speak = 302960101, $recipient = 'player', $comment = 'Greetings, my friend!'],
+                                                                                    table[ $actor = '$Boso', $speak = 302960102, $recipient = 'player', $comment = 'Interstellar diplomacy is an alluring interdisciplinary pursuit - part science, part etiquette, part curiosity.'],
+                                                                                    table[ $actor = '$Boso', $speak = 302960104, $recipient = 'player', $comment = 'If you so wish, I will undertake this compelling research on your behalf. Consider it your first tentative step into a larger dialogue!'],
+                                                                                    ],
+                                                                          ]" />
+                    </do_if>
+                  </actions>
+                </cue>
+                
+                <cue name="Research_Entry_Selected" instantiate="true">
+                  <conditions>
+                    <event_object_signalled object="player.entity" param="'research_selected_no_speak'"/>
+                    <check_value value="player.age gt $LastResearchDescriptionTime + 30s"/>
+                    <check_any>
+                      <check_value value="event.param2 == ware.research_diplomacy_network"/>
+                    </check_any>
+                  </conditions>
+                  <actions>
+                    <set_value name="$LastResearchDescriptionTime" exact="player.age"/>
+                    <speak actor="$Boso" line="30201162" priority="85" recipient="player.entity" comment="{10201,30201162}"/>
+                  </actions>
+                </cue>
+              </cues>
+            </cue>
+
+            <cue name="Research_Finished">
+              <conditions>
+                <event_player_research_unlocked ware="ware.research_diplomacy_network"/>
+              </conditions>
+              <actions>
+                <set_userdata storystate="'research_diplomacy_network'" value="1"/>
+                <signal_cue cue="md.X4Ep1_Mentor_Subscriptions.Manage_EmbassyOffice_Room" check="false"/>
+                <do_if value="not $Boso?">
+                  <!-- Embassy research was cheated, we don't need the Boso confirmation -->
+                  <cancel_cue cue="this"/>
+                </do_if>
+              </actions>
+              <cues>
+                <cue name="Research_Finished_LastMentorSpeak" checkinterval="10s">
+                  <conditions>
+                    <check_value value="player.age ge (md.$LastMentorSpeak + 2min)"/>
+                  </conditions>
+                  <actions>
+                    <signal_cue_instantly cue="md.NPC_UseCases.UseCase" param="table[
+                                                                              $caller = this, $preset = '$plotlike', $actors = $MissionActors, $debugchance = $DebugChance,
+                                                                              $script = [
+                                                                                        table[ $actor = '$Boso', $speak = 302960105, $recipient = 'player', $comment = 'Splendid! Youve now completed all required research and obtained the necessary certifications to engage in diplomatic affairs at the Embassy.'],
+                                                                                        table[ $actor = '$Boso', $speak = 302960106, $recipient = 'player', $comment = 'I look forward to your contributions to interstellar relations!'],
+                                                                                        ],
+                                                                              ]" />
+                  </actions>
+                </cue>
+              </cues>
+            </cue>
+          </cues>
+        </cue>
+      </cues>
+    </cue>
+  </cues>
+</mdscript>

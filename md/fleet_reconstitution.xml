@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mdscript name="Fleet_Reconstitution" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+  <cues>
+    <cue name="Init">
+      <conditions>
+        <event_cue_signalled cue="md.Setup.Start"/>
+      </conditions>
+      <actions>
+        <set_value name="$DebugChance" exact="0"/>
+      </actions>
+      <cues>
+        <cue name="ProcessRequest" instantiate="true" namespace="this" version="2">
+          <conditions>
+            <!-- param2 = requester, param3 = [ships to be replaced] -->
+            <event_object_signalled object="player.entity" param="'reconstitute_fleet'"/>
+            <check_value value="event.param2.isoperational"/>
+            <check_value value="event.param2.isclass.controllable"/>
+            <check_value value="not event.param2.fleetunit"/>
+            <check_value value="@event.param3.count"/>
+          </conditions>
+          <actions>
+            <set_value name="$DebugChance" exact="parent.$DebugChance"/>
+            <set_value name="$buildtasks" exact="[]"/>
+
+            <set_value name="$commander" exact="event.param2"/>
+            <do_if value="$commander.commander">
+              <set_value name="$commander" exact="$commander.toplevelcommander"/>
+            </do_if>
+
+            <set_value name="$shipstobereplaced" exact="event.param3"/>
+            <do_for_each name="$locship" in="$shipstobereplaced" reverse="true">
+              <do_if value="$locship.object or $locship.build">
+                <debug_text text="'%s removed. object: %s, build: %s'.[$locship.macro, $locship.object, $locship.build]" chance="0"/>
+                <remove_from_list name="$shipstobereplaced" exact="$locship"/>
+              </do_if>
+            </do_for_each>
+
+            <debug_text text="'Fleet reconstitution requested by: %s %s %s.\nFleet leader: %s %s %s in sector %s\n%s ships to be replaced.'.[@event.param2.idcode, @event.param2.knownname, event.param2, @$commander.idcode, @$commander.knownname, $commander, @$commander.sector.knownname, $shipstobereplaced.count]" chance="$DebugChance"/>
+
+            <do_if value="$shipstobereplaced.count">
+              <include_actions ref="FindClosestShipyards"/>
+              <do_for_each name="$locship" in="$shipstobereplaced" reverse="true">
+                <clear_fleet_ship_build_issues fleetunit="$locship"/>
+                <do_if value="$shipyards.count == 0">
+                  <set_fleet_ship_build_issue_flags fleetunit="$locship" flags="nocontainer"/>
+                </do_if>
+                <do_else>
+                  <set_value name="$buildtask" exact="null"/>
+                  <set_value name="$bestmissingequipment" exact="[]"/>
+                  <set_value name="$canbuildmacro" exact="false"/>
+                  <do_for_each name="$locshipyard" in="$shipyards" counter="$shipyard_i">
+                    <set_value name="$shipyardfails" exact="false"/>
+                    <do_if value="$locshipyard.canbuildmacro.{$locship.macro}">
+                      <set_value name="$canbuildmacro" exact="true"/>
+                    </do_if>
+                    <do_else>
+                      <set_value name="$shipyardfails" exact="true"/>
+                    </do_else>
+                    <set_value name="$missingequipment" exact="$locshipyard.missingloadoutequipment.{$locship.loadout}.{$locship.owner}.list"/>
+                    <do_if value="$missingequipment.count gt 0 and ($shipyard_i == 1 or $missingequipment.count lt $bestmissingequipment.count)">
+                      <set_value name="$bestmissingequipment" exact="$missingequipment"/>
+                      <set_value name="$shipyardfails" exact="true"/>
+                    </do_if>
+
+                    <do_if value="not $shipyardfails">
+                      <debug_text text="'Requesting replacement for %s %s'.[$locship.macro.class, $locship.macro]" chance="$DebugChance"/>
+                      <add_build_to_rebuild_fleet_ship result="$buildtask" object="$locshipyard" fleetunit="$locship"/>
+                      <remove_from_list name="$shipstobereplaced" exact="$locship"/>
+                      <append_to_list name="$buildtasks" exact="$buildtask"/>
+                      <break/>
+                    </do_if>
+                  </do_for_each>
+                  <do_if value="not $buildtask">
+                    <do_if value="not $canbuildmacro">
+                      <set_fleet_ship_build_issue_flags fleetunit="$locship" flags="objectmacro"/>
+                    </do_if>
+                    <do_if value="$bestmissingequipment.count">
+                      <set_fleet_ship_build_issue_flags fleetunit="$locship" flags="equipment" wares="$bestmissingequipment"/>
+                    </do_if>
+                  </do_if>
+                </do_else>
+              </do_for_each>
+              <remove_value name="$buildtask"/>
+            </do_if>
+            <do_else>
+              <debug_text text="'No ships to be replaced. Likely all fleetunits already being processed.'" chance="$DebugChance"/>
+            </do_else>
+          </actions>
+          <patch sinceversion="2">
+            <do_if value="@$buildtasks.count">
+              <do_for_each name="$locbuildtask" in="$buildtasks" counter="$_i" reverse="true">
+                <do_if value="$locbuildtask.exists">
+                  <set_value name="$lockeep"/>
+                </do_if>
+                <do_else>
+                  <remove_value name="$buildtasks.{$_i}"/>
+                </do_else>
+              </do_for_each>
+              <do_if value="not $lockeep?">
+                <cancel_cue cue="this"/>
+              </do_if>
+            </do_if>
+            <remove_value name="$lockeep"/>
+          </patch>
+          <cues>
+            <cue name="CheckShipyards" onfail="cancel">
+              <conditions>
+                <check_value value="@$shipyards.count"/>
+                <check_value value="@$buildtasks.count"/>
+              </conditions>
+              <cues>
+                <cue name="BuildFinished" instantiate="true">
+                  <conditions>
+                    <event_build_finished group="$shipyards"/>
+                    <check_value value="$buildtasks.indexof.{event.param3}"/>
+                  </conditions>
+                  <actions>
+                    <set_value name="$buildtask" exact="event.param3"/>
+                    <do_if value="$buildtask.buildobject.isoperational">
+                      <set_value name="$replacement" exact="$buildtask.buildobject"/>
+                      <do_if value="$replacement.fleetunit">
+                        <do_if value="$commander.isoperational">
+                          <create_order id="'MoveToObject'" object="$replacement" default="true">
+                            <param name="destination" value="$commander"/>
+                            <param name="joinfleet" value="true"/>
+                            <param name="stopondetect" value="true"/>
+                            <param name="debugchance" value="$DebugChance"/>
+                          </create_order>
+                        </do_if>
+                        <do_else>
+                          <debug_text text="'Commander is no longer operational.'" chance="$DebugChance"/>
+                        </do_else>
+                      </do_if>
+                      <do_else>
+                        <debug_text text="'Replacement %s does not have an associated fleet unit.'.[$replacement.debugname]" filter="error"/>
+                      </do_else>
+                      <remove_value name="$replacement"/>
+                    </do_if>
+                    <do_else>
+                      <debug_text text="'Build task %s finished but buildobject %s is not operational.'.[$buildtask, $buildtask.buildobject]" filter="error"/>
+                    </do_else>
+                    <remove_from_list name="$buildtasks" exact="$buildtask"/>
+                    <remove_value name="$buildtask"/>
+                    <do_for_each name="$loctask" counter="$i" in="$buildtasks" reverse="true">
+                      <do_if value="not $loctask.exists">
+                        <remove_value name="$buildtasks.{$i}"/>
+                      </do_if>
+                    </do_for_each>
+
+                    <do_if value="not $buildtasks.count">
+                      <!-- if cues start moving around, change to cue="namespace" -->
+                      <cancel_cue cue="parent.parent"/>
+                    </do_if>
+                  </actions>
+                </cue>
+                <cue name="BuildCancelled" instantiate="true">
+                  <conditions>
+                    <event_build_cancelled group="$shipyards"/>
+                    <check_value value="$buildtasks.indexof.{event.param}"/>
+                  </conditions>
+                  <actions>
+                    <set_value name="$buildtask" exact="event.param"/>
+
+                    <remove_from_list name="$buildtasks" exact="$buildtask"/>
+                    <remove_value name="$buildtask"/>
+                    <do_for_each name="$loctask" counter="$i" in="$buildtasks" reverse="true">
+                      <do_if value="not $loctask.exists">
+                        <remove_value name="$buildtasks.{$i}"/>
+                      </do_if>
+                    </do_for_each>
+
+                    <do_if value="not $buildtasks.count">
+                      <!-- if cues start moving around, change to cue="namespace" -->
+                      <cancel_cue cue="parent.parent"/>
+                    </do_if>
+                  </actions>
+                </cue>
+                <cue name="CommanderDestroyed">
+                  <conditions>
+                    <event_object_destroyed object="$commander"/>
+                  </conditions>
+                  <actions>
+                    <debug_text text="'Commander was destroyed. Cleaning up.'" chance="$DebugChance"/>
+                    <cancel_cue cue="parent.parent"/>
+                  </actions>
+                </cue>
+              </cues>
+            </cue>
+          </cues>
+        </cue>
+
+        <library name="FindClosestShipyards">
+          <actions>
+            <create_group groupname="$shipyards"/>
+            <set_value name="$sectortable" exact="table[]"/>
+            <set_value name="$sortedsectors" exact="[]"/>
+            <find_sector name="$allsectors" space="player.galaxy" multiple="true"/>
+
+            <set_value name="$shipclasses" exact="[]"/>
+            <do_for_each name="$locship" in="$shipstobereplaced">
+              <do_if value="not $shipclasses.count or not $locship.macro.isclass.{$shipclasses}">
+                <append_to_list name="$shipclasses" exact="$locship.macro.class"/>
+              </do_if>
+            </do_for_each>
+
+            <do_for_each name="$locsector" in="$allsectors">
+              <set_value name="$locgatedist" exact="$commander.gatedistance.{$locsector}"/>
+              <do_if value="$locgatedist ge 0">
+                <set_value name="$sectortable.{$locsector}" exact="$locgatedist"/>
+              </do_if>
+              <remove_value name="$locgatedist"/>
+            </do_for_each>
+            <set_value name="$sortedsectors" exact="$sectortable.keys.list"/>
+            <shuffle_list list="$sortedsectors"/>
+            <sort_list list="$sortedsectors" sortbyvalue="$sectortable.{loop.element}"/>
+
+            <do_for_each name="$locsector" in="$sortedsectors">
+              <do_if value="not $shipclasses.count">
+                <break/>
+              </do_if>
+              <find_station_by_true_owner name="$locshipyards" canbuildships="true" canbuildfor="$commander.owner" faction="$commander.owner" hascontrolentity="controlpost.shiptrader" space="$locsector" multiple="true"/>
+              <do_for_each name="$locshipyard" in="$locshipyards">
+                <do_for_each name="$locclass" in="$shipclasses" reverse="true">
+                  <do_if value="$locshipyard.canbuildclass.{$locclass}">
+                    <add_to_group groupname="$shipyards" object="$locshipyard"/>
+                    <remove_from_list name="$shipclasses" exact="$locclass"/>
+                  </do_if>
+                </do_for_each>
+                <do_if value="not $shipclasses.count">
+                  <break/>
+                </do_if>
+              </do_for_each>
+              <remove_value name="$locshipyards"/>
+            </do_for_each>
+            <remove_value name="$sortedsectors"/>
+            <remove_value name="$shipclasses"/>
+            <remove_value name="$allsectors"/>
+            <remove_value name="$sectortable"/>
+          </actions>
+        </library>
+
+        <cue name="EnableUI">
+          <cues>
+            <cue name="EnableUI_Periodic" checkinterval="30s" instantiate="true">
+              <actions>
+                <find_station_by_true_owner name="this.$FoundShipyard" faction="faction.player" canbuildships="true" space="player.galaxy"/>
+                <do_if value="this.$FoundShipyard">
+                  <enable_lost_ship_replacement/>
+                  <debug_text text="player.age + ' enabled UI option'" chance="$DebugChance"/>
+                  <cancel_cue cue="EnableUI"/>
+                </do_if>
+                <remove_value name="this.$FoundShipyard"/>
+              </actions>
+            </cue>
+
+            <cue name="EnableUI_ConstructionFinished" instantiate="true">
+              <conditions>
+                <event_player_build_finished_components comment="check each time a module is completed"/>
+                <check_object object="event.param.buildanchor" class="class.station" canbuildships="true"/>
+              </conditions>
+              <actions>
+                <enable_lost_ship_replacement/>
+                <debug_text text="player.age + ' enabled UI option'" chance="$DebugChance"/>
+                <cancel_cue cue="EnableUI"/>
+              </actions>
+            </cue>
+          </cues>
+        </cue>
+      </cues>
+    </cue>
+  </cues>
+</mdscript>
