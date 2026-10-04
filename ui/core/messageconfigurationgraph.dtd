@@ -1,0 +1,32 @@
+<!ELEMENT messageconfigurationgraph (message)*>
+<!ELEMENT message (configuration)+>
+<!ATTLIST message
+	type (basic|explicit|fastobject|firstperson|firstpersondetails|missionobjective|missionoffer|playercapship|poi) #REQUIRED
+>
+<!ELEMENT configuration (conditions, dormancyconditions?, autotargetdormancyconditions?, untargetableconditions?, irrelevanceconditions?)>
+<!ATTLIST configuration
+	identifier CDATA #REQUIRED
+>
+<!ELEMENT conditions (configurationcondition)+>
+<!ELEMENT dormancyconditions (condition)+>
+<!ELEMENT autotargetdormancyconditions (condition)+>
+<!ELEMENT untargetableconditions (condition)+>
+<!ELEMENT irrelevanceconditions (condition)+>
+<!ELEMENT condition EMPTY>
+<!ATTLIST condition
+	id (always_true|cameradistance|componentclass|exactcomponentclass|faction_relation|has_context|has_displayed_action|has_instant_action|has_possible_action|is_detailed_object|is_important|is_lockbox_opened|is_locked_signal_leak_offer|is_mission_offer_outdated|is_onscreen|is_operational|is_outdated|is_playercontrolled|is_radar_visible|is_room_visible|is_signal_leak_offer|is_space_detailed_object|is_surface_element|is_visible|mission_objective_hint_valid|mission_offer_exists|out_of_range|out_of_sector_range|poi_in_camera_range|poi_out_of_range|target_lost|unscanned_distance|is_internally_stored|is_orphaned|has_tradeoffer_or_is_playerowned|is_positional_hidden|is_controllable_playercontrolled) #REQUIRED
+	operator (equal|not_equal|less|greater|less_equal|greater_equal) #IMPLIED
+	value CDATA #IMPLIED
+	inverted (true|false) #IMPLIED
+>
+<!-- configuration conditions only allow to be configured with non-changeable conditions since they are not reevaluated
+	furthermore, it's not allowed to make use of associative objects which might change over time (i.e. context-based objects)
+	is_hidden is special cased for the particular use-case - it's not meant to be used in general
+-->
+<!ELEMENT configurationcondition EMPTY>
+<!ATTLIST configurationcondition
+	id (always_true|componentclass|exactcomponentclass|has_context|has_displayed_action|has_instant_action|is_detailed_object|is_hidden|is_signal_leak_offer|is_space_detailed_object|is_surface_element) #REQUIRED
+	operator (equal|not_equal|less|greater|less_equal|greater_equal) #IMPLIED
+	value CDATA #IMPLIED
+	inverted (true|false) #IMPLIED
+>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon name="ego_helptext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../core/coreaddon.xsd">
+  <environment type="menus">
+    <file name="helptext.lua" />
+    <dependency name="ego_viewHelper" />
+    <savedvariable name="__CORE_HELPTEXT_DISPLAYEDHINTS" storage="savegame" />
+    <savedvariable name="__CORE_HELPTEXT_QUEUE" storage="savegame" />
+    <bindinggroup id="helptext" context="INPUT_CONTEXT_ADDON_HELPTEXT" alwaysactive="false">
+      <binding action="INPUT_ACTION_ADDON_HELPTEXT_CLOSE" />
+      <binding action="INPUT_ACTION_ADDON_HELPTEXT_BACK" />
+    </bindinggroup>
+    <bindinggroup id="helptext_multi" context="INPUT_CONTEXT_ADDON_HELPTEXT_MULTI" alwaysactive="false">
+      <binding action="INPUT_ACTION_ADDON_HELPTEXT_RIGHT" />
+      <binding action="INPUT_ACTION_ADDON_HELPTEXT_LEFT" />
+    </bindinggroup>
+  </environment>
+</addon>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon name="ego_detailmonitor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../core/coreaddon.xsd">
+  <environment type="menus">
+    <file name="menu_crafting.lua" />
+    <file name="menu_diplomacy.lua" />
+    <file name="menu_docked.lua" />
+    <file name="menu_encyclopedia.lua" />
+    <file name="menu_followcamera.lua" />
+    <file name="menu_help.lua" />
+    <file name="menu_map.lua" />
+    <file name="menu_mapeditor.lua" />
+    <file name="menu_missionbriefing.lua" />
+    <file name="menu_platformundock.lua"/>
+    <file name="menu_playerinfo.lua" />
+    <file name="menu_research.lua" />
+    <file name="menu_scenario_debriefing.lua" />
+    <file name="menu_scenario_selection.lua" />
+    <file name="menu_ship_comparison.lua" />
+    <file name="menu_ship_configuration.lua" />
+    <file name="menu_station_configuration.lua" />
+    <file name="menu_station_overview.lua" />
+    <file name="menu_terraforming.lua" />
+    <file name="menu_timeline.lua" />
+    <file name="menu_toplevel.lua" />
+    <file name="menu_trader_blueprintsorlicences.lua" />
+    <file name="menu_trader_inventory.lua" />
+    <file name="menu_transactionlog.lua" />
+    <file name="menu_transporter.lua" />
+    <file name="menu_userquestion.lua" />
+    <dependency name="ego_detailmonitorHelper" />
+    <savedvariable name="__CORE_DETAILMONITOR_MAPFILTER" storage="userdata" />
+    <savedvariable name="__CORE_DETAILMONITOR_MAPFILTER_SAVE" storage="savegame" />
+    <savedvariable name="__CORE_DETAILMONITOR_USERQUESTION" storage="userdata" />
+    <savedvariable name="__CORE_DETAILMONITOR_STATIONBUILD" storage="userdata" />
+    <savedvariable name="__CORE_DETAILMONITOR_SHIPBUILD" storage="userdata" />
+    <savedvariable name="__CORE_DETAILMONITOR_MAPEDITOR" storage="userdata" />
+    <bindinggroup id="map" context="INPUT_CONTEXT_ADDON_DETAILMONITOR_MAP" alwaysactive="false">
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_G" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_I" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_T" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_F1" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_F3" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_P" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_REMOVE_ORDER" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_ZONE_VIEW" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_SECTOR_VIEW" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_CLOSE_MAP" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_MISSIONS" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_MULTIVERSE" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_TELEPORT" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_PROPERTY_OWNED" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_CURRENT_SHIP" />
+    </bindinggroup>
+    <bindinggroup id="map_arrows" context="INPUT_CONTEXT_ADDON_DETAILMONITOR_MAP_ARROWS" alwaysactive="false">
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_RIGHT" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_LEFT" />
+    </bindinggroup>
+    <bindinggroup id="context" context="INPUT_CONTEXT_ADDON_DETAILMONITOR_CONTEXT" alwaysactive="false">
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_CONTEXT_MENU" />
+    </bindinggroup>
+    <bindinggroup id="playerinfo" context="INPUT_CONTEXT_ADDON_DETAILMONITOR_PLAYERINFO" alwaysactive="false">
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_CLOSE_PLAYERINFO" />
+    </bindinggroup>
+    <bindinggroup id="help" context="INPUT_CONTEXT_ADDON_DETAILMONITOR_HELP" alwaysactive="false">
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_CLOSE_HELP" />
+    </bindinggroup>
+    <bindinggroup id="diplomacy" context="INPUT_CONTEXT_ADDON_DETAILMONITOR_DIPLOMACY" alwaysactive="false">
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_CLOSE_DIPLOMACY" />
+    </bindinggroup>
+    <bindinggroup id="comm" context="INPUT_CONTEXT_ADDON_DETAILMONITOR_COMM" alwaysactive="false">
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_C" />
+    </bindinggroup>
+    <bindinggroup id="autopilot" context="INPUT_CONTEXT_ADDON_DETAILMONITOR_AUTOPILOT" alwaysactive="false">
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_A_SHIFT" />
+    </bindinggroup>
+    <bindinggroup id="undo" context="INPUT_CONTEXT_ADDON_DETAILMONITOR_UNDO" alwaysactive="false">
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_UNDO" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_REDO" />
+    </bindinggroup>
+    <bindinggroup id="modes" context="INPUT_CONTEXT_ADDON_DETAILMONITOR_MODES" alwaysactive="false">
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_TRAVELMODE" />
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_SETA" />
+    </bindinggroup>
+    <bindinggroup id="followcamera" context="INPUT_CONTEXT_ADDON_DETAILMONITOR_CLOSE_FOLLOWCAM_OFFSET" alwaysactive="false">
+      <binding action="INPUT_ACTION_ADDON_DETAILMONITOR_CLOSE_FOLLOWCAM_OFFSET" />
+    </bindinggroup>
+  </environment>
+</addon>

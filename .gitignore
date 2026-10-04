@@ -1,1 +1,14 @@
-# currently empty
+# LuaJIT files
+ui/**/*.xpl
+# 3D-mesh files
+ui/**/*.xmf
+# Blender files
+ui/**/*.dae
+# material files
+ui/**/*.amw
+ui/**/*.bgf
+ui/**/*.bsg
+# gziped .dds texture files
+ui/**/*.gz
+# internal X4 ui format files
+ui/**/*.bgp

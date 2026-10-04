@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon name="ego_gameoptions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../core/coreaddon.xsd">
+  <environment type="menus">
+    <file name="gameoptions.lua" />
+    <file name="customgame.lua" />
+    <file name="gamemodified.lua" />
+    <file name="onlineupdate.lua" />
+    <dependency name="ego_detailmonitorHelper" />
+    <savedvariable name="__CORE_GAMEOPTIONS_RESTORE" storage="userdata" />
+    <savedvariable name="__CORE_GAMEOPTIONS_RESTOREINFO" storage="userdata" />
+    <savedvariable name="__CORE_GAMEOPTIONS_PRIVACYPOLICY" storage="userdata" />
+    <savedvariable name="__CORE_GAMEOPTIONS_VENTURECONFIG" storage="userdata" />
+  </environment>
+</addon>

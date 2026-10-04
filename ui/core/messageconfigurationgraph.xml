@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE messageconfigurationgraph SYSTEM "messageconfigurationgraph.dtd" >
+<messageconfigurationgraph>
+  <message type="basic">
+
+    <configuration identifier="space detail objects">
+      <conditions>
+        <configurationcondition id="is_space_detailed_object" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="is_visible" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+      </irrelevanceconditions>
+    </configuration>
+    
+    <!-- filter out messages we are not interested in at all -->
+    <!-- no symbols for non-destructibles/regions/rooms (like bridges) -->
+    <configuration identifier="rejected derived classes">
+      <conditions>
+        <!-- #coreUIMed - change this so there are no UI elements for station parts as well -->
+        <!-- we are only interested in destructables -->
+        <configurationcondition id="componentclass" value="destructible" inverted="true" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true"/>
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="rejected hidden lockboxes">
+      <conditions>
+        <!-- Note: this is just designed to be used with hidden lockboxes atm - do not reuse or alter! -->
+        <configurationcondition id="is_hidden" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+    
+    <configuration identifier="rejected destructible">
+      <conditions>
+        <!-- not interested in plain destructibles unless flagged as surface elements -->
+        <configurationcondition id="exactcomponentclass" value="destructible" />
+        <configurationcondition id="is_surface_element" inverted="true" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="rejected missiles">
+      <conditions>
+        <!-- we do not want any target elements for missiles -->
+        <configurationcondition id="exactcomponentclass" value="missile" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="rejected highwayentrygate">
+      <conditions>
+        <!-- highway entry gates are handled via POI messages -->
+        <configurationcondition id="componentclass" value="highwayentrygate" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="rejected highwayexitgate">
+      <conditions>
+        <!-- highway exit would be handled by POI messages, if we want them -->
+        <configurationcondition id="componentclass" value="highwayexitgate" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="rejected gate">
+      <conditions>
+        <!-- gates are handled by POI messages -->
+        <configurationcondition id="componentclass" value="gate" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="rejected highwaytrigger">
+      <conditions>
+        <!-- highway triggers are of no interest to us -->
+        <configurationcondition id="componentclass" value="highwaytrigger" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- reject any first-person detail objects (like pilot chair) -->
+    <configuration identifier="rejected details">
+      <conditions>
+        <configurationcondition id="is_detailed_object" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="ship xl">
+      <conditions>
+        <configurationcondition id="componentclass" value="ship_xl" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="is_playercontrolled" />
+        <!-- player owned capital ships are handled as a separate message type -->
+        <condition id="faction_relation" operator="equal" value="1" />
+        <condition id="is_operational" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="cameradistance" value="40000" operator="greater" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="is_playercontrolled" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="cameradistance" value="40000" operator="greater"/>
+      </autotargetdormancyconditions>
+      <untargetableconditions>
+        <!-- prevent the player ship to be targetable -->
+        <condition id="is_playercontrolled" />
+      </untargetableconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+        <condition id="is_radar_visible" inverted="true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="ship l">
+      <conditions>
+        <configurationcondition id="componentclass" value="ship_l" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="is_playercontrolled" />
+        <condition id="is_operational" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="cameradistance" value="40000" operator="greater" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="is_playercontrolled" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="cameradistance" value="40000" operator="greater"/>
+      </autotargetdormancyconditions>
+      <untargetableconditions>
+        <!-- prevent the player ship to be targetable -->
+        <condition id="is_playercontrolled" />
+      </untargetableconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+        <condition id="is_radar_visible" inverted="true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="ship m">
+      <conditions>
+        <configurationcondition id="componentclass" value="ship_m" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="is_playercontrolled" />
+        <condition id="is_operational" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="cameradistance" value="40000" operator="greater" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="is_playercontrolled" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="cameradistance" value="40000" operator="greater"/>
+      </autotargetdormancyconditions>
+      <untargetableconditions>
+        <!-- prevent the player ship to be targetable -->
+        <condition id="is_playercontrolled" />
+      </untargetableconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+        <condition id="is_radar_visible" inverted="true" />
+        <condition id="is_internally_stored" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="ship s">
+      <conditions>
+        <configurationcondition id="componentclass" value="ship_s" />
+      </conditions>
+      <dormancyconditions>
+        <!-- the order is important here - is_playercontrolled check must be done first - otherwise we check the distance which might be 0, if the player is at the cockpit's console and we reload the UI -->
+        <condition id="is_playercontrolled" />
+        <condition id="cameradistance" value="15000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_important" inverted="true" />
+        <condition id="is_operational" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="is_playercontrolled" />
+        <condition id="cameradistance" value="15000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <untargetableconditions>
+        <!-- prevent the player ship to be targetable -->
+        <condition id="is_playercontrolled" />
+      </untargetableconditions>
+      <irrelevanceconditions>
+        <condition id="out_of_range" />
+        <condition id="is_outdated" />
+        <condition id="is_radar_visible" inverted="true" />
+        <condition id="is_internally_stored" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="rejected ship xs">
+      <conditions>
+        <!-- very small ships are handled by the fastobject message type -->
+        <configurationcondition id="componentclass" value="ship_xs" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- target elements for any targets which have instant actions -->
+    <configuration identifier="instant action">
+      <conditions>
+        <configurationcondition id="has_instant_action" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="has_possible_action" inverted="true" />
+        <condition id="is_operational" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_onscreen" inverted="true" />
+        <condition id="is_important" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="has_possible_action" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="bombs">
+      <conditions>
+        <configurationcondition id="componentclass" value="bomb" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_onscreen" inverted="true" />
+        <!-- #coreUIMed - review necessity for this condition -->
+        <condition id="is_important" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="satellites">
+      <conditions>
+        <configurationcondition id="componentclass" value="satellite" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_onscreen" inverted="true" />
+        <!-- #coreUIMed - review necessity for this condition -->
+        <condition id="is_important" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="nav beacons">
+      <conditions>
+        <configurationcondition id="componentclass" value="navbeacon" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_onscreen" inverted="true" />
+        <!-- #coreUIMed - review necessity for this condition -->
+        <condition id="is_important" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="resource probe">
+      <conditions>
+        <configurationcondition id="componentclass" value="resourceprobe" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_onscreen" inverted="true" />
+        <!-- #coreUIMed - review necessity for this condition -->
+        <condition id="is_important" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- target elements for any collectable item -->
+    <configuration identifier="collectable">
+      <conditions>
+        <configurationcondition id="componentclass" value="collectable" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="10000" operator="greater" />
+        <condition id="unscanned_distance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_important" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="cameradistance" value="10000" operator="greater" />
+        <condition id="unscanned_distance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- target elements for any recyclable item -->
+    <configuration identifier="recyclable">
+      <conditions>
+        <configurationcondition id="componentclass" value="recyclable" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="10000" operator="greater" />
+        <condition id="unscanned_distance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_important" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="cameradistance" value="10000" operator="greater" />
+        <condition id="unscanned_distance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- target elements for any lockboxes -->
+    <configuration identifier="lockbox">
+      <conditions>
+        <configurationcondition id="componentclass" value="lockbox" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="10000" operator="greater" />
+        <condition id="unscanned_distance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_important" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="cameradistance" value="10000" operator="greater" />
+        <condition id="unscanned_distance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <!-- no targeting of lockboxes which are open -->
+        <condition id="is_lockbox_opened"/>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="mines">
+      <conditions>
+        <configurationcondition id="componentclass" value="mine" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_onscreen" inverted="true" />
+        <!-- #coreUIMed - review necessity for this condition -->
+        <condition id="is_important" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="datavault">
+      <conditions>
+        <configurationcondition id="componentclass" value="datavault" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="10000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_important" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="cameradistance" value="10000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- target elements for any asteroid (incl. asteroid pieces) -->
+    <configuration identifier="asteroid">
+      <conditions>
+        <configurationcondition id="componentclass" value="asteroid" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="5000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_onscreen" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="cameradistance" value="5000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- elements for crystals (on ateroids) -->
+    <configuration identifier="crystal">
+      <conditions>
+        <configurationcondition id="componentclass" value="crystal" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_onscreen" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- large ship surface elements -->
+    <!-- surface elements attached to ships are only displayed, if within 1km -->
+    <configuration identifier="cap ship surface element">
+      <conditions>
+        <configurationcondition id="is_surface_element" />
+        <configurationcondition id="has_context" value="ship_xl" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="is_controllable_playercontrolled" />
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_operational" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_onscreen" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="is_controllable_playercontrolled" />
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="out_of_range" />
+        <condition id="is_outdated" />
+      </irrelevanceconditions>
+    </configuration>
+    <configuration identifier="large ship surface element">
+      <conditions>
+        <configurationcondition id="is_surface_element" />
+        <configurationcondition id="has_context" value="ship_l" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="is_controllable_playercontrolled" />
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_operational" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_onscreen" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="is_controllable_playercontrolled" />
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="out_of_range" />
+        <condition id="is_outdated" />
+      </irrelevanceconditions>
+    </configuration>
+    <configuration identifier="medium ship surface element">
+      <conditions>
+        <configurationcondition id="is_surface_element" />
+        <configurationcondition id="has_context" value="ship_m" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="is_controllable_playercontrolled" />
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_operational" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_onscreen" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="is_controllable_playercontrolled" />
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="out_of_range" />
+        <condition id="is_outdated" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- #coreUIHigh - P1DEV-320 - review this - was hacked in again - cameradistance should be 40km? -->
+    <!-- stations -->
+    <configuration identifier="station">
+      <conditions>
+        <configurationcondition id="componentclass" value="station" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="0" operator="greater" />
+        <condition id="is_operational" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+      </dormancyconditions>
+      <irrelevanceconditions>
+        <condition id="out_of_range" />
+        <condition id="is_outdated" />
+      </irrelevanceconditions>
+    </configuration> 
+
+    <!-- station surface elements -->
+    <!-- surface elements attached to stations are only displayed if within 1km -->
+    <configuration identifier="station surface element">
+      <conditions>
+        <configurationcondition id="is_surface_element" />
+        <configurationcondition id="has_context" value="station" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_operational" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_onscreen" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="cameradistance" value="1000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="out_of_range" />
+        <condition id="is_outdated" />
+      </irrelevanceconditions>
+    </configuration>
+    
+    <!-- buildstorages -->
+    <configuration identifier="buildstorage">
+      <conditions>
+        <configurationcondition id="componentclass" value="buildstorage" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="has_tradeoffer_or_is_playerowned" inverted="true" />
+        <condition id="is_operational" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+      </dormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_orphaned" inverted="true" />
+        <condition id="is_positional_hidden" />
+        <condition id="out_of_range" />
+        <condition id="is_outdated" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- reject any uncategorized message, so we won't be bothered with anything we are not interested in -->
+    <configuration identifier="reject">
+      <conditions>
+        <configurationcondition id="always_true" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+  </message>
+
+  <message type="fastobject">
+    <!-- filter out messages we are not interested at all -->
+    <configuration identifier="rejected non-fast object classes">
+      <conditions>
+        <!-- we are only interested in small ships -->
+        <configurationcondition id="componentclass" value="ship_xs" inverted="true" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- reject any first-person detail objects (like pilot chair) -->
+    <configuration identifier="rejected fast object details">
+      <conditions>
+        <configurationcondition id="is_detailed_object" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- for smaller ships we always show just a single target element - regardless of the range -->
+    <configuration identifier="small ship">
+      <conditions>
+        <configurationcondition id="always_true" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="is_playercontrolled" />
+        <condition id="cameradistance" value="15000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_operational" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="is_playercontrolled" />
+        <condition id="cameradistance" value="15000" operator="greater" />
+        <condition id="is_visible" inverted="true" />
+      </autotargetdormancyconditions>
+      <untargetableconditions>
+        <!-- prevent the player ship to be targetable -->
+        <condition id="is_playercontrolled" />
+      </untargetableconditions>
+      <irrelevanceconditions>
+        <condition id="out_of_range" />
+        <condition id="is_outdated" />
+        <condition id="is_radar_visible" inverted="true" />
+      </irrelevanceconditions>
+    </configuration>
+  </message>
+
+  <message type="missionoffer">
+    <configuration identifier="signal leak mission offer">
+      <conditions>
+        <configurationcondition id="is_signal_leak_offer" />
+      </conditions>
+      <dormancyconditions>
+        <!-- #coreUIMed - remove this condition again - it's just here to handle the missing mission offer notification events when the player switches zones -->
+        <condition id="out_of_range" />
+        <condition id="is_locked_signal_leak_offer" />
+        <condition id="is_operational" inverted="true" />
+        <condition id="cameradistance" value="2000" operator="greater" />
+        <condition id="has_displayed_action" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="is_onscreen" inverted="true" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="is_locked_signal_leak_offer" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <!-- #coreUIMed - this could be removed here and replaced with an action-system-based condition (has_action?) once we support updating/changing actions -->
+        <condition id="mission_offer_exists" inverted="true" />
+        <condition id="is_outdated" />
+        <condition id="is_mission_offer_outdated" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- reject any other mission offer message -->
+    <configuration identifier="reject">
+      <conditions>
+        <configurationcondition id="always_true" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+  </message>
+
+  <message type="missionobjective">
+    <!-- dummy implementation -->
+    <configuration identifier="mission objective">
+      <conditions>
+        <configurationcondition id="always_true" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="mission_objective_hint_valid" inverted="true" />
+        <condition id="is_outdated" />
+        <!-- no need for explicit out of range check here - the mission manager system already takes care about that -->
+      </irrelevanceconditions>
+    </configuration>
+  </message>
+
+  <message type="poi">
+    <configuration identifier="poi">
+      <conditions>
+        <configurationcondition id="always_true" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="poi_in_camera_range" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+      </dormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="poi_out_of_range" />
+        <condition id="is_radar_visible" inverted="true" />
+      </irrelevanceconditions>
+    </configuration>
+  </message>
+
+  <message type="firstperson">
+    <!-- reject any first-person detail objects (like pilot chair) -->
+    <configuration identifier="rejected firstperson details">
+      <conditions>
+        <configurationcondition id="is_detailed_object" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <configuration identifier="firstperson">
+      <conditions>
+        <configurationcondition id="has_instant_action" />
+      </conditions>
+      <dormancyconditions>
+        <condition id="cameradistance" value="10" operator="greater" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="cameradistance" value="10" operator="greater" />
+      </autotargetdormancyconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="is_room_visible" inverted="true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- reject any uncategorized message, so we won't be bothered with anything we are not interested in -->
+    <configuration identifier="reject">
+      <conditions>
+        <configurationcondition id="always_true" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+  </message>
+
+  <message type="firstpersondetails">
+    <configuration identifier="firstperson details">
+      <conditions>
+        <configurationcondition id="is_detailed_object" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="is_room_visible" inverted="true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- reject any uncategorized message, so we won't be bothered with anything we are not interested in -->
+    <configuration identifier="reject">
+      <conditions>
+        <configurationcondition id="always_true" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+  </message>
+  
+  <message type="playercapship">
+    <configuration identifier="player owned cap ship">
+      <conditions>
+        <configurationcondition id="componentclass" value="ship_xl" />
+      </conditions>
+      <dormancyconditions>
+        <!-- non-player owned capital ships are handled as a separate message type -->
+        <condition id="is_playercontrolled" />
+        <condition id="faction_relation" operator="not_equal" value="1" />
+        <condition id="is_operational" inverted="true" />
+        <condition id="is_visible" inverted="true" />
+        <condition id="cameradistance" value="40000" operator="greater" />
+      </dormancyconditions>
+      <autotargetdormancyconditions>
+        <condition id="is_playercontrolled" />
+      </autotargetdormancyconditions>
+      <untargetableconditions>
+        <!-- prevent the player ship to be targetable -->
+        <condition id="is_playercontrolled" />
+      </untargetableconditions>
+      <irrelevanceconditions>
+        <condition id="is_outdated" />
+        <condition id="out_of_range" />
+        <condition id="is_radar_visible" inverted="true" />
+      </irrelevanceconditions>
+    </configuration>
+
+    <!-- reject any uncategorized message, so we won't be bothered with anything we are not interested in -->
+    <configuration identifier="reject">
+      <conditions>
+        <configurationcondition id="always_true" />
+      </conditions>
+      <irrelevanceconditions>
+        <condition id="always_true" />
+      </irrelevanceconditions>
+    </configuration>
+  </message>
+
+  <!-- special message type representing messages which were explicitly requested - only exist as long as they are the current target -->
+  <message type="explicit">
+    <configuration identifier="explicit target">
+      <conditions>
+        <configurationcondition id="always_true" />
+      </conditions>
+      <!--
+        note: no autodormancycondition required - this is a message created upon explicit request (f.e. a target selected via the map)
+        these messages should not become auto dormant ever
+      -->
+      <irrelevanceconditions>
+        <!-- #coreUIMed - TODO - is the is_outdated check really required? if so, shouldn't we make this an implicit condition check for all messages? -->
+        <condition id="is_outdated" />
+        <condition id="target_lost" />
+        <condition id="out_of_sector_range" />
+        <condition id="is_internally_stored" />
+      </irrelevanceconditions>
+    </configuration>
+  </message>
+</messageconfigurationgraph>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon name="ego_chatwindow" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../core/coreaddon.xsd">
+  <environment type="menus">
+    <file name="chatwindow.lua" />
+    <dependency name="ego_detailmonitorHelper" />
+    <savedvariable name="__CORE_CHAT_WINDOW" storage="userdata" />
+    <bindinggroup id="chatwindow" context="INPUT_CONTEXT_ADDON_CHATWINDOW" alwaysactive="true">
+      <binding action="INPUT_ACTION_SHOW_CHAT_WINDOW" />
+    </bindinggroup>
+  </environment>
+</addon>
