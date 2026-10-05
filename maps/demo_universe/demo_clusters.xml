@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="demo_Cluster_13_macro" class="cluster">
+    <component ref="standardcluster" />
+    <connections>
+      <connection name="demo_Cluster_13_Sector001_connection" ref="sectors">
+        <macro ref="demo_Cluster_13_Sector001_macro" connection="cluster" />
+      </connection>
+      <connection name="demo_C13S01_Region001_connection" ref="regions">
+        <macro name="demo_C13S01_Region001_macro">
+          <component connection="cluster" ref="standardregion" />
+          <properties>
+            <region ref="region_cluster_13_sector_001" />
+          </properties>
+        </macro>
+      </connection>
+      <connection name="demo_C13S01_Region002_connection" ref="regions">
+        <macro name="demo_C13S01_Region002_macro">
+          <component connection="cluster" ref="standardregion" />
+          <properties>
+            <region ref="audioregion_cluster_13_sector_001" />
+          </properties>
+        </macro>
+      </connection>
+      <connection name="demo_C13S01_Region003_connection" ref="regions">
+        <macro name="demo_C13S01_Region003_macro">
+          <component connection="cluster" ref="standardregion" />
+          <properties>
+            <region ref="region_highyield_ore" />
+          </properties>
+        </macro>
+      </connection>
+      <connection ref="content">
+        <macro>
+          <component connection="space" ref="Cluster_01" />
+        </macro>
+      </connection>
+    </connections>
+  </macro>
+  <macro name="demo_Cluster_40_macro" class="cluster">
+    <component ref="standardcluster" />
+    <connections>
+      <connection name="demo_Cluster_40_Sector001_connection" ref="sectors">
+        <macro ref="demo_Cluster_40_Sector001_macro" connection="cluster" />
+      </connection>
+      <connection name="demo_C40S01_Region001_connection" ref="regions">
+        <offset>
+          <position x="0" y="-8000" z="0" />
+        </offset>
+        <macro name="demo_C40S01_Region001_macro">
+          <component connection="cluster" ref="standardregion" />
+          <properties>
+            <region ref="demo_region_cluster_40_sector_001" />
+          </properties>
+        </macro>
+      </connection>
+      <connection name="demo_C40S01_Region01_connection" ref="regions">
+        <macro name="demo_C40S01_Region01_macro">
+          <component connection="cluster" ref="standardregion" />
+          <properties>
+            <region ref="audioregion_cluster_40_sector_001" />
+          </properties>
+        </macro>
+      </connection>
+      <connection ref="content">
+        <macro>
+          <component connection="space" ref="Cluster_23" />
+        </macro>
+      </connection>
+    </connections>
+  </macro>
+  <macro name="demo_Cluster_41_macro" class="cluster">
+    <component ref="standardcluster" />
+    <connections>
+      <connection name="demo_Cluster_41_Sector001_connection" ref="sectors">
+        <macro ref="demo_Cluster_41_Sector001_macro" connection="cluster" />
+      </connection>
+      <connection name="demo_C41S01_Region001_connection" ref="regions">
+        <offset>
+          <position x="0" y="-18000" z="0" />
+        </offset>
+        <macro name="demo_C41S01_Region001_macro">
+          <component connection="cluster" ref="standardregion" />
+          <properties>
+            <region ref="region_cluster_41_sector_001" />
+          </properties>
+        </macro>
+      </connection>
+      <connection name="demo_C41S01_Region002_connection" ref="regions">
+        <macro name="demo_C41S01_Region002_macro">
+          <component connection="cluster" ref="standardregion" />
+          <properties>
+            <region ref="audioregion_cluster_41_sector_001" />
+          </properties>
+        </macro>
+      </connection>
+      <connection ref="content">
+        <macro>
+          <component connection="space" ref="Cluster_35" />
+        </macro>
+      </connection>
+    </connections>
+  </macro>
+</macros>

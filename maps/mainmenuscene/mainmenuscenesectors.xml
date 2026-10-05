@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<macros xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Sector-->
+  <macro name="mainmenu_scene_sector_macro" class="sector">
+    <component ref="testsector" />
+    <connections>
+      <connection name="zone1_connection" ref="zones">
+        <offset>
+          <position x="11406.25" y="-90107.91" z="457843.8" />
+        </offset>
+        <macro ref="mainmenu_scene_zone1_macro" connection="sector" />
+      </connection>
+    </connections>
+  </macro>
+</macros>

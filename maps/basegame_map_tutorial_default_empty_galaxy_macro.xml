@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macros>
+  <macro name="basegame_map_tutorial_default_empty_cluster_001_sector_001_zone_001_macro">
+    <component ref="standardzone" connection="sector"/>
+    <properties>
+      <identification name="{20006,601}"/>
+    </properties>
+  </macro>
+  <macro name="basegame_map_tutorial_default_empty_cluster_001_sector_001_macro">
+    <component ref="standardsector" connection="cluster"/>
+    <properties>
+      <identification name="{20004,300011}" description="{20004,300012}"/>
+    </properties>
+    <connections>
+      <connection name="zones_957639" ref="zones">
+        <macro ref="basegame_map_tutorial_default_empty_cluster_001_sector_001_zone_001_macro" connection="sector"/>
+      </connection>
+    </connections>
+  </macro>
+  <macro name="basegame_map_tutorial_default_empty_cluster_001_macro">
+    <component ref="standardcluster" connection="galaxy"/>
+    <properties>
+      <identification name="{20003,300001}" description="{20003,300002}"/>
+    </properties>
+    <connections>
+      <connection name="cluster_30_sector001_connection" ref="sectors">
+        <macro ref="basegame_map_tutorial_default_empty_cluster_001_sector_001_macro" connection="cluster"/>
+      </connection>
+      <connection name="content" ref="content">
+        <macro>
+          <component connection="space" ref="cluster_30"/>
+        </macro>
+      </connection>
+    </connections>
+  </macro>
+  <macro name="basegame_map_tutorial_default_empty_galaxy_macro">
+    <component ref="standardgalaxy"/>
+    <connections>
+      <connection name="clusters_957594" ref="clusters">
+        <macro ref="basegame_map_tutorial_default_empty_cluster_001_macro" connection="galaxy"/>
+      </connection>
+    </connections>
+  </macro>
+</macros>

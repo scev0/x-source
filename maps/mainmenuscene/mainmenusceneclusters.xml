@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<macros xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Cluster-->
+  <macro name="mainmenu_scene_cluster_macro" class="cluster">
+    <component ref="testcluster" />
+    <connections>
+      <connection name="sector_connection" ref="sectors">
+        <offset>
+          <position x="-252035200" y="0" z="-151210600" />
+        </offset>
+        <macro ref="mainmenu_scene_sector_macro" connection="cluster" />
+      </connection>
+    </connections>
+  </macro>
+</macros>

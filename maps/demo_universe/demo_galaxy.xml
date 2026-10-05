@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="demo_universe_macro" class="galaxy">
+    <component ref="standardgalaxy" />
+    <connections>
+      <connection name="demo_Cluster_13_connection" ref="clusters">
+        <offset>
+          <position x="-30000000" y="0" z="0" />
+        </offset>
+        <macro ref="demo_Cluster_13_macro" connection="galaxy" />
+      </connection>
+      <connection name="demo_Cluster_40_connection" ref="clusters">
+        <offset>
+          <position x="-45000000" y="0" z="-8660000" />
+        </offset>
+        <macro ref="demo_Cluster_40_macro" connection="galaxy" />
+      </connection>
+      <connection name="demo_Cluster_41_connection" ref="clusters">
+        <offset>
+          <position x="-45000000" y="0" z="8660000" />
+        </offset>
+        <macro ref="demo_Cluster_41_macro" connection="galaxy" />
+      </connection>
+      <connection name="demo_ClusterGate013To040" ref="destination" path="../demo_Cluster_13_connection/demo_Cluster_13_Sector001_connection/demo_Zone002_Cluster_13_Sector001_connection/demo_connection_ClusterGate013To040">
+        <macro connection="destination" path="../../../../../demo_Cluster_40_connection/demo_Cluster_40_Sector001_connection/demo_Zone001_Cluster_40_Sector001_connection/demo_connection_ClusterGate040To013" />
+      </connection>
+      <connection name="demo_ClusterGate040To041" ref="destination" path="../demo_Cluster_40_connection/demo_Cluster_40_Sector001_connection/demo_Zone005_Cluster_40_Sector001_connection/demo_connection_ClusterGate040To041">
+        <macro connection="destination" path="../../../../../demo_Cluster_41_connection/demo_Cluster_41_Sector001_connection/demo_Zone004_Cluster_41_Sector001_connection/demo_connection_ClusterGate041To040" />
+      </connection>
+    </connections>
+  </macro>
+</macros>

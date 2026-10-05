@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<macros xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Galaxy-->
+  <macro name="mainmenu_scene_galaxy_macro" class="galaxy">
+    <component ref="testgalaxy" />
+    <connections>
+      <connection name="cluster_connection" ref="clusters">
+        <macro ref="mainmenu_scene_cluster_macro" connection="galaxy" />
+      </connection>
+    </connections>
+  </macro>
+</macros>

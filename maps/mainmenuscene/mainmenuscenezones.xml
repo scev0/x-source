@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<macros xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Zones-->
+  <macro name="mainmenu_scene_zone1_macro" class="zone">
+    <component ref="testzone" />
+    <connections>
+      <connection ref="exitpoint0">
+        <offset>
+          <position x="7484.37" y="-1500" z="-10781.25" />
+        </offset>
+      </connection>
+      <connection ref="entrypoint0">
+        <offset>
+          <position x="12484.37" y="-1500" z="-10781.25" />
+        </offset>
+      </connection>
+    </connections>
+  </macro>
+</macros>
